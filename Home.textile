@@ -1,3 +1,0 @@
-This is a forked repository. Have a look at
-        "certik's sympy wiki":/certik/sympy
-        for more information.

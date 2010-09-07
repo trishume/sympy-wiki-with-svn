@@ -1,0 +1,63 @@
+Welcome to the `SymPy <http://code.google.com/p/sympy/>`_ wiki!
+
+We encourage everyone to participate in this wiki. To edit it, you need to create an account (top right corner). Just fill in your name and password and that's it (no email confirmation, or other annoying things). Feel free to play/test something in the [[Sandbox]].
+
+What is SymPy?
+=============
+
+SymPy is a computer algebra system (CAS) written in the [http://python.org Python] programming language. SymPy is easy to use and install (see the `download instructions <http://code.google.com/p/sympy/wiki/DownloadInstallation?tm=2>`_ and [[tutorial]] for more information), and works everywhere where Python 2.4 or newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
+* Arbitrary precision integers, rationals and floats, as well as symbolic expressions
+* Simplification (e.g. <math>abb + 2bab</math> &rarr; <math>3ab^2</math>), expansion (e.g. <math>(a+b)^2</math> &rarr; <math>a^2 + 2ab + b^2</math>), and other methods of rewriting expressions
+* Functions (exp, log, sin, ...)
+* Complex numbers (like <tt>exp(I*x).expand(complex=True)</tt> &rarr; <tt>cos(x)+I*sin(x)</tt>)
+* Taylor (Laurent) series and limits
+* Differentiation and integration
+
+Wiki content
+============
+
+* [[FAQ]] -- Frequently Asked Questions about SymPy
+* [[Tutorial]] -- SymPy tutorial
+* [[Quick examples]] -- This page shows example commands for doing common calculations in SymPy
+* [[Cookbook]] - Various recipes
+* [[git hg rosetta stone]] - direct translation of hg commands to git
+* [[SymPy in the news]] - SymPy in the News and Blogs
+* [[Contributors]] -- list of all contributors and sponsors of SymPy
+* [[People]] -- SymPy developers and contributors are introduced here
+* [[Plan for SymPy 1.0]] -- this is our roadmap to SymPy 1.0
+* [[Related software]] -- projects related to SymPy
+* [[References]] -- Related mathematical literature and websites
+* [[Ideas]] -- Random ideas, not necessarily related to SymPy, but that could be useful for SymPy in the future
+* [[GSoC2008Ideas]] -- Ideas for the Google Summer of Code 2008 projects
+* [[GSoC2009Ideas]] -- Ideas for the Google Summer of Code 2009 projects
+* [[GSoC2010Ideas]] -- Ideas for the Google Summer of Code 2010 projects
+* [[Generic interface]] -- SymPy/SymPyCore design notes
+* [[License choice]] -- Why we chose the new BSD license for SymPy
+* [[symbench]] -- Symbolic benchmarks
+* [[buildbot]] -- SymPy buildbot
+* [[Windows]] -- SymPy on Windows
+* [[Assumptions]]
+* [[GSoC2009Application]]
+
+Detailed documentation pages (note: uptodate official version of all the files below is at [http://docs.sympy.org/ docs.sympy.org]):
+
+* [[Symbolic integration]]
+* [[Linear Algebra Module]]
+* [[Geometry Module]]
+* [[Numerics Module]]
+* [[Plotting Module]]
+* [[Pretty Printing]]
+* [[Statistics Module]]
+* [[Polynomials Module]]
+* [[Geometric Algebra Module]]
+
+Moving from google wiki
+===================
+
+If you want to move some page from http://code.google.com/p/sympy/w/list, just find it's source
+code in: http://sympy.googlecode.com/svn/wiki/ and copy it here (and adapt it).
+
+License
+=======
+
+Unless stated otherwise, everything on this wiki is licensed under the same terms as SymPy, i.e. [http://www.opensource.org/licenses/bsd-license.php modified BSD] license. This is so that we can take anything from here and add it to the SymPy tarball as a documentation. If you have some interesting material, that you don't want to (or cannot) make BSD licensed, please put there a notice, that it has some other license.
