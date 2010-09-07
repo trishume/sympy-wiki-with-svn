@@ -3,7 +3,7 @@ Welcome to the `SymPy <http://code.google.com/p/sympy/>`_ wiki!
 We encourage everyone to participate in this wiki. To edit it, you need to create an account (top right corner). Just fill in your name and password and that's it (no email confirmation, or other annoying things). Feel free to play/test something in the [[Sandbox]].
 
 What is SymPy?
-=============
+==============
 
 SymPy is a computer algebra system (CAS) written in the [http://python.org Python] programming language. SymPy is easy to use and install (see the `download instructions <http://code.google.com/p/sympy/wiki/DownloadInstallation?tm=2>`_ and [[tutorial]] for more information), and works everywhere where Python 2.4 or newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
 * Arbitrary precision integers, rationals and floats, as well as symbolic expressions
@@ -52,7 +52,7 @@ Detailed documentation pages (note: uptodate official version of all the files b
 * [[Geometric Algebra Module]]
 
 Moving from google wiki
-===================
+=======================
 
 If you want to move some page from http://code.google.com/p/sympy/w/list, just find it's source
 code in: http://sympy.googlecode.com/svn/wiki/ and copy it here (and adapt it).
