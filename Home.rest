@@ -1,3 +1,7 @@
+====
+Wiki
+====
+
 Welcome to the `SymPy <http://code.google.com/p/sympy/>`_ wiki!
 
 We encourage everyone to participate in this wiki. To edit it, you need to create an account (top right corner). Just fill in your name and password and that's it (no email confirmation, or other annoying things). Feel free to play/test something in the [[Sandbox]].
