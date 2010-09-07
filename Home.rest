@@ -9,7 +9,13 @@ We encourage everyone to participate in this wiki. To edit it, you need to creat
 What is SymPy?
 ==============
 
-SymPy is a computer algebra system (CAS) written in the [http://python.org Python] programming language. SymPy is easy to use and install (see the `download instructions <http://code.google.com/p/sympy/wiki/DownloadInstallation?tm=2>`_ and [[tutorial]] for more information), and works everywhere where Python 2.4 or newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
+SymPy is a computer algebra system (CAS) written in the `Python
+<http://python.org>`_ programming language. SymPy is easy to use and install (see the
+`download instructions
+<http://code.google.com/p/sympy/wiki/DownloadInstallation?tm=2>`_ and
+[[tutorial]] for more information), and works everywhere where Python 2.4 or
+newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
+
 * Arbitrary precision integers, rationals and floats, as well as symbolic expressions
 * Simplification (e.g. <math>abb + 2bab</math> &rarr; <math>3ab^2</math>), expansion (e.g. <math>(a+b)^2</math> &rarr; <math>a^2 + 2ab + b^2</math>), and other methods of rewriting expressions
 * Functions (exp, log, sin, ...)
@@ -64,4 +70,10 @@ code in: http://sympy.googlecode.com/svn/wiki/ and copy it here (and adapt it).
 License
 =======
 
-Unless stated otherwise, everything on this wiki is licensed under the same terms as SymPy, i.e. [http://www.opensource.org/licenses/bsd-license.php modified BSD] license. This is so that we can take anything from here and add it to the SymPy tarball as a documentation. If you have some interesting material, that you don't want to (or cannot) make BSD licensed, please put there a notice, that it has some other license.
+Unless stated otherwise, everything on this wiki is licensed under the same
+terms as SymPy, i.e. `modified BSD
+<http://www.opensource.org/licenses/bsd-license.php>`_
+license. This is so that we can take anything from here and add
+it to the SymPy tarball as a documentation. If you have some interesting
+material, that you don't want to (or cannot) make BSD licensed, please put
+there a notice, that it has some other license.
