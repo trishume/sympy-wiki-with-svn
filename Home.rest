@@ -17,9 +17,9 @@ SymPy is a computer algebra system (CAS) written in the `Python
 newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
 
 * Arbitrary precision integers, rationals and floats, as well as symbolic expressions
-* Simplification (e.g. \( abb + 2bab \) → \(3ab^2\)), expansion (e.g. <math>(a+b)^2</math> → <math>a^2 + 2ab + b^2</math>), and other methods of rewriting expressions
+* Simplification (e.g. \( abb + 2bab \) → \(3ab^2\)), expansion (e.g. \((a+b)^2\) → \(a^2 + 2ab + b^2\)), and other methods of rewriting expressions
 * Functions (exp, log, sin, ...)
-* Complex numbers (like <tt>exp(I*x).expand(complex=True)</tt> → <tt>cos(x)+I*sin(x)</tt>)
+* Complex numbers (like ``exp(I*x).expand(complex=True)`` → ``cos(x)+I*sin(x)``)
 * Taylor (Laurent) series and limits
 * Differentiation and integration
 
