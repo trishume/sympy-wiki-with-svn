@@ -126,12 +126,12 @@ Calculate the definite integral \( \int_0^{\pi/2} x^2 \cos x \, dx\) :
 ```
 
 ### Solve an ordinary differential equation
-Solve \( f''(x) + 9 f(x) + 1 = 1\,\!\) :
+Solve \( f''(x) + 9 f(x) = 1\,\!\) :
 
 ```py
  >>> f = Function('f')
- >>> dsolve(Eq(Derivative(f(x),x,x) + 9*f(x) + 1, 1), f(x))
- C1*sin(3*x) + C2*cos(3*x)
+ >>> dsolve(Eq(Derivative(f(x),x,x) + 9*f(x), 1), f(x))
+f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
 ```
 
 You can also use `.diff()`, like here (an example in `isympy`)
@@ -139,13 +139,14 @@ You can also use `.diff()`, like here (an example in `isympy`)
 ```py
 In [1]: f = Function("f")
 
-In [2]: Eq(f(x).diff(x, x) + 9*f(x) + 1, 1)
-Out[2]:
-                2
-               d
-1 + 9*f(x) + ───── (f(x)) = 1
-             dx dx
+In [2]: Eq(f(x).diff(x, x) + 9*f(x), 1)
+Out[2]: 
+            2           
+           d            
+9⋅f(x) + ─────(f(x)) = 1
+         dx dx          
 
 In [3]: dsolve(_, f(x))
-Out[3]: C1*sin(3*x) + C2*cos(3*x)
+Out[3]: f(x) = 1/9 + C₁⋅sin(3⋅x) + C₂⋅cos(3⋅x)
+
 ```
