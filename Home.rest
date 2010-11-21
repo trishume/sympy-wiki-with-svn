@@ -23,43 +23,41 @@ newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
 * Taylor (Laurent) series and limits
 * Differentiation and integration
 
-Wiki content
+Documentation
 ============
 
+The main SymPy documentation is maintained at [[http://docs.sympy.org]] (where you can see both the [[development|http://docs.sympy.org/dev/index.html]] and the [[latest stable|http://docs.sympy.org/0.6.7/index.html]] versions docs).
+
+The issue tracker is located at [[http://code.google.com/p/sympy/issues/list]].
+
+The best place to begin is the [[Tutorial]]. A lot of useful information can also be found in the following:
+
 * [[FAQ]] -- Frequently Asked Questions about SymPy
-* [[Tutorial]] -- SymPy tutorial
 * [[Quick examples]] -- This page shows example commands for doing common calculations in SymPy
 * [[Cookbook]] - Various recipes
-* [[git hg rosetta stone]] - direct translation of hg commands to git
-* [[SymPy in the news]] - SymPy in the News and Blogs
-* [[Contributors]] -- list of all contributors and sponsors of SymPy
-* [[People]] -- SymPy developers and contributors are introduced here
+
+Projects / Ideas
+============
+
 * [[Plan for SymPy 1.0]] -- this is our roadmap to SymPy 1.0
-* [[Related software]] -- projects related to SymPy
-* [[References]] -- Related mathematical literature and websites
 * [[Ideas]] -- Random ideas, not necessarily related to SymPy, but that could be useful for SymPy in the future
 * [[GSoC2008Ideas]] -- Ideas for the Google Summer of Code 2008 projects
 * [[GSoC2009Ideas]] -- Ideas for the Google Summer of Code 2009 projects
 * [[GSoC2010Ideas]] -- Ideas for the Google Summer of Code 2010 projects
 * [[Generic interface]] -- SymPy/SymPyCore design notes
-* [[License choice]] -- Why we chose the new BSD license for SymPy
+* [[GSoC2009Application]]
+* [[References]] -- Related mathematical literature and websites
+
+Development
+==========
+
+* [[git hg rosetta stone]] - direct translation of hg commands to git
+* [[SymPy in the news]] - SymPy in the News and Blogs
+* [[Contributors]] -- list of all contributors and sponsors of SymPy
+* [[Related software]] -- projects related to SymPy
 * [[symbench]] -- Symbolic benchmarks
 * [[buildbot]] -- SymPy buildbot
 * [[Windows]] -- SymPy on Windows
-* [[Assumptions]]
-* [[GSoC2009Application]]
-
-Detailed documentation pages (note: uptodate official version of all the files below is at [http://docs.sympy.org/ docs.sympy.org]):
-
-* [[Symbolic integration]]
-* [[Linear Algebra Module]]
-* [[Geometry Module]]
-* [[Numerics Module]]
-* [[Plotting Module]]
-* [[Pretty Printing]]
-* [[Statistics Module]]
-* [[Polynomials Module]]
-* [[Geometric Algebra Module]]
 
 Moving from google wiki
 =======================
@@ -74,6 +72,7 @@ Unless stated otherwise, everything on this wiki is licensed under the same
 terms as SymPy, i.e. `modified BSD
 <http://www.opensource.org/licenses/bsd-license.php>`_
 license. This is so that we can take anything from here and add
-it to the SymPy tarball as a documentation. If you have some interesting
-material, that you don't want to (or cannot) make BSD licensed, please put
+it to the SymPy tarball as a documentation. See [[License choice]] for the motivation and discussion behind that choice.
+
+If you have some interesting material, that you don't want to (or cannot) make BSD licensed, please put
 there a notice, that it has some other license.
