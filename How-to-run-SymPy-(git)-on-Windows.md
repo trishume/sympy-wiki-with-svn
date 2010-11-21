@@ -1,6 +1,4 @@
-## How to run SymPy on Windows
-
-### Download
+## Download python and msysgit
 
 Install Python from:
 
@@ -17,7 +15,10 @@ by downloading and running the .exe in "Featured Downloads". Select to only inst
 $ echo "export PATH=/c/Python26/:\$PATH" > .bashrc
 ```
 
-Close and open the bash terminal window again. Then:
+## Clone SymPy repository
+
+Close and open the bash terminal window again, then:
+
 ```bash
 $ git clone git://git.sympy.org/sympy.git
 $ cd sympy
