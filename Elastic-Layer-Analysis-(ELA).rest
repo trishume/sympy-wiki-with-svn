@@ -18,10 +18,7 @@ Problem Formulation
 -------------------
 
 Stresses and displacements written to show the Hankel form are:
-
-.. math::
-
-	\int_{0}^{\infty} \xi^{3} \left(\left(C \left(1 - 2 \nu - \xi z\right) - A \xi\right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \operatorname{j0}\left(r \xi\right)\,d\xi
+\[\int_{0}^{\infty} \xi^{3} \left(\left(C \left(1 - 2 \nu - \xi z\right) - A \xi\right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{j}_0\left(r \xi\right)\,d\xi\]
 
 
 
