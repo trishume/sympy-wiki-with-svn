@@ -1,3 +1,6 @@
+.. math::
+   :nowrap:
+
 under construction ...
 
 Elastic Layer Analysis (ELA)
@@ -6,12 +9,22 @@ Elastic Layer Analysis (ELA)
 Introduction
 ------------
 
-The following is an example of sympy in action. This example demonstrates the use of various sympy and mpmath functions, specifically the use of matrix algebra and integration techniques to solve an engineering problem i.e. the analysis of the stress, strain and displacement response of an elastic layered structure to imposed surface loads. Typically these problems are solved using finite element methods (FEM) but an analytical solution based on the Hankel transformation of a stress function has been in use since it was introduced by Burmister [1]. 
+The following is an example of sympy in action. This example demonstrates the use of various sympy and mpmath functions, specifically the use of matrix algebra and integration techniques to solve an engineering problem i.e. the analysis of the stress, strain and displacement response of an elastic layered structure to imposed surface loads. Typically these problems are solved using finite element methods (FEM) but a numerical solution based on the Hankel transformation of a stress function has been in use since it was introduced by Burmister [1]. 
 
-Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed to prevent failure. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads before fracture. A thin layer of concrete has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong subbase layer, which in turn covers the foundation or subgrade. Figure illustrates a typical pavement structure. 
+Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed to prevent failure. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads before fracture. A thin layer of concrete has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong granular subbase layer, which in turn covers the foundation or subgrade. Figure 1 illustrates a typical pavement structure. 
 
+[Figure 1 here]
 
+For the elastic analysis of the pavement structure shown in Figure 1, the different layers are assumed to be homogeneous and isotropic. The materials used in each layer are defined by elastic parameters i.e. Young's modulus and Poisson's ratio. Each layer has a finite thickness except the lowest subgrade layer, which is assumed to have an infinite thickness. The nature of the interface between successive layers dictates how stresses and displacements are transferred from one layer to another. For the purpose of this example, full-friction between the layers is assumed, therefore shear stresses and lateral displacements at the lower interface of any layer are equal to those at the top interface of the underlying layer.
 
+Problem Formulation
+-------------------
+
+Stresses and displacements written to show the Hankel form are:
+
+\begin{eqnarray}
+\int_{0}^{\infty} \xi^{3} \left(\left(C \left(1 - 2 \nu - \xi z\right) - A \xi\right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \operatorname{j0}\left(r \xi\right)\,d\xi$
+\end{eqnarray}
 
 
 
