@@ -18,11 +18,21 @@ Problem Formulation
 -------------------
 
 Stresses and displacements written to show the Hankel form are:
-\[\int_{0}^{\infty} \xi^{3} \left(\left(C \left(1 - 2 \nu - \xi z\right) - A \xi\right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{j}_0\left(r \xi\right)\,d\xi\]
+\[\sigma_{z} = \int_{0}^{\infty} \xi^{2} \left(\left(- A \xi + C \left(1 - 2 \nu - \xi z\right) \right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
+\[\tau_{rz} = \int_{0}^{\infty} \xi^{2} \frac{\\mathrm{J}_1\left(r \xi\right)}{\\mathrm{J}_0\left(r \xi\right)} \left(\left(A \xi + C \left(2 \nu + \xi z\right) \right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
+\[w = \frac{1 + \nu}{E}\int_{0}^{\infty} \xi \left(\left(- A \xi + C \left(2 - 4 \nu - \xi z\right) \right) e^{\xi z} - \left(B \xi + D \left(2 - 4 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
+\[u = \frac{1 + \nu}{E}\int_{0}^{\infty} \xi \frac{\\mathrm{J}_1\left(r \xi\right)}{\\mathrm{J}_0\left(r \xi\right)} \left(\left(A \xi + C \left(1 + \xi z\right) \right) e^{\xi z} - \left(B \xi - D \left(1 - \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
 
+where
 
-
-
+\(\sigma_{z} = \) vertical compressive stress
+\(\tau_{rz} = \) shear stress
+\(u = \) lateral displacement
+\(w = \) vertical displacement
+\(\\mathrm{J}_0, \\mathrm{J}_1 = \) bessel functions of order 0 and 1
+\( \xi = \) Hankel parameter
+\( \r = \) radius
+\( \z = \) height
 
 [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
 
