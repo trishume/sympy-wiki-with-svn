@@ -6,22 +6,59 @@ Elastic Layer Analysis (ELA)
 Introduction
 ------------
 
-The following is an example of *sympy* in action. This example demonstrates the use of various *sympy* and *mpmath* functions, specifically the use of matrix algebra and integration techniques to solve an engineering problem i.e. the analysis of the stress, strain and displacement response of an elastic layered structure to imposed surface loads. Typically these problems are solved using finite element methods (FEM) but a simple numerical solution based on the Hankel transformation of a stress function has been in use since it was introduced by Burmister [1]_. 
+The following is an example of SymPy in action. This example demonstrates the
+use of various SymPy functions, specifically the use of matrix algebra and
+integration techniques to solve an engineering problem i.e. the analysis of the
+stress, strain and displacement response of an elastic layered structure to
+imposed surface loads. Typically these problems are solved using finite element
+methods (FEM) but a simple numerical solution based on the Hankel transformation
+of a stress function has been in use since it was introduced by Burmister [1]_. 
 
-Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed to prevent failure. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads before fracture. A thin layer of concrete, however, has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong granular subbase layer, which in turn covers the foundation or subgrade, which is usually the weakest layer in the structure. Building stronger layers on top of the subgrade serves to protect it from excessive deformation. Figure 1 illustrates a typical pavement structure. 
+Elastic layer analysis (ELA) is routinely used in pavement engineering for the
+design and evaluation of road and airport structures. As with any structure,
+roads are designed and constructed to carry surface loads - the heavier the
+load, the stronger the structure needed. Concrete pavements on interstate
+highways, for example, are durable structures that can withstand very high
+compressive loads but a thin layer of concrete has a relatively low flexural
+strength and must therefore be supported to prevent excessive bending. This is
+typically achieved by paving the concrete layer of top of a cemented or
+stabilized base layer. The base layer in turn may be placed on top of a strong
+granular subbase layer, which in turn covers the foundation or subgrade, which
+is usually the weakest layer in the structure. Building stronger layers on top
+of the subgrade serves to protect it from excessive deformation. Figure 1
+illustrates a typical pavement structure. 
 
 [Figure 1 here]
 
-For the elastic analysis of the pavement structure shown in Figure 1, the different layers are assumed to be homogeneous and isotropic. The materials used in each layer are defined by elastic parameters i.e. Young's modulus (\( E \)) and Poisson's ratio (\( \nu \)). Each layer has a finite thickness except the lowest subgrade layer, which is assumed to have an infinite thickness. The nature of the interface between successive layers dictates how stresses and displacements are transferred from one layer to another. For the purpose of this example, full-friction between the layers is assumed, therefore shear stresses and lateral displacements at the lower interface of any layer are equal to those at the top interface of the underlying layer.
+For the elastic analysis of the pavement structure shown in Figure 1, the
+different layers are assumed to be homogeneous and isotropic. The materials used
+in each layer are defined by elastic parameters i.e. Young's modulus (\( E \))
+and Poisson's ratio (\( \nu \)). Each layer has a finite thickness except the
+lowest subgrade layer, which is assumed to have an infinite thickness. The
+nature of the interface between successive layers dictates how stresses and
+displacements are transferred from one layer to another. For the purpose of this
+example, full-friction between the layers is assumed, therefore shear stresses
+and lateral displacements at the lower interface of any layer are equal to those
+at the top interface of the underlying layer.
 
 Problem Formulation
 -------------------
 
 Stresses and displacements written to show the Hankel form are:
-\[\sigma_{z} = \int_{0}^{\infty} \xi^{2} \left(\left(- A \xi + C \left(1 - 2 \nu - \xi z\right) \right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
-\[\tau_{rz} = \int_{0}^{\infty} \xi^{2} \frac{\\mathrm{J}_1\left(r \xi\right)}{\\mathrm{J}_0\left(r \xi\right)} \left(\left(A \xi + C \left(2 \nu + \xi z\right) \right) e^{\xi z} + \left(B \xi + D \left(1 - 2 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
-\[w = \frac{1 + \nu}{E}\int_{0}^{\infty} \xi \left(\left(- A \xi + C \left(2 - 4 \nu - \xi z\right) \right) e^{\xi z} - \left(B \xi + D \left(2 - 4 \nu + \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
-\[u = \frac{1 + \nu}{E}\int_{0}^{\infty} \xi \frac{\\mathrm{J}_1\left(r \xi\right)}{\\mathrm{J}_0\left(r \xi\right)} \left(\left(A \xi + C \left(1 + \xi z\right) \right) e^{\xi z} - \left(B \xi - D \left(1 - \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
+\[\sigma_{z}=\int_{0}^{\infty}\xi^{2}\left(\left(-A\xi+C\left(1-2\nu-\xi z
+\right)\right)e^{\xi z}+\left(B\xi+D\left(1-2\nu+\xi z\right)\right)e^{-\xi z}
+\right)\\mathrm{J}_0\left(r\xi\right)\xi\,d\xi\]
+\[\tau_{rz}=\int_{0}^{\infty}\xi^{2}\frac{\\mathrm{J}_1\left(r\xi\right)}
+{\\mathrm{J}_0\left(r\xi\right)}\left(\left(A\xi+C\left(2\nu+\xi z\right)\right)
+e^{\xi z}+\left(B\xi+D\left(1-2\nu+\xi z\right)\right)e^{-\xi z}\right)
+\\mathrm{J}_0\left(r\xi\right)\xi\,d\xi\]
+\[w=\frac{1+\nu}{E}\int_{0}^{\infty}\xi\left(\left(-A\xi+C\left(2-4\nu-\xi z
+\right)\right)e^{\xi z}-\left(B\xi+D\left(2-4\nu+\xi z\right)\right)e^{- \xi z}
+\right)\\mathrm{J}_0\left(r\xi\right)\xi\,d\xi\]
+\[u=\frac{1+\nu}{E}\int_{0}^{\infty}\xi\frac{\\mathrm{J}_1\left(r\xi\right)}
+{\\mathrm{J}_0\left(r\xi\right)}\left(\left(A\xi+C\left(1+\xi z\right)\right)
+e^{\xi z}-\left(B\xi-D\left(1-\xi z\right)\right)e^{-\xi z}\right)\\mathrm{J}_0
+\left(r\xi\right)\xi\,d\xi\]
 
 where:
     - \(\sigma_{z} \)                       : vertical compressive stress
@@ -33,6 +70,9 @@ where:
     - \(r \)                                : radial position
     - \(z \)                                : vertical position
     - \(A,B,C,D \)                          : integration constants
+
+Boundary Conditions
+^^^^^^^^^^^^^^^^^^^
 
 
 
