@@ -6,9 +6,9 @@ Elastic Layer Analysis (ELA)
 Introduction
 ------------
 
-The following is an example of sympy in action. This example demonstrates the use of various sympy and mpmath functions, specifically the use of matrix algebra and integration techniques to solve an engineering problem i.e. the analysis of the stress, strain and displacement response of an elastic layered structure to imposed surface loads. Typically these problems are solved using finite element methods (FEM) but a numerical solution based on the Hankel transformation of a stress function has been in use since it was introduced by Burmister [1]_. 
+The following is an example of *sympy* in action. This example demonstrates the use of various *sympy* and *mpmath* functions, specifically the use of matrix algebra and integration techniques to solve an engineering problem i.e. the analysis of the stress, strain and displacement response of an elastic layered structure to imposed surface loads. Typically these problems are solved using finite element methods (FEM) but a simple numerical solution based on the Hankel transformation of a stress function has been in use since it was introduced by Burmister [1]_. 
 
-Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed to prevent failure. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads before fracture. A thin layer of concrete has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong granular subbase layer, which in turn covers the foundation or subgrade. Figure 1 illustrates a typical pavement structure. 
+Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed to prevent failure. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads before fracture. A thin layer of concrete, however, has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong granular subbase layer, which in turn covers the foundation or subgrade, which is usually the weakest layer in the structure. Building stronger layers on top of the subgrade serves to protect it from excessive deformation. Figure 1 illustrates a typical pavement structure. 
 
 [Figure 1 here]
 
@@ -24,14 +24,17 @@ Stresses and displacements written to show the Hankel form are:
 \[u = \frac{1 + \nu}{E}\int_{0}^{\infty} \xi \frac{\\mathrm{J}_1\left(r \xi\right)}{\\mathrm{J}_0\left(r \xi\right)} \left(\left(A \xi + C \left(1 + \xi z\right) \right) e^{\xi z} - \left(B \xi - D \left(1 - \xi z\right)\right) e^{- \xi z}\right) \\mathrm{J}_0\left(r \xi\right) \xi \,d\xi\]
 
 where:
-    \(\sigma_{z} \)                  : vertical compressive stress
-    \(\tau_{rz} \)                   : shear stress
-    \(u \)                           : lateral displacement
-    \(w \)                           : vertical displacement
-    \(\\mathrm{J}_0, \\mathrm{J}_1 \): bessel functions of order 0 and 1
-    \(\xi \)                         : Hankel parameter
-    \(r \)                           : radial position
-    \(z \)                           : vertical position
+    - \(\sigma_{z} \)                       : vertical compressive stress
+    - \(\tau_{rz} \)                        : shear stress
+    - \(u \)                                : lateral displacement
+    - \(w \)                                : vertical displacement
+    - \(\\mathrm{J}_0,\\mathrm{J}_1 \)      : bessel functions of order 0 and 1
+    - \(\xi \)                              : Hankel parameter
+    - \(r \)                                : radial position
+    - \(z \)                                : vertical position
+    - \(A,B,C,D \)                          : integration constants
+
+
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
 
