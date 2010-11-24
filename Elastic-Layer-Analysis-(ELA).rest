@@ -12,7 +12,7 @@ Elastic layer analysis (ELA) is routinely used in pavement engineering for the d
 
 [Figure 1 here]
 
-For the elastic analysis of the pavement structure shown in Figure 1, the different layers are assumed to be homogeneous and isotropic. The materials used in each layer are defined by elastic parameters i.e. Young's modulus and Poisson's ratio. Each layer has a finite thickness except the lowest subgrade layer, which is assumed to have an infinite thickness. The nature of the interface between successive layers dictates how stresses and displacements are transferred from one layer to another. For the purpose of this example, full-friction between the layers is assumed, therefore shear stresses and lateral displacements at the lower interface of any layer are equal to those at the top interface of the underlying layer.
+For the elastic analysis of the pavement structure shown in Figure 1, the different layers are assumed to be homogeneous and isotropic. The materials used in each layer are defined by elastic parameters i.e. Young's modulus (\( E \)) and Poisson's ratio (\( \nu \)). Each layer has a finite thickness except the lowest subgrade layer, which is assumed to have an infinite thickness. The nature of the interface between successive layers dictates how stresses and displacements are transferred from one layer to another. For the purpose of this example, full-friction between the layers is assumed, therefore shear stresses and lateral displacements at the lower interface of any layer are equal to those at the top interface of the underlying layer.
 
 Problem Formulation
 -------------------
@@ -25,14 +25,14 @@ Stresses and displacements written to show the Hankel form are:
 
 where
 
-\(\sigma_{z} = \) vertical compressive stress
-\(\tau_{rz} = \) shear stress
-\(u = \) lateral displacement
-\(w = \) vertical displacement
-\(\\mathrm{J}_0, \\mathrm{J}_1 = \) bessel functions of order 0 and 1
-\( \xi = \) Hankel parameter
-\( \r = \) radius
-\( \z = \) height
+\(\sigma_{z} = \) vertical compressive stress \\
+\(\tau_{rz} = \) shear stress \\
+\(u = \) lateral displacement \\
+\(w = \) vertical displacement \\
+\(\\mathrm{J}_0, \\mathrm{J}_1 = \) bessel functions of order 0 and 1 \\
+\( \xi = \) Hankel parameter \\
+\( \r = \) radius \\
+\( \z = \) height \\
 
 [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
 
