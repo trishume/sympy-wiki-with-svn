@@ -41,7 +41,13 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire, \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). 
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire, \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In matrix form:
+\[
+\begin{bmatrix}
+\sigma_{z} \\
+\tau_{rz} \\
+\end{bmatrix}
+\] 
 
 **Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
 \[\sigma_{z}^{i}\left(r,h_{i}\right)=\sigma_{z}^{i+1}\left(r,0\right)\]
@@ -49,6 +55,15 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 \[u_{r}^{i}\left(r,h_{i}\right)=u_{r}^{i+1}\left(r,0\right)\]
 \[u_{z}^{i}\left(r,h_{i}\right)=u_{z}^{i+1}\left(r,0\right)\]
 
-**Infinite lower layer.**All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\). It can be shown that the integration constants \(A_{N}\) and \(C_{N}\) for this layer are zero. 
+**Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that the integration constants \(A_{N}\) and \(C_{N}\) for this layer are zero.
+
+Applying the boundary conditions allows the integration constants to be solved. These may then be substituted in to the stress and displacement equations and integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process consider a single layer subjected to a single circular load.
+
+Single layer solution
+---------------------
+
+Using Sympy the code 
+
+     
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
