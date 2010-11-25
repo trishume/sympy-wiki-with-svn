@@ -60,16 +60,20 @@ e^{\xi z}+\left(B\xi+D\left(1-2\nu+\xi z\right)\right)e^{-\xi z}\right)
 e^{\xi z}-\left(B\xi-D\left(1-\xi z\right)\right)e^{-\xi z}\right)\\mathrm{J}_0
 \left(r\xi\right)\xi\,d\xi\]
 
-where:
-    - \(\sigma_{z} \)                       : vertical compressive stress
-    - \(\tau_{rz} \)                        : shear stress
-    - \(u \)                                : lateral displacement
-    - \(w \)                                : vertical displacement
-    - \(\\mathrm{J}_0,\\mathrm{J}_1 \)      : bessel functions of order 0 and 1
-    - \(\xi \)                              : Hankel parameter
-    - \(r \)                                : radial position
-    - \(z \)                                : vertical position
-    - \(A,B,C,D \)                          : integration constants
+where
+\(\sigma_{z} \)
+   vertical compressive stress
+\(\tau_{rz} \)
+   shear stress
+\(u \)
+   lateral displacement
+
+\(w \)                                : vertical displacement
+\(\\mathrm{J}_0,\\mathrm{J}_1 \)      : bessel functions of order 0 and 1
+\(\xi \)                              : Hankel parameter
+\(r \)                                : radial position
+\(z \)                                : vertical position
+\(A,B,C,D \)                          : integration constants
 
 Boundary Conditions
 ^^^^^^^^^^^^^^^^^^^
