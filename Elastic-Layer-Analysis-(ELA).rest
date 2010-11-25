@@ -41,11 +41,14 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire, \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). 
 
-\[
-r\leq a \left\{\begin{array}{l l}\sigma_{z}\left(r,0\right)=-q\\ \tau_{rz} = 0 \end{array}
-\]
+**Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
+\[\sigma_{z}^{i}\left(r,h_{i}\right)=\sigma_{z}^{i+1}\left(r,0\right)\]
+\[\tau_{rz}^{i}\left(r,h_{i}\right)=\tau_{rz}^{i+1}\left(r,0\right)\]
+\[u_{r}^{i}\left(r,h_{i}\right)=u_{r}^{i+1}\left(r,0\right)\]
+\[u_{z}^{i}\left(r,h_{i}\right)=u_{z}^{i+1}\left(r,0\right)\]
 
+**Infinite lower layer.**All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\). It can be shown that the integration constants \(A_{N}\) and \(C_{N}\) for this layer are zero. 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
