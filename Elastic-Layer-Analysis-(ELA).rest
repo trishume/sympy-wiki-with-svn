@@ -44,7 +44,7 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 **Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
 
 \[
-r\leq a \{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array}
+r\leq a \{\begin{array}{l l}\sigma_{z}\left(r,0\right)=-q\\ \tau_{rz} = 0 \end{array}
 \]
 
 
