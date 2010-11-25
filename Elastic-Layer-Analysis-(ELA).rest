@@ -53,7 +53,7 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
 
-\[r\leq a \left{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array} \]
+\[r\leq a \{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array} \]
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
