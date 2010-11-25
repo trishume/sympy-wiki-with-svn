@@ -43,10 +43,10 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 **Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire, \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In matrix form:
 \[
-\begin{bmatrix}
+\begin{matrix}
 \sigma_{z} \\
 \tau_{rz} \\
-\end{bmatrix}
+\end{matrix}
 \] 
 
 **Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
