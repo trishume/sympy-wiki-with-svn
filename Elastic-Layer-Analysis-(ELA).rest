@@ -41,11 +41,11 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. Consider a truck having two tires on a 80 kN loaded axle. If a tyre pressure of 690 kPa is used, the tyre load radius = \(\sqrt{40000/(0.69*\pi)}\) = 135.8 mm.      
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
 
-If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
-
-\[r\leq a \left{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array}
+\[
+r\leq a \{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array}
+\]
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
