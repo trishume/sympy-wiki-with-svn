@@ -23,22 +23,14 @@ Stresses and displacements written to show the Hankel form are:
 \[w=\frac{1+\nu}{E}\int_{0}^{\infty}\xi\left(\left(-A\xi+C\left(2-4\nu-\xi z\right)\right)e^{\xi z}-\left(B\xi+D\left(2-4\nu+\xi z\right)\right)e^{- \xi z}\right)\\mathrm{J}_0\left(r\xi\right)\xi\,d\xi\]
 \[u=\frac{1+\nu}{E}\int_{0}^{\infty}\xi\frac{\\mathrm{J}_1\left(r\xi\right)}{\\mathrm{J}_0\left(r\xi\right)}\left(\left(A\xi+C\left(1+\xi z\right)\right)e^{\xi z}-\left(B\xi-D\left(1-\xi z\right)\right)e^{-\xi z}\right)\\mathrm{J}_0\left(r\xi\right)\xi\,d\xi\]
 
-\(\sigma_{z}\)
-    vertical compressive stress
-\(\tau_{rz}\)
-    shear stress
-\(u\)
-    lateral displacement
-\(w\)
-    vertical displacement
-\(\\mathrm{J}_0,\\mathrm{J}_1\)
+\(\sigma_{z}\), \(\tau_{rz}\)
+    vertical compressive and shear stress
+\(u\), \(w\)
+    lateral and vertical displacement
+\(\\mathrm{J}_0, \\mathrm{J}_1\)
     Bessel functions of order 0 and 1, respectively.
-\(\xi\)
-    Hankel parameter
-\(r\)
-    radial position in cylindrical coordinates
-\(z\)
-    vertical position
+\(\xi\), \(r\), \(z\)
+    Hankel parameter, radial position in cylindrical coordinates and vertical position
 \(A,B,C,D\)
     integration constants
 
@@ -53,7 +45,7 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 If only a vertical uniformly distributed circular load is considered, the surface boundary conditions due to the load with radius \(a\) are:
 
-\[r\leq a \{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array} \]
+\[r\leq a \left{\begin{array}{l l}\sigma_{z}\(r,0\)=-q\\ \tau_{rz} = 0 \end{array}
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
