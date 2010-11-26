@@ -41,13 +41,8 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(q\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire, \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In matrix form:
-\[
-\begin{matrix}
-\sigma_{z} \\
-\tau_{rz} \\
-\end{matrix}
-\] 
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(p\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire (\(r\leq a\)), \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In the Hankel domain, the load may be determined as:
+\[q=\int_{0}^{\infty}rp\\mathrm{J}_0\left(\xi r\right)\,dr=\frac{pa}{\xi}\\mathrm{J}_1\left(\xi a\right)\]
 
 **Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
 \[\sigma_{z}^{i}\left(r,h_{i}\right)=\sigma_{z}^{i+1}\left(r,0\right)\]
