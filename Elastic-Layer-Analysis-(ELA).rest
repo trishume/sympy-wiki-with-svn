@@ -41,7 +41,7 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(p\). The circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire (\(r\leq a\)), \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In the Hankel domain, the load may be determined as:
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(p\) - the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire (\(r\leq a\)), \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In the Hankel domain, the load may be determined as:
 \[q=\int_{0}^{\infty}rp\\mathrm{J}_0\left(\xi r\right)\,dr=\frac{pa}{\xi}\\mathrm{J}_1\left(\xi a\right)\]
 
 **Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
@@ -50,18 +50,66 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 \[u_{r}^{i}\left(r,h_{i}\right)=u_{r}^{i+1}\left(r,0\right)\]
 \[u_{z}^{i}\left(r,h_{i}\right)=u_{z}^{i+1}\left(r,0\right)\]
 
-**Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that the integration constants \(A_{N}\) and \(C_{N}\) for this layer are zero.
+**Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that this implies that the integration constants \(A\) and \(C\) for this layer are zero.
 
-Applying the boundary conditions allows the integration constants to be solved. These may then be substituted in to the stress and displacement equations and integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process consider a single layer subjected to a single circular load.
+Applying the boundary conditions allows the integration constants to be solved. Depending on the number of layers (\(n\)) in the system, the number of equations to solve is \(4n-2\). The solved constants may then be substituted into the stress and displacement equations, which are integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process, consider a single layer subjected to a single circular load.
 
 Single layer solution
 ---------------------
 
-Using Sympy the code 
+Applying the problem formulation and boundary conditions outlined above, the following code listing   
 
-\[\left(\begin{smallmatrix}-1 & -1 + 2 \nu_{0}\\1 & - 2 \nu_{0}\end{smallmatrix}\right)\]
+```python
+from sympy import Symbol,Matrix,exp,sqrt,pi
 
+xi=Symbol('xi')     # Bessel parameter
+j0=Symbol('j0')     # Bessel function J0
+j1=Symbol('j1')     # Bessel function J1
+q=Symbol('q')       # Tyre pressure
+a=Symbol('a')       # Tyre radius
+nu0=Symbol('nu0')   # Poisson's ratio of layer
 
+def hsz(z,nu):
+    """
+    Constants for Hankel transformed normal stress
+    
+    """ 
+    a1=exp(xi*z)
+    b1=-exp(-xi*z)
+    c1=-(1-2*nu-xi*z)*exp(xi*z)
+    d1=-(1-2*nu+xi*z)*exp(-xi*z)
+    return a1,b1,c1,d1
+
+def htrz(z,nu):
+    """
+    Constants for Hankel transformed shear stress
+    
+    """ 
+    a2=exp(xi*z)
+    b2=exp(-xi*z)
+    c2=(2*nu+xi*z)*exp(xi*z)
+    d2=-(2*nu-xi*z)*exp(-xi*z)
+    return a2,b2,c2,d2
+
+def s_z(r,z,nu,A,B,C,D):
+    """
+    Normal stress function
+    
+    """
+    if r==0:
+        return (A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z)
+    else:
+        return ((A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z))*j0(r*xi)
+
+# Apply boundary condition for surface load
+a1,b1,c1,d1=hsz(0,nu0)
+a2,b2,c2,d2=htrz(0,nu0)
+
+# For this single infinite layer the integration constants A and C are zero.
+P=Matrix([[b1,d1],[b2,d2]])
+R=Matrix(2,1,[1,0])
+B,D=P.LUsolve(R)
+```
      
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
