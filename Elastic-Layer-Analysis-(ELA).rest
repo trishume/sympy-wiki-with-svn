@@ -59,6 +59,9 @@ Single layer solution
 
 Using Sympy the code 
 
+\[\left(\begin{smallmatrix}-1 & -1 + 2 \nu_{0}\\1 & - 2 \nu_{0}\end{smallmatrix}\right)\]
+
+
      
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
