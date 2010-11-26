@@ -64,6 +64,14 @@ from sympy import Symbol,Matrix,exp,lambdify
 from sympy.mpmath import sqrt,quadosc,inf,pi
 from time import time
 
+"""
+one.py
+
+Calculate the stress variation with depth beneath
+a single layer subjected to a circular load.
+
+"""
+
 xi=Symbol('xi')     # Hankel parameter
 j0=Symbol('j0')     # Bessel function J0
 j1=Symbol('j1')     # Bessel function J1
@@ -137,7 +145,7 @@ for h in range(0,1100,100):
     f=lambdify(xi,f,"mpmath")
 
     # Integrate
-    szz=-p*a*quadosc(f,[0,inf],period=pi)
+    szz=-p*aa*quadosc(f,[0,inf],period=pi)
 
     # Time the solution
     print "Time: ", time()-t
@@ -145,6 +153,37 @@ for h in range(0,1100,100):
     # Normal stress 
     print h,"\t",szz
 ```
+
+The function sz in the above listing is the integrand of the normal stress with depth (z). Integrating this function provides the general solution: 
+\[szz=\int_{0}^{\infty}\left(1+\xi z\right)e^{-\xi z}\\mathrm{J}_1\left(a \xi\right)\,d\xi\]
+
+For the infinite layer, the integration constants A and C are zero. To solve for the other constants, B and D, the boundary condition on the surface is applied i.e. [[Matrix|http://docs.sympy.org/dev/modules/matrices.html?highlight=matrix#sympy.matrices.matrices.Matrix]] P. To simplify the solution of the integration constants, the response matrix, R, is set to Matrix(2,1,[1,0]) instead of Matrix(2,1,[q,1]) and the transformed load is applied just before integration by multiplying sz by q. Use is made of the [[LUsolve|http://docs.sympy.org/dev/modules/matrices.html?highlight=lusolve#sympy.matrices.matrices.Matrix.LUsolve]] function to solve for B and D. Sympy does not currently include Bessel functions of order 0 and 1, therefore to solve the stress function it is necessary to firstly lambdify the integrand. This converts all Sympy functions to corresponding mpmath functions. This was the reason for defining the Sympy function j1, which when *lambdified* is converted into the corresponding mpmath function [[j0|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j1]]. Integration is applied using the mpmath [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]] integration function, which can handle highly oscillatory integrals.
+
+Running the code listed above outputs the following:
+```text
+z	szz
+Time:  284.231451035
+0 	-0.689999990998652
+Time:  284.91761899
+100 	-0.431176903899328
+Time:  285.566144943
+200 	-0.184591765203959
+Time:  286.216634989
+300 	-0.0939644329041175
+Time:  286.864490032
+400 	-0.0556528497590855
+Time:  287.513298035
+500 	-0.0365079217617338
+Time:  288.164211988
+600 	-0.0257007382659789
+Time:  288.814935923
+700 	-0.0190395365347949
+Time:  289.288332939
+800 	4.87381470533708e-17
+Time:  289.759204865
+900 	2.71946881438062e-19
+Time:  290.231090069
+1000 	1.49942436703617e-21
 
 
      
