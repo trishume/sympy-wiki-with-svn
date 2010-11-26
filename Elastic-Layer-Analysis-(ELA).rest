@@ -57,17 +57,21 @@ Applying the boundary conditions allows the integration constants to be solved. 
 Single layer solution
 ---------------------
 
-Applying the problem formulation and boundary conditions outlined above, the following code listing   
+Applying the problem formulation and boundary conditions outlined above, the following code listing shows the variation in normal stress with depth for a single layer under a circular load.   
 
 ```python
-from sympy import Symbol,Matrix,exp,sqrt,pi
+from sympy import Symbol,Matrix,exp,lambdify
+from sympy.mpmath import sqrt,quadosc,inf,pi
+from time import time
 
-xi=Symbol('xi')     # Bessel parameter
+xi=Symbol('xi')     # Hankel parameter
 j0=Symbol('j0')     # Bessel function J0
 j1=Symbol('j1')     # Bessel function J1
-q=Symbol('q')       # Tyre pressure
-a=Symbol('a')       # Tyre radius
 nu0=Symbol('nu0')   # Poisson's ratio of layer
+a=Symbol('a')       # Load radius
+z=Symbol('z')       # Vertical evaluation position
+
+q=j1(xi*a)          # Hankel transformed load
 
 def hsz(z,nu):
     """
@@ -101,15 +105,48 @@ def s_z(r,z,nu,A,B,C,D):
     else:
         return ((A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z))*j0(r*xi)
 
-# Apply boundary condition for surface load
+# Apply boundary condition for surface load (z=0)
 a1,b1,c1,d1=hsz(0,nu0)
 a2,b2,c2,d2=htrz(0,nu0)
 
 # For this single infinite layer the integration constants A and C are zero.
 P=Matrix([[b1,d1],[b2,d2]])
 R=Matrix(2,1,[1,0])
-B,D=P.LUsolve(R)
+
+# 2 equations, 2 unknowns - solve the integration constants
+B0,D0=P.LUsolve(R)
+
+# Substitute constants into stress equation (s_z)
+# Determine the stress as a function of z beneath the load (r=0). Note: A=C=0
+sz=s_z(0,z,nu0,0,B0,0,D0)*q
+
+######################################## SOLUTION ###
+t = time()
+
+p=0.69              # Load pressure (MPa)
+F=20000.            # Load force (Newton)
+aa=sqrt(F/(p*pi))   # Load radius (mm)
+
+print "z\tszz"
+for h in range(0,1100,100):
+    f=sz
+    f=f.subs(z,h)
+    f=f.subs(a,aa)  # assume load radius = 100 mm
+
+    # Lambdify the stress function
+    f=lambdify(xi,f,"mpmath")
+
+    # Integrate
+    szz=-p*a*quadosc(f,[0,inf],period=pi)
+
+    # Time the solution
+    print "Time: ", time()-t
+    
+    # Normal stress 
+    print h,"\t",szz
 ```
+
+
      
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
