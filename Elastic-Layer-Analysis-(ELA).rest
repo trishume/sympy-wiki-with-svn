@@ -151,7 +151,7 @@ The integrand sz is a function of the Bessel of order 1 and an exponential funct
 
 [Figure 2 here]
 
-Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running to integrate sz
+Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running to integrate sz. Note how the integrand is multiplied by \(p\) and \(a\) following the integration to determine the vertical normal stress at the respective depths.
 
 ```python
 p=0.69              # Load pressure (MPa)
@@ -225,37 +225,15 @@ Integrating from 0 to +inf (degree 6 of 6)
 Estimated error: 1.0
 Failed to reach full accuracy. Estimated error: 1.0
 szz:  8058863524.695
-Time:  1.27150893211
+Time:  1.09746789932
 
 Integration method 2 (z=0)
 szz:  -0.689999990998652
-Time:  287.147711992
+Time:  289.689537048
 
 Integration method 3 (z=0)
 szz:  -0.69
-Time:  2.75842213631Integration method 1 (z=0)
-Integrating from 0 to +inf (degree 1 of 6)
-Integrating from 0 to +inf (degree 2 of 6)
-Estimated error: 4.31832e+8
-Integrating from 0 to +inf (degree 3 of 6)
-Estimated error: 1.0
-Integrating from 0 to +inf (degree 4 of 6)
-Estimated error: 1.0
-Integrating from 0 to +inf (degree 5 of 6)
-Estimated error: 1.0
-Integrating from 0 to +inf (degree 6 of 6)
-Estimated error: 1.0
-Failed to reach full accuracy. Estimated error: 1.0
-szz:  8058863524.695
-Time:  1.27150893211
-
-Integration method 2 (z=0)
-szz:  -0.689999990998652
-Time:  287.147711992
-
-Integration method 3 (z=0)
-szz:  -0.69
-Time:  2.75842213631
+Time:  2.73873400688
 
 Integration method 1 (z=100)
 Integrating from 0 to +inf (degree 1 of 6)
@@ -267,14 +245,14 @@ Integrating from 0 to +inf (degree 4 of 6)
 Estimated error: 1.0e-9
 Integrating from 0 to +inf (degree 5 of 6)
 szz:  -0.431176903899328
-Time:  0.574920892715
+Time:  0.585129022598
 
 Integration method 3 (z=100)
 szz:  -0.431176903899328
-Time:  0.906248092651
+Time:  0.899243116379
 ```
 
-From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function.
+From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function. In fact, at greater depths, *quad* will provide a more accurate solution than *quadosc*.
 
 Two layer solution
 ------------------
