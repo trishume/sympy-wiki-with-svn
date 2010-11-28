@@ -138,7 +138,7 @@ Solving the integration constants
 For the infinite layer, the integration constants A and C are zero. To solve for the other constants, B and D, the boundary conditions on the surface are applied i.e. [[Matrix|http://docs.sympy.org/dev/modules/matrices.html?highlight=matrix#sympy.matrices.matrices.Matrix]] P. To simplify the solution of the integration constants, the response matrix, R, is set to Matrix(2,1,[1,0]) instead of Matrix(2,1,[q,1]) and the transformed load is applied just before integration by multiplying sz by q. Thus we have two equations and two unknowns. Use is made of the [[LUsolve|http://docs.sympy.org/dev/modules/matrices.html?highlight=lusolve#sympy.matrices.matrices.Matrix.LUsolve]] function to solve for B and D.
 
 Instead of using the *LUsolve* function, an alternative approach would be to multiply the response matrix R by the inverse of the global matrix P:
-```
+```python
 B0,D0=P.inv()*R
 ```
 
@@ -151,7 +151,7 @@ The integrand sz is a function of the Bessel of order 1 and an exponential funct
 
 [Figure 2 here]
 
-Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running to integrate sz.  
+Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running to integrate sz
 
 ```python
 p=0.69              # Load pressure (MPa)
@@ -211,7 +211,6 @@ print "Time: ", time()-t
 
 The output:
 ```text
-
 Integration method 1 (z=0)
 Integrating from 0 to +inf (degree 1 of 6)
 Integrating from 0 to +inf (degree 2 of 6)
