@@ -41,7 +41,23 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius \(a\) and a uniform pressure \(p\) - the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, on the surface beneath the tire (\(r\leq a\)), \(\sigma_{z}=-q\) and \(\tau_{rz}=0\). In the Hankel domain, the load may be determined as:
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius (a) and a uniform pressure (p), the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered:
+\[
+r\leq a \left\{
+\begin{array}{l l}
+\sigma_{z}\left(r,0\right)=-p\\\
+\tau_{rz} = 0 \\\
+\end{array}
+\]
+\[
+r\gt a \left\{
+\begin{array}{l l}
+\sigma_{z}\left(r,0\right)=0\\\
+\tau_{rz}=0\\\
+\end{array}
+\]
+
+In the Hankel domain, the load may be determined as:
 \[q=\int_{0}^{\infty}rp\\mathrm{J}_0\left(\xi r\right)\,dr=\frac{pa}{\xi}\\mathrm{J}_1\left(\xi a\right)\]
 
 **Interlayers.** As indicated previously, with full friction, to ensure equilibrium, stresses and displacements at the interlayers are equal:
@@ -52,7 +68,7 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 **Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that this implies that the integration constants \(A\) and \(C\) for this layer are zero.
 
-Applying the boundary conditions allows the integration constants to be solved. Depending on the number of layers (\(n\)) in the system, the number of equations to solve is \(4n-2\). The solved constants may then be substituted into the stress and displacement equations, which are integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process, consider a single layer subjected to a single circular load.
+Applying the boundary conditions allows the integration constants to be solved. Depending on the number of layers (n) in the system, the number of equations to solve is 4n-2. The solved constants may then be substituted into the stress and displacement equations, which are integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process, consider a single layer subjected to a single circular load.
 
 One layer solution
 ------------------
@@ -252,11 +268,26 @@ szz:  -0.431176903899328
 Time:  0.899243116379
 ```
 
-From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function. In fact, at greater depths, *quad* will provide a more accurate solution than *quadosc*.
+From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. With the period not set correctly, *quadosc* provides an accurate solution, but after a long wait. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function. In fact, at greater depths, *quad* will provide a more accurate solution than *quadosc*. Note the use of the Sympy [[subs|http://docs.sympy.org/dev/modules/core.html?highlight=subs#sympy.core.basic.Basic.subs]] function to substitute numerical values for the symbolic expressions. 
 
 Two layer solution
 ------------------
 
-Still to do.
+With two layers (n=2) the number of integration constants is 4n-2 = 6 i.e. A0,B0,C0,D0 for the first layer and B1,D1 for the infinitely thick second layer with A1 and C1 = 0. In addition to applying the boundary conditions at the surface, the equality of stresses and displacements at the interface between the two layers provides a solution for the integration constants. 
+
+On the surface the normal stress is the applied load and the shear stress is zero:
+\[
+\begin{bmatrix} 
+a11 & a12 \\\ 
+a21 & a22 
+\end{bmatrix} \begin{bmatrix} 
+A0 \\\ 
+B0 
+\end{bmatrix} = \begin{bmatrix} 
+1 \\\
+0
+\end{bmatrix}
+\]
+
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
