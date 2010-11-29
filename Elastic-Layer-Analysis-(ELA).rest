@@ -328,7 +328,15 @@ Bringing these together into a single matrix:
 e^{h_{0} \xi} & e^{- h_{0} \xi} & \left(2 \nu_{0} + h_{0} \xi\right) e^{h_{0} \xi} & \left(- 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & 1 & 1 - 2 \nu_{1}\\\
 e^{h_{0} \xi} & e^{- h_{0} \xi} & - \left(2 - 4 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & \left(2 - 4 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & - \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1} \left(2 - 4 \nu_{1}\right)}{\mu_{0}}\\\
 e^{h_{0} \xi} & - e^{- h_{0} \xi} & \left(1 + h_{0} \xi\right) e^{h_{0} \xi} & \left(1 - h_{0} \xi\right) e^{- h_{0} \xi} & \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1}}{\mu_{0}}\\\
-1 & -1 & -1 + 2 \nu_{0} & -1 + 2 \nu_{0} & 0 & 0\\1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix}
+1 & -1 & -1 + 2 \nu_{0} & -1 + 2 \nu_{0} & 0 & 0\\\
+1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix}= \begin{bmatrix} 
+0 \\\
+0 \\\
+0 \\\
+0 \\\
+1 \\\
+0
+\end{bmatrix}
 \]
 
 
