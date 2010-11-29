@@ -47,14 +47,14 @@ r\leq a \left\{
 \begin{array}{l l}
 \sigma_{z}\left(r,0\right)=-p\\\
 \tau_{rz} = 0 \\\
-\end{array}
+\end{array} \right.
 \]
 \[
 r\gt a \left\{
 \begin{array}{l l}
 \sigma_{z}\left(r,0\right)=0\\\
 \tau_{rz}=0\\\
-\end{array}
+\end{array} \right.
 \]
 
 In the Hankel domain, the load may be determined as:
