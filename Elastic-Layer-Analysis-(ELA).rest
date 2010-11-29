@@ -43,18 +43,18 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 **Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius (a) and a uniform pressure (p), the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered:
 \[
-1. r\leq a \left\{
+r\leq a \left\{
 \begin{array}{l l}
 \sigma_{z}\left(r,0\right)=-p\\\
-\tau_{rz} = 0 \\\
-\end{array} \right.
+\tau_{rz}=0\\\
+\end{array}\right.
 \]
 \[
-2. r\gt a \left\{
+r\gt a \left\{
 \begin{array}{l l}
 \sigma_{z}\left(r,0\right)=0\\\
 \tau_{rz}=0\\\
-\end{array} \right.
+\end{array}\right.
 \]
 
 In the Hankel domain, the load may be determined as:
@@ -151,7 +151,19 @@ The function sz in the above listing is the integrand of the normal stress with 
 Solving the integration constants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the infinite layer, the integration constants A and C are zero. To solve for the other constants, B and D, the boundary conditions on the surface are applied i.e. [[Matrix|http://docs.sympy.org/dev/modules/matrices.html?highlight=matrix#sympy.matrices.matrices.Matrix]] P. To simplify the solution of the integration constants, the response matrix, R, is set to Matrix(2,1,[1,0]) instead of Matrix(2,1,[q,1]) and the transformed load is applied just before integration by multiplying sz by q. Thus we have two equations and two unknowns. Use is made of the [[LUsolve|http://docs.sympy.org/dev/modules/matrices.html?highlight=lusolve#sympy.matrices.matrices.Matrix.LUsolve]] function to solve for B and D.
+For the infinite layer, the integration constants A and C are zero. To solve for the other constants, B and D, the boundary conditions on the surface are applied i.e. [[Matrix|http://docs.sympy.org/dev/modules/matrices.html?highlight=matrix#sympy.matrices.matrices.Matrix]] P. To simplify the solution of the integration constants, the response matrix, R, is set to Matrix(2,1,[1,0]) instead of Matrix(2,1,[q,1]) and the transformed load is applied just before integration by multiplying sz by q. Thus we have two equations and two unknowns. Use is made of the [[LUsolve|http://docs.sympy.org/dev/modules/matrices.html?highlight=lusolve#sympy.matrices.matrices.Matrix.LUsolve]] function to solve for B and D:
+\[
+\begin{bmatrix} 
+-1 & -1+2\nu \\\ 
+1 & -2\nu 
+\end{bmatrix} \begin{bmatrix} 
+B \\\ 
+D 
+\end{bmatrix} = \begin{bmatrix} 
+1 \\\
+0
+\end{bmatrix}
+\]
 
 Instead of using the *LUsolve* function, an alternative approach would be to multiply the response matrix R by the inverse of the global matrix P:
 ```python
