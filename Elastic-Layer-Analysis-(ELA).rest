@@ -285,7 +285,7 @@ From the output it can be seen that *quad* fails to integrate the sz function at
 Two layer solution
 ------------------
 
-With two layers (n=2) the number of integration constants is 4n-2 = 6 i.e. A0,B0,C0,D0 for the first layer and B1,D1 for the infinitely thick second layer with A1 and C1 = 0. In addition to applying the boundary conditions at the surface, the equality of stresses and displacements at the interface between the two layers provides a solution for the integration constants. 
+With two layers (n=2) the number of integration constants is 4n-2 = 6 i.e. A0,B0,C0,D0 for the first layer and B1,D1 for the infinitely thick second layer with A1 = C1 = 0. In addition to applying the boundary conditions at the surface, the equality of stresses and displacements at the interface between the two layers provides a solution for the integration constants. 
 
 On the surface the normal stress is the applied load and the shear stress is zero:
 \[
@@ -303,7 +303,7 @@ D0 \\\
 \end{bmatrix}
 \]
 
-At the interface:
+At the interface (z=\(h_{0}\)):
 \[
 \begin{bmatrix}e^{h_{0} \xi} & - e^{- h_{0} \xi} & - \left(1 - 2 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & - \left(1 - 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi}\\\
 e^{h_{0} \xi} & e^{- h_{0} \xi} & \left(2 \nu_{0} + h_{0} \xi\right) e^{h_{0} \xi} & \left(- 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi}\\\
@@ -327,7 +327,8 @@ Bringing these together into a single matrix:
 \begin{bmatrix}e^{h_{0} \xi} & - e^{- h_{0} \xi} & - \left(1 - 2 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & - \left(1 - 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & 1 & 1 - 2 \nu_{1}\\\
 e^{h_{0} \xi} & e^{- h_{0} \xi} & \left(2 \nu_{0} + h_{0} \xi\right) e^{h_{0} \xi} & \left(- 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & 1 & 1 - 2 \nu_{1}\\\
 e^{h_{0} \xi} & e^{- h_{0} \xi} & - \left(2 - 4 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & \left(2 - 4 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & - \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1} \left(2 - 4 \nu_{1}\right)}{\mu_{0}}\\\
-e^{h_{0} \xi} & - e^{- h_{0} \xi} & \left(1 + h_{0} \xi\right) e^{h_{0} \xi} & \left(1 - h_{0} \xi\right) e^{- h_{0} \xi} & \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1}}{\mu_{0}}\\1 & -1 & -1 + 2 \nu_{0} & -1 + 2 \nu_{0} & 0 & 0\\1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix}
+e^{h_{0} \xi} & - e^{- h_{0} \xi} & \left(1 + h_{0} \xi\right) e^{h_{0} \xi} & \left(1 - h_{0} \xi\right) e^{- h_{0} \xi} & \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1}}{\mu_{0}}\\\
+1 & -1 & -1 + 2 \nu_{0} & -1 + 2 \nu_{0} & 0 & 0\\1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix}
 \]
 
 
