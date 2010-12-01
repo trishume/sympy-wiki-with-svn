@@ -41,7 +41,7 @@ Boundary Conditions
 
 The boundaries of the elastic layer system include the surface, interfaces between the layers and the infinite lowest layer. 
 
-**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius (a) and a uniform pressure (p), the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered:
+**Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius (a) and a uniform pressure (p), the circular imprint simulates the impression of vehicle tyres. If only a vertical uniformly distributed circular load is considered, at a radial position (r) on the surface:
 \[
 r\leq a \left\{
 \begin{array}{l l}
@@ -66,16 +66,16 @@ In the Hankel domain, the load may be determined as:
 \[u_{r}^{i}\left(r,h_{i}\right)=u_{r}^{i+1}\left(r,0\right)\]
 \[u_{z}^{i}\left(r,h_{i}\right)=u_{z}^{i+1}\left(r,0\right)\]
 
-**Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that this implies that the integration constants \(A\) and \(C\) for this layer are zero.
+**Infinite lower layer.** All stresses and displacements approach zero at infinite depth (\(z\rightarrow\infty\)). It can be shown that this implies that the integration constants A and C for this layer are zero.
 
-Applying the boundary conditions allows the integration constants to be solved. Depending on the number of layers (n) in the system, the number of equations to solve is 4n-2. The solved constants may then be substituted into the stress and displacement equations, which are integrated to determine response to surface loads at specific evaluation positions (\(r\) and \(z\)). To demonstrate the process, consider a single layer subjected to a single circular load.
+Applying the boundary conditions allows the integration constants to be solved. Depending on the number of layers (n) in the system, the number of equations to solve is 4n-2. The solved constants may then be substituted into the stress and displacement equations, which are integrated to determine response to surface loads at specific evaluation positions r and z. To demonstrate the process, consider a single layer subjected to a single circular load.
 
 One layer solution
 ------------------
 
-Applying the problem formulation and boundary conditions outlined above, the following code listing shows the variation in normal stress with depth for a single layer under a circular load.   
+Applying the problem formulation and boundary conditions outlined above, the following code listing shows how SymPy can be used to determine the variation in normal stress with depth for a single layer under a circular load.   
 
-```python
+```py
 from sympy import Symbol,Matrix,exp,lambdify
 from sympy.mpmath import sqrt,quad,quadosc,inf,pi
 from time import time
@@ -146,7 +146,9 @@ sz=s_z(0,z,nu0,0,B0,0,D0)*q
 ```
 
 The function sz in the above listing is the integrand of the normal stress with depth (z). Integrating this function provides the general solution: 
-\[szz=\int_{0}^{\infty}\left(1+\xi z\right)e^{-\xi z}\\mathrm{J}_1\left(a \xi\right)\,d\xi\]
+\[
+\sigma_{z}=\int_{0}^{\infty}\left(1+\xi z\right)e^{-\xi z}\\mathrm{J}_1\left(a \xi\right)\,d\xi
+\]
 
 Solving the integration constants
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -173,13 +175,13 @@ B0,D0=P.inv()*R
 Integrating the stress function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sympy does not currently include Bessel functions of the first kind, therefore to solve the stress function it is necessary to firstly lambdify[provide link???] the integrand (see the code segment below). This converts all Sympy functions to corresponding mpmath functions. This was the reason for defining the Sympy functions j0 and j1, which when *lambdified* are converted into the corresponding mpmath functions [[j0|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j0]] and [[j1|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j1]]. 
+Sympy does not currently include Bessel functions of the first kind, therefore to solve the stress function it is necessary to firstly lambdify [provide help link???] the integrand (see the code segment below). This converts all Sympy functions to corresponding mpmath functions. This was the reason for defining the SymPy functions j0 and j1, which when *lambdified* are converted into the corresponding mpmath functions [[j0|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j0]] and [[j1|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j1]]. 
 
-The integrand sz is a function of the Bessel of order 1 and an exponential function of the order -\(\xi z\). On the surface (z=0), the exponential function is eliminated, and the integrand is simply a function of the Bessel, which is very highly oscillatory. Figure 2 shows the behaviour of sz at the surface and at a depth of 100 mm. Clearly, the exponential serves to dampen the Bessel oscillations.   
+The integrand sz is a function of the Bessel of order 1 and an exponential function. On the surface (z=0), the exponential function is eliminated, and the integrand is simply a function of the Bessel, which is very highly oscillatory. Figure 2 shows the behaviour of sz at the surface and at a depth of 100 mm. Clearly, the exponential serves to dampen the Bessel oscillations.   
 
 [Figure 2 here]
 
-Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running to integrate sz. Note how the integrand is multiplied by \(p\) and \(a\) following the integration to determine the vertical normal stress at the respective depths.
+Figure 2 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running through python to integrate sz. Note how the integrand is multiplied by p and a following the integration to determine the vertical normal stress at the respective depths.
 
 ```python
 p=0.69              # Load pressure (MPa)
@@ -280,7 +282,12 @@ szz:  -0.431176903899328
 Time:  0.899243116379
 ```
 
-From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. With the period not set correctly, *quadosc* provides an accurate solution, but after a long wait. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function. In fact, at greater depths, *quad* will provide a more accurate solution than *quadosc*. Note the use of the Sympy [[subs|http://docs.sympy.org/dev/modules/core.html?highlight=subs#sympy.core.basic.Basic.subs]] function to substitute numerical values for the symbolic expressions. 
+From the output it can be seen that *quad* fails to integrate the sz function at the surface but *quadosc* with the period correctly set is very efficient. With the period not set correctly, *quadosc* provides an accurate solution, but after a long wait. At depths greater than 0, *quad* provides a rapid and accurate solution of the stress function. In fact, at greater depths, *quad* will provide a more accurate solution than *quadosc*. Note the use of the Sympy [[subs|http://docs.sympy.org/dev/modules/core.html?highlight=subs#sympy.core.basic.Basic.subs]] function to substitute numerical values for the symbolic expressions.
+
+To test the solution, the results may be compared to the Boussinesq case [2]_ for an infinite half space with a circular load at the origin. The solution for vertical stress when radius is zero is:
+\[
+\sigma_{z}=p\left(\frac{z^{3}}{\left(z^{2}+a^{2}\right)^{3/2}}-1\right)
+\]
 
 Two layer solution
 ------------------
@@ -329,7 +336,14 @@ e^{h_{0} \xi} & e^{- h_{0} \xi} & \left(2 \nu_{0} + h_{0} \xi\right) e^{h_{0} \x
 e^{h_{0} \xi} & e^{- h_{0} \xi} & - \left(2 - 4 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & \left(2 - 4 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi} & - \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1} \left(2 - 4 \nu_{1}\right)}{\mu_{0}}\\\
 e^{h_{0} \xi} & - e^{- h_{0} \xi} & \left(1 + h_{0} \xi\right) e^{h_{0} \xi} & \left(1 - h_{0} \xi\right) e^{- h_{0} \xi} & \frac{\mu_{1}}{\mu_{0}} & - \frac{\mu_{1}}{\mu_{0}}\\\
 1 & -1 & -1 + 2 \nu_{0} & -1 + 2 \nu_{0} & 0 & 0\\\
-1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix}= \begin{bmatrix} 
+1 & 1 & 2 \nu_{0} & - 2 \nu_{0} & 0 & 0\end{bmatrix} \begin{bmatrix} 
+A0 \\\ 
+B0 \\\
+C0 \\\
+D0 \\\
+B1 \\\
+D1
+\end{bmatrix} = \begin{bmatrix} 
 0 \\\
 0 \\\
 0 \\\
@@ -339,5 +353,117 @@ e^{h_{0} \xi} & - e^{- h_{0} \xi} & \left(1 + h_{0} \xi\right) e^{h_{0} \xi} & \
 \end{bmatrix}
 \]
 
+The code listing below shows the derivation of these matrices and the solution for the 6 integration constants:
+
+```py
+from sympy import Symbol,Matrix,exp,lambdify
+from sympy.mpmath import sqrt,quad,quadosc,inf,pi
+from time import time
+
+"""
+two_a.py
+
+Calculate the stress variation with depth beneath
+a two layered system subjected to a circular load.
+
+"""
+
+xi=Symbol('xi')     # Hankel parameter
+j0=Symbol('j0')     # Bessel function J0
+j1=Symbol('j1')     # Bessel function J1
+nu0=Symbol('nu0')   # Poisson's ratio of layer 1
+nu1=Symbol('nu1')   # Poisson's ratio of layer 2
+h0=Symbol('h0')     # Thickness of layer 1
+mu0=Symbol('mu0')   # Lame's parameter for layer 1
+mu1=Symbol('mu1')   # Lame's parameter for layer 2
+a=Symbol('a')       # Load radius
+z=Symbol('z')       # Vertical evaluation position
+
+q=j1(xi*a)          # Hankel transformed load
+
+def hsz(z,nu):
+    """
+    Constants for Hankel transformed normal stress
+    
+    """ 
+    a1=exp(xi*z)
+    b1=-exp(-xi*z)
+    c1=-(1-2*nu-xi*z)*exp(xi*z)
+    d1=-(1-2*nu+xi*z)*exp(-xi*z)
+    return a1,b1,c1,d1
+
+def htrz(z,nu):
+    """
+    Constants for Hankel transformed shear stress
+    
+    """ 
+    a2=exp(xi*z)
+    b2=exp(-xi*z)
+    c2=(2*nu+xi*z)*exp(xi*z)
+    d2=-(2*nu-xi*z)*exp(-xi*z)
+    return a2,b2,c2,d2
+
+def hur(z,nu,R):
+    """
+    Constants for Hankel transformed radial displacement
+    
+    """ 
+    a3=exp(xi*z)*R
+    b3=exp(-xi*z)*R
+    c3=-(2-4*nu-xi*z)*exp(xi*z)*R
+    d3=(2-4*nu+xi*z)*exp(-xi*z)*R
+    return a3,b3,c3,d3
+
+def huz(z,nu,R):
+    """
+    Constants for Hankel transformed vertical displacement
+    
+    """ 
+    a4=exp(xi*z)*R
+    b4=-exp(-xi*z)*R
+    c4=(1+xi*z)*exp(xi*z)*R
+    d4=(1-xi*z)*exp(-xi*z)*R
+    return a4,b4,c4,d4
+
+def s_z(r,z,nu,A,B,C,D):
+    """
+    Normal stress function
+    
+    """
+    if r==0:
+        return (A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z)
+    else:
+        return ((A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z))*j0(r*xi)
+
+# Apply boundary condition for surface load (z=0)
+a00,b00,c00,d00=hsz(0,nu0)
+a01,b01,c01,d01=htrz(0,nu0)
+
+# Boundary condition at upper interface
+a02,b02,c02,d02=hsz(h0,nu0)
+a03,b03,c03,d03=htrz(h0,nu0)
+a04,b04,c04,d04=hur(h0,nu0,1)
+a05,b05,c05,d05=huz(h0,nu0,1)
+
+# Boundary condition at lower interface
+R=mu1/mu0
+a06,b06,c06,d06=hsz(0,nu1)
+a07,b07,c07,d07=htrz(0,nu1)
+a08,b08,c08,d08=hur(0,nu1,R)
+a09,b09,c09,d09=huz(0,nu1,R)
+
+P=Matrix([[a02,b02,c02,d02,-b06,-d06],
+          [a03,b03,c03,d03,-b06,-d06],
+          [a04,b04,c04,d04,-b08,-d08],
+          [a05,b05,c05,d05,-b09,-d09],
+          [a00,b00,c00,d00,   0,   0],
+          [a01,b01,c01,d01,   0,   0]])
+
+R=Matrix(6,1,[0,0,0,0,1,0])
+
+# 2 equations, 2 unknowns - solve the integration constants
+A0,B0,C0,D0,B1,D1=P.LUsolve(R)
+```
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
+.. [2] Timoshenko, S., and Goodier, J.N. (1951), Theory of Elasticity, Second Edition, McGraw-Hill, p.368
