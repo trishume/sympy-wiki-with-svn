@@ -465,7 +465,7 @@ R=Matrix(6,1,[0,0,0,0,1,0])
 A0,B0,C0,D0,B1,D1=P.LUsolve(R)
 ```
 
-Save the code listing above and import it into isympy:
+In the above listing, two elastic parameters \(\mu_0\) and \(\mu_1\) are defined and the ratio of these is evident in the matrices when equating the lateral and vertical displacements at the interlayer. Save the code listing above and import it into isympy:
 
 ```text
 In [1]: from two_a import *
@@ -477,9 +477,13 @@ In [3]: len(str(A0))
 101784
 ```
 
-The integration constant expressions are huge - and this just for a two layer system. Imagine the size of these for 10 or more layers! Of course these constants can be substituted into the stress function as is and integrated to obtain a solution for the two layer system, but given the size of the constants, it will take forever to integrate. It becomes necessary, therefore, to reduce the complexity and size of the integration constants.
+The integration constant expressions are huge - and this just for a two layer system. Imagine the size of these for 10 or more layers! Of course these constants can be substituted into the stress function as is and integrated to obtain a solution for the two layer system, but given the size of the constants, it will take forever to integrate. It becomes necessary, therefore, to reduce the complexity and size of the integration constants for a faster solution time. This simplication can be achieved through manipulation of the equilibrium equations.
 
-  
+Simplifying the solution   
+^^^^^^^^^^^^^^^^^^^^^^^^  
+
+SymPy includes a number of options to [[simplify|http://docs.sympy.org/dev/modules/simplify.html?highlight=simplify]] expressions. Given the size of the integration constants, however, simplication of these may be very slow. A better approach is to rewrite the equilibrium equations. For example, multiplying each element in a single column in a matrix by a given value divides the value of the corresponding coefficient (A, B, C, or D) by the same amount. This provides a means to eliminate some of the expontial expressions in the global matrix i.e. multiply columns 1 and 3 by \(\exp(-\xi h_0)\) and columns 2 and 4 by \(\exp(\xi h_0)\) since \(\exp(\xi h_0)\exp(-\xi h_0)=1\). 
+
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
 .. [2] Timoshenko, S., and Goodier, J.N. (1951), Theory of Elasticity, Second Edition, McGraw-Hill, p.368
