@@ -482,7 +482,7 @@ The integration constant expressions are huge - and this just for a two layer sy
 Simplifying the solution   
 ^^^^^^^^^^^^^^^^^^^^^^^^  
 
-SymPy includes a number of options to [[simplify|http://docs.sympy.org/dev/modules/simplify.html?highlight=simplify]] expressions. Given the size of the integration constants, however, simplication of these may be very slow. A better approach is to rewrite the equilibrium equations. For example, multiplying each element in a single column in a matrix by a given value divides the value of the corresponding coefficient (A, B, C, or D) by the same amount. This provides a means to eliminate some of the exponential expressions in the global matrix i.e. multiply columns 1 and 3 by \(\e^{-\xi h_0}\) and columns 2 and 4 by \(\e^{\xi h_0}\) since \(\e^{\xi h_0}\e^{-\xi h_0}=1\). Reconsider the matrix resulting from the boundary conditions at the interface:
+SymPy includes a number of options to [[simplify|http://docs.sympy.org/dev/modules/simplify.html?highlight=simplify]] expressions. Given the size of the integration constants, however, simplication of these may be very slow. A better approach is to rewrite the equilibrium equations. For example, multiplying each element in a single column in a matrix by a given value divides the value of the corresponding coefficient (A, B, C, or D) by the same amount. This provides a means to eliminate some of the exponential expressions in the global matrix i.e. multiply columns 1 and 3 by \(e^{-\xi h_0}\) and columns 2 and 4 by \(e^{\xi h_0}\) since \(e^{\xi h_0}e^{-\xi h_0}=1\). Reconsider the matrix resulting from the boundary conditions at the interface:
 
 \[
 \begin{bmatrix}e^{h_{0} \xi} & - e^{- h_{0} \xi} & - \left(1 - 2 \nu_{0} - h_{0} \xi\right) e^{h_{0} \xi} & - \left(1 - 2 \nu_{0} + h_{0} \xi\right) e^{- h_{0} \xi}\\\
@@ -520,6 +520,7 @@ D'0 \\\
 B1 \\\
 D1 \\\
 \end{bmatrix}
+\]
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
