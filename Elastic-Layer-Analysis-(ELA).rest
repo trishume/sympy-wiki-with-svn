@@ -512,7 +512,7 @@ Eliminating the exponentials:
 A'0 \\\ 
 B'0 \\\
 C'0 \\\
-D'0 \\\
+D'0
 \end{bmatrix} = \begin{bmatrix}-1 & -1 + 2 \nu_{1}\\\
 -1 & -1 + 2 \nu_{1}\\\
 \frac{\mu_{1}}{\mu_{0}} & \frac{\mu_{1} \left(2 - 4 \nu_{1}\right)}{\mu_{0}}\\\
@@ -521,6 +521,26 @@ B1 \\\
 D1 \\\
 \end{bmatrix}
 \]
+
+where \(A'0=A0/e^{\xi h_0}\), etc.
+
+The inverse of the matrix on the left multiplied by the matrix on the right hand side provides a simple solution for the new integration constants A'0, B'0, C'0 and D'0:
+
+\[
+\begin{bmatrix}
+1 & 0 & 0 & 0\\\
+0 & 1 & 0 & 0\\\
+0 & 0 & 1 & 0\\\
+0 & 0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+A'0 \\\ 
+B'0 \\\
+C'0 \\\
+D'0
+\end{bmatrix} = \left[LHS\right]^{-1}\left[RHS\right]
+\]
+
+Fucking brilliant!
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
