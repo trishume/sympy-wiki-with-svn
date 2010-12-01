@@ -540,7 +540,167 @@ D'0
 \end{bmatrix} = \left[LHS\right]^{-1}\left[RHS\right]
 \]
 
-Fucking brilliant!
+The following code listing applies these manipulations to the above code:
+
+```py
+from sympy import Symbol,Matrix,exp,lambdify
+from sympy.mpmath import sqrt,quad,quadosc,inf,pi
+from time import time
+
+"""
+two_b.py
+
+Calculate the stress variation with depth beneath
+a two layered system subjected to a circular load.
+
+"""
+
+xi=Symbol('xi')     # Hankel parameter
+j0=Symbol('j0')     # Bessel function J0
+j1=Symbol('j1')     # Bessel function J1
+nu0=Symbol('nu0')   # Poisson's ratio of layer 1
+nu1=Symbol('nu1')   # Poisson's ratio of layer 2
+h0=Symbol('h0')     # Thickness of layer 1
+mu0=Symbol('mu0')   # Lame's parameter for layer 1
+mu1=Symbol('mu1')   # Lame's parameter for layer 2
+a=Symbol('a')       # Load radius
+z=Symbol('z')       # Vertical evaluation position
+
+q=j1(xi*a)          # Hankel transformed load
+
+def hsz(z,nu):
+    """
+    Constants for Hankel transformed normal stress
+    
+    """ 
+    a1=exp(xi*z)
+    b1=-exp(-xi*z)
+    c1=-(1-2*nu-xi*z)*exp(xi*z)
+    d1=-(1-2*nu+xi*z)*exp(-xi*z)
+    return a1,b1,c1,d1
+
+def htrz(z,nu):
+    """
+    Constants for Hankel transformed shear stress
+    
+    """ 
+    a2=exp(xi*z)
+    b2=exp(-xi*z)
+    c2=(2*nu+xi*z)*exp(xi*z)
+    d2=-(2*nu-xi*z)*exp(-xi*z)
+    return a2,b2,c2,d2
+
+def hur(z,nu,R):
+    """
+    Constants for Hankel transformed radial displacement
+    
+    """ 
+    a3=exp(xi*z)*R
+    b3=exp(-xi*z)*R
+    c3=-(2-4*nu-xi*z)*exp(xi*z)*R
+    d3=(2-4*nu+xi*z)*exp(-xi*z)*R
+    return a3,b3,c3,d3
+
+def huz(z,nu,X):
+    """
+    Constants for Hankel transformed vertical displacement
+    
+    """ 
+    a4=exp(xi*z)*X
+    b4=-exp(-xi*z)*X
+    c4=(1+xi*z)*exp(xi*z)*X
+    d4=(1-xi*z)*exp(-xi*z)*X
+    return a4,b4,c4,d4
+
+def s_z(r,z,nu,A,B,C,D):
+    """
+    Normal stress function
+    
+    """
+    if r==0:
+        return (A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z)
+    else:
+        return ((A-C*(1-2*nu-xi*z))*exp(xi*z)-(B+D*(1-2*nu+xi*z))*exp(-xi*z))*j0(r*xi)
+
+# Apply boundary condition for surface load (z=0)
+a00,b00,c00,d00=hsz(0,nu0)
+a01,b01,c01,d01=htrz(0,nu0)
+
+# Boundary condition at upper interface
+a02,b02,c02,d02=hsz(h0,nu0)
+a03,b03,c03,d03=htrz(h0,nu0)
+a04,b04,c04,d04=hur(h0,nu0,1)
+a05,b05,c05,d05=huz(h0,nu0,1)
+
+# Boundary condition at lower interface
+X=mu1/mu0
+a06,b06,c06,d06=hsz(0,nu1)
+a07,b07,c07,d07=htrz(0,nu1)
+a08,b08,c08,d08=hur(0,nu1,X)
+a09,b09,c09,d09=huz(0,nu1,X)
+
+M11=Matrix([[a02,b02,c02,d02],
+            [a03,b03,c03,d03],
+            [a04,b04,c04,d04],
+            [a05,b05,c05,d05]])
+
+M11.col(0,lambda i,j: i*exp(-xi*h0))
+M11.col(1,lambda i,j: i*exp(xi*h0))
+M11.col(2,lambda i,j: i*exp(-xi*h0))
+M11.col(3,lambda i,j: i*exp(xi*h0))
+
+M12=Matrix([[a06,b06,c06,d06],
+            [a07,b07,c07,d07],
+            [a08,b08,c08,d08],
+            [a09,b09,c09,d09]])
+
+N12=M11.LUsolve(M12)
+N12.col_del(0)
+N12.col_del(1)
+
+M21=Matrix([[a00,b00,c00,d00],
+            [a01,b01,c01,d01]])
+
+M21.col(0,lambda i,j: i*exp(-xi*h0))
+M21.col(1,lambda i,j: i*exp(xi*h0))
+M21.col(2,lambda i,j: i*exp(-xi*h0))
+M21.col(3,lambda i,j: i*exp(xi*h0))
+
+P=Matrix([[1,0,0,0,-N12[0,0],-N12[0,1]],
+          [0,1,0,0,-N12[1,0],-N12[1,1]],
+          [0,0,1,0,-N12[2,0],-N12[2,1]],
+          [0,0,0,1,-N12[3,0],-N12[3,1]],
+          [M21[0,0],M21[0,1],M21[0,2],M21[0,3],0,0],
+          [M21[1,0],M21[1,1],M21[1,2],M21[1,3],0,0]])
+
+R=Matrix(6,1,[0,0,0,0,1,0])
+
+A0,B0,C0,D0,B1,D1=P.LUsolve(R)
+
+A0=A0/exp(xi*h0)
+B0=B0/exp(-xi*h0)
+C0=C0/exp(xi*h0)
+D0=D0/exp(-xi*h0)
+```
+
+Save the code listing above and import it into isympy:
+
+```text
+In [1]: from two_b import *
+
+In [2]: A0
+*Too long to display*   
+
+In [3]: len(str(A0))
+6305
+```
+
+This has significantly reduced the complexity of the integration constants. Fucking brilliant! Let's apply these simplications to a three layer system with two interfaces.
+
+Three layer solution
+--------------------
+
+Still to do.
 
 
 .. [1] Burmister, D.M (1945), The General Theory of Stresses and Displacements in Layered Systems, Journal of Applied Physics, Vol. 16, p.89-94
