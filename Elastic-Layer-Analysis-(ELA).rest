@@ -10,7 +10,7 @@ The following is an example of SymPy in action. This example demonstrates the us
 
 Elastic layer analysis (ELA) is routinely used in pavement engineering for the design and evaluation of road and airport structures. As with any structure, roads are designed and constructed to carry surface loads - the heavier the load, the stronger the structure needed. Concrete pavements on interstate highways, for example, are durable structures that can withstand very high compressive loads but a thin layer of concrete has a relatively low flexural strength and must therefore be supported to prevent excessive bending. This is typically achieved by paving the concrete layer of top of a cemented or stabilized base layer. The base layer in turn may be placed on top of a strong granular subbase layer, which in turn covers the foundation or subgrade, which is usually the weakest layer in the structure. Building stronger layers on top of the subgrade serves to protect it from excessive deformation. Figure 1 illustrates a typical pavement structure. 
 
-[Figure 1 here]
+[[/img/fig1.png]]
 
 For the elastic analysis of the pavement structure shown in Figure 1, the different layers are assumed to be homogeneous and isotropic. The materials used in each layer are defined by elastic parameters i.e. Young's modulus (\( E \)) and Poisson's ratio (\( \nu \)). Each layer has a finite thickness except the lowest subgrade layer, which is assumed to have an infinite thickness. The nature of the interface between successive layers dictates how stresses and displacements are transferred from one layer to another. For the purpose of this example, full-friction between the layers is assumed, therefore shear stresses and lateral displacements at the lower interface of any layer are equal to those at the top interface of the underlying layer.
 
@@ -43,7 +43,7 @@ The boundaries of the elastic layer system include the surface, interfaces betwe
 
 **Surface.** For the purpose of this example it is assumed that the loads imposed on the system are circular surface loads defined by a radius (a) and a uniform pressure (p), the circular imprint simulates the impression of vehicle tyres as shown in Figure 2. 
 
-[Figure 2 here]
+[[/img/fig2.png]]
 
 If only a vertical uniformly distributed circular load is considered, at a radial position (r) on the surface:
 \[
@@ -181,9 +181,9 @@ Integrating the stress function
 
 Sympy does not currently include Bessel functions of the first kind, therefore to solve the stress function it is necessary to firstly lambdify [provide help link???] the integrand (see the code segment below). This converts all Sympy functions to corresponding mpmath functions. This was the reason for defining the SymPy functions j0 and j1, which when *lambdified* are converted into the corresponding mpmath functions [[j0|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j0]] and [[j1|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/functions/bessel.html?highlight=j1#mpmath.j1]]. 
 
-The integrand sz is a function of the Bessel of order 1 and an exponential function. On the surface (z=0), the exponential function is eliminated, and the integrand is simply a function of the Bessel, which is very highly oscillatory. Figure 2 shows the behaviour of sz at the surface and at a depth of 100 mm. Clearly, the exponential serves to dampen the Bessel oscillations.   
+The integrand sz is a function of the Bessel of order 1 and an exponential function. On the surface (z=0), the exponential function is eliminated, and the integrand is simply a function of the Bessel, which is very highly oscillatory. Figure 3 shows the behaviour of sz at the surface and at a depth of 100 mm. Clearly, the exponential serves to dampen the Bessel oscillations.   
 
-[Figure 3 here]
+[[/img/fig3.png]]
 
 Figure 3 emphasises the problem of determining a solution for the stress function at (or near) the surface of the structure. Integration techniques such as the mpmath [[quad|http://mpmath.googlecode.com/svn/trunk/doc/build/calculus/integration.html?highlight=quad#mpmath.quad]] will fail and it becomes necessary to apply integration methods that account for the oscillatory behaviour. One option is to use the mpmath integration function [[quadosc|http://mpmath.googlecode.com/svn/tags/0.16/doc/build/calculus/integration.html?highlight=quadosc#mpmath.quadosc]]. For application of *quadosc* it is necessary to estimate the period of the integrand. This is demonstrated by tagging the following code segment onto that above and running through python to integrate sz. Note how the integrand is multiplied by p and a following the integration to determine the vertical normal stress at the respective depths.
 
