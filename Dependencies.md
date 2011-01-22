@@ -1,3 +1,5 @@
+_Please add to this page all the optional dependencies for SymPy (not development dependencies).  See [issue 2160](http://code.google.com/p/sympy/issues/detail?id=2160)_
+
 Dependencies
 ------------
 
