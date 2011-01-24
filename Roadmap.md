@@ -11,14 +11,14 @@ The items in each block represent what we should work on in each version and wha
 
 ## sympy 0.7.0 ##
 
-The next release after 0.6.6 should be a 0.7 release.
-* Merge in new assumptions (hopefully completely replacing the old assumptions).
+The next release after 0.6.7 should be a 0.7 release.
 * Merge in the new Polys module. 
 * Merge in the 2010 Google Summer of Code projects (Risch integration, SAT solving, quantum mechanics, code generation)
-* At some point in this release cycle, we will drop Python 2.4 support.
+* After 0.7.0, we will drop Python 2.4 support.
 
 ## sympy 0.8.0 ##
 
+* complete new assumptions (finally replacing the old assumptions).
 * Python 3 support.
 * merge our experimental core [http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23 sympyx], that basically should make sympy as fast as sympycore (or nearly as fast)
 * speed sympy to the level of sympycore, merge all important things
