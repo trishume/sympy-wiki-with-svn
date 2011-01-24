@@ -59,7 +59,7 @@ Development
 * [[buildbot]] -- SymPy buildbot
 * [[Windows]] -- SymPy on Windows
 * [[Debugging]]
-* [[roadmap]]
+* [[Roadmap]]
 
 Moving from google wiki
 =======================
