@@ -1,0 +1,240 @@
+The sympy git server is at http://git.sympy.org/ . The main Sympy repository may be cloned with "git clone git://git.sympy.org/sympy.git".
+
+The first and the most important thing is that you should understand that git is '''different'''. For example it uses staging area (so called index) for iteratively preparing commits. This and other great and unique features of git make it really ''superior'' to hg and other SCMs I've ever seen, so go read its documentation - you would not regret!
+
+ - git project page  http://git.or.cz/
+ - git faq explaining many things http://git.or.cz/gitwiki/GitFaq
+   make sure you read mails referenced from the faq - they are really brilliant, 
+   e.g. this mail by Linus about git and renames:
+   
+   http://permalink.gmane.org/gmane.comp.version-control.git/217
+   
+ - git wiki http://git.or.cz/gitwiki
+ - git documentation http://git.or.cz/gitwiki/GitDocumentation
+
+
+Here is a nice cheatsheet which will probably make your life easier in the beginning:
+
+http://jan-krueger.net/development/git-cheat-sheet-extended-edition
+
+
+Being said all this, now comes a ''simplified'' mapping between hg commands and git commands. Use it with care -- there are some semantic differences ...
+
+----
+
+If you know how to use hg very well and just looking at how to do the same things in git, this page is right for you. Use it like a dictionary hg -> git.
+Some equivalent git commands may seem more complex than the corresponding hg counterparts, that's because the natural flow of work in git doesn't map 1:1 to mercurial. But important is, that if you are used to some workflow in hg, it can be directly translated to git using the table below and it does exactly the same thing as you are expecting it to.
+
+When editing this wiki page, please only add an exact equivalent to some hg command, explanation can always be found somewhere else on the net.
+
+== Rosetta Stone ==
+
+{| border="0" cellspacing="5" cellpadding="5" align="top"
+! width="50%" | hg
+! width="50%" | git
+|-
+| hg clone http://hg.sympy.org/sympy-git.hg
+| git clone git://git.sympy.org/sympy.git
+|- 
+| hg clone -U http://hg.sympy.org/sympy-git.hg
+| git clone --bare git://git.sympy.org/sympy.git
+|- 
+| hg diff
+| git diff HEAD
+|-
+| hg status
+| git status
+|-
+| hg parents
+| git log   # you can read all the information you need from there (as long as you already know the answer to the question you're asking)
+|-
+| hg commit
+| git commit -a
+|-
+| hg record
+| git add -p; git commit # or, for a more detailed interface: git add -i; git commit
+|-
+| [http://mercurial.selenic.com/wiki/PatchbombExtension hg email -r tip]
+| git send-email HEAD^   # or: git format-patch HEAD^ ; git send-email 0001-Add-whitespace.patch
+|-
+| hg view
+| gitk, git gui
+|-
+| hg help command
+| git help command
+|-
+| ~/.hgrc
+| ~/.gitconfig
+|-
+| .hg/hgrc
+| .git/config
+|-
+| hg paths
+| git remote -v
+|-
+| # editing paths in .hg/hgrc
+| git remote add name url   # see "git help remote" for more info how to edit paths; alternatively, you can edit them by hand in .git/config too
+|-
+| .hgignore
+| [http://www.kernel.org/pub/software/scm/git/docs/gitignore.html .gitignore]
+|-
+| hg add
+| git add  (note, it adds _content_ to index; can work on a hunk-by-hunk basis with -p!)
+|-
+| hg rm
+| git rm
+|-
+| hg push
+| git push
+|-
+| hg pull
+| git fetch
+|-
+| hg pull -u
+| git pull --rebase  # or: git fetch ; git rebase origin
+|-
+| hg addremove
+| XXX | git add .; git ls-files --deleted | xargs git rm
+|-
+| hg revert -a
+| git reset --hard
+|-
+| hg revert some_file
+| git checkout some_file
+|-
+| [http://mercurial.selenic.com/wiki/Strip hg strip 2fccd4c]
+| git reset --hard 2fccd4c^
+|-
+| hg import some.patch
+| git apply some.patch
+|-
+| hg out
+| git fetch ; git log FETCH_HEAD..master
+|-
+| hg in
+| git fetch ; git log master..FETCH_HEAD
+|-
+| hg up tip
+| git checkout HEAD   # or this: "git checkout master", or  "git merge FETCH_HEAD", depending on what you did before this
+|-
+| hg qimport
+| stg something (A separate patch manager extension is probably not necessary in git -- normal workflow combined with git rebase -i should cover your needs)
+|-
+| hg qpush
+| (see hg qimport)
+|-
+| hg qpop
+| (see hg qimport)
+|-
+| hg qimport -r tip
+| ?
+|-
+| hg qnew -f some.patch
+| ?
+|}
+
+== Setup ==
+
+~/.hgrc:
+
+<source lang="bash">
+ [ui]
+ username = Ondrej Certik <ondrej@certik.cz>
+</source>
+
+~/.gitconfig:
+
+<source lang="bash">
+ [user]
+     name = Ondrej Certik
+     email = ondrej@certik.cz
+ 
+ [color]
+     diff  = auto
+     status= auto
+     branch= auto
+     interactive = true
+ 
+ [alias]
+     ci = commit
+     di = diff --color-words
+     st = status
+</source>
+
+== More Information ==
+
+One can find some info here:
+
+ o http://git.or.cz/course/svn.html
+ o http://www.redhatmagazine.com/2008/05/02/shipping-quality-code-with-git/
+
+and at many other pages.
+
+== Tips ==
+
+ - use gitk to visualize history (much more capable than "hg vi")
+ - use git gui to visually stage/unstage what you are preparing for commit
+   to index (it too can work on hunk-by-hunk basis)
+ - git stash is your friend
+ - git rebase --interactive is your friend too :)
+ - windows users: either use cygwin or msysgit:
+   http://code.google.com/p/msysgit/
+   
+ - don't try to project your usual habits - open your mind, and maybe you'll 
+   discover much more superior workflow. (yes, this needs hard work and RTFM,
+   and being ready that FM sometimes differ from what software actually does)
+ - Add this
+ 
+ parse_git_branch() {
+   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+   # __git_ps1 "(%s)"
+   # use the second line instead if you have bash autocompletion for git enabled
+ }
+ PS1="\w\$(parse_git_branch) $ "
+ 
+   to your promptstring to show current branch when in a git-tracked directory.
+   (see http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github)
+
+== git -> hg conversion ==
+
+You can use this script:
+
+<source lang="bash">
+#! /bin/bash
+
+work=`mktemp -t -d sym.XXX`
+git format-patch -k -p -o $work master..HEAD
+# add a new line after the subject line so that Mercurial imports it fine.
+sed -i '4a\\' $work/*
+cd ~/repos/sympy.hg/
+hg import $work/*
+rm -r $work
+</source>
+
+to convert all patches between master..HEAD to mercurial repository sitting at ~/repos/sympy.hg/.
+
+== how to checkout remote branch ==
+
+Start with some repository, for example create a new one from scratch:
+<source lang="bash">
+$ mkdir sympy
+$ cd sympy
+$ git init
+</source>
+or clone our official repository:
+<source lang="bash">
+$ git clone git://git.sympy.org/sympy.git
+$ cd sympy
+</source>
+Now let's say you want to checkout some branch from git://github.com/certik/sympy.git. The canonical way is to add it to your remotes:
+<source lang="bash">
+$ git remote add ondrej git://github.com/certik/sympy.git
+</source>
+Then fetch all branches from there into your remote branches:
+<source lang="bash">
+$ git fetch ondrej
+</source>
+You can now list them with "git branch -r", or examine them with "git log ondrej/some_branch". Finally, to checkout the mpmath5 branch, do:
+<source lang="bash">
+$ git checkout -b mpmath5 ondrej/mpmath5
+</source>
