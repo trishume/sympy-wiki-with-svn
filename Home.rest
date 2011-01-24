@@ -58,6 +58,7 @@ Development
 * [[symbench]] -- Symbolic benchmarks
 * [[buildbot]] -- SymPy buildbot
 * [[Windows]] -- SymPy on Windows
+* [[Debugging]]
 
 Moving from google wiki
 =======================
