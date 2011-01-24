@@ -12,6 +12,7 @@ The items in each block represent what we should work on in each version and wha
 ## sympy 0.7.0 ##
 
 The next release after 0.6.7 should be a 0.7 release.
+
 * Merge in the new Polys module. 
 * Merge in the 2010 Google Summer of Code projects (Risch integration, SAT solving, quantum mechanics, code generation)
 * After 0.7.0, we will drop Python 2.4 support.
