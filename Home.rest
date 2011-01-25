@@ -51,6 +51,7 @@ Projects / Ideas
 Development
 ==========
 
+* [[GettingTheBleedingEdge]] - how to get the latest development version of sympy
 * [[git hg rosetta stone]] - direct translation of hg commands to git
 * [[SymPy in the news]] - SymPy in the News and Blogs
 * [[Contributors]] -- list of all contributors and sponsors of SymPy
