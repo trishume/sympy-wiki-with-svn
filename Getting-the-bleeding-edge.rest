@@ -1,0 +1,37 @@
+**Introduction**
+
+If you want to just have the latest development version of SymPy, which is recommended to try if you are having problems with the latest released version, or if you just want to be on the bleeding edge, then you don't need to learn a lot of how to use git, as opposed to if you want to contribute, which requires learning a little bit more (see the GitTutorials page).
+
+
+**Guide**
+
+This guide is specifically for Linux and Mac OS X.  On Windows, you can do the same thing using msysgit.
+
+Basically, if you have never used git before, you need to just install it either from your operating system's package manager (for Mac OS X, fink is recommended), or from http://git-scm.com/ and run::
+
+    git clone git://github.com/sympy/sympy.git
+
+in whatever directory you want to put it, and then::
+
+    cd sympy
+    ./bin/isympy
+
+or you can install it using::
+
+    ./setup.py install
+
+Installing is not recommended for non-release versions, because the development directory is updated often from git, and the installed version won't be updated unless you re-run setup.py
+
+If you want to contribute to SymPy, which you are always welcome to do so, there are more things about git to learn--see the GitTutorials page, but if you just want to pull down the bleeding edge, that is it.  The command::
+
+    git pull
+
+will update it whenever you want.  If that command fails, it's because you edited something in the sympy directory and it won't override it (dirty tree). The command::
+
+    git diff
+
+will show you what has changed and::
+
+    git reset --hard
+
+will clear the changes, but **WARNING: THIS WILL PERMANENTLY REVERT ALL CHANGES IN THE REPOSITORY TO THEIR ORIGINAL STATE.** If you are trying to develop for sympy, you will need to use git branches and git commit.  See the GitTutorials page or any git tutorial online.  
