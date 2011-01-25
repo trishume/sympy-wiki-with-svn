@@ -39,7 +39,7 @@ The best place to begin is the [[Tutorial]]. A lot of useful information can als
 Projects / Ideas
 ============
 
-* [[Plan for SymPy 1.0]] -- this is our roadmap to SymPy 1.0
+* [[Roadmap]] -- our roadmap to SymPy 1.0
 * [[Ideas]] -- Random ideas, not necessarily related to SymPy, but that could be useful for SymPy in the future
 * [[GSoC2008Ideas]] -- Ideas for the Google Summer of Code 2008 projects
 * [[GSoC2009Ideas]] -- Ideas for the Google Summer of Code 2009 projects
@@ -51,7 +51,7 @@ Projects / Ideas
 Development
 ==========
 
-* [[GettingTheBleedingEdge]] - how to get the latest development version of sympy
+* [[Getting The Bleeding Edge]] - how to get the latest development version of sympy
 * [[git hg rosetta stone]] - direct translation of hg commands to git
 * [[SymPy in the news]] - SymPy in the News and Blogs
 * [[Contributors]] -- list of all contributors and sponsors of SymPy
@@ -59,8 +59,8 @@ Development
 * [[symbench]] -- Symbolic benchmarks
 * [[buildbot]] -- SymPy buildbot
 * [[Windows]] -- SymPy on Windows
-* [[Debugging]]
-* [[Roadmap]]
+* [[Debugging]] -- useful when debugging more complex parts of SymPy
+
 
 Moving from google wiki
 =======================
