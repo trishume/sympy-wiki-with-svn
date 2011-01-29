@@ -1,0 +1,19 @@
+If you have been around for some time and actively participating in SymPy's development, you will be granted push access to the main repository.  Then you can push in patches that passed review.
+
+
+You need to add a remote repository for the main sympy repo if you don't already have one (``git remote`` will show you all your remote repositories).  If you don't, add one by doing ``git remote add sympy git@github.com:sympy/sympy.git``.  You need to use this url because it is the ssh url, which gives you push access (the others are read only).  When you have a branch ready to push in, say, the branch is named "test", you do::
+
+    git push --dry-run sympy test:master
+
+and see what it tells you.  This will test the push.  The command basically says "push to the remote repository "sympy", fast-forwarding the remote branch "master" to the position of the local branch "test".   If it says everything is ok, and it looks right, then you can remove the --dry-run and do the actual push.  
+
+test should be fast-forward from master.  **Never** do a -f push to master.  If it tells you that a branch is non-fastforward, it is probably because someone else updated the official master since you created test.  So in that case you need to pull in the latest master and update test using "git rebase test master" or "git merge test master" (rebase is better for small branches, merge is better for large branches).
+
+Once you have pushed the test branch in, if test is the same as the commit from a pull request at GitHub, or if you merged with master, GitHub will close the pull request on its own.  Otherwise, i.e., if you did a rebase, you will have to close it manually.  In either case, you need to manually close the issue here on the Google Code tracker.  Just mark the status as Fixed.
+
+So you can avoid breaking anything if you just do the --dry-run push first, never do a -f push to master, and always make sure that you only push stuff in that has been reviewed and passes tests.
+
+And finally, don't be afraid to push something in if it has passed review (including review by yourself) and the tests pass.  We tend to have a backlog of patches that have passed review but have not been pushed in for whatever reason.
+If you are not sure, consider whether the patch is an improvement over the current situation.  If the answer is yes, just push it in, it can be improved later.
+
+For non-trivial patches it makes sense to wait until the patch has been under review for at least 24 hours before pushing, so others have a chance to state their objections.
