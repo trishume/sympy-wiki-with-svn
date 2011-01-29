@@ -51,15 +51,16 @@ Projects / Ideas
 Development
 ==========
 
-* [[Getting The Bleeding Edge]] - how to get the latest development version of sympy
-* [[git hg rosetta stone]] - direct translation of hg commands to git
-* [[SymPy in the news]] - SymPy in the News and Blogs
+* [[Getting The Bleeding Edge]] -- how to get the latest development version of sympy
+* [[git hg rosetta stone]] -- direct translation of hg commands to git
+* [[SymPy in the news]] -- SymPy in the News and Blogs
 * [[Contributors]] -- list of all contributors and sponsors of SymPy
 * [[Related software]] -- projects related to SymPy
 * [[symbench]] -- Symbolic benchmarks
 * [[buildbot]] -- SymPy buildbot
 * [[Windows]] -- SymPy on Windows
 * [[Debugging]] -- useful when debugging more complex parts of SymPy
+* [[Pushing Patches]] -- how to push patches into the official sympy repository
 
 
 Moving from google wiki
