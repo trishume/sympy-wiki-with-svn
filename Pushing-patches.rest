@@ -19,7 +19,7 @@ the remote branch "master" to the position of the local branch "test".
 If it says everything is ok, and it looks right, then you can remove the
 --dry-run and do the actual push.
 
-test should be fast-forward from master.  **NEVER** do a -f push to
+"test" should be fast-forward from master.  **NEVER** do a -f push to
 master.  If it tells you that a branch is non-fastforward, it is
 probably because someone else updated the official master since you
 created test.  So in that case you need to pull in the latest master and
