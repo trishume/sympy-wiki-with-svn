@@ -1,4 +1,3 @@
-
 .. sectnum::
 
 .. |date| date::
@@ -42,7 +41,7 @@ _`The Big-O is not present at point==0`.
     1 + 7*x + 21*x**2 + 35*x**3 + 35*x**4 + 21*x**5 + 7*x**6 + x**7
     
     but expected:
-    1 + 10*x + 45*x**2 + O(x**3)
+    1 + 7*x + 21*x**2 + O(x**3)
     
     >>> abs(x + x**2).series(n=1)
     x + x**2
@@ -301,7 +300,7 @@ _`Insufficient of operations with series`
 _`Realization for abstract analytic function`
 ----------------------------------------------
 
-    Series of derivations
+    Series of derivatives
     
     >>> D = Derivative
     >>> assert D(x**2 + x**3*y**2, x, 2, y, 1).series(x).doit() == 12*x*y
