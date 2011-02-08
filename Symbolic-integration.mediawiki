@@ -1,0 +1,69 @@
+==Algorithms==
+
+There is a general method for calculating antiderivatives of elementary functions, called the Risch algorithm. The Risch algorithm is a decision procedure that can determine whether an elementary solution exists, and in that case calculate it. It can be extended to handle many nonelementary functions in addition to the elementary ones.
+
+SymPy currently uses a simplified version of the Risch algorithm, called the Risch-Norman algorithm. This algorithm is much faster, but may fail to find an antiderivative, although it is still very powerful. SymPy also uses pattern matching and heuristics to speed up evaluation of some types of integrals, e.g. polynomials.
+
+See [[references]] for relevant literature.
+
+==Examples of supported integrals==
+
+===Rational functions===
+Rational functions can be integrated.
+
+<math>\int \frac{x}{x^2 + 2x + 1} dx = \frac{1}{1+x} + \log(1+x)</math>
+
+<source lang=python>
+>>> integrate(x/(x**2+2*x+1), x)
+  1
+----- + log(1 + x)
+1 + x
+</source>
+
+<source lang=python>
+>>> integrate(x/(x**2+3*x+1), x)
+âŽ›          âŽ½âŽ½âŽ½âŽž    âŽ›            âŽ½âŽ½âŽ½âŽž   âŽ›          âŽ½âŽ½âŽ½âŽž    âŽ›            âŽ½âŽ½âŽ½âŽž
+âŽœ      3*â•²â•± 5 âŽŸ    âŽœ          â•²â•± 5 âŽŸ   âŽœ      3*â•²â•± 5 âŽŸ    âŽœ          â•²â•± 5 âŽŸ
+âŽœ1/2 - â”€â”€â”€â”€â”€â”€â”€âŽŸ*logâŽœ3/2 + x - â”€â”€â”€â”€â”€âŽŸ + âŽœ1/2 + â”€â”€â”€â”€â”€â”€â”€âŽŸ*logâŽœ3/2 + x + â”€â”€â”€â”€â”€âŽŸ
+âŽ         10  âŽ     âŽ            2  âŽ    âŽ         10  âŽ     âŽ            2  âŽ 
+</source>
+
+===Exponential-polynomial functions===
+Multiplicative combinations of polynomials and the functions exp, cos and sin can be integrated by hand using repeated integration by parts, which is an extremely tedious process. Happily, SymPy will deal with these integrals.
+
+<math>\int x^2 e^x \cos x \, dx =  e^x \left( \, \frac{x^2}{2} \left(\cos x + \sin x\right) + \frac{\sin x - \cos x}{2} - x \sin x \right)</math>
+
+<source lang=python>
+>>> integrate(x**2 * exp(x) * cos(x), x)
+ x                  x    2         x    2  x
+e *sin(x)   cos(x)*e    x *cos(x)*e    x *e *sin(x)      x
+--------- - --------- + ------------ + ------------ - x*e *sin(x)
+    2           2            2              2
+</source>
+
+===Nonelementary integrals===
+A few nonelementary integrals (in particular, some integrals involving the error function) can be evaluated.
+
+<source lang=python>
+>>> integrate(exp(-x**2)*erf(x), x)
+  ____    2
+\/ pi *erf (x)
+--------------
+      4
+</source>
+
+===Other===
+	
+<math>\int \sin(2\sqrt{x}) dx</math>
+			
+<source lang=python>
+>>> integrate(sin(2*sqrt(x)), x)
+   âŽ›    âŽ½âŽ½âŽ½âŽž                     
+sinâŽ2*â•²â•± x âŽ      âŽ½âŽ½âŽ½    âŽ›    âŽ½âŽ½âŽ½âŽž
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ - â•²â•± x *cosâŽ2*â•²â•± x âŽ 
+     2                           
+</source>
+
+[[Category:Documentation]]
+[[Category:Design]]
+[[Category:Algorithms]]
