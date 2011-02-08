@@ -1,0 +1,27 @@
+Editing Plotting Module
+
+
+Please note that all contributions to SymPy may be edited, altered, or removed by other contributors. If you do not want your writing to be edited mercilessly, then do not submit it here.
+You are also promising us that you wrote this yourself, or copied it from a public domain or similar free resource (see SymPy:Copyrights for details). Do not submit copyrighted work without permission!
+Summary: 
+ This is a minor edit  Watch this page
+    Cancel | Editing help (opens in new window)
+page discussion edit history delete move protect watch
+Ondrej my talk my preferences my watchlist my contributions log out
+wiki
+Main Page
+Recent changes
+Random page
+project
+Project Main Page
+Planet SymPy (blogs)
+Mailing list
+Download current version
+search
+    
+toolbox
+What links here
+Related changes
+Special pages
+
+Privacy policy About SymPy Disclaimers
