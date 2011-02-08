@@ -1,0 +1,128 @@
+SymPy is a computer algebra system implemented in Python. It has a rudimentary assumption system, which has many weaknesses. This project aims to implement a new assumption system that does not suffer from these limitations.
+
+By assumption system I mean a framework in which we can specify (mathematical) properties about objects, simplify expressions binded to some properties and infer other properties from the original ones. The assumption system is always a central part of a computer algebra, used across many modules. For example, the solver module might use assumptions to restrict solutions to admissible solutions, simplification uses assumptions extensively to reduce the length of an expression without loosing properties, etc.
+
+
+Current limitations
+
+
+The current assumption system in binded to objects:
+
+    >>> x = Symbol('x', integer=True)
+    >>> x.is_Integer
+    True
+   
+This approach has many disadvantages:
+
+    1. Can't assume relations. It is not possible to specify relations between different
+        objects. For example, you can assume that x>0 and y>0, but you can't
+        assume x>y
+
+    2. Verbose code splitted across multiple classes Each class must override
+        all query methods (.is_*).
+
+    3. Extensibility. To add new assumptions you have to add code to
+        the core, so it is nearly impossible for third party applications to define
+        their own assumptions.
+
+
+This project aims to implement a new assumption system, with the following highlights
+
+    1. Assumptions are separate from objects. Assumptions are instances of Assume, which is
+       a class that holds a reference to the expression and to the 'key' (what it assumes)
+
+    2. Queries out of the core. No more .is_* methods. Specific queries are implemented
+        as subclasses of QueryHandler, and the query function calls the appropriate
+        subclass of QueryHandler
+
+        query -> QueryHandler -> QueryNegativeHandler
+                              -> QueryIntegerHandler
+                              -> QueryBoundedHandler
+                              ...
+       That way, creating new queries is a matter of subclassing QueryHandler and override
+       the apropriate methods.
+
+    4. Refine method. The refine method will take into account assumptions and return
+        a simplified expression.
+        >>> refine(abs(x), Assume(x, 'positive'))
+        x
+
+    3. Support for arbitrary relations:
+        >>> assump = Assume(Gt(x, y)) # assume x is greater than y
+        >>> refine(abs(x-y), assump)
+        x-y
+       
+        this method will have a design pattern similar to the query method
+
+Also the project includes integration of this feature with other modules:
+
+    4. Make solve assumptions-aware. That way it would be possible to solve equations
+       binded to certain constrains
+
+    5. Integrals. It will also make integration assumption-aware, so that arbitrary relations
+       can be passed to the integration method.
+Dependencies
+
+
+    This assumption system will rely heavily on the logic module so it will not be
+    necessary to implement a query handler if it can be deduced from others. For example,
+    a QueryHandler for the query 'positive' is not needed since positive == real & !zero & !negative
+
+    SymPy has a logic module, but this project will need to improve it, most notably by
+    adding backward-chaining algorithm to the class FactRules [1]
+
+    For arbitrary relations to be useful, inequalities should be solvable, which is currently not implemented,
+    but planned. See [3] for an issue on this.
+
+Timeline
+
+
+23 may -- 7 June:
+
+    Prepare the ground. In this period, dependencies should be solved, that is, the logic module should be refactored and basic support 
+
+     for inequalities should be implemented.
+
+7 June -- 25 June:
+
+    Implement the core assumption system: Assumption class and query module as specified in 1. and 2. Submit patches and correct any possible objections.
+
+
+15 june -- 1 july:
+
+    Implement refie method. This will have a similar structure to the query module, as specified in 2.
+
+
+1 july - 10 July:
+
+    Extend the assumption system to manage arbitrary relations (as specified in 3.)
+
+
+10 July -- 31 July:
+
+   Integrate the assumption system with other modules, notably with the solvers and integration module.
+
+1 August -- 10 August:
+
+    Remove the old assumption system. This is a complicated issue, since the old assumption system is binded to objects.
+
+    Pencils down.
+17 August -- 24 August.
+
+    Resolve unexpected issues, write more tests, clean up code, etc.
+
+
+24 August: Final evaluation
+
+
+Code
+
+    Some code, like initial implementations of 1 and 2 are in my git repo: http://fseoane.net/git/sympy.git branch assumptions[2]
+
+
+[1] http://code.google.com/p/sympy/issues/detail?id=1309
+[2] http://fseoane.net/cgi-bin/gitweb.cgi?p=sympy.git;a=shortlog;h=refs/heads/assumptions
+[3] http://code.google.com/p/sympy/issues/detail?id=1253&q=inequalities
+
+[[category:development]]
+[[category:core]]
