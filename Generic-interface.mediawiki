@@ -1,0 +1,185 @@
+== Introduction ==
+
+This page collects notes on SymPy/SymPyCore interface design.
+
+== Motivation ==
+
+Summary:
+  The goal of designing interfaces of different parts of a CAS
+  is to separate the concepts of symbolic expressions and symbolic
+  objects.
+
+Symbolic expressions represent mathematical concepts
+like variables, functions, operators, and relations between them.
+Symbolic objects represent symbolic expressions in a running
+computer program.
+
+The aim of any CAS is to provide methods to manipulate symbolic
+objects and by that manipulate symbolic expressions.
+In order to these manipulations to have a mathematical meaning,
+the methods must be consistent with rules and theories
+from mathematics.
+
+There are many possible ways to represent a mathematical
+concept as a structure of a computer program. Which of all these
+representations is most suitable (efficient, consistent, extendable, etc)
+for a particular programming language, is unknown in advance and
+it is natural to expect that it may change during the development of a CAS.
+
+Any CAS is highly integrated system, that is, different parts of
+the CAS may use methods from other parts. So when something
+will be changed in one part of the CAS, this change may have
+a huge effect on the CAS as a whole. Even if the change
+in one part would improve its functionality/efficiency considerably,
+applying the change may be postponed or rejected because it would
+require to much of work to update the other parts of the
+system, or if there is uncertainty that the other parts
+of the system will become unfunctional by that.
+
+In order to make a development of a CAS as painless as possible
+in knowing that different parts of it may change in time, one must
+define interfaces between the parts such that are expected to not 
+change in time (may be only in a minimal way).
+
+One of the rules for a good interface seems to be the condition
+that the interface should reflect a mathematical concept
+rather than internal representations of objects or any other
+details of implementations.
+
+
+== Symbolic objects ==
+
+Symbolic objects are instances of classes that are derived from the base class `Basic`.
+
+Symbolic objects must be immutable and hashable objects. These conditions reflect a
+bit implementation details and are specific to Python. Namely, carrying out summation
+and multiplication can be done most efficiently using Python dictionary objects where
+symbolic objects can be dictionary keys. And hence the hashability condition (from
+which follows also immutability condition).
+
+To convert any object to a symbolic object (provided it makes sense and is supported), use `sympify(..)` function.
+
+Any symbolic object must have the following methods:
+
+* methods to convert a symbolic object to string objects using various representations (pretty print, latex, C, etc)
+* a substitute method that transforms a symbolic object to another one by replacing specified parts of the object with other symbolic objects
+* methods for pattern matching
+
+== Accessing parts of symbolic objects ==
+
+Symbolic objects can either be composite objects that contain other symbolic
+objects as parameters or operands, or atomic objects.
+Composite objects must provide methods to access it's parts.
+On the other hand, composite objects must be fully reconstructable from
+its parts.
+
+Symbolic composite objects can either represent unevaluated operations
+on their operands or the collections of expressions (eg matrices).
+The latter case can also be considered as special case of former
+where an evaluated form does not exist (eg think of matrices
+and how they are constructed).
+
+A unified way of accessing parts of symbolic objects is to
+define methods to access both the operator and its operands.
+For example, if <tt>expr</tt> is a symbolic composite object then
+* <tt>expr.func</tt> - returns an operator object (any callable object)
+* <tt>expr.args</tt> - returns operands (in the form of a list or tuple)
+such that the following condition always holds
+  expr.func(*expr.args) == expr
+for any symbolic object expr. For atomic objects (variable names,
+numbers), the <tt>.func</tt> should be a constant function that has value
+<tt>expr</tt>, and <tt>.args</tt> is empty sequence.
+
+The same symbolic expression can be represented in many mathematically
+equivalent ways. The same holds for symbolic objects. Different algorithms
+might require different representations of symbolic objects that are
+most convinient for them. As a rule, the algorithms should not
+deal with implementing conversation methods but the symbolic
+objects should provide methods for accessing different representation
+possibilities.
+
+Here follows a list of methods that return commonly used representations:
+* <tt>expr.as_base_exp()</tt> - return a tuple <tt>(base, exp)</tt> such that <tt>expr==base**exp</tt>
+* <tt>expr.as_base_intexp()</tt> - return a tuple <tt>(base, exp)</tt> such that <tt>expr==base**exp</tt> and <tt>exp</tt> is an integer
+* <tt>expr.as_terms_coeff()</tt> - return a tuple <tt>(subexpr, coeff)</tt> such that <tt>expr==subexpr * coeff</tt> and <tt>coeff</tt> is a number
+* <tt>expr.as_terms_intcoeff()</tt> - return a tuple <tt>(subexpr, coeff)</tt> such that <tt>expr==subexpr * coeff</tt> and <tt>coeff</tt> is an integer
+* <tt>expr.as_Add_args()</tt> - return a iterable <tt>seq</tt> such that <tt>expr==Add(*seq)</tt>
+* <tt>expr.as_Mul_args()</tt> - return a iterable <tt>seq</tt> such that <tt>expr==Mul(*seq)</tt>
+* <tt>expr.as_Terms_args()</tt> - return an iterable <tt>seq</tt> such that <tt>expr==Terms(*seq)</tt>
+* <tt>expr.as_Factors_args()</tt> - return a sequence <tt>seq</tt> such that <tt>expr==Factors(*seq)</tt>
+for any symbolic object `expr`. Here <tt>as_Terms_args()</tt> and <tt>as_Factors_args()</tt>
+methods return iterators or sequences of pairs <tt>(subexpr, coeff)</tt> and
+<tt>(base, exponent)</tt>, respecitvely. The <tt>as_Pow_args</tt> case is covered by the <tt>as_base_exp</tt> method.
+
+==Fast pattern matching==
+
+The current idiom in SymPy for processing expressions based on their form is:
+
+ if isinstance(x, Pow):
+     args = x.args
+     do_stuff(args)
+
+Consider the input expression <math>e^{1/2}\,\!</math>. Internally this might be represented in many
+different ways, for example:
+* Exp(1/2)
+* Apply(Exp, 1/2)
+* Pow(E,1/2)
+* Sqrt(E)
+* Factors({E:1/2})
+* Root(E,2)
+
+The code will break if we at some point decide to change the representation.
+The following would be better:
+
+ args = x.match_Pow()
+ if args is not None:
+     do_stuff(args)
+
+The method <tt>.match_Pow</tt> method would essentially perform fast
+pattern matching and recognize all different forms (and if there is no possible
+match, it would return None).
+
+Here follows a list fast pattern matching methods:
+* <tt>expr.match_Add()</tt> - return <tt>seq</tt> such that <tt>expr==Add(*seq)</tt> and <tt>len(seq)>1</tt>
+* <tt>expr.match_Mul()</tt> - return <tt>seq</tt> such that <tt>expr==Mul(*seq)</tt> and <tt>len(seq)>1</tt>
+* <tt>expr.match_Pow()</tt> - return <tt>(base, exp)</tt> such that <tt>expr==base ** exp</tt> in a nontrivial way.
+* <tt>expr.match_Terms()</tt> - return <tt>seq</tt> such that <tt>expr==Terms(*seq)</tt> and <tt>len(seq)>1</tt>
+* <tt>expr.match_Factors()</tt> - return <tt>seq</tt> such that <tt>expr==Factors(*seq)</tt> and <tt>len(seq)>1</tt>
+
+To check if an expression is an unevaluated function instance, that is, in the form <tt>f(x)</tt>, use <tt>expr.func==f</tt>.
+
+== Pattern matching ==
+
+In light of introducing algebras to hold symbolic expressions, 
+the UI of wild cards must be reviewed. In current SymPy a special class Wild
+is introduced to represent a wild card which means that there is an extra
+type of a symbolic object that holds some information about it. This situation
+is similar to the current assumptions model (that needs to be replaced) where
+a symbol contains information about its properties. We have seen that
+such a model cannot work well. Instead, the idea is to not attach any
+information to the symbol instance but have a registry that holds this information.
+The same idea should be used for specifying wild cards since the fact that
+a symbol is a wild symbol, is also a special type of assumptions.
+
+Here follows a proposed interface for the match method:
+  expr.match(pattern, p, (q,lambda subexpr: matches(subexpr)), ...)
+that illustrates two possible ways of specifing which symbols are wild cards and what are the matching conditons:
+* <tt>p</tt> - is a wild symbol in the <tt>pattern</tt> that matches any expression
+* <tt>q</tt> - is a conditional wild symbol in the <tt>pattern</tt> that matches an expression only when <tt>matches</tt> returns True
+
+The rules for matching sums and products can be found in http://code.google.com/p/sympycore/wiki/PatternMatching
+
+== Substituting subexpressions ==
+
+A CAS must provide methods to transform symbolic objects to the new ones by substituting specified
+subexpressions (or patterns of subexpressions) with new expressions. There are two common
+cases that must be supported: a single substituton and a subsequent substitution (note that
+substitution operation is non-commutative). Here follows a proposed interface:
+* <tt><expr>.subs(<pattern or subexpression>, <expr>, wildcards=[]) -> <new expression></tt>
+* <tt><expr>.subs([(<pat1>, <expr1>), (<pat2>, <expr2>), ...], wildcards=[]) -> <new expression></tt>
+The last form supports the idiom <tt><expr>.subs(<pattern-expr dict>.items())</tt>. The <tt>wildcards</tt>
+should contain wildcard arguments to the <tt>match</tt> method (see above).
+
+[[Category:Documentation]]
+[[Category:Design]]
+[[Category:Interface]]
