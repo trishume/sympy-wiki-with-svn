@@ -1,0 +1,31 @@
+I am currently in a leave from [http://cens.ioc.ee/ CENS, (Tallinn, Estonia)]
+where I work as Senior Researcher and my research involves studying
+nonlinear wave phenomena in the fields like soliton theory, water wave theory (I am specialized in modelling extreme wave events)
+as well as nonlinear optics.
+
+I got my PhD in 2001 on a topic of soliton theory dealing with multi-soliton interaction patterns and inverse problems 
+(see my CV below for more information).
+
+I am working in [http://www.simula.no Simula Research Laboratory (Oslo, Norway)] as a Reseach Scientist. Here my research is focused
+on developing scientific software. 
+
+I am the author of the [http://sympycore.googlecode.com Sympy Core] project that aims at developing a CAS for Python
+with a robust, efficient, and easily extendable core parts.
+
+I am the author of [http://cens.ioc.ee/projects/f2py2e/ F2PY] tool that has become a standard tool to connect Fortran
+and Python programs.
+
+I am a co-author of the [http://www.scipy.org SciPy] project that provides high-performance tools for 
+performing scientific computations in Python.
+
+I am a developer of the [http://www.numpy.org NumPy] project where I am mainly responsible for the numpy.distutils
+and numpy.f2py packages as well as many smaller modules.
+
+My (oldish) homepage that contains CV and other information: http://cens.ioc.ee/~pearu/
+
+My (not a very verbose) blog: http://pearu.blogspot.com
+
+My relation to Python is summarized in a [http://www.pythonthreads.com/articles/interviews/once-i-learned-about-python,-i-stopped-trying-out-different-languages.html Python Threads Interview]:)
+
+I am married and have a German Shepherd dog [http://www.kutsu.ee/koer/edisson Poiss] and my other
+hobies include [http://www.veemoto.ee Power Boating] and [http://merelaager.ee Sea camping for kids].
