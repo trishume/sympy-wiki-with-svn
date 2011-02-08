@@ -1,0 +1,61 @@
+Feel free to split these into separate wikis.
+
+==Review Board ==
+
+http://review-board.org/
+
+===Installing on Debian===
+Add <pre>deb http://ftp.cz.debian.org/debian/ experimental main</pre> into your <tt>/etc/apt/sources.list</tt>. Install packages:
+<pre>
+$ sudo apt-get install -t experimental python-django
+$ sudo apt-get install python-pysqlite2
+</pre>
+Install reviewboard:
+<pre>
+$ svn co http://reviewboard.googlecode.com/svn/trunk/reviewboard
+$ cd reviewboard
+$ cp settings_local.py.tmpl settings_local.py
+</pre>
+Add/edit this in <tt>settings_local.py</tt>:
+<pre>
+DATABASE_ENGINE = 'sqlite3'
+DATABASE_NAME = 'reviewboard.sqlite'
+</pre>
+Create the database (and answer the questions below):
+<pre>
+$ ./manage.py syncdb
+[...]
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no): yes
+Username (Leave blank to use 'ondra'): root
+E-mail address: some@email.cz
+Password: 
+Password (again): 
+Superuser created successfully.
+[...]
+</pre>
+Run builtin server:
+<pre>
+$ ./manage.py runserver
+</pre>
+Go to http://127.0.0.1:8000 and check that everything works.
+
+'''Configuration''':
+Login with the superuser you created above, go to the "admin" site, select "Add" next to the "Repositories" label in the Scmtools section. Give your repository a name (sympy) and path (http://hg.sympy.org/sympy), and select the type of the server (Mercurial).
+
+'''Note''': all attached patches needs to be produced by "hg di" without the "--git" option, otherwise it won't work (not implemented yet in reviewboard), but the fix will be easy, I investigated that already. --[[User:Ondrej|Ondrej]] 06:11, 27 January 2008 (CST)
+
+==How to code in C==
+
+Linus says, that C++ is a horrible language and that you can do the same things in C, the same efficient.
+So I did a thourough investigation of all the different approaches of object oriented design in C, see this link:
+
+http://groups.google.com/group/sympy/browse_thread/thread/c8ad9b76785a9c27/
+
+for thourough discussion and links to libraries/sources. --[[User:Ondrej|Ondrej]] 10:26, 14 January 2008 (CST)
+
+== Other ==
+
+[[ODEnotes]]
+
+[[Category:Development]]
