@@ -1,0 +1,111 @@
+Here is the application that I submitted for Google Summer of Code 2010 under Python Software Foundation that got accepted.  It is at [http://socghop.appspot.com/gsoc/student_proposal/private/google/gsoc2010/asmeurer/t127075675097 http://socghop.appspot.com/gsoc/student_proposal/private/google/gsoc2010/asmeurer/t127075675097]
+
+Title:	 SymPy: Improving the Symbolic Integrator
+Student:	 Aaron Meurer
+Abstract:	 SymPy, a computer algebra system written and executed in Python, currently has decent heuristic support for symbolic integration. However, the integrator is slow, and being a heuristic, can often fail to find an elementary integral for a function when there is one, even in simple cases. I plan to improve SymPy’s integrator by improving the heuristics as well as implementing some of the Risch algorithm, which will guarantee elementary results if they exist.
+Content:	
+
+
+
+== Name and Contact Info ==
+
+
+
+Aaron Meurer
+
+Email: asmeurer@gmail.com
+
+IRC: asmeurer on freenode
+
+Phone: Will be given to the mentor upon request, not preferred.
+
+Blog: http://asmeurersympy.wordpress.com/
+
+== Synopsis ==
+
+My proposal is to improve the symbolic integrator in SymPy.  SymPy is an open source computer algebra system (CAS) written in Python.  Among Python's many benefits is the fact that it is very easy to use, requiring fewer lines of code and man-hours of coding time per output than just about any other programming language.  In addition, because Python is a programming language and SymPy is simply a module for it, SymPy can be used in any Python script, greatly extending the possibilities of both the CAS and the programming language.
+
+Integration is fundamental to all the sciences, and it is important for any full-featured computer algebra system to have a functional integrator.  SymPy currently has an integrator that does a decent job of most functions presented to it.  However, it could use improvement.  The chief problems with the present integrator are its speed and it ability to produce an elementary anti-derivative when one exists.  The first problem is due to the implementation of the current heuristics, which are based on Manuel Bronstein’s Poor Man’s Integrator [1], and the second problem is due simply to the fact that they are heuristics, and not the Risch algorithm, which will always either give an elementary antiderivative or prove that one does not exist.  My plan is to improve both of these aspects.  First, improve the heuristics so that the common cases are fast, and so that the current heuristics are fast enough to be used as a preprocessor to an implementation or partial implementation of the full algorithm.  Second, begin implementing the full algorithm.  This will not be completed in full–indeed no computer algebra system currently implements the entire algorithm [2]—but this will be the beginning of a more rigorous implementation in SymPy.
+
+
+=== Note ===
+
+
+Throughout this application, I will use SymPy/Python style syntax for mathematical functions.  In particular, note that ** denotes exponentiation (usually denoted as ^).  You should be able to paste these into an iSymPy session and they will work.
+
+
+== Deliverables ==
+ 
+
+My past experience with the Google Summer of Code program has taught me that it is impossible to stick to a timeline.  Nonetheless, it is very useful to have one as a guide to follow throughout the summer, and to help outline what I plan on doing.
+
+
+
+
+== Community Bonding Period ==
+
+I have the advantage of already being a SymPy developer, having continued working on the project after my Google Summer of Code project from last year (SymPy: Ordinary Differential Equation Solving Engine).  Therefore, I will not need to waste this time learning the source or figuring out how to use git.  Instead, I plan to use this period to read the resources that I will need to implement the algorithms ([0] in particular, [1]).  In addition, I plan to review the current source code relating to integration to see what exactly needs to be done to improve it. 
+
+=== Beginning of the Program ===
+
+ 
+
+* Week 1: Begin improving the present heuristic implementation of the Risch algorithm (the Poor Man’s Integrator [1]).  This may include among other things improving the use polynomial algorithms in certain parts of the algorithm that are bottlenecking it, comparing the Poor Man’s Integrator to the heuristic version of the Risch algorithm described in Bronstein’s book [0], and making any necessary adjustments.  The heuristic will not become redundant upon implementation of the full algorithm, because it can be used as a faster preprocessor.  But in order to do this, it needs to be much faster than it currently is.  It also has a bad tendency to hang on integrals that it cannot do instead of just returning the expression unevaluated.  For example, integrate((sin(1/x) - x*exp(x))/((-sin(1/x) + x*exp(x))*x + x*sin(1/x)), x) [9].  There are several issues in the tracker [8] on undoable or slow integrals, so these will help to serve as a guide as to what remains to be implemented and what needs to be improved. 
+
+ 
+
+* Week 2: Add more special case heuristics to SymPy.  This means pattern-matching heuristics to match common integrals with general form solutions for speed.  Currently, SymPy uses this approach to solve simple power integrals ( (x**a + b)**c ) and trigonometric integrals (sin(a*x)**n*cos(a*x)**m).  I think that this can be extended to many more “freshman calculus” type integrals, so that the integrator will be very fast in the common case.  This may also add to the list of functions that SymPy can actually do.  For example, SymPy cannot currently do integrate(log(x)/x, x), even though this is a simple “u-substitution” type integral taught in first semester calculus courses. 
+
+ 
+
+* Week 3: Begin implementing the algorithms from Bronstein’s book [0].  This may also require improving existing algorithms (for example, root finding code).  This is the so-called “transcendental part” of the Risch algorithm, which is the easiest part to implement.  Implementing the full Risch algorithm will also have the benefit of giving criterion algorithms, that is, algorithms that can decide if a function has an elementary integral in addition to finding one.  This can be useful to both to the heuristics, which will then know to either stop or to look for non-elementary solutions, and as a user level functionality. 
+
+ 
+
+* Weeks 4-7: Continue work above.
+
+=== Midterms === 
+
+* Weeks 1-4: After I exhaust Bronstein’s book, which is currently the best resource in the literature for the Risch Algorithm, I will need to turn to other sources.  I will need to look with my mentor at where I am to decide the best course of action at this point.  Perhaps, I will want to implement more heuristics, or maybe I will want to focus on improving polynomial algorithms to make things faster.  If things are looking good far as the transcendental case, I will want to start looking at the algebraic case, which is much harder.  This will almost certainly take me to the end of the summer, with work to keep me busy afterwards (I plan on continuing as a SymPy developer after the summer is over, most likely continuing work on the integrator).  Potential sources here will be [3], [6], and [7]. 
+
+In addition, while the focus of the Risch algorithm is either finding an elementary antiderivative or proving one does not exist, often a special function solution is desired over an unevaluated integral.  A common example of this is the so-called error function, defined by erf(x) == 2/sqrt(pi)*integrate(exp(-t**2), (t, 0, x)) (the Risch algorithm can prove that this function is non-elementary).  Among other things, it is the cumulative distribution function for the normal distribution, one of the most common continuous distributions in probability and statistics.  Support for erf() integrals, as well as other special functions such as the Ci() function, is either poor or non-existent in SymPy’s present integrator.
+
+Another option for the heuristic side will be to implement heuristics based on Meijer G functions.  The Meijer G function is a function that was designed to be so general that most functions, be they elementary or special, arise as special cases of it.  Therefore, one way to do heuristic integration is to try to convert the integrand into Meijer G functions, integrate, and then try to convert it back.  [3], [4], and [10] describe some methods for doing this.  This heuristic has the advantage of being very friendly to special functions.  In addition, even if the last step cannot be done, the resulting integral can be useful for definite integration. 
+
+== Related Work ==
+
+Most developed full-featured computer algebra systems have some kind of integrating capability.  Maple and Mathematica, the main proprietary systems, have very good integration capabilities, especially with special functions.  Of the open source computer algebra systems, Axiom is perhaps the best when it comes to integration.  It is the only computer algebra system to fully implement the negative case, that is, given an elementary function, it can determine if is has an elementary antiderivative or not.  This is not surprising, since Bronstein worked on Axiom. 
+
+== Biographical Information ==
+
+I am a second year student at New Mexico Tech double majoring in Mathematics and Computer Science.  My mathematical background is significant.  Relevant courses that I have taken include Intro to Analysis and Intro to Abstract Algebra. 
+
+Last summer, I worked on SymPy for Google Summer of Code, which was my first experience with open source.  My project was to improve the ordinary differential equation solving capabilities of SymPy, and it was successful.  I decided to continue as a developer of SymPy, and Ondřej Čertík, the project's leader, granted me commit access to our central repository and administrative access to the Google Code page last fall.  I blog at http://asmeurersympy.wordpress.com/, which was also my blog for last summers Google Summer of Code project. 
+
+I don’t have any other significant plans for the summer, except for a small vacation midway through.  I did the same last summer, and was still able to complete my project successfully. 
+
+I push all of my SymPy work to a GitHub account at http://github.com/asmeurer/sympy.  I plan on keeping in contact with my mentor with whatever method here prefers.  If he is already an active member of the community, then this will not be a problem because I myself am an active member of the community and will likely already know him.  I also spend a lot of time in the SymPy IRC channel (#sympy on freenode.net).  
+
+== Sources ==
+
+[0] -  M. Bronstein. Symbolic integration I: transcendental functions. Springer Verlag, 2005.
+
+[1] - http://www-sop.inria.fr/cafe/Manuel.Bronstein/pmint/index.html
+
+[2] - http://mathworld.wolfram.com/RischAlgorithm.html
+
+[3] - M. Kauers. Integration of algebraic functions: a simple heuristic for finding the logarithmic part. In Proceedings of the twenty-first international symposium on Symbolic and algebraic computation, pages 133–140. ACM, 2008.
+
+[4] -  K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.
+
+[5] - V. S. Adamchik and O. I. Marichev. The algorithm for calculating integrals of hypergeometric type functions and its realization in reduce system. In ISSAC ’90: Proceedings of the international symposium on Symbolic and algebraic computation, pages 212–224, New York, NY, USA, 1990. ACM.
+
+[6] - Barry M. Trager. On the Integration of Algebraic Functions. PhD thesis, MIT, 1984.
+
+[7] - James H. Davenport. On the Integration of Algebraic Functions. Lecture Notes in Computer Science 102. Springer, 1981.
+
+[8] - http://code.google.com/p/sympy/issues/list?q=label:Integration
+
+[9] - http://code.google.com/p/sympy/issues/detail?id=1441
+
+[10] - http://functions.wolfram.com/HypergeometricFunctions/MeijerG/
