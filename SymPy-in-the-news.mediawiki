@@ -1,0 +1,17 @@
+Here we list blog/news/magazines mentioning SymPy that we know of.
+
+* [http://stochastix.wordpress.com/2008/07/05/playing-with-sympy/ Playing with SymPy], July 5, 2008
+* [http://poland-for-foreigners.blogspot.com/2008/04/polish-developers-awarded-by-google.html Polish developers awarded by Google], April 25, 2008
+* [http://elusiveat.livejournal.com/261142.html open source symbolic algebra], April 24, 2008
+* [http://amca01.wordpress.com/2008/04/10/teaching-mathematics-programming-or-cas/ Teaching mathematics: programming or CAS?], April 10, 2008
+* [http://www.metarz.net/blog/?p=92 You may take away my mathematica license but you may never take my freedom], April 2, 2008
+* [http://quantum_mc.blogspot.com/2008/03/notes-from-pycon-2008.html Notes from PyCon 2008], March 19, 2008
+* [http://duhctaep.blogspot.com/2008/01/cython-and-sympy.html cython and sympy], January 27, 2008
+* [http://scottkirkwood.blogspot.com/2007/12/cas-and-python.html CAS and Python], December 23, 2007
+* [http://unsymptomatictoo.blogspot.com/2007/12/limitless-supplies-of-algebra-exercises.html Limitless Supplies of Algebra Exercises], December 7, 2007
+* [http://pymag.phparch.com/ Python Magazine], `Volume 1`, `Issue 11`, November 2007
+* Penguin.cz: [http://www.penguin.cz/novinky-view.php?id=1149 ZajÃ­mavÃ© programy 55] (Czech), October 2007
+* Penguin.cz: [http://www.penguin.cz/novinky-view.php?id=1142 ZajÃ­mavÃ© programy 50] (Czech), July 2007
+* [http://mulled-mead.livejournal.com/52019.html If you want your computer to do your derivatives...], March 2007
+
+[[Category:Development]]
