@@ -1,0 +1,144 @@
+== Portland State University GSoC Proposal == 
+(This is the one that was accepted).  [http://socghop.appspot.com/student_proposal/show/google/gsoc2009/asmeurer/t123854260471 http://socghop.appspot.com/student_proposal/show/google/gsoc2009/asmeurer/t123854260471].  I have edited it as well as the PSF one that was not accepted here so that they look nicer in wiki, including adding LaTeX for the math.
+=== Title ===
+'''SymPy: Ordinary Differential Equation Solving Engine'''
+
+=== Abstract ===
+SymPy, a computer algebra system written and used in python, currently has all but no support for ordinary differential equation solving. My proposal is to expand the solution engine to include all common types of ordinary differential equations, including all the common symbolic methods, some approximation methods such as series and numerical solution techniques, and some systems of ordinary differential equations solution techniques.
+=== Name and Contact Info ===
+
+Aaron Meurer
+
+Email: asmeurer@gmail.com
+
+IRC: asmeurer
+
+Phone: Will be given to the mentor upon request, not preferred.
+
+=== Benefits to Community === 
+
+My proposal is to improve the ordinary differential equation solver engine in SymPy. SymPy is an open source computer algebra system (CAS) written in Python.  Among Python's many benefits it the fact that it is very easy to use, requiring fewer lines of code and man-hours of coding time per output than just about any other programming language.  Also, because Python is a programming language and SymPy is simply a module for it, SymPy can be used in any Python script, greatly extending the possibilities of both the CAS and the programming language.  
+
+[http://en.wikipedia.org/wiki/Ordinary_differential_equations Ordinary differential equations] are used widely in the sciences, such as engineering, physics, and economics, as well as in studies of mathematics.  Currently, SymPy can solve only a couple of very simple differential equations, which encompass a very small portion of the solvable ordinary differential equations. Specifically, only first order linear and some very specialized forms of second order homogeneous with linear coefficients can presently be solved. In addition, Bernoulli equations can be solved, because I implemented them myself when I first started looking at SymPy as a potential group for Google Summer of Code 2009 (see [http://groups.google.com/group/sympy-patches/browse_thread/thread/cd20c368b1d454ce/27aee3d1d9fe2c50?lnk=gst&q=Aaron+Meurer#27aee3d1d9fe2c50 the patch]). The lack of a decent differential equation solving engine in SymPy severly limits it as a full featured CAS.
+
+=== Deliverables ===
+
+For my project I plan on implementing the following types of differential equation solution methods:
+
+*Separable (e.g, <math>y'=\frac{x^2}{e^y}</math>).
+*n-order linear homogeneous with constant coefficients (e.g., <math>y'''+2y''+3y=0</math>).
+*Exact differential equations (e.g., <math>ye^{xy}dx+xe^{xy}dy=0</math>).
+*Some special cases of exact differential equations that aren't exact but can be made exact with a simple substitution or integrating factor (e.g., <math>(y^2+y)dx-xdy=0</math> is not exact, but multiplying the equation by <math>y^{-2}</math> makes it exact).
+*Homogeneous differential equations. By this I mean equations that can be written in the form <math>\frac{dy}{dx}=f(\frac{y}{x})</math> or <math>\frac{dy}{dx}=f(\frac{x}{y})</math>. (e.g.,<math>(\sqrt{x^2+y^2}+y)dy-xdx=0</math>).
+*n-Order non-homogeneous linear with constant coefficients via either undetermined coefficients or variation of parameters or both. I am not sure yet which one of these will be the most efficient. (e.g., <math>y'''-3y''+3y'-y=e^x</math>, <math>y''+y=\sec{x}</math>)
+*Second order non-homogeneous linear with non-constant coefficients via reduction of order. (e.g., <math>x^2y''+xy'-y=0</math> given that <math>y=x</math> is a solution).  
+*Differential equations of the type <math>\frac{dy}{dx}=\frac{p(x,y)}{q(x,y)}</math> where <math>p(x,y)</math> and <math>q(x,y)</math> are linear functions, both of coincident and non-coincident lines. (e.g., <math>(x+2y-4)dx+(-2x+4y)dy=0</math>).
+*Other symbolic methods that I may learn.  
+*Series solutions to general form ordinary differential equations. (e.g., <math>\frac{dy}{dx}+\sin{y}=0</math> is a common differential equation from physics that has no elementary solution)
+*Numerical solutions to differential equations that have no known closed form solution. This will either be done directly or through wrappers to some other open source python package that is integrated into SymPy (e.g., mpmath, SciPy).
+*Some systems of ordinary differential equations.
+
+Note, some of these are straightforward to implement. For example, the Bernoulli case that I implemented was as simple as solving for the general case and substituting the values in. Others will require more work to ensure that they catch all the types of equations that really fit their form. For example, series solutions will require much more work than exact equations, as anyone who is familiar with the two methods will attest to. For this reason, it is possible that I may spend more time on one than I anticipated, and not have time for some other one. The nice thing about this project is that it is non-atomic. Only a fraction could be implemented and it would still add to SymPy. For example, if I never was able to implement systems of equations because of unforeseen difficulties with other types, the final product would still be strong as a result of those other parts that I had completed. On the other hand, if I finish all of this early, there are still several more methods of solving differential equations that I could then implement.  
+
+In addition to these, I plan on implementing SymPy issue 1336: I actually posted this issue. The idea is to create an arbitrary constant type that will aid with the simplification of ODE solutions. See the [http://code.google.com/p/sympy/issues/detail?id=1336 issue page] to see why this is important. Basically, it is possible for two equations, one simpler in form than the other, to both be identically equivalent solutions to a differential equation, but to be symbolically not identical because the arbitrary constant in one solution is not equal to the arbitrary constant in the second, even though the solver may have given them the same name. Furthermore, I would like to add the ability for SymPy to solve differential equations with initial conditions, including adding some solution methods that only work for differential equations with initial conditions.  
+
+Obviously, much of my time will be spent fixing bugs; not only will I be fixing bugs that I create myself, but also I will no doubt find that some other part of the SymPy core does not do what I need it to do, and so I will need to spend some time fixing/improving it. Also, in accordance with the rest of the SymPy code base, I will be adding tests and documentation along each step of the way.
+
+Note that I will only be able to implement ordinary differential equations, not to be confused with partial differential equations, which I have not learned how to solve yet.
+
+=== Description (by timeline) ===
+Although I will be able to do little until classes end, I would have no problems starting with the project "early".  I have already been following the SymPy discussion group for some time and have looked at some of the code base, and this will be a great time for me to even better familiarize myself with it so that I can write code that is consistent with the rest of SymPy.  Also, since I hardly have to worry about finishing early (see above), I could easily start coding the actual project during this period. This would allow me to potentially finish more by the end of the summer.
+
+Once the program starts, this is a rough outline week-by-week of what I plan on doing:
+
+#'''Start implementing code! Start with the most basic solutions methods: Exact, homogeneous (<math>\frac{dy}{dx}=f(\frac{y}{x})</math>), and equations with linear coefficients on <math>dx</math> and <math>dy</math>. Implement initial conditions.  '''These are the most straightforward to implement, so I am going to do them first.  In particular, these all can all be solved more or less generally like the Bernoulli was and require little algorithmic thinking.  
+#'''Work on separable equations. Try to be as exhaustive as possible, making sure that every equation that should be solved by separable means is caught here.  '''From here, they start becoming less straightforward.  For separable to be done right and completely, I will need to be more algorithmically minded.  Namely, for separable, the solution engine will need to know how to factor equations so that they fits the form <math>\frac{dy}{dx}=p(x)q(y)</math>.  Also, there is the question of when the solver should attempt to solve explicitly for <math>y</math>, not only for separable, but in other places as well.  Sometimes this can reduce the domain of the function, for example, taking the square root of a function.  Other times, the solution will look better if it is left in implicit form.  
+#'''Start working on higher order equations. Implement solutions to homogeneous equations. Begin working on variation of parameters and/or undetermined coefficients. ''' Higher order equations cannot be solved generally (as the second order ones that are currently implemented are) because the engine needs to be able to solve n-order equations.  Variation of parameters and undetermined coefficients are two methods for solving equations of the type <math>a_ny(n)+a_{n-1}y(n-1)+\dots+a_2y'+a_1y=f(x)</math>, where <math>a_i</math> is a constant for all <math>i</math> from <math>1</math> to <math>n</math>.  If <math>f(x)\equiv0</math>, then the equation is called homogeneous.  Some parts of these solution methods are already implemented in SymPy (e.g., computing the Wronskian for variation of parameters).  Others will need to be written from scratch (e.g., the method to get the coefficients <math>a_i</math>).
+# '''Finish up higher order equations. Try to fill in the holes, especially with special types of equations that occur often in real world analysis.  '''No doubt the people who use SymPy will find equations that my engine does not catch, even though it should.  In addition, I plan on doing extensive testing with the hundreds of examples from my ODE's textbook.  All symbolic methods should be implemented at this point, so if I missed any, this would be the time to fix it.  
+#'''Begin work on the arbitrary constant type.  '''This will be a bit of work, and I have saved it for midway into the summer because I feel that at that point, I will have a much stronger understanding of the SymPy core, which will be essential for implementing this.  See the issue page for more information on how this will work.  The whole purpose is to allow SymPy to simplify solutions to differential equations once they are generated.  SymPy already has a simplification engine, but it does not take into account that in a solution to a differential equation there are arbitrary constants.  For example, <math>\frac{x}{\frac{x^2}{2}+C_1}</math> and <math>\frac{2x}{x^2+C_1}</math> are both valid solutions to the differential equation <math>xy'+xy^2=y</math> (this is one of the Bernoulli equations the SymPy can now solve after my patch).  The second is clearly cleaner, but in order to obtain it, SymPy needs to know that it can "absorb" a <math>2</math> into the <math>C_1</math>. 
+#'''Finish up the arbitrary constant type. Implement it not only in the ODE engine, but also in other places in SymPy that could benefit from it.  '''In particular, the integration engine could also benefit from an arbitrary constant type.  Also, parameterizations with arbitrary variables could use them. 
+#'''Start work on the series solution engine.  '''Series solutions, as anyone who has taken an ordinary differential equations course will attest, are far more difficult than regular elementary solutions.  They involve manipulating infinite sums and Taylor series and solving recurrence relations, among other things.  For this reason, I have given myself much more time to work on them then any of the other methods. I am still learning about these in my ODE's class, so I cannot be as specific here as above.  By the time the summer rolls around, I should know enough about these to implement them well.  Note, the midterm evaluation is right here in the timeline.
+#'''Continue work on the series solution engine. '''
+#'''Finish up the series solution engine.'''
+#'''Start systems of differential equations/numerical solutions. '''I have yet to learn the methods for doing this, so I don't know how long they will take.  If necessary, I will focus just on series, systems, or numerical solutions at the end of the summer, as SymPy could benefit from having any combination of the three.  If I decide that a wrapper is sufficient for doing numerical solutions, I may end up doing that here.  Otherwise, writing a wrapper should not take much time and I could do it earlier in the summer.  
+#'''Finish up as much systems as I can.  '''There is enough there to fill a whole other summer.  Also, Systems of ODE's is a separate course that I have not taken yet, so I will probably have to learn on my own anything that I do here, which I will be doing a lot of anyway.  
+I hope to continue working with SymPy after the Google Summer of Code 2009 program.
+
+=== Related Work ===
+
+The main open source CAS, Sage, provides a wrapper to Maxima for its differential equation solving capabilities.  Maxima can solve linear differential equations ([http://maxima.sourceforge.net/docs/manual/en/maxima_22.html#SEC73 Maxima Documentation]).  Yaccas, another open source CAS, can do even less than SymPy, [http://yacas.sourceforge.net/ref.book.pdf See page 45 of this PDF].  
+
+I also own a copy of Maple, which is of course closed source, but I think it will help me to see what can be done and to help me check what I implement in SymPy.  Maple is quite complete in its implemtation of ODE solvers ([http://www.maplesoft.com/view.aspx?SF=5883/usermanual12.pdf see the user manual, 32MB PDF]).
+
+'' Note, after submitting this application, I realized that the Maple PDF has very little information in it regarding the extent of its ODE solving engine.   Suffice it to say that it can solve any ODE that can be solved. ''
+
+=== Biographical Information ===
+
+I am a first year student at New Mexico Tech. I am double majoring in Mathematics and Computer Science. I am fluent in the Python programming language. The classes I am currently taking relating to this project are Math 335: Ordinary Differential Equations and CSE 121: Algorithms and Data Structures.  
+
+I plan on devoting my entire summer to this. I won't have any other kind of job, so I will be able to work a standard 40 hour week for the coding period. Also, my classes will end well before the coding period begins and will not start up again until well after the pencils down date, so I will be totally free for the whole period.
+
+== Python Software Foundation Proposal ==
+'''[http://socghop.appspot.com/student_proposal/show/google/gsoc2009/asmeurer/t123855671338 http://socghop.appspot.com/student_proposal/show/google/gsoc2009/asmeurer/t123855671338]''' (This is essentially the same proposal as the PSU one, but one that fit the Python template.  The PSU one above was accepted. 
+
+=== Summary/Proposal ===
+
+My proposal is to improve the ordinary differential equation solver engine in SymPy. [http://en.wikipedia.org/wiki/Ordinary_differential_equations Ordinary differential equations] are used widely in the sciences, such as engineering, physics, and economics, as well as in studies of mathematics.  Currently, SymPy can solve only a couple of very simple differential equations, which encompass a very small portion of the solvable ordinary differential equations. Specifically, only first order linear and some very specialized forms of second order homogeneous with linear coefficients can presently be solved. In addition, Bernoulli equations can be solved, because I implemented them myself when I first started looking at SymPy as a potential group for Google Summer of Code 2009 (see [http://groups.google.com/group/sympy-patches/browse_thread/thread/cd20c368b1d454ce/27aee3d1d9fe2c50?lnk=gst&q=Aaron+Meurer#27aee3d1d9fe2c50 the patch]). For my project I plan on implementing the following types of differential equation solution methods:
+
+*Separable (e.g, <math>y'=\frac{x^2}{e^y}</math>).
+*n-order linear homogeneous with constant coefficients (e.g., <math>y'''+2y''+3y=0</math>).
+*Exact differential equations (e.g., <math>ye^{xy}dx+xe^{xy}dy=0</math>).
+*Some special cases of exact differential equations that aren't exact but can be made exact with a simple substitution or integrating factor (e.g., <math>(y^2+y)dx-xdy=0</math> is not exact, but multiplying the equation by <math>y^{-2}</math> makes it exact).
+*Homogeneous differential equations. By this I mean equations that can be written in the form <math>\frac{dy}{dx}=f(\frac{y}{x})</math> or <math>\frac{dy}{dx}=f(\frac{x}{y})</math>. (e.g.,<math>(\sqrt{x^2+y^2}+y)dy-xdx=0</math>).
+*n-Order non-homogeneous linear with constant coefficients via either undetermined coefficients or variation of parameters or both. I am not sure yet which one of these will be the most efficient. (e.g., <math>y'''-3y''+3y'-y=e^x</math>, <math>y''+y=\sec{x}</math>)
+*Second order non-homogeneous linear with non-constant coefficients via reduction of order. (e.g., <math>x^2y''+xy'-y=0</math> given that <math>y=x</math> is a solution).  
+*Differential equations of the type <math>\frac{dy}{dx}=\frac{p(x,y)}{q(x,y)}</math> where <math>p(x,y)</math> and <math>q(x,y)</math> are linear functions, both of coincident and non-coincident lines. (e.g., <math>(x+2y-4)dx+(-2x+4y)dy=0</math>).
+*Other symbolic methods that I may learn.  
+*Series solutions to general form ordinary differential equations. (e.g., <math>\frac{dy}{dx}+\sin{y}=0</math> is a common differential equation from physics that has no elementary solution)
+*Numerical solutions to differential equations that have no known closed form solution. This will either be done directly or through wrappers to some other open source python package that is integrated into SymPy (e.g., mpmath, SciPy).
+*Some systems of ordinary differential equations.
+
+Note, some of these are straightforward to implement. For example, the Bernoulli case that I implemented was as simple as solving for the general case and substituting the values in. Others will require more work to ensure that they catch all the types of equations that really fit their form. For example, series solutions will require much more work than exact equations, as anyone who is familiar with the two methods will attest to. For this reason, it is possible that I may spend more time on one than I anticipated, and not have time for some other one. The nice thing about this project is that it is non-atomic. Only a fraction could be implemented and it would still add to SymPy. For example, if I never was able to implement systems of equations because of unforeseen difficulties with other types, the final product would still be strong as a result of those other parts that I had completed. On the other hand, if I finish all of this early, there are still several more methods of solving differential equations that I could then implement.  
+
+In addition to these, I plan on implementing SymPy issue 1336: I actually posted this issue. The idea is to create an arbitrary constant type that will aid with the simplification of ODE solutions. See the [http://code.google.com/p/sympy/issues/detail?id=1336 issue page] to see why this is important. Basically, it is possible for two equations, one simpler in form than the other, to both be identically equivalent solutions to a differential equation, but to be symbolically not identical because the arbitrary constant in one solution is not equal to the arbitrary constant in the second, even though the solver may have given them the same name. Furthermore, I would like to add the ability for SymPy to solve differential equations with initial conditions, including adding some solution methods that only work for differential equations with initial conditions.  
+
+Obviously, much of my time will be spent fixing bugs; not only will I be fixing bugs that I create myself, but also I will no doubt find that some other part of the SymPy core does not do what I need it to do, and so I will need to spend some time fixing/improving it. Also, in accordance with the rest of the SymPy code base, I will be adding tests and documentation along each step of the way.
+
+Note that I will only be able to implement ordinary differential equations, not to be confused with partial differential equations, which I have not learned how to solve yet.
+
+=== Schedule ===
+
+==== Start of program ====
+
+Although I will be able to do little until classes end, I would have no problems starting with the project "early".  I have already been following the SymPy discussion group for some time and have looked at some of the code base,  and this will be a great time for me to even better familiarize myself with it so that I can write code that is consistent with the rest of SymPy.  Also, since I hardly have to worry about finishing early (see above), I could easily start coding the actual project during this period. This would allow me to potentially finish more by the end of the summer.
+
+==== Midterm evaluation ====
+#'''Start implementing code! Start with the most basic solutions methods: Exact, homogeneous (<math>\frac{dy}{dx}=f(\frac{y}{x})</math>), and equations with linear coefficients on <math>dx</math> and <math>dy</math>. Implement initial conditions.  '''These are the most straightforward to implement, so I am going to do them first.  In particular, these all can all be solved more or less generally like the Bernoulli was and require little algorithmic thinking.  
+#'''Work on separable equations. Try to be as exhaustive as possible, making sure that every equation that should be solved by separable means is caught here.  '''From here, they start becoming less straightforward.  For separable to be done right and completely, I will need to be more algorithmically minded.  Namely, for separable, the solution engine will need to know how to factor equations so that they fits the form <math>\frac{dy}{dx}=p(x)q(y)</math>.  Also, there is the question of when the solver should attempt to solve explicitly for <math>y</math>, not only for separable, but in other places as well.  Sometimes this can reduce the domain of the function, for example, taking the square root of a function.  Other times, the solution will look better if it is left in implicit form.  
+#'''Start working on higher order equations. Implement solutions to homogeneous equations. Begin working on variation of parameters and/or undetermined coefficients. ''' Higher order equations cannot be solved generally (as the second order ones that are currently implemented are) because the engine needs to be able to solve n-order equations.  Variation of parameters and undetermined coefficients are two methods for solving equations of the type <math>a_ny(n)+a_{n-1}y(n-1)+\dots+a_2y'+a_1y=f(x)</math>, where <math>a_i</math> is a constant for all <math>i</math> from <math>1</math> to <math>n</math>.  If <math>f(x)\equiv0</math>, then the equation is called homogeneous.  Some parts of these solution methods are already implemented in SymPy (e.g., computing the Wronskian for variation of parameters).  Others will need to be written from scratch (e.g., the method to get the coefficients <math>a_i</math>).
+# '''Finish up higher order equations. Try to fill in the holes, especially with special types of equations that occur often in real world analysis.  '''No doubt the people who use SymPy will find equations that my engine does not catch, even though it should.  In addition, I plan on doing extensive testing with the hundreds of examples from my ODE's textbook.  All symbolic methods should be implemented at this point, so if I missed any, this would be the time to fix it.  
+#'''Begin work on the arbitrary constant type.  '''This will be a bit of work, and I have saved it for midway into the summer because I feel that at that point, I will have a much stronger understanding of the SymPy core, which will be essential for implementing this.  See the issue page for more information on how this will work.  The whole purpose is to allow SymPy to simplify solutions to differential equations once they are generated.  SymPy already has a simplification engine, but it does not take into account that in a solution to a differential equation there are arbitrary constants.  For example, <math>\frac{x}{\frac{x^2}{2}+C_1}</math> and <math>\frac{2x}{x^2+C_1}</math> are both valid solutions to the differential equation <math>xy'+xy^2=y</math> (this is one of the Bernoulli equations the SymPy can now solve after my patch).  The second is clearly cleaner, but in order to obtain it, SymPy needs to know that it can "absorb" a <math>2</math> into the <math>C_1</math>. 
+#'''Finish up the arbitrary constant type. Implement it not only in the ODE engine, but also in other places in SymPy that could benefit from it.  '''In particular, the integration engine could also benefit from an arbitrary constant type.  Also, parameterizations with arbitrary variables could use them. 
+#'''Start work on the series solution engine.  '''Series solutions, as anyone who has taken an ordinary differential equations course will attest, are far more difficult than regular elementary solutions.  They involve manipulating infinite sums and Taylor series and solving recurrence relations, among other things.  For this reason, I have given myself much more time to work on them then any of the other methods. I am still learning about these in my ODE's class, so I cannot be as specific here as above.  By the time the summer rolls around, I should know enough about these to implement them well.  Note, the midterm evaluation is right here in the timeline.
+
+==== Final evaluation ====
+#'''Continue work on the series solution engine. '''
+#'''Finish up the series solution engine.'''
+#'''Start systems of differential equations/numerical solutions. '''I have yet to learn the methods for doing this, so I don't know how long they will take.  If necessary, I will focus just on series, systems, or numerical solutions at the end of the summer, as SymPy could benefit from having any combination of the three.  If I decide that a wrapper is sufficient for doing numerical solutions, I may end up doing that here.  Otherwise, writing a wrapper should not take much time and I could do it earlier in the summer.  
+
+<!-- I accidentally made this entire bullet bold in the PSF application -->
+#'''Finish up as much systems as I can.  '''There is enough there to fill a whole other summer.  Also, Systems of ODE's is a separate course that I have not taken yet, so I will probably have to learn on my own anything that I do here, which I will be doing a lot of anyway.  
+
+I hope to continue working with SymPy after the Google Summer of Code 2009 program.  
+
+=== About Me ===
+
+I am a first year student at New Mexico Tech. I am double majoring in Mathematics and Computer Science. I am fluent in the Python programming language. The classes I am currently taking relating to this project are Math 335: Ordinary Differential Equations and CSE 121: Algorithms and Data Structures.  
+
+=== Contact Info ===
+
+Email: asmeurer@gmail.com
+
+IRC: asmeurer
+
+Phone: Will be given to the mentor upon request, not preferred.
