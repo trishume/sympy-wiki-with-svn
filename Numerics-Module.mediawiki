@@ -1,0 +1,273 @@
+=Introduction=
+
+The module `sympy.numerics` implements arbitrary-precision arithmetic. It has not yet been fully integrated into SymPy.
+
+_Note: the `numerics` module is currently being reimplemented as a standalone Python library, [http://code.google.com/p/mpmath/ mpmath]._
+
+=Floats and ComplexFloats=
+
+The classes `Float` and `ComplexFloat` behave roughly like Python's `float` and `complex`, except for being capable of arbitrary precision. `Float`s and `ComplexFloat`s can be created from regular Python numbers (`int`, `float`, `complex`), decimal strings, and also from SymPy `Rational`s.
+
+<source lang="python">
+>>> from sympy import *
+>>> from sympy.numerics import *
+>>> Float(1) - Float(0.25) - Float('0.25') - Float(Rational(1,4))
+Float('0.25')
+>>> ComplexFloat(2, 3)
+ComplexFloat(real='2', imag='3')
+>>> ComplexFloat(1j) + 2
+ComplexFloat(real='2', imag='1')
+</source>
+
+The working precision can be controlled through the static `setdps` method on the `Float` class (the default is 15 decimal places, which corresponds to 53 bits -- the same as Python's `float`).
+
+<source lang="python">
+>>> 2**0.5
+1.4142135623730951
+>>> Float(2)**0.5
+Float('1.4142135623730951')
+
+>>> Float.setdps(10)
+>>> Float(2)**0.5
+Float('1.41421356237')
+
+>>> Float.setdps(100)
+>>> Float(2)**0.5
+Float('1.41421356237309504880168872420969807856967187537694807317667973799073247
+846210703885038753432764157274')
+</source>
+
+`Float` also supports various rounding modes: `ROUND_DOWN`, `ROUND_UP`, `ROUND_FLOOR`, `ROUND_CEILING`, `ROUND_HALF_UP`, `ROUND_HALF_DOWN`, and 
+`ROUND_HALF_EVEN` (default). However, these rounding modes are not yet correctly supported in arithmetic operations. For more details on managing the working precision and rounding modes, refer to the docstrings for the `Float` class.
+
+The method `ae` can be used for approximate equality testing:
+
+<source lang="python">
+>>> Float.setdps(15)
+>>> Float(0).ae(1e-14)
+False
+>>> Float(0).ae(1e-16)
+True
+</source>
+
+=Evaluating SymPy expressions=
+
+The `evalf` function evaluates exact SymPy expressions into `Float`s or `ComplexFloat` approximations. It currently supports regular algebraic expressions and simple functions and constants like `pi`, `exp`, etc.
+
+<source lang="python">
+>>> evalf((sqrt(pi) + 2*I)**Rational(-1,3))
+ComplexFloat(real='0.69217119929576842', imag='-0.20044721328786239')
+
+>>> Float.setdps(50)
+>>> evalf((1+sqrt(5))/2)
+Float('1.618033988749894848204586834365638117720309179805764')
+</source>
+
+=Special functions=
+
+The modules `numerics.functions` and `numerics.functions2` provide mathematical functions.  `functions` contains standard functions like those found in the Python `math` library while `functions2` contains higher transcendental functions. Some mathematical constants are also available in the `numerics.constants` module.
+
+The functions are incompatible with SymPy's symbolic functions (so be careful with the imports).
+
+All available functions and constants can be computed with arbitrary precision. Most functions also support both real and complex numbers.  For example, this computes a complex exponential with standard precision:
+
+<source lang="python">
+>>> print exp(1j)
+(0.540302305868140 + 0.841470984807897*I)
+</source>
+
+As another example, the Riemann zeta function value zeta(3) can easily be computed to, say, 1000 digits:
+
+<source lang="python">
+>>> from sympy.numerics.functions2 import *
+>>> Float.setdps(1000)
+>>> print zeta(3)
+1.202056903159594285399738161511449990764986292340498881792271555341838205786313
+09018645587360933525814619915779526071941849199599867328321377639683720790016145
+39417829493600667191915755222424942439615639096641032911590957809655146512799184
+05105715255988015437109781102039827532566787603522336984941661811057014715778639
+49973752378527793703095602570185318279000307654710756304884332086971157374238079
+34450316076253177145354444118311781822497185263570918244899879620350833575617202
+26033937858703281312678079900541773486911525370656237057440966221712902627320732
+36149224291304052855537234103307757779806424202430488281521000914602653822069627
+15520208227433500101529480119869011762595167636699817183557523488070371955574234
+72940835952088616662025728537558130792825864872821737055661968989526620187768106
+29200817792338135876828426412432431480282173674506720693507626895304345939375032
+96636377575062473323992348288310773390527680200757984356793711505090050273660471
+14008533503436467224856531518117766181092
+</source>
+
+A complex value of the gamma function:
+
+<source lang="python">
+>>> Float.setdps(100)
+>>> print gamma(4+4j)
+(0.70586493259130839346071813678914214452369427366070170491688388773844963999772
+56803721515698482878208 + -0.496739083997423706378466662866211303078212882210124
+1493483556416020374941674783230290913075953637038*I)
+</source>
+
+The constant pi is available through a function `pi_float()` that returns an approximation of pi accurate to within the current working precision. The `examples` directory also contains a script `pidigits.py` for computing pi with extremely high precision (millions of digits for the patient).
+
+=Numerical optimization=
+The module `numerics.optimize` contains functions for root-finding and optimization. 
+
+The functions `bisect` and `secant` functions can be used to find isolated roots of decently well-behaved functions. As a simple example; using the secant method to calculate pi as the root of sin(x) closest to x = 3:
+
+<source lang="python">
+>>> from sympy.numerics.optimize import secant
+>>> from sympy.numerics.functions import sin
+>>> Float.setdps(50)
+>>> print secant(sin, 3)
+3.1415926535897932384626433832795028841971693993751
+</source>
+
+With details:
+<source lang="python">
+>>> print secant(sin, 3, verbose=True)
+  secant: x_1=3.000000  delta=-0.03
+  secant: x_2=3.142264  delta=0.142264
+  secant: x_3=3.141590  delta=-0.0006733
+  secant: x_4=3.141593  delta=2.23687e-006
+  secant: x_5=3.141593  delta=-1.67327e-013
+  secant: x_6=3.141593  delta=1.39539e-025
+  secant: x_7=3.141593  delta=0
+3.1415926535897932384626433832795028841971693993751
+</source>
+
+More examples and details on usage are available in the function docstrings.
+
+The function `polyroots` finds all roots of a polynomial using complex arithmetic.
+
+<source lang="python">
+>>> from sympy.numerics.optimize import polyroots
+>>> x = Symbol('x')
+>>> roots, error = polyroots(x**3 - 2*x**2 + x + 2)
+>>> for r in roots: print r
+...
+(-0.695620769559862 + 6.78546596234906E-24*I)
+(1.34781038477993 + -1.02885225413669*I)
+(1.34781038477993 + 1.02885225413669*I)
+>>> print error
+4.24223028408244E-17
+</source>
+
+This polynomial is very ill-conditioned:
+
+<source lang="python">
+>>> x = Symbol('x')
+>>> W = 1
+>>> for i in range(1, 14):
+...     W = W * (x-i)
+...
+>>> W = W.expand()
+>>> roots, error = polyroots(W)
+>>> for r in roots: print r
+...
+(1 + 0*I)
+(2.00000000000052 + -6.78706583304582E-13*I)
+(3.00000000091542 + 2.03402685728453E-9*I)
+(3.99967891066583 + -0.000901013608686283*I)
+(5.00026649719202 + -0.0000589434738259911*I)
+(6.07300960794678 + 0.788765735425133*I)
+(6.56514846614468 + 0.231277402207583*I)
+(8.05562929719922 + -0.512541233266305*I)
+(8.52882344788961 + 1.04323424522302*I)
+(10.1764629806671 + -0.824843997843889*I)
+(11.1117004516702 + 1.06172142342246*I)
+(12.1969006408498 + -0.338168434918473*I)
+(13.0738393202625 + 0.116644127674871*I)
+>>> print error
+0.978859971250306
+</source>
+
+In this case, calling `polyroots` with a higher `maxsteps` setting will give better results. It may also be necessary to increase the working precision.
+
+=Numerical integration=
+
+The function `nintegrate` can be used to compute integrals numerically. It takes as input a regular Python function that operates on `Float`s (or `ComplexFloat`s), rather than a SymPy expression.
+
+A simple integral, sin(x) between 0 and pi (`sin` and `pi_float` must be imported from `numerics.functions` and `numerics.constants`):
+
+<source lang="python">
+>>> nintegrate(lambda x: sin(x), 0, pi_float())
+Float('2')
+</source>
+
+The `verbose` option shows what `nintegrate` does internally:
+
+<source lang="python">
+>>> nintegrate(lambda x: sin(x), 0, pi_float(), verbose=True)
+calculating nodes for degree-13 Gauss-Legendre quadrature...
+  node 0 of 6
+  node 4 of 6
+calculating nodes for degree-6 Gauss-Legendre quadrature...
+  node 0 of 3
+0 0 3.14159265358979312
+1 0 1.57079632679489656
+2 0 0.785398163397448279
+5 0.785398163397448279 1.57079632679489656
+8 1.57079632679489656 3.14159265358979312
+9 1.57079632679489656 2.35619449019234484
+12 2.35619449019234484 3.14159265358979312
+Float('2')
+</source>
+
+By default, `nintegrate` uses Gauss-Legendre quadrature. The degree of the quadrature rule depends on the precision level. Since computing nodes for the quadrature rule is a relatively expensive operation (often more expensive than evaluating the integral), computed weights are cached to make repeated calls to `nintegrate` faster.
+
+The interval is adaptively divided into smaller parts to obtain high accuracy. In the example above, we see a count of the number of times the quadrature rule has been applied and the boundaries of each subinterval. In this case, a dozen applications were sufficient (a small piece of sine wave is an example of a very well-behaved integrand). If the integrand is less well-behaved and/or the working precision is set very high, `nintegrate` may require thousands of evaluations, or it might fail altogether. The `nintegrate` docstrings contain more information on how to deal with difficult integrals.
+
+Here is an integral for Euler's constant (infinite integration intervals are supported):
+
+<source lang="python">
+>>> nintegrate(lambda x: -exp(-x)*log(x), 0, oo)
+Float('0.57721566490153287')
+</source>
+
+It turns out that the standard Gaussian quadrature rule performs poorly on this integral when the precision is increased. If we choose the tanh-sinh method (`method=1`) instead, it only takes a few seconds to evaluate it with 100 digits:
+
+<source lang="python">
+>>> Float.setdps(100)
+>>> nintegrate(lambda x: -exp(-x)*log(x), 0, oo, method=1)
+Float('0.57721566490153286060651209008240243104215933593992359880576723488486772
+6777664670936947063291746749503')
+</source>
+
+As verification, there is a function that computes Euler's constant in the `numerics.constants` module (it uses a more efficient algorithm):
+
+<source lang="python">
+>>> gamma_float()
+Float('0.57721566490153286060651209008240243104215933593992359880576723488486772
+6777664670936947063291746749517')
+</source>
+
+If `nintegrate` fails to reach full accuracy, it prints a warning message along with an estimate of the magnitude of the error.
+
+Here is a very badly behaved integral where `nintegrate` fails altogether (the correct value is pi/2):
+<source lang="python">
+>>> nintegrate(lambda x: sin(x)/x, 0, oo, maxsteps=100)
+Warning: failed to reach full accuracy. Estimated magnitude of error:  2
+Float('0.75184212987527188')
+</source>
+
+Increasing the number of steps only makes things worse:
+<source lang="python">
+>>> nintegrate(lambda x: sin(x)/x, 0, oo, maxsteps=1000)
+Warning: failed to reach full accuracy. Estimated magnitude of error:  6
+Float('-1.9422180210118507')
+</source>
+
+A better approach in this case is to choose a finite upper limit:
+<source lang="python">
+>>> nintegrate(lambda x: sin(x)/x, 0, 100, maxsteps=1000)
+Float('1.5622254668890563')
+</source>
+
+Here is a similar but slightly easier integral (the correct value is roughly 1.253).
+<source lang="python">
+>>> nintegrate(lambda x: sin(x**2)/x**2, 0, oo, maxsteps=1000)
+Warning: failed to reach full accuracy. Estimated magnitude of error:  0.003
+Float('1.2410979753100062')
+</source>
+
+[[Category:Modules]]
