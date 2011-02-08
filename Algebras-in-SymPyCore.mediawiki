@@ -1,0 +1,32 @@
+
+SymPy currently implements all symbolic arithmetic in a few global classes like Add, Mul and Pow. Expressions are formed by nesting instances of such classes, along with arbitrary user-defined classes that inherit from Basic.
+
+This approach has a few problems.
+
+* It results in a lot of code complexity, because core classes like Add and Mul must know how to deal with all possible inputs. For example, they must be able to handle both commutative and noncommutative input, and should somehow be able to represent both evaluated and evaluated expressions. Extensibility also suffers, because it is hard to customize the mostly hardcoded behavior of Add and Mul in extension code.
+
+* Performance is poor, because Add, Mul and related classes have to use the most general representation for expressions and they have to check for many special cases. When the expressions are purely polynomial, for example, much more efficient algorithms are available.
+
+One alternative is not to force everything into the same symbolic algebra, but to allow multiple algebras, which each define how expressions should be represented, which simplifications to apply by default, etc. For example, there can be a UnivariatePolynomial algebra optimized for arithmetic with polynomials of one variable. Or a user might want to define an algebra in which simplify() is applied automatically.
+
+The standard hierarchy of algebras might look something like this:
+
+* PrimitiveAlgebra
+** StandardCommutativeAlgebra
+** StandardNoncommutativeAlgebra
+** PolynomialAlgebra
+*** UnivariatePolynomialAlgebra
+*** MultivariatePolynomialAlgebra
+
+Each algebra has its own Symbols, Numbers, etc. The methods __add__, __mul__, etc on those classes are defined to create objects from the same algebra.
+
+The PrimitiveAlgebra represents expressions as pure tuple s-expressions. It implements arithmetic operations but performs no simplifications whatsoever, so that for example x * 1 -> (*, x, 1). This means that it can replicate expressions from other algebras exactly (regardless of how those algebras represent them), and thus it can be used to automatically convert expressions between different algebras, for printing, code generation, etc. Using a simple tuple s-expression format as a common language is efficient and makes interfacing with external code very easy.
+
+The StandardCommutativeAlgebra would be the one visible to users by default. For example, sympy(core).Symbol would actually be an alias for StandardCommutativeAlgebra.Symbol. The default algebra (which would work pretty much like SymPy does currently) should cover the need of 95% of users.
+
+References:
+  [http://code.google.com/p/sympycore/wiki/Algebra Specification SymPyCore algebras.]
+
+[[Category:Documentation]]
+[[Category:Design]]
+[[Category:Algorithms]]
