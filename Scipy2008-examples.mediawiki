@@ -2,13 +2,10 @@ We couldn't go to SciPy2008, so we'll use these examples in some of our future p
 
 Besides [[EuroSciPy2008_examples]] we can also add the following:
 
-
-__TOC__
-
 = Numerical Integration =
 
 One-liner:
-<source lang="python">
+<source>
 In [1]: Integral(sin(1/x), (x, 0, 1)).transform(x, 1/x).evalf(quad="osc")
 Out[1]: 0.504067061906928
 </source>
