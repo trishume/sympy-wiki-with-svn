@@ -1,0 +1,7 @@
+I live in Gothenburg, Sweden, where I am an undergraduate student of engineering physics at Chalmers Univ. Tech.
+
+I am interested in the intersection between mathematics and computation at the foundational level. But practically speaking, I work on SymPy because I can use it to do basic calculus more quickly and reliably than by hand (and because it is fun, of course). I also use Mathematica (for anything SymPy cannot yet do), but I find its licensing unacceptable, and Python is a more convenient language to work in generally.
+
+Before joining the SymPy project in mid-2007, I had been programming in Python for about five years. I have written a fair amount of mathematical code in the past, and even made stabs at implementing a CAS on my own (which however never resulted in anything advanced). When I found out about SymPy, it seemed like a natural environment to continue working in. I think keeping all code pure Python is essential, as it ensures that the software runs anywhere without problems (well, almost) and that every part of the source is easy to hack on.
+
+The parts of SymPy which I am most interested in are symbolic summation/integration, comprehensive support for special functions, and high-precision numerical calculations. I am working on implementing the latter via [[mpmath]]. I am also interested in making SymPy faster, and in fixing other fundamental problems currently present in SymPy, and therefore try to assist [[Pearu Peterson|Pearu]] with the [[SymPyCore]] project.
