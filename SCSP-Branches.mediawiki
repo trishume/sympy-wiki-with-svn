@@ -1,0 +1,7 @@
+''Branches related to the Assumption System for the [[Supercharging_sympy | SCSP]] project (SuperCharging SymPy)''
+
+* http://github.com/rlamy/sympy/commits/use-new-assump2
+* http://github.com/rlamy/sympy/commits/new-assump
+* http://github.com/certik/sympy/commits/assum
+* http://github.com/vks/sympy/tree/new_assump
+* http://github.com/vks/sympy/tree/local_assump
