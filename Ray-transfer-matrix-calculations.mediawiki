@@ -1,0 +1,55 @@
+This example expects basic knowledge of [http://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis|the ray transfer matrix concept].
+
+First we define the transfer matrix form for free space of length ''s'':
+
+ def FreeSpaceABCD(s):
+ 	return Matrix([[1,s],[0,1]])
+
+... and for a lens of with focal length ''f'' (''f'' positive for convex lens):
+
+ def LensABCD(f):
+ 	return Matrix([[1,0],[-1/f,1]])
+
+Suppose that we want to focus a source to its image with two lenses. As both focal lengths are given, this is a nonlinear algebraic problem of two equations with three variables (s_1, s_2 and s_3). 
+
+ f1,f2=symbols(["f1","f2"])
+ L1=LensABCD(f1)
+ L2=LensABCD(f2)
+ s1,s2,s3=symbols(["s1", "s2", "s3"])
+ S1=FreeSpaceABCD(s1)
+ S2=FreeSpaceABCD(s2)
+ S3=FreeSpaceABCD(s3)
+ M=(S3*L2*S2*L1*S1).applyfunc(simplify)
+
+=== First equation ===
+
+To make the system imaging, we need the "B" element of M to be zero. This constitutes the first equation, which allows us to express s_3 as a function of s_1 and s_2:
+
+ s3_by_s12 = solve(Eq(M[1],0), s3)[0]
+
+Now we can eliminate s3 from the transfer matrix:
+
+ M2=M.subs(s3, s3_by_s12).applyfunc(simplify)  
+ assert M2[1]==0
+
+=== Second equation ===
+
+The zoom is given, too. This gives us the value of the "A" element, for example A := -1/10:
+
+ s1_by_s2 = solve(Eq(1/M2[0],-10),s1)[0]
+ s3_by_s2 = simplify(s3_by_s12.subs(s1, s1_by_s2))
+ M3=M2.subs(s1,s1_by_s2).applyfunc(simplify)
+
+Now both s_1 and s_3 are expressed as functions of s_2 (the spacing of the two lenses).
+
+=== Conclusion ===
+
+Symbolic manipulation with the matrix saved us a lot of symbolic calculations. 
+
+We may test the Liouville theorem for the imaging system now:
+
+ assert  M3[0]*M3[3] == 1, "Error: Liouville theorem not held!"
+
+Optionally we can calculate the constraints for example presented by the limited radii of lenses.
+
+**TODO** Plot the functions here!
