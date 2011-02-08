@@ -1,0 +1,592 @@
+= Introduction =
+
+Geometric algebra is a real Clifford algebra over a real vector space of signature <math>(p,q)</math> presented in a form that is most suitable for physical applications.  The main references for geometric algebra are '''Clifford Algebra to Geometric Calculus''' by Hestenes and Sobczyk and '''Geometric Algebra for Physicists''' by Doran and Lasenby.  The Hestenes's book is extremely dense so that the best introduction is the book by Doran and Lasenby.  The main websites for geometric algebra are Hestenes[http://www.mrao.cam.ac.uk/~clifford/] and the Cambridge [http://modelingnts.la.asu.edu/] websites.  On the Cambridge website is the introductory paper "Imaginary Numbers are Not Real" which is a quick introduction to the subject.
+
+== Axioms ==
+ 
+The basis of geometric algebra is to start with the vector space <math>V(p,q)</math> of signature <math>(p,q)</math> and dimension <math>n = p+q</math> over the real numbers, <math>R</math>.  Then for any vectors <math>x,y,z \in V(p,q)</math> there exists a geometric product such that:
+
+          <math>{\displaystyle x(yz) = (xy)z}</math>
+
+          <math>{\displaystyle x(y+z) = xy+xz}</math>
+
+          <math>{\displaystyle (x+y)z = xz+xy}</math>
+
+          <math>xx \in R</math>
+
+== Inner and Outer Products ==
+
+Next the inner and outer products are defined in terms of the geometric product. The inner product is:
+
+          <math>x\cdot y = (xy+yx)/2</math>
+
+and the outer product is:
+
+          <math>x\wedge y = (xy-yx)/2</math>
+
+The outer product for two vectors is generalized to the outer product for <math>r</math> vectors by:
+
+          <math>x_{1}\wedge\cdots\wedge x_{r}= \frac{1}{r!}\sum_{i_{1},\dots,i_{r}}\epsilon_{1,\dots,r}^{i_{1},\dots,i_{r}}x_{i_{1}}\dots x_{i_{r}}</math>
+
+where <math>\epsilon_{1,\dots,r}^{i_{1},\dots,i_{r}}</math> is the Levi-Civita permutation symbol.  The outer product of <math>r</math> vectors is called an <math>r</math>-blade.  One interpetation of an <math>r</math>-blade that a 2-blade is an oriented area and an <math>r</math>-blade is a oriented 
+<math>r</math>-dimensional volume.  The outer product is associative and a blade is antisymmetric under the exchange of two adjacent vectors.  Any linear combination of <math>r</math>-blades is called an <math>r</math>-grade or grade-<math>r</math> multivector.  A real scalar is a grade-0 multivector. A general mulitvector is the linear combination of grade-<math>r</math> multivectors where in a 
+<math>n</math>-dimensional vector space <math>r</math> can take on the value from 0 to <math>n</math>.
+
+==Reverse==
+If a multivector is the geometric product of <math>r</math> vectors:
+          <math>
+A = a_{1}a_{2}\dots a_{r}
+</math>
+then the reverse of <math>A</math> is:
+          <math>
+A^{\dagger} = a_{r}a_{r-1}\dots a_{1}
+</math>
+The basic properties of the reverse are:
+          <math>
+\left ( A+B \right )^{\dagger}= A^{\dagger}+B^{\dagger}
+</math>
+and:
+          <math>
+\left ( AB \right )^{\dagger}= B^{\dagger}A^{\dagger}
+</math>
+There will be more on the reverse when the blade representation of a
+multivector is described.
+
+== Applications ==
+===Reflections===
+If <math>a</math> and <math>v</math> are any two vectors in the geometric algebra and <math>a^{2}\ne 0</math> then 
+<math>a^{-1} = \frac{a}{a^{2}}</math>.  If <math>\left | a^{2}\right | = 1</math> then <math>a^{-1} = \pm a</math>.  
+The reflection of <math>v</math> about <math>a</math> is given by:
+          <math>
+{\displaystyle v_{reflection} = ava^{-1}}
+</math>
+If a series of reflections are described by the vectors <math>a_{1},a_{2},\dots a_{r}</math> the effect of all the reflections
+on a vector <math>v</math> is:
+          <math>
+{\displaystyle v_{reflection} = a_{r}\dots a_{2}a_{1}ava_{1}^{-1}a_{2}^{-1}\dots a_{r}^{-1}}
+</math>
+
+===Rotations===
+One on the major applications of geometric algebra is the rotation of various types of geometric objects. If <math>B</math> is a 2-blade in an 
+<math>n</math>-dimensional space and we normalize <math>B</math> by:
+
+          <math>\hat{B} =\frac{B}{\sqrt{\left |B^{2}\right |}}</math>
+
+so that
+
+          <math>B = \alpha\hat{B}</math>
+
+then the rotation of the general vector <math>x</math>'s component in the plane defined by <math>\hat{B}</math> through the angle <math>\alpha</math> is given by 
+
+          <math>x_{rotation} = e^{\frac{\alpha\hat{B}}{2}}xe^{-\frac{\alpha\hat{B}}{2}}</math>
+
+In a euclidian space <math>\hat{B}^{2} = -1</math>.  For spaces of mixed signature we can have
+
+          <math>e^{\frac{\alpha\hat{B}}{2}} = \left \{
+\begin{array}{cc}
+\hat{B}^{2} = -1: & \cos\left ( \frac{\alpha}{2}\right )+\sin\left ( \frac{\alpha}{2}\right )\hat{B} \\
+\hat{B}^{2} = 0:  & 1+\frac{\alpha}{2}\hat{B} \\
+\hat{B}^{2} = 1: & \cosh\left ( \frac{\alpha}{2}\right )+\sinh\left ( \frac{\alpha}{2}\right )\hat{B}
+\end{array} \right \}</math>
+If we have a series of rotations:
+          <math>
+R_{i} = e^{\frac{\alpha_{i}\hat{B}_{i}}{2}}: 1 \le i \le r
+</math>
+then the total rotation is given by (note that the reverse of a 2-blade is minus the blade so that 
+<math>\hat{B}^{\dagger} = -\hat{B}</math>):
+          <math>
+x_{rotation} = R_{r}\dots R_{1}xR_{1}^{\dagger}\dots R_{r}^{\dagger}
+</math>
+Geometric algebra makes it simple to combine multiple reflections and rotations.
+
+===Dirac Spinors===
+In the case of the vector space being <math>\displaystyle V(1,3)</math>, spacetime, the geometric algebra representation make representing Lorentz transformations trivial.  Let the basis vectors of spacetime be <math>\displaystyle \gamma_{0}</math>, <math>\displaystyle \gamma_{1}</math>, <math>\displaystyle \gamma_{2}</math>, and <math>\displaystyle \gamma_{3}</math> and the metric:
+          <math>
+g = \left [  \begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & -1
+\end{array}
+\right ]
+</math>
+the <math>\displaystyle\gamma_{\mu}</math>'s are orthogonal for our choice of <math>g</math> and we have:
+          <math>
+{\displaystyle \gamma_{\mu}\gamma_{\nu}+\gamma_{\nu}\gamma_{\mu} = 2g_{\mu\nu}}
+</math>
+which are the anticommutation relations for the Dirac matrices.  Any even multivector of
+the geometric algebra we have defined is a Dirac spinor. That is to say space time spinors
+are of the form (see section on "Outer Multiplication of Blades" for explanation of <math>\left\langle \right\rangle_{i}</math> operator):
+          <math>
+\psi = \left\langle \psi \right\rangle_{0}+\left\langle \psi \right\rangle_{2}+\left\langle \psi \right\rangle_{4}
+</math>
+Another representation for <math>{\displaystyle\psi}</math> is:
+          <math>
+\psi = R\left ( \alpha+\beta I\right ) = R\left ( \sqrt{\rho}\cos\left ( \frac{\mu}{2}\right )+
+ \sqrt{\rho}\sin\left ( \frac{\mu}{2}\right )  I\right) = \sqrt{\rho}Re^{\frac{\mu I}{2}}
+</math>
+where <math>R</math> is a rotor <math>\left ( RR^{\dagger} = 1\right )</math> and <math>\alpha</math> and <math>\beta</math>
+are scalars defining the amplitude of the spinor 
+<math>\left ( \rho = \alpha^{2}+\beta^{2}\mbox{, where }\psi\psi^{\dagger} = \rho \right )</math> and <math>\displaystyle I</math> is the pseudo-scalar 
+(note that for spacetime <math>\displaystyle I^{2}=-1</math>).  Additionally in this geometric algebra a general Lorentz transformation can be represented and a product of rotations (the product of a spatial rotation and a spacetime boost) and reflections.
+
+= Module =
+
+== Accessing ==
+The geometric algebra module is accessed via <tt>import sympy.galgebra.GAsympy</tt> or <tt>from sympy.galgebra.GAsympy import *</tt>. In the following examples we assume that all start with the code:
+
+<source lang="python">
+from sympy.galgebra.GAsympy import *
+from sympy import *
+set_main(sys.modules[__name__])
+</source>
+
+The "set_main" allows the geometric algebra module to broadcast sympy and multivector symbols to the users program.  In the module there is the function <tt>make_symbols</tt> which if executed in a python program as follows:
+
+<source lang="python">
+make_symbols('s c Binv M S C alpha')
+</source>
+
+means that the sympy symbols <tt>s, c, Binv, M, S, C,</tt> and <tt>alpha</tt> are available to the program.  In using <tt>make_symbols</tt> the program variable and the text name of the symbol are always the same.  If you wish the program variable name and the output name of the symbol to be different you need to use the standard sympy function for symbol instantciation.  In addition to 
+<tt>make_symbols</tt> the multivector class setup function, <tt>MV.setup()</tt>, broadcasts various vector and scalar symbols to the users
+program so that they can be accessed by the users program if required.
+== Initializing the Multivector (MV) Class ==
+The multivector class is initialize by the static function <tt>setup()</tt>.  The two structures that define the <tt>MV</tt> (multivector) class are the symbolic basis vectors and the 
+symbolic pseudometric.  The symbolic basis vectors are input as a string with the symbol
+name separated by spaces.  For example if we are calculating the geometric algebra of a system with three
+vectors that we wish to denote as <tt>a0</tt>, <tt>a1</tt>, and <tt>a2</tt> we would define the string variable:
+<source lang="python">
+basis = 'a0 a1 a2'
+</source>
+that would be input into the <tt>setup function</tt>.  The next step would be to define the symbolic 
+pseudometric for the geometric algebra of the basis we have defined. The default pseudometric is the most general
+case and is the matrix of the following symbols:
+
+ <math>
+g = \left [
+\begin{array}{ccc}
+	a0**2 & (a0.a1)  & (a0.a2) \\ 
+	(a0.a1) & a1**2  & (a1.a2) \\
+	(a0.a2) & (a1.a2) & a2**2 \\
+\end{array}
+\right ]
+</math>
+where each of the <math>g_{ij}</math> is a symbol representing all of the dot products of the basis vectors. Note that the symbols are named so that <math>g_{ij} = g_{ji}</math> since for the symbol function<math>(a0.a1) \ne (a1.a0)</math>.
+
+Note that the strings shown are only used when the values of <math>g_{ij}</math> are output (printed).  
+In the <tt>GAsympy</tt> module  the <math>g_{ij}</math> symbols are stored in a static member list of the multivector class as the double list  <tt>MV.metric</tt> (<math>g_{ij} = </math> <tt>MV.metric[i][j]</tt>).
+
+The default definition of <math>g</math> can be overwritten by specifying a string that will define <math>g</math> . As an example 
+consider a symbolic representation for conformal geometry. Define for a basis    
+<source lang="python">
+basis = 'a0 a1 a2 n nbar'
+</source>
+and for a metric
+<source lang="python">
+metric = '# # # 0 0, # # # 0 0, # # # 0 0, 0 0 0 0 2, 0 0 0 2 0'
+</source>
+which is processed by
+<source lang="python">
+MV.setup(basis,metric)
+</source>
+to yield (stored in data structure)
+
+ <math>
+g = \left [
+\begin{array}{ccccc}
+	a0**2 & (a0.a1) & (a0.a2) & 0 & 0\\ 
+	(a0.a1) & a1**2 & (a1.a2) & 0 & 0\\
+	(a0.a2) & (a1.a2) & a2**2 & 0 & 0 \\
+	0 & 0 & 0 & 0 & 2 \\
+	0 & 0 & 0 & 2 & 0
+\end{array}
+\right ]
+</math>
+
+Here we have specified that <tt>n</tt> and <tt>nbar</tt> are orthogonal to all the <tt>a</tt>'s,
+<tt>n**2 = nbar**2 = 0</tt>, and <tt>(n.nbar)= 2</tt>. Using <tt>#</tt> in the metric
+definition string just tells the program to use the default symbol for that value.
+
+At the time <tt>setup</tt> is executed the multivector representations of the basis local to the program are instantciated.  For our
+first example that means that the symbolic multivectors named <tt>a0</tt>, <tt>a1</tt>, and <tt>a2</tt> are
+created and broadcast to the programmer for future calculations.
+
+In addition to the basis vectors the <math>g_{ij}</math> are also made available to the programmer with the following
+convention. If <tt>a0</tt> and <tt>a1</tt> are basis vectors, then their dot products are denoted by 
+<tt>a0sq</tt>, <tt>a2sq</tt>, and <tt>a0dota1</tt> for use as python program variables. If you print 
+<tt>a0sq</tt> the output would be <tt>a0**2</tt> and the output for <tt>a0dota1</tt> would be <tt>(a0.a1)</tt>.  If the default values are overridden the new values are output by print.  For example if <math>g_{00} = 0</math> then  <tt>print a0sq</tt> would output 0.
+=== Multivector Representation ===
+In our representation of the symbolic geometric algebra we assume that all multivectors of interest to us can be obtained from the
+symbolic bases vectors we have input, via the different operations available to geometric algebra. The first
+problem we have is representing the general multivector in terms terms of the basis vectors.  To do this we 
+form the ordered geometric products of the basis vectors and develop an internal representation of these 
+products in terms of python classes.  The ordered geometric products are all multivectors of the form
+<math>a_{i_{1}}a_{i_{2}}\dots a_{i_{r}}</math> where <math>i_{1}<i_{2}<\dots <i_{r}</math> and <math>r \le n</math>. We call these
+multivectors bases and represent them internally with the list of integers 
+<math>\left [ i_{1},i_{2},\dots,i_{r}\right ]</math>. The bases are labeled, for the purpose of output display, with strings
+that are concatenations of the strings representing the basis vectors.  So that in our example 
+<tt>[1,2]</tt> would be labeled with the string <tt>'a1a2'</tt> and represents the geometric product 
+<tt>a1*a2</tt>. Thus the list <tt>[0,1,2]</tt> represents <tt>a0*a1*a2</tt>.  For our example the complete set of bases and labels would be (The empty list, <tt>[]</tt>, represents the base for the scalars):
+
+<source lang="python">
+MV.basislabel = ['1', ['a0', 'a1', 'a2'], ['a0a1', 'a0a2', 'a1a2'],['a0a1a2']]
+MV.basis = [[], [[0], [1], [2]], [[0, 1], [0, 2], [1, 2]],[[0, 1, 2]]]
+</source>
+
+Since there are <math>2^{n}</math> bases for <math>n</math> basis vectors and the number of bases with equal list lengths is the same as for the 
+grade decomposition of a dimension <math>n</math> geometric algebra we will call the collections of bases of equal length
+'''psuedogrades.'''
+
+The multivector is represented by associating a scalar amplitude with each symbolic base.  Addition and scalar multiplication are defined the same
+as they are in a simple vector space with the components of the multivector being the scalar amplitude of each base. Multivector addition, subtraction, and scalar multiplication are accomplished via the operators +, -, and *.
+
+=== Geometric Multiplication of Multivectors ===
+
+The critical point in forming the geometric product of two multivectors is that the geometric product of any number of symbolic basis vectors can be
+reduced to a multivector representation as described in the previous section.  This is due to application of the axioms of geometric algebra and the 
+fact that the inner product of all the symbolic basis vectors is defined by the metric.  We can alway reverse the geometric product of two basis vectors (or any two vectors) by applying (remember the inner product of two vectors is communicative):
+
+          <math>
+a_{j}a_{i} = 2(a_{i}\cdot a_{j})-a_{i}a_{j}
+</math>
+
+Thus if we have the geometric product of several bases with repeated factors we can repeatedly apply this formula to make the repeated factors sequential to one another and then use the first and fourth axioms to convert the adjacent repeated factors to scalars thus reducing the number of bases in the product.  Using this procedure we can generate a geometric product multiplication table for the multivector bases.  For our example with the basis vectors <math>a_{0}</math>, <math>a_{1}</math>, and <math>a_{2}</math> the multiplication table is: 
+
+<pre>
+(1)(1) = 1
+(1)(a0) = a0
+(1)(a1) = a1
+(1)(a2) = a2
+(1)(a0a1) = a0a1
+(1)(a0a2) = a0a2
+(1)(a1a2) = a1a2
+(1)(a0a1a2) = a0a1a2
+
+(a0)(1) = a0
+(a0)(a0) = {a0**2}1
+(a0)(a1) = a0a1
+(a0)(a2) = a0a2
+(a0)(a0a1) = {a0**2}a1
+(a0)(a0a2) = {a0**2}a2
+(a0)(a1a2) = a0a1a2
+(a0)(a0a1a2) = {a0**2}a1a2
+
+(a1)(1) = a1
+(a1)(a0) = {2*(a0.a1)}1-a0a1
+(a1)(a1) = {a1**2}1
+(a1)(a2) = a1a2
+(a1)(a0a1) = {-a1**2}a0+{2*(a0.a1)}a1
+(a1)(a0a2) = {2*(a0.a1)}a2-a0a1a2
+(a1)(a1a2) = {a1**2}a2
+(a1)(a0a1a2) = {-a1**2}a0a2+{2*(a0.a1)}a1a2
+
+(a2)(1) = a2
+(a2)(a0) = {2*(a0.a2)}1-a0a2
+(a2)(a1) = {2*(a1.a2)}1-a1a2
+(a2)(a2) = {a2**2}1
+(a2)(a0a1) = {-2*(a1.a2)}a0+{2*(a0.a2)}a1+a0a1a2
+(a2)(a0a2) = {-a2**2}a0+{2*(a0.a2)}a2
+(a2)(a1a2) = {-a2**2}a1+{2*(a1.a2)}a2
+(a2)(a0a1a2) = {a2**2}a0a1+{-2*(a1.a2)}a0a2+{2*(a0.a2)}a1a2
+
+(a0a1)(1) = a0a1
+(a0a1)(a0) = {2*(a0.a1)}a0+{-a0**2}a1
+(a0a1)(a1) = {a1**2}a0
+(a0a1)(a2) = a0a1a2
+(a0a1)(a0a1) = {-a0**2*a1**2}1+{2*(a0.a1)}a0a1
+(a0a1)(a0a2) = {2*(a0.a1)}a0a2+{-a0**2}a1a2
+(a0a1)(a1a2) = {a1**2}a0a2
+(a0a1)(a0a1a2) = {-a0**2*a1**2}a2+{2*(a0.a1)}a0a1a2
+
+(a0a2)(1) = a0a2
+(a0a2)(a0) = {2*(a0.a2)}a0+{-a0**2}a2
+(a0a2)(a1) = {2*(a1.a2)}a0-a0a1a2
+(a0a2)(a2) = {a2**2}a0
+(a0a2)(a0a1) = {-2*a0**2*(a1.a2)}1+{2*(a0.a2)}a0a1+{a0**2}a1a2
+(a0a2)(a0a2) = {-a0**2*a2**2}1+{2*(a0.a2)}a0a2
+(a0a2)(a1a2) = {-a2**2}a0a1+{2*(a1.a2)}a0a2
+(a0a2)(a0a1a2) = {a0**2*a2**2}a1+{-2*a0**2*(a1.a2)}a2+{2*(a0.a2)}a0a1a2
+
+(a1a2)(1) = a1a2
+(a1a2)(a0) = {2*(a0.a2)}a1+{-2*(a0.a1)}a2+a0a1a2
+(a1a2)(a1) = {2*(a1.a2)}a1+{-a1**2}a2
+(a1a2)(a2) = {a2**2}a1
+(a1a2)(a0a1) = {2*a1**2*(a0.a2)-4*(a0.a1)*(a1.a2)}1+{2*(a1.a2)}a0a1+{-a1**2}a0a2
+              +{2*(a0.a1)}a1a2
+(a1a2)(a0a2) = {-2*a2**2*(a0.a1)}1+{a2**2}a0a1+{2*(a0.a2)}a1a2
+(a1a2)(a1a2) = {-a1**2*a2**2}1+{2*(a1.a2)}a1a2
+(a1a2)(a0a1a2) = {-a1**2*a2**2}a0+{2*a2**2*(a0.a1)}a1+{2*a1**2*(a0.a2)-4*(a0.a1)*(a1.a2)}a2+{2*(a1.a2)}a0a1a2
+
+(a0a1a2)(1) = a0a1a2
+(a0a1a2)(a0) = {2*(a0.a2)}a0a1+{-2*(a0.a1)}a0a2+{a0**2}a1a2
+(a0a1a2)(a1) = {2*(a1.a2)}a0a1+{-a1**2}a0a2
+(a0a1a2)(a2) = {a2**2}a0a1
+(a0a1a2)(a0a1) = {2*a1**2*(a0.a2)-4*(a0.a1)*(a1.a2)}a0+{2*a0**2*(a1.a2)}a1
+                +{-a0**2*a1**2}a2+{2*(a0.a1)}a0a1a2
+(a0a1a2)(a0a2) = {-2*a2**2*(a0.a1)}a0+{a0**2*a2**2}a1+{2*(a0.a2)}a0a1a2
+(a0a1a2)(a1a2) = {-a1**2*a2**2}a0+{2*(a1.a2)}a0a1a2
+(a0a1a2)(a0a1a2) = {-a0**2*a1**2*a2**2}1+{2*a2**2*(a0.a1)}a0a1+{2*a1**2*(a0.a2)-4*(a0.a1)*(a1.a2)}a0a2+{2*a0**2*(a1.a2)}a1a2
+</pre>
+
+The multiplication table is calculated by <tt>setup</tt>, saved in a data structure, and used to calculate the geometric product of arbitrary
+multivectors.  The geometric product of multivectors is accomplished with the * operator.
+
+===Outer Multiplication of Blades===
+For many geometric algebra operations we need a blade representation of the multivector.  To get this we first need to represent all possible blades formed from the basis vectors in terms of the total bases.  This is accomplished by using the following formula for the outer product of a grade-<math>r</math> blade and a vector:
+
+          <math>
+A_{r}\wedge b = \frac{1}{2}\left ( A_{r}b  -\left ( -1  \right )^{r}bA_{r} \right )
+</math>
+
+For our example the result of repeated applying this equation to the basis vectors is
+
+<pre>
+1 = 1
+a0 = a0
+a1 = a1
+a2 = a2
+a0^a1 = {-(a0.a1)}1+a0a1
+a0^a2 = {-(a0.a2)}1+a0a2
+a1^a2 = {-(a1.a2)}1+a1a2
+a0^a1^a2 = {-(a1.a2)}a0+{(a0.a2)}a1+{-(a0.a1)}a2+a0a1a2
+</pre>
+
+Note that this is a triagonal system of equations which can be inverted with simple back substitution to get
+
+<pre>
+1 = 1
+a0 = a0
+a1 = a1
+a2 = a2
+a0a1 = {(a0.a1)}1+a0^a1
+a0a2 = {(a0.a2)}1+a0^a2
+a1a2 = {(a1.a2)}1+a1^a2
+a0a1a2 = {(a1.a2)}a0+{-(a0.a2)}a1+{(a0.a1)}a2+a0^a1^a2
+</pre>
+
+Thus we can simply go from a base representation of any multivector to a blade representation and back again.
+
+In the blade representation we write the general multivector as:
+
+         <math>
+A = \sum_{r=0}^{n}\left \langle A \right \rangle_{r}
+</math>
+
+where <math>\left\langle  A \right\rangle_{r}</math> is the sum of all grade-<math>r</math> blades in the multivector. 
+<math>\left\langle  A \right\rangle_{0}</math> is denoted <math>\left\langle  A \right\rangle</math> and is the scalar
+part of the multivector.  <math>\left\langle \right\rangle_{r}</math> is called the grade projection operator a returns
+the <math>r</math>-grade part of the multivector <tt>A</tt> with the code:
+<source lang="python">
+Ar = A.project(r)
+</source>
+In addition to <tt>project</tt> other functions specific to the blade representation of the multivector are <tt>odd</tt>,
+<tt>even</tt> and <tt>(i,j)</tt>:
+<source lang="python">
+Aodd = A.odd()
+</source>
+returns the sum of all the odd grades of the multivector while:
+<source lang="python">
+Aeven = A.even()
+</source>
+returns the sum of all the even grades of the multivector:
+<source lang="python">
+aij = A(i,j)
+</source>
+returns the scalar coefficent of the j<math>^{th}</math> blade of the i<math>^{th}</math> grade in the blade representation. Within a grade the blade order is the same as the base order.
+
+The final function made possible by the blade representation of a general multivector is the <tt>rev()</tt> function for the multivector. 
+For a general multivector <math>A</math>:
+          <math>
+A^{\dagger} = \sum_{i=0}^{n}\left\langle A \right\rangle_{i}^{\dagger}
+</math>
+but from the properties of blades we have:
+          <math>
+\left\langle A \right\rangle_{i}^{\dagger} = \left ( -1  \right )^{\frac{i(i-1)}{2}}\left\langle A \right\rangle_{i}
+</math>
+In the module we use:
+<source lang="python">
+Arev = A.rev()
+</source>
+Generated and exported by <tt>setup</tt> is the blade <tt>I</tt> designated as the pseudo-scalar. For a system with <math>n</math> basis vectors <math>a_{r}</math> the pseudo-scalar is:
+          <math>
+I = a_{1}\wedge a_{2}\wedge\dots\wedge a_{n}
+</math>
+
+===Inner and Outer Products of General Multivectors===
+If <math>A_{r}</math> and <math>B_{s}</math> are pure <math>r</math> and <math>s</math> grade multivectors the geometric product of the
+two can be written
+
+        <math>
+A_{r}B_{s} = \left\langle A_{r}B_{s} \right\rangle_{\left | r-s\right |}+
+             \left\langle A_{r}B_{s} \right\rangle_{\left | r-s\right |+2}+\cdots +\left\langle A_{r}B_{s} \right\rangle_{r+s}
+</math>
+
+From this expression we can obtain expressions for the inner and outer products of <math>A_{r}</math> and <math>B_{s}</math> that are completely consistent with the definitions for vectors already given.  These expressions are:
+
+        <math>
+A_{r}\cdot B_{s} = \left\langle A_{r}B_{s} \right\rangle_{\left | r-s\right |}
+</math>
+and
+        <math>
+A_{r}\wedge B_{s} = \left\langle A_{r}B_{s} \right\rangle_{r+s}
+</math>
+so that if <math>A = \sum_{r=0}^{n}A_{r}</math> and <math>B = \sum_{s=0}^{n}B_{s}</math> then:
+        <math>
+A\wedge B = \sum_{r,s}A_{r}\wedge B_{s}
+</math>
+
+        <math>
+A\cdot B = \sum_{r,s}A_{r}\cdot B_{s}
+</math>
+these operators are implemented for multivectors overloading the <tt>|</tt> operator for the inner product:
+<source lang="python">
+A = B|C
+</source>
+and the <tt>^</tt> operator for the outer product:
+<source lang="python">
+A = B^C
+</source>
+Note that it is necessary to use parenthesis when using the inner and/or outer products in complex expression since the operator order
+precedence required by python is not the same as used in geometric algebra.
+
+== Creating and Using Multivectors ==
+Start the python program with the code:
+<source lang="python">
+from sympy.galgebra.GAsympy import *
+from sympy import *
+set_main(sys.modules[__name__])
+</source>
+
+and setup the the multivector class with the desired basis vectors.  In this example let them be <tt>a1, a2,</tt> and <tt>a3</tt>.
+<source lang="python">
+MV.setup('a1 a2 a3')
+</source>
+and we are using the default for the metric.  Now we have two ways to instanciate multivectors. We can us the <tt>MV()</tt> operator
+(use pydoc on GAsympy.py to generate the input documentation for this operator) or we can use the fact that <tt>MV.setup('a1 a2 a3')</tt>
+makes available to us the python vector variables <tt>a1, a2,</tt> and <tt>a3</tt>.  We can then use these vectors and the geometric
+algebra operations to construct the multivectors we require. A little ipython session demonstrating the generation and display of multivectors is shown below (including some statements that were unecessary):
+<pre>
+In [1]: from sympy.galgebra.GAsympy import *
+In [2]: from sympy import *
+In [3]: set_main(sys.modules[__name__])
+In [4]: make_symbols('alpha1 alpha2 alpha3')
+Out[4]: [alpha1, alpha2, alpha3]
+In [5]: MV.setup('a1 a2 a3')
+Out[5]: 'Setup of a1 a2 a3 complete!'
+In [6]: x = a1*a2-(a1^a2)
+In [7]: x
+Out[7]: <sympy.galgebra.GAsympy.MV instance at 0x1179c68>
+In [8]: print x
+{(a1.a2)}1
+In [9]: x = a1*a2+a2*a3+a3*a1
+In [10]: print x
+{(a1.a2) + (a1.a3) + (a2.a3)}1+a1^a2-a1^a3+a2^a3
+In [11]: A = a1*a2*a3
+In [12]: print A|A
+{-(a1**2)*(a2**2)*(a3**2) - 4*(a1.a2)*(a1.a3)*(a2.a3) + 2*(a1**2)*(a2.a3)**2 + 2*(a2**2)*(a1.a3)**2 + 2*(a3**2)*(a1.a2)**2}1
++{2*(a1.a2)*(a3**2)}a1^a2+{-4*(a1.a2)*(a2.a3) + 2*(a1.a3)*(a2**2)}a1^a3+{2*(a1**2)*(a2.a3)}a2^a3
+In [13]: A = a1^a2^a3
+In [14]: print A|A
+{-(a1**2)*(a2**2)*(a3**2) - 2*(a1.a2)*(a1.a3)*(a2.a3) + (a1**2)*(a2.a3)**2 + (a2**2)*(a1.a3)**2 + (a3**2)*(a1.a2)**2}1
+In [15]: A = a1*a2*a3
+In [16]: print A
+{(a2.a3)}a1+{-(a1.a3)}a2+{(a1.a2)}a3+a1^a2^a3
+In [17]: print A.rev()
+{(a2.a3)}a1+{-(a1.a3)}a2+{(a1.a2)}a3-a1^a2^a3
+In [18]: print A.even()
+0
+In [19]: print A.odd()
+{(a2.a3)}a1+{-(a1.a3)}a2+{(a1.a2)}a3+a1^a2^a3
+</pre>
+The following code shows that the reflection formula works:
+<pre>
+In [1]: from sympy.galgebra.GAsympy import *
+In [2]: from sympy import *
+In [3]: set_main(sys.modules[__name__])
+In [4]: MV.setup('a1 a2 a3')
+Out[4]: 'Setup of a1 a2 a3 complete!'
+In [5]: a1inv = a1/(a1|a1)()
+In [6]: print a1inv
+{1/(a1**2)}a1
+In [7]: print a1*a1inv
+1
+In [8]: print a1*a2*a1inv
+{2*(a1.a2)/(a1**2)}a1-a2
+</pre>
+An important thing to note is statement [5].  Note that <tt>(a1|a1)</tt> is not a sympy symbolic scalar, but a grade-0 multivector.  In order to obtain the scalar amplitude of the grade-0 multivector we must us <tt>(a1|a1)()</tt> since the default inputs of the <tt>(i,j)</tt> operator are <tt>(0,0)</tt> so that if <tt>A</tt> is any multivector then <tt>A()</tt> returns the amplitude of
+the grade-0 component. Statement [7] shows that <tt>a1inv</tt> is the inverse of <tt>a1</tt>. Finally to understand statement [8] we note
+that (<math>a_{2}^{\parallel} =</math> the component of <math>a_{2}</math> parallel to <math>a_{1}</math>)
+          <math>
+a_{2}^{\parallel} = \frac{a_{1}\cdot a_{2}}{a_{1}\cdot a_{1}}a_{1} 
+</math>
+and 
+          <math>
+a_{2}^{\perp} = a_{2}- a_{2}^{\parallel}
+</math>
+and
+          <math>
+a_{2}^{reflected} = a_{2}^{\parallel} - a_{2}^{\perp} = 2a_{2}^{\parallel}-a_{2}
+</math>
+which is statement [8].  The following code show how to generate a reciprocal frame from the
+basis vectors.
+<pre>
+In [1]: from sympy.galgebra.GAsympy import *
+In [2]: from sympy import *
+In [3]: set_main(sys.modules[__name__])
+In [4]: metric = '1 # #,'+ \
+   ...:                          '# 1 #,'+ \
+   ...:                          '# # 1,'
+In [5]: MV.setup('e1 e2 e3',metric)
+Out[5]: 'Setup of e1 e2 e3 complete!'
+In [6]: E = e1^e2^e3
+In [7]: Esq = (E*E)()
+In [8]: Esq_inv = 1/Esq
+In [9]: E1 = (e2^e3)*E
+In [10]: E2 = (-1)*(e1^e3)*E
+In [11]: E3 = (e1^e2)*E
+In [12]: w = (E1|e2)
+In [13]: w.collect(MV.g)
+In [14]: w = w().expand()
+In [15]: w
+Out[15]: 0
+In [16]: w = (E1|e3)
+In [17]: w.collect(MV.g)
+In [18]: w = w().expand()
+In [19]: w
+Out[19]: 0
+In [20]: w = (E2|e1)
+In [21]: w.collect(MV.g)
+In [22]: w = w().expand()
+In [23]: w
+Out[23]: 0
+In [24]: w = (E2|e3)
+In [25]: w.collect(MV.g)
+In [26]: w = w().expand()
+In [27]: w
+Out[27]: 0
+In [28]: w = (E3|e1)
+In [29]: w.collect(MV.g)
+In [30]: w = w().expand()
+In [31]: w
+Out[31]: 0
+In [32]: w = (E3|e2)
+In [33]: w.collect(MV.g)
+In [34]: w = w().expand()
+In [35]: w
+Out[35]: 0
+In [36]: w = (E1|e1)
+In [37]: w = w().expand()
+In [38]: Esq = Esq.expand()
+In [39]: w/Esq
+Out[39]: 1
+In [40]: w = (E2|e2)
+In [41]: w = w().expand()
+In [42]: w/Esq
+Out[42]: 1
+In [43]: w = (E3|e3)
+In [44]: w = w().expand()
+In [45]: w/Esq
+Out[45]: 1
+</pre>
+
+[[Category:Modules]]
