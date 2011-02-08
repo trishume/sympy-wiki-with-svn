@@ -1,0 +1,6 @@
+''Tracked issues for the [[Supercharging_sympy | SCSP]] project (SuperCharging SymPy)''
+
+* http://code.google.com/p/sympy/issues/detail?id=1545
+* http://code.google.com/p/sympy/issues/detail?id=1884
+* http://code.google.com/p/sympy/issues/detail?id=1047
+* http://code.google.com/p/sympy/issues/detail?id=1903
