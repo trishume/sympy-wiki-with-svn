@@ -1,0 +1,27 @@
+Projects related to SymPy:
+
+; [[Sage]] - (http://www.sagemath.org/)
+: An open source alternative to Mathematica, Maple, Matlab and Magma (SymPy is included in Sage)
+
+; [[mpmath]] (http://code.google.com/p/mpmath/)
+: a Python library for arbitrary-precision floating-point arithmetic (included in SymPy)
+
+; [[pyglet]] (http://pyglet.org/)
+: a fast cross-platform windowing and multimedia library in pure Python, that we use in SymPy for 2D and 3D stuff
+
+; [[NumPy]] (http://scipy.org/)
+: fast numeric arrays for Python
+
+; [[SciPy]] (http://scipy.org/)
+: open-source software for mathematics, science, and engineering in Python
+
+; [[sympycore]] (http://code.google.com/p/sympycore/)
+: a fork of the sympy-sandbox branch (see [http://code.google.com/p/sympy/wiki/SymPyCore SymPyCore] for more information)
+
+; [[symbide]] (http://code.google.com/p/symbide/)
+: GUI for SymPy in PyGTK
+
+; [[symfe]] (http://code.google.com/p/symfe/)
+: lightweight symbolic finite element calculations in Python
+
+[[Category:Development]]
