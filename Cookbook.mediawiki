@@ -1,0 +1,22 @@
+Some more elaborate SymPy examples and recipes.
+
+==Recipes==
+
+* [[Generating tables of derivatives and integrals]]
+* [[Matrices eigenvalues]]
+* [[Million digits of pi]]
+* [[SciPy2008 examples|future presentation examples]]
+* [[Playing with SymPy design in C]]
+* [[Ray transfer matrix calculations]] - solve problems from geometrical optics easily
+* (add yours)
+
+===Recipes that need review===
+
+* [[EuroSciPy2008 examples]] 
+* [[FEMTEC2009 examples]]
+
+==See also==
+
+* See [[quick examples]] for a quick roundup of common functions.
+
+[[Category:Documentation]]
