@@ -1,0 +1,97 @@
+= ODE and FEM notes =
+
+We show three different problems (case 1, 2 and 3 below) that can be solved analytically and then how to solve them using Runge Kutta and finite element method. This shows that some things are easy in FEM and difficult using Runge-Kutta.
+
+== Typical ODE problem ==
+
+Let's say I want to solve this equation on the interval <math>(0, \pi)</math>:
+
+:<math>\frac{d^2}{d x^2} f(x) + f(x) = 0</math>
+
+= Analytic =
+
+This has the general solution
+
+:<math>f(x) = A sin(x) + B cos(x)</math>
+
+where ''A'' and ''B'' is arbitrary. You need to prescribe some conditions to determine ''A'' and ''B''. Some options:
+
+=== case 1 ===
+
+:<math>f(0) = 0</math>
+:<math>f'(0) = 1</math>
+
+This determines <math>A=1</math> and <math>B=0</math>.
+
+=== case 2 ===
+
+:<math>f(0) = f(\pi) = 0</math>
+
+This determines <math>B=0</math>, but <math>A</math> can still be arbitrary.
+
+=== case 3 ===
+
+:<math>f(0) = 0</math>
+:<math>f'(\pi) = -1</math>
+
+This determines <math>A=1</math> and <math>B=0</math>.
+
+= Runge-Kutta =
+
+== case 1 ==
+
+This initial (boundary) condition is used in the runge-kutta integrator and one then integrates the whole equation on the interval <math>(0, \pi)</math>, the result will be <math>f(x)=sin(x)</math>.
+
+== case 2 ==
+
+I don't know any way how to solve such a problem using runge-kutta. I would just try all possible values for <math>f'(0)</math> and iteratively try to satisfy the second condition at the other end of the interval.
+
+== case 3 ==
+
+I don't know any way how to solve such a problem using runge-kutta. I would just try all possible values for <math>f'(0)</math> and iteratively try to satisfy the second condition at the other end of the interval.
+
+= FEM =
+
+== case 1 ==
+
+One substitutes
+:<math>f(x)=g(x)+x</math>
+and gets
+:<math>g''(x)+g(x)=-x</math>
+with boundary conditions <math>g(x)=0</math> and <math>g'(x)=0</math>, that can be solved using FEM with appropriate test functions.
+
+== case 2 ==
+
+One needs to first rewrite the equation to the weak formulation
+
+:<math>\int_0^\pi -f'(x)v'(x)dx + \int_0^\pi f(x)v(x) dx = - [f'(x) v(x)]^\pi_0</math>
+
+we can even rewrite the right hand side if we want:
+
+:<math>\int_0^\pi -f'(x)v'(x)dx + \int_0^\pi f(x)v(x) dx = - f'(\pi) v(\pi) + f'(0)v(0)</math>
+
+In order to satisfy <math>f(0)=f(\pi)=0</math> we choose such test functions that satisfy this condition, so the right hand side is 0:
+
+:<math>\int_0^\pi -f'(x)v'(x)dx + \int_0^\pi f(x)v(x) dx = 0</math>
+
+and now we choose some basis, assemble the global system of equations:
+
+:<math>Ax=0</math>
+
+and solve it. In this particular case, we get a zero solution numerically, but in principle <math>A sin(x)</math> should be a solution of such a system too.
+
+== case 3 ==
+
+Weak formulation:
+
+:<math>\int_0^\pi -f'(x)v'(x)dx + \int_0^\pi f(x)v(x) dx = v(\pi) + f'(0)v(0)</math>
+
+Again we choose such test functions, to satisfy v(0) = 0, so we endup with:
+
+:<math>\int_0^\pi -f'(x)v'(x)dx + \int_0^\pi f(x)v(x) dx = v(\pi)</math>
+
+we assemble the global system
+
+:<math>Ax=b</math>
+
+where now we have nonzero right hand side and we should get <math>sin(x)</math> as the only solution.
