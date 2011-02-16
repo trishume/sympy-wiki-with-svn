@@ -54,3 +54,15 @@ yes, just push it in, it can be improved later.
 For non-trivial patches it makes sense to wait until the patch has been
 under review for at least 24 hours before pushing, so others have a
 chance to state their objections.
+
+There are basically four things that you need to do before pushing anything in:
+
+1. Make sure all tests pass (if it is part of the main repo; for the webpage, make sure everything looks good and also that the pages are built).  Do this for the merged/rebased version to make sure that that didn't introduce any errors.
+
+2. Make sure that all content has been reviewed (for example, make sure that the person didn't push in a new commit to the branch for review that you didn't notice).
+
+3. Make sure that no one else has any objections to the branch.  Everything is based on consensus, so until one is reached, the branch cannot be pushed in.
+
+4. QA: That all new methods/functions/classes have some doctests
+showing how to use that. And that all new functionality is tested.
+
