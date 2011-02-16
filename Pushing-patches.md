@@ -55,6 +55,8 @@ For non-trivial patches it makes sense to wait until the patch has been
 under review for at least 24 hours before pushing, so others have a
 chance to state their objections.
 
+## Checklist
+
 There are basically four things that you need to do before pushing anything in:
 
 1. Make sure all tests pass (if it is part of the main repo; for the webpage, make sure everything looks good and also that the pages are built).  Do this for the merged/rebased version to make sure that that didn't introduce any errors.
@@ -63,6 +65,5 @@ There are basically four things that you need to do before pushing anything in:
 
 3. Make sure that no one else has any objections to the branch.  Everything is based on consensus, so until one is reached, the branch cannot be pushed in.
 
-4. QA: That all new methods/functions/classes have some doctests
-showing how to use that. And that all new functionality is tested.
+4. And all new functionality should be tested, and all new methods/functions/classes should have some doctests showing how to use them (the `./bin/coverage_doctest.py` script will show you what methods have doctests). 
 
