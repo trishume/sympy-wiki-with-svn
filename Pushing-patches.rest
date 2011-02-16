@@ -27,7 +27,11 @@ update test using "git rebase test master" or "git merge test master"
 (rebase is better for small branches, merge is better for large
 branches).
 
-Once a patch is pushed in to master, it is there.  There is no modifying the history using ``git rebase`` or some similar. The reason is that if you change the history to master, it will screw up the history of everyone who pulls from it.  If you want to change what has been pushed in, you need to do it using additional patches, like with ``git revert``.
+Once a patch is pushed in to master, it is there.  There is no modifying the
+history using ``git rebase`` or some similar. The reason is that if you change
+the history to master, it will screw up the history of everyone who pulls from
+it.  If you want to change what has been pushed in, you need to do it using
+additional patches, like with ``git revert``.
 
 Once you have pushed the test branch in, if test is the same as the
 commit from a pull request at GitHub, or if you merged with master,
