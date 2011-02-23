@@ -1,6 +1,8 @@
-Blabla.
+In order to clarify the discussions about Taylor series and asymptotic expansions, it is necessary to define the relevant concepts as precisely as possible.
 
 # Definitions
+
+Sympy makes a sharp distinction between expressions and functions. In the following, whenever something is defined for a function \(f\), there's an equivalent definition applying to the expression \(f(x)\).
 
 A **formal power series** is an object of the form \(S = \sum_{n=0}^{+\infty} a_n X^n\) where \(X\) is a formal parameter. The set of formal power series over a field \(K\) is noted \(K[[X]]\) and has a ring structure.
 
