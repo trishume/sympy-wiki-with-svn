@@ -30,8 +30,8 @@ Sources of examples for test work-flow
 Types of remarks
 ================
 
-_`The Big-O is not present at point==0`.
---------------------------------------------
+(corrected) _`The Big-O is not present at point==0`.
+-----------------------------------------------------
 
     The Big-O was expected, but there is no one. And also series are not truncated.
     (This type of remark must be distinguished from `The Big-O is not present at point != 0`_ case, where there is not present one because of some reasons.)
@@ -60,8 +60,8 @@ _`The Big-O is not present at point==0`.
     
     But even in this case this collaborate with the next one: `Method "lseries" yield many terms`_.
 
-_`Method "lseries" yield many terms`
--------------------------------------
+(corrected) _`Method "lseries" yield many terms`
+-------------------------------------------------
 
     This type of errors possibly arise because of `The Big-O is not present at point==0`_ error.
     
@@ -82,8 +82,8 @@ _`Method "lseries" yield many terms`
     
     expected: 1
     
-_`Incorrect power in Big-O expression`
---------------------------------------------
+(corrected) _`Incorrect power in Big-O expression`
+---------------------------------------------------
 
     Typical examples are:
 
@@ -113,30 +113,35 @@ _`The Big-O is not present at point != 0`.
     It was discussed.
     It is not implemented because of some reasons: it was deviation from the main issues and there is no understanding what to implement exactly and how.
 
-_`"lseries" with two-variable function`
-----------------------------------------
+(improved) _`"lseries" with two-variable function`
+---------------------------------------------------
     
     Typical examples are:
     
     >>> sin(x+y).series(x, n=3)
     x*cos(y) - x**2*sin(y)/2 + sin(y) + O(x**3)
-    >>> (sin(x+y)).series(x, n=3).series(y, n=3)
-    x + y - x*y**2/2 - y*x**2/2 + O(x**3) + O(y**3)
     
-    Ok, but
+    Ok (was and is now)
+
+    >>> (sin(x+y)).series(x, n=3).series(y, n=3)
+    # was correct: x + y - x*y**2/2 - y*x**2/2 + O(x**3) + O(y**3)
+    # but now:  NotImplementedError: not sure of order of O(x**3) + O(y**3)    
+
+    It is not clear now, is it right or incorrect.
 
     >>> g = (sin(x+y)).series(x, n=3).lseries(y)
     >>> g.next()
-    O(x**3)
-    
-    is incorrect, and
-    
-    >>> # g.next()
-    >>> # StopIteration:
-    
-    rise exception 
+    x
+    >>> g.next()
+    y - y*x**2/2
 
+    It is now became correct.
 
+    >>> g.next()
+    StopIteration:
+
+    It is not clear now, is it right or incorrect.
+    
 _`Sort order of the terms is not canonical`
 ---------------------------------------------
     
@@ -173,8 +178,8 @@ _`Sort order of the terms is not canonical`
     Though more canonical result for series term could be "-(x - 1)*sin(1)"
     
 
-_`Bases functions are not the powers of natural`
-------------------------------------------------
+(ok, remark only) _`Bases functions are not the powers of natural`
+-------------------------------------------------------------------
 
     It is not a  error.
     
@@ -203,7 +208,7 @@ _`Insufficient of operations with series`
     It is for a future.
     Some operation are work fine due to the fine "Order" class realization:
     
-    #) multiplication "series" by "expr"
+    #) (ok) multiplication "series" by "expr"
     
         >>> exp(x).series()
         1 + x + x**2/2 + x**3/6 + x**4/24 + x**5/120 + O(x**6)
@@ -223,7 +228,7 @@ _`Insufficient of operations with series`
         Ok. O(x**6) "eat" O(x**7) correctly.
         
         
-    #) Multiplication series by series.
+    #) (improved) Multiplication series by series.
         
         >>> (exp(x).series() * exp(-x).series()).expand()
         1 + O(x**6)
@@ -238,7 +243,8 @@ _`Insufficient of operations with series`
         But Operations at point != 0 are not work fine: 
         
         >>> (exp(x).series(x, 1, n=4) * exp(-x).series(x, 1, n=4)).expand()
-        8/9 + x/2 - 11*x**2/12 + 8*x**3/9 - x**4/2 + x**5/6 - x**6/36
+        # was: 8/9 + x/2 - 11*x**2/12 + 8*x**3/9 - x**4/2 + x**5/6 - x**6/36
+        # now: 1 + O(x**4)
         
         Expected "1 + O((x-1)**4)"
         
@@ -322,6 +328,8 @@ _`Realization for abstract analytic function`
     
     BTW, I donn't know how does the substitution for derivatives work.
     
+   (it is known issue http://code.google.com/p/sympy/issues/detail?id=1660 )
+
     >>> D(f(x), x).subs(x, 0)
     f(0)
     
@@ -330,14 +338,17 @@ _`Realization for abstract analytic function`
     Now play with derivation of series of exp(x):
     
     >>> D(exp(x), x).series()
-    D(1, x) + D(x, x) + D(x**2/2, x) + D(x**3/6, x) + D(x**4/24, x) + O(x**5)
+    # was: D(1, x) + D(x, x) + D(x**2/2, x) + D(x**3/6, x) + D(x**4/24, x) + O(x**5)
+    # became:
+    D(1, x) + D(x, x) + D(x**2/2, x) + D(x**3/6, x) + D(x**4/24, x) + D(x**5/120, x) + O(x**6)
     >>> D(exp(x).series(), x).doit()
-    1 + x + D(O(x**6), x) + x**2/2 + x**3/6 + x**4/24
-    
+    # was: 1 + x + D(O(x**6), x) + x**2/2 + x**3/6 + x**4/24
+    1 + x + x**2/2 + x**3/6 + x**4/24 + O(x**6)
+
     It work, but "D.doit()" do not work with Big-O.
     
-_`Multiple cases results must to be more better`
-------------------------------------------------
+(improved) _`Multiple cases results must to be more better`
+------------------------------------------------------------
 
     (Piecewise functions ?)
 
@@ -346,24 +357,21 @@ _`Multiple cases results must to be more better`
     
     >>> c = var("c")
     >>> abs(x-c).series(x)
-    -(x - c)*sign(c)
-    
-    Expected something like: "[-(x - c)*sign(c); when x!=0], [-x; when c==0]"
-    
+    Piecewise((x, -c == 0), (-(x - c)*sign(c), True))
+
+    # was: -(x - c)*sign(c)
+    # Expected something like: "[-(x - c)*sign(c); when x!=0], [-x; when c==0]"
+
     It is difficult, in some cases solution of equations is needed.
     
     
-_`Series with assumption x limit to oo`
-----------------------------------------
+(corrected) _`Series with assumption x limit to oo`
+----------------------------------------------------	
 
     (raw issue)
     
     >>> # (sin(1/x)).series(x, oo, n=5)
-    >>> # or
-    >>> # (sin(1/x)).series(x, oo, n=-5)
-    # rise Exception
-    
-    Expected: 1/x + (1/x)**3)/6 + O((1/x)**5)
+    1/x - 1/(6*x**3)
 
 _`Series with matrices`
 ------------------------
@@ -399,6 +407,3 @@ _`Other`
     
     Exception
     
-
-
-
