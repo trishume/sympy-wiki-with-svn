@@ -22,7 +22,7 @@ http://sympy.org/
 
 New and Simplified BSD licenses
 
-# Why is your organization applying to participate in GSoC 2010? What do you hope to gain by participating?
+# Why is your organization applying to participate in GSoC 2011? What do you hope to gain by participating?
 
 From previous experiences, GSoC is a very effective way to get students attracted to the project, coding on a specific task.
 
@@ -30,6 +30,9 @@ It will be beneficial for the project, since each year this has proven to give a
 
 In the past, SymPy has participated under the umbrella of the Python Software Foundation, the Space Telescope Science Institute, and Portland State University.  However, there is more competition for students applying under an umbrella organization, meaning that SymPy might not get as many students accepted as we would like or could handle.  Also, umbrella mentoring organizations may limit what applications are accepted to work on SymPy based on what they see as being beneficial to their own organization, instead of directly to SymPy.  For example, Python has stated that this year all accepted projects should be focused on the Python 3.0 transition, which may limit any student who wishes to apply to work for SymPy under Python for an project that isn't directly related to Python 3.0. 
 
+# If accepted, would this be your first year participating in GSoC? 
+Yes
+ 
 # Did your organization participate in past GSoCs? If so, please summarize your involvement and the successes and challenges of your participation.
 
 The SymPy project participated in 2007 as part of the Python Software Foundation, Portland State University and the Space Telescope Science Institute and we had 5 students in total. All the projects details and can be found here:
@@ -51,18 +54,15 @@ If your organization participated in past GSoCs, please let us know the ratio of
 2008: 1/1
 2009: 4/5
 
-# Add a Comment (optional):
-
 Note that this was under the umbrella organizations PSF, STSI, and PSU.      
 
-# If your organization has not previously participated in GSoC, have you applied in the past? If so, for what year(s)?
-We applied last year (2009).  
+# If your organization participated in past GSoCs, please let us know the ratio of students passing to students allocated, e.g. 2006: 3/6 for 3 out of 6 students passed in 2006.
 
 # What is the URL for your ideas page?
 
-http://wiki.sympy.org/wiki/GSoC2010Ideas
+http://wiki.sympy.org/wiki/GSoC2011Ideas
 
-# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2010. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
+# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2011. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
 ## Email: 
 
@@ -75,10 +75,8 @@ http://groups.google.com/group/sympy
 # What is the main IRC channel for your organization?
 
 \#sympy in Freenode
-
-# Add a Comment (optional):
-        
-# Does your organization have an application template you would like to see students use? If so, please provide it now. Please note that it is a very good idea to ask students to provide you with their contact information as part of your template. Their contact details will not be shared with you automatically via the GSoC 2010 site.
+       
+# Does your organization have an application template you would like to see students use? If so, please provide it now. Please note that it is a very good idea to ask students to provide you with their contact information as part of your template. Their contact details will not be shared with you automatically via the GSoC 2011 site. 
 
 Please see http://wiki.sympy.org/wiki/GSoC2010_Application_Template
 
@@ -110,18 +108,19 @@ and send a patch to our project fixing it, so that we can make sure that they ca
 
 After the program is over, the students already have their blogs and they are synchronized with our planet.sympy.org and usually if they blogged interesting things, they already built a nice community around their blogs, and so the continue blogging about what they do. It all depends how they like our community and to communicate with others and so we try hard so that they feel comfortable and will stick around. 
 
-# What will you do to ensure that your accepted students stick with the project after GSoC concludes?
+# If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here. 
 
-We try to select such students, who really want to help us develop sympy, be it as part of GSoC or not --- however GSoC allows them to work on this full time over the summer (while if they were not accepted, they would contribute only as time permits, while doing an internship somewhere else). In our experience those students then tend to stick around after the program is over, thus becoming regular contributors and that pays off incredibly in the long term. 
+**We need to fill this part out!**
 
-# Is there anything else you would like to tell the Google Summer of Code program administration team? :
+# If you are a large organization who is vouching for a small organization applying to GSoC for their first time this year, please list their name and why you think they'd be good candidates for GSoC here: 
+
+N/A
+
+# Anything else you'd like to tell us? 
 
 SymPy has been very successful in the Google Summer of Code program under umbrella programs in the past, and we hope that we can be much more successful if we are accepted as an organization.  
 
-# Add a Comment (optional):
-
-Please contact ondrej@certik.cz concerning this application.      
-
 # Backup Admin (Link ID):
 
+**Who wants to do this (Mateusz or Ondrej)?**
 mattpap
