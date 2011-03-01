@@ -60,7 +60,7 @@ Note that this was under the umbrella organizations PSF, STSI, and PSU.
 
 # What is the URL for your ideas page?
 
-http://wiki.sympy.org/wiki/GSoC2011Ideas
+https://github.com/sympy/sympy/wiki/GSoC2011Ideas ([[GSoC2011Ideas]])
 
 # What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2011. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
