@@ -1,4 +1,6 @@
-So far, this is just a copy of the Google Summer of Code 2010 application for SymPy to be an organization.  Please edit this page to update/improve stuff.  Google has not yet released the official questions that they will be asking us yet, but they will probably be similar to last year's, which are given below.
+So far, this is just a copy of the Google Summer of Code 2010 application for SymPy to be an organization.  Please edit this page to update/improve stuff. The headers below are the questions that we have to answer for the application. 
+
+The application deadline is March 11.  Feel free to edit this page until that point.  On March 11 I will copy the contents of this page to the form at http://www.google-melange.com/.
 
 # Organization Name:
 
