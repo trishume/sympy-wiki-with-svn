@@ -1,4 +1,3 @@
-
 In order to clarify the discussions about Taylor series and asymptotic expansions, it is necessary to define the relevant concepts as precisely as possible.
 
 # Definitions
@@ -40,7 +39,9 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 
 # Current situation
 
-According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of f(x) for x -> x0.
-Actually, it works only for x0 = 0 and when f doesn't have a generalized Taylor expansion, it returns some arbitrarily chosen asymptotic expansion of f(x).
+According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of \(f(x)\) for \(x \rightarrow x_0\).
+Actually, it works only for \(x_0 = 0\) and when f doesn't have a generalized Taylor expansion, it returns some arbitrarily chosen asymptotic expansion of \(f(x)\).
+
+Nevertheless the big work with processing of many various cases was executed recently, also many tests have been collected and passed. This is used for *limits* processing.
 
 Also there are an object Sum is defined, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
