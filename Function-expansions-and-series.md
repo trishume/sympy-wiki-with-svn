@@ -90,3 +90,12 @@ Also the implementation of some series methods for solving IDEs is processing no
 ).
 
 Also there are an object Sum is defined, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
+
+## problems and remarks which we encounter
+- representation of Derivative of function at some (no zero) point.
+- Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
+
+# Open questions and future topics
+- multivariable extension
+- complex number
+- convergence
