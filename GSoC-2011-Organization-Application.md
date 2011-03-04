@@ -127,4 +127,3 @@ SymPy has been very successful in the Google Summer of Code program under umbrel
 # Backup Admin (Link ID):
 
 **Who wants to do this (Mateusz or Ondrej)?**
-mattpap
