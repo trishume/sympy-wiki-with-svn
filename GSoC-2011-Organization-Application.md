@@ -1,6 +1,6 @@
 So far, this is just a copy of the Google Summer of Code 2010 application for SymPy to be an organization.  Please edit this page to update/improve stuff. The headers below are the questions that we have to answer for the application. 
 
-The application deadline is March 11.  Feel free to edit this page until that point.  On March 11 I will copy the contents of this page to the form at http://www.google-melange.com/.
+The application deadline is March 11.  Feel free to edit this page until that point.  On March 11 I will copy the contents of this page to the form at [http://www.google-melange.com/](http://www.google-melange.com/).
 
 --Aaron
 
@@ -14,7 +14,7 @@ SymPy is a Python library for symbolic mathematics. It aims to become a full-fea
 
 SymPy has a vast array of potential applications, from theoretical physics (atomic physics, quantum field theory, general relativity, classical mechanics, ...), applied math (solving algebraic and differential equations, ...), teaching (calculus, integrals, derivatives, limits, ...), web (it runs on the google app engine) and it can also be included as a library in any scientific code.
 
-SymPy has a very large, active development team that has increased non-stop since 2007 (ref: http://www.ohloh.net/p/sympy) thanks to an extensible architecture that permits to add features in a modular way.
+SymPy has a very large, active development team that has increased non-stop since 2007 (ref: [http://www.ohloh.net/p/sympy](http://www.ohloh.net/p/sympy)) thanks to an extensible architecture that permits to add features in a modular way.
 
 It is built and tested regularly on all major platforms and all major architectures to ensure to reach the widest possible audience. 
 
