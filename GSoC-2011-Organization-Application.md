@@ -2,6 +2,8 @@ So far, this is just a copy of the Google Summer of Code 2010 application for Sy
 
 The application deadline is March 11.  Feel free to edit this page until that point.  On March 11 I will copy the contents of this page to the form at http://www.google-melange.com/.
 
+--Aaron
+
 # Organization Name:
 
 SymPy
@@ -30,7 +32,7 @@ From previous experiences, GSoC is a very effective way to get students attracte
 
 It will be beneficial for the project, since each year this has proven to give a huge boost to the project, and it will be beneficial for the students, who will get the chance to write code for an open source project (and get paid for it). 
 
-In the past, SymPy has participated under the umbrella of the Python Software Foundation, the Space Telescope Science Institute, and Portland State University.  However, there is more competition for students applying under an umbrella organization, meaning that SymPy might not get as many students accepted as we would like or could handle.  Also, umbrella mentoring organizations may limit what applications are accepted to work on SymPy based on what they see as being beneficial to their own organization, instead of directly to SymPy.  For example, Python has stated that this year all accepted projects should be focused on the Python 3.0 transition, which may limit any student who wishes to apply to work for SymPy under Python for a project that isn't directly related to Python 3.0. 
+In the past, SymPy has participated under the umbrella of the Python Software Foundation, the Space Telescope Science Institute, and Portland State University.  However, there is more competition for students applying under an umbrella organization, meaning that SymPy might not get as many students accepted as we would like or could handle.  Also, umbrella mentoring organizations may limit what applications are accepted to work on SymPy based on what they see as being beneficial to their own organization, instead of directly to SymPy.  
 
 # If accepted, would this be your first year participating in GSoC? 
 Yes
