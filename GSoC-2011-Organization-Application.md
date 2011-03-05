@@ -1,12 +1,12 @@
-So far, this is just a copy of the [Google Summer of Code 2010
-application](GSoC-2010-Organization-Application) for SymPy to be an organization.  Please edit this page to
-update/improve stuff. The headers below are the questions that we have
-to answer for the application.
+This is based on the [Google Summer of Code 2010
+application](GSoC-2010-Organization-Application) for SymPy to be an
+organization.  Please edit this page to update/improve stuff. The
+headers below are the questions that we have to answer for the
+application.
 
 The application deadline is March 11.  Feel free to edit this page until
 that point.  On March 11 I will copy the contents of this page to the
-form at
-[[http://www.google-melange.com/]].
+form at [[http://www.google-melange.com/]].
 
 --Aaron
 
@@ -30,17 +30,15 @@ derivatives, limits, ...), web (it runs on the google app engine) and it
 can also be included as a library in any scientific code.
 
 SymPy has a very large, active development team that has increased
-non-stop since 2007 (ref:
-[[http://www.ohloh.net/p/sympy]]) thanks to
-an extensible architecture that permits to add features in a modular
-way.
+non-stop since 2007 (ref: [[http://www.ohloh.net/p/sympy]]) thanks to an
+extensible architecture that permits to add features in a modular way.
 
 It is built and tested regularly on all major platforms and all major
-architectures to ensure to reach the widest possible audience.
+architectures to ensure that it can reach the widest possible audience.
 
 # Home page:
 
-http://sympy.org/
+[[http://sympy.org/]]
 
 # Main Organization License:
 
@@ -66,40 +64,57 @@ umbrella mentoring organizations may limit what applications are
 accepted to work on SymPy based on what they see as being beneficial to
 their own organization, instead of directly to SymPy.
 
-# If accepted, would this be your first year participating in GSoC? Yes
+# If accepted, would this be your first year participating in GSoC?
+
+It would be our first time participating as a mentoring organization,
+but we have sponsored projects in the past under umbrella organizations
+(see previous question).
 
 # Did your organization participate in past GSoCs? If so, please
 summarize your involvement and the successes and challenges of your
 participation.
 
-The SymPy project participated in 2007 as part of the Python Software
-Foundation, Portland State University and the Space Telescope Science
-Institute and we had 5 students in total. All the projects details and
-can be found here:
+The SymPy project participated in 2007 under the umbrella of the Python
+Software Foundation, Portland State University and the Space Telescope
+Science Institute.  We had five students in total.  All five projects
+were successful. All the projects details can be found here:
 
-http://code.google.com/p/sympy/wiki/GSoC2007
+[[http://code.google.com/p/sympy/wiki/GSoC2007]]
 
-In GSoC 2008, we participated as part of the Python Software Foundation
-and we got 1 student, all details are here:
-
-http://code.google.com/p/sympy/wiki/GSoC2008
-
-In GSoC 2009, we participated as part of the Python Software Foundation
-and Portland State University, for a total of 5 students.  Details are
+In 2008, we participated under the umbrella of the Python Software
+Foundation and we got one student, who was successful. All details are
 here:
 
-http://code.google.com/p/sympy/wiki/GSoC2009
+[[http://code.google.com/p/sympy/wiki/GSoC2008]]
 
-10 projects were successful and they incredibly boosted SymPy's
-development. Some of the students who did this program have continued
-developing for SymPy after the program ended, again helping to boost the
-program. If your organization participated in past GSoCs, please let us
-know the ratio of students passing to students allocated, e.g. 2006: 3/6
-for 3 out of 6 students passed in 2006.
+In 2009, we participated under the umbrella of the Python Software
+Foundation and Portland State University, for a total of five students.
+All but one were successful.  Details are here:
 
-2007: 5/5 2008: 1/1 2009: 4/5
+[[http://code.google.com/p/sympy/wiki/GSoC2009]]
 
-Note that this was under the umbrella organizations PSF, STSI, and PSU.
+In 2010, we participated under the umbrella of the Python Software
+Foundation and Portland State University.  There were five students, all
+of whom were successful in their projects.  The details are here:
+
+[[http://code.google.com/p/sympy/wiki/GSoC2010]]
+
+A total of fifteen out sixteen projects were successful and they
+incredibly boosted SymPy's development. Some of the students who did
+this program have continued developing for SymPy after the program
+ended, again helping to boost the program.  For example, I myself (Aaron
+Meurer) participated in 2009 and 2010, and in 2011, Ondřej Čertík, the
+founder of the project and leader, asked me to step up and be the leader
+of the project.  I would have never have heard of the project and would
+not be doing any work at all for open source were it not for the Google
+Summer of Code program.
+
+For almost all of the projects, it is almost certain that they would
+have never been coded if it were not for the Google Summer of Code
+program, because they were implemented by students who would otherwise
+either would not have known about SymPy or else wouldn't be able to
+dedicate their summer to working on it because of the stipend.
+
 
 # If your organization participated in past GSoCs, please let us know
 the ratio of students passing to students allocated, e.g. 2006: 3/6 for
@@ -151,15 +166,15 @@ understands it well, if possible.
 
 To begin with, we will try to pick students who will not disappear.  We
 will require that all students who are accepted to have submitted at
-least one patch that passes review and is accepted by the projects. 
-This will show that they are dedicated and are willing to learn the code
-base enough to try fixing part of it.
+least one patch that passes review and is accepted by the projects. This
+will show that they are dedicated and are willing to learn the code base
+enough to try fixing part of it.
 
 We stay in touch with all the students and we require them to blog once
 a week about their progress. The mentor for each student will try to
 stay in touch more often, by whatever method is best for the student
 (email, the mailing list, IRC, etc.).  We will also require that
-students push their work up to an online git repository such as github,
+students push their work up to an online git repository such as GitHub,
 so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
@@ -168,16 +183,16 @@ them fix mistakes early.
 
 We are in frequent contact with all our mentors and we have collaborated
 with each other for several years, so we do not expect that such thing
-would happen. However, if that happens, Ondrej Certik has experience
+would happen. However, if that happens, Ondřej Čertík has experience
 with mentoring several students at once from the year 2007, when SymPy
 participated as part of several organizations and even though we had
-official mentors at the umbrella organizations, Ondrej was effectively
+official mentors at the umbrella organizations, Ondřej was effectively
 supervising all 5 students. As can be seen from our GSoC 2007 page:
 
 http://code.google.com/p/sympy/wiki/GSoC2007
 
 All the projects managed to finish successfully. So in the very unlikely
-case of a disappearing mentor, Ondrej will supervise the student and it
+case of a disappearing mentor, Ondřej will supervise the student and it
 should not be a problem.
 
 # What steps will you take to encourage students to interact with your
@@ -185,7 +200,7 @@ project's community before, during and after the program?
 
 We require all applicants to find some easy to fix issue in our tracker:
 
-http://code.google.com/p/sympy/issues/list?q=label:EasyToFix
+[[http://code.google.com/p/sympy/issues/list?q=label:EasyToFix]]
 
 and send a patch to our project fixing it, so that we can make sure that
 they can submit a patch (if they can't we teach them at this stage) and
@@ -223,4 +238,4 @@ more successful if we are accepted as an organization.
 
 # Backup Admin (Link ID):
 
-**Who wants to do this (Mateusz or Ondrej)?**
+**Who wants to do this (Mateusz or Ondřej)?**
