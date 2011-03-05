@@ -80,22 +80,28 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 
 # Current situation
 
-According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of \(f(x)\) for \(x \rightarrow x_0\).
+- According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of \(f(x)\) for \(x \rightarrow x_0\).
 Actually, it works only for \(x_0 = 0\) and when f doesn't have a generalized Taylor expansion, it returns some arbitrarily chosen asymptotic expansion of \(f(x)\).
 
-But the present method "series" which returns various kinds of series is convenient and used for the task of limits processing: limits use necessary amount of first terms of series whatever it be.
+- But the present method "series" which returns various kinds of series is convenient and used for the task of limits processing: limits use necessary amount of first terms of series whatever it be.
 The work with processing of many various cases of series and limits was executed recently, also many tests have been collected and passed for series and limits.
 
-Also the implementation of some series methods for solving IDEs is processing now in Saptarshi's branch (https://github.com/saptman/sympy/tree/dev_ide
+- The implementation of some series methods for solving IDEs is processing now in Saptarshi's branch (https://github.com/saptman/sympy/tree/dev_ide
 ).
 
-Also there are an object Sum is defined, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
+- Class *Function* , *exp* *sin* and others contain method *taylor_term*.
+
+- There is an object *Sum* defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
+
+- sympy/solvers/recurr.py contains some methods for solving recurrences, main function on this module is rsolve().
 
 ## problems and remarks which we encounter
+- Problems with big O representation and behaviour at non zero point or oo.
 - representation of Derivative of function at some (no zero) point.
 - Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
 
 # Open questions and future topics
-- multivariable extension
-- complex number
+- what is exp(1/).series(x, oo) - classical Laurent or power series at point oo?
+- multivariable extension.
+- complex numbers, non commutative formal variables.
 - convergence
