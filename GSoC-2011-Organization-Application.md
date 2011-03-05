@@ -1,12 +1,12 @@
-So far, this is just a copy of the Google Summer of Code 2010
-application for SymPy to be an organization.  Please edit this page to
+So far, this is just a copy of the [Google Summer of Code 2010
+application](GSoC-2010-Organization-Application) for SymPy to be an organization.  Please edit this page to
 update/improve stuff. The headers below are the questions that we have
 to answer for the application.
 
 The application deadline is March 11.  Feel free to edit this page until
 that point.  On March 11 I will copy the contents of this page to the
 form at
-[http://www.google-melange.com/](http://www.google-melange.com/).
+[[http://www.google-melange.com/]].
 
 --Aaron
 
@@ -31,7 +31,7 @@ can also be included as a library in any scientific code.
 
 SymPy has a very large, active development team that has increased
 non-stop since 2007 (ref:
-[http://www.ohloh.net/p/sympy](http://www.ohloh.net/p/sympy)) thanks to
+[[http://www.ohloh.net/p/sympy]]) thanks to
 an extensible architecture that permits to add features in a modular
 way.
 
