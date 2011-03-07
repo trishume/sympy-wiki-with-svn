@@ -44,8 +44,7 @@ architectures to ensure that it can reach the widest possible audience.
 
 New and Simplified BSD licenses
 
-# Why is your organization applying to participate in GSoC 2011? What do
-you hope to gain by participating?
+# Why is your organization applying to participate in GSoC 2011? What do you hope to gain by participating?
 
 From previous experiences, GSoC is a very effective way to get students
 attracted to the project, coding on a specific task.
@@ -70,9 +69,7 @@ It would be our first time participating as a mentoring organization,
 but we have sponsored projects in the past under umbrella organizations
 (see previous question).
 
-# Did your organization participate in past GSoCs? If so, please
-summarize your involvement and the successes and challenges of your
-participation.
+# Did your organization participate in past GSoCs? If so, please summarize your involvement and the successes and challenges of your participation.
 
 The SymPy project participated in 2007 under the umbrella of the Python
 Software Foundation, Portland State University and the Space Telescope
@@ -116,19 +113,13 @@ either would not have known about SymPy or else wouldn't be able to
 dedicate their summer to working on it because of the stipend.
 
 
-# If your organization participated in past GSoCs, please let us know
-the ratio of students passing to students allocated, e.g. 2006: 3/6 for
-3 out of 6 students passed in 2006.
+# If your organization participated in past GSoCs, please let us know the ratio of students passing to students allocated, e.g. 2006: 3/6 for 3 out of 6 students passed in 2006.
 
 # What is the URL for your ideas page?
 
 https://github.com/sympy/sympy/wiki/GSoC2011Ideas ([[GSoC2011Ideas]])
 
-# What is the main development mailing list for your organization? This
-question will be shown to students who would like to get more
-information about applying to your organization for GSoC 2011. If your
-organization uses more than one list, please make sure to include a
-description of the list so students know which to use.
+# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2011. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
 ## Email:
 
@@ -142,16 +133,11 @@ http://groups.google.com/group/sympy
 
 \#sympy in Freenode
 
-# Does your organization have an application template you would like to
-see students use? If so, please provide it now. Please note that it is a
-very good idea to ask students to provide you with their contact
-information as part of your template. Their contact details will not be
-shared with you automatically via the GSoC 2011 site.
+# Does your organization have an application template you would like to see students use? If so, please provide it now. Please note that it is a very good idea to ask students to provide you with their contact information as part of your template. Their contact details will not be shared with you automatically via the GSoC 2011 site.
 
 Please see http://wiki.sympy.org/wiki/GSoC2010_Application_Template
 
-# What criteria did you use to select the individuals who will act as
-mentors for your organization? Please be as specific as possible:
+# What criteria did you use to select the individuals who will act as mentors for your organization? Please be as specific as possible:
 
 Our mentors will be chosen from members of the community who have shown
 themselves to be committed to the development of SymPy.  This means that
@@ -195,10 +181,10 @@ All the projects managed to finish successfully. So in the very unlikely
 case of a disappearing mentor, Ondřej will supervise the student and it
 should not be a problem.
 
-# What steps will you take to encourage students to interact with your
-project's community before, during and after the program?
+# What steps will you take to encourage students to interact with your project's community before, during and after the program?
 
-We require all applicants to find some easy to fix issue in our tracker:
+We require all applicants to find some git ci
+to fix issue in our tracker:
 
 [[http://code.google.com/p/sympy/issues/list?q=label:EasyToFix]]
 
@@ -217,16 +203,11 @@ their blogs, and so the continue blogging about what they do. It all
 depends how they like our community and to communicate with others and
 so we try hard so that they feel comfortable and will stick around.
 
-# If you are a small or new organization applying to GSoC, please list a
-larger, established GSoC organization or a Googler that can vouch for
-you here.
+# If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
 **We need to fill this part out!**
 
-# If you are a large organization who is vouching for a small
-organization applying to GSoC for their first time this year, please
-list their name and why you think they'd be good candidates for GSoC
-here:
+# If you are a large organization who is vouching for a small organization applying to GSoC for their first time this year, please list their name and why you think they'd be good candidates for GSoC here:
 
 N/A
 
