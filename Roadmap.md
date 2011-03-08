@@ -27,6 +27,10 @@ The next release after 0.6.7 should be a 0.7 release.
 * all important things working, general polishing of things
 * full test coverage (using tools like [http://darcs.idyll.org/~t/projects/figleaf/doc/ figleaf])
 
+## sympy 0.9.0 ##
+
+* Begin to implement a more complete type system that includes coercion/casting, sets+elements, etc.
+
 ## 1.0 ##
 
 Well tested  product. This is not the end, rather the opposite. Just a milestone on the way to be a good CAS in Python.
