@@ -219,4 +219,4 @@ more successful if we are accepted as an organization.
 
 # Backup Admin (Link ID):
 
-**Who wants to do this (Mateusz or Ondřej)?**
+certik
