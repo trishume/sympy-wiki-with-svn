@@ -1,4 +1,6 @@
-# You
+# Google Summer of Code 2011 Application Template
+
+## You
 
     * Name
     * University / current enrollment
@@ -7,13 +9,13 @@
     * Get yourself an account on our Wiki and add your project proposal
     * How can we contact you (email, IRC handle, etc.).
 
-# Your Coding Skills
+## Your Coding Skills
 
 In your project proposal let us know
 
     * What platform do you use to code?
 
-# Set yourself up
+## Set yourself up
 
     * Set up your platform to develop with sympy:
         o Install git.
@@ -27,7 +29,7 @@ In your project proposal let us know
     * If you need help with anything, ask on the sympy list ([[http://groups.google.com/group/sympy]]) or our IRC channell (#sympy on freenode) (don't be afraid if you don't know git for example, we'll teach you
       everything that is needed, the only required thing from you is enthusiasm and willingness to learn new things)
 
-# Your Project
+## Your Project
 
 Start a wiki page to work on your proposal at https://github.com/sympy/sympy/wiki/. If add your proposal there, we will help you edit it (though understand that we will not help you write it).
 
