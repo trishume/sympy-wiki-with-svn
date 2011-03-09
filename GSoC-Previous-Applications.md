@@ -4,5 +4,5 @@ Here are some examples of successful applications from past Google Summer of Cod
 * [[GSoC-2009-Application-Priit-Laes]]
 * [[GsoC-2010-Application-Aaron-Meurer]]
 
-**Previous students, feel free to add your application to the wiki and
-link to it here.**
+_Previous students, feel free to add your application to the wiki and
+link to it here._
