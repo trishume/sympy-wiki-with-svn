@@ -207,7 +207,7 @@ so we try hard so that they feel comfortable and will stick around.
 
 Googlers: Robert Bradshaw, Craig Citro
 
-Organizations: Python Software Foundation
+Organizations: Python Software Foundation, Portland State University
 
 # If you are a large organization who is vouching for a small organization applying to GSoC for their first time this year, please list their name and why you think they'd be good candidates for GSoC here:
 
