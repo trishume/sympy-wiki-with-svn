@@ -205,7 +205,9 @@ so we try hard so that they feel comfortable and will stick around.
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
-**We need to fill this part out!**
+Googlers: Robert Bradshaw
+
+Organizations: Python Software Foundation
 
 # If you are a large organization who is vouching for a small organization applying to GSoC for their first time this year, please list their name and why you think they'd be good candidates for GSoC here:
 
