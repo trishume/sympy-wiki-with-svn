@@ -1,10 +1,10 @@
-=Google Summer of Code 2010=
+# Google Summer of Code 2010
 
-The main GSoC SymPy page is here: http://code.google.com/p/sympy/wiki/GSoC2010
+This is the list of ideas for students wishing to apply for Google Summer of Code 2011.  
 
-==Ideas==
+## Ideas
 
-Please add new ideas here. And remember, that you can apply with something completely different if you like (if you are a student, interested in applying, please get in touch with us on our sympy mailinglist, so that we can help you with the application). This is for inspiration. In no particular order.  Ideas in bold are ones that we would really like to have implemented.  Some of this was copied from the [[GSoC2009Ideas|old list]], so they might be outdated.  Checkout the current source or asking on the mailing list to see where things presently stand:
+Please add new ideas here. And remember, that you can apply with something completely different if you like (if you are a student interested in applying, please get in touch with us on our [mailing list](http://groups.google.com/group/sympy), so that we can help you with the application). This is for inspiration. The ideas are in no particular order.  Ideas in bold are ones that we would really like to have implemented.  However, it is best for you to apply to do something that you are interested in, and also something that you are knowledgeable about.  That way, you will be the most successful in your project, and will have the most fun doing it.  Some of these things are already partially implemented.  Checkout the current source or asking on the mailing list to see where things presently stand.
 
 * anything from our [http://wiki.sympy.org/wiki/Plan_for_SymPy_1.0 roadmap]
 * '''integrate our experimental [http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23 Cython core] into SymPy'''
