@@ -115,6 +115,8 @@ dedicate their summer to working on it because of the stipend.
 
 # If your organization participated in past GSoCs, please let us know the ratio of students passing to students allocated, e.g. 2006: 3/6 for 3 out of 6 students passed in 2006.
 
+2007: 5/5, 2008: 1/1, 2009: 4/5, 2010: 5/5.
+
 # What is the URL for your ideas page?
 
 https://github.com/sympy/sympy/wiki/GSoC2011Ideas ([[GSoC2011Ideas]])
@@ -135,35 +137,55 @@ http://groups.google.com/group/sympy
 
 # Does your organization have an application template you would like to see students use? If so, please provide it now. Please note that it is a very good idea to ask students to provide you with their contact information as part of your template. Their contact details will not be shared with you automatically via the GSoC 2011 site.
 
-Please see http://wiki.sympy.org/wiki/GSoC2010_Application_Template
+Please see https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Template ([[GSoC-2011-Application-Template]])
 
 # What criteria did you use to select the individuals who will act as mentors for your organization? Please be as specific as possible:
 
 Our mentors will be chosen from members of the community who have shown
 themselves to be committed to the development of SymPy.  This means that
-they will be familiar with the code base and with git, so they will be
-able to help the students with these well.  Also, if possible, we will
-try to choose mentors who are familiar with the concepts that the
+they will be familiar both with the code base and with git, so they will
+be able to help the students with these well.  Also, if possible, we
+will try to choose mentors who are familiar with the concepts that the
 student will be implementing.  Often, in SymPy, these can be
 mathematically complicated, so it is important to have a mentor who
-understands it well, if possible.
+understands it well, if possible.  And of course, if someone whom we
+feel meets the above qualifications wants to mentor a particular
+student, we will let him, because that person is the most likely to be the
+best person to stick with that student and help him to complete his
+project.
 
 # What is your plan for dealing with disappearing students?
 
 To begin with, we will try to pick students who will not disappear.  We
 will require that all students who are accepted to have submitted at
-least one patch that passes review and is accepted by the projects. This
-will show that they are dedicated and are willing to learn the code base
-enough to try fixing part of it.
+least one patch that passes review and is pushed into the code base.
+This will show that they are dedicated, because they must be willing to
+learn the code base enough to try fixing part of it, and be willing to
+stick around for the review process.
 
-We stay in touch with all the students and we require them to blog once
-a week about their progress. The mentor for each student will try to
-stay in touch more often, by whatever method is best for the student
-(email, the mailing list, IRC, etc.).  We will also require that
+We require each student to start a blog if they don't already have one
+and to blog once a week about their progress. The mentor for each
+student will try to stay in touch more often, by whatever method is best
+for the student (email, the mailing list, IRC, etc.), but we will also
+try to get the students to stay in touch with the entire community
+through the mailing list.  The requirement that students submit a patch
+to be accepted will also help us screen students who will likely not be
+very communicative with the community.  We will also require that
 students push their work up to an online git repository such as GitHub,
 so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
+
+If despite these things a student disappears, or does not work up to
+their potential, the mentor and I (the organization admin) will try to
+sit down with the student in an IRC conversation or via some other
+medium to try to see what is holding him back and how he can be brought
+back on track.  If necessary, we may need to adjust the goals as
+originally stated in the student's application, because it is better for
+a student to do a reduced amount than to do nothing at all.  If nothing
+works, we may be forced to fail the student in his midterm or final
+evaluation, but this will be a last resort, because it will be to
+everyone's benefit if the student can be brought back on track.
 
 # What is your plan for dealing with disappearing mentors?
 
@@ -177,35 +199,67 @@ supervising all 5 students. As can be seen from our GSoC 2007 page:
 
 http://code.google.com/p/sympy/wiki/GSoC2007
 
-All the projects managed to finish successfully. So in the very unlikely
-case of a disappearing mentor, Ondřej will supervise the student and it
-should not be a problem.
+All the projects managed to finish successfully.
+
+Ondřej at the time was the project leader, but he has since passed on
+the position to me (Aaron Meurer).  I think that if it is necessary, I
+could do similar.  Also, other mentors or members of the community could
+pick up if a mentor falls out.
+
+This will be more effective than assigning a backup mentor to each
+student, because this way anybody can step in and fill in for a mentor
+who is not available.  It will also encourage students to interact with
+the whole community, and ask the whole community for help (i.e., on the
+IRC channel or on the mailing list) if they have a problem, rather than
+just one person.  This will help them to become better members of the
+community and will also make it easier for the whole community to
+monitor their progress.
 
 # What steps will you take to encourage students to interact with your project's community before, during and after the program?
 
-We require all applicants to find some git ci
-to fix issue in our tracker:
+We require all applicants to submit a patch to the project that gets
+reviewed and pushed in.  We do not require that this be a particularly
+complicated.  In fact, we will reference to them the easy to fix issues
+in our tracker:
 
 [[http://code.google.com/p/sympy/issues/list?q=label:EasyToFix]]
 
-and send a patch to our project fixing it, so that we can make sure that
-they can submit a patch (if they can't we teach them at this stage) and
-also so that we have some experience how they interact over email. We
-communicate with them very frequently before they are accepted, and try
-to get them involved in our community. During the program, they need to
-blog once a week and are encouraged to become active members of our
-community.
+This is so that we can make sure that they can submit a patch (if they
+can't we teach them at this stage) and also so that we have some
+experience how they interact over email. We communicate with them very
+frequently before they are accepted, and try to get them involved in our
+community. As was discussed in the previous questions, if we find that
+the students cannot do these fundamental things, then they will not be
+accepted to the program.
 
-After the program is over, the students already have their blogs and
-they are synchronized with our planet.sympy.org and usually if they
-blogged interesting things, they already built a nice community around
-their blogs, and so the continue blogging about what they do. It all
-depends how they like our community and to communicate with others and
-so we try hard so that they feel comfortable and will stick around.
+During the program, they need to blog once a week and are encouraged to
+become active members of our community. The mentors may also choose to
+have a meeting with the students regularly to monitor their progress. We
+will leave this up to the mentor and the student to schedule, because
+they may have problematic schedules to synchronize, but we will
+encourage them to do any meeting on our public IRC channel, so that it
+is public to the entire community.
+
+After the program is over, the students already have their blogs, which
+are synchronized with our planet.sympy.org, and usually if they blogged
+interesting things, they already built a nice community around their
+blogs, and so the continue blogging about what they do. It all depends
+how they like our community and to communicate with others and so we try
+hard so that they feel comfortable and will stick around.  We do
+encourage all students to stick around and become regular members of the
+community.  Sometimes they do, and become valuable contributors and
+sometimes they even participate in Google Summer of Code again in future
+years.  Other times, they move on to do their own things, though often
+they will still sometimes submit bug reports or patches.  We will try to
+accept students who are likely to become regular contributors to the
+community after the program ends, because that will benefit SymPy the
+most.  But we do realize that people can become interested in other
+things, so we will not require this of students (if it were even
+possible to require such a thing).
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
-Googlers: Robert Bradshaw, Craig Citro
+Googlers: Robert Bradshaw (robertwb@google.com), Craig Citro
 
 Organizations: Python Software Foundation, Portland State University
 
