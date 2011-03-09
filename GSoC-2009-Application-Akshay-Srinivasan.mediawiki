@@ -1,0 +1,72 @@
+__NOTOC__
+== Proposal ==
+'''Logics and Sets for Sympy'''<br>
+Akshay Srinivasan
+
+==Abstract==
+Sympy currently lacks a usable formal logic and sets module. The modules that currently exist -  sympy.core.facts and sympy.core.logic - are essentially meant to be used for internals. Algebra on Sets is also not supported currently in Sympy. Adding these modules will help rewriting the core of sympy in a much more elegant way, as well as bring in new functionality into Sympy.
+
+==Summary==
+Sympy has a very old logic module which is tailor made for use internally. There has been an opinion amongst sympy developers that there is a need to redo the logic and AI - sympy.core.logic & sympy.core.facts. A lot more than what is needed is already implemented in aima-python, which is an implementation of the algorithms given in the book ''Artificial Intelligience: A Modern Approach : Stuart J. Russel and Peter Norvig'' in python by Dr. Steve Norvig himself. 
+I propose to bring in the functionality of aima-python into sympy and also add support for algebra on sets and fuzzy sets.  
+
+''Benefits'': <br>
+*Symbolic formal logics and sets support in sympy. 
+*Better visualisation in sympy.
+*Better module to handle AI in sympy.
+*Improved problem solving capabilities.
+
+
+
+I have the following goals for the project.<br>
+''Logic'':
+*Support for Boolean, Propositional Logic.
+*Support for First Order Logic.
+*Support for Fuzzy Logic.
+*Knowledge Base, and modus ponens.
+
+''Sets'':
+*Support for algebra on sets, fuzzy sets.
+*Cardinal arithmetic.
+*Visualisation of Venn Diagrams
+
+''Graphs'':
+This is an extension of the Sets module.
+*Add classes for directed, undirected, weighted graphs.
+*Add support for solving problems by searching. Make use of methods already present in aima-python.
+*Add graphviz support by using yapgvb/pydot and pyglet.
+
+The way in which I go along with the project is much more clear in the schedule.
+
+==Schedule==
+College ends by by the third week of April. So this leaves me with about 16 weeks to work on the project.
+
+'''Start of Program''' 6-8 weeks 
+*Dicuss about the project on the community. Understand the expectations of the community from this project. 
+*Add Quine-McCluskey simplification for Boolean Algebra.
+*Use the above to simplify Propositional logic expressions and obtain inferences from the resulting prime implicants. Check efficiency compared to Heuristic simplifier.
+*Create a prototype of the logic module borrowing methods from aima-python. 
+*Check the performance of the Knowledge Base, modus ponens. implement indexing if not satisfactory.
+
+'''Midterm Evaluation''' 3-4 weeks 
+The logic part should be usable by now.
+*Create the internals of the Set algebra module. 
+*Build Fuzzy logic support into logic module. 
+*Use pyglet to visualise Venn Diagrams.
+
+'''Final Evaluation''' 3-4 weeks 
+By this time the much of the work is complete. 
+*Write tests and documentation.
+*Create extensions: add support for graph theory. Add support to make use of search methods present in aima-python to improve problem solving capabilities. Add support for visualisation using yapgvb/pydot and pyglet.
+
+==About Me==
+I'm a resident of Bangalore, India ; but spend much of the year at Surathkal, where I'm a sophomore in Chemical Engineering at the [http://nitk.ac.in National Institute of Technology Karnataka]
+
+I use Archlinux as my primary operating system along with FreeBSD and Windows XP. I've contributed a bunch of scripts and artwork for GNOME [http://api.gnome-look.org/usermanager/search.php?username=neptunek&action=contents&PHPSESSID=bed28132e4e587e034f4110bf50a86c8] and a few PKGBUILDs for Archlinux. 
+
+My first experience with computer programming was with Q-BASIC from which I'd made my own very untidy function plotter. I routinely use C to program microcontrollers for my hobby projects. I've used Python to do all sorts of things, from building molecular dynamics models to generating and verifying Sudoku puzzles. Python is by far the best language I've ever used.
+
+In my spare time, I usually play around with electronics, building Robots and the like. I'm also an amateur Astronomer and an avid Biker. I maintain a blog at http://thoughtsofastick.blogspot.com . I'm also trying to build a web-page at <br> http://www.rootshell.be/~neptune/ . 
+
+==Contact==
+IRC : neptunek on freenode

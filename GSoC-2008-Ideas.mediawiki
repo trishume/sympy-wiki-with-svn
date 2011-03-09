@@ -1,0 +1,38 @@
+=Google Summer of Code 2008=
+
+The main GSoC SymPy page is here: http://code.google.com/p/sympy/wiki/GSoC2008
+
+==Ideas==
+
+Please add new ideas here. And remember, that you can apply with something completely different if you like. This is for inspiration.
+
+* asymptotic series
+* improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
+** implement recursive Risch algorithm (compare with heuristic version)
+** improve integration of rational functions (via subresultants)
+** integration of functions on domains of maximum extent, etc.
+* definite integration & integration on complex plane using residues
+* Groebner bases and their applications in geometry, simplification and integration
+** improve Buchberger's algorithm and implement FaugÃ¨re F4 (compare their speed)
+* improve the series expansion ([http://code.google.com/p/sympy/issues/list?q=label:module-series relevant issues])
+** formal power series (FPS)
+** improve limits - make sure all basic limits work
+* objects with indices (tensors)
+* improve the plotting module:
+** better matplotlib integration
+** extract the math TeX typesetting enginge from matplotlib (it has some external dependencies on freetype and Agg that will need to be resolved), and integrate it in our plotting lib (maybe create a new project for this engine)
+* generalized functions -- Dirac delta, P(1/x), etc... Convolution, Fourier and Laplace transforms
+* vector calculus, differential fields, maybe Lia algebras & groups
+* parametric integrals asymptotic expansion (integral series)
+* differential equations (currently SymPy only supports some very simple ones)
+
+==Potential Mentors==
+
+If you are willing to mentor, please add yourself here:
+
+* [[OndÅ™ej ÄŒertÃ­k]]
+* [[Kirill Smelkov]]
+* [[Mateusz Paprocki]]
+* [[Michael Droettboom]] (author of matplotlib's current math rendering engine -- happy to help with related projects)
+
+[[Category:Development]]

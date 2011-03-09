@@ -1,0 +1,80 @@
+== Proposal ==
+; Title : '''Improve Sympy to handle partial differential equations'''
+; Student: '''Priit Laes'''
+
+== Application ==
+=== Introduction ===
+Partial differential equations (PDE) are used to formulate the problems involving functions of several independent variables. These equations are also used to describe various phenomena in physics, chemistry, biology, [http://www.xkcd.com/435/ etc]. Currently there is almost no support for expressing and solving these kinds of problems with Sympy.
+
+My proposal is to improve Sympy so it is possible to define problems containing PDEs and also provide a symbolic solver that can handle some forms of solvable partial differential equations.
+
+=== Benefits ===
+For users:
+# PDE support with basic solver
+# More examples
+
+For Sympy project:
+# Syntax for partial differential equations
+# Solver for some forms of the partial differential equations
+# More testcases for Sympy's core symbolic computation engine
+
+=== How it will be done ===
+The approach I am planning to use is entirely pragmatic:
+# Select a problem containing some sort of partial differential equation (more about the problems below)
+# Express this problem using Sympy's language (eg. Python). When it turns out that this is not possible, extend Sympy's syntax.
+# Solve the problem using Sympy's builtin functionality. If this fails either extend Sympy so it can handle the problem (preferred approach) or choose another problem - ie. move back to step 1.
+# And finally - add the part of the problem that either broke Sympy or required new functionality as a testcase.
+
+==== Approach for Solver ====
+As one of the Sympy's philosophies is to be a stand-alone application, dependency of external libraries or software wrapper is not considered and the solver will be written mostly from scratch. The approach I am going to be use is entirely deterministic although it will be possible for users to give hints to the solver. In the future it might be considered to implement further heuristic and symmetry methods. Ideas so far:
+* Determine the order of the PDE
+* Pattern matching (predetermined cases for number of partial derivatives and change of variables)
+* PDEs of second order with no more than two variables (reduce to canonical form)
+* And also consider the user-given hints (change of variable)
+
+==== Problem sets ====
+The problems I am planning to use are mostly from the field of Mathematical physics:
+* Quasilinear differential equations with two independent variables
+* Variable separation for PDEs
+* Coordinate system transformations (eg. from cartesian to polar in the wave equation case)
+* Initial and boundary conditions
+* Solvers for some special forms of PDEs:
+** Wave equation (d'Alambert and Fourier' solutions)
+** Diffusion/Heat conduction equation
+** Laplace equation (in various coordinate systems)
+** ...
+
+== Schedule ==
+=== Start of program ===
+Official coding starts on May 23. Rough timeline numbered as weeks (unfortunately during May/June there will be also exams):
+# Create a set of problem testcases ie. investigate how to express these problems in Sympy's syntax
+# Variable separation / quasilinear differential equations
+# ...
+# Variable separation / coordinate transformations
+# ...
+# Initial and boundary conditions
+# ...
+
+=== Midterm evaluation ===
+July 6-13, 4 weeks. 
+
+By midterm evaluation I should have most of the internals for PDE handling in place and from now on I can continue writing documentation, extending examples, adding testcases and improving Sympy's core.
+
+=== Final evaluation ===
+Aug 17-24
+
+Well, pencils down... All the proposed ideas are present in Sympy as examples and testcases. If possible, a solver for various cases has been implemented.
+
+== About Me ==
+
+I am currently a second year undergraduate physics student in [http://www.ut.ee University of Tartu].
+I hold a BSc degree from Tallinn University of Technology in computer and systems engineering. I am
+also involved with the open source world a bit as a coordinator of Estonian Translation team in GNOME translation project. 
+
+I also maintain a blog on http://plaes.org/blog
+
+== Contact Info ==
+
+; irc : plaes (freenode)
+; email : provided on request
+; phone : provided on request
