@@ -46,16 +46,19 @@ The best place to begin is the [[Tutorial]]. A lot of useful information can als
 * [[Cookbook]] - Various recipes
 
 Projects / Ideas
-============
+================
 
 * [[Roadmap]] -- our roadmap to SymPy 1.0
 * [[Ideas]] -- Random ideas, not necessarily related to SymPy, but that could be useful for SymPy in the future
-* [[GSoC2008Ideas]] -- Ideas for the Google Summer of Code 2008 projects
-* [[GSoC2009Ideas]] -- Ideas for the Google Summer of Code 2009 projects
-* [[GSoC2010Ideas]] -- Ideas for the Google Summer of Code 2010 projects
 * [[Generic interface]] -- SymPy/SymPyCore design notes
-* [[GSoC2009Application]]
 * [[References]] -- Related mathematical literature and websites
+
+Google Summer of Code
+=====================
+* [[GSoC-2011-Ideas]] -- Ideas for Google Summer of Code projects
+* [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
+* [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
+* [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
 
 Development
 ==========
