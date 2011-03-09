@@ -205,7 +205,7 @@ so we try hard so that they feel comfortable and will stick around.
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
-Googlers: Robert Bradshaw
+Googlers: Robert Bradshaw, Craig Citro
 
 Organizations: Python Software Foundation
 
