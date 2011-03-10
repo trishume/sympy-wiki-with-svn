@@ -96,7 +96,7 @@ The work with processing of many various cases of series and limits was executed
 
 - Class *Function* , *exp* *sin* and others contain method **taylor_term**.
 
-- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = (1 + x^{\frac{3}{6}} + O(x**4))^1000.
+- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = \( (1 + \frac{x^3}{6} + O(x^4))^1000 = \cdots \).
 
 - There is an object **Sum** defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
 
