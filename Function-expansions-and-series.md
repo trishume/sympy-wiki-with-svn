@@ -23,9 +23,12 @@ A classical **Laurent series** is an object of the form \(\sum_{n=+\infty}^{+\in
 
 A **generalized formal power series**, or **formal Laurent series**, in an object \(S\) such that \(X^n S\) is a formal power series for some integer \(n\). The set of formal Laurent series over a field \(K\) is noted \(K((X))\) and has a field structure.
 
+A **Laurent polynomial**  in one variable over a field \(F\) is a linear combination of positive and negative powers of the variable with coefficients in \(F\). Laurent polynomials in \(X\) form a ring denoted \(F [X, X−1] \). They differ from ordinary polynomials in that they may have terms of negative degree. A Laurent polynomial over C may be viewed as a Laurent series in which only finitely many coefficients are non-zero.
+
 The **Taylor series** at \(x_0\) of a smooth function \(f\) is the formal power series \(TS_{x_0}(f) = \sum_{n = 0}^\infty \frac{f^{(n)}(x_0)}{n!} X^n\).  where \(X = x-x_0\) \(f\) is analytic iff there exists a neighbourhood \(V\) of \(x_0\) where \(f(x) = S(x-x_0), x \in V, S = TS_{x_0}(f)\).
 
 The n-th order **Taylor polynomial** of f at \(x_0\) is the degree-n polynomial \(TP_{n, x_0}(f) = \sum_{n = 0}^n \frac{f^{(k)}(x_0)}{k!} X^k\). If f is analytic, \(TP_{n, x_0}(f)\) is the degree-n truncation of \(TS_{x_0}(f)\).
+
 
 ## Asymptotic expansion
 
@@ -88,7 +91,7 @@ The work with processing of many various cases of series and limits was executed
 
 - Class *Function* , *exp* *sin* and others contain method **taylor_term**.
 
-- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))\*\*1000 ).series() = (1 + x\*\*3/6 + O(x\*\*4))**1000.
+- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))**1000 ).series() = (1 + x**3/6 + O(x**4))**1000.
 
 - There is an object **Sum** defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
 
@@ -96,6 +99,7 @@ The work with processing of many various cases of series and limits was executed
 
 - The implementation of some series methods for solving IDEs is processing now in Saptarshi's branch (https://github.com/saptman/sympy/tree/dev_ide
 ).
+
 
 ## problems and remarks which we encounter
 - Problems with big O representation and behaviour at non zero point or oo.
