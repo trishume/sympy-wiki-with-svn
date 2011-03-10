@@ -90,18 +90,12 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 
 - According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of \(f(x)\) for \(x \rightarrow x_0\).
 Actually, it works only for \(x_0 = 0\) and when f doesn't have a generalized Taylor expansion, it returns some arbitrarily chosen asymptotic expansion of \(f(x)\).
-
 - But the present method "series" which returns various kinds of series is convenient and used for the task of limits processing: limits use necessary amount of first terms of series whatever it be.
 The work with processing of many various cases of series and limits was executed recently, also many tests have been collected and passed for series and limits.
-
 - Class *Function* , *exp* *sin* and others contain method **taylor_term**.
-
 - general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = \( (1 + \frac{x^3}{6} + O(x^4))^1000 = \cdots \).
-
 - There is an object **Sum** defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
-
 - sympy/solvers/recurr.py contains some methods for solving recurrences, main function on this module is **rsolve()**.
-
 - The implementation of some series methods for solving IDEs is processing now in Saptarshi's branch (https://github.com/saptman/sympy/tree/dev_ide
 ).
 
