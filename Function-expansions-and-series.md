@@ -29,6 +29,11 @@ The **Taylor series** at \(x_0\) of a smooth function \(f\) is the formal power 
 
 The n-th order **Taylor polynomial** of f at \(x_0\) is the degree-n polynomial \(TP_{n, x_0}(f) = \sum_{n = 0}^n \frac{f^{(k)}(x_0)}{k!} X^k\). If f is analytic, \(TP_{n, x_0}(f)\) is the degree-n truncation of \(TS_{x_0}(f)\).
 
+### Unclassified series
+
+\( \sqrt{\sin(x)} =  x^{\frac{1}{2}} - \frac{x^{\frac{5}{2}}}{12} + \frac{x^{\frac{9}{2}}}{1440} + \cdots \)
+
+\( x^x = 1 + x \log x + \frac{x^2 \log^2(x)}{2} + \cdots \)
 
 ## Asymptotic expansion
 
