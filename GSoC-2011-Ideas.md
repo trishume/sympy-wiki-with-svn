@@ -11,57 +11,57 @@ Please add new ideas here. And remember, that you can apply with something compl
 * asymptotic series
 * port to Python 3.0 ({{issue|1262}})
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
-** implement recursive Risch algorithm (compare with heuristic version)
-** improve integration of rational functions (via subresultants)
-** integration of functions on domains of maximum extent, etc.
+  * implement recursive Risch algorithm (compare with heuristic version)
+  * improve integration of rational functions (via subresultants)
+  * integration of functions on domains of maximum extent, etc.
 * definite integration & integration on complex plane using residues
 * Groebner bases and their applications in geometry, simplification and integration
-** improve Buchberger's algorithm and implement Faugere F4 (compare their speed)
+  * improve Buchberger's algorithm and implement Faugere F4 (compare their speed)
 * improve polynomial algorithms (gcd, factorization) by allowing coefficients in algebraic extensions of the ground domain
 * implement efficient multivariate polynomials (arithmetics, gcd, factorization)
-** choose a polynomial representation (e.g. recursive dense) or use task dependent representations
-** implement efficient arithmetics (e.g. using geobuckets (Yan) or heaps (Monagan & Pearce))
-** implement factorization algorithm (Musser's or Wang's EEZ (better)) and gcd (e.g. EEZ-GCD)
-** provide high-level OO abstraction over polynomial tools you've developed
+  * choose a polynomial representation (e.g. recursive dense) or use task dependent representations
+  * implement efficient arithmetics (e.g. using geobuckets (Yan) or heaps (Monagan & Pearce))
+  * implement factorization algorithm (Musser's or Wang's EEZ (better)) and gcd (e.g. EEZ-GCD)
+  * provide high-level OO abstraction over polynomial tools you've developed
 * '''Add support for solving inequalities, and support for assumptions like Assume(x>y) (I think these two will require each other).'''
 * improve SymPy's pattern matching abilities (efficiency and generality)
-** experiment with regular expressions over SymPy's algebraic expressions
-** implement similarity measure between expression trees
-** expression complexity measures (e.g. Kolmogorov's complexity)
-** implement expressions signatures and heuristic equivalence testing
-** implement semantic matching (e.g. expression: cos(x), pattern: sin(a*x) + b)
-*** e.g by using power series for this purpose (improve series speed)
-** matching of Python's objects (lists, sets, tuples etc.)
-** use pure Python syntax for all this (no preparsing)
+  * experiment with regular expressions over SymPy's algebraic expressions
+  * implement similarity measure between expression trees
+  * expression complexity measures (e.g. Kolmogorov's complexity)
+  * implement expressions signatures and heuristic equivalence testing
+  * implement semantic matching (e.g. expression: cos(x), pattern: sin(a*x) + b)
+    * e.g by using power series for this purpose (improve series speed)
+  * matching of Python's objects (lists, sets, tuples etc.)
+  * use pure Python syntax for all this (no preparsing)
 * improve simplification and term rewriting algorithms
-** add (improve) verbatim and semi-verbatim modes (more control on expression rewriting)
-** fix annoying minus sign rewriting problem (separate internal representation and printing)
-** extend simplify() function to support something more than rational functions (see trim())
-** implement more expression rewrite functions (to an exact form that user specifies)
-** maybe put transformation rules in an external database (e.g. prolog), what about speed?
-** improve context (e.g. input) depended simplification steps in different algorithms
-*** e.g. the integrator needs different sets of rules to return "better" output for different input
-*** but there are more: recurrences, summations, solvers, polynomials with arbitrary coefficients
-** what about information carried by expressions?
-*** what is simpler: chebyshevt(1, x) or x ?
-*** what is simpler: chebyshevt(1000, x) or (...) ?
+  * add (improve) verbatim and semi-verbatim modes (more control on expression rewriting)
+  * fix annoying minus sign rewriting problem (separate internal representation and printing)
+  * extend simplify() function to support something more than rational functions (see trim())
+  * implement more expression rewrite functions (to an exact form that user specifies)
+  * maybe put transformation rules in an external database (e.g. prolog), what about speed?
+  * improve context (e.g. input) depended simplification steps in different algorithms
+    * e.g. the integrator needs different sets of rules to return "better" output for different input
+    * but there are more: recurrences, summations, solvers, polynomials with arbitrary coefficients
+  * what about information carried by expressions?
+    * what is simpler: chebyshevt(1, x) or x ?
+    * what is simpler: chebyshevt(1000, x) or (...) ?
 * implement symbolic (formal) logics and set theory ''I think some of this might already be implemented with the new assumptions.  Check the source. -Aaron'''
-** implement predicate (e.g. first-order), modal, temporal, description logics
-** implement multivalued logics; fuzzy and uncertain logics and variables
-** implement rewriting, minimization, normalization (e.g. Skolem) of expressions
-** implement set theory, cardinal numbers, relations etc.
-** add nice unicode, latex and mathml pretty printing  ''Don't we already have this?  -Aaron''
-*** maybe use user dependent sets of symbols e.g. for implication (=>), (->)
-** add drawing of Venn diagrams (e.g. for educational purpose)
-** improve SymPy's logic facilities to boost assumptions engine
+  * implement predicate (e.g. first-order), modal, temporal, description logics
+  * implement multivalued logics; fuzzy and uncertain logics and variables
+  * implement rewriting, minimization, normalization (e.g. Skolem) of expressions
+  * implement set theory, cardinal numbers, relations etc.
+  * add nice unicode, latex and mathml pretty printing  ''Don't we already have this?  -Aaron''
+    * maybe use user dependent sets of symbols e.g. for implication (=>), (->)
+  * add drawing of Venn diagrams (e.g. for educational purpose)
+  * improve SymPy's logic facilities to boost assumptions engine
 * implement symbolic global optimization (value, argument) with/without constraints, use assumptions
 * '''improve the series expansion ([http://code.google.com/p/sympy/issues/list?q=label:Series relevant issues])'''
-** formal power series (FPS)
-** improve limits - make sure all basic limits work
+  * formal power series (FPS)
+  * improve limits - make sure all basic limits work
 * objects with indices (tensors)
 * improve the plotting module:
-** better matplotlib integration
-** extract the math TeX typesetting engine from matplotlib (it has some external dependencies on freetype and Agg that will need to be resolved), and integrate it in our plotting lib (maybe create a new project for this engine)
+  * better matplotlib integration
+  * extract the math TeX typesetting engine from matplotlib (it has some external dependencies on freetype and Agg that will need to be resolved), and integrate it in our plotting lib (maybe create a new project for this engine)
 * generalized functions -- Dirac delta, P(1/x), etc... Convolution, Fourier and Laplace transforms
 * vector calculus, differential fields, maybe Lie algebras & groups
 * parametric integrals asymptotic expansion (integral series)
@@ -69,14 +69,14 @@ Please add new ideas here. And remember, that you can apply with something compl
 * partial differential equations.  Currencly, SymPy can solve only very simple case of separable PDEs.  
 * increase image processing of PIL+SymPy functionality to match that of octave or matlab
 * improve SymPy's interoperatibility with other CAS software
-** implement general code parsing (Mathematica, Maxima, Axiom etc.) using e.g. pyparsing
-** implement Python + SymPy (structure + semantics) translation to your favorite CAS (other than SymPy :)
+  * implement general code parsing (Mathematica, Maxima, Axiom etc.) using e.g. pyparsing
+  * implement Python + SymPy (structure + semantics) translation to your favorite CAS (other than SymPy :)
 * '''Symbolic quantum mechanics in SymPy.'''  The follow would each probably be a solid summer's work (or more).
-** Abstract Dirac notation, including Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, etc.
-** Spin states and operators for arbitrary spin.  This would include things like angular momentum coupling, Clebsch-Gordon coefficient, Wigner 3j and 6j, etc.
-** Position and momentum basis functions on arbitrary intervals and sets in 1D, 2D and 3D.  Use to implement basis quantum systems like particle in a box, H atom, simple harmonic oscillator, scattering, etc.
-** Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
-** Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
+  * Abstract Dirac notation, including Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, etc.
+  * Spin states and operators for arbitrary spin.  This would include things like angular momentum coupling, Clebsch-Gordon coefficient, Wigner 3j and 6j, etc.
+  * Position and momentum basis functions on arbitrary intervals and sets in 1D, 2D and 3D.  Use to implement basis quantum systems like particle in a box, H atom, simple harmonic oscillator, scattering, etc.
+  * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
+  * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
 
 ==Detailed Ideas==
 
