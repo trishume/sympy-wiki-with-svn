@@ -96,7 +96,7 @@ The work with processing of many various cases of series and limits was executed
 
 - Class *Function* , *exp* *sin* and others contain method **taylor_term**.
 
-- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = (1 + x**3/6 + O(x**4))^1000.
+- general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = (1 + x^{\frac{3}{6}} + O(x**4))^1000.
 
 - There is an object **Sum** defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
 
@@ -112,7 +112,7 @@ The work with processing of many various cases of series and limits was executed
 - Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
 
 # Open questions and future topics
-- what is exp(1/).series(x, oo) - classical Laurent or power series at point oo?
+- what is exp(1/x).series(x, oo) - classical Laurent or power series at point oo?
 - multivariable extension.
 - complex numbers, non commutative formal variables.
 - convergence
