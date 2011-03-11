@@ -129,7 +129,7 @@ sympy@googlegroups.com
 
 ## Website:
 
-http://groups.google.com/group/sympy
+[[http://groups.google.com/group/sympy]]
 
 # What is the main IRC channel for your organization?
 
