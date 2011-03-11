@@ -250,7 +250,7 @@ encourage them to do any meeting on our public IRC channel, so that it
 is public to the entire community.
 
 After the program is over, the students already have their blogs, which
-are synchronized with our [[planet.sympy.org]], and usually if they blogged
+are synchronized with our [planet.sympy.org](http://planet.sympy.org/), and usually if they blogged
 interesting things, they already built a nice community around their
 blogs, and so they continue blogging about what they do. It all depends
 how they like our community and how they communicate with others, so we will try
