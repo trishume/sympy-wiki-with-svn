@@ -15,8 +15,6 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 * asymptotic series
 * port to Python 3.0 ([issue 1262](http://code.google.com/p/sympy/issues/detail?id=1262))
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
-  * implement recursive Risch algorithm (compare with heuristic version)
-  * improve integration of rational functions (via subresultants)
   * integration of functions on domains of maximum extent, etc.
 * definite integration & integration on complex plane using residues
 * Groebner bases and their applications in geometry, simplification and integration
@@ -61,7 +59,7 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 * generalized functions -- Dirac delta, P(1/x), etc... Convolution, Fourier and Laplace transforms
 * vector calculus, differential fields, maybe Lie algebras & groups
 * parametric integrals asymptotic expansion (integral series)
-* ordinary differential equations. Currently, SymPy only supports many basic types of differential equations, but there are plenty of methods that are not implemented. Maybe support for using Lie groups to help solve ODEs.  See [the ODE docs](http://docs.sympy.org/modules/solvers/ode.html) and the current source (sympy/solvers/ode.py) for information on what methods are currently implemented.  Also, there is no support currently for solving systems of ODEs.  You also might want to look at [Manuel Bronstein's sumit](http://www-sop.inria.fr/cafe/Manuel.Bronstein/sumit/index.html).
+* ordinary differential equations. Currently, SymPy only supports many basic types of differential equations, but there are plenty of methods that are not implemented. Maybe support for using Lie groups to help solve ODEs.  See [the ODE docs](http://docs.sympy.org/modules/solvers/ode.html) and the [current source](https://github.com/sympy/sympy/blob/master/sympy/solvers/ode.py) for information on what methods are currently implemented.  Also, there is no support currently for solving systems of ODEs.  You also might want to look at [Manuel Bronstein's sumit](http://www-sop.inria.fr/cafe/Manuel.Bronstein/sumit/index.html).
 * partial differential equations.  Currently, SymPy can solve only very simple case of separable PDEs.  
 * increase image processing of PIL+SymPy functionality to match that of octave or matlab
 * improve SymPy's interoperatibility with other CAS software
@@ -74,7 +72,7 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
   * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
 
-## Detailed Ideas
+## Some Detailed Ideas
 
 ### Symbolic quantum mechanics (sympy.physics)
 
@@ -189,7 +187,7 @@ Algorithm due to Karr is the most powerful tool in the field of symbolic summati
 
 If you are willing to mentor, please add yourself here:
 
-* Aaron Meurer - If I don't decide to apply as a student, I would love to be a mentor.
+* Aaron Meurer
 * Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron -->
 * Brian E. Granger: I am willing to mentor any of the physics related projects.
 * Andy R. Terrel
