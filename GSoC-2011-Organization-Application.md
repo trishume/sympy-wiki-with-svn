@@ -137,7 +137,7 @@ sympy@googlegroups.com
 
 # Does your organization have an application template you would like to see students use? If so, please provide it now. Please note that it is a very good idea to ask students to provide you with their contact information as part of your template. Their contact details will not be shared with you automatically via the GSoC 2011 site.
 
-Please see https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Template ([[GSoC-2011-Application-Template]])
+Please see [[https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Template]].
 
 # What criteria did you use to select the individuals who will act as mentors for your organization? Please be as specific as possible:
 
