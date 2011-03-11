@@ -10,6 +10,8 @@ Please add new ideas here. This is for inspiration, you can apply with something
 
 The ideas are in no particular order.  Ideas in bold are ones that we would really like to have implemented. Some of these things are already partially implemented.  Checkout the current source or ask on the mailing list to see where things presently stand.
 
+The second section contains more detailed projects, that can be done.
+
 * anything from our [[roadmap]]
 * optimize the core using Cython (see [this proof-of-concept](http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23))
 * asymptotic series
@@ -74,7 +76,7 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
   * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
 
-## Some Detailed Ideas
+## Some Detailed Ideas (Projects)
 
 ### Symbolic quantum mechanics (sympy.physics)
 
