@@ -200,10 +200,11 @@ From 16 students, that SymPy had so far, one project had to be ended at midterm,
 
 We are in frequent contact with all our mentors and we have collaborated
 with each other for several years, so we do not expect that such thing
-would happen. However, if that happens, Ondřej Čertík has experience
-with mentoring several students at once from the year 2007, when SymPy
+would happen. However, it has already happened to us in the past, that
+some mentors were not as much available as needed. For example in the year 2007,
+when SymPy
 participated as part of several organizations and even though we had
-official mentors at the umbrella organizations, Ondřej was effectively
+official mentors at the umbrella organizations, Ondrej Certik was effectively
 supervising all 5 students. As can be seen from our GSoC 2007 page:
 
 http://code.google.com/p/sympy/wiki/GSoC2007
@@ -211,13 +212,12 @@ http://code.google.com/p/sympy/wiki/GSoC2007
 All the projects managed to finish successfully.
 
 Ondřej at the time was the project leader, but he has since passed on
-the position to me (Aaron Meurer).  I think that if it is necessary, I
-could do similar.  Also, other mentors or members of the community could
+the position to Aaron Meurer, who could do similar. Besides that, Ondrej is
+ready to help if needed, and also other mentors or members of the community will
 pick up if a mentor falls out.
 
-This will be more effective than assigning a backup mentor to each
-student, because this way anybody can step in and fill in for a mentor
-who is not available.  It will also encourage students to interact with
+We will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access, so we have people to choose from for this position), but we do encourage 
+students to interact with
 the whole community, and ask the whole community for help (i.e., on the
 IRC channel or on the mailing list) if they have a problem, rather than
 just one person.  This will help them to become better members of the
