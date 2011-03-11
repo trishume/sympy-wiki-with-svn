@@ -193,3 +193,4 @@ If you are willing to mentor, please add yourself here:
 * Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron -->
 * Brian E. Granger: I am willing to mentor any of the physics related projects.
 * Andy R. Terrel
+* Mateusz Paprocki
