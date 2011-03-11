@@ -11,7 +11,7 @@ Please add new ideas here. This is for inspiration, you can apply with something
 The ideas are in no particular order.  Ideas in bold are ones that we would really like to have implemented. Some of these things are already partially implemented.  Checkout the current source or ask on the mailing list to see where things presently stand.
 
 * anything from our [[roadmap]]
-* '''integrate our experimental [http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23 Cython core] into SymPy'''
+* optimize the core using Cython (see [this proof-of-concept](http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23))
 * asymptotic series
 * port to Python 3.0 ({{issue|1262}})
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
