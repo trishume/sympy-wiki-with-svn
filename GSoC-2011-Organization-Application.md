@@ -203,11 +203,11 @@ with each other for several years, so we do not expect that such thing
 would happen. However, it has already happened to us in the past that
 some mentors were not as much available as needed. For example in the year 2007,
 when SymPy
-participated as part of several organizations and even though we had
+participated as part of several organizations, even though we had
 official mentors at the umbrella organizations, Ondřej Čertík was effectively
-supervising all 5 students. As can be seen from our GSoC 2007 page:
+supervising all 5 students, as can be seen from our GSoC 2007 page:
 
-http://code.google.com/p/sympy/wiki/GSoC2007
+[[http://code.google.com/p/sympy/wiki/GSoC2007]]
 
 All the projects managed to finish successfully.
 
@@ -216,7 +216,7 @@ the position to Aaron Meurer, who could do similar. Besides that, Ondřej is
 ready to help if needed, and also other mentors or members of the community will
 pick up if a mentor falls out.
 
-We will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access, so we have people to choose from for this position), but we do encourage 
+We will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access; we have people to choose from for this position), but we do encourage 
 students to interact with
 the whole community, and ask the whole community for help (i.e., on the
 IRC channel or on the mailing list) if they have a problem, rather than
