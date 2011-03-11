@@ -20,18 +20,20 @@ SymPy is a Python library for symbolic mathematics. It aims to become a
 full-featured computer algebra system (CAS) while keeping the code as
 simple as possible in order to be comprehensible and easily extensible.
 SymPy is written entirely in Python and does not require any external
-libraries.
+libraries. It also has a liberal BSD license allowing other open source
+projects and commercial companies to make use of SymPy in their own
+projects.
 
 SymPy has a vast array of potential applications, from theoretical
 physics (atomic physics, quantum field theory, general relativity,
-classical mechanics, ...), applied math (solving algebraic and
+classical mechanics, quantum information...), applied math (solving algebraic and
 differential equations, ...), teaching (calculus, integrals,
 derivatives, limits, ...), web (it runs on the google app engine) and it
 can also be included as a library in any scientific code.
 
-SymPy has a very large, active development team that has increased
+SymPy has a large, active development team that has increased
 non-stop since 2007 (ref: [[http://www.ohloh.net/p/sympy]]) thanks to an
-extensible architecture that permits to add features in a modular way.
+extensible architecture that enables features to be added easily and in a modular way.
 
 It is built and tested regularly on all major platforms and all major
 architectures to ensure that it can reach the widest possible audience.
@@ -46,8 +48,8 @@ The new BSD license (http://opensource.org/licenses/bsd-license)
 
 # Why is your organization applying to participate in GSoC 2011? What do you hope to gain by participating?
 
-From previous experiences, GSoC is a very effective way to get students
-attracted to the project, coding on a specific task.
+From previous experiences, GSoC is an effective way to get students
+involved in the project, by coding on a specific task with a finite timeline.
 
 It will be beneficial for the project, since each year this has proven
 to give a huge boost to the project, and it will be beneficial for the
@@ -66,7 +68,7 @@ their own organization, instead of directly to SymPy.
 # If accepted, would this be your first year participating in GSoC?
 
 It would be our first time participating as a mentoring organization,
-but we have sponsored projects in the past under umbrella organizations
+but we have sponsored projects in the past under different umbrella organizations
 (see the previous and the next question).
 
 # Did your organization participate in past GSoCs? If so, please summarize your involvement and the successes and challenges of your participation.
@@ -182,7 +184,7 @@ so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
 
-If despite these things a student disappears, or does not work up to
+If, despite these things a student disappears, or does not work up to
 their potential, the mentor and the SymPy organization admin will try to
 sit down with the student in an IRC conversation or via some other
 medium to try to see what is holding him back and how he can be brought
@@ -194,7 +196,7 @@ evaluation, but this will be a last resort, because it will be to
 everyone's benefit if the student can be brought back on track.
 If the student stops being responsive, we will require him to report daily, what work was done. If even that doesn't help, then before failing him, the issue will be raised and discussed among all the mentors (and in the past it was discussed with the Python Software Foundation, who was the umbrella organization). If SymPy is accepted as a standalone organization, we will try to discuss this (privately) with similar organizations, like Python Software Foundation, to get an outside opinion. If in doubts, also the main GSoC list for mentors will be used. So that we can make sure that the student was not treated/failed unfairly.
 
-From 16 students, that SymPy had so far, one project had to be ended at midterm, and we had followed the above procedure in that case.
+From the 16 students, that SymPy had so far, one project had to be ended at midterm, and we had followed the above procedure in that case.
 
 # What is your plan for dealing with disappearing mentors?
 
