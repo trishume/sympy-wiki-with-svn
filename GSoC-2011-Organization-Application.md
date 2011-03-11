@@ -4,7 +4,7 @@ organization.  Please edit this page to update/improve stuff. The
 headers below are the questions that we have to answer for the
 application.
 
-The application deadline is March 11.  Feel free to edit this page until
+The application deadline is March 11, 3pm pacific time.  Feel free to edit this page until
 that point.  On March 11 I will copy the contents of this page to the
 form at [[http://www.google-melange.com/]].
 
