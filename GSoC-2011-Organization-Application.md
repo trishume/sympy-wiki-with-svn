@@ -158,7 +158,7 @@ In particular, here is a list of people (SymPy Organization Members at github):
 
 [[https://github.com/sympy]]
 
-who have push access to the main sympy repository (15 at the time of writing this text). Those are people that have already proven to be part of the SymPy community and proven that they can be trusted. This is an obvious pool of people to choose from. However, in the past, we also had excellent experience when we choose a mentor from outside this pool, for example an university professor familiar with the field of the project. In that case, we assigned a backup mentor from the above pool, so that the student can work with both and has a guidance as how to write his code and get it in.
+who have push access to the main sympy repository (15 at the time of writing this text). Those are people that have already proven to be part of the SymPy community and proven that they can be trusted. This is an obvious pool of people to choose from. However, in the past, we also had excellent experience when we choose a mentor from outside this pool, for example a university professor familiar with the field of the project. In that case, we assigned a backup mentor from the above pool, so that the student can work with both and has a guidance as how to write his code and get it in.
 
 # What is your plan for dealing with disappearing students?
 
