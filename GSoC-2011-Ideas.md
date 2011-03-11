@@ -1,16 +1,16 @@
 # Google Summer of Code 2011
 
-This is the list of ideas for students wishing to apply for Google Summer of Code 2011.  
+This is the list of ideas for students wishing to apply for Google Summer of Code 2011.
 
 If you are a student interested in applying, please get in touch with us on our [mailing list](http://groups.google.com/group/sympy), so that we can help you with the application.
 
 ## Ideas
 
-Please add new ideas here. This is for inspiration, you can apply with something completely different if you like. The best project for you is one you are interested in, and are knowledgeable about.  That way, you will be the most successful in your project and have the most fun doing it, while we will be the most confident in your commitment and your ability to complete it.   
+Please add new ideas here. This is for inspiration, you can apply with something completely different if you like. The best project for you is one you are interested in, and are knowledgeable about.  That way, you will be the most successful in your project and have the most fun doing it, while we will be the most confident in your commitment and your ability to complete it.
 
 The ideas are in no particular order.  Ideas in bold are ones that we would really like to have implemented. Some of these things are already partially implemented.  Checkout the current source or ask on the mailing list to see where things presently stand.
 
-The second section contains more detailed projects, that can be done.
+The second section contains more detailed projects that can be done.
 
 * anything from our [[roadmap]]
 * optimize the core using Cython (see [this proof-of-concept](http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23))
@@ -65,7 +65,7 @@ The second section contains more detailed projects, that can be done.
 * vector calculus, differential fields, maybe Lie algebras & groups
 * parametric integrals asymptotic expansion (integral series)
 * ordinary differential equations. Currently, SymPy only supports many basic types of differential equations, but there are plenty of methods that are not implemented. Maybe support for using Lie groups to help solve ODEs.  See [the ODE docs](http://docs.sympy.org/modules/solvers/ode.html) and the [current source](https://github.com/sympy/sympy/blob/master/sympy/solvers/ode.py) for information on what methods are currently implemented.  Also, there is no support currently for solving systems of ODEs.  You also might want to look at [Manuel Bronstein's sumit](http://www-sop.inria.fr/cafe/Manuel.Bronstein/sumit/index.html).
-* partial differential equations.  Currently, SymPy can solve only very simple case of separable PDEs.  
+* partial differential equations.  Currently, SymPy can solve only very simple case of separable PDEs.
 * increase image processing of PIL+SymPy functionality to match that of octave or matlab
 * improve SymPy's interoperatibility with other CAS software
   * implement general code parsing (Mathematica, Maxima, Axiom etc.) using e.g. pyparsing
@@ -74,7 +74,7 @@ The second section contains more detailed projects, that can be done.
   * Abstract Dirac notation, including Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, etc.
   * Spin states and operators for arbitrary spin.  This would include things like angular momentum coupling, Clebsch-Gordon coefficient, Wigner 3j and 6j, etc.
   * Position and momentum basis functions on arbitrary intervals and sets in 1D, 2D and 3D.  Use to implement basis quantum systems like particle in a box, H atom, simple harmonic oscillator, scattering, etc.
-  * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
+  * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction.
   * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
 
 ## Some Detailed Ideas (Projects)
@@ -102,10 +102,10 @@ While SymPy already has spherical harmonics, it would be nice to integrate those
 * **Status**:
 The position and momentum basis functions in quantum mechanics are somewhat pathological because the basis functions are not square integrable. In spite of
 this, these representations are immensely useful and are introduced to students early on.  We would like to be able to handle position and momentum wavefunctions
-on arbitrary domains in 1D, 2D and 3D.  
+on arbitrary domains in 1D, 2D and 3D.
 * **Idea**:
 Implement full machinery for position and momentum wavefunctions, including modified Hilbert spaces, Dirac delta functions, basis transformations in 1D, 2D and 3D.
-This should use the base layer of quantum states and operators in SymPy (see first topic).  The test suite should include classic examples from quantum mechanics, 
+This should use the base layer of quantum states and operators in SymPy (see first topic).  The test suite should include classic examples from quantum mechanics,
 such as particle in box, H atom, simple harmonic oscillator, scattering, etc.
 * **Rating**: 3-4 (moderate-hard)
 
