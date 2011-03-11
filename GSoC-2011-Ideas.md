@@ -144,9 +144,7 @@ Using the base layer of quantum states and operators in SymPy (see first topic) 
 
 Status:
 
-SymPy currently has a good bit of second quantization implemented here:
-
-http://github.com/ellisonbg/sympy/blob/master/sympy/physics/secondquant.py
+SymPy currently has a good bit of second quantization implemented [here](http://github.com/sympy/sympy/blob/master/sympy/physics/secondquant.py).
 
 However, there are many things we could do to improve this and add more sophisticated capabilities.
 
