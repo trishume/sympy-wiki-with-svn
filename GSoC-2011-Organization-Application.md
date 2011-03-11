@@ -182,17 +182,17 @@ so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
 
-If, despite these things a student disappears, or does not work up to
+If, despite these things, a student disappears, or does not work up to
 their potential, the mentor and the SymPy organization admin will try to
 sit down with the student in an IRC conversation or via some other
 medium to try to see what is holding him back and how he can be brought
 back on track.  If necessary, we may need to adjust the goals as
 originally stated in the student's application, because it is better for
-a student to do a reduced amount than to do nothing at all.  If nothing
+a student to do a reduced amount of work than to do nothing at all.  If nothing
 works, we may be forced to fail the student in his midterm or final
 evaluation, but this will be a last resort, because it will be to
 everyone's benefit if the student can be brought back on track.
-If the student stops being responsive, we will require him to report daily, what work was done. If even that doesn't help, then before failing him, the issue will be raised and discussed among all the mentors (and in the past it was discussed with the Python Software Foundation, who was the umbrella organization). If SymPy is accepted as a standalone organization, we will try to discuss this (privately) with similar organizations, like Python Software Foundation, to get an outside opinion. If in doubts, also the main GSoC list for mentors will be used. So that we can make sure that the student was not treated/failed unfairly.
+If the student stops being responsive, we will require him to report daily on what work he did. If  that doesn't help, then before failing him, we will raise the issue among all the mentors (in the past it was discussed with the Python Software Foundation, who was the umbrella organization). If SymPy is accepted as a standalone organization, we will try to discuss this (privately) with similar organizations, like the Python Software Foundation, to get an outside opinion. If there are any doubts, we will also use the main GSoC list for mentors. This is so that we can make sure that the student was not treated/failed unfairly.
 
 From the 16 students that SymPy had so far, one project had to be ended at midterm, and we had followed the above procedure in that case.
 
@@ -204,7 +204,7 @@ would happen. However, it has already happened to us in the past that
 some mentors were not as much available as needed. For example in the year 2007,
 when SymPy
 participated as part of several organizations and even though we had
-official mentors at the umbrella organizations, Ondrej Certik was effectively
+official mentors at the umbrella organizations, Ondřej Čertík was effectively
 supervising all 5 students. As can be seen from our GSoC 2007 page:
 
 http://code.google.com/p/sympy/wiki/GSoC2007
@@ -212,7 +212,7 @@ http://code.google.com/p/sympy/wiki/GSoC2007
 All the projects managed to finish successfully.
 
 Ondřej at the time was the project leader, but he has since passed on
-the position to Aaron Meurer, who could do similar. Besides that, Ondrej is
+the position to Aaron Meurer, who could do similar. Besides that, Ondřej is
 ready to help if needed, and also other mentors or members of the community will
 pick up if a mentor falls out.
 
@@ -264,7 +264,7 @@ accept students who are likely to become regular contributors to the
 community after the program ends, because that will benefit SymPy the
 most.  But we do realize that people can become interested in other
 things, so while we do not require this of students (if it were even
-possible to require such a thing), we let them now that our expectation as well as the expectation of the GSoC program is to "contribute to opensource, while getting paid, and stick around later, and contribute more", as opposed to "getting paid, while contributing to opensource, and move on after the job is finished".
+possible to require such a thing), we let them now that our expectation as well as the expectation of the GSoC program is to "contribute to open source, while getting paid, and stick around later, and contribute more", as opposed to "getting paid, while contributing to open source, and move on after the job is finished".
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
