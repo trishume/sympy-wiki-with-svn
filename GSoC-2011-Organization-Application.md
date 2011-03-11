@@ -1,12 +1,8 @@
-This is based on the [Google Summer of Code 2010
-application](GSoC-2010-Organization-Application) for SymPy to be an
-organization.  Please edit this page to update/improve stuff. The
-headers below are the questions that we have to answer for the
-application.
+This is based on the [Google Summer of Code 2010 application](GSoC-2010-Organization-Application) for SymPy to be an organization. The headers below were the questions that we had to answer for the application.
 
-The application deadline is March 11, 3pm pacific time.
+The application deadline was March 11, 3 PM Pacific Time.
 
-**I have submitted the application.  I can still edit it before the deadline, so if you make any additional changes before then (less than an hour from this writing), I can add them.  But please ping me on IRC if you do.**
+**I have submitted the application.  The deadline is now past, so please do not edit this page any more.  Google will notify me of our acceptance or nonacceptance on March 18, 11 PM Pacific Time.  I will notify the list at that time of Google's decision.**
 
 --Aaron
 
