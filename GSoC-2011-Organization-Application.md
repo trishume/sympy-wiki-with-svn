@@ -100,7 +100,7 @@ A total of fifteen out of sixteen projects were successful and they
 incredibly boosted SymPy's development. Some of the students who did
 this program have continued developing for SymPy after the program
 ended, again helping to boost the program.  For example, the current SymPy project leader (Aaron
-Meurer) participated in 2009 and 2010, and in 2011, Ondřej Čertík, the
+Meurer) participated in 2009 and 2010.  In 2011, Ondřej Čertík, the
 founder of the project and leader, asked him to step up and be the leader
 of the project. Aaron would have never have heard of the project and would
 not be doing any work at all for open source were it not for the Google
