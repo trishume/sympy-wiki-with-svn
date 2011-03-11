@@ -67,9 +67,7 @@ their own organization, instead of directly to SymPy.
 
 # If accepted, would this be your first year participating in GSoC?
 
-It would be our first time participating as a mentoring organization,
-but we have sponsored projects in the past under different umbrella organizations
-(see the previous and the next question).
+Yes
 
 # Did your organization participate in past GSoCs? If so, please summarize your involvement and the successes and challenges of your participation.
 
