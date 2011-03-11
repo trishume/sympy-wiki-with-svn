@@ -13,7 +13,7 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 * anything from our [[roadmap]]
 * optimize the core using Cython (see [this proof-of-concept](http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23))
 * asymptotic series
-* port to Python 3.0 ({{issue|1262}})
+* port to Python 3.0 ([issue 1262](http://code.google.com/p/sympy/issues/detail?id=1262))
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
   * implement recursive Risch algorithm (compare with heuristic version)
   * improve integration of rational functions (via subresultants)
@@ -27,16 +27,12 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * implement efficient arithmetics (e.g. using geobuckets (Yan) or heaps (Monagan & Pearce))
   * implement factorization algorithm (Musser's or Wang's EEZ (better)) and gcd (e.g. EEZ-GCD)
   * provide high-level OO abstraction over polynomial tools you've developed
-* '''Add support for solving inequalities, and support for assumptions like Assume(x>y) (I think these two will require each other).'''
 * improve SymPy's pattern matching abilities (efficiency and generality)
-  * experiment with regular expressions over SymPy's algebraic expressions
   * implement similarity measure between expression trees
   * expression complexity measures (e.g. Kolmogorov's complexity)
   * implement expressions signatures and heuristic equivalence testing
   * implement semantic matching (e.g. expression: cos(x), pattern: sin(a*x) + b)
     * e.g by using power series for this purpose (improve series speed)
-  * matching of Python's objects (lists, sets, tuples etc.)
-  * use pure Python syntax for all this (no preparsing)
 * improve simplification and term rewriting algorithms
   * add (improve) verbatim and semi-verbatim modes (more control on expression rewriting)
   * fix annoying minus sign rewriting problem (separate internal representation and printing)
@@ -49,18 +45,14 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * what about information carried by expressions?
     * what is simpler: chebyshevt(1, x) or x ?
     * what is simpler: chebyshevt(1000, x) or (...) ?
-* implement symbolic (formal) logics and set theory ''I think some of this might already be implemented with the new assumptions.  Check the source. -Aaron'''
+* implement symbolic (formal) logics and set theory
   * implement predicate (e.g. first-order), modal, temporal, description logics
   * implement multivalued logics; fuzzy and uncertain logics and variables
   * implement rewriting, minimization, normalization (e.g. Skolem) of expressions
   * implement set theory, cardinal numbers, relations etc.
-  * add nice unicode, latex and mathml pretty printing  ''Don't we already have this?  -Aaron''
-    * maybe use user dependent sets of symbols e.g. for implication (=>), (->)
-  * add drawing of Venn diagrams (e.g. for educational purpose)
-  * improve SymPy's logic facilities to boost assumptions engine
 * implement symbolic global optimization (value, argument) with/without constraints, use assumptions
-* '''improve the series expansion ([http://code.google.com/p/sympy/issues/list?q=label:Series relevant issues])'''
-  * formal power series (FPS)
+* **improve series expansions ([relevant issues](http://code.google.com/p/sympy/issues/list?q=label:Series))**
+  * formal power series
   * improve limits - make sure all basic limits work
 * objects with indices (tensors)
 * improve the plotting module:
@@ -69,13 +61,13 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 * generalized functions -- Dirac delta, P(1/x), etc... Convolution, Fourier and Laplace transforms
 * vector calculus, differential fields, maybe Lie algebras & groups
 * parametric integrals asymptotic expansion (integral series)
-* ordinary differential equations. Currently, SymPy only supports many basic types of differential equations, but there are plenty of methods that are not implemented. Maybe support for using Lie groups to help solve ODEs.  See [http://docs.sympy.org/modules/solvers/ode.html the ODE docs] and the current source (sympy/solvers/ode.py) for information on what methods are currently implemented.  Also, there is no support currently for solving systems of ODEs.  You also might want to look at [http://www-sop.inria.fr/cafe/Manuel.Bronstein/sumit/index.html Manuel Bronstein's sumit]
-* partial differential equations.  Currencly, SymPy can solve only very simple case of separable PDEs.  
+* ordinary differential equations. Currently, SymPy only supports many basic types of differential equations, but there are plenty of methods that are not implemented. Maybe support for using Lie groups to help solve ODEs.  See [the ODE docs](http://docs.sympy.org/modules/solvers/ode.html) and the current source (sympy/solvers/ode.py) for information on what methods are currently implemented.  Also, there is no support currently for solving systems of ODEs.  You also might want to look at [Manuel Bronstein's sumit](http://www-sop.inria.fr/cafe/Manuel.Bronstein/sumit/index.html).
+* partial differential equations.  Currently, SymPy can solve only very simple case of separable PDEs.  
 * increase image processing of PIL+SymPy functionality to match that of octave or matlab
 * improve SymPy's interoperatibility with other CAS software
   * implement general code parsing (Mathematica, Maxima, Axiom etc.) using e.g. pyparsing
   * implement Python + SymPy (structure + semantics) translation to your favorite CAS (other than SymPy :)
-* '''Symbolic quantum mechanics in SymPy.'''  The follow would each probably be a solid summer's work (or more).
+* **Symbolic quantum mechanics in SymPy.** Each of the following would probably be a solid summer's work (or more).
   * Abstract Dirac notation, including Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, etc.
   * Spin states and operators for arbitrary spin.  This would include things like angular momentum coupling, Clebsch-Gordon coefficient, Wigner 3j and 6j, etc.
   * Position and momentum basis functions on arbitrary intervals and sets in 1D, 2D and 3D.  Use to implement basis quantum systems like particle in a box, H atom, simple harmonic oscillator, scattering, etc.
