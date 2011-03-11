@@ -24,7 +24,6 @@ libraries, which makes it available everywhere Python can be used. It also has a
 projects and commercial companies to make use of SymPy in their own
 projects.
 
-
 SymPy has a vast array of potential applications, from theoretical
 physics (atomic physics, quantum field theory, general relativity,
 classical mechanics, quantum information...), applied math (solving algebraic and
@@ -32,11 +31,9 @@ differential equations, ...), teaching (calculus, integrals,
 derivatives, limits, ...), web (it runs on the google app engine), and it
 can also be included as a library in any scientific code.
 
-
 SymPy has a large, active development team that has increased
 non-stop since 2007 (ref: [[http://www.ohloh.net/p/sympy]]) thanks to an
 extensible architecture that enables features to be added easily and in a modular way.
-
 
 It is built and tested regularly on all major platforms and all major
 architectures to ensure that it can reach the widest possible audience.
