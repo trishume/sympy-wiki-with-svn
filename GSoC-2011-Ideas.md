@@ -53,9 +53,11 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * formal power series
   * improve limits - make sure all basic limits work
 * objects with indices (tensors)
-* improve the plotting module:
-  * better matplotlib integration
-  * extract the math TeX typesetting engine from matplotlib (it has some external dependencies on freetype and Agg that will need to be resolved), and integrate it in our plotting lib (maybe create a new project for this engine)
+* **improve the plotting module**:
+  * Make the Plot() command use more backends: matplotlib, google chart API link, pyglet, asciart...
+  * Implement high level features, so that it works like in Mathematica (http://reference.wolfram.com/mathematica/ref/Plot.html)
+  * Make sure that all SymPy functions/expressions can be nicely plotted
+  * Fix related things/bugs in SymPy
 * generalized functions -- Dirac delta, P(1/x), etc... Convolution, Fourier and Laplace transforms
 * vector calculus, differential fields, maybe Lie algebras & groups
 * parametric integrals asymptotic expansion (integral series)
