@@ -177,7 +177,7 @@ try to get the students to stay in touch with the entire community
 through the mailing list.  The requirement that students submit a patch
 to be accepted will also help us screen students who will likely not be
 very communicative with the community.  We will also require that
-students push their work up to an online git repository such as GitHub,
+students push their work up to an online git repository at GitHub,
 so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
