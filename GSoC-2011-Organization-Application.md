@@ -263,8 +263,8 @@ they will still sometimes submit bug reports or patches.  We will try to
 accept students who are likely to become regular contributors to the
 community after the program ends, because that will benefit SymPy the
 most.  But we do realize that people can become interested in other
-things, so we will not require this of students (if it were even
-possible to require such a thing).
+things, so while we do not require this of students (if it were even
+possible to require such a thing), we let them now that our expectation as well as the expectation of the GSoC program is to "contribute to opensource, while getting paid, and stick around later, and contribute more", as opposed to "getting paid, while contributing to opensource, and move on after the job is finished".
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
