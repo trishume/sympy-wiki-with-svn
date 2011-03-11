@@ -42,7 +42,7 @@ architectures to ensure that it can reach the widest possible audience.
 
 # Main Organization License:
 
-New and Simplified BSD licenses
+The new BSD license (http://opensource.org/licenses/bsd-license)
 
 # Why is your organization applying to participate in GSoC 2011? What do you hope to gain by participating?
 
