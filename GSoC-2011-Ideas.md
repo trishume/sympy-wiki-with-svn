@@ -82,9 +82,7 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 
 We would like to have a framework for general, abstract, symbolics quantum mechanics in SymPy.  This would include
 Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, Tensor products, approximations, time evolution, etc.  We have started to
-sketch out the design of this in this branch:
-
-http://github.com/ellisonbg/sympy/tree/quantum
+sketch out the design of this in [this branch](http://github.com/ellisonbg/sympy/tree/quantum).
 
 * Idea:
 
