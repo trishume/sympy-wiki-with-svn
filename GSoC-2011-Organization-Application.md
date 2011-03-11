@@ -96,7 +96,7 @@ of whom were successful in their projects.  The details are here:
 
 [[http://code.google.com/p/sympy/wiki/GSoC2010]]
 
-A total of fifteen out sixteen projects were successful and they
+A total of fifteen out of sixteen projects were successful and they
 incredibly boosted SymPy's development. Some of the students who did
 this program have continued developing for SymPy after the program
 ended, again helping to boost the program.  For example, I myself (Aaron
@@ -144,11 +144,11 @@ Please see https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Template ([
 Our mentors will be chosen from members of the community who have shown
 themselves to be committed to the development of SymPy.  This means that
 they will be familiar both with the code base and with git, so they will
-be able to help the students with these well.  Also, if possible, we
-will try to choose mentors who are familiar with the concepts that the
-student will be implementing.  Often, in SymPy, these can be
-mathematically complicated, so it is important to have a mentor who
-understands it well, if possible.  And of course, if someone whom we
+be able to help the students effectively with these.  Also, if possible, we
+will choose mentors who are familiar with the concepts that the
+student will be implementing.  In SymPy, these are often
+mathematically complicated, so it is useful to have a mentor who
+understands them well.  And of course, if someone whom we
 feel meets the above qualifications wants to mentor a particular
 student, we will let him, because that person is the most likely to be the
 best person to stick with that student and help him to complete his
