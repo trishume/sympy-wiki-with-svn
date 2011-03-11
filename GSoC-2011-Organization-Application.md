@@ -220,7 +220,7 @@ We will assign a backup mentor for each student just in case (see above for the 
 students to interact with
 the whole community, and ask the whole community for help (i.e., on the
 IRC channel or on the mailing list) if they have a problem, rather than
-just one person.  This will help them to become better members of the
+asking just one person.  This will help them to become better members of the
 community and will also make it easier for the whole community to
 monitor their progress.
 
