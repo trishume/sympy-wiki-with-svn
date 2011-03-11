@@ -282,6 +282,8 @@ SymPy has been very successful in the Google Summer of Code program
 under umbrella programs in the past, and we hope that we can be much
 more successful if we are accepted as an organization.
 
+We tried to answer all the questions above as best as we could, but ultimately, the best recommendation is looking at our past involvement in GSoC (see the links above), as well as talking to our previous umbrella organizations (PSF and PSU, see the vouching question above).
+
 # Backup Admin (Link ID):
 
 certik
