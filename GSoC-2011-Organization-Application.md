@@ -177,7 +177,7 @@ try to get the students to stay in touch with the entire community
 through the mailing list.  The requirement that students submit a patch
 to be accepted will also help us screen students who will likely not be
 very communicative with the community.  We will also require that
-students push their work up to an online git repository at GitHub,
+students push their work up to an online git repository such as GitHub,
 so that the mentor as well as everyone in the project can monitor their
 progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
@@ -214,7 +214,7 @@ All the projects managed to finish successfully.
 Ondřej at the time was the project leader, but he has since passed on
 the position to Aaron Meurer, who could do similar. Besides that, Ondrej is
 ready to help if needed, and also other mentors or members of the community will
-pick up if a mentor falls out.
+pick up if a mentor falls out. Traditionally, SymPy has a lot of willing backup mentors.
 
 We will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access, so we have people to choose from for this position), but we do encourage 
 students to interact with
