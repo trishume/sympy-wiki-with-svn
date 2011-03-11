@@ -116,15 +116,11 @@ From the 16 students that SymPy had so far, one project had to be ended at midte
 
 # What is your plan for dealing with disappearing mentors?
 
-We are in frequent contact with all our mentors and we have collaborated with each other for several years, so we do not expect that such thing would happen. However, it has already happened to us in the past that some mentors were not as much available as needed. For example in the year 2007, when SymPy participated as part of several organizations, even though we had official mentors at the umbrella organizations, Ondřej Čertík was effectively supervising all 5 students, as can be seen from our GSoC 2007 page:
+Traditionally, SymPy has a lot of willing backup mentors. We are in frequent contact with all our mentors and we have collaborated with each other for several years, so we do not expect that such thing would happen. However, we will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access; we have people to choose from for this position), but we do encourage  students to interact with the whole community, and ask the whole community for help (i.e., on the IRC channel or on the mailing list) if they have a problem, rather than asking just one person.  This will help them to become better members of the community and will also make it easier for the whole community to monitor their progress.
 
-[[http://code.google.com/p/sympy/wiki/GSoC2007]]
+If, given the above, there is still some problem, both Aaron Meurer (current project leader) and Ondrej Certik (former project leader) are ready to step up and become a mentor for any project if needed.
 
-All the projects managed to finish successfully.
-
-Ondřej at the time was the project leader, but he has since passed on the position to Aaron Meurer, who could do similar. Besides that, Ondřej is ready to help if needed, and also other mentors or members of the community will pick up if a mentor falls out. Traditionally, SymPy has a lot of willing backup mentors.
-
-We will assign a backup mentor for each student just in case (see above for the link to all SymPy developers with push access; we have people to choose from for this position), but we do encourage  students to interact with the whole community, and ask the whole community for help (i.e., on the IRC channel or on the mailing list) if they have a problem, rather than asking just one person.  This will help them to become better members of the community and will also make it easier for the whole community to monitor their progress.
+As shown by the 4 years of our experience with GSoC, this model seems to work very well for us.
 
 # What steps will you take to encourage students to interact with your project's community before, during and after the program?
 
