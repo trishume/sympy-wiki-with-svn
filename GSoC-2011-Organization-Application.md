@@ -119,7 +119,7 @@ dedicate their summer to working on it because of the stipend.
 
 # What is the URL for your ideas page?
 
-https://github.com/sympy/sympy/wiki/GSoC-2011-Ideas
+[[https://github.com/sympy/sympy/wiki/GSoC-2011-Ideas]]
 
 # What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for GSoC 2011. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
