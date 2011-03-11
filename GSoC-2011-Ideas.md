@@ -72,13 +72,11 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
   * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction. 
   * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
 
-==Detailed Ideas==
+## Some Detailed Ideas
 
-'''Note:  Some of this material was just copied from [[GSoC2009Ideas|Last Year's List]], but we have started to update it.'''
+### Symbolic quantum mechanics (sympy.physics)
 
-===Symbolic quantum mechanics (sympy.physics)===
-
-'''Abstract Dirac notation'''
+**Abstract Dirac notation**
 
 * Status:
 
@@ -98,7 +96,7 @@ operators and states.
 
 * Rating: 3 (moderate)
 
-'''Spin states and operators for arbitrary spin'''
+**Spin states and operators for arbitrary spin**
 
 * Status:
 
@@ -114,7 +112,7 @@ While SymPy already has spherical harmonics, it would be nice to integrate those
 
 * Rating: 3-4 (moderate-hard)
 
-'''Position and momentum basis functions'''
+**Position and momentum basis functions**
 
 * Status:
 
@@ -130,7 +128,7 @@ such as particle in box, H atom, simple harmonic oscillator, scattering, etc.
 
 * Rating: 3-4 (moderate-hard)
 
-'''Symbolic quantum computing'''
+**Symbolic quantum computing**
 
 * Status:
 
@@ -144,7 +142,7 @@ Using the base layer of quantum states and operators in SymPy (see first topic) 
 
 * Rating: 3-5 (hard)
 
-'''Second quantization capabilities'''
+**Second quantization capabilities**
 
 Status:
 
@@ -168,9 +166,9 @@ Work on sympy.physics.secondquant in the following areas:
 
 * Rating: 5 (hard)
 
-===Polynomials module===
+### Polynomials module
 
-'''Efficient Groebner bases and their applications'''
+**Efficient Groebner bases and their applications**
 
 * Status:
 
@@ -182,7 +180,7 @@ Improve efficiency of Groebner basis algorithm by using better selection strateg
 
 * Rating: 5 (very hard)
 
-'''Multivariate polynomials and factorization'''
+**Multivariate polynomials and factorization**
 
 * Status:
 
@@ -194,7 +192,7 @@ Start with implementing efficient multivariate polynomial arithmetics and GCD al
 
 * Rating: 4-5 (quite hard)
 
-'''Univariate polynomials over algebraic domains'''
+**Univariate polynomials over algebraic domains**
 
 * Status:
 
@@ -206,7 +204,7 @@ Choose a univariate polynomial representation in which elements of algebraic dom
 
 * Rating: 4-5 (quite hard)
 
-===Integration module===
+### Integration module
 
 * Idea:
 
@@ -214,7 +212,7 @@ Extend the integrator by implementing methods for integration of elementary and 
 
 * Rating: 3-5 (quite hard)
 
-'''Implement definite integration algorithm using residues'''
+**Implement definite integration algorithm using residues**
 
 * Status:
 
@@ -226,9 +224,9 @@ Improve the integrator by expressing the initial integral as an integral on the 
 
 Rating: 3-4 (hard)
 
-===Concrete module===
+### Concrete module
 
-'''Implement Karr algorithm, a decision procedure for symbolic summation'''
+**Implement Karr algorithm, a decision procedure for symbolic summation**
 
 * Status:
 
@@ -240,11 +238,11 @@ Algorithm due to Karr is the most powerful tool in the field of symbolic summati
 
 * Rating: 3-5 (quite hard)
 
-==Potential Mentors==
+## Potential Mentors
 
 If you are willing to mentor, please add yourself here:
-* Aaron Meurer - If I don't decide to apply as a student, I would love to be a mentor.
+
+* Aaron Meurer
 * Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron -->
 * Brian E. Granger: I am willing to mentor any of the physics related projects.
 * Andy R. Terrel
-[[Category:Development]]
