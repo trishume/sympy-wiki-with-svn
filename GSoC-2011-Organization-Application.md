@@ -67,7 +67,7 @@ their own organization, instead of directly to SymPy.
 
 # If accepted, would this be your first year participating in GSoC?
 
-Yes
+No
 
 # Did your organization participate in past GSoCs? If so, please summarize your involvement and the successes and challenges of your participation.
 
