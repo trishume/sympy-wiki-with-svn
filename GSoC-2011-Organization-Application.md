@@ -235,13 +235,13 @@ in our tracker:
 
 This is so that we can make sure that they can submit a patch (if they
 can't we teach them at this stage) and also so that we have some
-experience how they interact over email. We communicate with them very
+experience with how they interact over email. We communicate with them very
 frequently before they are accepted, and try to get them involved in our
 community. As was discussed in the previous questions, if we find that
 the students cannot do these fundamental things, then they will not be
 accepted to the program.
 
-During the program, they need to blog once a week and are encouraged to
+During the program, they need to blog once a week about their progress and are encouraged to
 become active members of our community. The mentors may also choose to
 have a meeting with the students regularly to monitor their progress. We
 will leave this up to the mentor and the student to schedule, because
@@ -250,11 +250,11 @@ encourage them to do any meeting on our public IRC channel, so that it
 is public to the entire community.
 
 After the program is over, the students already have their blogs, which
-are synchronized with our planet.sympy.org, and usually if they blogged
+are synchronized with our [[planet.sympy.org]], and usually if they blogged
 interesting things, they already built a nice community around their
-blogs, and so the continue blogging about what they do. It all depends
-how they like our community and to communicate with others and so we try
-hard so that they feel comfortable and will stick around.  We do
+blogs, and so they continue blogging about what they do. It all depends
+how they like our community and how they communicate with others, so we will try
+hard to make them feel comfortable so that they will stick around.  We do
 encourage all students to stick around and become regular members of the
 community.  Sometimes they do, and become valuable contributors and
 sometimes they even participate in Google Summer of Code again in future
@@ -262,9 +262,9 @@ years.  Other times, they move on to do their own things, though often
 they will still sometimes submit bug reports or patches.  We will try to
 accept students who are likely to become regular contributors to the
 community after the program ends, because that will benefit SymPy the
-most.  But we do realize that people can become interested in other
+most. But we do realize that people can become interested in other
 things, so while we do not require this of students (if it were even
-possible to require such a thing), we let them now that our expectation as well as the expectation of the GSoC program is to "contribute to open source, while getting paid, and stick around later, and contribute more", as opposed to "getting paid, while contributing to open source, and move on after the job is finished".
+possible to require such a thing), we let them know that our expectation as well as the expectation of the GSoC program is to "contribute to open source, while getting paid, and stick around later and contribute more," as opposed to "getting paid, while contributing to open source, and move on after the job is finished."
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
