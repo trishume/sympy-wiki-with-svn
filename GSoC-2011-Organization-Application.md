@@ -183,7 +183,7 @@ progress and to see the things that they are doing, as well as to help
 them fix mistakes early.
 
 If despite these things a student disappears, or does not work up to
-their potential, the mentor and I (the organization admin) will try to
+their potential, the mentor and the SymPy organization admin will try to
 sit down with the student in an IRC conversation or via some other
 medium to try to see what is holding him back and how he can be brought
 back on track.  If necessary, we may need to adjust the goals as
