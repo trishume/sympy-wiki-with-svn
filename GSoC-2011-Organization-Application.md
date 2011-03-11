@@ -196,13 +196,13 @@ evaluation, but this will be a last resort, because it will be to
 everyone's benefit if the student can be brought back on track.
 If the student stops being responsive, we will require him to report daily, what work was done. If even that doesn't help, then before failing him, the issue will be raised and discussed among all the mentors (and in the past it was discussed with the Python Software Foundation, who was the umbrella organization). If SymPy is accepted as a standalone organization, we will try to discuss this (privately) with similar organizations, like Python Software Foundation, to get an outside opinion. If in doubts, also the main GSoC list for mentors will be used. So that we can make sure that the student was not treated/failed unfairly.
 
-From the 16 students, that SymPy had so far, one project had to be ended at midterm, and we had followed the above procedure in that case.
+From the 16 students that SymPy had so far, one project had to be ended at midterm, and we had followed the above procedure in that case.
 
 # What is your plan for dealing with disappearing mentors?
 
 We are in frequent contact with all our mentors and we have collaborated
 with each other for several years, so we do not expect that such thing
-would happen. However, it has already happened to us in the past, that
+would happen. However, it has already happened to us in the past that
 some mentors were not as much available as needed. For example in the year 2007,
 when SymPy
 participated as part of several organizations and even though we had
