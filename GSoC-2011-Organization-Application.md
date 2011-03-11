@@ -4,7 +4,7 @@ organization.  Please edit this page to update/improve stuff. The
 headers below are the questions that we have to answer for the
 application.
 
-The application deadline was March 11, 3pm pacific time.
+The application deadline is March 11, 3pm pacific time.
 
 **I have submitted the application.  I can still edit it before the deadline, so if you make any additional changes before then (less than an hour from this writing), I can add them.  But please ping me on IRC if you do.**
 
