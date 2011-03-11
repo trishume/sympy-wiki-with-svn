@@ -187,6 +187,17 @@ SymPy currently features Gosper algorithm and some heuristics for computing sums
 Algorithm due to Karr is the most powerful tool in the field of symbolic summation, which you will implement in SymPy. There are strong similarities between this method and Risch algorithm for the integration problem. You will start with implementing the indefinite case and later can extend it to support definite summation (see work due to Schneider). Possibly you will also need to work on solving difference equations.
 * **Rating**: 3-5 (quite hard)
 
+### Plotting module
+
+#### Improve the plotting module
+* **Status**:
+Currently the Plot() command can only call pyglet, which is shipped with SymPy.
+* **Plan**:
+Make the Plot() command use more backends: matplotlib, google chart API link, pyglet, asciart (and more...)
+Implement high level features, so that it works like in Mathematica (http://reference.wolfram.com/mathematica/ref/Plot.html). Make sure that all SymPy functions/expressions can be nicely plotted.
+Fix related things/bugs in SymPy
+* **Rating**: 2-3 (easy, medium)
+
 ## Potential Mentors
 
 If you are willing to mentor, please add yourself here:
