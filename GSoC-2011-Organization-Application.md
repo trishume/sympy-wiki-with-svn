@@ -20,7 +20,7 @@ SymPy is a Python library for symbolic mathematics. It aims to become a
 full-featured computer algebra system (CAS) while keeping the code as
 simple as possible in order to be comprehensible and easily extensible.
 SymPy is written entirely in Python and does not require any external
-libraries. It also has a liberal BSD license allowing other open source
+libraries, which makes it available everywhere Python can be used. It also has a liberal BSD license allowing other open source
 projects and commercial companies to make use of SymPy in their own
 projects.
 
