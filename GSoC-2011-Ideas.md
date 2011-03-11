@@ -45,6 +45,7 @@ The second section contains more detailed projects, that can be done.
   * what about information carried by expressions?
     * what is simpler: chebyshevt(1, x) or x ?
     * what is simpler: chebyshevt(1000, x) or (...) ?
+  * improve trigonometric simplification
 * implement symbolic (formal) logics and set theory
   * implement predicate (e.g. first-order), modal, temporal, description logics
   * implement multivalued logics; fuzzy and uncertain logics and variables
@@ -54,7 +55,7 @@ The second section contains more detailed projects, that can be done.
 * **improve series expansions ([relevant issues](http://code.google.com/p/sympy/issues/list?q=label:Series))**
   * formal power series
   * improve limits - make sure all basic limits work
-* objects with indices (tensors)
+* continue work on objects with indices (tensors)
 * **improve the plotting module**:
   * Make the Plot() command use more backends: matplotlib, google chart API link, pyglet, asciart...
   * Implement high level features, so that it works like in Mathematica (http://reference.wolfram.com/mathematica/ref/Plot.html)
