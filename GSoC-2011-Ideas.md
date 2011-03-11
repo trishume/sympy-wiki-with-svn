@@ -15,8 +15,6 @@ The ideas are in no particular order.  Ideas in bold are ones that we would real
 * asymptotic series
 * port to Python 3.0 ([issue 1262](http://code.google.com/p/sympy/issues/detail?id=1262))
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
-  * implement recursive Risch algorithm (compare with heuristic version)
-  * improve integration of rational functions (via subresultants)
   * integration of functions on domains of maximum extent, etc.
 * definite integration & integration on complex plane using residues
 * Groebner bases and their applications in geometry, simplification and integration
@@ -209,24 +207,6 @@ Choose a univariate polynomial representation in which elements of algebraic dom
 * Rating: 4-5 (quite hard)
 
 ===Integration module===
-
-'''Implement Risch algorithm, a decision procedure for symbolic integration'''
-
-* Status:
-
-The main symbolic integration algorithm in SymPy is the heuristic Risch algorithm, which is based on Manuel Bronstein's Poor Man Integrator. Although, this heuristic algorithms is quite simple and fast, and handle sever classes of special functions, it is not a decision procedure so it may fail to find an antiderivative, even if one exists (and it happens quite often with very simple integrals). It also have very weak support for algebraic functions.
-
-* Idea:
-
-A symbolic manipulation package must be equipped with a decision procedure for integration problem. The task is to implement Risch algorithm (also known as the recursive Risch algorithm) for integrating elementary transcendental functions. You should implement as much as possible of the algorithm, especially special cases. The algorithm is described in detail in Bronstein's book but you will need to put some effort to handle algebraic functions in your implementation.
-
-* Rating: 3-5 (quite hard)
-
-'''Implement symbolic integration via Marichev-Adamchik Mellin transform'''
-
-* Status:
-
-SymPy's integrator supports several classes of special function. This is, however, insufficient in solving advanced physics and engineering problems.
 
 * Idea:
 
