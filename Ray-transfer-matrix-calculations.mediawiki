@@ -10,7 +10,7 @@ First we define the transfer matrix form for free space of length ''s'':
  def LensABCD(f):
  	return Matrix([[1,0],[-1/f,1]])
 
-Suppose that we want to focus a source to its image with two lenses. As both focal lengths are given, this is a nonlinear algebraic problem of two equations with three variables (s_1, s_2 and s_3). 
+Suppose that we want to focus a source to its image with two lenses. As both focal lengths are given, this is a nonlinear algebraic problem of two equations with three variables (s_1, s_2 and s_3).
 
  f1,f2=symbols(["f1","f2"])
  L1=LensABCD(f1)
@@ -29,7 +29,7 @@ To make the system imaging, we need the "B" element of M to be zero. This consti
 
 Now we can eliminate s3 from the transfer matrix:
 
- M2=M.subs(s3, s3_by_s12).applyfunc(simplify)  
+ M2=M.subs(s3, s3_by_s12).applyfunc(simplify)
  assert M2[1]==0
 
 === Second equation ===
@@ -44,7 +44,7 @@ Now both s_1 and s_3 are expressed as functions of s_2 (the spacing of the two l
 
 === Conclusion ===
 
-Symbolic manipulation with the matrix saved us a lot of symbolic calculations. 
+Symbolic manipulation with the matrix saved us a lot of symbolic calculations.
 
 We may test the Liouville theorem for the imaging system now:
 

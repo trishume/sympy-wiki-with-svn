@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 This tutorial gives an overview and introduction to SymPy. Read this to have an idea what SymPy can do for you (and how) and if you want to know more, read the [[API|http://sympy.googlecode.com/svn/api/sympy.html]] documentation (that is generated from the sources) or the [[sources|http://sympy.googlecode.com/svn/trunk/]] directly.
 
@@ -14,7 +14,7 @@ To import SymPy from the standard Python shell, just type
 >>> from sympy import *
 ```
 
-and most common functions will be imported. Other modules of interest include `sympy.limits`, `sympy.solvers`, etc. 
+and most common functions will be imported. Other modules of interest include `sympy.limits`, `sympy.solvers`, etc.
 
 There is also a little app called isympy (located in `bin/isympy` if you are running from the source directory) which is just a standard Python shell that has already imported the relevant SymPy modules and defined the symbols `x`, `y` and `z`.
 
@@ -22,7 +22,7 @@ There is also a little app called isympy (located in `bin/isympy` if you are run
 
 Sympy has two built-in numeric types: `[[Real|http://sympy.googlecode.com/svn/api/sympy.core.numbers.Real-class.html]]` and `[[Rational|http://sympy.googlecode.com/svn/api/sympy.core.numbers.Rational-class.html ]]`.
 
-The `Rational` class represents a rational number as a pair of two integers: the numerator and the denominator, so `Rational(1,2)` represents 1/2, `Rational(5,2)` 5/2 and so on. 
+The `Rational` class represents a rational number as a pair of two integers: the numerator and the denominator, so `Rational(1,2)` represents 1/2, `Rational(5,2)` 5/2 and so on.
 
 ```py
 >>> from sympy import *

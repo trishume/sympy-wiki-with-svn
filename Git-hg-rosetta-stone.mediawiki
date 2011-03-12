@@ -4,11 +4,11 @@ The first and the most important thing is that you should understand that git is
 
  - git project page  http://git.or.cz/
  - git faq explaining many things http://git.or.cz/gitwiki/GitFaq
-   make sure you read mails referenced from the faq - they are really brilliant, 
+   make sure you read mails referenced from the faq - they are really brilliant,
    e.g. this mail by Linus about git and renames:
-   
+
    http://permalink.gmane.org/gmane.comp.version-control.git/217
-   
+
  - git wiki http://git.or.cz/gitwiki
  - git documentation http://git.or.cz/gitwiki/GitDocumentation
 
@@ -35,10 +35,10 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
 |-
 | hg clone http://hg.sympy.org/sympy-git.hg
 | git clone git://git.sympy.org/sympy.git
-|- 
+|-
 | hg clone -U http://hg.sympy.org/sympy-git.hg
 | git clone --bare git://git.sympy.org/sympy.git
-|- 
+|-
 | hg diff
 | git diff HEAD
 |-
@@ -148,13 +148,13 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
  [user]
      name = Ondrej Certik
      email = ondrej@certik.cz
- 
+
  [color]
      diff  = auto
      status= auto
      branch= auto
      interactive = true
- 
+
  [alias]
      ci = commit
      di = diff --color-words
@@ -179,19 +179,19 @@ and at many other pages.
  - git rebase --interactive is your friend too :)
  - windows users: either use cygwin or msysgit:
    http://code.google.com/p/msysgit/
-   
- - don't try to project your usual habits - open your mind, and maybe you'll 
+
+ - don't try to project your usual habits - open your mind, and maybe you'll
    discover much more superior workflow. (yes, this needs hard work and RTFM,
    and being ready that FM sometimes differ from what software actually does)
  - Add this
- 
+
  parse_git_branch() {
    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
    # __git_ps1 "(%s)"
    # use the second line instead if you have bash autocompletion for git enabled
  }
  PS1="\w\$(parse_git_branch) $ "
- 
+
    to your promptstring to show current branch when in a git-tracked directory.
    (see http://b.lesseverything.com/2008/3/25/got-git-howto-git-and-github)
 

@@ -29,8 +29,8 @@ You just installed Django's auth system, which means you don't have any superuse
 Would you like to create one now? (yes/no): yes
 Username (Leave blank to use 'ondra'): root
 E-mail address: some@email.cz
-Password: 
-Password (again): 
+Password:
+Password (again):
 Superuser created successfully.
 [...]
 </pre>

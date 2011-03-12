@@ -1,7 +1,7 @@
 <pre>
  In [1]: %time a = pi.evalf(10**6)
  CPU times: user 7.44 s, sys: 0.06 s, total: 7.50 s
- Wall time: 7.51 s   
+ Wall time: 7.51 s
 
  In [2]: len(str(a))
  Out[2]: 1000001

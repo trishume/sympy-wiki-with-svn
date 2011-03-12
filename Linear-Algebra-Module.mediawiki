@@ -26,7 +26,7 @@ More interestingly (and usefully), we can use a 2-variable function (or lambda) 
 ...             return 1
 ...     else:
 ...             return 0
-... 
+...
 >>> Matrix(4, 4, f)
 </pre>
 
@@ -216,7 +216,7 @@ One more useful matrix-wide entry application function is the substitution funct
 âŽ£0 0 yâŽ¦
 </pre>
 
-= Linear algebra = 
+= Linear algebra =
 
 Now that we have the basics out of the way, let's see what we can do with the actual matrices. Of course the first things that come to mind are the basics like the determinant:
 <pre>
@@ -235,7 +235,7 @@ and the inverse. In !SymPy the inverse is computed by Gaussian elimination by de
 >>> M2.inv()
 âŽ¡1 0 0âŽ¤
 âŽ¢0 1 0âŽ¥
-âŽ£0 0 1âŽ¦ 
+âŽ£0 0 1âŽ¦
 >>> M2.inv("LU")
 âŽ¡1 0 0âŽ¤
 âŽ¢0 1 0âŽ¥
@@ -302,7 +302,7 @@ Let's take a look at the vectors:
 pre>
 >>> for i in out1:
 ...     print i
-... 
+...
 [2]
 [3]
 [5]
@@ -311,10 +311,10 @@ pre>
 [-47/19]
 [ 1692/353]
 [-1551/706]
-[ -423/706] 
+[ -423/706]
 >>> for i in out2:
 ...      print i
-... 
+...
 [2*(1/38)**(1/2)]
 [3*(1/38)**(1/2)]
 [5*(1/38)**(1/2)]
@@ -370,10 +370,10 @@ Now that we have our eigenvalues we need the eigenvectors. What we need to do is
 ...     nlsp = (M-vals*eye(3)).nullspace()
 ...     for vect in nlsp:
 ...             vlist.append(vect)
-... 
+...
 >>> for i in vlist:
 ...     print i.T
-... 
+...
 [-1/2, 3/2, 1]
 [0, 1, 0]
 [1, 1, 0]
@@ -383,12 +383,12 @@ The last print we used the transpose operation for readability. So we're almost 
 >>> normal = GramSchmidt(vlist, True)
 >>> for i in normal:
 ...     print i.T
-... 
+...
 [-1/2*2**(1/2)*(1/7)**(1/2), (3/2)*2**(1/2)*(1/7)**(1/2), 2**(1/2)*(1/7)**(1/2)]
 [(3/14)*14**(1/2)*(1/5)**(1/2), (5/14)*14**(1/2)*(1/5)**(1/2), -3/7*14**(1/2)*(1/5)**(1/2)]
 [(2/5)*5**(1/2), 0, (1/5)*5**(1/2)]
 </pre>
-And that's it. At this point, one should continue to experiment with the module: read the matrices.py file, try and interact with the other modules such as solvers.py and polynomials. 
+And that's it. At this point, one should continue to experiment with the module: read the matrices.py file, try and interact with the other modules such as solvers.py and polynomials.
 
 = Working with ''in progress'' software =
 Even though SymPy has some really great functionality, one should always keep in mind that !SymPy is a work in progress and so, while the code you wrote may be correct, it may not always do what you have in mind.
@@ -413,7 +413,7 @@ Clearly, this is not the canonical form we're looking for. We're really trying t
 >>> det = 1
 >>> for i in range(len(L)):
 ...     det *= L[i] - L[i-1]
-... 
+...
 >>> det
 (x - z)*(y - x)*(z - y)
 </pre>

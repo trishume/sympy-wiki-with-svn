@@ -38,8 +38,8 @@ S2: assert IsElement(x, Real, assumptions=Element(x, Real))
 
 M: Refine[Abs[x], x>0]
    Refine[Abs[x], x<0]
-S0: 
-S1: 
+S0:
+S1:
 S2: e = abs(x)
   print e.refine(Assumptions(x>0))
   print e.refine(Assumptions(x<0))

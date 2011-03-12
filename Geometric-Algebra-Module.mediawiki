@@ -3,7 +3,7 @@
 Geometric algebra is a real Clifford algebra over a real vector space of signature <math>(p,q)</math> presented in a form that is most suitable for physical applications.  The main references for geometric algebra are '''Clifford Algebra to Geometric Calculus''' by Hestenes and Sobczyk and '''Geometric Algebra for Physicists''' by Doran and Lasenby.  The Hestenes's book is extremely dense so that the best introduction is the book by Doran and Lasenby.  The main websites for geometric algebra are Hestenes[http://www.mrao.cam.ac.uk/~clifford/] and the Cambridge [http://modelingnts.la.asu.edu/] websites.  On the Cambridge website is the introductory paper "Imaginary Numbers are Not Real" which is a quick introduction to the subject.
 
 == Axioms ==
- 
+
 The basis of geometric algebra is to start with the vector space <math>V(p,q)</math> of signature <math>(p,q)</math> and dimension <math>n = p+q</math> over the real numbers, <math>R</math>.  Then for any vectors <math>x,y,z \in V(p,q)</math> there exists a geometric product such that:
 
           <math>{\displaystyle x(yz) = (xy)z}</math>
@@ -28,8 +28,8 @@ The outer product for two vectors is generalized to the outer product for <math>
 
           <math>x_{1}\wedge\cdots\wedge x_{r}= \frac{1}{r!}\sum_{i_{1},\dots,i_{r}}\epsilon_{1,\dots,r}^{i_{1},\dots,i_{r}}x_{i_{1}}\dots x_{i_{r}}</math>
 
-where <math>\epsilon_{1,\dots,r}^{i_{1},\dots,i_{r}}</math> is the Levi-Civita permutation symbol.  The outer product of <math>r</math> vectors is called an <math>r</math>-blade.  One interpetation of an <math>r</math>-blade that a 2-blade is an oriented area and an <math>r</math>-blade is a oriented 
-<math>r</math>-dimensional volume.  The outer product is associative and a blade is antisymmetric under the exchange of two adjacent vectors.  Any linear combination of <math>r</math>-blades is called an <math>r</math>-grade or grade-<math>r</math> multivector.  A real scalar is a grade-0 multivector. A general mulitvector is the linear combination of grade-<math>r</math> multivectors where in a 
+where <math>\epsilon_{1,\dots,r}^{i_{1},\dots,i_{r}}</math> is the Levi-Civita permutation symbol.  The outer product of <math>r</math> vectors is called an <math>r</math>-blade.  One interpetation of an <math>r</math>-blade that a 2-blade is an oriented area and an <math>r</math>-blade is a oriented
+<math>r</math>-dimensional volume.  The outer product is associative and a blade is antisymmetric under the exchange of two adjacent vectors.  Any linear combination of <math>r</math>-blades is called an <math>r</math>-grade or grade-<math>r</math> multivector.  A real scalar is a grade-0 multivector. A general mulitvector is the linear combination of grade-<math>r</math> multivectors where in a
 <math>n</math>-dimensional vector space <math>r</math> can take on the value from 0 to <math>n</math>.
 
 ==Reverse==
@@ -54,8 +54,8 @@ multivector is described.
 
 == Applications ==
 ===Reflections===
-If <math>a</math> and <math>v</math> are any two vectors in the geometric algebra and <math>a^{2}\ne 0</math> then 
-<math>a^{-1} = \frac{a}{a^{2}}</math>.  If <math>\left | a^{2}\right | = 1</math> then <math>a^{-1} = \pm a</math>.  
+If <math>a</math> and <math>v</math> are any two vectors in the geometric algebra and <math>a^{2}\ne 0</math> then
+<math>a^{-1} = \frac{a}{a^{2}}</math>.  If <math>\left | a^{2}\right | = 1</math> then <math>a^{-1} = \pm a</math>.
 The reflection of <math>v</math> about <math>a</math> is given by:
           <math>
 {\displaystyle v_{reflection} = ava^{-1}}
@@ -67,7 +67,7 @@ on a vector <math>v</math> is:
 </math>
 
 ===Rotations===
-One on the major applications of geometric algebra is the rotation of various types of geometric objects. If <math>B</math> is a 2-blade in an 
+One on the major applications of geometric algebra is the rotation of various types of geometric objects. If <math>B</math> is a 2-blade in an
 <math>n</math>-dimensional space and we normalize <math>B</math> by:
 
           <math>\hat{B} =\frac{B}{\sqrt{\left |B^{2}\right |}}</math>
@@ -76,7 +76,7 @@ so that
 
           <math>B = \alpha\hat{B}</math>
 
-then the rotation of the general vector <math>x</math>'s component in the plane defined by <math>\hat{B}</math> through the angle <math>\alpha</math> is given by 
+then the rotation of the general vector <math>x</math>'s component in the plane defined by <math>\hat{B}</math> through the angle <math>\alpha</math> is given by
 
           <math>x_{rotation} = e^{\frac{\alpha\hat{B}}{2}}xe^{-\frac{\alpha\hat{B}}{2}}</math>
 
@@ -92,7 +92,7 @@ If we have a series of rotations:
           <math>
 R_{i} = e^{\frac{\alpha_{i}\hat{B}_{i}}{2}}: 1 \le i \le r
 </math>
-then the total rotation is given by (note that the reverse of a 2-blade is minus the blade so that 
+then the total rotation is given by (note that the reverse of a 2-blade is minus the blade so that
 <math>\hat{B}^{\dagger} = -\hat{B}</math>):
           <math>
 x_{rotation} = R_{r}\dots R_{1}xR_{1}^{\dagger}\dots R_{r}^{\dagger}
@@ -126,8 +126,8 @@ Another representation for <math>{\displaystyle\psi}</math> is:
  \sqrt{\rho}\sin\left ( \frac{\mu}{2}\right )  I\right) = \sqrt{\rho}Re^{\frac{\mu I}{2}}
 </math>
 where <math>R</math> is a rotor <math>\left ( RR^{\dagger} = 1\right )</math> and <math>\alpha</math> and <math>\beta</math>
-are scalars defining the amplitude of the spinor 
-<math>\left ( \rho = \alpha^{2}+\beta^{2}\mbox{, where }\psi\psi^{\dagger} = \rho \right )</math> and <math>\displaystyle I</math> is the pseudo-scalar 
+are scalars defining the amplitude of the spinor
+<math>\left ( \rho = \alpha^{2}+\beta^{2}\mbox{, where }\psi\psi^{\dagger} = \rho \right )</math> and <math>\displaystyle I</math> is the pseudo-scalar
 (note that for spacetime <math>\displaystyle I^{2}=-1</math>).  Additionally in this geometric algebra a general Lorentz transformation can be represented and a product of rotations (the product of a spatial rotation and a spacetime boost) and reflections.
 
 = Module =
@@ -147,25 +147,25 @@ The "set_main" allows the geometric algebra module to broadcast sympy and multiv
 make_symbols('s c Binv M S C alpha')
 </source>
 
-means that the sympy symbols <tt>s, c, Binv, M, S, C,</tt> and <tt>alpha</tt> are available to the program.  In using <tt>make_symbols</tt> the program variable and the text name of the symbol are always the same.  If you wish the program variable name and the output name of the symbol to be different you need to use the standard sympy function for symbol instantciation.  In addition to 
+means that the sympy symbols <tt>s, c, Binv, M, S, C,</tt> and <tt>alpha</tt> are available to the program.  In using <tt>make_symbols</tt> the program variable and the text name of the symbol are always the same.  If you wish the program variable name and the output name of the symbol to be different you need to use the standard sympy function for symbol instantciation.  In addition to
 <tt>make_symbols</tt> the multivector class setup function, <tt>MV.setup()</tt>, broadcasts various vector and scalar symbols to the users
 program so that they can be accessed by the users program if required.
 == Initializing the Multivector (MV) Class ==
-The multivector class is initialize by the static function <tt>setup()</tt>.  The two structures that define the <tt>MV</tt> (multivector) class are the symbolic basis vectors and the 
+The multivector class is initialize by the static function <tt>setup()</tt>.  The two structures that define the <tt>MV</tt> (multivector) class are the symbolic basis vectors and the
 symbolic pseudometric.  The symbolic basis vectors are input as a string with the symbol
 name separated by spaces.  For example if we are calculating the geometric algebra of a system with three
 vectors that we wish to denote as <tt>a0</tt>, <tt>a1</tt>, and <tt>a2</tt> we would define the string variable:
 <source lang="python">
 basis = 'a0 a1 a2'
 </source>
-that would be input into the <tt>setup function</tt>.  The next step would be to define the symbolic 
+that would be input into the <tt>setup function</tt>.  The next step would be to define the symbolic
 pseudometric for the geometric algebra of the basis we have defined. The default pseudometric is the most general
 case and is the matrix of the following symbols:
 
  <math>
 g = \left [
 \begin{array}{ccc}
-	a0**2 & (a0.a1)  & (a0.a2) \\ 
+	a0**2 & (a0.a1)  & (a0.a2) \\
 	(a0.a1) & a1**2  & (a1.a2) \\
 	(a0.a2) & (a1.a2) & a2**2 \\
 \end{array}
@@ -173,11 +173,11 @@ g = \left [
 </math>
 where each of the <math>g_{ij}</math> is a symbol representing all of the dot products of the basis vectors. Note that the symbols are named so that <math>g_{ij} = g_{ji}</math> since for the symbol function<math>(a0.a1) \ne (a1.a0)</math>.
 
-Note that the strings shown are only used when the values of <math>g_{ij}</math> are output (printed).  
+Note that the strings shown are only used when the values of <math>g_{ij}</math> are output (printed).
 In the <tt>GAsympy</tt> module  the <math>g_{ij}</math> symbols are stored in a static member list of the multivector class as the double list  <tt>MV.metric</tt> (<math>g_{ij} = </math> <tt>MV.metric[i][j]</tt>).
 
-The default definition of <math>g</math> can be overwritten by specifying a string that will define <math>g</math> . As an example 
-consider a symbolic representation for conformal geometry. Define for a basis    
+The default definition of <math>g</math> can be overwritten by specifying a string that will define <math>g</math> . As an example
+consider a symbolic representation for conformal geometry. Define for a basis
 <source lang="python">
 basis = 'a0 a1 a2 n nbar'
 </source>
@@ -194,7 +194,7 @@ to yield (stored in data structure)
  <math>
 g = \left [
 \begin{array}{ccccc}
-	a0**2 & (a0.a1) & (a0.a2) & 0 & 0\\ 
+	a0**2 & (a0.a1) & (a0.a2) & 0 & 0\\
 	(a0.a1) & a1**2 & (a1.a2) & 0 & 0\\
 	(a0.a2) & (a1.a2) & a2**2 & 0 & 0 \\
 	0 & 0 & 0 & 0 & 2 \\
@@ -212,20 +212,20 @@ first example that means that the symbolic multivectors named <tt>a0</tt>, <tt>a
 created and broadcast to the programmer for future calculations.
 
 In addition to the basis vectors the <math>g_{ij}</math> are also made available to the programmer with the following
-convention. If <tt>a0</tt> and <tt>a1</tt> are basis vectors, then their dot products are denoted by 
-<tt>a0sq</tt>, <tt>a2sq</tt>, and <tt>a0dota1</tt> for use as python program variables. If you print 
+convention. If <tt>a0</tt> and <tt>a1</tt> are basis vectors, then their dot products are denoted by
+<tt>a0sq</tt>, <tt>a2sq</tt>, and <tt>a0dota1</tt> for use as python program variables. If you print
 <tt>a0sq</tt> the output would be <tt>a0**2</tt> and the output for <tt>a0dota1</tt> would be <tt>(a0.a1)</tt>.  If the default values are overridden the new values are output by print.  For example if <math>g_{00} = 0</math> then  <tt>print a0sq</tt> would output 0.
 === Multivector Representation ===
 In our representation of the symbolic geometric algebra we assume that all multivectors of interest to us can be obtained from the
 symbolic bases vectors we have input, via the different operations available to geometric algebra. The first
-problem we have is representing the general multivector in terms terms of the basis vectors.  To do this we 
-form the ordered geometric products of the basis vectors and develop an internal representation of these 
+problem we have is representing the general multivector in terms terms of the basis vectors.  To do this we
+form the ordered geometric products of the basis vectors and develop an internal representation of these
 products in terms of python classes.  The ordered geometric products are all multivectors of the form
 <math>a_{i_{1}}a_{i_{2}}\dots a_{i_{r}}</math> where <math>i_{1}<i_{2}<\dots <i_{r}</math> and <math>r \le n</math>. We call these
-multivectors bases and represent them internally with the list of integers 
+multivectors bases and represent them internally with the list of integers
 <math>\left [ i_{1},i_{2},\dots,i_{r}\right ]</math>. The bases are labeled, for the purpose of output display, with strings
-that are concatenations of the strings representing the basis vectors.  So that in our example 
-<tt>[1,2]</tt> would be labeled with the string <tt>'a1a2'</tt> and represents the geometric product 
+that are concatenations of the strings representing the basis vectors.  So that in our example
+<tt>[1,2]</tt> would be labeled with the string <tt>'a1a2'</tt> and represents the geometric product
 <tt>a1*a2</tt>. Thus the list <tt>[0,1,2]</tt> represents <tt>a0*a1*a2</tt>.  For our example the complete set of bases and labels would be (The empty list, <tt>[]</tt>, represents the base for the scalars):
 
 <source lang="python">
@@ -233,7 +233,7 @@ MV.basislabel = ['1', ['a0', 'a1', 'a2'], ['a0a1', 'a0a2', 'a1a2'],['a0a1a2']]
 MV.basis = [[], [[0], [1], [2]], [[0, 1], [0, 2], [1, 2]],[[0, 1, 2]]]
 </source>
 
-Since there are <math>2^{n}</math> bases for <math>n</math> basis vectors and the number of bases with equal list lengths is the same as for the 
+Since there are <math>2^{n}</math> bases for <math>n</math> basis vectors and the number of bases with equal list lengths is the same as for the
 grade decomposition of a dimension <math>n</math> geometric algebra we will call the collections of bases of equal length
 '''psuedogrades.'''
 
@@ -243,14 +243,14 @@ as they are in a simple vector space with the components of the multivector bein
 === Geometric Multiplication of Multivectors ===
 
 The critical point in forming the geometric product of two multivectors is that the geometric product of any number of symbolic basis vectors can be
-reduced to a multivector representation as described in the previous section.  This is due to application of the axioms of geometric algebra and the 
+reduced to a multivector representation as described in the previous section.  This is due to application of the axioms of geometric algebra and the
 fact that the inner product of all the symbolic basis vectors is defined by the metric.  We can alway reverse the geometric product of two basis vectors (or any two vectors) by applying (remember the inner product of two vectors is communicative):
 
           <math>
 a_{j}a_{i} = 2(a_{i}\cdot a_{j})-a_{i}a_{j}
 </math>
 
-Thus if we have the geometric product of several bases with repeated factors we can repeatedly apply this formula to make the repeated factors sequential to one another and then use the first and fourth axioms to convert the adjacent repeated factors to scalars thus reducing the number of bases in the product.  Using this procedure we can generate a geometric product multiplication table for the multivector bases.  For our example with the basis vectors <math>a_{0}</math>, <math>a_{1}</math>, and <math>a_{2}</math> the multiplication table is: 
+Thus if we have the geometric product of several bases with repeated factors we can repeatedly apply this formula to make the repeated factors sequential to one another and then use the first and fourth axioms to convert the adjacent repeated factors to scalars thus reducing the number of bases in the product.  Using this procedure we can generate a geometric product multiplication table for the multivector bases.  For our example with the basis vectors <math>a_{0}</math>, <math>a_{1}</math>, and <math>a_{2}</math> the multiplication table is:
 
 <pre>
 (1)(1) = 1
@@ -372,7 +372,7 @@ In the blade representation we write the general multivector as:
 A = \sum_{r=0}^{n}\left \langle A \right \rangle_{r}
 </math>
 
-where <math>\left\langle  A \right\rangle_{r}</math> is the sum of all grade-<math>r</math> blades in the multivector. 
+where <math>\left\langle  A \right\rangle_{r}</math> is the sum of all grade-<math>r</math> blades in the multivector.
 <math>\left\langle  A \right\rangle_{0}</math> is denoted <math>\left\langle  A \right\rangle</math> and is the scalar
 part of the multivector.  <math>\left\langle \right\rangle_{r}</math> is called the grade projection operator a returns
 the <math>r</math>-grade part of the multivector <tt>A</tt> with the code:
@@ -394,7 +394,7 @@ aij = A(i,j)
 </source>
 returns the scalar coefficent of the j<math>^{th}</math> blade of the i<math>^{th}</math> grade in the blade representation. Within a grade the blade order is the same as the base order.
 
-The final function made possible by the blade representation of a general multivector is the <tt>rev()</tt> function for the multivector. 
+The final function made possible by the blade representation of a general multivector is the <tt>rev()</tt> function for the multivector.
 For a general multivector <math>A</math>:
           <math>
 A^{\dagger} = \sum_{i=0}^{n}\left\langle A \right\rangle_{i}^{\dagger}
@@ -517,9 +517,9 @@ An important thing to note is statement [5].  Note that <tt>(a1|a1)</tt> is not 
 the grade-0 component. Statement [7] shows that <tt>a1inv</tt> is the inverse of <tt>a1</tt>. Finally to understand statement [8] we note
 that (<math>a_{2}^{\parallel} =</math> the component of <math>a_{2}</math> parallel to <math>a_{1}</math>)
           <math>
-a_{2}^{\parallel} = \frac{a_{1}\cdot a_{2}}{a_{1}\cdot a_{1}}a_{1} 
+a_{2}^{\parallel} = \frac{a_{1}\cdot a_{2}}{a_{1}\cdot a_{1}}a_{1}
 </math>
-and 
+and
           <math>
 a_{2}^{\perp} = a_{2}- a_{2}^{\parallel}
 </math>

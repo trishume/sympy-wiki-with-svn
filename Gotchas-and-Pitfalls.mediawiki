@@ -2,7 +2,7 @@ SymPy runs under Python, so there are some things that may behave differently th
 
 
 == Equals sign (=) ==
-The equals sign (<math>=</math>) is the assignment operator, not an equality.  That if you want to do <math>x=y</math>, use <code lang="python">Eq(x,y)</code> for equality.  Alternatively, all expressions are assumed to equal zero, so you can just subtract one side and use <code lang="python">x - y</code>. 
+The equals sign (<math>=</math>) is the assignment operator, not an equality.  That if you want to do <math>x=y</math>, use <code lang="python">Eq(x,y)</code> for equality.  Alternatively, all expressions are assumed to equal zero, so you can just subtract one side and use <code lang="python">x - y</code>.
 
 The proper use of the equals sign is to assign expressions to variables.  For example,
 <source lang="python">
@@ -11,14 +11,14 @@ The proper use of the equals sign is to assign expressions to variables.  For ex
 x - y
 </source>
 
-Double equals signs (<math>==</math>) are used to test equality.  However, this tests expressions exactly, not symbolically.  For example, 
+Double equals signs (<math>==</math>) are used to test equality.  However, this tests expressions exactly, not symbolically.  For example,
 <source lang="python">
 >>> (x + 1)**2 == x**2 + 2*x + 1
 False
 >>> (x + 1)**2 == (x + 1)**2
 True
 </source>
-If you want to test for symbolic equality, one way is to subtract one expression from the other and run it through functions like expand(), simplify(), and trigsimp() and see if the equation reduces to 0. 
+If you want to test for symbolic equality, one way is to subtract one expression from the other and run it through functions like expand(), simplify(), and trigsimp() and see if the equation reduces to 0.
 <source lang="python">
 >>> simplify((x + 1)**2 - (x**2 + 2*x + 1))
 0
@@ -40,7 +40,7 @@ When you use <code>=</code> to do assignment, remember that in Python, as in mos
 >>> b
 1 + a               # but b is still pointing at Symbol('a')
 </source>
-Changing quantity <code>a</code> does not change <code>b</code>; you are not working with a set of simultaneous equations. It might be helpful to remember that the string that gets printed when you print a variable refering to 
+Changing quantity <code>a</code> does not change <code>b</code>; you are not working with a set of simultaneous equations. It might be helpful to remember that the string that gets printed when you print a variable refering to
 a sympy object is the string that was give to it when it was created; that string does not have to
 be the same as the variable that you assign it to:
 <source lang="python">

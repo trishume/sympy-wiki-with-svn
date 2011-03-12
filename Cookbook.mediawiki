@@ -12,7 +12,7 @@ Some more elaborate SymPy examples and recipes.
 
 ===Recipes that need review===
 
-* [[EuroSciPy2008 examples]] 
+* [[EuroSciPy2008 examples]]
 * [[FEMTEC2009 examples]]
 
 ==See also==

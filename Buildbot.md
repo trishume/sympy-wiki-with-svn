@@ -41,7 +41,7 @@ $ buildbot start .
 $ tar xzf python2.4.tar.gz
 $ cd python2.4
 $ ./configure --prefix=/home/buildslave/py2.4
-$ make 
+$ make
 $ make install
 ```
 

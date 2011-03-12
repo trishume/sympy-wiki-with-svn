@@ -15,7 +15,7 @@ To see lots of plotting examples, see examples/plotting.py and try running it in
 = Plot Window Controls =
 
 {| border="1" cellpadding="4"
-|- 
+|-
 | '''Camera''' ||
 |-
 | Sensitivity Modifier || SHIFT
@@ -61,7 +61,7 @@ Specifically, Plot(function arguments) and Plot.__setitem__(i, function argument
 plot if you provide two or three functions. Similarly, the arguments will be interpreted as a curve is one variable is used, and a surface if two are used.
 
 Supported mode names by number of variables:
-    
+
 * 1 (curves): parametric, cartesian, polar
 * 2 (surfaces): parametric, cartesian, cylindrical, spherical
 

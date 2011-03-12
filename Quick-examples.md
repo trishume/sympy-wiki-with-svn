@@ -140,11 +140,11 @@ You can also use `.diff()`, like here (an example in `isympy`)
 In [1]: f = Function("f")
 
 In [2]: Eq(f(x).diff(x, x) + 9*f(x), 1)
-Out[2]: 
-            2           
-           d            
+Out[2]:
+            2
+           d
 9⋅f(x) + ─────(f(x)) = 1
-         dx dx          
+         dx dx
 
 In [3]: dsolve(_, f(x))
 Out[3]: f(x) = 1/9 + C₁⋅sin(3⋅x) + C₂⋅cos(3⋅x)

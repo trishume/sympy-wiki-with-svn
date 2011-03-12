@@ -37,7 +37,7 @@ Float('1.41421356237309504880168872420969807856967187537694807317667973799073247
 846210703885038753432764157274')
 </source>
 
-`Float` also supports various rounding modes: `ROUND_DOWN`, `ROUND_UP`, `ROUND_FLOOR`, `ROUND_CEILING`, `ROUND_HALF_UP`, `ROUND_HALF_DOWN`, and 
+`Float` also supports various rounding modes: `ROUND_DOWN`, `ROUND_UP`, `ROUND_FLOOR`, `ROUND_CEILING`, `ROUND_HALF_UP`, `ROUND_HALF_DOWN`, and
 `ROUND_HALF_EVEN` (default). However, these rounding modes are not yet correctly supported in arithmetic operations. For more details on managing the working precision and rounding modes, refer to the docstrings for the `Float` class.
 
 The method `ae` can be used for approximate equality testing:
@@ -110,7 +110,7 @@ A complex value of the gamma function:
 The constant pi is available through a function `pi_float()` that returns an approximation of pi accurate to within the current working precision. The `examples` directory also contains a script `pidigits.py` for computing pi with extremely high precision (millions of digits for the patient).
 
 =Numerical optimization=
-The module `numerics.optimize` contains functions for root-finding and optimization. 
+The module `numerics.optimize` contains functions for root-finding and optimization.
 
 The functions `bisect` and `secant` functions can be used to find isolated roots of decently well-behaved functions. As a simple example; using the secant method to calculate pi as the root of sin(x) closest to x = 3:
 

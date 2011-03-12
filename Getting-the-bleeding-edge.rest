@@ -34,4 +34,4 @@ will show you what has changed and::
 
     git reset --hard
 
-will clear the changes, but **WARNING: THIS WILL PERMANENTLY REVERT ALL CHANGES IN THE REPOSITORY TO THEIR ORIGINAL STATE.** If you are trying to develop for sympy, you will need to use git branches and git commit.  See the GitTutorials page or any git tutorial online.  
+will clear the changes, but **WARNING: THIS WILL PERMANENTLY REVERT ALL CHANGES IN THE REPOSITORY TO THEIR ORIGINAL STATE.** If you are trying to develop for sympy, you will need to use git branches and git commit.  See the GitTutorials page or any git tutorial online.

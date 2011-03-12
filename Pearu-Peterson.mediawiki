@@ -3,11 +3,11 @@ where I work as Senior Researcher and my research involves studying
 nonlinear wave phenomena in the fields like soliton theory, water wave theory (I am specialized in modelling extreme wave events)
 as well as nonlinear optics.
 
-I got my PhD in 2001 on a topic of soliton theory dealing with multi-soliton interaction patterns and inverse problems 
+I got my PhD in 2001 on a topic of soliton theory dealing with multi-soliton interaction patterns and inverse problems
 (see my CV below for more information).
 
 I am working in [http://www.simula.no Simula Research Laboratory (Oslo, Norway)] as a Reseach Scientist. Here my research is focused
-on developing scientific software. 
+on developing scientific software.
 
 I am the author of the [http://sympycore.googlecode.com Sympy Core] project that aims at developing a CAS for Python
 with a robust, efficient, and easily extendable core parts.
@@ -15,7 +15,7 @@ with a robust, efficient, and easily extendable core parts.
 I am the author of [http://cens.ioc.ee/projects/f2py2e/ F2PY] tool that has become a standard tool to connect Fortran
 and Python programs.
 
-I am a co-author of the [http://www.scipy.org SciPy] project that provides high-performance tools for 
+I am a co-author of the [http://www.scipy.org SciPy] project that provides high-performance tools for
 performing scientific computations in Python.
 
 I am a developer of the [http://www.numpy.org NumPy] project where I am mainly responsible for the numpy.distutils

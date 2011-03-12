@@ -38,7 +38,7 @@ of the system will become unfunctional by that.
 
 In order to make a development of a CAS as painless as possible
 in knowing that different parts of it may change in time, one must
-define interfaces between the parts such that are expected to not 
+define interfaces between the parts such that are expected to not
 change in time (may be only in a minimal way).
 
 One of the rules for a good interface seems to be the condition
@@ -150,7 +150,7 @@ To check if an expression is an unevaluated function instance, that is, in the f
 
 == Pattern matching ==
 
-In light of introducing algebras to hold symbolic expressions, 
+In light of introducing algebras to hold symbolic expressions,
 the UI of wild cards must be reviewed. In current SymPy a special class Wild
 is introduced to represent a wild card which means that there is an extra
 type of a symbolic object that holds some information about it. This situation

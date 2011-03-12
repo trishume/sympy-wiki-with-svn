@@ -1,6 +1,6 @@
 This is the SymPy implementation of the Sage [[symbolic benchmarks|http://wiki.sagemath.org/symbench]].
 
-##  Results 
+##  Results
 
 Using SymPy 0.6.2-hg.
 

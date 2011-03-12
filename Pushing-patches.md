@@ -65,5 +65,5 @@ There are basically four things that you need to do before pushing anything in:
 
 3. Make sure that no one else has any objections to the branch.  Everything is based on consensus, so until one is reached, the branch cannot be pushed in.
 
-4. All new functionality should be tested, and all new methods/functions/classes should have some doctests showing how to use them (the `./bin/coverage_doctest.py` script will show you what methods have doctests). 
+4. All new functionality should be tested, and all new methods/functions/classes should have some doctests showing how to use them (the `./bin/coverage_doctest.py` script will show you what methods have doctests).
 
