@@ -24,7 +24,7 @@ It is built and tested regularly on all major platforms and all major architectu
 
 [[http://sympy.org/]]
 
-# Main Organization License:
+# Main Organization License (Note: this question has a popup selection for answers):
 
 New and Simplified BSD licenses
 
@@ -36,7 +36,7 @@ It will be beneficial for the project, since each year this has proven to give a
 
 In the past, SymPy has participated under the umbrella of the Python Software Foundation, the Space Telescope Science Institute, and Portland State University.  However, there is more competition for students applying under an umbrella organization, meaning that SymPy might not get as many students accepted as we would like or could handle.  Also, umbrella mentoring organizations may limit what applications are accepted to work on SymPy based on what they see as being beneficial to their own organization, instead of directly to SymPy.
 
-# If accepted, would this be your first year participating in GSoC?
+# If accepted, would this be your first year participating in GSoC? (Note: this question takes a boolean answer)
 
 No
 
