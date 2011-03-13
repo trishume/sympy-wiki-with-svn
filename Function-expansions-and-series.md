@@ -68,6 +68,19 @@ The **ordinary generating function** of a sequence \(a_n\) is \( G(a_n;x) = \sum
 
 The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = \sum_{n=0}^{+\infty} a_n \frac{x^n}{n!}\).
 
+## Analytic function
+
+In mathematics, an **analytic function** is a function that is locally given by a convergent power series. (There exist both real analytic functions and complex analytic functions.)
+Alternatively, an analytic function is an infinitely differentiable function such that the Taylor series at any point x0 in its domain 
+converges to ƒ(x) for x in a neighborhood of x0. 
+
+Properties
+
+- The sums, products, and compositions of analytic functions are analytic.
+- The reciprocal of an analytic function that is nowhere zero is analytic, as is the inverse of an invertible analytic function whose derivative is nowhere zero.
+- Any analytic function is smooth, that is, infinitely differentiable. The converse is not true; in fact, in a certain sense, the analytic functions are sparse compared to all infinitely differentiable functions.
+
+
 # Usage and applications
 
 ## Series
@@ -87,17 +100,6 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 - Find recurrence relations for sequences — the form of a generating function may suggest a recurrence formula.
 - Define function through sequence.
 - Discrete representation of function.
-
-## Analytic function
-
-In mathematics, an analytic function is a function that is locally given by a convergent power series. (There exist both real analytic functions and complex analytic functions.)
-Alternatively, an analytic function is an infinitely differentiable function such that the Taylor series at any point x0 in its domain 
-converges to ƒ(x) for x in a neighborhood of x0. 
-
-Properties
-- The sums, products, and compositions of analytic functions are analytic.
-- The reciprocal of an analytic function that is nowhere zero is analytic, as is the inverse of an invertible analytic function whose derivative is nowhere zero.
-- Any analytic function is smooth, that is, infinitely differentiable. The converse is not true; in fact, in a certain sense, the analytic functions are sparse compared to all infinitely differentiable functions.
 
 ## Common tasks
 - Calculate items of sequences by recurrent formula
