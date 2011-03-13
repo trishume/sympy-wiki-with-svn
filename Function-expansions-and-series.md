@@ -35,6 +35,11 @@ The n-th order **Taylor polynomial** of f at \(x_0\) is the degree-n polynomial 
 
 \( x^x = 1 + x \log x + \frac{x^2 \log^2(x)}{2} + \cdots \)
 
+This series do not expand to Taylor series because of they are not analytical (some derivatives are oo)
+
+Also combination of that function with each other or with polynomials brings to mix of various kinds of series (that may be out of sense).
+
+
 ## Asymptotic expansion
 
 In this section we attract attention to the asymptotic expansion and related things.
@@ -83,6 +88,17 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 - Define function through sequence.
 - Discrete representation of function.
 
+## Analytic function
+
+In mathematics, an analytic function is a function that is locally given by a convergent power series. (There exist both real analytic functions and complex analytic functions.)
+Alternatively, an analytic function is an infinitely differentiable function such that the Taylor series at any point x0 in its domain 
+converges to ƒ(x) for x in a neighborhood of x0. 
+
+Properties
+- The sums, products, and compositions of analytic functions are analytic.
+- The reciprocal of an analytic function that is nowhere zero is analytic, as is the inverse of an invertible analytic function whose derivative is nowhere zero.
+- Any analytic function is smooth, that is, infinitely differentiable. The converse is not true; in fact, in a certain sense, the analytic functions are sparse compared to all infinitely differentiable functions.
+
 ## Common tasks
 - Calculate items of sequences by recurrent formula
 
@@ -90,19 +106,27 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 
 - According to its docstring, ``f(x).series(x, x0, n)`` is supposed to return the (n-1)th order generalized Taylor expansion of \(f(x)\) for \(x \rightarrow x_0\).
 Actually, it works only for \(x_0 = 0\) and when f doesn't have a generalized Taylor expansion, it returns some arbitrarily chosen asymptotic expansion of \(f(x)\).
+
 - But the present method "series" which returns various kinds of series is convenient and used for the task of limits processing: limits use necessary amount of first terms of series whatever it be.
 The work with processing of many various cases of series and limits was executed recently, also many tests have been collected and passed for series and limits.
+
 - Class *Function* , *exp* *sin* and others contain method **taylor_term**.
+
 - general algorithm for series() and nseries() consist in that the operations with asymptotic expansion  used through recursion:  F.e: ((sin(x))^1000 ).series() = \( (1 + \frac{x^3}{6} + O(x^4))^1000 = \cdots \).
+
 - There is an object **Sum** defined in sympy, which represent unevaluated summation \( \sum_{k=a}^b a(n) \).
+
 - sympy/solvers/recurr.py contains some methods for solving recurrences, main function on this module is **rsolve()**.
+
 - The implementation of some series methods for solving IDEs is processing now in Saptarshi's branch (https://github.com/saptman/sympy/tree/dev_ide
 ).
 
 
 ## problems and remarks which we encounter
+
 - Problems with big O representation and behaviour at non zero point or oo.
-- representation of Derivative of function at some (no zero) point.
+- representation of Derivative of function at some (no zero) point (issue 1620).
+- representation of composition of functions while differentiation (issue 1660).
 - Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
 
 # Open questions and future topics
