@@ -161,15 +161,15 @@ http://www.goodok.ru/sympy/series/class-view-1.png
 2. Constructors
 
 Sequences
+
 - by formula (finite or infinite sequence)
 - periodical (by list) (finite or infinite sequence)
 - as list (only finite sequence)
 
 Series
+
 - throw sequences (or like sequences constructor)
 - from source function
-
-2. Transformations between SeriesTaylor and PowerTaylor (a_n = b_n / n! )
 
 # Algorithms
 
