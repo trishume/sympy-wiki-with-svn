@@ -132,7 +132,7 @@ After the program is over, the students already have their blogs, which are sync
 
 # If you are a small or new organization applying to GSoC, please list a larger, established GSoC organization or a Googler that can vouch for you here.
 
-Googlers: Robert Bradshaw (robertwb@google.com), Craig Citro
+Googlers: Robert Bradshaw, Craig Citro
 
 Organizations: Python Software Foundation, Portland State University
 
