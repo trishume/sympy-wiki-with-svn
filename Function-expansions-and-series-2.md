@@ -151,8 +151,7 @@ Some analytic:
 
 Image:
 
-http://www.goodok.ru/sympy/series/class-view-1.png
-
+![class-view-1.png](http://www.goodok.ru/sympy/series/class-view-1.png)
 
 # (Draft) Full variants.
 
