@@ -19,9 +19,9 @@ When talking about series, one can refer either to the sequence \(S_N\) of the p
 
 A **formal power series** is an object of the form \(S = \sum_{n=0}^{+\infty} a_n X^n\) where \(X\) is a formal parameter. The set of formal power series over a field \(K\) is noted \(K[[X]]\) and has a ring structure.
 
-A classical **Laurent series** is an object of the form \(\sum_{n=+\infty}^{+\infty} a_n X^n\).
+A classical **Laurent series** is an object of the form \(\sum_{n=-\infty}^{+\infty} a_n X^n\).
 
-A **generalized formal power series**, or **formal Laurent series**, in an object \(S\) such that \(X^n S\) is a formal power series for some integer \(n\). The set of formal Laurent series over a field \(K\) is noted \(K((X))\) and has a field structure.
+A **generalized formal power series**, or **formal Laurent series**, is an object \(S\) such that \(X^n S\) is a formal power series for some integer \(n\). The set of formal Laurent series over a field \(K\) is noted \(K((X))\) and has a field structure.
 
 A **Laurent polynomial**  in one variable over a field \(F\) is a linear combination of positive and negative powers of the variable with coefficients in \(F\). Laurent polynomials in \(X\) form a ring denoted \(F [X, X−1] \). They differ from ordinary polynomials in that they may have terms of negative degree. A Laurent polynomial over C may be viewed as a Laurent series in which only finitely many coefficients are non-zero.
 
@@ -38,6 +38,11 @@ The n-th order **Taylor polynomial** of f at \(x_0\) is the degree-n polynomial 
 This series do not expand to Taylor series because of they are not analytical (some derivatives are oo)
 
 Also combination of that function with each other or with polynomials brings to mix of various kinds of series (that may be out of sense).
+
+Another question is whether appropriate asymptotic expansion for this series exists (especially for second series) with term Big-O: there is no constant \( C\) such that \( C (x \log x) < 1 \) while \( x \rightarrow 0 \).
+
+Nevertheless, the second series can be formalized as power series, but with formal variable \( Х = x \log x \).
+And the first one as power series with multiplication of it by some factor \( x^{\frac{1}{2}} \).
 
 
 ## Asymptotic expansion
@@ -70,12 +75,11 @@ The **exponential generating function** of a sequence \(a_n\) is \( EG(a_n;x) = 
 
 ## Analytic function
 
-In mathematics, an **analytic function** is a function that is locally given by a convergent power series. (There exist both real analytic functions and complex analytic functions.)
+In mathematics, an analytic function is a function that is locally given by a convergent power series. (There exist both *real analytic functions* and *complex analytic functions* .)
 Alternatively, an analytic function is an infinitely differentiable function such that the Taylor series at any point x0 in its domain 
 converges to ƒ(x) for x in a neighborhood of x0. 
 
 Properties
-
 - The sums, products, and compositions of analytic functions are analytic.
 - The reciprocal of an analytic function that is nowhere zero is analytic, as is the inverse of an invertible analytic function whose derivative is nowhere zero.
 - Any analytic function is smooth, that is, infinitely differentiable. The converse is not true; in fact, in a certain sense, the analytic functions are sparse compared to all infinitely differentiable functions.
@@ -136,3 +140,8 @@ The work with processing of many various cases of series and limits was executed
 - multivariable extension.
 - complex numbers, non commutative formal variables.
 - convergence
+
+# Part-2
+At this page we will be concentrated to the end-user's aims of series usage in sympy:
+
+[Function expansions and series-2](https://github.com/sympy/sympy/wiki/Function-expansions-and-series-2 "Function expansions and series-2")
