@@ -157,9 +157,9 @@ Start with implementing efficient multivariate polynomial arithmetics and GCD al
 
 * **Status**:
 Currently SymPy features efficient univariate polynomial arithmetics, GCD and factorization over Galois fields and integers (rationals). This is, however, insufficient in solving real life problems, and isn't very useful symbolic integration and simplification algorithms.
-* Idea:
+* **Idea**:
 Choose a univariate polynomial representation in which elements of algebraic domains will be efficiently encoded. By algebraic domains we mean algebraic numbers and algebraic function fields. Having a good representation, implement efficient arithmetics and GCD algorithm. You should refer to work due to Monagan, Pearce, van Hoeij et. al. Having this, implement your favourite algorithm for factorization over discussed domains. This will require algorithms for computing minimal polynomials (this can be done by using LLL or Groebner bases). You can also go ahead and do all this in multivariate case.
-* Rating: 4-5 (quite hard)
+* **Rating**: 4-5 (quite hard)
 
 ### Integration module
 
