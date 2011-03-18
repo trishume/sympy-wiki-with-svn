@@ -1,4 +1,4 @@
-# Google Summer of Code 2011
+# Google Summer of Code 2011 Project Ideas
 
 This is the list of ideas for students wishing to apply for Google Summer of Code 2011.
 
@@ -16,6 +16,9 @@ The second section contains more detailed projects that can be done.
 * optimize the core using Cython (see [this proof-of-concept](http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23))
 * asymptotic series
 * port to Python 3.0 ([issue 1262](http://code.google.com/p/sympy/issues/detail?id=1262))
+* Linear algebra
+  * **Rewrite the Matrices module to be more like the polys module, i.e., allow Matrix to use the polys ground types, and separate the internal data from the Matrix interface (sparse vs. dense).**  The goal is to make the matrices in SymPy much faster and modular than they are now.
+  * **Implement a sparse matrix representation for Matrix, so we can efficiently manipulate large sparse matrices.** This is also related to the previous bullet point.
 * improve the integration algorithm, so that SymPy can integrate anything that can be integrated.
   * integration of functions on domains of maximum extent, etc.
 * definite integration & integration on complex plane using residues
