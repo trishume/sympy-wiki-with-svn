@@ -204,7 +204,7 @@ Fix related things/bugs in SymPy
 
 ## Potential Mentors
 
-If you are willing to mentor, please add yourself here.  I also need your link_id (go to [[http://www.google-melange.com/]] and sign in at the top.  Your link_id will be at the top of the page) so I can add you as a mentor in Google's system:
+If you are willing to mentor, please add yourself here.  I also need your link_id (go to [[http://www.google-melange.com/]] and sign in at the top.  Your link_id will be at the top of the page) so I can add you as a mentor in Google's system.  Note that you will need to accept the invitation once I invite you to become a mentor:
 
 * Aaron Meurer (asmeurer)
 * Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron --> (certik)
