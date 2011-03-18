@@ -201,10 +201,10 @@ Fix related things/bugs in SymPy
 
 ## Potential Mentors
 
-If you are willing to mentor, please add yourself here:
+If you are willing to mentor, please add yourself here.  I also need your link_id (go to [[http://www.google-melange.com/]] and sign in at the top.  Your link_id will be at the top of the page) so I can add you as a mentor in Google's system:
 
-* Aaron Meurer
-* Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron -->
-* Brian E. Granger: I am willing to mentor any of the physics related projects.
+* Aaron Meurer (asmeurer)
+* Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron --> (certik)
+* Brian E. Granger: I am willing to mentor any of the physics related projects. (ellisonbg)
 * Andy R. Terrel
-* Mateusz Paprocki
+* Mateusz Paprocki (mattpap)
