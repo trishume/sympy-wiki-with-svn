@@ -83,55 +83,48 @@ The second section contains more detailed projects that can be done.
 
 ## Some Detailed Ideas (Projects)
 
-### Symbolic quantum mechanics (sympy.physics)
+### Symbolic quantum mechanics (sympy.physics.quantum)
+
+Please contact Brian E. Granger for questions about the physics related topics.
 
 #### Abstract Dirac notation
 
-* **Status**: We would like to have a framework for general, abstract, symbolics quantum mechanics in SymPy.  This would include Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, Tensor products, approximations, time evolution, etc.  We have started to sketch out the design of this in this branch: <http://github.com/ellisonbg/sympy/tree/quantum>
-* **Idea**: Take the sketch and turn it into a general framework for symbolic quantum mechanics.  The goal would be that this could be the base layer for all quantum modules in SymPy, including spin, position/momentum wavefunctions, quantum computer, etc.  Thus, whoever works on this would need to work with the developers working on these other aspects of SymPy. Critical parts of this layer will be handling tensor products of Hilbert spaces, operators and states and general representations (including basis transformations) of operators and states.
+* **Status**: Last summer we had two successful GSoC projects working on this topic. The code has been merged into sympy master (in sympy.physics.quantum), but there is a ton left to do.
+* **Idea**: Continue to improve this code by adding any number of features. The sky is the limit on this one. You could basically pick anything from quantum mechanics and implement it (a physical system, scattering theory, perturbation theory, etc.).  A student interested in working on this should minimally have already taken an upper division (undergrad) quantum course and have a solid understanding of quantum mechanics.
 * **Rating**: 3 (moderate)
 
 #### Spin states and operators for arbitrary spin
 
-* **Status**: Spin is a critical part of quantum mechanics.  The spin algebra in quantum mechanics is rich and complex, even for spin 1/2. We would like to have a reasonably complete implementation of various spin states and operators for arbitrary spin s.
-So far, nothing has been done on this.
+* **Status**: Spin is a critical part of quantum mechanics.  The spin algebra in quantum mechanics is rich and complex, even for spin 1/2. We would like to have a complete implementation of various spin states and operators for arbitrary spin s. We currently have a solid draft of this in sympy.physics.quantum.spin.
 * **Idea**:
-Using the base layer of quantum states and operators in SymPy (see previous topic), implement symbolic spin states and operators for
-arbitrary spin s.  This would include the angular momentum coupling using Clebsch-Gordon coefficients, Wiger 3j/6j symbols, etc.
-While SymPy already has spherical harmonics, it would be nice to integrate those into the treatment of orbital angular momentum.
+Continue work on sympy.physics.quantum.spin. This would include rotation operators, testing, symbolic Clebsch-Gordon coefficients and Wiger 3j/6j symbols (we already have numerical versions), Wigner-Eckart theorem, tensors, etc.
+While SymPy already has spherical harmonics, it would be nice to integrate those into the treatment of orbital angular momentum as well. Basically pick up Zare or Varshalovich and start implementing things. These ideas could also be expanded to SU(N) for N>2 as well (very interesting and non-trivial).
 * **Rating**: 3-4 (moderate-hard)
 
 #### Position and momentum basis functions
 
 * **Status**:
-The position and momentum basis functions in quantum mechanics are somewhat pathological because the basis functions are not square integrable. In spite of
-this, these representations are immensely useful and are introduced to students early on.  We would like to be able to handle position and momentum wavefunctions
-on arbitrary domains in 1D, 2D and 3D.
+The position and momentum basis functions in quantum mechanics are somewhat pathological because the basis functions are not square integrable. In spite of this, these representations are immensely useful and are introduced to students early on.  We would like to be able to handle position and momentum wavefunctions on arbitrary domains in 1D, 2D and 3D. We currently have very little on this in sympy.physics.quantum so there is a lot to do.
 * **Idea**:
-Implement full machinery for position and momentum wavefunctions, including modified Hilbert spaces, Dirac delta functions, basis transformations in 1D, 2D and 3D.
-This should use the base layer of quantum states and operators in SymPy (see first topic).  The test suite should include classic examples from quantum mechanics,
-such as particle in box, H atom, simple harmonic oscillator, scattering, etc.
+Implement full machinery for position and momentum wavefunctions, including modified Hilbert spaces, various coordinate systems, Dirac delta functions, basis transformations in 1D, 2D and 3D. This should use the base layer of quantum states and operators in sympy.physics.quantum.  The test suite/code should include classic examples from quantum mechanics,
+such as particle in box, H atom, simple harmonic oscillator, scattering, etc. There are some real subtle issues in this work in how operators, states and general quantum expressions are represented in the position and momentum bases.
 * **Rating**: 3-4 (moderate-hard)
 
 #### Symbolic quantum computing
 
 * **Status**:
-Quantum computing refers to the usage of quantum states, operators, time-devolution and measurement to perform non-trivial computations.  In SymPy, we would like
-to extend our base layer to include the states and operators used in quantum computing.  The main goal is to create a general symbolic quantum computing framework
-that integrates with the rest of SymPy's quantum modules.  No work as been done on this topic in SymPy.
+Quantum computing refers to the usage of quantum states, operators, time-evolution and measurement to perform non-trivial computations. Sympy already has a quite sophisticated symbolic quantum computing library and work continues on this.
 * **Idea**:
-Using the base layer of quantum states and operators in SymPy (see first topic) implement qubits, gates, algorithms, measurement, noise, error-correction, etc.
+Quantum error correction, density matrices, Solovay-Kitaev algorithm, gate+circuit simplification using genetic algorithms, etc.
 * **Rating**: 3-5 (hard)
 
 #### Second quantization capabilities
 
-* **Status**: SymPy currently has a good bit of second quantization implemented here:
-<http://github.com/ellisonbg/sympy/blob/master/sympy/physics/secondquant.py>.
-However, there are many things we could do to improve this and add more sophisticated capabilities.
+* **Status**: SymPy currently a solid module for second quantization implemented, but it needs to be updated to take advantage of the new stuff in sympy.physics.quantum. Interesting, but challenging work.
 * **Idea**:
 Work on sympy.physics.secondquant in the following areas:
   1. Refactor to use the new assumptions system.
-  2. Refactor to use the new base quantum layer we are developing (see above).
+  2. Refactor to use the stuff in sympy.physics.quantum.
   3. Implement Wick's theorem for Bosons, including the macroscopic population of the ground states.
   4. Density matrices.
   5. Time evolution.
