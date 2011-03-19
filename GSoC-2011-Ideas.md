@@ -132,6 +132,14 @@ Work on sympy.physics.secondquant in the following areas:
   7. Implement new functions for simplifying products of second quantized operators in different ways (such as moving an annihilation operator R).
 * **Rating**: 5 (hard)
 
+#### Quantum mechanics on graphs
+
+* **Status**:
+Using ideas from finite differences, the Laplacian can be generalize to general graphs. This allows a straightforward generalization of the Schrodinger equation to graphs. We have started to develop approaches for exploring this physics (please email Brian Granger for details).
+* **Idea**:
+Write a general library for working with general symbolic Hamiltonians (including time dependent ones) on graphs.
+* **Rating**: 3 (moderate)
+
 ### Polynomials module
 
 #### Efficient Groebner bases and their applications
