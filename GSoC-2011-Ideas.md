@@ -59,6 +59,7 @@ The second section contains more detailed projects that can be done.
   * formal power series
   * improve limits - make sure all basic limits work
 * continue work on objects with indices (tensors)
+  * include the index simplification algorithms used in [xAct](http://www.xact.es/) and [cadabra](http://cadabra.phi-sci.com/).
 * **improve the plotting module**:
   * Make the Plot() command use more backends: matplotlib, google chart API link, pyglet, asciart...
   * Implement high level features, so that it works like in Mathematica (http://reference.wolfram.com/mathematica/ref/Plot.html)
