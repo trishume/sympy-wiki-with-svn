@@ -1,4 +1,7 @@
-## [Why does SymPy say that two equal expressions are unequal?](#hello with a space)
+1. [Why does SymPy say that two equal expressions are unequal?][Why does SymPy say that two equal expressions are unequal?]
+2. [I did the same calculation twice and got different results. What's going on?][I did the same calculation twice and got different results. What's going on?]
+
+## Why does SymPy say that two equal expressions are unequal?
 
 The equality operator (`==`) tests whether expressions have identical form, not whether they are mathematically equivalent.
 
@@ -32,7 +35,7 @@ True
 ```
 
 
-## [I did the same calculation twice and got different results. What's going on?](#I did the same calculation twice and got different results. What's going on?)
+## I did the same calculation twice and got different results. What's going on?
 This problem is probably due to erroneous caching of assumptions. Please report the bug to the [[mailing list|http://groups.google.com/group/sympy]] or the [[issue tracker|http://code.google.com/p/sympy/issues/list]].
 
 ## [What is the best way to create symbols?](#What is the best way to create symbols?)
