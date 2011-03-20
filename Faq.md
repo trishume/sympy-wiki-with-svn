@@ -1,5 +1,17 @@
-1. [Why does SymPy say that two equal expressions are unequal?][Why does SymPy say that two equal expressions are unequal?]
-2. [I did the same calculation twice and got different results. What's going on?][I did the same calculation twice and got different results. What's going on?]
+1. Why does SymPy say that two equal expressions are unequal?
+2. I did the same calculation twice and got different results. What's going on?
+3. What is the best way to create symbols?
+4. How good is SymPy's performance?
+5. Where is SymPy going to? What are the nearest plans?
+6. What about Sage?
+7. How do I clear the cache?
+8. How do I turn off caching?
+9. Is there a method to get a list with all symbols in an expression?
+10. How can I make my editor highlight trailing whitespace red?
+11. How to connect to our IRC channel?
+12. Why doesn't changing one variable change another that depends it?
+13. When I copy and paste an expression during interactive work, why do I get a different answer?
+14. How can I get sympy to not change what I enter?
 
 ## Why does SymPy say that two equal expressions are unequal?
 
@@ -38,7 +50,7 @@ True
 ## I did the same calculation twice and got different results. What's going on?
 This problem is probably due to erroneous caching of assumptions. Please report the bug to the [[mailing list|http://groups.google.com/group/sympy]] or the [[issue tracker|http://code.google.com/p/sympy/issues/list]].
 
-## [What is the best way to create symbols?](#What is the best way to create symbols?)
+## What is the best way to create symbols?
 
 The most convenient way to create symbols when using SymPy interactively is via `var`. For example:
 ```py
@@ -56,7 +68,7 @@ This makes the code much clearer.
 
 
 
-## [How good is SymPy's performance?](#How good is SymPy's performance?)
+## How good is SymPy's performance?
 SymPy is efficient enough for interactive use as an advanced calculator. The order-of-magnitude time to evaluate a simple algebraic operation (say, multiplying two small polynomials) is around 1/1000 of a second. Operations like limits and symbolic integration are generally much slower.
 
 SymPy is written entirely in Python. Compared to CASes written in compiled languages (including Mathematica, Maple and Maxima), SymPy is generally at least an order of magnitude (10x) slower: This is partly due to the overhead of Python, and partly because SymPy in many cases only implements the most basic algorithm. Nonetheless, experimentation has shown that that symbolic computations can be done nearly as efficiently in Python as in compiled languages by using the right data structures and designing the code to minimize various Python overheads. The [[sympycore|http://code.google.com/p/sympycore/]] project is currently attempting to redesign SymPy's internals to provide better performance, and the results are promising so far. See [[sympycore wiki: PerformanceHistory|http://code.google.com/p/sympycore/wiki/PerformanceHistory]] and [[sympycore wiki: Performance|http://code.google.com/p/sympycore/wiki/Performance]] for more details.
