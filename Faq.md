@@ -1,4 +1,4 @@
-## [Why does SymPy say that two equal expressions are unequal?]()
+## [Why does SymPy say that two equal expressions are unequal?](#hello)
 
 The equality operator (`==`) tests whether expressions have identical form, not whether they are mathematically equivalent.
 
