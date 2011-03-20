@@ -64,6 +64,7 @@ Development
 ==========
 
 * [[Getting The Bleeding Edge]] -- how to get the latest development version of sympy
+* [[Development workflow]] -- how to send a patch
 * [[git hg rosetta stone]] -- direct translation of hg commands to git
 * [[SymPy in the news]] -- SymPy in the News and Blogs
 * [[Contributors]] -- list of all contributors and sponsors of SymPy

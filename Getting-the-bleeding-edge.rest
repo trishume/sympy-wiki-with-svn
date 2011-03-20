@@ -22,7 +22,7 @@ or you can install it using::
 
 Installing is not recommended for non-release versions, because the development directory is updated often from git, and the installed version won't be updated unless you re-run setup.py
 
-If you want to contribute to SymPy, which you are always welcome to do so, there are more things about git to learn--see the GitTutorials page, but if you just want to pull down the bleeding edge, that is it.  The command::
+If you want to contribute to SymPy, which you are always welcome to do so, there are more things about git to learn -- see the [[Development workflow]] page, but if you just want to pull down the bleeding edge, that is it.  The command::
 
     git pull
 

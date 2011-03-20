@@ -160,19 +160,19 @@ Github pull request variant
 
 As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
 
-    https://github.com/signup/free
+    - https://github.com/signup/free
 
-Then begin your own *forking* of SymPy project (If you have not yet). Go at SymPy git hub page:
+Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy github page:
 
-    https://github.com/sympy/sympy
+    - https://github.com/sympy/sympy
     
 and click the “Fork” button.
 
-image:: http://help.github.com/images/bootcamp/bootcamp_3_fork.jpg
+.. image:: http://help.github.com/images/bootcamp/bootcamp_3_fork.jpg
 
 Now you have your own repository respect to SymPy project. If your username in github is `mynick` then the forked project will be placed somthing like:
     
-    https://github.com/mynick/sympy
+    - https://github.com/mynick/sympy
     
 
 On your local machine choose work place for it, and clone (download) code of it::
@@ -204,7 +204,7 @@ Create separated branch
 ------------------------
 
 Think about branch name, that is similar to  topic of the patch or pull request, but short.
-If you know issue number then the branch name would be something like `1234_sequences`. So create it::
+If you know issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
 
     git branch 1234_sequences
     git checkout 1234_sequences
@@ -213,13 +213,14 @@ To view in what branch you are type::
 
     git branch
     
-And remember, **never type the following commands in master** (git status will tell you what branch you are in): `git merge`, `git commit`, `git rebase`.
+And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
     
 
 
 Code modification
 ------------------
 
+...
 
 
 Be sure that all tests of sympy have been passed
@@ -231,9 +232,9 @@ To ensure everything stays in shape, let’s see if all tests pass::
     ./bin/doctest 
     
 
-if they are not passed all, then the warning *DO NOT COMMIT* will appear.
+If they are not passed all, then the warning *DO NOT COMMIT* will appear.
 
-if you want to test one set of tests try::
+If you want to test only one set of tests try::
 
     ./bin/test sympy/concrete/tests/test_products.py
 
@@ -256,11 +257,13 @@ Check total changes if it is interesting::
     
     git diff
     
-So you are ready to commit changes in your local version control system. It is logical operation so it must contain `commit message` described it.
+So you are ready to commit changes in your local version control system. It is logical operation so it must contain `commit message` which describes it.
 
-It is best if your commit messages are wrapped so that no line is longer than 80 characters.  Also, the first line should be separated from the rest of the message by a blank line.  This makes the message work the best with the various things in git and GitHub that show the message.
+It is best if your commit messages are wrapped so that no line is longer than 80 characters.
+Also, the first line should be separated from the rest of the message by a blank line.
+This makes the message work the best with the various things in git and GitHub that show the message.
 
-if your `commit message` is one line then you can use this command::
+If your `commit message` is one line then you can use this command::
 
     git commit -m "1234: sequences base implementation"
     
@@ -270,7 +273,7 @@ or if you plan to enter big description::
     
 editor windows will appear automatically in this case.
 
-Also with the help of option `-a` you can tell the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
+Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
 
     git commit -a -m "1234: sequences base implementation"
 
@@ -289,9 +292,9 @@ Then navigate to your repository with the changes you want someone else to pull:
 
     https://github.com/mynick/sympy    
     
-Select branch, and press the Pull Request button.
+Select branch, and press the `Pull Request` button.
 
-image:: http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png
+.. image:: http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png
 
 That's all.
 
