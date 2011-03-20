@@ -1,17 +1,17 @@
-1. Why does SymPy say that two equal expressions are unequal?
-2. I did the same calculation twice and got different results. What's going on?
-3. What is the best way to create symbols?
-4. How good is SymPy's performance?
-5. Where is SymPy going to? What are the nearest plans?
-6. What about Sage?
-7. How do I clear the cache?
-8. How do I turn off caching?
-9. Is there a method to get a list with all symbols in an expression?
-10. How can I make my editor highlight trailing whitespace red?
-11. How to connect to our IRC channel?
-12. Why doesn't changing one variable change another that depends it?
-13. When I copy and paste an expression during interactive work, why do I get a different answer?
-14. How can I get sympy to not change what I enter?
+* Why does SymPy say that two equal expressions are unequal?
+* I did the same calculation twice and got different results. What's going on?
+* What is the best way to create symbols?
+* How good is SymPy's performance?
+* Where is SymPy going to? What are the nearest plans?
+* What about Sage?
+* How do I clear the cache?
+* How do I turn off caching?
+* Is there a method to get a list with all symbols in an expression?
+* How can I make my editor highlight trailing whitespace red?
+* How to connect to our IRC channel?
+* Why doesn't changing one variable change another that depends it?
+* When I copy and paste an expression during interactive work, why do I get a different answer?
+* How can I get sympy to not change what I enter?
 
 ## Why does SymPy say that two equal expressions are unequal?
 
