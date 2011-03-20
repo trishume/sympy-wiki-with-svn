@@ -1,19 +1,63 @@
 
+=====================
+Development workflow
+=====================
+
+.. epigraph:: Talk is cheap. Show me the code.
+
+    -- Linus Torvalds [1]_
 
 .. contents:: Table of Contents
 
-====================
+
+
+
+Introduction
+=============
+
+In SymPy_ we encourage collaborative work.
+
+Everyone is welcome to join and to implement new feature, fix some bug, give
+general advice, etc... Also, we try to discuss everything and to review each
+other's work so that many eyes can see more thus raising the quality.
+
+General discussion takes place on `sympy@googlegroups.com`_ mailing list and in
+the issues_, and the code is discussed in `sympy-patches@googlegroups.com`_
+mailing list.
+
+As someone of you already know, software development is not just coding. A lot
+of non-coding tasks have to be done in order to produce *good* code. Just to
+mention a few: setting up infrastructure, designing, testing, documenting,
+assisting new developers (we are doing it here), and of course programming.
+
+But even programming is not all about writing the code, it is about writing the
+code *and* preparing it so that the code can be included into the project.
+
+Both producing the code and bringing it to the project are important parts of
+the game -- without the code there is nothing to bring in, and having the code
+outside is a nowin for anyone.
+
+As already said above, we review changes. This idea was borrowed from
+successful projects like Linux, Python, SAGE and a lot more. In short each
+change is first reviewed by other developers and only when it is approved the
+code is pushed in.
+
+Like it takes effort to write good and clear code, reviewing other's work needs
+effort too. There are good practices how to do things so that reviewing is fun
+for both the author and the reviewer. We try to follow them, and we'll try to
+show you how to follow too.
+
+By the way, when reviewing other's patches you *learn* a lot, so why not to join as a reviewer too?
+
+
 How to send a patch
-====================
+===================
 
-Intro
-=====
-
-License: New BSD License (see the LICENSE file for details) covers all files in the sympy repository unless stated otherwise.
+License: 'New BSD License'_ (see the `LICENSE`_ file for details) covers all files in the sympy repository unless stated otherwise.
 
 There are a few ways to create and send a patch.
 
-The best way is to send a github pull request against the sympy/sympy repository. We'll review it and push it in. 
+The best way is to send a github pull request against the `sympy/sympy`_ repository. We'll review it and push it in. 
 The github pull request is a preferred method, as that makes it easy for us to review and push the code in.
 
 More quickly, but not convenient for reviewing and merging, is to create patch-file with the help of pure git.
@@ -29,12 +73,13 @@ The basic work-flow for both variants is consist of a few stages:
 5. Only then commit changes
 6. Create patch file or pull request for github.
 
-All those are described in the details below `Workflow`_, but before it it would be useful to acquaint with `Coding conventions in Sympy`_.
+All those are described in the details below `Workflow process`_, but before it it would be useful to acquaint with `Coding conventions in Sympy`_.
 
-If you have any questions you can ask them to us on the `mailinglist <http://groups.google.com/group/sympy>`_. 
+If you have any questions you can ask them to us on the `mailinglist`_. 
 
-_`Coding conventions in Sympy`
-==============================
+
+Coding conventions in Sympy
+============================
 
 Standard Python coding conventions
 -----------------------------------
@@ -100,18 +145,20 @@ Also, if you start a module, docstring has to contain the description of main fu
 
 
 
-_`Workflow`
-=============
+Workflow process
+=================
+
+Here we'll describe the workflow using real world example where we fix some bug.
 
 Create your envirenment
 ------------------------
 
 Creating of environment is once-only.
 
-github
-~~~~~~~
+Github pull request variant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As you are going to use `github <https://github.com/>`_  you should have a GitHub account. If you have not one yet then just sign up at:
+As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
 
     https://github.com/signup/free
 
@@ -139,8 +186,8 @@ and::
 
 Do not forget to go to the `Create separated branch`_ instructions before code changing.
 
-Qiuck patch
-~~~~~~~~~~~~~~
+Qiuck patch variant
+~~~~~~~~~~~~~~~~~~~~
 
 In this way just clone read-only copy::
 
@@ -159,8 +206,8 @@ Create separated branch
 Think about branch name, that is similar to  topic of the patch or pull request, but short.
 If you know issue number then the branch name would be something like `1234_sequences`. So create it::
 
-    git branch '1234_sequences'
-    git checkout '1234_sequences'
+    git branch 1234_sequences
+    git checkout 1234_sequences
 
 To view in what branch you are type::
 
@@ -200,10 +247,11 @@ You can check what files are changed::
 
     git status
 
-And them to be upon version control system if nessesry::
+Add new files to be upon version control system if nessesry::
 
-    git add `new_file.py`
-    
+    git add new_file.py
+
+
 Check total changes if it is interesting::
     
     git diff
@@ -216,21 +264,26 @@ if your `commit message` is one line then you can use this command::
 
     git commit -m "1234: sequences base implementation"
     
-or::
+or if you plan to enter big description::
 
     git commit
     
-if you plan to enter big description: editor windows will appear automatically in this case.
+editor windows will appear automatically in this case.
+
+Also with the help of option `-a` you can tell the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
+
+    git commit -a -m "1234: sequences base implementation"
+
 
 Create patch file or pull request for github
 ----------------------------------------------
 
-github
-~~~~~~~
+Github pull request variant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Be sure that you are in your own branch, and run::
 
-    git push `1234_sequences`
+    git push 1234_sequences
 
 Then navigate to your repository with the changes you want someone else to pull:
 
@@ -242,8 +295,8 @@ image:: http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png
 
 That's all.
 
-Qiuck patch
-~~~~~~~~~~~~~~
+Qiuck patch variant
+~~~~~~~~~~~~~~~~~~~~
 
 If you do not use github, then after code modification, testing and commit operation just create patch-file::
 
@@ -261,9 +314,15 @@ git
 github
 -------
 
-Links
-======
+=============
+
 This page based upon present SymPy pages [1-6], github help [7-8] and inspired by Sage guide [9]:
+
+----------
+
+.. .. rubric:: Footnotes
+
+.. [1] http://lkml.org/lkml/2000/8/25/132
 
 * [1] http://docs.sympy.org/dev/sympy-patches-tutorial.html#quick-start
 * [2] http://sympy.org/development.html
@@ -274,3 +333,15 @@ This page based upon present SymPy pages [1-6], github help [7-8] and inspired b
 * [7] http://help.github.com/pull-requests/
 * [8] http://help.github.com/fork-a-repo/
 * [9] http://sagemath.org/doc/developer/
+
+
+
+.. _SymPy:          http://sympy.org/
+.. _issues:         http://code.google.com/p/sympy/issues/list
+.. _mailinglist:    sympy@googlegroups.com_
+.. _sympy@googlegroups.com:             http://groups.google.com/group/sympy
+.. _sympy-patches@googlegroups.com:     http://groups.google.com/group/sympy-patches
+.. _LICENSE:            https://github.com/sympy/sympy/blob/master/LICENSE
+.. _New BSD License:    http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29
+.. _GitHub:             https://github.com/
+.. _sympy/sympy:        https://github.com/sympy/sympy
