@@ -1,4 +1,4 @@
-## [Why does SymPy say that two equal expressions are unequal?](#hello)
+## [Why does SymPy say that two equal expressions are unequal?](#hello with a space)
 
 The equality operator (`==`) tests whether expressions have identical form, not whether they are mathematically equivalent.
 
@@ -32,10 +32,10 @@ True
 ```
 
 
-## [I did the same calculation twice and got different results. What's going on?]()
+## [I did the same calculation twice and got different results. What's going on?](#I did the same calculation twice and got different results. What's going on?)
 This problem is probably due to erroneous caching of assumptions. Please report the bug to the [[mailing list|http://groups.google.com/group/sympy]] or the [[issue tracker|http://code.google.com/p/sympy/issues/list]].
 
-## What is the best way to create symbols?
+## [What is the best way to create symbols?](#What is the best way to create symbols?)
 
 The most convenient way to create symbols when using SymPy interactively is via `var`. For example:
 ```py
@@ -53,7 +53,7 @@ This makes the code much clearer.
 
 
 
-## How good is SymPy's performance?
+## [How good is SymPy's performance?](#How good is SymPy's performance?)
 SymPy is efficient enough for interactive use as an advanced calculator. The order-of-magnitude time to evaluate a simple algebraic operation (say, multiplying two small polynomials) is around 1/1000 of a second. Operations like limits and symbolic integration are generally much slower.
 
 SymPy is written entirely in Python. Compared to CASes written in compiled languages (including Mathematica, Maple and Maxima), SymPy is generally at least an order of magnitude (10x) slower: This is partly due to the overhead of Python, and partly because SymPy in many cases only implements the most basic algorithm. Nonetheless, experimentation has shown that that symbolic computations can be done nearly as efficiently in Python as in compiled languages by using the right data structures and designing the code to minimize various Python overheads. The [[sympycore|http://code.google.com/p/sympycore/]] project is currently attempting to redesign SymPy's internals to provide better performance, and the results are promising so far. See [[sympycore wiki: PerformanceHistory|http://code.google.com/p/sympycore/wiki/PerformanceHistory]] and [[sympycore wiki: Performance|http://code.google.com/p/sympycore/wiki/Performance]] for more details.
