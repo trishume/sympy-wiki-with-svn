@@ -170,7 +170,7 @@ and click the “Fork” button.
 
 .. image:: http://help.github.com/images/bootcamp/bootcamp_3_fork.jpg
 
-Now you have your own repository respect to SymPy project. If your username in github is `mynick` then the forked project will be placed somthing like:
+Now you have your own repository respect to SymPy project. If your username in github is `mynick` then the forked project will be placed something like:
     
     - https://github.com/mynick/sympy
     
@@ -204,7 +204,7 @@ Create separated branch
 ------------------------
 
 Think about branch name, that is similar to  topic of the patch or pull request, but short.
-If you know issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
+If you know the issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
 
     git branch 1234_sequences
     git checkout 1234_sequences
@@ -286,7 +286,7 @@ Github pull request variant
 
 Be sure that you are in your own branch, and run::
 
-    git push 1234_sequences
+    git push origin 1234_sequences
 
 Then navigate to your repository with the changes you want someone else to pull:
 
