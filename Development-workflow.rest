@@ -155,8 +155,8 @@ Create your envirenment
 
 Creating of environment is once-only.
 
-Github pull request variant
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Github variant
+~~~~~~~~~~~~~~~
 
 As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
 
@@ -278,11 +278,12 @@ Also with the help of option `-a` you can tell to the command `commit` to automa
     git commit -a -m "1234: sequences base implementation"
 
 
+
 Create patch file or pull request for github
 ----------------------------------------------
 
-Github pull request variant
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Github variant
+~~~~~~~~~~~~~~~
 
 Be sure that you are in your own branch, and run::
 
@@ -295,6 +296,20 @@ Then navigate to your repository with the changes you want someone else to pull:
 Select branch, and press the `Pull Request` button.
 
 .. image:: http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png
+
+After pressing the `Pull Request` button, you are presented with a preview page where you can enter a title and optional description, see exactly what commits will be included when the pull request is sent, and also see who the pull request will be sent to:
+
+.. image:: http://img.skitch.com/20100831-qit9sjhuqk42t4ww91ifm5tm81.png
+
+If you’re sending from a topic branch, the title is pre-filled based on the name of the branch. Markdown is supported in the description, so you can embed images or use preformatted text blocks.
+
+You can switch to the `Commits` tab to ensure that the correct set of changes is being sent. And review the diff of all changes by switching to the `Files Changed`.
+
+Once you’ve entered the title and description, made any necessary customizations to the commit range, and reviewed the commits and file changes to be sent, press the `Send pull request` button.
+
+The pull request is sent immediately. You’re taken to the main pull request discussion and review page. Additionally, all repository collaborators and followers will see an event in their dashboard.
+
+
 
 That's all.
 
@@ -327,15 +342,15 @@ This page based upon present SymPy pages [1-6], github help [7-8] and inspired b
 
 .. [1] http://lkml.org/lkml/2000/8/25/132
 
-* [1] http://docs.sympy.org/dev/sympy-patches-tutorial.html#quick-start
-* [2] http://sympy.org/development.html
-* [3] https://github.com/sympy/sympy/wiki
-* [4] https://github.com/sympy/sympy/wiki/Pushing-patches
-* [5] https://github.com/sympy/sympy/wiki/Getting-the-bleeding-edge
-* [6] https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone
-* [7] http://help.github.com/pull-requests/
-* [8] http://help.github.com/fork-a-repo/
-* [9] http://sagemath.org/doc/developer/
+.. [2] http://docs.sympy.org/dev/sympy-patches-tutorial.html#quick-start
+.. [3] http://sympy.org/development.html
+.. [4] https://github.com/sympy/sympy/wiki
+.. [5] https://github.com/sympy/sympy/wiki/Pushing-patches
+.. [6] https://github.com/sympy/sympy/wiki/Getting-the-bleeding-edge
+.. [7] https://github.com/sympy/sympy/wiki/Git-hg-rosetta-stone
+.. [8] http://help.github.com/pull-requests/
+.. [9] http://help.github.com/fork-a-repo/
+.. [10] http://sagemath.org/doc/developer/
 
 
 
