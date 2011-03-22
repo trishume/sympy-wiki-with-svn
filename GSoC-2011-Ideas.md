@@ -215,3 +215,4 @@ If you are willing to mentor, please add yourself here.  I also need your link_i
 * Mateusz Paprocki (mattpap)
 * David joyner (wdjoyner)
 * Christian Muise (haz)
+* Ronan Lamy (rlamy)
