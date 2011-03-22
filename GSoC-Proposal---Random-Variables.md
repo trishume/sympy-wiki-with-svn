@@ -66,12 +66,17 @@ There will be several implementation issues I'm sure. Feel free to add questions
 ## Uses
 Please add any fun use cases you can think of
 * Educational examples with dice. Make three dice, plot the PDF. What is the probability of an even roll?
-* Rules for optics and other mechanical systems can be written down analytically. We could compute analytical spread functions of telescopes. An analytical for may allow for optimization. 
+
+* Rules for optics and other mechanical systems can be written down analytically. We could compute 
+analytical spread functions of telescopes. An analytical for may allow for optimization. 
 * Uncertainty Quantification in simple systems. Provides analytical base to test numerical methods.
+
 * Quantum Mechanical states can be thought of as random variables with complex wave functions rather than distributions. Perhaps there is some crossover. 
+
 
 ## Requirements from SymPy
 * I'll probably need to augment sympy.probability.distributions
+
 * Applying Functions to Probability Distributions requires that they have inverses. Maybe I'm not aware of the correct syntax here but (cos(sin(x**2))).inverse() yields just "acos" and not the expected result. Are inverses of compositions possible? The inline documentation suggests that this is only a feature of sympycore. Is this easily portable?
 
 
