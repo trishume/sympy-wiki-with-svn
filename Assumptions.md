@@ -1,3 +1,10 @@
+## Introduction
+The assumptions in SymPy need to be rewritten. This page is dedicated to discussing the best way to go about this.
+
+## Approaches
+Here we discuss the merits of each approach to replacing the old assumption system.
+
+## Assumption Examples
 <pre>
 M ... Mathematica
 S0 ... SymPy, current approach
