@@ -59,6 +59,7 @@ Google Summer of Code
 * [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
 * [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
 * [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
+* [[GSoC-Current-Applications]] -- A list of active proposals. Link your GSoC2011 Project Proposal here.  
 
 Development
 ==========
