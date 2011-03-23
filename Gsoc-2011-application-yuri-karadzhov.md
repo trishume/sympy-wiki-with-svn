@@ -1,4 +1,4 @@
-GSoC-2011-Application-Yuri-Karadzhov
+GSoC 2011 Application Yuri Karadzhov
 ====================================
 
 Title:	 SymPy: Implementing basic parametrization, symmetry search and handle module.
