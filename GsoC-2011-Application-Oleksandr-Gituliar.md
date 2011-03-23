@@ -52,7 +52,7 @@ them.
 Idealy the following problems should be easily solved:
 
 * what is an average momentum of an electron with +1/2 projection of spin on X
-  direction (Y and Z for the same state) considered that we know it's state?
+  direction (Y and Z for the same state considered that we know it)?
 * what is an average spin projection on X (Y and Z) of an electron with a given
   momentum? A kind of inverse problem to the previous.
 
