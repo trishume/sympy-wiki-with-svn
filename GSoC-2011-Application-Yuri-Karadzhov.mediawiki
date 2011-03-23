@@ -19,6 +19,7 @@ IRC: yuri-karadzhov on freenode
 
 Skype: kara-ya
 
+Mailing List: <a href="http://groups.google.com/group/sympy/browse_thread/thread/660ac96b5b0e3133">Parametrizator</a> or <a href="http://groups.google.com/group/sympy/browse_thread/thread/bf38f8e6095cf123">Symmetries</a>
 
 
 === Education ===
