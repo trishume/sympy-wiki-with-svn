@@ -345,12 +345,13 @@ Suppose `ts` is some series:
     >>> ts
     1 - x**2/2 + x**4/24 + ...
 
-By substitution I can obtain Sum object or :
+By substitution I can obtain the `Sum` object:
 
     >>> ts.subs(x, 1)
     1 - 1/2 + 1/24 + ...
 
 or calculated Sum
+
    >>> ts(1)
    0.540302305868140
 
