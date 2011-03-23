@@ -352,13 +352,13 @@ By substitution I can obtain the `Sum` object:
 
 or calculated Sum
 
-   >>> ts(1)
-   0.540302305868140
+    >>> ts(1)
+    0.540302305868140
 
 or more with intelligibly 
 
-   >>> ts.subs(x, 1).simplyfy()
-   cos(1)
+    >>> ts.subs(x, 1).simplyfy()
+    cos(1)
 
 
 # Algorithms
