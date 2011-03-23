@@ -2,7 +2,7 @@ Title:	 SymPy: Implementing basic parametrization, symmetry search and handle mo
 
 Student:	 Yuri Karadzhov
 
-Abstract:	As for professional mathematician and physicist computer algebra system (CAS) mostly is the tool of handling simple yet technically large problems. Sure, it can solve some problems completely from the start to the end, but the main purpose we use CAS is to simplify our daily routine. So the goal of my project is improvement of basic operation which significantly reduce amount of repeated and cumbersome operations and give the basement for other more complex and specific tools.
+Abstract:	As for professional mathematician and physicist computer algebra system (CAS) mostly is the tool of handling simple yet technically large problems. Sure, it can solve some problems completely from the start to the end, but the main purpose we use CAS is to simplify our daily routine. So the goal of my project is improvement of base of Sympy which significantly reduce amount of repeated and cumbersome operations and give the basement for other more complex and specific tools.
 As for me this tools are – parametrization (which helps to solve ODE's and PDE's depending on arbitrary parameters) and concerned problem of searching and handling symmetries of single ODE or PDE or system of ones.
 
 Content:	
@@ -60,11 +60,11 @@ I've bin using GNU Linux since 2001. It is my only operation system for the last
 Programmer experience:
 Proffesional:
 Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
-Java SE – Institute project: Partial TeX translator fo SIGMA journal (2009)
+Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
 APL – Simcorp LLC (2008-2009)
 Accademic:
 C/C++, Python – writing labs in University
-Scala – do some fun with Processing
+Scala – experimenting with Processing
 
 I have experience with SVN, Hg.
 
@@ -74,3 +74,5 @@ I have experience with SVN, Hg.
 
 
 
+I have good knowledge of Maple, Mathematica, tried to use Sage and Maxima.
+I comleted the disered functionality as Maple Library and now porting it to Mathematica.
