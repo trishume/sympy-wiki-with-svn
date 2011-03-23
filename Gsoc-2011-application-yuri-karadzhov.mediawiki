@@ -7,12 +7,12 @@ Abstract:	As for professional mathematician and physicist computer algebra syste
 As for me this tools are – parametrization (which helps to solve ODE's and PDE's depending on arbitrary parameters) and concerned problem of searching and handling symmetries of single ODE or PDE or system of ones.	
 ----
 
+== Personal info ==
+=== Name and Contact Info ===
 
-== Name and Contact Info ==
 
 
-
-Yuri Karadzhov
+Name: Yuri Karadzhov
 
 Gmail and GoogleTalk: yuri.karadzhov@gmail.com
 
@@ -22,7 +22,7 @@ Skype: kara-ya
 
 
 
-== Education ==
+=== Education ===
 
 
 
@@ -35,7 +35,7 @@ BA of mathematical physics and computer sciences in Kiev National Tars Shevchenk
 
 
 
-== Current research and background ==
+=== Current research and background ===
 
 
 
@@ -50,7 +50,7 @@ generalize the approach of finding such problems.
 
 
 
-== Technical background & Programming experience ==
+=== Technical background & Programming experience ===
 
 
 
@@ -69,9 +69,26 @@ I have experience with SVN, Hg.
 
 
 
-== Mathematical Software ==
+=== Mathematical Software ===
 
 
 
 I have good knowledge of Maple, Mathematica, tried to use Sage and Maxima.
 I completed the desired functionality as Maple Library and now porting it to Mathematica.
+
+
+
+=== Project Motivation ===
+
+
+== Project summary ==
+
+
+
+== Project plan ==
+
+
+
+== Schedule ==
+
+
