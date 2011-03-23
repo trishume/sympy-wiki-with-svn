@@ -54,7 +54,7 @@ generalize the approach of finding such problems.
 
 
 
-I've bin using GNU Linux since 2001. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it simple to configure and up to date. I used to work as system administrator so I familiar with sh.
+I've bin using GNU Linux since 2001. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
 
 Programmer experience:
 Professional:
