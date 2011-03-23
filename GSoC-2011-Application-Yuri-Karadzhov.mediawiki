@@ -80,11 +80,11 @@ I completed the desired functionality as Maple Library and now porting it to Mat
 === Project Motivation ===
 
 
-== Project summary ==
+== Project Goal ==
 
 
 
-== Project plan ==
+== Project Plan ==
 
 
 
