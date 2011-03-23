@@ -58,9 +58,11 @@ Please add any fun use cases you can think of
 
 * Educational examples with dice. Make three dice, plot the PDF. What is the probability of an even roll?
 
-* Rules for optics and other mechanical systems can be written down analytically. We could compute 
-analytical spread functions of telescopes. An analytical for may allow for optimization. 
 * Uncertainty Quantification in simple systems. Provides analytical base to test numerical methods.
+
+* For simple systems an analytical description of how uncertainty evolves may allow for clear statement about how to minimize that uncertainty. 
+
+* Clear description of experiments, with statistical variation. 
 
 * Quantum Mechanical states can be thought of as random variables with complex wave functions rather than distributions. Perhaps there is some crossover. 
 
