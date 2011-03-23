@@ -71,4 +71,15 @@ The point here is to implement a rotation group SO(3) (or even Lorentz SO(1,3)
 group) representations for SU(N) with arbitrary N so that one could "rotate" spin
 states as well. Seems extremely interesting especially in symbolic implementation.
 
+### random numbers from distributions of arbitrary form in N dimensions
+
+Suppose one has a function in N dimensions that is non-negative and normalized to 1,
+so that we can treat it like a probability density (of 4-momentum of the relativistic
+particle for example). The idea is to be able to generate N-dimensional points
+according to that distribution.
+
+Actually this technique is widely used in Monte-Carlo simulations in particle physics
+and is mostly related to numerical methods than symbolic calculation, however is
+extremely interesting as well.
+
 to be continued ...
