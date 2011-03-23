@@ -55,6 +55,7 @@ There will be several implementation issues I'm sure. Feel free to add questions
 
 ## Uses
 Please add any fun use cases you can think of
+
 * Educational examples with dice. Make three dice, plot the PDF. What is the probability of an even roll?
 
 * Rules for optics and other mechanical systems can be written down analytically. We could compute 
@@ -68,7 +69,7 @@ analytical spread functions of telescopes. An analytical for may allow for optim
 * I'll probably need to augment sympy.probability.distributions
 
 * Applying Functions to Probability Distributions requires that they have inverses. Maybe I'm not aware of the correct syntax here but (cos(sin(x**2))).inverse() yields just "acos" and not the expected result. Are inverses of compositions possible? The inline documentation suggests that this is only a feature of sympycore. Is this easily portable?
-
+  * The way functions are currently designed is a problem. There's basically no good way to represent a specific non built-in function, cf [issue 1688](http://code.google.com/p/sympy/issues/detail?id=1688). And this `inverse` method is seriously broken. --Ronan
 
 ## Further Directions
 
