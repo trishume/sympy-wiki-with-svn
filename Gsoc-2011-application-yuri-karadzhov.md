@@ -40,11 +40,37 @@ BA of mathematical physics and computer sciences in Kiev National Tars Shevchenk
 
 
 
-I have background in Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analysis.
+I have background in Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses.
 
 Currently in applied math department I study the theory of Lie groups
 and it's application to the differential equations. The most recent
 works however concerned with supersymmetry of Schrödinger-Pauli
 equation of arbitrary dimension. The obtained results widely extend
 the number of exactly solvable Quantum Mechanic problems as well as
-generalize the approach of finding such problems. 
+generalize the approach of finding such problems.
+
+
+
+== Technical background & Programming experience ==
+
+
+
+I've bin using GNU Linux since 2001. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it simple to configure and up to date. I used to work as system administrator so I familiar with sh.
+
+Programmer experience:
+Proffesional:
+Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
+Java SE – Institute project: Partial TeX translator fo SIGMA journal (2009)
+APL – Simcorp LLC (2008-2009)
+Accademic:
+C/C++, Python – writing labs in University
+Scala – do some fun with Processing
+
+I have experience with SVN, Hg.
+
+
+
+== Mathematical Software ==
+
+
+
