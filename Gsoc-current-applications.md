@@ -7,3 +7,4 @@ Project Proposals:
 * [Parametrization and Symmetries by Yuri Karadzhov](GSoC-2011-Application-Yuri-Karadzhov)
 * [[GSoC-Proposal---Random-Variables]]
 * [by Oleksandr Gituliar](GsoC-2011-Application-Oleksandr-Gituliar)
+* [Geoffrey Ehrman, Project Undecided](GsoC-2011-Application-Geoffrey-Ehrman)
