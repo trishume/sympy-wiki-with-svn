@@ -80,6 +80,6 @@ according to that distribution.
 
 Actually this technique is widely used in Monte-Carlo simulations in particle physics
 and is mostly related to numerical methods than symbolic calculation, however is
-extremely interesting as well.
+extremely interesting nevertheless.
 
 to be continued ...
