@@ -174,6 +174,8 @@ Choose a univariate polynomial representation in which elements of algebraic dom
 SymPy's integrator supports several classes of special function. This is, however, insufficient in solving advanced physics and engineering problems.
 * **Idea**:
 Extend the integrator by implementing methods for integration of elementary and special functions via Meijer G-functions (also known as Marichev-Adamchik Mellin transform). This approach is useful in both indefinite and definite integration. The problems are how to convert arbitrary input expression to a G-function and how to rewrite the resulting expression in terms of more familiar functions (elementary, special, hypergeometric).
+
+Look at the paper by Kelly Roach (K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.)
 * **Rating**: 3-5 (quite hard)
 
 #### Implement definite integration algorithm using residues
