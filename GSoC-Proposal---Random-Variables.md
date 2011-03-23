@@ -69,7 +69,9 @@ analytical spread functions of telescopes. An analytical for may allow for optim
 * I'll probably need to augment sympy.probability.distributions
 
 * Applying Functions to Probability Distributions requires that they have inverses. Maybe I'm not aware of the correct syntax here but (cos(sin(x**2))).inverse() yields just "acos" and not the expected result. Are inverses of compositions possible? The inline documentation suggests that this is only a feature of sympycore. Is this easily portable?
-  * The way functions are currently designed is a problem. There's basically no good way to represent a specific non built-in function, cf [issue 1688](http://code.google.com/p/sympy/issues/detail?id=1688). And this `inverse` method is seriously broken. --Ronan
+  * The way functions are currently designed is a problem. There's basically no good way to represent a specific non built-in function, cf [issue 1688](http://code.google.com/p/sympy/issues/detail?id=1688). And this `inverse` method is seriously broken. --Ronan  
+  * Is it broken beyond repair? I anticipate that I'll need to enhance other parts of SymPy to integrate Random Variables. Is fixing 'inverse' doable? --Matt
+
 
 ## Further Directions
 
