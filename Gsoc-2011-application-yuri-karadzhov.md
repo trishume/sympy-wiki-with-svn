@@ -20,3 +20,31 @@ Gmail and GoogleTalk: yuri.karadzhov@gmail.com
 IRC: yuri-karadzhov on freenode
 
 Skype: kara-ya
+
+
+
+== Education ==
+
+
+
+Current: PhD student in Applied math department of the Kiev Institute of Mathematics, National
+Academy of Science, Ukraine.
+
+Former: MS of mathematical physics and computer sciences in Kiev National Tars Shevchenko University (honours degree).
+
+BA of mathematical physics and computer sciences in Kiev National Tars Shevchenko University (honours degree).
+
+
+
+== Current research and background ==
+
+
+
+I have background in Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Supersymmetries and Symmetries Analysis.
+
+Currently in applied math department I study the theory of Lie groups
+and it's application to the differential equations. The most recent
+works however concerned with supersymmetry of Schrödinger-Pauli
+equation of arbitrary dimension. The obtained results widely extend
+the number of exactly solvable Quantum Mechanic problems as well as
+generalize the approach of finding such problems. 
