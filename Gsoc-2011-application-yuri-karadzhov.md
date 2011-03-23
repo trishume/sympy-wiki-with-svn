@@ -58,11 +58,11 @@ generalize the approach of finding such problems.
 I've bin using GNU Linux since 2001. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it simple to configure and up to date. I used to work as system administrator so I familiar with sh.
 
 Programmer experience:
-Proffesional:
+Professional:
 Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
 Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
 APL – Simcorp LLC (2008-2009)
-Accademic:
+Academic:
 C/C++, Python – writing labs in University
 Scala – experimenting with Processing
 
@@ -75,4 +75,4 @@ I have experience with SVN, Hg.
 
 
 I have good knowledge of Maple, Mathematica, tried to use Sage and Maxima.
-I comleted the disered functionality as Maple Library and now porting it to Mathematica.
+I completed the desired functionality as Maple Library and now porting it to Mathematica.
