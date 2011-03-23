@@ -335,6 +335,31 @@ from source function
 The same as Series
 
 
+### Substitution
+
+(draft variants)
+
+Suppose `ts` is some series:
+
+    >>> ts = TaylorSeries(sequence = Sequence((0, oo), [1, 0, -1, 0], periodical=True))
+    >>> ts
+    1 - x**2/2 + x**4/24 + ...
+
+By substitution I can obtain Sum object or :
+
+    >>> ts.subs(x, 1)
+    1 - 1/2 + 1/24 + ...
+
+or calculated Sum
+   >>> ts(1)
+   0.540302305868140
+
+or more with intelligibly 
+
+   >>> ts.subs(x, 1).simplyfy()
+   cos(1)
+
+
 # Algorithms
 
 1. Determine what is the kind of series of expression will be
