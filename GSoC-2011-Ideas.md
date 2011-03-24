@@ -74,12 +74,7 @@ The second section contains more detailed projects that can be done.
 * improve SymPy's interoperatibility with other CAS software
   * implement general code parsing (Mathematica, Maxima, Axiom etc.) using e.g. pyparsing
   * implement Python + SymPy (structure + semantics) translation to your favorite CAS (other than SymPy :)
-* **Symbolic quantum mechanics in SymPy.** Each of the following would probably be a solid summer's work (or more).
-  * Abstract Dirac notation, including Hilbert spaces, Operators, States, Basis sets, density matrices, measurement, etc.
-  * Spin states and operators for arbitrary spin.  This would include things like angular momentum coupling, Clebsch-Gordon coefficient, Wigner 3j and 6j, etc.
-  * Position and momentum basis functions on arbitrary intervals and sets in 1D, 2D and 3D.  Use to implement basis quantum systems like particle in a box, H atom, simple harmonic oscillator, scattering, etc.
-  * Symbolic quantum computing:  qubits, gates, algorithms, measurement, noise, error-correction.
-  * Second quantization capabilities:  Wick's theorem for Bosons, port to new assumption system, port to new general quantum module.
+* **Symbolic quantum mechanics in SymPy.** See below for details on projects related to this.
 
 ## Some Detailed Ideas (Projects)
 
