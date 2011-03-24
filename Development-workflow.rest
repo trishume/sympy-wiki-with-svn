@@ -53,7 +53,7 @@ By the way, when reviewing other's patches you *learn* a lot, so why not to join
 How to send a patch
 ===================
 
-License: 'New BSD License'_ (see the `LICENSE`_ file for details) covers all files in the sympy repository unless stated otherwise.
+License: 'New BSD License'_ (see the `LICENSE`_ file for details) covers all files in the SymPy repository unless stated otherwise.
 
 There are a few ways to create and send a patch.
 
@@ -62,14 +62,14 @@ The github pull request is a preferred method, as that makes it easy for us to r
 
 More quickly, but not convenient for reviewing and merging, is to create patch-file with the help of pure git.
 This way can be used if the patch has high-priority or significant, only one or two files are involved or you just have not enough time for more accurate way.
-(We will be thankful for any improvments of sympy.)
+(We will be thankful for any improvements of sympy.)
 
 The basic work-flow for both variants is consist of a few stages:
 
-1. Create your envirenment, if it was not created earler.
+1. Create your environment, if it was not created earlier.
 2. Create separated branch
 3. Modify code and/or create tests of it
-4. Be sure that all tests of sympy have been passed.
+4. Be sure that all tests of SymPy have been passed.
 5. Only then commit changes
 6. Create patch file or pull request for github.
 
@@ -150,7 +150,7 @@ Workflow process
 
 Here we'll describe the workflow using real world example where we fix some bug.
 
-Create your envirenment
+Create your environment
 ------------------------
 
 Creating of environment is once-only.
@@ -186,7 +186,7 @@ and::
 
 Do not forget to go to the `Create separated branch`_ instructions before code changing.
 
-Qiuck patch variant
+Quick patch variant
 ~~~~~~~~~~~~~~~~~~~~
 
 In this way just clone read-only copy::
@@ -223,7 +223,7 @@ Code modification
 ...
 
 
-Be sure that all tests of sympy have been passed
+Be sure that all tests of SymPy have been passed
 -------------------------------------------------
 
 To ensure everything stays in shape, let’s see if all tests pass::
@@ -248,7 +248,7 @@ You can check what files are changed::
 
     git status
 
-Add new files to be upon version control system if nessesry::
+Add new files to be upon version control system if necessary::
 
     git add new_file.py
 
@@ -309,11 +309,12 @@ Once you’ve entered the title and description, made any necessary customizatio
 
 The pull request is sent immediately. You’re taken to the main pull request discussion and review page. Additionally, all repository collaborators and followers will see an event in their dashboard.
 
-
-
 That's all.
 
-Qiuck patch variant
+
+
+
+Quick patch variant
 ~~~~~~~~~~~~~~~~~~~~
 
 If you do not use github, then after code modification, testing and commit operation just create patch-file::
@@ -323,18 +324,31 @@ If you do not use github, then after code modification, testing and commit opera
 And send us it.
 
 
-More about instruments
-=======================
+Updating your pull request
+---------------------------
 
-git
-----
+If after a time you need to make changes in pull request then the best way is to again add new commit in you local repositary and simpli repeat push command:
 
-github
--------
+    git commit -m "1234: some additional corrections"
+    git push origin 1234_sequences
 
-=============
 
-This page based upon present SymPy pages [1-6], github help [7-8] and inspired by Sage guide [9]:
+Synchronization with master `sympy/sympy`.
+-------------------------------------------
+
+When clone a repo, it has a default remote called origin that points to your fork on GitHub, not the original 
+repo it was forked from. To keep track of the original repo, you need to add another remote named upstream:
+
+    git remote add upstream git://github.com/sympy/sympy.git
+
+Assigns the original repo to a remote called "upstream"
+
+    git fetch upstream
+
+
+
+
+This page based upon present SymPy pages [2-6], github help [8-9] and inspired by Sage guide [10]:
 
 ----------
 
