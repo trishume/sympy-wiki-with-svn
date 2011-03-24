@@ -28,6 +28,7 @@ I would like to work on improving the definite integration capabilities. In part
 
 ## Plan
 In principle, definite integration using the G-transform consists of four steps:
+
 1. Rewrite the integrand in terms of G functions (except for powers/polynomials)
 2. Simplify the resulting expression using the algebraic relations of the G function; hope that we hit a form where one of the integration theorems applies.
 3. Transform back the resulting expression in G functions into a recognisable form.
