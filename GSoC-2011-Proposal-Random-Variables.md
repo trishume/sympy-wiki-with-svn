@@ -38,6 +38,26 @@ The rules for functions of random variables can be found in any standard textboo
 
 Previous CAS work has been done by [Maple](http://www.maplesoft.com/support/help/Maple/view.aspx?path=Statistics/RandomVariables) at least. Mathematica doesn't seem to have a very advanced implementation (although I looked only briefly). 
 
+## Work
+
+How to mathematically define Random Variables is clear. How to code and integrate them into SymPy is not. I separate the work into solving two main problems:
+
+### Defining Random Variables
+
+There are two goals:
+
+* Define Random Variables as generally as possible
+
+* Ensure that Random Variables are as intuitive to use and efficient to compute as possible. 
+
+For example we could decide only to treat Continuous random variables and focus on optimizing operations on continuous probability density functions (PDFs). Alternatively, we could define arbitrary spaces of events (allowing for say the number of dots on a six sided die), distributions on these spaces (unifomly ⅙ in the die example)  and then define random variables as functions on the space of events. How about Cartesian products of these spaces? Multivariable target spaces? What are the best choices here which balance intuitive use and mathematical clarity?
+
+### Integration into SymPy
+
+I suspect that implementing a clean, efficient and intuitive Random Variable type will take up at most half my time. The other half will be in integration with existing SymPy mechanics. 
+SymPy was designed to function on traditional variables, not random ones. Random Variables require different dynamics (such as easily computable inverses of functions) and will provide different responses. 
+
+It’s difficult for me to give a rich response here without understanding the core of SymPy at a deeper level. 
 
 ## Uses
 Please add any fun use cases you can think of
