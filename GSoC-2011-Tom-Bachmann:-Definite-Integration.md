@@ -48,5 +48,6 @@ So the plan would look roughly like this:
 * Integration of G-functions in the described form is trivial.
 * Compute G-functions in terms of named special functions.
   This is also hard, and definitely an incremential work. One strategy is described in [1].
+* For this to make sense, there need to be many classes of special functions available. mpmath provides very many of these, but it is geared towards actually computing them.
 
 [3] Luke, Y. L. (1969), The Special Punctions and Their  Approximations, Volume 1, Academic Press, San Diego.
