@@ -337,7 +337,7 @@ The same as Series
 
 ### Substitution
 
-(draft variants)
+(draft variants, see also  [issue 2026](http://code.google.com/p/sympy/issues/detail?id=2026 "issue 2026") )
 
 Suppose `ts` is some series:
 
