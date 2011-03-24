@@ -85,13 +85,19 @@ The second section contains more detailed projects that can be done.
 
 ### Symbolic quantum mechanics (sympy.physics.quantum)
 
-Please contact Brian E. Granger for questions about the physics related topics.
+Please contact the sympy list (or Brian E. Granger, Ondrej Certik) for questions about the physics related topics.
 
 #### Abstract Dirac notation
 
 * **Status**: Last summer we had two successful GSoC projects working on this topic. The code has been merged into sympy master (in sympy.physics.quantum), but there is a ton left to do.
 * **Idea**: Continue to improve this code by adding any number of features. The sky is the limit on this one. You could basically pick anything from quantum mechanics and implement it (a physical system, scattering theory, perturbation theory, etc.).  A student interested in working on this should minimally have already taken an upper division (undergrad) quantum course and have a solid understanding of quantum mechanics.
 * **Rating**: 3 (moderate)
+
+#### Implement All Known Analytical Solutions to Quantum Mechanical Systems
+
+* **Status**: Currently, we have Hydrogen Schroedinger/Dirac energies and nonrelativistic wavefunctions implemented in [sympy.physics.hydrogen](https://github.com/sympy/sympy/blob/master/sympy/physics/hydrogen.py).
+* **Idea**: Implement all known analytical formulas for energies and wavefunctions for all QM systems that can be solved analytically (there are not that many). In particular, 1d: finite/infinite well, oscillator, Coulombic field, 1d radial equation: Coulombic field, oscillator, finite/infinite well, 2d: Coulombic field, oscillator, finite/infinite well, 3D: finite/infinite well. Then there are systems in cylindrical coordinates and other things. There will be a submodule in the quantum, that would contain as much analytical knowledge about these systems as possible, and one would retrieve the knowledge using physical parameters (e.g. (Z, n) for Hydrogen states, (n1, n2, n3) for 3D oscillator, and so on). The devil is in little details, and there is high value in having all these systems implemented and tested, that they are correct.
+* **Rating**: 1 (easy)
 
 #### Spin states and operators for arbitrary spin
 
