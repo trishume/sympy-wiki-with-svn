@@ -82,7 +82,7 @@ is that states are not a first-class objects, however belong to some HilbertSpac
 thus every Hilbert space knows all its states and can transform them once some rotation
 is mode with it. For example:
 ```python
-from sympy.physics.quantum2 import HilbertSpace, State
+from sympy.physics.quantum2 import HilbertSpace
 
 h2 = HilbertSpace(2)  # a 2-dimensional Hilbert space
 
