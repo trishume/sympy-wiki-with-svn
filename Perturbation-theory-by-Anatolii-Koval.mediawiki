@@ -1,0 +1,57 @@
+Title:                Implementation perturbation theory into sympy.physics.quantum
+
+Student:              Anatolii Koval
+
+Abstract:             Computer algebra systems (CAS) simplifies traditional mathematics and physics calculation what rescue us from daily routine. But what about Quantum Mechanics which has specific math calculations? In this project I want implement functionality for Quantum Mechanics Perturbation Theory calculation into SymPy physics module, to prevent tedious and wearying work.
+
+== Personal info ==
+=== Name and Contact Info ===
+
+
+
+Name: Anatolii Koval
+
+Gmail and GoogleTalk: weralwolf@gmail.com
+
+Jabber: weralwolf@gmail.com, weralwolf@jabber.ru
+
+Skype: weralwolf
+
+Mailing List: <a href="http://groups.google.com/group/sympy/browse_thread/thread/3e6a1cf2c1cfd393">Intro</a> and <a href="http://groups.google.com/group/sympy/browse_thread/thread/ade9df0af84bd17c">Example</a> or <a href="http://groups.google.com/group/sympy/browse_thread/thread/d9f556fd2661b078">Same example</a>(there was one error, so there two such topics)
+
+=== Education ===
+
+Current: bachelor of Astronomy and Cosmological Physics department in Physical faculty of the Kiev National Tars Shevchenko University
+
+=== Current research and background ===
+
+Helpful background: <i>Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Functions, Differential Equations, Mathematical Physics</i>.
+
+Currently works on: "Model issue on ionospheric tomography based upon GNSS satellites"
+
+=== Programming & technical background ===
+
+I've bin using GNU Linux since 2007 y. I worked with Fedora, Arch Linux and currently use Ubuntu 10.04.
+
+Programming XP:
+* C++ – <i>worked with:</i> stl, templates, libxml, alglib, node.js, libperl--, v8, libmysql in different projects or some times just for fun. My public project: <a href="https://github.com/weralwolf/node-perl-packer">Node Perl Packer</a>
+* Python – <i>worked with:</i> Mechanize, std, PyQt. Mostly for some technical calculations.
+* JS – <i>worked with:</i> jQuery, node.js. Currently work on module to node.js (link above)
+* PHP – <i>worked with:</i> Yii, PEAR
+* <i>Also worked with:</i> MySQL, SQLite, XPath, CSS, XML, etc.
+
+I have experience in working with SVN, little bit Git.
+Currently use NetBeans IDE, but also try Eclipse and Anjuta
+
+== Project ==
+=== Motivations ===
+
+I want to become more familiar with scientific calculations and get experience from this project, make own investigation into SymPy physics module to simplify daily life for other scientists who works with quantum mechanics. Also in future planes I want to work with Gravitation Theory, so I think it will be good introduction into scientific programming with Python on more higher level. 
+
+=== Project Goal ===
+
+To get in how would looks like calculation perturbation I've write this code: <a href="http://pygments.org/demo/17049/"><i>"Applying perturbation theory to calculate the ground state energy of the 1D infinite potential well of width $a$ with a perturbation which is linear in $x$, up to second order in perturbation"</i></a>. Where I have seen which problems we can deal with in this case:
+* Calculating matrix elements $V<sub>mn</sub>$ of $V$ perturbation with integrals but not with Bra and Ket vectors or even through sympy.physics.quantum.operator, cause ''matrix_element'' method not implemented yet.
+* Calculation of two first orders is more simpler then more higher orders which force user write more code what as usually leads to lots of errors
+* Make some preliminary calculations to understand what exactly elements of infinite sums wouldn't equals to zero
+Due to list above the main goal of my project is prevent and solve such problems and create useful solution for calculating 
