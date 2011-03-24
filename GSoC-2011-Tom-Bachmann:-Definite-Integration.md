@@ -38,3 +38,15 @@ Here step 3 is certainly the hardest.
 More details are hard for me to come by at this stage. It seems like a good idea to select a representative subset of formulae from a reference table such as [2], investigate which sympy can currently solve, and then implement the G transform, focussing on making the selected formulae work. I can then evaluate the algorithm against more formulae from said reference works, and implement extensions if time permits.
 
 [2] Prudnikov, A. P., Brychkov, Yu. A., Marichev O. I. (1990), Integrals and Series, Volumes 1-3, Gordon and Breach Science Publishers.
+
+So the plan would look roughly like this:
+
+* Add classes for hypergeometric functions and G-functions.
+  Note that I do not intend to actually provide means to compute these in general, these classes are much more like a container for indices than anything else. In principle we don't need hypergeometric functions, but many books are phrased in terms of them so it is probably helpful to have them around, together with conversion to G functions.
+* Implement pattern matching code to rewrite an integrand as a product of at most two G-functions.
+  This is probably an incremential work, driven by given use cases. I cannot see a very general strategy here. Many detailed reference works available, e.g [3].
+* Integration of G-functions in the described form is trivial.
+* Compute G-functions in terms of named special functions.
+  This is also hard, and definitely an incremential work. One strategy is described in [1].
+
+[3] Luke, Y. L. (1969), The Special Punctions and Their  Approximations, Volume 1, Academic Press, San Diego.
