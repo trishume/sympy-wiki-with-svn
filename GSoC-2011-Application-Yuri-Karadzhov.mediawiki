@@ -26,12 +26,13 @@ Mailing List: <a href="http://groups.google.com/group/sympy/browse_thread/thread
 
 
 
-Current: PhD student in Applied math department of the Kiev Institute of Mathematics, National
+Current:
+* PhD student in Applied math department of the Kiev Institute of Mathematics, National
 Academy of Science, Ukraine.
 
-Former: MS of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
-
-BA of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
+Former:
+* MS of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
+* BA of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
 
 
 
