@@ -8,3 +8,4 @@ Project Proposals:
 * [[GSoC-Proposal---Random-Variables]]
 * [by Oleksandr Gituliar](GsoC-2011-Application-Oleksandr-Gituliar)
 * [Geoffrey Ehrman, Project Undecided](GsoC-2011-Application-Geoffrey-Ehrman)
+* [Tom Bachmann---Definite Integration](GSoC 2011 Tom Bachmann: Definite Integration)
