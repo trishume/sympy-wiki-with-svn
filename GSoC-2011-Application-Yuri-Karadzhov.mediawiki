@@ -162,8 +162,8 @@ The huge routine part is obtaining the system of determining equations. So the g
 # Apply the infinitesimal operator to the equation (system of equations)
 # Obtain system of determining equations 
 
-```Python
->>> Input #Comment
+```python
+>>> Input # Comment
 Output
 ```
 
