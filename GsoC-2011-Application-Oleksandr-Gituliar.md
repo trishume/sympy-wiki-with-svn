@@ -95,6 +95,8 @@ h2.rotate(Pi/4, 0, Pi/8)   # make a rotation using for example Euler angles conv
 
 Note, that after the last line of code was executed all states that belong to h2 (in this example s1, s2, and s3) has changed according to SU(2) representation of rotaion group. Moreover all the details of rotation group representations are hidden in HilbertSpace.rotation method that of course is not trivial to implement for arbitrary N (integer or oo for continuous spaces).
 
+The idea can be extended even further if one will consider direct sum of several Hilbert spaces (Momentum + Spin + Angular Momentum). In that case all spaces should be transformed as well as states/wavefunctions and their arguments (that is a non-trivial task especially in a symbolic form).
+
 ### random numbers from distributions of arbitrary form in N dimensions
 
 Suppose one has a function in N dimensions that is non-negative and normalized to 1,
