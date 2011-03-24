@@ -29,9 +29,9 @@ Mailing List: <a href="http://groups.google.com/group/sympy/browse_thread/thread
 Current: PhD student in Applied math department of the Kiev Institute of Mathematics, National
 Academy of Science, Ukraine.
 
-Former: MS of mathematical physics and computer sciences in Kiev National Tars Shevchenko University (honours degree).
+Former: MS of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
 
-BA of mathematical physics and computer sciences in Kiev National Tars Shevchenko University (honours degree).
+BA of mathematical physics and computer sciences in Mechanic-Mathematical faculty of the Kiev National Tars Shevchenko University (honours degree).
 
 
 
@@ -39,7 +39,7 @@ BA of mathematical physics and computer sciences in Kiev National Tars Shevchenk
 
 
 
-I have background in Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses.
+Background which might be helpful: Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Funcions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses.
 
 Currently in applied math department I study the theory of Lie groups
 and it's application to the differential equations. The most recent
@@ -58,12 +58,13 @@ I've bin using GNU Linux since 2001. It is my only operation system for the last
 
 Programmer experience:
 Professional:
-Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
-Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
-APL – Simcorp LLC (2008-2009)
+* Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
+* Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
+* APL – Simcorp LLC (2008-2009)
+
 Academic:
-C/C++, Python – writing labs in University
-Scala – experimenting with Processing
+* C/C++, Python – writing labs in University
+* Scala – experimenting with Processing
 
 I have experience with SVN, Hg.
 
@@ -78,7 +79,12 @@ I completed the desired functionality as Maple Library and now porting it to Mat
 
 
 
-=== Project Motivation ===
+=== Project Motivation & Expectation ===
+
+
+
+The main purpose I applied to this project is to investigate in base of the sympy, which gives the ability to improve more complex functionality which I need in my research. I expect to continue my work on sympy after the end of the project, especially on differential and Lie modules, they are in great interest of me. Because after my work on SSQM wil be finished I will recalculate and correct Amaldi classification which incomplete version is used in Maple to solve systems of ODE's and PDE's.
+
 
 
 == Project Goal ==
