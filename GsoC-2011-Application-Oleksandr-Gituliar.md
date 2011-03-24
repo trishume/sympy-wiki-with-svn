@@ -104,8 +104,11 @@ so that we can treat it like a probability density (of 4-momentum of the relativ
 particle for example). The idea is to be able to generate N-dimensional points
 according to that distribution.
 
-Actually this technique is widely used in Monte-Carlo simulations in particle physics
-and is mostly related to numerical methods than symbolic calculation, however is
-extremely interesting nevertheless.
+It might look like this idea is more appropriate for some numerical system, however
+making it general/good enough requires to perform an analytical analysis of the density
+function that SymPy could easily do.
+
+Once implemented such module could be very useful standalone as a general random number
+generator as well as a component for a Monte-Carlo integrator.
 
 to be continued ...
