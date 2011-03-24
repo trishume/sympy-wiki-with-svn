@@ -86,7 +86,7 @@ I completed the desired functionality as Maple Library and now porting it to Mat
 
 
 
-=== Project Motivation & Expectation ===
+=== Project Motivations & Expectations ===
 
 
 
