@@ -1,7 +1,7 @@
 ## About Me
 
 My name is Tom Bachmann and I study mathematics (second year) at the
-university of cambridge, england. My email is tb401@cam.ac.uk.
+university of cambridge, england. My email is tb401@NOSPAMcam.ac.uk.
 
 Here is an overview of my computer
 programming experience: I have previously worked on the Hurd project
