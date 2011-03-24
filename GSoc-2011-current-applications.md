@@ -9,3 +9,4 @@ Project Proposals:
 * [by Oleksandr Gituliar](GsoC-2011-Application-Oleksandr-Gituliar)
 * [Geoffrey Ehrman, Project Undecided](GsoC-2011-Application-Geoffrey-Ehrman)
 * [Tom Bachmann---Definite Integration](GSoC 2011 Tom Bachmann: Definite Integration)
+* [Perturbation theory by Anatolii Koval](GSoC-2011-Application-Anatolii-Koval)
