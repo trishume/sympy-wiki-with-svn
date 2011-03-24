@@ -1,4 +1,4 @@
-# Google Summer of Code 2011 Project Ideas
+# GSoC 2011 Project Ideas
 
 This is the list of ideas for students wishing to apply for Google Summer of Code 2011.
 
