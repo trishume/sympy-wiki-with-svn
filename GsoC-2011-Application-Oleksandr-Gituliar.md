@@ -42,6 +42,9 @@ the only one I have, thus do not judge it too strict. :) ).
 
 ### basic QM notation
 
+Follow [gituliar/sympy/qunatum2 branch](https://github.com/gituliar/sympy/tree/quantum2) where some
+rudiments of proposed ideas are supposed to be implemented.
+
 It seems without a descent implementation of the following features none of the
 further ideas could be fully functional, thus treat it as a starting point for
 them.
