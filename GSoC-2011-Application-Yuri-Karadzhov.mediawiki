@@ -150,6 +150,23 @@ or for rank calculation
 
 
 
+The problem of searching symmetries of differential equation (system of equations) partial and ordinary is fundamental problem of analysis of differential equation. Assuming that we know symmetries of DE we can reduce its order or even completely solve it (in case of ODE), reproduce its solution and give some prediction about asymptotic behavior of solutions.
+
+Of course the problem of finding symmetries include the problem of integration of overdetermined system of DE's on the last step, which is huge and greedy to resources. Nevertheless it is usually easy to solve without computer.
+
+The huge routine part is obtaining the system of determining equations. So the goal of the project is to present tools to handle this problem:
+
+# Generate infinitesimal operator for given variables
+# Calculate the extension of infinitesimal operator of given order
+# Calculate differential sequence of given equation (system of equations)
+# Apply the infinitesimal operator to the equation (system of equations)
+# Obtain system of determining equations 
+
+```Python
+>>> Input #Comment
+Output
+```
+
 == Project Plan ==
 
 
@@ -158,6 +175,7 @@ or for rank calculation
 
 === Additional Functionality ===
 
+=== Future Extensions ===
 
 
 == Schedule ==
