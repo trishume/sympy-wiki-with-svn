@@ -1,4 +1,4 @@
-# Random Variables
+# GSoC 2011 Proposal Random Variables
 ## Introduction
 
 This will be a project proposal for GSoC 2011 by [Matthew Rocklin](http://people.cs.uchicago.edu/~mrocklin). Any and all advice/feedback is welcome either via this wiki, the sympy mailing list, or direct e-mail at mrocklin cs uchicago edu. 
