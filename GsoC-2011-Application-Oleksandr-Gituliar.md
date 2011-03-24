@@ -76,6 +76,25 @@ The point here is to implement a rotation group SO(3) (or even Lorentz SO(1,3)
 group) representations for SU(N) with arbitrary N so that one could "rotate" spin
 states as well. Seems extremely interesting especially in symbolic implementation.
 
+Currently, HilbertSpace and State classes are implemented in quantum2 branch, however
+that is enough to build a simple implementation of rotation group on top of it. An idea
+is that states are not a first-class objects, however belong to some HilbertSpace,
+thus every Hilbert space knows all its states and can transform them once some rotation
+is mode with it. For example:
+```python
+from sympy.physics.quantum2 import HilbertSpace, State
+
+h2 = HilbertSpace(2)  # a 2-dimensional Hilbert space
+
+s1 = h2.state(...)    # make some bra/ket states in h2
+s2 = h2.state(...)
+s3 = h2.state(...)
+
+h2.rotate(Pi/4, 0, Pi/8)   # make a rotation using for example Euler angles convention
+```
+
+Note, that after the last line of code was executed all states that belong to h2 (in this example s1, s2, and s3) has changed according to SU(2) representation of rotaion group. Moreover all the details of rotation group representations are hidden in HilbertSpace.rotation method that of course is not trivial to implement for arbitrary N (integer or oo for continuous spaces).
+
 ### random numbers from distributions of arbitrary form in N dimensions
 
 Suppose one has a function in N dimensions that is non-negative and normalized to 1,
