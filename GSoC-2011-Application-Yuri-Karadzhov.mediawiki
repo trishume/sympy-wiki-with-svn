@@ -40,7 +40,7 @@ Former:
 
 
 
-Background which might be helpful: Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Funcions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses.
+Background which might be helpful: <i>Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Funcions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses</i>.
 
 Currently in applied math department I study the theory of Lie groups
 and it's application to the differential equations. The most recent
@@ -55,7 +55,7 @@ generalize the approach of finding such problems.
 
 
 
-I've bin using GNU Linux since 2001. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
+I've bin using <b>GNU Linux since 2001</b>. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
 
 Programmer experience:
 Professional:
@@ -69,13 +69,19 @@ Academic:
 
 I have experience with SVN, Hg.
 
+IDE: Eclipse, Netbeans, IDLE
+
 
 
 === Mathematical Software ===
 
 
 
-I have good knowledge of Maple, Mathematica, tried to use Sage and Maxima.
+I have good knowledge of
+* Maple
+* Mathematica
+tried to use
+* Sage and Maxima
 I completed the desired functionality as Maple Library and now porting it to Mathematica.
 
 
