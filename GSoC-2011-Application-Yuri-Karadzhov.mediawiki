@@ -40,7 +40,7 @@ Former:
 
 
 
-Background which might be helpful: <i>Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Funcions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses</i>.
+Background which might be helpful: <i>Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Functions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses</i>.
 
 Currently in applied math department I study the theory of Lie groups
 and it's application to the differential equations. The most recent
@@ -55,17 +55,17 @@ generalize the approach of finding such problems.
 
 
 
-I've bin using <b>GNU Linux since 2001</b>. It is my only operation system for the last five years. I worked with  Mandriva, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
+I've bin using <b>GNU Linux since 2001</b>. It is my only operation system for the last five years. I worked with  Mandrake, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
 
 Programmer experience:
-Professional:
-* Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
-* Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
-* APL – Simcorp LLC (2008-2009)
+* Professional:
+** Java EE, JDBC, JavaScript (ExtJs) – Summer work in Global Logic (2010)
+** Java SE – Institute project: Partial TeX translator for SIGMA journal (2009)
+** APL – Simcorp LLC (2008-2009)
 
-Academic:
-* C/C++, Python – writing labs in University
-* Scala – experimenting with Processing
+*Academic:
+** C/C++, Python – writing labs in University
+** Scala – experimenting with Processing
 
 I have experience with SVN, Hg.
 
@@ -90,7 +90,7 @@ I completed the desired functionality as Maple Library and now porting it to Mat
 
 
 
-The main purpose I applied to this project is to investigate in base of the sympy, which gives the ability to improve more complex functionality which I need in my research. I expect to continue my work on sympy after the end of the project, especially on differential and Lie modules, they are in great interest of me. Because after my work on SSQM wil be finished I will recalculate and correct Amaldi classification which incomplete version is used in Maple to solve systems of ODE's and PDE's.
+The main purpose I applied to this project is to investigate in base of the sympy, which gives the ability to improve more complex functionality which I need in my research. I expect to continue my work on sympy after the end of the project, especially on differential and Lie modules, they are in great interest of me. Because after my work on SSQM will be finished I will recalculate and correct Amaldi classification which incomplete version is used in Maple to solve systems of ODE's and PDE's.
 
 
 
@@ -98,11 +98,43 @@ The main purpose I applied to this project is to investigate in base of the symp
 
 
 
+=== Parametrizator ===
+
+
+
+The project itself includes many steps, but the main goal is to implement parameter checking functionality (the idea is original and has no realizations in any other CAS).
+
+e.g. Bernoulli differential equation
+<math> f'(x)=af^2(x)+b </math>
+
+
+
+=== Symmetries ===
+
+
+
 == Project Plan ==
 
 
 
+=== Main Functionality ===
+
+=== Additional Functionality ===
+
+
+
 == Schedule ==
+
+
+
+* Week 1
+* Week 2
+* Week 3
+* Week 4
+* Week 5
+* Week 6
+* Week 7
+* Week 8
 
 
 == References ==
