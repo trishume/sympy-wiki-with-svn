@@ -104,10 +104,47 @@ The main purpose I applied to this project is to investigate in base of the symp
 
 The project itself includes many steps, but the main goal is to implement parameter checking functionality (the idea is original and has no realizations in any other CAS).
 
-e.g. Bernoulli differential equation
-<math> f'(x)=af^2(x)+b </math>
+e.g. Bernoulli differential equation depending on parameters
 
+''f ' ''(''x'') = ''af'' <sup>2</sup>(''x'') + ''b''
 
+has different solutions depending on parameter values
+
+* ''f''(''x'') = ''C1'' if ''a'' = 0, ''b'' = 0
+* ''f''(''x'') = ''bx'' + ''C2'' if ''a'' = 0, ''b'' &ne; 0
+* ''f''(''x'') = 1/(''C3''-''ax'') if ''a'' &ne; 0, ''b'' = 0
+* ''f''(''x'') = sqrt(''b''/''a'') tan( sqrt(''ba'') (''x'' + ''C4'')) if ''a'' &ne; 0, ''b'' &ne; 0
+where ''Ci'' - integration constants.
+
+The other example of parameter depending answer is rank of the matrix
+
+e.g. Assume that we have matrix depending on parameter
+
+''A'' = Matrix((1, x),(1, 1))
+
+this matrix has different rank depending on parameter ''x''
+
+* rank(''A'') = 2 if ''x'' &ne; 1
+* rank(''A'') = 1 if ''x'' = 1
+
+So if we use Cramer method of finding rank we can note that det(A <sup>-1</sup>) has infinite value at ''x'' = 1
+
+So high level function <i>casemap</i> should be implemented to make this real. And we will be able to write
+
+```python
+>>> casemap(dsolve, diff(f(x),x)==a*f(x)**2+b, (a, b))  # parameter-wise solution of given ode
+(C1, (a==0, b==0))
+(bx + C2, (a==0, b!=0))
+(1/(C3 - ax), (a!=0, b==0))
+(sqrt(b/a) tan(sqrt(ba) (x+C4)), (a!=0, b!=0)))
+```
+
+or for rank calculation
+```python
+>>> casemap(det, inverse(A), (x)) # parameter-wise determinant calculation
+(1/(1-x), (x!=1))
+(infinity, (x==1)) 
+```
 
 === Symmetries ===
 
