@@ -27,7 +27,9 @@ I have been investigating two bugs, issues [[1321|http://code.google.com/p/sympy
 ## Project
 I would like to work on improving the definite integration capabilities. In particular I would like to implement (a version of) the Meijer G transform algorithm [1], as suggested by Aaron Meurer. I study mathematics at an (advanced, I'd like to think :) ) undergraduate level, and I believe I understand the required mathematical background.
 
-[1] - K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.
+
+## Deliverables
+My past experience shows that I am very bad at estimating any schedules. In principle, the goal of this work is to replace huge tables of definite integrals, available e.g. in [2]. In practice, this will likely turn out to be an impossible task. Instead, the goal should be to provide the infrastructure necessary, and to develop the codebase to such an extent that a significant portion of such integrals can be evaluated. It should then be easy to add further code whenever use arises.
 
 ## Plan
 In principle, definite integration using the G-transform consists of four steps:
@@ -38,9 +40,8 @@ In principle, definite integration using the G-transform consists of four steps:
 
 Here step 3 is certainly the hardest.
 
-More details are hard for me to come by at this stage. It seems like a good idea to select a representative subset of formulae from a reference table such as [2], investigate which sympy can currently solve, and then implement the G transform, focussing on making the selected formulae work. I can then evaluate the algorithm against more formulae from said reference works, and implement extensions if time permits.
+It seems like a good idea to select a representative subset of formulae from a reference table such as [2], investigate which sympy can currently solve, and then implement the G transform, focussing on making the selected formulae work. I can then evaluate the algorithm against more formulae from said reference works, and implement extensions if time permits.
 
-[2] Prudnikov, A. P., Brychkov, Yu. A., Marichev O. I. (1990), Integrals and Series, Volumes 1-3, Gordon and Breach Science Publishers.
 
 So the plan would look roughly like this:
 
@@ -52,5 +53,11 @@ So the plan would look roughly like this:
 * Compute G-functions in terms of named special functions.
   This is also hard, and definitely an incremential work. One strategy is described in [1].
 * For this to make sense, there need to be many classes of special functions available. mpmath provides very many of these, but it is geared towards actually computing them.
+
+
+## Sources
+[1] - K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.
+
+[2] Prudnikov, A. P., Brychkov, Yu. A., Marichev O. I. (1990), Integrals and Series, Volumes 1-3, Gordon and Breach Science Publishers.
 
 [3] Luke, Y. L. (1969), The Special Punctions and Their  Approximations, Volume 1, Academic Press, San Diego.
