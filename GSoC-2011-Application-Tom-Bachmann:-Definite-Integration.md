@@ -46,7 +46,7 @@ It seems like a good idea to select a representative subset of formulae from a r
 So the plan would look roughly like this:
 
 * Add classes for hypergeometric functions and G-functions.
-  Note that I do not intend to actually provide means to compute these in general, these classes are much more like a container for indices than anything else. In principle we don't need hypergeometric functions, but many books are phrased in terms of them so it is probably helpful to have them around, together with conversion to G functions.
+  These classes are much more like a container for indices than anything else. In principle we don't need hypergeometric functions, but many books are phrased in terms of them so it is probably helpful to have them around, together with conversion to G functions.
 * Implement pattern matching code to rewrite an integrand as a product of at most two G-functions.
   This is probably an incremential work, driven by given use cases. I cannot see a very general strategy here. Many detailed reference works available, e.g [3].
 * Integration of G-functions in the described form is trivial.
