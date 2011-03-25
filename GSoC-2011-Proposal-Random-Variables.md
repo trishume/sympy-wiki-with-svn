@@ -69,37 +69,28 @@ Integrate Random Variables gracefully into other parts of SymPy. The goal is to 
 
 ## References
 [Wikipedia Article](http://en.wikipedia.org/wiki/Random_variable)
+
 [Wolfram Mathworld Article](http://mathworld.wolfram.com/RandomVariable.html)
+
 [Current SymPy Statistics Functionality](http://docs.sympy.org/dev/modules/statistics.html)
+
 [Uncertainties in Python](http://packages.python.org/uncertainties/)
+
 [Maple Random Variables Help page](http://www.maplesoft.com/support/help/Maple/view.aspx?path=Statistics/RandomVariable)
+
 [Mathematica Continuous Probability Distributions Help page](http://reference.wolfram.com/legacy/v5_2/Add-onsLinks/StandardPackages/Statistics/ContinuousDistributions.html)
+
 [SciPy Stats Reference Page](http://docs.scipy.org/doc/scipy/reference/stats.html)
+
 [Algorithm to Handle Multiplication of Continuous Random Variables](http://www.math.usma.edu/people/glen/Publications/product.pdf)
+
 [APPL, A Probability Programming Language](http://www.math.wm.edu/~leemis/2001amstat.pdf)
 
 ## Uses Cases
 Please add any fun use cases you can think of
 
 * Educational examples with dice. Make three dice, plot the PDF. What is the probability of an even roll?
-
 * Uncertainty Quantification in simple systems. Provides analytical base to test numerical methods.
-
 * For simple systems an analytical description of how uncertainty evolves may allow for clear statement about how to minimize that uncertainty. 
-
 * Clear description of experiments, with statistical variation. 
-
 * Quantum Mechanical states can be thought of as random variables with complex wave functions rather than distributions. Perhaps there is some crossover. 
-
-
-## Requirements from SymPy
-* I'll probably need to augment sympy.probability.distributions
-
-* Applying Functions to Probability Distributions requires that they have inverses. Maybe I'm not aware of the correct syntax here but (cos(sin(x**2))).inverse() yields just "acos" and not the expected result. Are inverses of compositions possible? The inline documentation suggests that this is only a feature of sympycore. Is this easily portable?
-  * The way functions are currently designed is a problem. There's basically no good way to represent a specific non built-in function, cf [issue 1688](http://code.google.com/p/sympy/issues/detail?id=1688). And this `inverse` method is seriously broken. --Ronan  
-  * Is it broken beyond repair? I anticipate that I'll need to enhance other parts of SymPy to integrate Random Variables. Is fixing 'inverse' doable? --Matt
-
-
-## Further Directions
-
-[Computing the distribution of the product of two continuous random variables](http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V8V-472JRC1-2G&_user=10&_coverDate=01%2F01%2F2004&_rdoc=1&_fmt=high&_orig=gateway&_origin=gateway&_sort=d&_docanchor=&view=c&_searchStrId=1693737248&_rerunOrigin=google&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=35ea456ec151b32e38ed13046828cb2c&searchtype=a)
