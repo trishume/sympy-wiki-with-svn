@@ -131,9 +131,13 @@ The work with processing of many various cases of series and limits was executed
 ## problems and remarks which we encounter
 
 - Problems with big O representation and behaviour at non zero point or oo.
-- representation of Derivative of function at some (no zero) point (issue 1620).
-- representation of composition of functions while differentiation (issue 1660).
+- representation of Derivative of function at some (no zero) point ([issue 1620](http://code.google.com/p/sympy/issues/detail?id=1620 "issue 1620")).
+- representation of composition of functions while differentiation ([issue 1660](http://code.google.com/p/sympy/issues/detail?id=1660 "issue 1660")).
 - Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
+- How to deal with `acosh`, `acoth` - branches ([issue 564](http://code.google.com/p/sympy/issues/detail?id=564 "issue 564"))
+- Singularities ([issue 2220](http://code.google.com/p/sympy/issues/detail?id=2220 "issue 2220"))
+
+
 
 # Open questions and future topics
 - what is exp(1/x).series(x, oo) - classical Laurent or power series at point oo?

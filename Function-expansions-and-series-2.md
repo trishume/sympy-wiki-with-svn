@@ -391,4 +391,5 @@ It is necessary first
 
 3. Series.show(n): show < n terms or show terms that has power < n ?
 
-4. Convergence analytic 
+4. Convergence analytic
+ 
