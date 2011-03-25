@@ -10,3 +10,4 @@ Project Proposals:
 * [Geoffrey Ehrman, Project Undecided](GsoC-2011-Application-Geoffrey-Ehrman)
 * [Tom Bachmann---Definite Integration](GSoC 2011 Tom Bachmann: Definite Integration)
 * [Perturbation theory by Anatolii Koval](GSoC-2011-Application-Anatolii-Koval)
+* [GSoC proposal, Shai Wyborski](GSoC-proposal,-Shai-Wyborski,-complex-integration---set-theoretic-entities)
