@@ -31,6 +31,8 @@ I would like to work on improving the definite integration capabilities. In part
 ## Deliverables
 My past experience shows that I am very bad at estimating any schedules. In principle, the goal of this work is to replace huge tables of definite integrals, available e.g. in [2]. In practice, this will likely turn out to be an impossible task. Instead, the goal should be to provide the infrastructure necessary, and to develop the codebase to such an extent that a significant portion of such integrals can be evaluated. It should then be easy to add further code whenever use arises.
 
+I have no significant plans for the summer, so I will be able to work on this project essentially full-time. I will keep in touch with my mentor in any way she/he prefers.
+
 ## Plan
 In principle, definite integration using the G-transform consists of three steps:
 
