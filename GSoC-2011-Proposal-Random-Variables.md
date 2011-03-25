@@ -4,11 +4,16 @@ This will be a project proposal for GSoC 2011 by [Matthew Rocklin](http://people
 
 ##Basics
 Name: Matthew Rocklin
+
 E-Mail: MRocklin cs uchicago edu
+
 Occupation: PhD Student at University of Chicago
+
 Webpage: http://people.cs.uchicago.edu/~mrocklin
 
+
 Title: Random Variables in SymPy
+
 Abstract: We develop the statistics functionality in SymPy, an open sounce Computer Algebra System in Python. We implement a Random Variable type and integrate it into existing SymPy functionality. By using the behavior of random variables and by leveraging the existing functionality in SymPy we hope to create a powerful statistical modeling language. 
 
 ## Introduction 
