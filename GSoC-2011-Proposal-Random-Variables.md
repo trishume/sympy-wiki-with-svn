@@ -14,7 +14,7 @@ Webpage: http://people.cs.uchicago.edu/~mrocklin
 
 Title: Random Variables in SymPy
 
-Abstract: We develop the statistics functionality in SymPy, an open sounce Computer Algebra System in Python. We implement a Random Variable type and integrate it into existing SymPy functionality. By using the behavior of random variables and by leveraging the existing functionality in SymPy we hope to create a powerful statistical modeling language. 
+Abstract: We develop the statistics functionality in SymPy, an open sounce Computer Algebra System in Python. We implement a Random Variable type and integrate it into existing SymPy functionality. By using the behavior of random variables and by leveraging the existing functionality in SymPy we hope to start a powerful statistical modeling language. 
 
 ## Introduction 
 Statistics is more important than we thought. In both social and scientific research we’re scrambling to quantify and reduce error in past experiments and theories. Computational systems are also struggling to keep up with this changing paradigm - previously neglected statistical packages are dusted off and found to be lacking. Now is a time for active development. 
