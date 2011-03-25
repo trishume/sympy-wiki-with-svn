@@ -56,6 +56,7 @@ Schedule:
 
 ### Prior to First Review, July 15
 At this point I hope to have a working and self consistent implementation of Random Variables. I do not expect it to be fully integrated with all parts of SymPy nor fully tested. Basic support should include: 
+
 * Discrete and Continuous RVs
 * Binary Operations like +, *, inv, Relationals (no longer bools!)
 * Standard Unary Functions like (Sin, Exp, Log) and their compositions
@@ -64,6 +65,7 @@ At this point I hope to have a working and self consistent implementation of Ran
 
 ### Prior to Second Review, August 15
 Integrate Random Variables gracefully into other parts of SymPy. The goal is to leverage existing SymPy functionality to make Random Variables powerful. This is likely to be the most challenging part of the project. This work will likely continue past the Summer.
+
 * Linear algebra
 * Physics / Quantum 
 * Numerical Evaluation / Code generation 
