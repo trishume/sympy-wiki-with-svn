@@ -32,13 +32,11 @@ I would like to work on improving the definite integration capabilities. In part
 My past experience shows that I am very bad at estimating any schedules. In principle, the goal of this work is to replace huge tables of definite integrals, available e.g. in [2]. In practice, this will likely turn out to be an impossible task. Instead, the goal should be to provide the infrastructure necessary, and to develop the codebase to such an extent that a significant portion of such integrals can be evaluated. It should then be easy to add further code whenever use arises.
 
 ## Plan
-In principle, definite integration using the G-transform consists of four steps:
+In principle, definite integration using the G-transform consists of three steps:
 
 1. Rewrite the integrand in terms of G functions (except for powers/polynomials)
 2. Simplify the resulting expression using the algebraic relations of the G function; hope that we hit a form where one of the integration theorems applies.
 3. Transform back the resulting expression in G functions into a recognisable form.
-
-Here step 3 is certainly the hardest.
 
 It seems like a good idea to select a representative subset of formulae from a reference table such as [2], investigate which sympy can currently solve, and then implement the G transform, focussing on making the selected formulae work. I can then evaluate the algorithm against more formulae from said reference works, and implement extensions if time permits.
 
