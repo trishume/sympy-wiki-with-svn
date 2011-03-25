@@ -57,6 +57,9 @@ There are two goals:
 
 For example we could decide only to treat Continuous random variables and focus on optimizing operations on continuous probability density functions (PDFs). Alternatively, we could define arbitrary spaces of events (allowing for say the number of dots on a six sided die or a space of functions), distributions on these spaces (unifomly ⅙ in the die example)  and then define random variables as functions on the space of events. How about Cartesian products of these spaces? Multivariable target spaces? What are the best choices here which balance intuitive use and mathematical clarity?
 
+#### Continuous Random Variables
+#### Discrete Random Variables
+
 ### Integration into SymPy
 
 I suspect that implementing a clean, efficient and intuitive Random Variable type will take up at most half my time. The other half will be in integration with existing SymPy mechanics. 
