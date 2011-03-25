@@ -60,4 +60,4 @@ So the plan would look roughly like this:
 
 [2] Prudnikov, A. P., Brychkov, Yu. A., Marichev O. I. (1990), Integrals and Series, Volumes 1-3, Gordon and Breach Science Publishers.
 
-[3] Luke, Y. L. (1969), The Special Punctions and Their  Approximations, Volume 1, Academic Press, San Diego.
+[3] Luke, Y. L. (1969), The Special Functions and Their  Approximations, Volume 1, Academic Press, San Diego.
