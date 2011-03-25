@@ -1,4 +1,3 @@
-sympy random variables
 # GSoC 2011 Proposal Random Variables
 This will be a project proposal for GSoC 2011 by [Matthew Rocklin](http://people.cs.uchicago.edu/~mrocklin). Any and all advice/feedback is welcome either via this wiki, the sympy mailing list, or direct e-mail at mrocklin cs uchicago edu. 
 
@@ -16,21 +15,25 @@ Title: Random Variables in SymPy
 
 Abstract: We develop the statistics functionality in SymPy, an open sounce Computer Algebra System in Python. We implement a Random Variable type and integrate it into existing SymPy functionality. By using the behavior of random variables and by leveraging the existing functionality in SymPy we hope to start a powerful statistical modeling language. 
 
-## Introduction 
+## General Introduction 
 Statistics is more important than we thought. In both social and scientific research we’re scrambling to quantify and reduce error in past experiments and theories. Computational systems are also struggling to keep up with this changing paradigm - previously neglected statistical packages are dusted off and found to be lacking. Now is a time for active development. 
 
 Numerically most solutions approach this from a data-analytic view (R, SAS, STATA, scipy.stats) or by sampling (Monte Carlo). Many statistical researchers however consider problems from a modeling perspective (regression, signals/processes, uncertainty evolution) and think symbolically (Beta = Lx + noise) and are unaware that computers could handle these symbolic problems. 
 
 Statistical mathematical modeling can be reconciled with traditional mathematical modeling if random variables can be freely interchanged with traditional ones. I propose to build and integrate a Random Variable type and integrate it into SymPy. I hope that by leveraging the existing SymPy functionality on random variables we can build a well developed and powerful statistical modeling language. 
 
-## Random Variables
+## Background
+### Random Variables
 
 [Random variables](http://en.wikipedia.org/wiki/Random_variable) are basic building blocks of statistics and probability. They are useful in basic probability theory as well as applications where measurement error or uncertainty occurs. This uncertainty can be mathematically described as a probability distribution over a space of possible outcomes. Often we are concerned with functions on these outcomes, such as money won/lost by getting a number which is black on a roulette wheel or the expected damage done by an earthquake with value of 9 or greater on the Richter scale. These functions are random variables. Like traditional variables they can interact with functions (like sin, cos) and each other (X+Y). 
 
 The rules for these interactions however can be quite different. They are taught briefly in school and, while they are clear to express mathematically, they involve challenging algebraic manipulations which are tedious for students for anything beyond the most basic problems. Traditionally after a few simple homework problems students switch to treating random variables as entirely abstract or entirely numerical methods. Given our strength in performing tedious algebraic manipulations this seems like a textbook use case for computer algebra systems.
 
-## Background
-Motivation was taken from the [Uncertainties Package](http://packages.python.org/uncertainties/index.html) which enhances numeric Python floats with single parameter uncertainty information (standard deviation). This is handy in a laboratory setting where measurements are often described by a simple x = 2 +- .3. A simple example taken from their website is printed below
+### Previous Work
+
+Random Variables have been implemented in the popular commercial CAS languages, [Maple](http://www.maplesoft.com/support/help/Maple/view.aspx?path=Statistics/RandomVariable) and [Mathematica](http://reference.wolfram.com/legacy/v5_2/Add-onsLinks/StandardPackages/Statistics/ContinuousDistributions.html). They have also been implemented in specialized though less popular statistical languages such as [APPL](http://www.math.wm.edu/~leemis/2001amstat.pdf).   None of these systems are open source or are freely accessible to the general public. 
+
+This problem has been approached in the open source community from the numerical side. Motivation for this project was taken from the [Uncertainties Package](http://packages.python.org/uncertainties/index.html) which enhances numeric Python floats with single parameter uncertainty information (standard deviation). This is handy in a laboratory setting where measurements are often described by a simple x = 2 +- .3. A simple example taken from their website is printed below
 ```python
 >>> x = ufloat((1, 0.1))  # x = 1+/-0.1
 >>> print 2*x
@@ -39,35 +42,43 @@ Motivation was taken from the [Uncertainties Package](http://packages.python.org
 0.90929742682568171+/-0.083229367309428481
 ```
 
-The rules for functions of random variables can be found in any standard textbook or, in some cases,  [on Wikipedia](http://en.wikipedia.org/wiki/Random_variable#Functions_of_random_variables). 
-
-Previous CAS work has been done by [Maple](http://www.maplesoft.com/support/help/Maple/view.aspx?path=Statistics/RandomVariables) at least. Mathematica doesn't seem to have a very advanced implementation (although I looked only briefly). 
-
 ## Work
 
-How to mathematically define Random Variables is clear. How to code and integrate them into SymPy is not. I separate the work into solving two main problems:
+I argue above for the importance of statistical code and I express hopes that we can build a "powerful statistical modeling language." This hope is far beyond the scope of a single Summer. In this section I state concrete goals.
 
-### Defining Random Variables
+Schedule:
+### Prior to Code Start Date, May 23
+* Familiarize myself with the existing code structure of SymPy. 
+* Decide on a clear definition of Random Variables which fits well into this structure. 
+* Collect algorithms for future coding. 
+* Collect uses cases and requirements from statisticians and educators
 
-There are two goals:
+### Prior to First Review, July 15
+At this point I hope to have a working and self consistent implementation of Random Variables. 
+* Binary Operations Like +, *, inv, Relationals (no longer bools!), 
+* Standard Unary Functions like (Sin, Exp, Log) and their compositions
+* RV's defined on many probability spaces
+* Ensure all common distributions accounted for (Normal, Uniform, Discrete, Correlated Multivar, Pareto, T, ...) 
 
-* Define Random Variables as generally as possible
+### Prior to Second Review, August 15
+Integrate Random Variables gracefully into other parts of SymPy. The goal is to leverage existing SymPy functionality to make Random Variables powerful. This is likely to be the most challenging part of the project. This work will likely continue past the Summer.
 
-* Ensure that Random Variables are as intuitive to use and efficient to compute as possible. 
+* Linear algebra
+* Physics / Quantum 
+* Numerical Evaluation / Code generation 
 
-For example we could decide only to treat Continuous random variables and focus on optimizing operations on continuous probability density functions (PDFs). Alternatively, we could define arbitrary spaces of events (allowing for say the number of dots on a six sided die or a space of functions), distributions on these spaces (unifomly ⅙ in the die example)  and then define random variables as functions on the space of events. How about Cartesian products of these spaces? Multivariable target spaces? What are the best choices here which balance intuitive use and mathematical clarity?
+## References
+[Wikipedia Article](http://en.wikipedia.org/wiki/Random_variable)
+[Wolfram Mathworld Article](http://mathworld.wolfram.com/RandomVariable.html)
+[Current SymPy Statistics Functionality](http://docs.sympy.org/dev/modules/statistics.html)
+[Uncertainties in Python](http://packages.python.org/uncertainties/)
+[Maple Random Variables Help page](http://www.maplesoft.com/support/help/Maple/view.aspx?path=Statistics/RandomVariable)
+[Mathematica Continuous Probability Distributions Help page](http://reference.wolfram.com/legacy/v5_2/Add-onsLinks/StandardPackages/Statistics/ContinuousDistributions.html)
+[SciPy Stats Reference Page](http://docs.scipy.org/doc/scipy/reference/stats.html)
+[Algorithm to Handle Multiplication of Continuous Random Variables](http://www.math.usma.edu/people/glen/Publications/product.pdf)
+[APPL, A Probability Programming Language](http://www.math.wm.edu/~leemis/2001amstat.pdf)
 
-#### Continuous Random Variables
-#### Discrete Random Variables
-
-### Integration into SymPy
-
-I suspect that implementing a clean, efficient and intuitive Random Variable type will take up at most half my time. The other half will be in integration with existing SymPy mechanics. 
-SymPy was designed to function on traditional variables, not random ones. Random Variables require different dynamics (such as easily computable inverses of functions) and will provide different responses. 
-
-It’s difficult for me to give a rich response here without understanding the core of SymPy at a deeper level. 
-
-## Uses
+## Uses Cases
 Please add any fun use cases you can think of
 
 * Educational examples with dice. Make three dice, plot the PDF. What is the probability of an even roll?
@@ -91,3 +102,4 @@ Please add any fun use cases you can think of
 
 ## Further Directions
 
+[Computing the distribution of the product of two continuous random variables](http://www.sciencedirect.com/science?_ob=ArticleURL&_udi=B6V8V-472JRC1-2G&_user=10&_coverDate=01%2F01%2F2004&_rdoc=1&_fmt=high&_orig=gateway&_origin=gateway&_sort=d&_docanchor=&view=c&_searchStrId=1693737248&_rerunOrigin=google&_acct=C000050221&_version=1&_urlVersion=0&_userid=10&md5=35ea456ec151b32e38ed13046828cb2c&searchtype=a)
