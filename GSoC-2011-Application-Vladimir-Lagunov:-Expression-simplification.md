@@ -37,7 +37,7 @@ Expression simplification is an inalienable part of whole SymPy, all other compo
 
 Probably when i'll start improving simplification, i'll need to work around rewriting. For example, now sympy throws attribute error when you try `sinh(x).rewrite(sinh, exp)` (but these transformation exists \(sinh(x) = \frac 1 2 \left( e^x + e^{-x} \right) \))
 
-And of course i think that expression simplification doesn't needs big math knowledges like ODE, but much more interesting than porting to python3, so i can cope this problem.
+And of course i think that expression simplification doesn't need big math knowledges like ODE, but much more interesting than porting to python3, so i can cope this problem.
 
 ## Shedule
 
