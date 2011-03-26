@@ -37,7 +37,7 @@ I have learned about SymPy just a week ago, but in few days of usage i have foun
 
 Expression simplification is an inalienable part of whole SymPy, all other components of framework are using these functional. Improving of expression simplification will affect on all parts of SymPy.
 
-Probably when i'll start improving simplification, i'll need to work around rewriting. For example, now sympy throws attribute error when you try `sinh(x).rewrite(sinh, exp)` (but these transformation exists \(sinh(x) = \frac 1 2 \left( e^x + e^{-x} \right) \))
+Probably when i'll start improving simplification, i'll need to work on rewriting. For example, now sympy throws attribute error when you try `sinh(x).rewrite(sinh, exp)` (but these transformation exists \(sinh(x) = \frac 1 2 \left( e^x + e^{-x} \right) \))
 
 ## Shedule
 
