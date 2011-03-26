@@ -143,7 +143,9 @@ The work with processing of many various cases of series and limits was executed
 - what is exp(1/x).series(x, oo) - classical Laurent or power series at point oo?
 - multivariable extension.
 - complex numbers, non commutative formal variables.
+- split-complex numbers, may be sometimes more convinient to expand in this plane e.g. hyperbolic inverse functions.
 - convergence
+- singularity and branches
 
 # Part-2
 At this page we will be concentrated to the end-user's aims of series usage in sympy:
