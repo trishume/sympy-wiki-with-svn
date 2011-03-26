@@ -187,17 +187,13 @@ Now you have your own repository respect to SymPy project. If your username in g
 On your local machine choose work place, and clone (download) code of SymPy original repository::
 
     git clone git://github.com/sympy/sympy.git
+    cd sympy
 
-Then assigns youre read-and-write repo to a remote called "mynick"::
+Then assign your read-and-write repo to a remote called "github"::
 
-    git remote add mynick git@github.com:mynick/sympy.git
-
+    git remote add github git@github.com:mynick/sympy.git
     git pull
 
-    
-and::
-
-    cd sympy
 
 
 Do not forget to go to the `Create separated branch`_ instructions before code changing.
@@ -213,7 +209,7 @@ and::
 
     cd sympy
 
-
+Note that using GitHub is highly recommended, as it makes things easier for both us and you.
 
 
 Create separated branch
@@ -225,13 +221,15 @@ If you know the issue number then the branch name would be something like `1234_
     git branch 1234_sequences
     git checkout 1234_sequences
 
+or in one command using ::
+
+    git checkout -b 1234_sequences
 To view in what branch you are type::
 
     git branch
     
 And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
     
-
 
 Code modification
 ------------------
@@ -273,7 +271,7 @@ Check total changes if it is interesting::
     
     git diff
     
-So you are ready to commit changes in your local version control system. It is logical operation so it must contain `commit message` which describes it.
+So you are ready to commit changes in your local version control system. A commit also contains a `commit message` which describes it.
 
 It is best if your commit messages are wrapped so that no line is longer than 80 characters.
 Also, the first line should be separated from the rest of the message by a blank line.
@@ -287,12 +285,17 @@ or if you plan to enter big description::
 
     git commit
     
-editor windows will appear automatically in this case.
+And editor windows will appear automatically in this case. In Linux, this is vim by default.  You can change what editor pops up by changing the `$EDITOR` shell variable.
 
 Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
 
     git commit -a -m "1234: sequences base implementation"
 
+If you want to stage only part of your changes, you can use the interactive commit feature.  Just type::
+
+    git commit -i
+
+and choose the changes you want in the resulting interface.
 
 
 Create patch file or pull request for github
@@ -303,7 +306,7 @@ Github variant
 
 Be sure that you are in your own branch, and run::
 
-    git push mynick origin 1234_sequences
+    git push github 1234_sequences
 
 Then navigate to your repository with the changes you want someone else to pull:
 
@@ -336,7 +339,7 @@ If you do not use github, then after code modification, testing and commit opera
 
     git format-patch master --stdout > 1234_sequences_base_implementation.patch
 
-And send us it.
+And send us it.  Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
 
 
 Updating your pull request
@@ -345,8 +348,11 @@ Updating your pull request
 If after a time you need to make changes in pull request then the best way is to again add new commit in you local repository and simply repeat push command::
 
     git commit -m "1234: some additional corrections"
-    git push mynick 1234_sequences
+    git push github 1234_sequences
 
+Note that if you do any rebasing or in any way edit your commit history, you will have to add the `-f` option to push for it to work::
+
+    git push -f github
 
 Synchronization with master `sympy/sympy`.
 -------------------------------------------
