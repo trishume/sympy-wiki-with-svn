@@ -135,7 +135,7 @@ The work with processing of many various cases of series and limits was executed
 - representation of composition of functions while differentiation ([issue 1660](http://code.google.com/p/sympy/issues/detail?id=1660 "issue 1660")).
 - Not effective algorithm in some cases: now is used that: (cos(x)*(sin(x)).series() = sin(x).series() * cos(x).series(), lseries.next() calculate the nseries(n)  every time  (f.e. fifth next() calculate nseries(5) and after this yield fifth term)
 - How to deal with `acosh`, `acoth` - branches ([issue 564](http://code.google.com/p/sympy/issues/detail?id=564 "issue 564"))
-- Singularities ([issue 2220](http://code.google.com/p/sympy/issues/detail?id=2220 "issue 2220"))
+- Singularities ([issue 2200](http://code.google.com/p/sympy/issues/detail?id=2200 "issue 2200"))
 
 
 
