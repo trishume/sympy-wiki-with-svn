@@ -1,4 +1,4 @@
-# GSoC 2011 Application by Oleksandr Gituliar
+# GSoC 2011 Application Oleksandr Gituliar
 
 ## About me
 
