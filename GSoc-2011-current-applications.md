@@ -4,7 +4,7 @@ List your GSoC2011 Project Proposal wiki page here
 
 Project Proposals:
 
-* [Perturbation theory by Anatolii Koval](GSoC-2011-Application-Anatolii-Koval)
+* [GSoC 2011 Application Anatolii Koval: Perturbation theory](GSoC-2011-Application-Anatolii-Koval)
 * [[GSoC 2011 Application Ben McDonald: Optimising SymPy using Cython]]
 * [[GSoC 2011 Application Geoffrey Ehrman]]
 * [[GSoC 2011 Application Matthew Rocklin: Random Variables]]
