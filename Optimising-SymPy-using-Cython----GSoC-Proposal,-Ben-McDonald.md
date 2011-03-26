@@ -56,4 +56,4 @@ sympy.physics requires increase performance http://groups.google.com/group/sympy
 http://groups.google.com/group/sympy/browse_thread/thread/aa3f4263bc3f7e23
 
 ### Complexities
-Cython compiles to platform dependent binaries. SymPy with Cython optimisation will been to be build on the platform it is to be run on, or binaries for each platform will need to be distributed with SympPy.
+Cython compiles to platform dependent binaries. SymPy with Cython optimisation will need to be build on the platform it is to be run on, or binaries for each platform will need to be distributed with SympPy.
