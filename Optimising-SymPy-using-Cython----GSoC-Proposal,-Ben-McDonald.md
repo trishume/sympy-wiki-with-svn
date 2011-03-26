@@ -3,13 +3,37 @@ Optimising SymPy using Cython
 
 About Me
 ------------------
-* Ben McDonald
-* Computer Science student completing my Master’s thesis at the University of Canterbury, New Zealand. 
-* Email/GTalk: mcdonald.ben@gmail.com
+Name: Ben McDonald
+
+Computer Science student completing my Master’s thesis at the University of Canterbury, New Zealand. 
+
+Email/GTalk: mcdonald.ben@gmail.com
+
+IRQ: BenM on FreeNode
+
+Skype: mcdonald.ben
+
+Google Groups Profile: [[http://groups.google.com/groups/profile?enc_user=XdP78RYAAAC340FUqOWWVVJI19mL7Wvio4cocwWvDVg2RHsu8f1bCg]]
 
 Coding Skills
 ------------------
-todo
+
+Tutor Python in undergraduate classes
+
+Relevant Personal Projects
+------------------
+_Python Shell for Google Chrome_
+
+Relevant Languages: Python, SymPy
+
+Link: [[https://chrome.google.com/webstore/detail/gdiimmpmdoofmahingpgabiikimjgcia]]
+***
+
+_A silhouette based technique for locating and rendering foot movements over a plane Ben McDonald_
+
+Relevant Languages: C++
+
+Link: [[http://scholar.google.co.nz/scholar?hl=en&q=A+silhouette+based+technique+for+locating+and+rendering+foot+movements+over+a+plane+Ben+McDonald&btnG=Search&as_sdt=0%2C5&as_ylo=&as_vis=0]]
 
 TODO
 ---------------
