@@ -12,3 +12,4 @@ Project Proposals:
 * [[GSoC 2011 Application Shai Wyborski: complex integration, set theoretic entities]]
 * [[GSoC 2011 Application Tom Bachmann: Definite Integration]]
 * [Parametrization and Symmetries by Yuri Karadzhov](GSoC-2011-Application-Yuri-Karadzhov)
+* [GSoC 2011 Application Sean Vig: Symbolic CG coefficients](GSoC 2011 Application Sean Vig)
