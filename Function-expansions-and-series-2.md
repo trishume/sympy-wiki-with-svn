@@ -387,9 +387,21 @@ It is necessary first
 
 1. Is internal distinguish between PowerSeries (PowerExpansion) and TaylorSeries (TaylorExpantion) needs?
 
-2. What does sin(x).series(kind="taylor") == sin(x).series(kind="power") must yield?
+Yes, sometimes (ODE, operators definition) more effective to work with ones,  sometimes more convenient with others.
 
-3. Series.show(n): show < n terms or show terms that has power < n ?
+>Taylor series are used to define functions and "operators" in diverse areas of mathematics. In particular, this is true in areas where the classical definitions of functions break down. For example, using Taylor series, one may define analytical functions of matrices and operators, such as the matrix exponential or matrix logarithm.
+
+>In other areas, such as formal analysis, it is more convenient to work directly with the power series themselves. Thus one may define a solution of a differential equation as a power series which, one hopes to prove, is the Taylor series of the desired solution.
+
+2. What does `sin(x).series(kind="taylor") == sin(x).series(kind="power")` must yield?
+
+It is also the question about operations with various (but similar) kinds of series, e.g. `sin(x).series(kind="taylor") - sin(x).series(kind="power")`
+
+Simplification of this subtraction is obviously zero.
+
+3. `Series.show(n)`: show < n terms or show terms that has power < n ?
+
+May be parameter about it must be in that method.
 
 4. Convergence analytic
- 
+
