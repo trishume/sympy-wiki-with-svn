@@ -107,7 +107,7 @@ In particular,
   
   ::
   
-      class PolynomialRing()
+      class PolynomialRing(object)
   
 Note, however, that some functions do have uppercase letters where it makes sense. for example for matrices they are LUdecomposition or T (transposition) methods.
 
