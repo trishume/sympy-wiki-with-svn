@@ -136,8 +136,18 @@ The beginning of the docstring of methods or properties would look like this::
     [0,  1]
     [3,  4]
     [9, 10]
+    
+    References
+    ----------
+    .. [1] W. Zhou & D.J. Jeffrey, "Fraction-free matrix factors: new forms
+    for LU and QR factors". Frontiers in Computer Science in China,
+    Vol 2, no. 1, pp. 67-80, 2008.
 
-    See also: .submatrix()
+    See Also
+    --------
+    .submatrix()   : extract block from Matrix
+    .T, diag()
+    
     """
     
 Also, if you start a module, docstring has to contain the description of main functions or classes if they are present.
@@ -174,9 +184,16 @@ Now you have your own repository respect to SymPy project. If your username in g
     - https://github.com/mynick/sympy
     
 
-On your local machine choose work place for it, and clone (download) code of it::
+On your local machine choose work place, and clone (download) code of SymPy original repository::
 
-    git clone git@github.com:mynick/sympy.git
+    git clone git://github.com/sympy/sympy.git
+
+Then assigns youre read-and-write repo to a remote called "mynick"::
+
+    git remote add mynick git@github.com:mynick/sympy.git
+
+    git pull
+
     
 and::
 
@@ -286,7 +303,7 @@ Github variant
 
 Be sure that you are in your own branch, and run::
 
-    git push origin 1234_sequences
+    git push mynick origin 1234_sequences
 
 Then navigate to your repository with the changes you want someone else to pull:
 
@@ -328,7 +345,7 @@ Updating your pull request
 If after a time you need to make changes in pull request then the best way is to again add new commit in you local repository and simply repeat push command::
 
     git commit -m "1234: some additional corrections"
-    git push origin 1234_sequences
+    git push mynick 1234_sequences
 
 
 Synchronization with master `sympy/sympy`.
@@ -337,13 +354,9 @@ Synchronization with master `sympy/sympy`.
 When clone a repo, it has a default remote called origin that points to your fork on GitHub, not the original 
 repo it was forked from. To keep track of the original repo, you need to add another remote named upstream::
 
-    git remote add upstream git://github.com/sympy/sympy.git
-
 Assigns the original repo to a remote called "upstream"::
 
-    git fetch upstream
-
-
+    git pull
 
 
 This page based upon present SymPy pages [2-6], github help [8-9] and inspired by Sage guide [10]:
