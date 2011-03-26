@@ -33,6 +33,35 @@ My past experience shows that I am very bad at estimating any schedules. In prin
 
 I have no significant plans for the summer, so I will be able to work on this project essentially full-time. I will keep in touch with my mentor in any way she/he prefers.
 
+### Integrals of G functions that we can do
+The G function is a very general function with many parameters. For the sake of this exposition I shall write \(G(z)\), for any such function suppressing all parameters. Moreover if \(G\) appears twice in a formula, it should not be expected to be the same function. I shall write \(E(z)\) for a combination of elementary functions such as \(z^a\).
+
+\[ \int G(z) \mathrm{d}z = G(z) \]
+\[ \int_0^\infty t^a G(tw) G(tz) \mathrm{d}t = E(w) G(z/w) \]
+
+### G-function relations
+The G function satisfies exceedingly many relations. The following are useful. Many formulas of this and the following sections only hold under certain restrictions which I shall omit here.
+
+\[ z^a G(z) = G(z) \]
+\[ G(z^{-1}) = G(z) \]
+\[ G(wz) = \sum E(w) G(z) \]
+
+### Special functions in terms of G functions
+Essentially all elementary functions (trigonometric, exponential etc) and special functions of mathematical physics (such as bessel functions) can be expressed in terms of G functions.
+
+### Laplace and Fourier Transforms
+Laplace and fourier transforms of \(G(z)\) can be computed, since \(e^{z} = G(z)\) [fourier transform integral has to be evaluated in two parts]. The relevant integral theorems do hold in these cases. Inverse laplace transforms can also be computed, see e.g. [3].
+
+Hence we will get laplace and fourier transforms of all (implemented) special functions.
+
+### Inner products
+In mathematical physics there are many "inner product" relations of the form \(\int_0^\infty J_m(t) J_n(t) w(t) \mathrm{d}t = \dots \), these should also follow from the G-function relations.
+
+### Integrals missing in SymPy
+The following tickets should be fixed as a side effect:
+[[841|http://code.google.com/p/sympy/issues/detail?id=841&q=label%3AIntegration&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars]],
+[[1426|http://code.google.com/p/sympy/issues/detail?id=1426&q=label%3AIntegration%20definite&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars]] (at least for definite integrals), [[1893|http://code.google.com/p/sympy/issues/detail?id=1893&q=label%3AIntegration%20definite&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars]], probably a few more.
+
 ## Plan
 In principle, definite integration using the G-transform consists of three steps:
 
