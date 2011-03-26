@@ -1,5 +1,5 @@
-Optimising SymPy using Cython
-==============================
+GSoC 2011 Application Ben McDonald: Optimising SymPy using Cython
+=================================================================
 
 About Me
 ------------------
