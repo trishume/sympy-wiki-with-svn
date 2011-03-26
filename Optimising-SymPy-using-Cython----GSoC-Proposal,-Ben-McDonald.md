@@ -19,6 +19,7 @@ Coding Skills
 ------------------
 
 Tutor Python in undergraduate classes
+...
 
 Relevant Personal Projects
 ------------------
