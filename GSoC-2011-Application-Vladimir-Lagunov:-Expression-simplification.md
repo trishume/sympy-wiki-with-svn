@@ -30,14 +30,14 @@ When i was looking on GSoC projects list, my choice fell on SymPy because:
 
 Alas, i am not a good mathematician, but i think i am good python programmer. I'm not good in math because earlier i didn't show interest in it, but everything have changed.
 
+And of course i think that expression simplification doesn't need big math knowledges like ODE, but much more interesting than porting to python3, so i can cope this problem.
+
 ## What to improve?
 I have learned about SymPy just a week ago, but in few days of usage i have found some defects in simplification module. You don't need a lot of time to find that - just look to unittests of `ratsimp()`. Other example: current trigonomethrical simplification can reduce `sin(x)**2 + cos(x)**2` to `1`, but can't reduce `2*sin(x)*cos(x)` to `sin(2*x)`.
 
 Expression simplification is an inalienable part of whole SymPy, all other components of framework are using these functional. Improving of expression simplification will affect on all parts of SymPy.
 
 Probably when i'll start improving simplification, i'll need to work around rewriting. For example, now sympy throws attribute error when you try `sinh(x).rewrite(sinh, exp)` (but these transformation exists \(sinh(x) = \frac 1 2 \left( e^x + e^{-x} \right) \))
-
-And of course i think that expression simplification doesn't need big math knowledges like ODE, but much more interesting than porting to python3, so i can cope this problem.
 
 ## Shedule
 
