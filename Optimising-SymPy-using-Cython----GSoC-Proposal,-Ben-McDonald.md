@@ -30,7 +30,7 @@ Relevant Languages: Python, SymPy
 Link: [[https://chrome.google.com/webstore/detail/gdiimmpmdoofmahingpgabiikimjgcia]]
 ***
 
-_A silhouette based technique for locating and rendering foot movements over a plane Ben McDonald_
+_A silhouette based technique for locating and rendering foot movements over a plane_
 
 Relevant Languages: C++
 
