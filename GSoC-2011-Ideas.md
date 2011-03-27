@@ -215,7 +215,7 @@ If you are willing to mentor, please add yourself here.  I also need your link_i
 * Aaron Meurer (asmeurer)
 * Ondrej Certik <!-- Ondrej, I am assuming you are willing -Aaron --> (certik)
 * Brian E. Granger: I am willing to mentor any of the physics related projects. (ellisonbg)
-* Andy R. Terrel
+* Andy R. Terrel (aterrel)
 * Mateusz Paprocki (mattpap)
 * David joyner (wdjoyner)
 * Christian Muise (haz)
