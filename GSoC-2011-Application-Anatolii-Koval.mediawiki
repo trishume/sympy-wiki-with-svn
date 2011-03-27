@@ -46,7 +46,7 @@ Currently use NetBeans IDE, but also try Eclipse and Anjuta
 == Project ==
 === Motivations ===
 
-I want to become more familiar with scientific calculations and get experience from this project, make own investigation into SymPy physics module to simplify daily life for other scientists who works with quantum mechanics. Also in future planes I want to work with Gravitation Theory, so I think it will be good introduction into scientific programming with Python on more higher level. 
+I want to become more familiar with scientific calculations and get experience from this project, make own investigation into SymPy physics module to simplify daily life for other scientists who works with quantum mechanics. Also in future planes I'd like to work with Gravitation Theory, so I think it will be good introduction into scientific programming with Python on more higher level. 
 
 === Project Goal ===
 
