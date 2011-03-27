@@ -45,6 +45,7 @@ The G function satisfies exceedingly many relations. The following are useful. M
 \[ z^a G(z) = G(z) \]
 \[ G(z^{-1}) = G(z) \]
 \[ G(wz) = \sum E(w) G(z) \]
+\[ G(z^k) = E(k) G(az) \]
 
 ### Special functions in terms of G functions
 Essentially all elementary functions (trigonometric, exponential etc) and special functions of mathematical physics (such as bessel functions) can be expressed in terms of G functions.
