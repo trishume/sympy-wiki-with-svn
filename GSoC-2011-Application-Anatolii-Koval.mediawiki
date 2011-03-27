@@ -55,3 +55,8 @@ To get in how would looks like calculation perturbation I've write this code: <a
 * Calculation of two first orders is more simpler then more higher orders which force user write more code what as usually leads to lots of errors
 * Make some preliminary calculations to understand what exactly elements of infinite sums wouldn't equals to zero
 Due to list above the main goal of my project is prevent and solve such problems and create useful solution for calculating 
+
+== Useful links ==
+* <a href="http://en.wikipedia.org/wiki/Perturbation_theory_(quantum_mechanics)">Wiki: Perturbation theory(quantum mechanics)</a>
+* <a href="http://theoretical-physics.net/dev/src/quantum/qm.html#systematic-perturbation-theory-in-qm">Ondrej Certic: Perturbation theory</a>
+* <a href="www.uta.edu/faculty/rcli/papers/li2007HLA.pdf">Matrix perturbation theory</a>
