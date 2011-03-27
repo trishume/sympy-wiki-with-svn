@@ -85,6 +85,27 @@ So the plan would look roughly like this:
 * For this to make sense, there need to be many classes of special functions available. mpmath provides very many of these, but it is geared towards actually computing them.
 
 
+## Tentative Schedule
+The GSoC consists of three months. This is a *very* tentative schedule:
+
+* Week 1: Add classes for bessel, hypergeometric and G functions; add basic conversions
+          bessel->hypergeometric<->G
+* Week 2 and 3: Implement shift and inverse shift operators for G functions;
+                implement basic framework for Kelly's algorithm
+* Week 4: Extend integration code to try a G function approach if everything else fails; implement
+          basic pattern matching for G function expressions and basic G function integrals
+* Week 5-6: Extend and refine the previous work to yield most of the formulas involving bessel
+            functions from [2], sections 6.5 and 17.
+
+The following weeks: on a case-by-case basis, iterate the following process:
+
+* Add new class of special functions
+* Improve pattern matching
+* Extend Kelly's algorithm
+
+so as to yield iteratively more and more formulas from [2].
+
+
 ## Sources
 [1] - K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.
 
