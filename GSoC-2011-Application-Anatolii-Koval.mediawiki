@@ -60,4 +60,4 @@ Due to list above the main goal of my project is solving usually problems what h
 
 * <a href="http://en.wikipedia.org/wiki/Perturbation_theory_(quantum_mechanics)">Wiki: Perturbation theory(quantum mechanics)</a>
 * <a href="http://theoretical-physics.net/dev/src/quantum/qm.html#systematic-perturbation-theory-in-qm">Ondrej Certic: Perturbation theory</a>
-* <a href="www.uta.edu/faculty/rcli/papers/li2007HLA.pdf">Matrix perturbation theory</a>
+* <a href="http://www.uta.edu/faculty/rcli/papers/li2007HLA.pdf">Matrix perturbation theory</a>
