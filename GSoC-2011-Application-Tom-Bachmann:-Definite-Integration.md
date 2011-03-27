@@ -89,13 +89,13 @@ So the plan would look roughly like this:
 The GSoC consists of three months. This is a *very* tentative schedule:
 
 * Week 1: Add classes for bessel, hypergeometric and G functions; add basic conversions
-          bessel->hypergeometric<->G
+  bessel->hypergeometric<->G
 * Week 2 and 3: Implement shift and inverse shift operators for G functions;
-                implement basic framework for Kelly's algorithm
+  implement basic framework for Kelly's algorithm
 * Week 4: Extend integration code to try a G function approach if everything else fails; implement
-          basic pattern matching for G function expressions and basic G function integrals
+  basic pattern matching for G function expressions and basic G function integrals
 * Week 5-6: Extend and refine the previous work to yield most of the formulas involving bessel
-            functions from [2], sections 6.5 and 17.
+  functions from [2], sections 6.5 and 17.
 
 The following weeks: on a case-by-case basis, iterate the following process:
 
