@@ -63,6 +63,24 @@ At this point I hope to have a working and self consistent implementation of Ran
 * RV's defined on multi-dimensional probability spaces
 * Ensure all common distributions accounted for (Normal, Uniform, Discrete, Correlated Multivar, Pareto, T, ..., see [scipy.stats](http://docs.scipy.org/doc/scipy/reference/stats.html)) 
 
+Some basic functionality follows
+```python
+>>> d1,d2,d3 = Die(6), Die(6), Die(6) # Three six-sided dice
+>>> dice = d1+d2+d3; print dice.pdf()
+{2: 1/36, 3: 1/18, ... } 
+>>> d1.set(3); d2.set(3); print dice.pdf()
+{7: 1/6, 8: 1/6, 9: 1/6, ... } 
+...
+>>> pspace1 = ProbabilitySpace(Normal(0,1)) # Probability space over the reals
+>>> pspace2 = ProbabilitySpace(Normal(0,1)) # A different space of events
+>>> X = RandomVariable(pspace1); 
+>>> print log(X).pdf()
+2**(1/2)*Abs((1 - x**2)**(-1/2))*exp(-asin(x)**2/2)/(2*pi**(1/2))
+>>> Y = RandomVariable(pspace2); Z = RandomVariable(pspace1); 
+>>> assert X-Y == Normal(0,sqrt(2)) # independent
+>>> assert X-Z == Zero  # dependent (same pspace)
+>>> W = X*Y #two dimensional normal distribution
+```
 ### Prior to Second Review, August 15
 Integrate Random Variables gracefully into other parts of SymPy. The goal is to leverage existing SymPy functionality to make Random Variables powerful. This is likely to be the most challenging part of the project. This work will likely continue past the Summer.
 
@@ -70,6 +88,15 @@ Integrate Random Variables gracefully into other parts of SymPy. The goal is to 
 * Physics / Quantum 
 * Numerical Evaluation / Code generation 
 * Logic, Hypothesis testing
+```python
+>>> sigma = Matrix([RandomVariable(Normal(0,eps)) for i in range(n)]) # Column Vector of i.i.d. noise
+>>> X,y = CollectMeasurementData() # Linear Regression Model y = X*beta + sigma. X,y, known (not random)
+>>> Beta = inv(X.T*X) * X.T*(y-sigma) # Solve for beta (model parameters)
+>>> covariance(Beta)
+...
+```
+
+
 
 ## References
 [Wikipedia Article](http://en.wikipedia.org/wiki/Random_variable)
