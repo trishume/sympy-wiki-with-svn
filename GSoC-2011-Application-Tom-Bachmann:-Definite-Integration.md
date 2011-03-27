@@ -88,6 +88,6 @@ So the plan would look roughly like this:
 ## Sources
 [1] - K. Roach. Meijer g function representations. In ISSAC ’97: Proceedings of the 1997 international symposium on Symbolic and algebraic computation, pages 205–211, New York, NY, USA, 1997. ACM.
 
-[2] Prudnikov, A. P., Brychkov, Yu. A., Marichev O. I. (1990), Integrals and Series, Volumes 1-3, Gordon and Breach Science Publishers.
+[2] Ryzhik, I. M., Jeffrey, A., Zwillinger, D. (2007), Table of integrals, series and products, Translated from Russian by Scripta Technica, Inc.
 
 [3] Luke, Y. L. (1969), The Special Functions and Their  Approximations, Volume 1, Academic Press, San Diego.
