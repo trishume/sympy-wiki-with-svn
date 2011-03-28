@@ -22,7 +22,7 @@ got excellent results; this may or may not be meaningful to you.
 ## Setup
 My introduction to the list is [[here|http://groups.google.com/group/sympy/browse_thread/thread/fc67b5725d9d740e#]].
 
-I have been investigating three bugs, issues [[1321|http://code.google.com/p/sympy/issues/detail?id=1321]], [[341|http://code.google.com/p/sympy/issues/detail?id=341&q=label%3AEasyToFix&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars]] and [[905|http://code.google.com/p/sympy/issues/detail?id=905]]. No code committed, yet.
+I have been investigating a few bugs, issues [[1321|http://code.google.com/p/sympy/issues/detail?id=1321]], [[341|http://code.google.com/p/sympy/issues/detail?id=341&q=label%3AEasyToFix&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars]], [[360|http://code.google.com/p/sympy/issues/detail?id=360]] and [[905|http://code.google.com/p/sympy/issues/detail?id=905]]. No code committed, yet.
 
 ## Project
 I would like to work on improving the definite integration capabilities. In particular I would like to implement (a version of) the Meijer G transform algorithm [1], as suggested by Aaron Meurer. I study mathematics at an (advanced, I'd like to think :) ) undergraduate level, and I believe I understand the required mathematical background. I have taken courses on analysis, complex analysis, rings and modules, mathematical methods that will be helpful in carrying out this project.
