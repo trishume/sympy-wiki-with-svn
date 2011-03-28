@@ -15,6 +15,8 @@ This is still a draft, if anyone has any comments or suggestions, please feel fr
 
 Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles. These coefficients give the expansion of coupled spin states as a sum of product states and vice versa. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
 
+
+
 ## Project Implementation
 
 The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis. This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich, "Quantum Theory of Angular Momentum", pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the how many are implemented will be based on the amount of time available determined in discussions with my mentor.
@@ -27,7 +29,36 @@ My plan for this project would be to first implement this for coupling between t
 
 ## Timeline
 
-Timeline
+The specifics of each of these steps is outlined in the implementation.
+
+During the official time frame of the Summer of Code, I have no other serious commitments and can easily commit to the required 40 hours of work per week and I'll put as much free time as I can into working this project because of the interesting subject matter.
+
+**Before official start**
+
+Review the current source code and begin integrating with the community. Work with my mentor to finalize a plan of action and formulate a project design, then begin preliminary coding work on the project.
+
+**Weeks 1-3**
+
+Work on implementing the Clebsch-Gordon class. This would include developing the basic functionality of the class, such as evaluation, use in equations and printing, but would also include the symbolic manipulation through the symmetry relations and properties of the Clebsch-Gordon coefficients.
+
+**Weeks 4-5**
+
+Expand the spin states to work with both product and coupled spin states.
+
+**Weeks 6-7**
+
+Modify spin operators to work with the new formulation of spin states. Prepare for midterm evaluation.
+
+**Week 8**
+Midterm evaluation
+
+**Weeks 8-10**
+
+Implement terms for coupling between more spin states, i.e. Wigner 6j and 9j symbols.
+
+**Week 11-12**
+
+Finalize project, adding any final documentation and tests, and pencils down.
 
 ## Bio
 
