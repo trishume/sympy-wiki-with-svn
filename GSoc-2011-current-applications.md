@@ -7,6 +7,7 @@ Project Proposals:
 * [GSoC 2011 Application Anatolii Koval: Perturbation theory](GSoC-2011-Application-Anatolii-Koval)
 * [[GSoC 2011 Application Ben McDonald: Optimising SymPy using Cython]]
 * [[GSoC 2011 Application Geoffrey Ehrman]]
+* [[GSoC 2011 Application Tomas Bambas: Improve the plotting module]]
 * [[GSoC 2011 Application Matthew Rocklin: Random Variables]]
 * [[GSoC 2011 Application Oleksandr Gituliar]]
 * [[GSoC 2011 Application Shai Wyborski: complex integration, set theoretic entities]]
