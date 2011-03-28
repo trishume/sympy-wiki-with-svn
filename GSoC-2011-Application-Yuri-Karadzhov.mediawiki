@@ -150,9 +150,9 @@ or for rank calculation
 
 
 
-The problem of searching symmetries of differential equation (system of equations) partial and ordinary is fundamental problem of analysis of differential equation. Assuming that we know symmetries of DE we can reduce its order or even completely solve it (in case of ODE), reproduce its solution and give some prediction about asymptotic behavior of solutions.
+The problem of searching symmetries of differential equation (system of equations) partial and ordinary is fundamental problem of analysis of differential equation. Assuming that we know symmetries of DE we can reduce its order or even completely solve it (in case of ODE), reproduce its solution and give some prediction about asymptotic behavior of solutions. Implementation of symmetries module lead to common integration procedure (by Lie) which significantly improve the ODE module.
 
-Of course the problem of finding symmetries include the problem of integration of overdetermined system of DE's on the last step, which is huge and greedy to resources. Nevertheless it is usually easy to solve without computer.
+Of course the problem of finding symmetries include the problem of integration of overdetermined system of DE's on the last step, which is huge and greedy to resources (and at least Gröbner basis implementation is required). Nevertheless it is usually easy to solve without computer.
 
 The huge routine part is obtaining the system of determining equations. So the goal of the project is to present tools to handle this problem:
 
@@ -160,11 +160,25 @@ The huge routine part is obtaining the system of determining equations. So the g
 # Calculate the extension of infinitesimal operator of given order
 # Calculate differential sequence of given equation (system of equations)
 # Apply the infinitesimal operator to the equation (system of equations)
-# Obtain system of determining equations 
+# Obtain system of determining equations
+# Obtain system of determining equations for classification problem
 
+The classic example for Heat Equation
 ```python
->>> Input # Comment
-Output
+>>> u = Function('u')(t,x)
+>>> eq = diff(u,t)-diff(u,x,x)
+>>> infinitesimal(eq)
+tau(t,x,u)dt+xi(t,x,u)dx+eta(t,x,u)du
+>>> deteq(eq) # Obtaining system of determining equations
+diff(tau,u,u)==0
+2*diff(xi,u)+2*diff(tau,x,u)==0
+2*diff(tau,u)==0
+2*diff(tau,x)==0
+diff(tau,x,x)-diff(tau,t)+2*diff(xi,x)==0
+diff(xi,u,u)==0
+2*diff(xi,x,u)-diff(eta,u,u)==0
+diff(xi,x,x)-diff(xi,t)-2*diff(eta,x,u)==0
+diff(eta,t)-diff(eta,x,x)==0
 ```
 
 == Project Plan ==
