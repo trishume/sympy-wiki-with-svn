@@ -1,4 +1,4 @@
-## Symbolic Clebsch-Gordon/Wigner 3j symbols and Addition of Spin Angular Momenta
+## Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta
 
 ***
 
