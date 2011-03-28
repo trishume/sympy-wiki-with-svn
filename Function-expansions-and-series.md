@@ -80,6 +80,7 @@ Alternatively, an analytic function is an infinitely differentiable function suc
 converges to ƒ(x) for x in a neighborhood of x0. 
 
 Properties
+
 - The sums, products, and compositions of analytic functions are analytic.
 - The reciprocal of an analytic function that is nowhere zero is analytic, as is the inverse of an invertible analytic function whose derivative is nowhere zero.
 - Any analytic function is smooth, that is, infinitely differentiable. The converse is not true; in fact, in a certain sense, the analytic functions are sparse compared to all infinitely differentiable functions.
