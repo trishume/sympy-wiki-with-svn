@@ -26,7 +26,7 @@ This is just the great school for making software developers. See [[http://www.f
 ### Coding Skills
 
    * Python (both 2.x and 3.x): my main language, experiences with PIL, PyQt, PyGame toolkits
-   * C/C++: also good knowledge, language core, unix networking, OpenGL
+   * C/C++: also good knowledges (language core, unix networking, OpenGL)
    * Java: good
    * PHP, Perl, JavaScript, Prolog, Lisp: basics
 
