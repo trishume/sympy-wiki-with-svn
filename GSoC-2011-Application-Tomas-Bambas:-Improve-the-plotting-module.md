@@ -4,7 +4,10 @@ GSoC 2011 Application Tomas Bambas: Improve the plotting module
 Name and Contact Info
 ---------------------
 
-Coming soon... =)
+Name: Tomas Bambas
+e-mail: tomas.ba----@gmail.com
+JID: conyx@jabber.cz
+Conyx on freenode
 
 My Study, Past Projects and Coding Skills
 -----------------------------------------
