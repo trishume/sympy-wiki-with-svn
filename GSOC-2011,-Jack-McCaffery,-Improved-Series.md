@@ -6,7 +6,7 @@ University of Louisiana at Lafayette
 
 ##Bio: 
 
-I attended Michigan Technological University as an undergraduate and completed a B.S. In physics. My primary area of interest was quantum mechanics and mathematical physics. I then went on to finish my masters degree in mathematics at the University of Alabama. While there my primary research area was real and complex analysis. I am currently finishing my third year as a PhD student in the cognitive science program at The University of Louisiana at Lafayette. My primary research interest is machine learning and probabilistic reasoning.
+I attended [Michigan Technological University](www.mtu.edu) as an undergraduate and completed a B.S. In physics. My primary area of interest was quantum mechanics and mathematical physics. I then went on to finish my masters degree in mathematics at the [University of Alabama](www.ua.edu). While there my primary research area was real and complex analysis. I am currently finishing my third year as a PhD student in the [cognitive science](ics.louisiana.edu) program at the [University of Louisiana at Lafayette](www.louisiana.edu). My primary research interest is machine learning and probabilistic reasoning.
 
 This project is ideal for me. My deepest interest in mathematics is in limits and complex functional analysis. Because of this and my strong background, I will be able to generalize the series expansion functionality in sympy in a way that is mathematically consistent (producing minimal errors due to competing limits, etc...) and in a way that will readily generalize to more advanced series manipulation in future releases.
 
@@ -18,7 +18,7 @@ My primary language right now is Python. I often code in C++ and until a few yea
 
 The existing series expansion function in sympy covers a broad range of situations but is lacking some simple functionality and will need to be generalized as more specific functions are defined. In particular, series() lacks the ability to evaluate Taylor series directly by evaluating derivatives of the function being expanded. Additionally, Taylor series are just one of many useful series expansions. Laurent series provide expansions for complex functions that do not have Taylor expansions and Puiseux series provide simple expansions for inverse trigonometric and inverse hyperbolic functions.
 
-This project will lay the framework for sympy to express functions with different types of expansions, efficiently manipulate series expansions. This will allow future developers to include more robust and efficient series expansions of complex functions and make sympy more competitive with existing computer algebra systems.
+This project will lay the framework for sympy to express functions with different types of expansions, efficiently manipulate series expansions. This will allow future developers to include more robust and efficient series expansions of complex functions and make sympy more competitive with existing computer algebra systems. The existing state of affairs are detailed [here](https://github.com/sympy/sympy/wiki/Function-expansions-and-series).
 
 **Immediate benefits:** 
 
