@@ -14,7 +14,7 @@ This project is ideal for me. My deepest interest in mathematics is in limits an
 My primary language right now is Python. I often code in C++ and until a few years ago, this was my primary language. In my research I have often needed to use Matlab so I am familiar with its core functionality. I love programming in Haskell but it has been several years since I've used it.
 
 ##Abstract:
-(This proposal primarily addresses issues 1639, 1038 and 1300) 
+(This proposal primarily addresses issues [1639](http://code.google.com/p/sympy/issues/detail?id=1639&q=label%3ASeries&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars), [1038](http://code.google.com/p/sympy/issues/detail?id=1038&q=label%3ASeries&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars) and [1300](http://code.google.com/p/sympy/issues/detail?id=1300&q=label%3ASeries&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars)) 
 
 The existing series expansion function in sympy covers a broad range of situations but is lacking some simple functionality and will need to be generalized as more specific functions are defined. In particular, series() lacks the ability to evaluate Taylor series directly by evaluating derivatives of the function being expanded. Additionally, Taylor series are just one of many useful series expansions. Laurent series provide expansions for complex functions that do not have Taylor expansions and Puiseux series provide simple expansions for inverse trigonometric and inverse hyperbolic functions.
 
@@ -38,14 +38,14 @@ This project will lay the framework for sympy to express functions with differen
 ##April 25 – May 23
 (5 hours per week)
 
-During this period I will be getting to know the larger sympy community. I will be communicating with active members who are familiar with the workings of sympy's differentiation, limit evaluation and series expansion. This will also be a good time to familiarize myself with some of the more obscure bugs relating to series, and limits. This will help me to avoid common problems during development, see issue 1300 for example.
+During this period I will be getting to know the larger sympy community. I will be communicating with active members who are familiar with the workings of sympy's differentiation, limit evaluation and series expansion. This will also be a good time to familiarize myself with some of the more obscure bugs relating to series, and limits. This will help me to avoid common problems during development, see issue [1300](http://code.google.com/p/sympy/issues/detail?id=1300&q=label%3ASeries&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars) for example.
 
 I will also continue to clean up the specific value tests of the trigonometric and hyperbolic functions. Once this is complete I can submit my already written cosecant, secant, arccsc, arcsec, csch, sech, acsch and asech functions. Because of their dependence on existing functions, they are not quite ready for submission at this point.
 
 ##May 23 – July 15
 (40-50 hours per week)
 
-During the first period I will be working to implement something like dseries as described in issue 1038. Following this a new heuristic will need to be defined to identify when dseries is appropriate. This will need to be generalizable for when Laurent and other series expansions are included. During this period I will also be implementing a smart multiplier for things like \(\sin(x)*\cos(x)\).series() = \(\sin(x)\).series( )\(*\cos(x)\).series( )).
+During the first period I will be working to implement something like dseries as described in issue [1038](http://code.google.com/p/sympy/issues/detail?id=1038&q=label%3ASeries&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars). Following this a new heuristic will need to be defined to identify when dseries is appropriate. This will need to be generalizable for when Laurent and other series expansions are included. During this period I will also be implementing a smart multiplier for things like \(\sin(x)*\cos(x)\).series() = \(\sin(x)\).series( )\(*\cos(x)\).series( )).
 
 I will also be cataloging all the existing functions and their:
 
