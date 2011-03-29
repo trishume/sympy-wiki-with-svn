@@ -1,3 +1,5 @@
+# GSoC 2011 Application Jack McCaffery, Improved Series
+
 John (Jack)  McCaffery
 
 University of Louisiana at Lafayette
