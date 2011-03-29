@@ -31,8 +31,6 @@ TODO
 
 ## Timeline
 
-TODO: Documentation
-
 The specifics of each of these steps is outlined in the implementation.
 
 During the official time frame of the Summer of Code, I have no other serious commitments and can easily commit to the required 40 hours of work per week and I'll put as much free time as I can into working this project because of the interesting subject matter.
@@ -45,26 +43,34 @@ Review the current source code and begin integrating with the community. Work wi
 
 Work on implementing the Clebsch-Gordon class. This would include developing the basic functionality of the class, such as evaluation, use in equations and printing, but would also include the symbolic manipulation through the symmetry relations and properties of the Clebsch-Gordon coefficients.
 
+Documentation on how to create and manipulate the coefficients will be done as the features are implemented. You can see above for more information regarding the CG class and how it will be fully implemented. The documentation will also include examples as shown below. Tests that these coefficients obey the properly relations and evaluate properly, also below, will be added to the code as they are implemented.
+
 At this point, the implementation of the Clebsch-Gordon coefficients should be available for merging. While these coefficients are most useful in the context of coupled and product bases, they can stand alone and I will work to begin merging these at this time
 
 **Weeks 4-5**
 
 Expand the spin states to work with both product and coupled spin states.
 
+With this addition, I will add documentation on how to define spin states in the coupled and uncoupled bases in addition to how to rewrite states in terms of one or the other basis. Tests will be implemented to test that these conversions are performed as expected (see below).
+
 **Weeks 6-7**
 
 Modify spin operators to work with the new formulation of spin states. Prepare for midterm evaluation.
 
+During this phase, I will be adding documentation for defining spin operators that act in the various bases and acting them on spin states on these bases. The tests that will be added at this point will verify both that these operators function as expected on various spin states, but that this works with the above implemented conversions between bases.
+
 **Week 8**
 Midterm evaluation
 
-Around this time, I should be finishing the spin states and operators that utilize the Clebsch-Gordon coefficients. I will begin merging the code for these at this time. This should allow for the solving of any problem involving the coupling of two spin angular momenta.
+Around this time, I should be finishing the spin states and operators that utilize the Clebsch-Gordon coefficients. I will begin merging the implementation, documentation and tests for these at this time. This should allow for the solving of any problem involving the coupling of two spin angular momenta.
 
 **Weeks 8-10**
 
 Implement terms for coupling between more spin states, i.e. Wigner 6j and 9j symbols.
 
 I will try to merge these as I complete the implementation for them, i.e. when the 6j symbols are implemented with working coupling of 3 spin states and the corresponding operators functioning properly, that would be merged.
+
+Documentation and tests for these symbols will be included as the symbols are developed. The documentation will expand the previously written documentation for defining spin states and operators and how these interact in the various bases. Tests similar to those for the two spin coupling case will be included, verifying that symbols obey the symmetry relations, states can be properly converted between bases and operators acting on these states can incorporate this functionality.
 
 **Week 11-12**
 
