@@ -1,4 +1,3 @@
-
 John (Jack)  McCaffery
 
 University of Louisiana at Lafayette
@@ -22,12 +21,14 @@ The existing series expansion function in sympy covers a broad range of situatio
 This project will lay the framework for sympy to express functions with different types of expansions, efficiently manipulate series expansions. This will allow future developers to include more robust and efficient series expansions of complex functions and make sympy more competitive with existing computer algebra systems.
 
 **Immediate benefits:** 
+
 * Faster series expansions
-* Series expansions for a broader class of functions (e.g. exp(1/x) or exp(x)/x)
+* Series expansions for a broader class of functions ( e.g. \(\exp(\frac{1}{x})\) or \(\exp(x)/x\) )
 * Laurent series support
-* Implementation of csc, sec, acsc, asec, csch, sech, acsch, asech
+* Implementation of \(\csc(x)\), \(\sec(x)\), acsc\((x)\), asec\((x)\), csch\((x)\), sech\((x)\), acsch\((x)\), asech\((x)\)
 
 **Long term benefits:**
+
 * Ability to implement more sophisticated functions
 * A framework in which more general types of expansions can be included
 * Improved functionality of series() without unnecessary additional complexity for the end user
@@ -35,46 +36,49 @@ This project will lay the framework for sympy to express functions with differen
 #Schedule:
 
 ##April 25 – May 23
+(5 hours per week)
 
 During this period I will be getting to know the larger sympy community. I will be communicating with active members who are familiar with the workings of sympy's differentiation, limit evaluation and series expansion. This will also be a good time to familiarize myself with some of the more obscure bugs relating to series, and limits. This will help me to avoid common problems during development, see issue 1300 for example.
 
 I will also continue to clean up the specific value tests of the trigonometric and hyperbolic functions. Once this is complete I can submit my already written cosecant, secant, arccsc, arcsec, csch, sech, acsch and asech functions. Because of their dependence on existing functions, they are not quite ready for submission at this point.
 
 ##May 23 – July 15
+(40-50 hours per week)
 
-During the first period I will be working to implement something like dseries as described in issue 1038. Following this a new heuristic will need to be defined to identify when dseries is appropriate. This will need to be generalizable for when Laurent and other series expansions are included. During this period I will also be implementing a smart multiplier for things like (sin(x)*cos(x)).series() = (sin(x).series())*(cos(x).series()).
+During the first period I will be working to implement something like dseries as described in issue 1038. Following this a new heuristic will need to be defined to identify when dseries is appropriate. This will need to be generalizable for when Laurent and other series expansions are included. During this period I will also be implementing a smart multiplier for things like \(\sin(x)*\cos(x)\).series() = \(\sin(x)\).series( )\(*\cos(x)\).series( )).
 
 I will also be cataloging all the existing functions and their:
+
 1. Taylor series. Exists? Is a Laurent series? Is something else?
 2. Differentiation functions.
 
 
-Week1: Cataloging and familiarization with existing taylor series.
+**Week1:** Cataloging and familiarization with existing taylor series.
 
-Week2: Implement dseries for differentiable functions.
+**Week2:** Implement dseries for differentiable functions.
 
-Week3-4: Integrate dseries with series and taylor_series. 
+**Week3-4:** Integrate dseries with series and taylor_series. 
 
-Week5: Implement smart multiplication and other optimzations for series.
+**Week5:** Implement smart multiplication and other optimzations for series.
 
-Week6-7: Define laurent_series and integrate with series, dseries and taylor_series. This should now form a coherent series expansion framework.
+**Week6-7:** Define laurent_series and integrate with series, dseries and taylor_series. This should now form a coherent series expansion framework.
 
-Week8: Testing
+**Week8:** Testing
 
 ##Halfway Check: 
 
 Bottom line: Is dseries running and is series ready to integrate different types of series expansions in a smart and graceful way. This should be the expectation at this point.
 
 ##July 15 – August 26
+(40-50 hours per week)
 
-Week9-10: Add Laurent series functionality for existing function base. For example, log(x) has no taylor 
-series about x = 0 but does have a laurent series. Some composite functions like exp(1/x) have the same property. This should be handled by the system.
+**Week9-10:** Add Laurent series functionality for existing function base. For example, \(\log(x)\) has no taylor series about \(x = 0\) but does have a laurent series. Some composite functions like \(\exp(\frac{1}{x})\) have the same property. This should be handled by the system.
 
-Week11: Additional series expansions. Puiseux series for example allow for log(x) terms and can be used to define acosh(x). This functionality would be a nice addition.
+**Week11:** Additional series expansions. Puiseux series for example allow for \(\log(x)\) terms and can be used to define acosh\((x)\). This functionality would be a nice addition.
 
-Week12: Wiggle room. There should be plenty to do at this point.
+**Week12:** Wiggle room. There should be plenty to do at this point.
 
-Week13: Pencils down. Finalize code documentation and perform final debugging.
+**Week13:** Pencils down. Finalize code documentation and perform final debugging.
 
 
 ##Final Check: 
