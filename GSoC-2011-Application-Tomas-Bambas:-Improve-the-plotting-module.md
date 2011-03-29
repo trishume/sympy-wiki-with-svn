@@ -32,6 +32,8 @@ This is just the great school for making software developers. See [[http://www.f
 
 ### Past Projects
 
+I have never participated in any OSS project (except translations to czech lang, but not coding). This is my first try to get in. Anyway I have finished many small commercial projects, bespoke software (all in Python). I can send references by mail. In most cases it was some data manipulating software, like data harvesters, image manipulating scripts, import scripts, etc.
+
 Project Proposal
 ----------------
 
