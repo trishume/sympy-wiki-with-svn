@@ -183,14 +183,63 @@ diff(eta,t)-diff(eta,x,x)==0
 
 == Project Plan ==
 
-
-
 === Main Functionality ===
+
+
+* Two version of singular function should be implemented. This functions should
+return values of parameters which makes e.g. given expression singular.
+The first one should work only with one parameter and the second one - with several.
+```python
+>>> singular(tan(c)*y/(b*(a+x)),(a,b,c)) # searching for singular points of expression
+(b==0),(c==Pi/2+Pi*N_1)
+```
+* Implement functions set which can handle different cases. Produce all different cases from given ones, intersect cases and so on.
+* Implement parametrizer casemap which do the require operation
+parameter-wise (see examples above)
+
 
 === Additional Functionality ===
 
+
+* Implement function which return minimal list of linearly independent functions form given one.
+```python
+>>> linind(cos(t+1), sin(t), cos(t))
+(sin(t), cos(t))
+```
+* Implement functions to be able to collect similar members of
+expression containing functions and to gather coefficients of linearly
+independent members.
+```python
+>>> collect(x*(a+b*y+sin(y))+y*(c+3*x+x^2)+x*sin(y+3)+x*cos(y)+f(x,y,t), x)
+a*x+(b+c)*y+3*x*y+x^2*y+(1+cos(3))*x*sin(y)+(1+sin(3))*x*cos(y)+f(x,y,t)
+>>> coeffs(x*(a+b*y+sin(y))+y*(c+3*x+x^2)+x*sin(y+3)+x*cos(y)+f(x,y,t), x, o)
+[a, b+c, 3, 1, 1+cos(3), 1+sin(3), 1]
+>>> o
+[x, y, x*y, x^2*y, x*sin(y), x*cos(y), f(x,y,t)]
+```
+* Improve singular and casemap to be able to handle more complex cases e.g. 1/(''a''+''b''*''x'')
+```python
+>>> singular(1/(a+b*x), (a,b))
+(a==0, b==0)
+```
+
 === Future Extensions ===
 
+* Add case recognition depending on &gt;, &lt; (in real domain).
+
+e.g. tanh(''a''(''x''+''b''))-> 1, ''b'' -> infinity if ''a'' > 0
+
+and  tanh(''a''(''x''+''b''))-> -1, ''b'' -> infinity if ''a'' < 0
+
+or example of integration of real functions
+
+integrate(1/(''x''**2+''a''))
+
+is equal to atan(''x''/sqrt(''a''))/sqrt(''a'') if ''a'' > 0
+
+and atanh(''x''/sqrt(-''a''))/sqrt(-''a'') if ''a'' < 0
+
+so the answers are real if ''a'' is real.
 
 == Schedule ==
 
