@@ -68,8 +68,11 @@ Some basic functionality follows
 >>> d1,d2,d3 = Die(6), Die(6), Die(6) # Three six-sided dice
 >>> dice = d1+d2+d3; print dice.pdf()
 {2: 1/36, 3: 1/18, ... } 
->>> d1.set(3); d2.set(3); print dice.pdf()
+>>> even = dice % 2 == 0; 
+>>> (dice|(d1==3 and d2==3)).pdf() # pdf of dice given d1 and d2 both came up 3
 {7: 1/6, 8: 1/6, 9: 1/6, ... } 
+>>> (even | dice >=17).pdf() # pdf of evenness given dice sum to 15 or greater
+{True: 1/4, False: 3/4}
 ...
 >>> pspace1 = ProbabilitySpace(Normal(0,1)) # Probability space over the reals
 >>> pspace2 = ProbabilitySpace(Normal(0,1)) # A different space of events
