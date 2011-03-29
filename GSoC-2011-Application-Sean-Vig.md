@@ -15,9 +15,7 @@ This is still a draft, if anyone has any comments or suggestions, please feel fr
 
 Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles. These coefficients give the expansion of coupled spin states as a sum of product states and vice versa. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
 
-
-
-## Project Implementation
+## Project Overview
 
 The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis. This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich, "Quantum Theory of Angular Momentum", pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the how many are implemented will be based on the amount of time available determined in discussions with my mentor.
 
@@ -27,7 +25,13 @@ The next stage of this project would be to integrate the use of coupled and prod
 
 My plan for this project would be to first implement this for coupling between two spin states. Once this is done, I would extend these methods to include coupling between more states. The current numerical implementation includes up to Wigner-9j symbols, which gives coupling between 4 spin states. My goal would be to implement the necessary spin algebra to include coupling between at least this many states.
 
+## Code Implementation
+
+TODO
+
 ## Timeline
+
+TODO: Documentation
 
 The specifics of each of these steps is outlined in the implementation.
 
@@ -41,6 +45,8 @@ Review the current source code and begin integrating with the community. Work wi
 
 Work on implementing the Clebsch-Gordon class. This would include developing the basic functionality of the class, such as evaluation, use in equations and printing, but would also include the symbolic manipulation through the symmetry relations and properties of the Clebsch-Gordon coefficients.
 
+At this point, the implementation of the Clebsch-Gordon coefficients should be available for merging. While these coefficients are most useful in the context of coupled and product bases, they can stand alone and I will work to begin merging these at this time
+
 **Weeks 4-5**
 
 Expand the spin states to work with both product and coupled spin states.
@@ -52,13 +58,37 @@ Modify spin operators to work with the new formulation of spin states. Prepare f
 **Week 8**
 Midterm evaluation
 
+Around this time, I should be finishing the spin states and operators that utilize the Clebsch-Gordon coefficients. I will begin merging the code for these at this time. This should allow for the solving of any problem involving the coupling of two spin angular momenta.
+
 **Weeks 8-10**
 
 Implement terms for coupling between more spin states, i.e. Wigner 6j and 9j symbols.
 
+I will try to merge these as I complete the implementation for them, i.e. when the 6j symbols are implemented with working coupling of 3 spin states and the corresponding operators functioning properly, that would be merged.
+
 **Week 11-12**
 
-Finalize project, adding any final documentation and tests, and pencils down.
+Finalize project, merging any final documentation, tests and bug fixes, and pencils down.
+
+## Test cases and examples
+
+TODO
+
+## Current code patches
+
+**Open pull requests**
+
+[Fix Rotation.d function](https://github.com/sympy/sympy/pull/153) addressing a bug I found in evaluating elements of the Rotation operator
+
+[Bug fix for evaluating J2 on a Jz ket](https://github.com/sympy/sympy/pull/155) addressing a bug I found in evaluating the J2 operator on a Jz eigenket.
+
+[Fixing the Matrix.is_upper,.is_lower and .is_upper functions](https://github.com/sympy/sympy/pull/157) addressing [Bug #2220](http://code.google.com/p/sympy/issues/detail?id=2220)
+
+[Fixing the printing of the CNOT gate](https://github.com/sympy/sympy/pull/167) addressing [Bug #2188](http://code.google.com/p/sympy/issues/detail?id=2188)
+
+**Closed pull requests**
+
+[Change apply_operators to qapply](https://github.com/sympy/sympy/pull/152) addressing [Bug #2223](http://code.google.com/p/sympy/issues/detail?id=2223)
 
 ## Bio
 
