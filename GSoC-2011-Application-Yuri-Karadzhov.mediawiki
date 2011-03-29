@@ -237,7 +237,7 @@ integrate(1/(''x''**2+''a''))
 
 is equal to atan(''x''/sqrt(''a''))/sqrt(''a'') if ''a'' > 0
 
-and atanh(''x''/sqrt(-''a''))/sqrt(-''a'') if ''a'' < 0
+and -atanh(''x''/sqrt(-''a''))/sqrt(-''a'') if ''a'' < 0
 
 so the answers are real if ''a'' is real.
 
