@@ -6,7 +6,9 @@ Name and Contact Info
 
 Name: Tomas Bambas
 
-e-mail: tomas.ba----@gmail.com
+Residence: Czech Republic
+
+E-mail: tomas.ba----@gmail.com
 
 JID: conyx@jabber.cz
 
