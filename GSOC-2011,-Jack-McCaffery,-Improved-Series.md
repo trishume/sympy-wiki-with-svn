@@ -6,7 +6,7 @@ University of Louisiana at Lafayette
 
 ##Bio: 
 
-I attended [Michigan Technological University](www.mtu.edu) as an undergraduate and completed a B.S. In physics. My primary area of interest was quantum mechanics and mathematical physics. I then went on to finish my masters degree in mathematics at the [University of Alabama](www.ua.edu). While there my primary research area was real and complex analysis. I am currently finishing my third year as a PhD student in the [cognitive science](ics.louisiana.edu) program at the [University of Louisiana at Lafayette](www.louisiana.edu). My primary research interest is machine learning and probabilistic reasoning.
+I attended [Michigan Technological University](http://www.mtu.edu) as an undergraduate and completed a B.S. In physics. My primary area of interest was quantum mechanics and mathematical physics. I then went on to finish my masters degree in mathematics at the [University of Alabama](http://www.ua.edu). While there my primary research area was real and complex analysis. I am currently finishing my third year as a PhD student in the [cognitive science](http://ics.louisiana.edu) program at the [University of Louisiana at Lafayette](http://www.louisiana.edu). My primary research interest is machine learning and probabilistic reasoning.
 
 This project is ideal for me. My deepest interest in mathematics is in limits and complex functional analysis. Because of this and my strong background, I will be able to generalize the series expansion functionality in sympy in a way that is mathematically consistent (producing minimal errors due to competing limits, etc...) and in a way that will readily generalize to more advanced series manipulation in future releases.
 
@@ -25,7 +25,7 @@ This project will lay the framework for sympy to express functions with differen
 * Faster series expansions
 * Series expansions for a broader class of functions ( e.g. \(\exp(\frac{1}{x})\) or \(\exp(x)/x\) )
 * Laurent series support
-* Implementation of \(\csc(x)\), \(\sec(x)\), acsc\((x)\), asec\((x)\), csch\((x)\), sech\((x)\), acsch\((x)\), asech\((x)\)
+* Implementation of \(\csc(x)\), \(\sec(x)\), acsc\((x)\), asec\((x)\), csch\((x)\), sech\((x)\), acsch\((x)\), asech\((x)\) (see [issue 564](http://code.google.com/p/sympy/issues/detail?id=564&can=5&colspec=ID%20Type%20Status%20Priority%20Milestone%20Owner%20Summary%20Stars))
 
 **Long term benefits:**
 
@@ -85,4 +85,21 @@ Bottom line: Is dseries running and is series ready to integrate different types
 
 Bottom line: At this point we should absolutely have dseries, laurent_series and taylor_series as three separate entities, all unified under series. These three series expansions should be applied to all existing functions wherever appropriate.
 
+##Links:
+
+[Wikipedia: Taylor Series](http://en.wikipedia.org/wiki/Taylor_series)
+
+[Wikipedia: Laurent Series](http://en.wikipedia.org/wiki/Laurent_series)
+
+[Mathworld: Puiseux Series](http://mathworld.wolfram.com/PuiseuxSeries.html)
+
+[Mathworld: Trigonometric Functions](http://mathworld.wolfram.com/TrigonometricFunctions.html)
+
+[Mathworld: Hyperbolic Functions](http://mathworld.wolfram.com/HyperbolicFunctions.html)
+
+##References:
+
+Stein, E. M. and Shakarchi, R. (2003). _Princeton Lectures in Analysis II: Complex Analysis_. Princeton University Press, Princeton, NJ, USA.
+
+Wade, W. R. (1999). _An Introduction to Analysis, Second Edition_. Prentice Hall.
 
