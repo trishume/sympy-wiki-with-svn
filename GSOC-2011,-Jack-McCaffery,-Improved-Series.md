@@ -103,3 +103,5 @@ Stein, E. M. and Shakarchi, R. (2003). _Princeton Lectures in Analysis II: Compl
 
 Wade, W. R. (1999). _An Introduction to Analysis, Second Edition_. Prentice Hall.
 
+
+**Note:** The patch that I've submitted can be found here ([issue 2243](http://code.google.com/p/sympy/issues/detail?id=2243)).
