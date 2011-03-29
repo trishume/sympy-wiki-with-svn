@@ -1,6 +1,4 @@
-# GSoC 2011 Application Matthew Rocklin: Random Variables
-This will be a project proposal for GSoC 2011 by [Matthew Rocklin](http://people.cs.uchicago.edu/~mrocklin). Any and all advice/feedback is welcome either via this wiki, the sympy mailing list, or direct e-mail at mrocklin cs uchicago edu. 
-
+# SymPy Stats : Random Variables
 ##Basics
 Name: Matthew Rocklin
 
@@ -10,12 +8,7 @@ Occupation: PhD Student at University of Chicago
 
 Webpage: http://people.cs.uchicago.edu/~mrocklin
 
-
-Title: Random Variables in SymPy
-
-Abstract: We develop the statistics functionality in SymPy, an open sounce Computer Algebra System in Python. We implement a Random Variable type and integrate it into existing SymPy functionality. By using the behavior of random variables and by leveraging the existing functionality in SymPy we hope to start a powerful statistical modeling language. 
-
-## General Introduction 
+## Motivation 
 Statistics is more important than we thought. Scientific and social research is scrambling add statistics to past experiments and theories. Computational systems are also struggling to keep up - previously neglected statistical packages are dusted off and found to be lacking. Now is a time for development. 
 
 Current solutions are usually numeric, data-centric (R, SAS), or behind commercial/closed source barriers (Maple, Mathematica). Statistical researchers however often think and work symbollically (Beta = Lx + noise) and do not have a good language to encode and assist in their work. 
@@ -71,7 +64,7 @@ Some basic functionality follows
 >>> even = dice % 2 == 0; 
 >>> (dice|(d1==3 and d2==3)).pdf() # pdf of dice given d1 and d2 both came up 3
 {7: 1/6, 8: 1/6, 9: 1/6, ... } 
->>> (even | dice >=17).pdf() # pdf of evenness given dice sum to 15 or greater
+>>> (even | dice >=17).pdf() # pdf of evenness given dice sum to 17 or greater
 {True: 1/4, False: 3/4}
 ...
 >>> pspace1 = ProbabilitySpace(Normal(0,1)) # Probability space over the reals
@@ -99,6 +92,13 @@ Integrate Random Variables gracefully into other parts of SymPy. The goal is to 
 ...
 ```
 
+## Logistics/Disclaimers/Errata
+
+Starting in August I'll have a second time commitment and my hours will decrease a bit (I expect to 30 hours/week). I'm free all of September and am happy to make up lost time then. 
+
+I am a mostly self-taught coder. I suspect that the theoretical and programming aspects of this project will be well within my abilities. Where I'm hoping to grow is in coding practices - i.e. testing, style, and general responsibility. My goal for this project is to build a body of code to very high standards - this will be new for me however and I'll probably need some help. 
+
+For personal information see [my webpage](http://people.cs.uchicago.edu/~mrocklin). For a list of publications and work experience see [my CV](http://people.cs.uchicago.edu/~mrocklin/mrocklin-cv.pdf). For other information please feel free to contact me directly. 
 
 
 ## References
