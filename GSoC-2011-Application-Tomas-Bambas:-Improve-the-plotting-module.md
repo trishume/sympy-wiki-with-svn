@@ -19,9 +19,9 @@ Biographical Information
 
 ### Study
 
-=== Coding Skills ===
+### Coding Skills
 
-=== Past Projects ===
+### Past Projects
 
 GSoC SymPy Project Proposal
 ---------------------------
