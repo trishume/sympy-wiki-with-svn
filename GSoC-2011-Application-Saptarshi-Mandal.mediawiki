@@ -1,0 +1,86 @@
+
+Title:	 SymPy: Writing a combinatorics package for sympy
+Student:	 Saptarshi Mandal
+Abstract:	 Sympy currently has little support for combinatorial algorithms found in such packages such as Combinatorica. I plan on implementing and maintaining such a package for Sympy.
+Content:	
+
+
+
+== Name and Contact Info ==
+
+
+
+Saptarshi Mandal
+
+Email: sapta.iitkgp@gmail.com
+
+IRC: saptman on freenode
+
+Phone: Will give to mentor if asked
+
+== Synopsis ==
+
+My Soc proposal is to implement some algorithms of Combinatorica in SymPy.
+
+The algorithms provided in combinatorica have wide applications in fields such as information theory, theoretical computer science, cryptography and networks. Mathematica has arguably, the best implementation of a suite of combinatorial tools [1]. Another competing python CAS, Sage maintains a page indicating what aspects of Combinatorica it has implemented [SageRef]. Currently most of the algorithms presented in these packages are unimplemented in Sympy. The primary issue is the vast size of the implemented methods, many of which rely on non-trivial algorithms, which necessitates prudence in the choice of the techniques one wishes to implement.
+
+I will be developing against the list of algorithms published in [1]. There, the algorithms are divided into 5 categories, a)Subsets and Permutations, 
+b)Partitions and Compositions, 
+c)Graph Construction and Representations, 
+d)Graph Properties and
+e)Graph Algorithms. 
+I do not plan on implementing the last category as it is fairly straightforward and could be written later by other SymPy newbies as myself.
+
+Most of the algorithms required to implement the functionality covered in (a) and (b) can be found in TAOCP Vol 4. Wherever possible (time permitting obviously) I will implement a few variations of these algorithms.
+
+== Deliverables ==
+
+
+I plan on roughly following the given schedule but uncertainty will always be there. I will however be in touch with my mentor(s) at all time.
+
+
+
+== Community Bonding Period ==
+
+I have been developing an integral equation solver for the past few months which have helped me learn Python and Sympy simultaneously. It mimics the functionality of intsolve in Maple and I hope to get it pushed in soon so that I will have a significant contribution to Sympy before I begin. I have a working knowledge of git. I have already begun prelim work on my project and intend to push some code onto my development branch. I also intend to read up on spectral graph theory as well as carefully reread parts of TAOCP Vol 4. I have also taken a look at the code of Sage which will be useful for the graph theoretic algorithms.
+
+=== Beginning of the Program ===
+
+
+
+* Week 1: 
+
+
+* Week 2: 
+
+* Week 3: 
+
+* Weeks 4-7: Continue work above.
+
+=== Midterms ===
+
+* Weeks 1-4: 
+
+== Related Work ==
+
+Apart from Combinatorica and Sage, maple has the combinat library. Where Mathematica really shines though is their graph visualization tools. I do not presently know how to go about this and will try to incorporate into my proposal as and when I do.
+
+== Biographical Information ==
+
+I am a final year student at IIT Kharagpur majoring in Mathematics and Computing. I have taken courses in Real, Complex and Functional Analysis as well as Abstract Algebra, Number Theory and Graph Theory.
+
+I do not have any plans for the summer as I will be graduating and will be at home. I had planned a month long vacation which I will cut down to 3-4 days if I get selected.
+
+My github account's URL is http://github.com/saptman. The relevant branches are dev_ide and combinatorics. Communicating on IRC is a bit problematic for now because of the time difference. I reply to any email as soon as I can though.
+
+== Sources ==
+
+[0] combinatorica ref
+
+[1] sage ref
+
+[2] TAOCP Vol 4, Donald Knuth
+
+[3] Spectral Graph Theory, Fan Chung
+
+[4] 
