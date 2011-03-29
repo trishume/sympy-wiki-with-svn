@@ -5,8 +5,11 @@ Name and Contact Info
 ---------------------
 
 Name: Tomas Bambas
+
 e-mail: tomas.ba----@gmail.com
+
 JID: conyx@jabber.cz
+
 Conyx on freenode
 
 My Study, Past Projects and Coding Skills
