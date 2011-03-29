@@ -14,10 +14,14 @@ JID: conyx@jabber.cz
 
 IRC: Conyx on freenode
 
-My Study, Past Projects and Coding Skills
------------------------------------------
+Biographical Information
+------------------------
 
-Coming soon... =)
+=== Study ===
+
+=== Coding Skills ===
+
+=== Past Projects ===
 
 GSoC SymPy Project Proposal
 ---------------------------
