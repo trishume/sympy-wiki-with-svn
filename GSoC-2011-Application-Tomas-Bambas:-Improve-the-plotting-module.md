@@ -27,8 +27,8 @@ This is just the perfect school for making software developers. See [[http://www
 
 ### Past Projects
 
-GSoC SymPy Project Proposal
----------------------------
+Project Proposal
+----------------
 
 Coming soon... =)
 
