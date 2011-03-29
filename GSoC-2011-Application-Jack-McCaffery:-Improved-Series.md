@@ -1,4 +1,4 @@
-# GSoC 2011 Application Jack McCaffery, Improved Series
+# GSoC 2011 Application Jack McCaffery: Improved Series
 
 John (Jack)  McCaffery
 
