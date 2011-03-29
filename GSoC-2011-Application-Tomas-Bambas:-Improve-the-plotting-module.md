@@ -8,7 +8,7 @@ Name: Tomas Bambas
 
 Residence: Czech Republic
 
-E-mail: tomas[dot]bambas[at]gmail[dot]com
+E-mail: tomas.bambas{at}gmail.com
 
 JID: conyx@jabber.cz
 
