@@ -17,7 +17,7 @@ IRC: Conyx on freenode
 Biographical Information
 ------------------------
 
-=== Study ===
+== Study ==
 
 === Coding Skills ===
 
