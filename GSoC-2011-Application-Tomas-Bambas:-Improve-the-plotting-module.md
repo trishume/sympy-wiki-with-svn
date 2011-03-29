@@ -12,7 +12,7 @@ E-mail: tomas.ba----@gmail.com
 
 JID: conyx@jabber.cz
 
-Conyx on freenode
+IRC: Conyx on freenode
 
 My Study, Past Projects and Coding Skills
 -----------------------------------------
