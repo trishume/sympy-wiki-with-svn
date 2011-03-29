@@ -34,6 +34,11 @@ Project Proposal
 
 Coming soon... =)
 
+Schedule
+--------
+
+Coming soon... =)
+
 Future
 ------
 
