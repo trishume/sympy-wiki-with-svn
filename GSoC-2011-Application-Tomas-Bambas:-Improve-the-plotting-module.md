@@ -1,12 +1,10 @@
 GSoC 2011 Application Tomas Bambas: Improve the plotting module
 ===============================================================
 
-Personal and Contact Info
--------------------------
+Name and Contact Info
+---------------------
 
 Name: Tomas Bambas
-
-Age: 22
 
 Residence: Czech Republic
 
