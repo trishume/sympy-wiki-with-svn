@@ -1,10 +1,12 @@
 GSoC 2011 Application Tomas Bambas: Improve the plotting module
 ===============================================================
 
-Name and Contact Info
----------------------
+Personal and Contact Info
+-------------------------
 
 Name: Tomas Bambas
+
+Age: 22
 
 Residence: Czech Republic
 
@@ -24,6 +26,8 @@ I study at The Faculty of Information Technology at Brno University of Technolog
 This is just the great school for making software developers. See [[http://www.fit.vutbr.cz/FIT/.en]].
 
 ### Coding Skills
+
+
 
 ### Past Projects
 
