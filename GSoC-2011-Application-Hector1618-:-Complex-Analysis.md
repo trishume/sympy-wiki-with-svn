@@ -4,7 +4,7 @@
 
 
 ##Contact Information : 
-* Name : Tale Prafullkumar P.
+* Name : TALE PRAFULLKUMAR P.
 * Institute : Indian Institute of Technology Roorkee
 * Email : hector1618@gmail.com 
 * IRC : hector on freenode
