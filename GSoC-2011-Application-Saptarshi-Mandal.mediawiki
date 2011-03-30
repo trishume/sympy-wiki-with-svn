@@ -27,7 +27,7 @@ I do not plan on implementing the last category as it is fairly straightforward 
 
 Most of the algorithms required to implement the functionality covered in (a) and (b) are described in TAOCP Vol 4. Wherever possible (time permitting obviously) I will implement a few variations of these algorithms. For example, random permutations can be generated both by the original Fisher Yates as well as Durstenfeld's variant. I will implement both and give the user the option of using the one he wants. I can refer to other material as well such as coursework or lecture notes posted on several university websites. The above will require comprehensive usage of Python's functional features and as such will afford me a chance to apply functional programming idioms for solving them.
 
-The graph construction feature is a bit more tricky. I could try to visualize graphs using Ascii on the console but that will look extremely ugly. Some other techniques I have thought of are to generate SVGs or use PyQt. Since PyQt will only be used for graph visualization, and since the philosophy of SymPy is that its easily accessible from the console I want to refrain from adding unnecessary dependencies and would prefer using SVGs instead. This will mean that I will need to understand how to generate SVGs first. Alternatively I could use Pyglet just as it has been used in the plotting library of Sympy.
+The graph construction feature is a bit more tricky. I could try to visualize graphs using Ascii on the console but that will look extremely ugly. Some other techniques I have thought of are to generate SVGs or use PyQt. Since PyQt will only be used for graph visualization, and since the philosophy of SymPy is that its easily accessible from the console I want to refrain from adding unnecessary dependencies and would prefer using SVGs instead. The best way in my opinion is to use graphviz [9] as it is a mature library and has several Python bindings and is very easy to use. It has several algorithms to visualize graphs of all types and sizes and does a pretty good job of it. Alternatively I could use Pyglet just as it has been used in the plotting library of Sympy.
 
 Graph properties will be interesting to implement and will be dependent on the linear algebra library of Sympy for operations such as computing the diameter of a graph, its chromatic polynomial, chromatic number as well as performing some checks such as testing if two graphs are isomorphic.
 
@@ -43,8 +43,6 @@ I plan on roughly following the given schedule but uncertainty will always be th
 I have been developing an integral equation solver for the past few months which have helped me learn Python and Sympy simultaneously. It mimics the functionality of intsolve in Maple and I hope to get it pushed in soon so that I will have a significant contribution to Sympy before I begin. I have a working knowledge of git. I have already begun prelim work on my project and intend to push some code onto my development branch. I also intend to read up on spectral graph theory as well as carefully reread parts of TAOCP Vol 4. I have also taken a look at the code of Sage which will be useful for the graph theoretic algorithms.
 
 === Beginning of the Program ===
-
-#TODO: Complete
 
 * Week 1 [Permutations]: I will begin work on the permutations feature. Algorithms for generating all permutations have been given in TAOCP. The stock permutations command will also have options for permutations of n things with k cycles as well as permutations of n items with k runs. I will also implement lexicographic ordering of the permutations as well as other other features like generating derangements and involutions. Other features such as depicting the graph of a permutation can be done later when the graph module is ready.
 
@@ -73,6 +71,8 @@ Apart from Combinatorica and Sage, maple has the combinat library. Where Mathema
 
 I am a final year student at IIT Kharagpur majoring in Mathematics and Computing. I have taken courses in Real, Complex and Functional Analysis as well as Abstract Algebra, Number Theory and Graph Theory.
 
+I have taken several programming courses as well and am an ardent fan of Haskell and F#. I have solved some Project Euler problems in F#. I do not particularly like Java or C++ but I have done a significant amount of programming in them. This is my first foray into an open source project and so far it has been quite fun. Last summer I interned in Germany under Prof Michael Bohm in the University of Bremen where I worked on Sobolev spaces and PDE theory. Before that I worked under Prog Rajasekhar in my department on applications of Greens function for solving pdes as well as boundary element methods.
+
 I do not have any plans for the summer as I will be graduating and will be at home. I had planned a month long vacation which I will cut down to 3-4 days if I get selected.
 
 My github account's URL is http://github.com/saptman. The relevant branches are dev_ide and combinatorics. Communicating on IRC is a bit problematic for now because of the time difference. I reply to any email as soon as I can though.
@@ -96,3 +96,5 @@ My github account's URL is http://github.com/saptman. The relevant branches are 
 [7] Permutation group algorithms, Akos Seress
 
 [8] Implementation of 3 types of Schreier-Sims Algorithm, Martin Jaggi, MAS334 Project, QMU London
+
+[9] http://www.graphviz.org/
