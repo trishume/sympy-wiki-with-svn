@@ -372,7 +372,7 @@ Synchronization with master `sympy/sympy`.
 -------------------------------------------
 
 When clone a repo, it has a default remote called `origin` that points to the `sympy/sympy` repository.
-And your fork remote named as `github`. You can observe the remotes names:
+And your fork remote named as `github`. You can observe the remotes names::
 
     $ git remote -v
     github  git@github.com:mynick/sympy.git (fetch)
