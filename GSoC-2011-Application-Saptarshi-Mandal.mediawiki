@@ -71,6 +71,8 @@ Apart from Combinatorica and Sage, maple has the combinat library. Where Mathema
 
 I am a final year student at IIT Kharagpur majoring in Mathematics and Computing. I have taken courses in Real, Complex and Functional Analysis as well as Abstract Algebra, Number Theory and Graph Theory.
 
+I have taken several programming courses as well and am an ardent fan of Haskell and F#. I have solved some Project Euler problems in F#. I do not particularly like Java or C++ but I have done a significant amount of programming in them. This is my first foray into an open source project and so far it has been quite fun. Last summer I interned in Germany under Prof Michael Bohm in the University of Bremen where I worked on Sobolev spaces and PDE theory. Before that I worked under Prog Rajasekhar in my department on applications of Greens function for solving pdes as well as boundary element methods.
+
 I do not have any plans for the summer as I will be graduating and will be at home. I had planned a month long vacation which I will cut down to 3-4 days if I get selected.
 
 My github account's URL is http://github.com/saptman. The relevant branches are dev_ide and combinatorics. Communicating on IRC is a bit problematic for now because of the time difference. I reply to any email as soon as I can though.
