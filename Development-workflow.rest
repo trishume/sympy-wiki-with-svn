@@ -160,15 +160,10 @@ Also, if you start a module, docstring has to contain the description of main fu
 Workflow process
 =================
 
-Here we'll describe the workflow using real world example where we fix some bug.
-
 Create your environment
 ------------------------
 
 Creating of environment is once-only.
-
-Github variant
-~~~~~~~~~~~~~~~
 
 As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
 
@@ -189,7 +184,7 @@ Now you have your own repository respect to SymPy project. If your username in G
     [[img/dev-guide-forking-result.png]]
     
 
-On your local machine choose work place, and clone (download) code of SymPy original repository::
+On your local machine choose work place, and clone (download) the code from SymPy's original repository (about 20 MiB)::
 
     $ git clone git://github.com/sympy/sympy.git
     $ cd sympy
@@ -226,25 +221,21 @@ Then enter the code below, replacing the `mynick` and `012-api-token` with your 
 *Note* If you ever change your GitHub password, a new token will be created and will need to be updated.
 
 
-For more information about GitHub forkink and tuning see: [8]_, [9]_ and [11]_.
+For more information about GitHub forking and tuning see: [8]_, [9]_ and [11]_.
+
+Set up SSH keys
+~~~~~~~~~~~~~~~~
+
+To establish a secure connection between your computer and GitHub see detailed instructions in [11]_.
 
 If you have any problems with SSH access to GitHub see troubleshooting instructions at [12]_, or ask us in mail-list.
 
 And now, do not forget to go to the `Create separated branch`_ instructions before code changing.
 
-Quick patch variant
-~~~~~~~~~~~~~~~~~~~~
-
-In this way just clone read-only copy::
-
-    $ git clone git://github.com/sympy/sympy.git
-    $ cd sympy
-
-Note that using GitHub is highly recommended, as it makes things easier for both us and you.
-
-
 Create separated branch
 ------------------------
+
+From creating of brunches usually the work with issue is beginning. Also pull request related with them.
 
 Think about branch name, that is similar to  topic of the patch or pull request, but short.
 If you know the issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
@@ -268,8 +259,10 @@ Code modification
 
 ...
 
+Do not forget that all new functionality should be tested, and all new methods/functions/classes should have some doctests showing how to use them.
 
-Be sure that all tests of SymPy have been passed
+
+Be sure that all tests of SymPy_ have been passed
 -------------------------------------------------
 
 To ensure everything stays in shape, let’s see if all tests pass::
@@ -288,7 +281,7 @@ but at the same time you must be sure that yours tests are connected with `./bin
 
 
 Commit the changes
------------------------------
+--------------------
 
 You can check what files are changed::
 
@@ -297,7 +290,6 @@ You can check what files are changed::
 Add new files to be upon version control system if necessary::
 
     $ git add new_file.py
-
 
 Check total changes if it is interesting::
     
@@ -333,9 +325,6 @@ and choose the changes you want in the resulting interface.
 Create patch file or pull request for GitHub
 ----------------------------------------------
 
-Github variant
-~~~~~~~~~~~~~~~
-
 Be sure that you are in your own branch, and run::
 
     $ git push github 1234_sequences
@@ -365,15 +354,6 @@ The pull request is sent immediately. You’re taken to the main pull request di
 That's all.
 
 See also `Updating your pull request`_
-
-Quick patch variant
-~~~~~~~~~~~~~~~~~~~~
-
-If you do not use GitHub, then after code modification, testing and commit operation just create patch-file::
-
-    $ git format-patch master --stdout > 1234_sequences_base_implementation.patch
-
-And send us it.  Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
 
 
 Updating your pull request
@@ -412,9 +392,30 @@ Or you can do it at a time in one command::
     $ git pull
 
 
+
+Quick patch variant
+====================
+
+Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
+
+In this way just clone read-only copy::
+
+    $ git clone git://github.com/sympy/sympy.git
+    $ cd sympy
+
+then you can create git branch, for your code modifications.
+
+Also take into account all which was  written for the GitHub procedure about git tuning, code conversions, the testing and the commit operations.
+
+Then just create patch-file::
+
+    $ git format-patch master --stdout > 1234_sequences_base_implementation.patch
+
+And send us it. 
+
 .. .. rubric:: Footnotes
 
-This page based upon present SymPy pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
+This page based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
 
 .. [1] http://lkml.org/lkml/2000/8/25/132
 
@@ -442,3 +443,4 @@ This page based upon present SymPy pages [2-6], GitHub help [8-9], [11-12] and i
 .. _New BSD License:    http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29
 .. _GitHub:             https://github.com/
 .. _sympy/sympy:        https://github.com/sympy/sympy
+
