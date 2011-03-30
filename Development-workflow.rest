@@ -56,8 +56,8 @@ License: 'New BSD License'_ (see the `LICENSE`_ file for details) covers all fil
 
 There are a few ways to create and send a patch.
 
-The best way is to send a github pull request against the `sympy/sympy`_ repository. We'll review it and push it in. 
-The github pull request is a preferred method, as that makes it easy for us to review and push the code in.
+The best way is to send a GitHub pull request against the `sympy/sympy`_ repository. We'll review it and push it in. 
+The GitHub pull request is a preferred method, as that makes it easy for us to review and push the code in.
 
 More quickly, but not convenient for reviewing and merging, is to create patch-file with the help of pure git.
 This way can be used if the patch has high-priority or significant, only one or two files are involved or you just have not enough time for more accurate way.
@@ -70,7 +70,7 @@ The basic work-flow for both variants is consist of a few stages:
 3. Modify code and/or create tests of it
 4. Be sure that all tests of SymPy have been passed.
 5. Only then commit changes
-6. Create patch file or pull request for github.
+6. Create patch file or pull request for GitHub.
 
 All those are described in the details below `Workflow process`_, but before it it would be useful to acquaint with `Coding conventions in Sympy`_.
 
@@ -117,7 +117,10 @@ Documentation strings
 The beginning of the docstring of methods or properties would look like this::
 
     """
-    Extract a submatrix by specifying a list of rows and columns
+    The convention is to end the first line of a docstring with a dot.
+    
+    More detailed description is optional, but it must be wrapped so that no
+    line is longer than 80 characters.
     
     According to the "try_block_diag" parameter, it will try to form block
     diagonal matrices using the method get_diag_blocks(), invert these
@@ -171,43 +174,71 @@ As you are going to use `GitHub`_  you should have a GitHub account. If you have
 
     - https://github.com/signup/free
 
-Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy github page:
+Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy github repository:
 
     - https://github.com/sympy/sympy
     
 and click the “Fork” button.
 
-.. image:: http://help.github.com/images/bootcamp/bootcamp_3_fork.jpg
+    [[img/dev-guide-forking.png]]
 
-Now you have your own repository respect to SymPy project. If your username in github is `mynick` then the forked project will be placed something like:
+Now you have your own repository respect to SymPy project. If your username in GitHub is `mynick` then the forked project will be placed something like:
     
     - https://github.com/mynick/sympy
+    
+    [[img/dev-guide-forking-result.png]]
     
 
 On your local machine choose work place, and clone (download) code of SymPy original repository::
 
-    git clone git://github.com/sympy/sympy.git
-    cd sympy
+    $ git clone git://github.com/sympy/sympy.git
+    $ cd sympy
 
 Then assign your read-and-write repo to a remote called "github"::
 
-    git remote add github git@github.com:mynick/sympy.git
-    git pull
+    $ git remote add github git@github.com:mynick/sympy.git
 
 
+Basic git settings
+~~~~~~~~~~~~~~~~~~
 
-Do not forget to go to the `Create separated branch`_ instructions before code changing.
+Git tracks who makes each commit by checking the user’s name and email.
+In addition, we use this info to associate your commits with your GitHub account.
+
+To set these, enter the code below, replacing the name and email with your own (`--global` is optional.)::
+
+    $ git config --global user.name "Firstname Lastname"
+    $ git config --global user.email "your_email@youremail.com"
+
+The name should be your actual name, not your GitHub username.
+
+Some tools connect to GitHub without SSH. To use these tools properly you need to find and configure your API Token.
+
+On the GitHub site Click `“Account Settings”` > Click `“Account Admin.”`
+
+    [[img/dev-guide-apitoken.png]]
+
+Then enter the code below, replacing the `mynick` and `012-api-token` with your own::
+
+    $ git config --global github.user mynick
+    $ git config --global github.token 012-api-token
+
+*Note* If you ever change your GitHub password, a new token will be created and will need to be updated.
+
+
+For more information about GitHub forkink and tuning see: [8]_, [9]_ and [11]_.
+
+If you have any problems with SSH access to GitHub see troubleshooting instructions at [12]_, or ask us in mail-list.
+
+And now, do not forget to go to the `Create separated branch`_ instructions before code changing.
 
 Quick patch variant
 ~~~~~~~~~~~~~~~~~~~~
 
 In this way just clone read-only copy::
 
-    git clone git://github.com/sympy/sympy.git
-    
-and::
-
-    cd sympy
+    $ git clone git://github.com/sympy/sympy.git
+    $ cd sympy
 
 Note that using GitHub is highly recommended, as it makes things easier for both us and you.
 
@@ -218,15 +249,16 @@ Create separated branch
 Think about branch name, that is similar to  topic of the patch or pull request, but short.
 If you know the issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
 
-    git branch 1234_sequences
-    git checkout 1234_sequences
+    $ git branch 1234_sequences
+    $ git checkout 1234_sequences
 
 or in one command using ::
 
-    git checkout -b 1234_sequences
+    $ git checkout -b 1234_sequences
+    
 To view in what branch you are type::
 
-    git branch
+    $ git branch
     
 And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
     
@@ -242,15 +274,15 @@ Be sure that all tests of SymPy have been passed
 
 To ensure everything stays in shape, let’s see if all tests pass::
 
-    ./bin/test 
-    ./bin/doctest 
+    $ ./bin/test
+    $ ./bin/doctest
     
 
 If they are not passed all, then the warning *DO NOT COMMIT* will appear.
 
 If you want to test only one set of tests try::
 
-    ./bin/test sympy/concrete/tests/test_products.py
+    $ ./bin/test sympy/concrete/tests/test_products.py
 
 but at the same time you must be sure that yours tests are connected with `./bin/test` properly too.
 
@@ -260,16 +292,16 @@ Commit the changes
 
 You can check what files are changed::
 
-    git status
+    $ git status
 
 Add new files to be upon version control system if necessary::
 
-    git add new_file.py
+    $ git add new_file.py
 
 
 Check total changes if it is interesting::
     
-    git diff
+    $ git diff
     
 So you are ready to commit changes in your local version control system. A commit also contains a `commit message` which describes it.
 
@@ -279,26 +311,26 @@ This makes the message work the best with the various things in git and GitHub t
 
 If your `commit message` is one line then you can use this command::
 
-    git commit -m "1234: sequences base implementation"
+    $ git commit -m "1234: sequences base implementation"
     
 or if you plan to enter big description::
 
-    git commit
+    $ git commit
     
 And editor windows will appear automatically in this case. In Linux, this is vim by default.  You can change what editor pops up by changing the `$EDITOR` shell variable.
 
 Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
 
-    git commit -a -m "1234: sequences base implementation"
+    $ git commit -a -m "1234: sequences base implementation"
 
 If you want to stage only part of your changes, you can use the interactive commit feature.  Just type::
 
-    git commit -i
+    $ git commit --interactive
 
 and choose the changes you want in the resulting interface.
 
 
-Create patch file or pull request for github
+Create patch file or pull request for GitHub
 ----------------------------------------------
 
 Github variant
@@ -306,7 +338,7 @@ Github variant
 
 Be sure that you are in your own branch, and run::
 
-    git push github 1234_sequences
+    $ git push github 1234_sequences
 
 Then navigate to your repository with the changes you want someone else to pull:
 
@@ -314,13 +346,15 @@ Then navigate to your repository with the changes you want someone else to pull:
     
 Select branch, and press the `Pull Request` button.
 
-.. image:: http://img.skitch.com/20100831-qfk1c9wyt89pfgfxg61bh1r8rn.png
+    [[img/dev-guide-pull-1-2.png]]
 
 After pressing the `Pull Request` button, you are presented with a preview page where you can enter a title and optional description, see exactly what commits will be included when the pull request is sent, and also see who the pull request will be sent to:
 
-.. image:: http://img.skitch.com/20100831-qit9sjhuqk42t4ww91ifm5tm81.png
+    [[img/dev-guide-pull-2.png]]
 
 If you’re sending from a topic branch, the title is pre-filled based on the name of the branch. Markdown is supported in the description, so you can embed images or use preformatted text blocks.
+
+    [[img/dev-guide-pull-3.png]]
 
 You can switch to the `Commits` tab to ensure that the correct set of changes is being sent. And review the diff of all changes by switching to the `Files Changed`.
 
@@ -335,9 +369,9 @@ See also `Updating your pull request`_
 Quick patch variant
 ~~~~~~~~~~~~~~~~~~~~
 
-If you do not use github, then after code modification, testing and commit operation just create patch-file::
+If you do not use GitHub, then after code modification, testing and commit operation just create patch-file::
 
-    git format-patch master --stdout > 1234_sequences_base_implementation.patch
+    $ git format-patch master --stdout > 1234_sequences_base_implementation.patch
 
 And send us it.  Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
 
@@ -347,29 +381,40 @@ Updating your pull request
 
 If after a time you need to make changes in pull request then the best way is to again add new commit in you local repository and simply repeat push command::
 
-    git commit -m "1234: some additional corrections"
-    git push github 1234_sequences
+    $ git commit -m "1234: some additional corrections"
+    $ git push github 1234_sequences
 
 Note that if you do any rebasing or in any way edit your commit history, you will have to add the `-f` option to push for it to work::
 
-    git push -f github
+    $ git push -f github
 
 Synchronization with master `sympy/sympy`.
 -------------------------------------------
 
-When clone a repo, it has a default remote called origin that points to your fork on GitHub, not the original 
-repo it was forked from. To keep track of the original repo, you need to add another remote named upstream::
+When clone a repo, it has a default remote called `origin` that points to the `sympy/sympy` repository.
+And your fork remote named as `github`. You can observe the remotes names:
 
-Assigns the original repo to a remote called "upstream"::
+    $ git remote -v
+    github  git@github.com:mynick/sympy.git (fetch)
+    github  git@github.com:mynick/sympy.git (push)
+    origin  git://github.com/sympy/sympy.git (fetch)
+    origin  git://github.com/sympy/sympy.git (push)
 
-    git pull
+To keep track of the original repo, you need download changes::
+
+    $ git checkout master
+    $ git fetch
+    $ git merge 1234_sequences
 
 
-This page based upon present SymPy pages [2-6], github help [8-9] and inspired by Sage guide [10]:
+Or you can do it at a time in one command::
 
-----------
+    $ git pull
+
 
 .. .. rubric:: Footnotes
+
+This page based upon present SymPy pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
 
 .. [1] http://lkml.org/lkml/2000/8/25/132
 
@@ -382,6 +427,9 @@ This page based upon present SymPy pages [2-6], github help [8-9] and inspired b
 .. [8] http://help.github.com/pull-requests/
 .. [9] http://help.github.com/fork-a-repo/
 .. [10] http://sagemath.org/doc/developer/
+.. [11] http://help.github.com/linux-set-up-git/
+.. [12] http://help.github.com/troubleshooting-ssh/
+
 
 
 
