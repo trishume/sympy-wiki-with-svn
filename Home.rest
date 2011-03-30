@@ -74,7 +74,6 @@ Development
 * [[buildbot]] -- SymPy buildbot
 * [[Windows development using git]] -- SymPy on Windows
 * [[Debugging]] -- useful when debugging more complex parts of SymPy
-* [[Pushing Patches]] -- how to push patches into the official sympy repository
 
 
 Moving from google wiki
