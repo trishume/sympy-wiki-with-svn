@@ -86,8 +86,6 @@ TODO
 
 [Bug fix for evaluating J2 on a Jz ket](https://github.com/sympy/sympy/pull/155) addressing a bug I found in evaluating the J2 operator on a Jz eigenket.
 
-[Fixing the Matrix.is_upper,.is_lower and .is_upper functions](https://github.com/sympy/sympy/pull/157) addressing [Bug #2220](http://code.google.com/p/sympy/issues/detail?id=2220)
-
 **Closed pull requests**
 
 [Fix Rotation.d function](https://github.com/sympy/sympy/pull/153) addressing a bug I found in evaluating elements of the Rotation operator
@@ -95,6 +93,8 @@ TODO
 [Change apply_operators to qapply](https://github.com/sympy/sympy/pull/152) addressing [Bug #2223](http://code.google.com/p/sympy/issues/detail?id=2223)
 
 [Fixing the printing of the CNOT gate](https://github.com/sympy/sympy/pull/167) addressing [Bug #2188](http://code.google.com/p/sympy/issues/detail?id=2188)
+
+[Fixing the Matrix.is_upper,.is_lower and .is_upper functions](https://github.com/sympy/sympy/pull/157) addressing [Bug #2220](http://code.google.com/p/sympy/issues/detail?id=2220)
 
 ## Bio
 
