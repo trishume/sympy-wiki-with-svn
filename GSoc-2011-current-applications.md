@@ -13,7 +13,7 @@ Project Proposals:
 * [[GSoC 2011 Application Oleksandr Gituliar]]
 * [GSoC 2011 Application Saptarshi Mandal: Combinatorics package](GSoC-2011-Application-Saptarshi-Mandal)
 * [GSoC 2011 Application Sean Vig: Symbolic CG coefficients](GSoC 2011 Application Sean Vig)
-* [[GSoC 2011 Application Shai Wyborski: complex integration, set theoretic entities]]
+* [[GSoC 2011 Application Shai Wyborski: complex arithmetics, analysis and integration]]
 * [[GSoC 2011 Application Tom Bachmann: Definite Integration]]
 * [[GSoC 2011 Application Tomas Bambas: Improve the plotting module]]
 * [GSoC 2011 Application Vladimir Lagunov: Expression simplification](GSoC 2011 Application Vladimir Lagunov: Expression simplification)
