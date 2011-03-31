@@ -16,9 +16,9 @@ Phone: Will give to mentor if asked
 
 My Soc proposal is to implement some algorithms of Combinatorica in SymPy.
 
-The algorithms provided in combinatorica have wide applications in fields such as information theory, theoretical computer science, cryptography and networks. Mathematica has arguably, the best implementation of a suite of combinatorial tools [1]. Another competing python CAS, Sage maintains a page indicating what aspects of Combinatorica it has implemented [SageRef]. Currently most of the algorithms presented in these packages are unimplemented in Sympy. The primary issue is the vast size of the implemented methods, many of which rely on non-trivial algorithms, which necessitates prudence in the choice of the techniques one wishes to implement.
+The algorithms provided in combinatorica have wide applications in fields such as information theory, theoretical computer science, cryptography and networks. Mathematica has arguably, the best implementation of a suite of combinatorial tools [0]. Sage maintains a page indicating what aspects of Combinatorica it has implemented [1]. Currently most of the algorithms presented in these packages are unimplemented in Sympy. The primary issue is the vast size of the implemented methods, many of which rely on non-trivial algorithms, which necessitates prudence in the choice of the techniques one wishes to implement.
 
-I will be developing against the list of algorithms published in [1]. There, the algorithms are divided into 5 categories, a)Subsets and Permutations, 
+I will be developing against the list of algorithms published in [0]. There, the algorithms are divided into 5 categories, a)Subsets and Permutations, 
 b)Partitions and Compositions, 
 c)Graph Construction and Representations, 
 d)Graph Properties and
