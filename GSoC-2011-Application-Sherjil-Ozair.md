@@ -1,4 +1,7 @@
- 
+Title : Symbolic Linear Algebra
+
+Abstract 
+SymPy is an open-source Python library for symbolic mathematics. Its current Linear Algebra module is criticized as being slow, and also does not have an efficient sparse matrix implementation. My proposal is to write an efficient sparse matrix implementation and to re-write the current Matrix class to add support for multi-precision ints using GMPY.
 
 Name and Contact Info
 
