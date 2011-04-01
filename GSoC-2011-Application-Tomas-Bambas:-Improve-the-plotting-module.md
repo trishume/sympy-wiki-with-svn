@@ -29,6 +29,7 @@ This is just the great school for making software developers. See [[http://www.f
    * C/C++: also good knowledges (language core, unix networking, OpenGL)
    * Java: good
    * PHP, Perl, JavaScript, Prolog, Lisp: basics
+   * Platform: My working platform is Linux (openSUSE) and Windows Vista.
 
 ### Past Projects
 
