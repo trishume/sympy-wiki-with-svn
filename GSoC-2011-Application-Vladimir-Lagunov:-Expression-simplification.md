@@ -54,4 +54,4 @@ TODO: This shedule is fuzzy, review it later.
     1. Checking for each expression which sub-simplify functions are giving good results
     2. Tests
 5. Improve other simplifiers if need be.
-6. If i'll do previous tasks earlier then expected: write function expandtrig(), that makes arguments of trigonometrical functions in specified expression as simple as possible.
+6. If i'll do previous tasks earlier than expected: write function expandtrig(), that makes arguments of trigonometrical functions in specified expression as simple as possible (for example expanding \(sin(2x)\)).
