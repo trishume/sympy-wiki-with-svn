@@ -50,7 +50,7 @@ Plotting is an important component of every math software. SymPy has a basic plo
 ### Project Goals
 
    * The next task is a transformation the old pyglet plotting code to the new pyglet backend. The new module will work with the last pyglet release. The module should support all Plot possibilities and user options.
-   * Final and for me the most important goal is the implementation of matplotlib [7] backend module. matplotlib is the best plotting library for python. I would like to use all its possibilities and also reflect them in the Plot interface design. Like the pyglet backend module, the matplotlib backend will be dependent on external libraries (matplotlib and its spagetty dependancy list), which user has to install for using this module.
+   * Final and for me the most important goal is the implementation of matplotlib [7] backend module. matplotlib is the best plotting library for python. I would like to use all its possibilities and also reflect them in the Plot interface design. Like the pyglet backend module, the matplotlib backend will be dependent on external libraries (matplotlib and its dependency list), which user has to install for using this module.
 
 ### My Motivation
 
