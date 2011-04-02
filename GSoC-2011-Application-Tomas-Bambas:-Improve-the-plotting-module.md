@@ -40,7 +40,7 @@ Project Proposal
 
 ### Overview
 
-Plotting is an important component of every math software. SymPy has a basic plotting support by pyglet [4] toolkit, which must be actually shipped with SymPy (some older version comatible with SymPy plotting module). This is not a perspective situation. I would like to implement a new general Plot() interface which should support multiple backends. The goal is connect a new Plot() interface with matplotlib and pyglet library, also implement an independent Google chart API [5] backend (exactly URL generator) and get rid of a shipping an old pyglet library with new SymPy releases.
+Plotting is an important component of every math software. SymPy has a basic plotting support by pyglet [4] toolkit, which must be actually shipped with SymPy (some older version comatible with SymPy plotting module). This is not a perspective situation. I would like to implement a new general Plot() interface which should support multiple backends. The goal is connect a new Plot() interface with matplotlib and pyglet library, also implement an independent Google chart API [5] backend (exactly URL generator) and finally get rid of a shipping an old pyglet library with new SymPy releases.
 
 ### Midterm Goals
 
