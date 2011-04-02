@@ -25,7 +25,7 @@ This is just the great school for making software developers. See [1].
 
 ### Coding Skills
 
-   * Python (both 2.x and 3.x): my primary language, experiences with PIL, PyQt and PyGame toolkits
+   * Python (both 2.x and 3.x): my primary language, experiences with PIL [2], PyQt and PyGame [3] toolkits
    * C/C++: also good knowledges (language core, unix networking, OpenGL)
    * Java: good
    * PHP, Perl, JavaScript, Prolog, Lisp: basics
@@ -40,12 +40,12 @@ Project Proposal
 
 ### Overview
 
-Plotting is an important component of every math software. SymPy has a basic plotting support by pyglet toolkit, which must be actually shipped with SymPy (some older version comatible with SymPy plotting module). This is not a perspective situation. I would like to implement a new general Plot() interface which should support multiple backends. The goal is connect a new Plot() interface with matplotlib and pyglet library, also implement an independent Google chart API backend (exactly URL generator) and get rid of a shipping an old pyglet library with new SymPy releases.
+Plotting is an important component of every math software. SymPy has a basic plotting support by pyglet [4] toolkit, which must be actually shipped with SymPy (some older version comatible with SymPy plotting module). This is not a perspective situation. I would like to implement a new general Plot() interface which should support multiple backends. The goal is connect a new Plot() interface with matplotlib and pyglet library, also implement an independent Google chart API [5] backend (exactly URL generator) and get rid of a shipping an old pyglet library with new SymPy releases.
 
 ### Midterm Goals
 
-   * First I should design and implement a new Plot interface. My vision is a simple user interface with many chart options. I can consult a plot user interface with Maple, great commercial CAS software. Plot object should accept every expression/function (one variable and surfaces) and also every geometric object (like Point). The back side of the interface should be easy connected to new backends. Every backend should have a way how the user/interface can find out which options of charts are supported and which objects can be plotted. Another thing is letting know if the backend is ready for use (for example matplotlib backend can't be used if matplotlib library isn't installed).
-   * The second midterm goal is an implementation of Google Chart API backend, which should be URL generator of Google charts. Of course backend could download graph image and save it, but it makes itself dependent on internet connection. Anyway this will be consulted with the community. Google chart API module will not use any external library.
+   * First I should design and implement a new Plot interface. My vision is a simple user interface with many chart options. I can consult a plot user interface with Maple [6], great commercial CAS software. Plot object should accept every expression/function (one variable and surfaces) and also every geometric object (like Point). The back side of the interface should be easy connected to new backends. Every backend should have a way how the user/interface can find out which options of charts are supported and which objects can be plotted. Another thing is letting know if the backend is ready for use (for example matplotlib backend can't be used if matplotlib library isn't installed).
+   * The second midterm goal is an implementation of Google Chart API [5] backend, which should be URL generator of Google charts. Of course backend could download graph image and save it, but it makes itself dependent on internet connection. Anyway this will be consulted with the community. Google chart API module will not use any external library.
 
 ### Project Goals
 
@@ -69,4 +69,16 @@ This shouldn't be an one-off job. I would like to stay in the SymPy community an
 References
 ----------
 
-[1] [[http://www.fit.vutbr.cz/FIT/.en]]
+[1] The Faculty of Information Technology at Brno University of Technology [[http://www.fit.vutbr.cz/FIT/.en]]
+
+[2] PIL [[http://www.pythonware.com/products/pil]]
+
+[3] PyGame [[http://www.pygame.org]]
+
+[4] pyglet [[http://www.pyglet.org]]
+
+[5] Google Chart API [[http://code.google.com/apis/chart/]]
+
+[6] Maple [[http://www.maplesoft.com/products/maple/]]
+
+[7] matplotlib [[http://matplotlib.sourceforge.net/]]
