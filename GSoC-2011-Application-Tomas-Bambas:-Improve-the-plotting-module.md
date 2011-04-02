@@ -65,3 +65,8 @@ Future
 ------
 
 This shouldn't be an one-off job. I would like to stay in the SymPy community and solve issues regarding a new plotting module. There is also another one backend I would like to implement. Everyone who is involved in the charts world knows Gnuplot software. In my opinion this is the best software for making graphs. I would like to implement an independent backend for generating gnuplot code. I mean this backend shouldn't be dependent on any external library like pygnuplot. It will be just a text/code generator (like Google chart API backend). This will be a backend for sophisticated users, because they can edit gnuplot code in detail and then use it in Gnuplot software.
+
+References
+----------
+
+---references---
