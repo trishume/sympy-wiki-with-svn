@@ -54,7 +54,7 @@ Plotting is an important component of every math software. SymPy has a basic plo
 
 ### My Motivation
 
-This is my only GSoC application. There are more mentoring organisations which I would like to help, but SymPy is the one for what I can use my Python skills. "Improve the plotting module" is the item from Ideas list. I choose that one, because I have experiences with image manipulating scripts and a plotting too and I really think SymPy needs this work. I have no summer plans and I need a job. Of course GSoC job would be a perfect item in my CV.
+This is my only GSoC application. There are more mentoring organisations which I would like to help, but SymPy is the one for what I can use my Python skills. "Improve the plotting module" is the item from Ideas list. I choose that one because I have experiences with image manipulating scripts and a plotting too and I really think SymPy needs this work. I have no summer plans and I need a job. Of course GSoC job would be a perfect item in my CV.
 
 Schedule
 --------
