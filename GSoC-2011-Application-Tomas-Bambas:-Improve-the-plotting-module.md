@@ -59,7 +59,13 @@ This is my only GSoC application. There are more mentoring organisations which I
 Schedule
 --------
 
----summer plan in detail---
+Week 1-3: Design and coding the new Plot interface (the new plotting module)
+
+Week 4: Implementation of Google chart API backend module
+
+Week 5-6: Implementation of pyglet backend module
+
+Week 7-8: Implementation of matplotlib backend module
 
 Future
 ------
