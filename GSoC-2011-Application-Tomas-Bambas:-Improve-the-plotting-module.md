@@ -21,7 +21,7 @@ Biographical Information
 
 I'm studying 3rd year at The Faculty of Information Technology at Brno University of Technology in the Czech Republic. My faculty focuses on software design, programming and team projects (less theory, more practice). I have passed through many programming courses like Java, C/C++, AI Basics, Information Systems, OOP, Scripting Languages, GUI, Computer Graphics and many more. My bachelor work is called "Taroky network multiplayer game". It's the computer implementation of classic European card game (written in Python).
 
-This is just the great school for making software developers. See [[http://www.fit.vutbr.cz/FIT/.en]].
+This is just the great school for making software developers. See [1].
 
 ### Coding Skills
 
@@ -69,4 +69,4 @@ This shouldn't be an one-off job. I would like to stay in the SymPy community an
 References
 ----------
 
----references---
+[1] [[http://www.fit.vutbr.cz/FIT/.en]]
