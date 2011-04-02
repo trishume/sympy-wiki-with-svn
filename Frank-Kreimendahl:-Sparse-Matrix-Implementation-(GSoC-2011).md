@@ -1,8 +1,8 @@
 # Bio
 
-Name: Frank Kreimendahl
-University: 1st year PhD candidate at University of New Hampshire
-Contact: ylfchild@gmail.com
+Name: Frank Kreimendahl  
+University: 1st year PhD candidate at University of New Hampshire  
+Contact: ylfchild@gmail.com  
 Short Bio: Around the time that I completed my undergraduate studies in mathematics, I realized that the types of problem solving that I enjoyed in math are more prevalent in computer science. I recently returned to school to pursue a PhD in computer science and I have found myself more engaged in the material than I had been before.
 
 
@@ -24,15 +24,13 @@ I have an undergraduate degree in mathematics, including two semesters of linear
 I plan on devoting at least 40 hours a week over the summer to this project. For projects that I am intellectually invested in, this often means that I spend my free time also researching and trying to improve my work.
 
 Weeks 1 and 2:
-Rewrite matrices to use polys ground types and abstract the matrix interface to lay groundwork for sparse implementations.
-This includes abstracting matrix functions so that users don't have to worry about the matrix storage type. Implement a block constructor(bug #342).
+Rewrite matrices to use polys ground types and abstract the matrix interface to lay groundwork for sparse implementations. This includes abstracting matrix functions so that users don't have to worry about the matrix storage type. Implement a block constructor(bug #342).
 
 Week 3:
 Implement a sparse matrix data structure (compressed sparse column, to start with) and provide functions for users to convert between matrix types. Users would call m.toCSC() or m.toDense() and the appropriate conversion will be chosen. At this point, all that a sparse matrix would do is reduce storage size. All matrices, dense or sparse, would call the functions for dense matrices.
 
 Week 4 and 5:
-Begin writing more efficient algorithms for sparse matrices. Start with simple operations, like addition, multiplication, transposition, and conjugate transposition. Set up a testbed to compare sparse algorithm runtimes with dense versions. 
-Choosing and writing these algorithms will take some trial and error, as there is very little literature on approaches for specifically symbolic sparse matrices.
+Begin writing more efficient algorithms for sparse matrices. Start with simple operations, like addition, multiplication, transposition, and conjugate transposition. Set up a testbed to compare sparse algorithm runtimes with dense versions. Choosing and writing these algorithms will take some trial and error, as there is very little literature on approaches for specifically symbolic sparse matrices.
 Also, note that once the transposition of a CSC matrix is implemented, we have a compressed sparse row(CSR) implementation. 
 
 Week 6:
@@ -50,5 +48,5 @@ Week 10-13: Implement QR factorization, research and implement sparse matrix alg
 
 
 ## Reference books:
-Direct Methods for Sparse Matrices: Duff, Erisman and Reid
+Direct Methods for Sparse Matrices: Duff, Erisman and Reid  
 Direct Methods for Sparse Linear Systems: Davis
