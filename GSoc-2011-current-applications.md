@@ -14,7 +14,7 @@ Project Proposals:
 * [GSoC 2011 Application Saptarshi Mandal: Combinatorics package](GSoC-2011-Application-Saptarshi-Mandal)
 * [GSoC 2011 Application Sean Vig: Symbolic CG coefficients](GSoC 2011 Application Sean Vig)
 * [[GSoC 2011 Application Shai Wyborski: complex arithmetics, analysis and integration]]
-* L<GSoC 2011 Application Sherjil Ozair: Symbolic Linear Algebra|http://www.google-melange.com/gsoc/proposal/review/google/gsoc2011/sherjilozair/1>
+* [GSoC 2011 Application Sherjil Ozair: Symbolic Linear Algebra](http://www.google-melange.com/gsoc/proposal/review/google/gsoc2011/sherjilozair/1)
 * [[GSoC 2011 Application Tom Bachmann: Definite Integration]]
 * [[GSoC 2011 Application Tomas Bambas: Improve the plotting module]]
 * [GSoC 2011 Application Vladimir Lagunov: Expression simplification](GSoC 2011 Application Vladimir Lagunov: Expression simplification)
