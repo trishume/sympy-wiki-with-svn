@@ -41,4 +41,17 @@ Probably when i'll start improving simplification, i'll need to work on rewritin
 
 ## Shedule
 
-TODO: i need to read more SymPy code than i've read before drafting schedule.
+TODO: This shedule is fuzzy, review it later.
+
+1. Improve ratsimp() in two weeks (probably i can do it quicker)
+    1. Proper fraction reducing
+    2. More tests
+2. Improve trigsimp() in two weeks
+    1. Simplifying one function with one argument to other function with other argument (for example \(sin(2x) = 2 sin(x) cos(x) \))
+    2. Tests
+3. Extend rewrite patterns of functions in one week
+4. Improve simplify() in two weeks
+    1. Checking for each expression which sub-simplify functions are giving good results
+    2. Tests
+5. Improve other simplifiers if need be.
+6. If i'll do previous tasks earlier then expected: write function expandtrig(), that makes arguments of trigonometrical functions in specified expression as simple as possible.
