@@ -67,7 +67,7 @@ Week 5-6: Implementation of pyglet backend module
 
 Week 7-8: Implementation of matplotlib backend module
 
-Anyway I would like to start coding/design before first coding week.
+Anyway I would like to start coding/design before the first coding week.
 
 Future
 ------
