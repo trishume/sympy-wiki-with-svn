@@ -45,7 +45,7 @@ Plotting is an important component of every math software. SymPy has a basic plo
 ### Midterm Goals
 
    * First I should design and implement a new Plot interface. My vision is a simple user interface with many chart options. I can consult a plot user interface with Maple [6], great commercial CAS software. Plot object should accept every expression/function (one variable and surfaces) and also every geometric object (like Point). The back side of the interface should be easy connected to new backends. Every backend should have a way how the user/interface can find out which options of charts are supported and which objects can be plotted. Another thing is letting know if the backend is ready for use (for example matplotlib backend can't be used if matplotlib library isn't installed).
-   * The second midterm goal is an implementation of Google Chart API [5] backend, which should be URL generator of Google charts. Of course backend could download graph image and save it, but it makes itself dependent on internet connection. Anyway this will be consulted with the community. Google chart API module will not use any external library.
+   * The second midterm goal is an implementation of Google Chart API [5] backend module, which should be URL generator of Google charts. Of course backend could download graph image and save it, but it makes itself dependent on internet connection. Anyway this will be consulted with the community. Google chart API module will not use any external library.
 
 ### Project Goals
 
