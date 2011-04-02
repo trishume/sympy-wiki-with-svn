@@ -1,4 +1,4 @@
-.Bio
+# .Bio
 
 Name: Frank Kreimendahl
 University: 1st year PhD candidate at University of New Hampshire
@@ -6,12 +6,12 @@ Contact: ylfchild@gmail.com
 Short Bio: Around the time that I completed my undergraduate studies in mathematics, I realized that the types of problem solving that I enjoyed in math are more prevalent in computer science. I recently returned to school to pursue a PhD in computer science and I have found myself more engaged in the material than I had been before.
 
 
-.Motivation
+# .Motivation
 
 SymPy does not currently have a way to handle large matrices, and its matrix implementation and interface are not separated. The first goal of my project is to separate the interface from the back end, which will allow simpler updates in the future. The next goal is to implement sparse storage structures, and accompanying functions that will be available to users. The motivation for this goal is to give users an interface that specifies the storage type of a matrix. The user can then call functions of the matrix without worrying about the storage type. This second goal will require algorithms that apply to sparse numerical matrices, but may not work as efficiently with symbolic ones. I will write tests to compare the execution times of different algorithms (as well as verifying that storage type conversions are running as fast as they should). The sparse storage structures will be designed with fast access in mind, rather than fast insertion.
 
 
-.Background
+# .Background
 
 Since my first data structures course, I have been fascinated with data structures that have been optimized for specific applications, and their accompanying algorithms. For the course's final project, I wrote a Huffman encoder/decoder, with an emphasis on minimizing both the runtime and output file size. As an independent project for on object oriented course, I wrote an STL-style container that efficiently stored key-value pairs where either value of the pair could act as the key. Last fall, I heard a short lecture from one of the members of Matlab's sparse matrix team, and I was immediately fascinated by the problems that were presented. I looked into the clever ways that sparse matrices were stored and accessed, as well as some of the efficient algorithms that Matlab uses on sparse matrices.
 
@@ -19,7 +19,7 @@ Since my first data structures course, I have been fascinated with data structur
 I have an undergraduate degree in mathematics, including two semesters of linear algebra and two semesters of differential equations. I have taken a data structures course and two systems programming courses, which have given me insight into implementing data structures for both space and time efficiency. For this project, I have identified two helpful algorithms books.
 
 
-.Schedule
+# .Schedule
 
 I plan on devoting at least 40 hours a week over the summer to this project. For projects that I am intellectually invested in, this often means that I spend my free time also researching and trying to improve my work.
 
@@ -49,6 +49,6 @@ Implement pivoting LU decomposition for solutions to more general linear systems
 Week 10-13: Implement QR factorization, research and implement sparse matrix algorithms for eigenvalue and eigenvector solutions. Implement any remaining simple functions and write documentation for matrix interface.
 
 
-Reference books:
+## Reference books:
 Direct Methods for Sparse Matrices: Duff, Erisman and Reid
 Direct Methods for Sparse Linear Systems: Davis
