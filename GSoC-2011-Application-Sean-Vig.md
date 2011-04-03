@@ -82,8 +82,6 @@ TODO
 
 ## Current code patches
 
-**Open pull requests**
-
 **Closed pull requests**
 
 [Fix Rotation.d function](https://github.com/sympy/sympy/pull/153) addressing a bug I found in evaluating elements of the Rotation operator
@@ -95,6 +93,14 @@ TODO
 [Fixing the printing of the CNOT gate](https://github.com/sympy/sympy/pull/167) addressing [Bug #2188](http://code.google.com/p/sympy/issues/detail?id=2188)
 
 [Fixing the Matrix.is_upper,.is_lower and .is_upper functions](https://github.com/sympy/sympy/pull/157) addressing [Bug #2220](http://code.google.com/p/sympy/issues/detail?id=2220)
+
+**Open pull requests**
+
+**Work in progress**
+
+[spin_improvements branch](https://github.com/flacjacket/sympy/tree/spin_improvements) Work done that allows for converting between the Jx, Jy and Jz bases, which are the currently implemented eigenstates. Also implements innerproducts between states in different bases and writing states as vectors in different bases.
+
+[spin_tests branch](https://github.com/flacjacket/sympy/tree/spin_tests) Implementing additional tests that the elements currently implemented in the spin module should be able to pass.
 
 ## Bio
 
