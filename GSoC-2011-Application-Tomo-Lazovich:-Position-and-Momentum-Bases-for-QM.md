@@ -7,37 +7,21 @@ GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM
 * Name: Tomo Lazovich
 * University / current enrollment: Harvard University (graduating May 2011)
 * Bio/background: I am a physics major with a CS minor at Harvard and am about to graduate this May. My main research has been in particle physics. I spent one summer working at Fermilab on the CDF experiment and two summers on the ATLAS experiment at CERN. My experience is in writing software for data analysis at these experiments. As a physics major, I also have much experience with quantum mechanics, having taken all of the undergraduate courses on QM offered as well as courses with applications of QM, such as solid state physics. I also have experience in C++, C, Python, Java, and many web programming technologies. I believe that I am qualified to write the necessary code for sympy and to understand the quantum mechanics of the systems that will be represented. 
+* Email: lazovich [at] NOSPAM gmail [dot] com
     
     
-Your Coding Skills
+## My coding platform
 ------------------
+My current setup is an Ubuntu system. I have been programming in Python for two years now. I am familiar with both SVN and git so I will be able to work in the open source setting. 
 
-In your project proposal let us know
-
-    * What platform do you use to code?
-
-Set yourself up
+Getting to know the community/codebase
 ---------------
 
-Do the following:
+I forked the git repository and began to tackle this issue: http://code.google.com/p/sympy/issues/detail?id=2186&q=label%3Aquantum
 
-* Set up your platform to develop with sympy (install git,
-  clone https://github.com/sympy/sympy.git, execute tests)
-* Create an account at GitHub and fork SymPy (https://github.com/sympy/sympy)
-* Find something in sympy that doesn't work or needs improvement and send us a
-  git patch fixing it (if you need inspiration, feel free to fix any issue from
-  our easy to fix issues list
-  http://code.google.com/p/sympy/issues/list?q=label:EasyToFix
-* Report success on the sympy list
-* Publish your patch for peer review by creating a pull request on GitHub.  You
-  must submit a patch that is successfully reviewed and pushed in to be
-  accepted. We do not consider applications without patches. This shows us that
-  you know Python and that you are able to interact with the community.
-* If you need help with anything, ask on the sympy list
-  (http://groups.google.com/group/sympy) or our IRC channel (#sympy on
-  freenode) (don't be afraid if you don't know git for example, we'll teach you
-  everything that is needed, the only required thing from you is enthusiasm and
-  willingness to learn new things)
+to become familiar with the code base, particularly in sympy.physics.quantum. After introducing myself to the list and privately to Brian Granger, the physics project mentor, as well as asking some questions about how to handle operators that are both Hermitian and Unitary. After changing HermitianOperator to handle the special case where the operator is also Hermitian, I submitted my first pull request here: https://github.com/sympy/sympy/pull/160
+
+That request is still under review!
 
 Your Project
 ------------
@@ -48,6 +32,7 @@ will help you edit it (though understand that we will not help you write
 it).
 
 Answer the following questions in your proposal:
+
 
 * What do you want to achieve?
 * If you have chosen an idea from our list, why did you choose this specific
