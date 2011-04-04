@@ -21,34 +21,9 @@ to become familiar with the code base, particularly in sympy.physics.quantum. Af
 
 That request is still under review!
 
-Your Project
+## My Project
 ------------
 
-Start a wiki page to work on your proposal at
-https://github.com/sympy/sympy/wiki/. If add your proposal there, we
-will help you edit it (though understand that we will not help you write
-it).
+### Goal
 
-Answer the following questions in your proposal:
-
-
-* What do you want to achieve?
-* If you have chosen an idea from our list, why did you choose this specific
-  idea?
-* If you are proposing a project of your own, what is unique about it?
-* What qualifications do you have to implement your idea.  For example, if you
-  are implementing solvers for partial differential equations, what courses
-  have you taken or books have you read on PDEs?
-* What makes you suited to do the project?
-* How much time do you plan to invest in the project before, during, and after
-  the Summer of Code? (we expect full time 40h/week during GSoC, but better
-  make this explicit)
-* Please provide a schedule of how this time will be spent on subtasks
-  of the project over the period of the summer. While this is only
-  preliminary, we will use it to help monitor your progress throughout
-  the program.  Also understand that during the project you will issue
-  weekly progress reports against that plan on your blog.
-
-You do not need to format your application as a question/answer format
-for the above questions, but we expect to see all of the above questions
-answered in your application somewhere.
+Currently in sympy, there is support for discrete Hilbert spaces, which are quite useful for spin calculations or symbolic quantum computing. However, there is no support for continuous Hilbert spaces
