@@ -22,8 +22,7 @@ to become familiar with the code base, particularly in sympy.physics.quantum. Af
 That request is still under review!
 
 ## My Project
-------------
 
 ### Goal
 
-Currently in sympy, there is support for discrete Hilbert spaces, which are quite useful for spin calculations or symbolic quantum computing. However, there is no support for continuous Hilbert spaces
+Currently in sympy, there is support for discrete Hilbert spaces, which are quite useful for spin calculations or symbolic quantum computing. However, there is no support for continuous Hilbert spaces. 
