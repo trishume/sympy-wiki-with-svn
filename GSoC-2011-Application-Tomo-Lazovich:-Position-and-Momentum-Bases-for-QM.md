@@ -32,7 +32,8 @@ Currently in sympy, there is support for discrete Hilbert spaces, which are quit
 By thinking about how to represent operators that depend on continuous variables, we can open up a whole new area of functionality for the sympy.physics.quantum module. Beyond implementing the standard textbook quantum mechanical systems, support for continuous bases is a big step towards being able to solve the Schrodinger equation symbolically in these coordinate systems. It represents the completion of a big missing piece of the quantum module. The representation of operators as matrices in discrete Hilbert spaces works quite well, and the implementation of the continuous spaces will greatly increase the number of quantum mechanical calculations possible with SymPy.
 
 ### Project deliverables
-
 * Modified represent.py: some operators (for example, momentum), when represented in another basis, actually take on a representation as a derivative of that basis variable (i.e. p ~ d/dx). Represent currently has no way of dealing with this
-
-* 
+* Modified HilbertSpace: need to add functionality for representing an infinite number of dimensions
+* Implementations of position and momentum operators in Cartesian, cylindrical, and spherical coordinates in 1D, 2D, and 3D. 
+* Example systems: implement particle in a box, simple harmonic oscillator, hydrogen atom, etc. in varying numbers of dimensions
+* Symbolic Schrodinger equation solver (time permitting): if everything goes as planned, it might be possible to incorporate a PDE solver for solving the Schrodinger equation with symbolic Hamiltonians in these bases.
