@@ -29,4 +29,4 @@ Currently in sympy, there is support for discrete Hilbert spaces, which are quit
 
 ### Motivation
 
-By thinking about how to represent operators that depend on continuous variables, we can open up a whole new area of functionality for the sympy.physics.quantum module. Not only 
+By thinking about how to represent operators that depend on continuous variables, we can open up a whole new area of functionality for the sympy.physics.quantum module. Beyod implementing the standard textbook quantum mechanical systems, support for continuous bases is a big step towards being able to solve the Schrodinger equation symbolically in these coordinate systems. It represents the completion of a big missing piece of the quantum module. The representation of operators as matrices in discrete Hilbert spaces works quite well, and the implementation of the continuous spaces will greatly increase the number of quantum mechanical calculations possible with SymPy.
