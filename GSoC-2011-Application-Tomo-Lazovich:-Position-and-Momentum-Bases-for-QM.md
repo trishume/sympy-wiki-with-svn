@@ -1,7 +1,7 @@
 GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM
 ==============================
 
-My information
+## My information
 ---
 
 * Name: Tomo Lazovich
