@@ -2,7 +2,6 @@ GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM
 ==============================
 
 ## My information
----
 
 * Name: Tomo Lazovich
 * University / current enrollment: Harvard University (graduating May 2011)
@@ -11,11 +10,10 @@ GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM
     
     
 ## My coding platform
-------------------
+
 My current setup is an Ubuntu system. I have been programming in Python for two years now. I am familiar with both SVN and git so I will be able to work in the open source setting. 
 
-Getting to know the community/codebase
----------------
+## Getting to know the community/codebase
 
 I forked the git repository and began to tackle this issue: http://code.google.com/p/sympy/issues/detail?id=2186&q=label%3Aquantum
 
