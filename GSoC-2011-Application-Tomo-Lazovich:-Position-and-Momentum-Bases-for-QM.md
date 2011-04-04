@@ -15,9 +15,9 @@ My current setup is an Ubuntu system. I have been programming in Python for two 
 
 ## Getting to know the community/codebase
 
-I forked the git repository and began to tackle this issue: http://code.google.com/p/sympy/issues/detail?id=2186&q=label%3Aquantum
+I forked the git repository and began to tackle this issue: [[http://code.google.com/p/sympy/issues/detail?id=2186&q=label%3Aquantum]]
 
-to become familiar with the code base, particularly in sympy.physics.quantum. After introducing myself to the list and privately to Brian Granger, the physics project mentor, as well as asking some questions about how to handle operators that are both Hermitian and Unitary. After changing HermitianOperator to handle the special case where the operator is also Hermitian, I submitted my first pull request here: https://github.com/sympy/sympy/pull/160
+to become familiar with the code base, particularly in sympy.physics.quantum. After introducing myself to the list and privately to Brian Granger, the physics project mentor, as well as asking some questions about how to handle operators that are both Hermitian and Unitary. After changing HermitianOperator to handle the special case where the operator is also Hermitian, I submitted my first pull request here: [[https://github.com/sympy/sympy/pull/160]]
 
 That request is still under review!
 
