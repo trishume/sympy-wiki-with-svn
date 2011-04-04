@@ -27,4 +27,6 @@ That request is still under review!
 
 Currently in sympy, there is support for discrete Hilbert spaces, which are quite useful for spin calculations or symbolic quantum computing. However, there is only very preliminary support for continuous Hilbert spaces. The goal of this project would be to implement position/momentum representations for operators and eigenstates in various coordinate systems, including cartesian, cylindrical, and spherical. After adding support for these operators, we will be able to easily represent many of the "textbook" quantum mechanics systems, including particle in a box, simple harmonic oscillator, hydrogen atom, etc. 
 
+### Motivation
 
+By thinking about how to represent operators that depend on continuous variables, we can open up a whole new area of functionality for the sympy.physics.quantum module. Not only 
