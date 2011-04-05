@@ -44,17 +44,17 @@ I have been developing an integral equation solver for the past few months which
 
 === Beginning of the Program ===
 
-* Week 1 [Permutations]: I will begin work on the permutations feature. Algorithms for generating all permutations have been given in TAOCP. The stock permutations command will also have options for permutations of n things with k cycles as well as permutations of n items with k runs. I will also implement lexicographic ordering of the permutations as well as other other features like generating derangements and involutions. Other features such as depicting the graph of a permutation can be done later when the graph module is ready.
+* Week 1 [Permutations]: I will begin work on the permutations feature. Algorithms for generating all permutations have been given in TAOCP. The stock permutations command will also have options for permutations of n things with k cycles as well as permutations of n items with k runs. I will also implement lexicographic ordering of the permutations as well as other other features like generating derangements and involutions. Other features such as depicting the graph of a permutation can be done later when the graph module is ready. Algorithms for ranking and unranking of permutations have been described in TAOCP which I can implement.
 
 * Week 2 [Subsets]: Again many of these algorithms have been described in TAOCP. Apart from implementing techniques to generate all subsets including simply the generation of k-subsets of an n set I will also implement methods to enumerate subsets using Gray Code and binary representation. Ordering subsets will involve some introspection. For example, if the set is of polynomials, ranking it would involve finding its degree which will depend directly on the polys module.
 
 * Week 3 [Integer partitions]: Implementing integer partitions will also be quite straightforward. Apart from listing all possible partitions I will also implement listing partitions of n whose largest part is k as well as all k-partitions of n. I will also implement Ferrers Diagram, which is a way to visualize a partition. Apart from TAOCP I will also refer to [5]
 
-* Week 4 [Set partitions and generating all trees]: I expect this component to be developed in much the same fashion as the previous ones. Apart from generating all set partitions, k-set partitions and random partitions I can also implement algorithms to generate all trees. Algorithms for ranking and unranking are also covered in TAOCP which I shall implement if time permits.
+* Week 4 [Set partitions and generating all trees]: I expect this component to be developed in much the same fashion as the previous ones. Apart from generating all set partitions, k-set partitions and random partitions I can also implement algorithms to generate all trees. Algorithms for ranking and unranking subsets are also covered in TAOCP which I shall implement if time permits.
 
-* Weeks 5-6 [Permutation groups]: Implementing permutation groups will be a bit tricky as I will need to revise my notes for my Abstract Algebra course. My primary reference for this will be [7]. Most of my time will be taken up in implementing the Schreier-Sims algorithm whose implementation details can be found in [8]. After I am done with this I can write code for generating cyclic groups and dihedral groups. Generating the group of automorphisms of a graph will be implemented later.
+* Weeks 5-6 [Permutation groups]: Implementing permutation groups will be a bit tricky as I will need to revise my notes for my Abstract Algebra course. My primary reference for this will be [7]. Most of my time will be taken up in implementing the Schreier-Sims algorithm whose implementation details can be found in [8]. After I am done with this I can write code for generating cyclic groups and dihedral groups. Generating the group of automorphisms of a graph will be implemented later. Please refer to my strategy for implementing permutation groups below.
 
-* Week 7: Create a demo for showing graphs visually from within Sympy. Allow import and export of graphviz .dot files. Generate SVGs from graphs.
+* Week 7: Create a demo for showing graphs visually from within Sympy. Allow import and export of graphviz .dot files. Generate SVGs from graphs. This has mostly been done although the code does not have tests or doctests. Please refer to my combinatorics branch.
 === Midterms ===
 
 * Weeks 8-9: Work on graph representation as well as supporting some basic functionality such as making a graph, showing it visually, converting to an adjacency matrix/list as well as generating some special graphs such as Harary graphs, complete graphs, caterpillars, hypercubes, etc. I will also research graphviz to see the different algorithmic techniques to visualize graphs. Components of previous modules that would have required the graph module to be done will be completed in this week.
@@ -63,9 +63,24 @@ I have been developing an integral equation solver for the past few months which
 
 * Week 12: Polish the code, fix tests and docstrings.
 
+== Strategy for permutation groups ==
+Our aim is to look at permutations of numbers from 1 to n. This can be generalized later. We can represent a permutation as arrays such as below
+(1 2 3 4 5 6 7)
+(2 3 1 5 6 4 7)
+However for larger sized groups its easier to list cycles
+(1 2 3)(4 5 6)(7)
+The above encompasses both the above permutations. (1 2 3) are cycled within themselves as are (4 5 6). Only 7 remains in one place.
+Now if we have a permutation we want to determine all about the group it generates, how big is it, if a given permutation is a member of it and so on. One very famous example is that of a Rubik's cube. The state of a Rubik's cube can be expressed as an element of a permutation group. By finding out if some permutation can be generated by that group we can determine if the Rubik's cube can achieve the state as described by that permutation.
+
+The first module I will implement is simply the PermutationGroups module which will define the group structure on permutations. It will have functionality allowing it to construct a permutation from a list of cycles, order of a permutation and generators for symmetric groups, cyclic groups and dihedral groups. To do this effectively I will need to
+define a data structure that will allow me to find the order of the group, list its elements without repetition, test for membership and store the elements efficiently. Normally a base and a generating set are quite computationally efficient representations. Algorithms for these tasks have been described in [7].
+After this I will implement the deterministic version of Schreier-Sims algorithm which calculates a base and strong generating set of a (permutation) group. To state more formally:
+Given a group G acting on a finite X, along with a partial base B and partial strong generating set S, show that B is a complete base and S is is a strong generating set or extend B and S so that they are.
+Now normally a group is given in the form  of a generating set. An algorithm to convert this input into a partial base B and a partial strong generating set S has also been given in [7]. With this information we can proceed with the Schreier-Sims algorithm [10].
+
 == Related Work ==
 
-Apart from Combinatorica and Sage, maple has the combinat library. Where Mathematica really shines though is their graph visualization tools. For graph visualization, it seems that graphviz is a good choice. It is a mature library and offers a vast selection of algorithms to display graphs and has several Python bindings.
+Apart from Combinatorica and Sage, maple has the combinat library. Where Mathematica really shines though is their graph visualization tools. For graph visualization, it seems that graphviz is a good choice. It is a mature library and offers a vast selection of algorithms to display graphs and has several Python bindings. GAP is a CAS with support for computational group theoretic algorithms.
 
 == Biographical Information ==
 
@@ -98,3 +113,5 @@ My github account's URL is http://github.com/saptman. The relevant branches are 
 [8] Implementation of 3 types of Schreier-Sims Algorithm, Martin Jaggi, MAS334 Project, QMU London
 
 [9] http://www.graphviz.org/
+
+[10] The Schreier-Sims algorithm for matrix group, Henrik Baarnhielm
