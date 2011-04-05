@@ -71,6 +71,11 @@ The second half of the project will focus on code stability.
 >An alternative to decorators are Cython header files (.pyx). See http://wiki.cython.org/pure. Decorators and header files have both been suggested by SymPy members [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
 
 >SymPy’s core module is being updated so work depended on it is being postponed until the replacement core is available [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F6cf7ece92746bcdc)]. Other parts of SymPy may be good candidates for optimisation (logic code, SAT solver, matrices, polys, physics) [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F6cf7ece92746bcdc), [ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
+
+#### Priority of Modules to Optimise
+
+#### Cythonizing Methods
+
 # About Me
 
 >Name: Ben McDonald
@@ -93,7 +98,13 @@ The second half of the project will focus on code stability.
 
 >I have an interest in the project to optimise the core using Cython because it is a technique that I found useful in my own Master’s project. Cython allowed me to increase the performance of my code while leaving the original Python code unchanged. I added Cython headers (.pyx) to modules to allow the Python code to be converted into C++, adding significant performance, while not changing the Python modules, leaving a portable, pure Python base. This technique would be useful to any software library which requires processor/memory intensive methods.
 
->I am a dedicated programmer. Programming is a useful tool to build the software that interests me. The challenges in solving complex problems is what keeps me interested and I am passionate by the things I can create with computer code.
+>I am a dedicated programmer. Programming is a useful tool to build the software that interests me. The challenges in solving complex problems is what keeps me interested and I am passionate about the things I can create with computer code.
+
+#### Code patches
+
+ * Working on [Issue 834](http://www.google.com/url?q=http%3A%2F%2Fcode.google.com%2Fp%2Fsympy%2Fissues%2Fdetail%3Fid%3D834)
+
+
 ## Relevant Personal Projects
 
 #### PYTHON SHELL FOR GOOGLE CHROME
@@ -110,9 +121,7 @@ A project to locate and render an athlete's foot placements using a static camer
 Relevant Languages: C++
 
 [Link](http://www.google.com/url?q=http%3A%2F%2Fscholar.google.co.nz%2Fscholar%3Fhl%3Den%26q%3DA%2Bsilhouette%2Bbased%2Btechnique%2Bfor%2Blocating%2Band%2Brendering%2Bfoot%2Bmovements%2Bover%2Ba%2Bplane%2BBen%2BMcDonald%26btnG%3DSearch%26as_sdt%3D0%252C5%26as_ylo%3D%26as_vis%3D0)
-#### Code patches
 
- * Working on [Issue 834](http://www.google.com/url?q=http%3A%2F%2Fcode.google.com%2Fp%2Fsympy%2Fissues%2Fdetail%3Fid%3D834)
 
 #### Code Examples
  1. [Optimised Rectangle class](https://gist.github.com/900337)
