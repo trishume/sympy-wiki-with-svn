@@ -30,8 +30,8 @@ My Project
 I see the following plan for me: 
     - April - June 5 - 8-10 hours per week. 
     - June 6 - August 30 - 40-50 hours per week. 
-* TODO. Please provide a schedule of how this time will be spent on subtasks
-  of the project over the period of the summer. While this is only
-  preliminary, we will use it to help monitor your progress throughout
-  the program.  Also understand that during the project you will issue
-  weekly progress reports against that plan on your blog.
+* TODO. Schedule. First steps. 
+    - I've started with installing git and studying how to work with it. 
+    - Then I'll clone repository of sympy and I'll write some tests for some parts of sympy or submit other EasyToFix patch. 
+    - Then I will deep inside polys module looking for things that could be improved in easy way. 
+    - After I'll get closer with algorithms and methods listed in _Idea_ paragraph and polys module I will choose one of the method provided efficient multivariate polynomial arithmetics and GCD algorithm and implement it. 
