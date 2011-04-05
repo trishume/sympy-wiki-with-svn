@@ -33,7 +33,14 @@ By thinking about how to represent operators that depend on continuous variables
 
 ### Project deliverables
 * **Modified represent.py**: some operators (for example, momentum), when represented in another basis, actually take on a representation as a derivative of that basis variable (i.e. p ~ d/dx). Represent currently has no way of dealing with this
-* **Modified HilbertSpace**: need to add functionality for representing an infinite number of dimensions
 * Implementations of position and momentum operators in **Cartesian, cylindrical, and spherical** coordinates in **1D, 2D, and 3D**. 
 * **Example systems**: implement particle in a box, simple harmonic oscillator, hydrogen atom, etc. in varying numbers of dimensions
 * **Symbolic Schrodinger equation solver** (time permitting): if everything goes as planned, it might be possible to incorporate a PDE solver for solving the Schrodinger equation with symbolic Hamiltonians in these bases.
+
+### Timeline
+
+* **Startup period** (April 25-May 27): Become more familiar with the quantum code base; sketch out a more detailed design of the modules which will implement the proposed functionality and discuss with the sympy community (Note that while the GSoC period technically starts on May 23rd, I am in school until the 27th so only after this will I be able to work full time).
+* **Phase 1** (May 28-June 18): Modify the pre-existing codebase; change represent to be able to deal with arbitrary representations of operators, including derivatives; will most likely have to somehow incorporate the sympy diff function; there will certainly be many subtleties involved in this portion
+* **Phase 2** (June 18-July 16): Implementation of the key position and momentum bases; first modify the already existent 1D cartesian classes to include repreentations of momentum operator in the position basis and vice-versa. Then add 2D and 3D cartesian operators, as well as cylindrical and spherical equivalents;
+* **Phase 3** (July 16-August 6): Go crazy! Implement as many textbook QM systems as possible with the new framework that is in place! Topics include particle in a box in 1D, 2D, and 3D, both with infinite and finite potential walls, simple harmonic oscillator, hydrogen atom, delta function potential, etc.
+* **Phase 4** (August 6-August 22): This can act as a buffer period in case the other pieces take longer than expected. If everything goes as planned, however, this could potentially be used to investigate writing a solver for symbolic Schrodinger equations in the bases that were implemented.
