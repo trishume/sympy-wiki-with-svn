@@ -1,39 +1,102 @@
-**Incomplete.** Sorry, I have an exam on friday that occupies my mind...
+About
+=====
 
-You
+My name is Jeremias Yehdegho and I'm a fourth year student of mathematics
+("Mathematical computer science") at the Graz University of Technology.
+Importantly, the suggested project (implementing F5) coincides with my
+bachelor thesis.  This has been discussed with and agreed on by my thesis
+advisor. Good performance at GSoC is in mutual interest with good performance
+at my bachelor thesis. :)
 
-* Jeremias Yehdegho
-* Student of mathematics ("Mathematical computer science") at the Graz University of Technology
-* Short bio / overview of your background (later)
-* You can contact me via:
-  - Email: j.yehdegho@gmail.com
-  - IRC: I'm "f1728" on Freenode
-  - Jabber: jeremias.yehdegho@edu.uni-graz.at
+Relevant (and perhaps not so relevant) courses include:
 
-Your Coding Skills
-
-I consider myself to be pretty decent with C and less so with Python. I know some Mathematica, C++ and Go. Relevant courses include:
-
+ * Introductory course in algebra
+ * Courses on field theory (one on finite fields and coding theory, one on
+   Galois theory)
+ * "Symbolic computation" (Mostly factorization of polynomials and Gröbner
+   bases, used SAGE for the exercises)
+ * Master level courses on algebra, algebraic curves and algebraic number
+   theory (currently). I haven't done the exams yet, though.
  * Introductory courses on C and C++
- * "Computer Mathematics": Mathematica, Maple, Octave/Matlab, LaTeX
- * Symbolic Computation (mostly factorization and Gröbner bases): SAGE
+ * "Computer Mathematics" (Mathematica, Maple, Matlab/Octave, LaTeX)
 
-If this is relevant: I've been using Linux exclusively for about three years.
+My favorite programming language is C, which I believe I know reasonably
+well. I know a bit of Python (through (very) small scripts, Project Euler and
+exercises using SAGE). Some other languages I know a bit more than nothing
+include: C++, Mathematica, Octave and Go.
 
-Your Project
+If it matters, I've been using Linux for about three years exclusively (first
+Xubuntu, now ArchLinux).  I have not contributed to an open source project
+before, however I wrote the first version of the "Jumanji" web browser (can
+be found [[here|https://github.com/Jerryy/jumanji-old]]). The current author
+rewrote it from scratch, however.
 
-Implement F5B, try different selection strategies (according to the F5B paper, it works for all selection strategies), use it for simplifying rational functions modulo prime ideals (what about modules?).
+Project
+=======
+
+What?
+-----
+
+I want to implement the F5B algorithm by Yao Sun and Dingkang Wang [1], which
+is a variation of Jean-Charles Faugère's F5 algorithm. Moreover I want to
+compare it to other implementations and try improvements like an iterative
+version, interreducing after each iteration and other selection strategies
+(e.g. sugar method).
+
+Furthermore, I want to implement the second algorithm in [2] by Michael Monagan and
+Roman Pearce in order to compute a simplification of a rational function modulo
+a prime ideal.
+
+Why?
+----
+
+In order to improve performance of SymPy's `groebner` function.  The currently
+used Buchberger algorithm computes Gröbner bases by reducing a special
+polynomial with respect to a generating set of an ideal. As it turns out,
+this reduction often yields zero, which gives no new information. In order
+to improve speed, Faugère's algorithm provides two criteria when this
+reduction will yield 0 and hence need not be computed.
+Why F5B and not some other variant? F5B looks very similar to Buchberger's
+algorithm, so I expect "Buchberger - many useless reductions to 0" to perform
+better than the current algorithm.
+
+Rational simplification was suggested by Mateusz Paprocki and looks quite
+interesting and achievable. However the focus lies on the first part.
+
+How? (Schedule)
+---------------
+
+(Please help me with that one...)
+
+Tasks: 
+
+* Write the datastructures (signature, labeled polynomial)
+* Write F5B (Don't know how long this will take)
+  * f5_reduction
+  * is_rewritable
+  * is_compareable
+* Benchmark, improve, benchmark, improve, benchmark, improve, ...
+  * incremental algorithm (with and without interreduction)
+  * TOP/POT order for signatures (See "A natural Variation" in [1])
+  * sugar method selection strategy
+* Implement the second algorithm from [2]
+
+Contact
+=======
+
+You can reach me via
+
+ * Email at j.[last name]@gmail.com,
+ * IRC on Freenode as "f1728"
+or
+ * Jabber at [first name].[last name]@edu.uni-graz.at.
 
 
-Add yourself/your project with a short synopsis to the list of projects on the wiki if you have not done so yet.
+References
+==========
 
-    * Start a wiki page to work on your proposal.
-    * What do you want to achieve?
-    * If you have chosen an idea from our list, why did you choose this specific idea?
-    * If you are proposing a project of your own, what is unique about it?
-    * What makes you suited to carry the project?
-    * How much time do you plan to invest in the project before, during and after the Summer of Code? (we expected full time
-      40h/week during GSoC, but better make this explicit)
-    * Please provide a schedule of how this time will be spent on subtasks of the project. While this is only preliminary, you
-      will be required to provide a detailed plan latest at the beginning of GSoC and during the project you will issue weekly
-      progress reports against that plan on your blog.
+[1] A New Proof for the Correctness of F5 (F5-Like) Algorithm,
+Yao Sun, Dingkang Wang, http://arxiv.org/abs/1004.0084v4
+
+[2] Rational Simplification Modulo a Polynomial Ideal,
+Michael Monagan, Roman Pearce, http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.4135&rep=rep1&type=pdf
