@@ -23,7 +23,7 @@ Relevant (and perhaps not so relevant) courses include:
 My favorite programming language is C, which I believe I know reasonably
 well. I know a bit of Python (through (very) small scripts, Project Euler and
 exercises using SAGE). Some other languages I know a bit more than nothing
-include: C++, Mathematica, Octave and Go.
+include: C++, Mathematica and Go.
 
 If it matters, I've been using Linux for about three years exclusively (first
 Xubuntu, now ArchLinux).  I have not contributed to an open source project
