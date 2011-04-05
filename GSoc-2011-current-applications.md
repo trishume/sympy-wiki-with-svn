@@ -20,3 +20,4 @@ Project Proposals:
 * [GSoC 2011 Application Vladimir Lagunov: Expression simplification](GSoC 2011 Application Vladimir Lagunov: Expression simplification)
 * [GSoC 2011 Application Yuri Karadzhov: Parametrization and Symmetries](GSoC-2011-Application-Yuri-Karadzhov)
 * [GSoC 2011 Application Frank Kreimendahl: Matrix Abstraction and Sparse Matrices](Frank-Kreimendahl---GSoC-2011)
+* [[GSoC 2011 Application Pavel Fedotov: Multivariate polynomials and factorization]]
