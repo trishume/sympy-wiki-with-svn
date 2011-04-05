@@ -5,7 +5,7 @@ About me
 --------
 
 * Pavel Fedotov, 22 years old. 
-* I'm sixth year student at Saint Petersburg State University of Information Technologies and Optics ([SPbSU ITMO](http://en.ifmo.ru/)). 
+* I'm sixth year student at Saint Petersburg State University of Information Technologies, Mechanics and Optics ([SPbSU ITMO](http://en.ifmo.ru/)). 
 * I graduated from Saint Petersburg Lyceum 239 that specializes in mathematics and physics in 2005. In 2009 I've got bachelor degree on apply math at SPbSU ITMO and at this time I'm working on my master's project at SPbSU ITMO. I have rather good knowledges in math and algorithms. 
 * Email: fedotovp@gmail.com
 
