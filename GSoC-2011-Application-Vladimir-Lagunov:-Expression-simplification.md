@@ -43,15 +43,19 @@ Probably when i'll start improving simplification, i'll need to work on rewritin
 
 TODO: This shedule is fuzzy, review it later.
 
-1. Improve ratsimp() in two weeks (probably i can do it quicker)
-    1. Proper fraction reducing
-    2. More tests
-2. Improve trigsimp() in two weeks
+1. Extend rewrite patterns of functions in one week
+2. Improve trigsimp() in three weeks
     1. Simplifying one function with one argument to other function with other argument (for example \(sin(2x) = 2 sin(x) cos(x) \))
-    2. Tests
-3. Extend rewrite patterns of functions in one week
-4. Improve simplify() in two weeks
-    1. Checking for each expression which sub-simplify functions are giving good results
-    2. Tests
+    2. Expanding amount of conversion procedures
+    2. Smart substitutions, that reduces expression size and doesn't enlarge it.
+    3. Tests
+2. Write function expandtrig(), that makes arguments of trigonometrical functions in specified expression as simple as possible (for example expanding \(sin(2x)\)). Two weeks.
+3. Improve ratsimp() in two weeks. Earlier this step was the first in my shedule, but it can overlap with polys12 branch, so it better to work on ratsimp() after merging polys12 with master.
+    1. Proper fraction reducing
+    2. Grouping symbols in expression for getting shorter result
+    2. More tests
+4. Improve simplify() in three weeks
+    1. Implement checking which sub-simplify functions are giving good results
+    2. Using rewrite patterns internally in simplify()
+    3. Tests
 5. Improve other simplifiers if need be.
-6. If i'll do previous tasks earlier than expected: write function expandtrig(), that makes arguments of trigonometrical functions in specified expression as simple as possible (for example expanding \(sin(2x)\)).
