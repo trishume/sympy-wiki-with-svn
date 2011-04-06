@@ -39,9 +39,9 @@ Expression simplification is an inalienable part of whole SymPy, all other compo
 
 Probably when i'll start improving simplification, i'll need to work on rewriting. For example, now sympy throws attribute error when you try `sinh(x).rewrite(sinh, exp)` (but these transformation exists \(sinh(x) = \frac 1 2 \left( e^x + e^{-x} \right) \))
 
-## Shedule
+## Schedule
 
-TODO: This shedule is fuzzy, review it later.
+TODO: This schedule is fuzzy, review it later.
 
 1. Extend rewrite patterns of functions in one week
 2. Improve trigsimp() in three weeks
@@ -59,3 +59,5 @@ TODO: This shedule is fuzzy, review it later.
     2. Using rewrite patterns internally in simplify()
     3. Tests
 5. Improve other simplifiers if need be.
+
+Maybe this schedule looks too simple, but i'll not have ability to work 40 hours/week this summer because i'll have a session and practical work.
