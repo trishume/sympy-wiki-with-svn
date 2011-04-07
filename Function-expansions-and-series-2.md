@@ -193,11 +193,8 @@ By internal representation:
 
 Image:
 
-![class-view-1.png](https://github.com/goodok/series-texts/raw/master/class-view-1.png)
-![class-view-2.png](https://github.com/goodok/series-texts/raw/master/class-view-2.png)
-
-
-    
+[[img/series-class-view-1.png]]
+[[img/series-class-view-2.png]]
 
 Power Series and Taylor Series, internal difference of them.
     
