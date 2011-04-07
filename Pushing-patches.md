@@ -1,3 +1,12 @@
+
+**This page is obsoleted!**
+
+See [[Development-workflow]] instead.
+
+---
+
+---
+
 If you have been around for some time and actively participating in
 SymPy's development, you will be granted push access to the main
 repository.  Then you can push in patches that passed review.
