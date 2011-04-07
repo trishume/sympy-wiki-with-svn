@@ -13,7 +13,15 @@ This is still a draft, if anyone has any comments or suggestions, please feel fr
 
 ## Background
 
-Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles. These coefficients give the expansion of coupled spin states as a sum of product states and vice versa. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
+Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles (Wigner 6j/9j/... symbols). These coefficients give the expansion of coupled spin states as a linear combination of product states and product states as the linear combination of coupled states. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
+
+## Final product
+
+* Clebsch-Gordon module: Implement a new class which allows for the creation of Clebsch-Gordon coefficients and the symbolic manipulation of these coefficients
+* Coupled spin states: Implement classes inheriting from the current Jx/Jy/Jz spin states which will allow the state to be defined as coupled spin states of multiple particles.
+* Uncoupled spin states: Work with existing Jx/Jy/Jz states and expand the implementation such that taking the TensorProduct of states will represent that these states are written in the uncoupled basis.
+* Integration of coefficients with spin algebra: Implement functions such that states can be projected between the coupled and uncoupled bases, allowing calculations such as the evaluation of innerproducts.
+* Integration of new bases with spin operators: Make spin operators act properly on the new spin states, which includes implementing a means of defining the basis and space over which spin operators act.
 
 ## Project Overview
 
@@ -78,6 +86,24 @@ Finalize project, merging any final documentation, tests and bug fixes, and penc
 
 ## Test cases and examples
 
+* Clebsch-Gordon symmetries
+
+TODO
+
+* Projecting states
+
+TODO
+
+* Acting operators on states
+
+TODO
+
+* Example: Spin-Orbit coupling
+
+TODO
+
+* Example: Zeeman effect
+
 TODO
 
 ## Current code patches
@@ -98,10 +124,10 @@ TODO
 
 **Work in progress**
 
-[spin_improvements branch](https://github.com/flacjacket/sympy/tree/spin_improvements) Work done that allows for converting between the Jx, Jy and Jz bases, which are the currently implemented eigenstates. Also implements innerproducts between states in different bases and writing states as vectors in different bases.
+[spin_improvements branch](https://github.com/flacjacket/sympy/tree/spin_improvements) Work done that allows for converting between the Jx, Jy and Jz bases, which are the currently implemented eigenstates. Also implements innerproducts between states in the Jx, Jy and Jz bases and writing states as vectors in these bases. Note that this is similar to my proposed project, as I will be working on projecting between bases, but it is not the same as this is filling in the algebra for bases that are already implemented.
 
 [spin_tests branch](https://github.com/flacjacket/sympy/tree/spin_tests) Implementing additional tests that the elements currently implemented in the spin module should be able to pass.
 
 ## Bio
 
-I am a senior at the University of Minnesota and will be graduating this spring in physics and math and will begin graduate physics work next fall at the University of Illinois at Urbana-Champaign. While a student, I have taken several classes in programming; the classes I took covered C/C++ and parallel programming with CUDA. Also of note for this project are the physics classes I have taken, which include the 2 semester graduate level quantum mechanics sequence, which I will be completing this spring. Out of the classroom, I spent last summer working on developing a parallel implementation of the zlib compression library using CUDA. As for my experience with Python, beyond hobby coding, I am using Python, mainly using the PyROOT module, to do the analysis as a part of research for my senior physics thesis. While this will be the first time I will be working on an open source project, I am excited to get the chance to use my extensive physics training as a stepping stone to developing software with the Sympy community.
+I am a senior at the University of Minnesota and will be graduating this spring in physics and math and will begin graduate physics work next fall at the University of Illinois at Urbana-Champaign. As a student, I have taken several classes in programming; the classes I took covered C/C++ and parallel programming with CUDA. Also of note for this project are the physics classes I have taken, which include the 2 semester graduate level quantum mechanics sequence, which I will be completing this spring. Out of the classroom, I spent last summer working on developing a parallel implementation of the zlib compression library using CUDA. As for my experience with Python, beyond hobby coding, I am using Python, mainly using the PyROOT module, to do the analysis as a part of research for my senior physics thesis. As for my coding environment, I run GNU/Linux as my primary operating system. I primarily run Gentoo, but I have setup a virtual machine that runs Arch on which I do all coding and development work; this environment has Python 2.7.1. While this will be the first time I will be working on an open source project, I am excited to get the chance to use my extensive physics training as a stepping stone to developing software with the Sympy community.
