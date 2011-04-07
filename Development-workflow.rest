@@ -390,7 +390,8 @@ Note that if you do any rebasing or in any way edit your commit history, you wil
 Synchronization with master `sympy/sympy`.
 -------------------------------------------
 
-Note, that those operations must be carried out with accuracy and understanding what you do.
+Note, that those operations must be carried out with accuracy and with understanding what you do.
+
 **Your code changes and the history of them can be lost!**
 
 This is a frequent situation, when branch is out of date with sympy/sympy repository.
@@ -526,13 +527,13 @@ Nevertheless, firstly merge local repository with the remote::
     $ git checkout master
     $ git pull
 
-This result in:
+This result in::
 
     A---B---C---D       master
              \
               a---b     1234_sequences
 
-Then merge your `1234_sequences` branch from `1234_sequences`:
+Then merge your `1234_sequences` branch from `1234_sequences`::
 
     $ git checkout 1234_sequences
     $ git merge master
@@ -547,11 +548,11 @@ Then be sure that  all tests pass::
     $ ./bin/test
     $ ./bin/doctest
 
-and commit
+and commit::
 
     $ git commit -m "Merging with master"
 
-So the result will be like that (automatic merging `c`):
+So the result will be like that (automatic merging `c`)::
 
     A---B---C-------D     master
              \       \ 
