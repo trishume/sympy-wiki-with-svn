@@ -1,8 +1,8 @@
 # Bio
 
-Name: Frank Kreimendahl
-University: 1st year PhD candidate at University of New Hampshire
-Contact: ylfchild@gmail.com
+Name: Frank Kreimendahl  
+University: 1st year PhD candidate at University of New Hampshire  
+Contact: ylfchild@gmail.com  
 Short Bio: Around the time that I completed my undergraduate studies in mathematics, I realized that the types of problem solving that I enjoyed in math are more prevalent in computer science. I recently returned to school to pursue a PhD in computer science and I have found myself more engaged in the material than I had been before.
 
 
@@ -54,7 +54,7 @@ Week 10-12: Implement QR factorization, research and implement sparse matrix alg
 
 
 ## Reference books:
-Direct Methods for Sparse Matrices: Duff, Erisman and Reid
-Direct Methods for Sparse Linear Systems: Davis
-Sparse Matrix Technology: Pissanetsky
-Direct Methods for Sparse Matrices: Østerby and Zlatev
+Direct Methods for Sparse Matrices: Duff, Erisman and Reid  
+Direct Methods for Sparse Linear Systems: Davis  
+Sparse Matrix Technology: Pissanetsky  
+Direct Methods for Sparse Matrices: Østerby and Zlatev  
