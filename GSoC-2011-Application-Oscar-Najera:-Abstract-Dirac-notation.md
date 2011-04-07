@@ -17,8 +17,8 @@ Expected values:
 \( <E>=<n|H|n> \) , \(<x^2> = <n|x^2|n>\)
 Matrix elements:
 \(V_{mn}=<m|V|n>\)
-Probability Amplitudes:
-\(P(n)=|<n|\psi>|^2\),\(H_{mn}=|<m|H|n>|^2\)
+Probability Amplitudes & probability density:
+\(<n|\psi>\), \(P(n)=|<n|\psi>|^2\),\(|<m|H|n>|^2\)
 Projections: \(|n><n|\psi>\), \(\sum_i |i><i|\psi>\)
 
 ### Timeline
