@@ -13,7 +13,7 @@ This is still a draft, if anyone has any comments or suggestions, please feel fr
 
 ## Background
 
-Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles (Wigner 6j/9j/... symbols). These coefficients give the expansion of coupled spin states as a linear combination of product states and product states as the linear combination of coupled states. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
+Spin dynamics is an important part of dealing with quantum systems. The current implementation of spin in Sympy covers single spin states and the operators that can act on them; however, there is no means of dealing with spin states in multiple particle systems. A key to understanding these systems is Clebsch-Gordon coefficients and its generalizations to systems of more than two particles (Wigner 3nj symbols). These coefficients give the expansion of coupled spin states as a linear combination of product states and product states as the linear combination of coupled states. Sympy currently has functions capable of calculating these coefficients numerically; this project will focus on implementing a symbolic means of manipulating these coefficients and expand the spin implementation to utilize these coefficients.
 
 ## Final product
 
@@ -22,16 +22,17 @@ Spin dynamics is an important part of dealing with quantum systems. The current 
 * Uncoupled spin states: Work with existing Jx/Jy/Jz states and expand the implementation such that taking the TensorProduct of states will represent that these states are written in the uncoupled basis.
 * Integration of coefficients with spin algebra: Implement functions such that states can be projected between the coupled and uncoupled bases, allowing calculations such as the evaluation of innerproducts.
 * Integration of new bases with spin operators: Make spin operators act properly on the new spin states, which includes implementing a means of defining the basis and space over which spin operators act.
+* Wigner 6j/9j/... symbols: Time allowing, implement the coefficients similar to the Clebsch-Gordon coefficient for larger numbers of particles.
 
 ## Project Overview
 
-The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis. This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich, "Quantum Theory of Angular Momentum", pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the how many are implemented will be based on the amount of time available determined in discussions with my mentor.
+The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input spin parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis. This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the number of relations that are implemented will be based on the amount of time available determined in discussions with my mentor.
 
-With the Clebsch-Gordon coefficients implemented, I will improve the spin algebra to utilize these terms. The first component of this will be to modify the treatment of spin states to be able to utilize product and coupled bases. This would be implemented such that if given a coupled state |j,m>, it could be written as the sum of tensor products of spin states with the appropriate Clebsch-Gordon cofficient and if given a tensor product of spin states, it could written as a sum of coupled states, again with the appropriate Clebsch-Gordon coefficient.
+With the Clebsch-Gordon coefficients implemented, I will improve the spin states and spin algebra to fully utilize these terms. The first component of this will be to modify the treatment of spin states to be able to utilize product and coupled bases. This would involve using the current spin state implementation and tensor products to define uncoupled spin states and creating a new class inheriting from the current spin state classes to define coupled spin states. The coupled spin state classes would expand the current spin state states to include the spins of the corresponding uncoupled states. The algebra would be implemented such that if given a coupled state |j,m>, it could be written as the sum of tensor products of spin states with the appropriate Clebsch-Gordon cofficient and if given a tensor product of spin states, it could written as a sum of coupled states, again with the appropriate Clebsch-Gordon coefficient. Doing this allows calculations such as inner products between spin states to be evaluated.
 
 The next stage of this project would be to integrate the use of coupled and product bases with the spin operators. The spin operators as they are currently implemented are designed to act on single spin states. This can be immediately applied to the spin operators of the coupled basis acting on coupled states. What would need to be implemented for this project would be spin operators in one of the tensor product bases. In addition, all the spin operators would need to implement methods for acting on tensor product states. In implementing these things, I would use the methods developed for moving states between the coupled and product bases using the Clebsch-Gordon coefficients.
 
-My plan for this project would be to first implement this for coupling between two spin states. Once this is done, I would extend these methods to include coupling between more states. The current numerical implementation includes up to Wigner-9j symbols, which gives coupling between 4 spin states. My goal would be to implement the necessary spin algebra to include coupling between at least this many states.
+My plan for this project would be to first implement this for coupling between two spin states. Once this is done, I would extend these methods to include coupling between more states. The current numerical implementation includes up to Wigner-9j symbols, which gives coupling between 4 spin states. My goal would be to implement the necessary spin algebra to include coupling between at least this many states. See the timeline for specifics of how I intend to complete this project.
 
 ## Code Implementation
 
@@ -39,7 +40,7 @@ TODO
 
 ## Timeline
 
-The specifics of each of these steps is outlined in the implementation.
+The specifics of each of these steps is outlined in the overview and implementation.
 
 During the official time frame of the Summer of Code, I have no other serious commitments and can easily commit to the required 40 hours of work per week and I'll put as much free time as I can into working this project because of the interesting subject matter.
 
@@ -128,6 +129,14 @@ TODO
 
 [spin_tests branch](https://github.com/flacjacket/sympy/tree/spin_tests) Implementing additional tests that the elements currently implemented in the spin module should be able to pass.
 
-## Bio
+## Biography
 
 I am a senior at the University of Minnesota and will be graduating this spring in physics and math and will begin graduate physics work next fall at the University of Illinois at Urbana-Champaign. As a student, I have taken several classes in programming; the classes I took covered C/C++ and parallel programming with CUDA. Also of note for this project are the physics classes I have taken, which include the 2 semester graduate level quantum mechanics sequence, which I will be completing this spring. Out of the classroom, I spent last summer working on developing a parallel implementation of the zlib compression library using CUDA. As for my experience with Python, beyond hobby coding, I am using Python, mainly using the PyROOT module, to do the analysis as a part of research for my senior physics thesis. As for my coding environment, I run GNU/Linux as my primary operating system. I primarily run Gentoo, but I have setup a virtual machine that runs Arch on which I do all coding and development work; this environment has Python 2.7.1. While this will be the first time I will be working on an open source project, I am excited to get the chance to use my extensive physics training as a stepping stone to developing software with the Sympy community.
+
+## References
+
+Varshalovich, D.A. "Quantum Theory of Angular Momentum", World Scientific Publishing, 1988.
+
+Zare, Richard. "Angular Momentum", John Wiley & Sons, 1988.
+
+Shankar, Ramamurti. "Principles of Quantum Mechanics, 2nd ed", Springer, 1994.
