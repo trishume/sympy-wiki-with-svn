@@ -17,7 +17,7 @@ Since I started using SymPy, I tasted the real flavor of open source and enjoyed
 
 * Pull request( accepted ) : A small step to start with. I added a doc-string to Plot function. It was hidden under the class description. It took me considerable time to fix it but because of that, I learned a lot about coding structure in SymPy.
 
-* Pull request #149 : Added arbitrary function to final result of integration. This change is under review and once it gets pulled in, integrate() can have an additional keyword named arbitrary_function which will give the following results:
+* Pull request #201 : Added arbitrary function to final result of integration. This change is under review and once it gets pulled in, integrate() can have an additional keyword named arbitrary_function which will give the following results:
 
 ```ipython
 
@@ -29,20 +29,6 @@ Out[3]: x*(1 + y*z) + f(y,z)
  
 ```
 I believe this will be very helpful in ODE and PDE solvers.
-
-* Pull request #149 : At the present, SymPy doesn't allow integrator to be a function. I modified the code to allow integrator to be a continuous univariate function. When the pull request will get accepted we can have following features in SymPy :
-
-``` ipython
-In [4]: integrate(sin(x),sin(x))
-Out[4]: (sin(x))**2/2
-
-In [5]: f = Function('f',x)
-
-In [6]: integrate(1,f(x))
-Out[6]: f(x)
-```
-
-This commit is marked as NeedsReviews and if it gets accepted, my next step would be to implement Riemann-Stieltjes integration, where integrator need not be continuous but only needs to be bounded function. 
 
 * Pull request #165 : I added integration by parts ( with a condition so that it doesn't go in infinite loop) to solve some of the integration which are not solvable by current methods. For example, integrate(x*sqrt(1+2*x),x) is not solvable. But with this improved code, it will give following result-
 
@@ -65,7 +51,7 @@ To reach at complex integration, I need to define some other functions and it wi
 
 * **Analytic Functions** : Complex analysis is particularly concerned with the analytic functions of complex variables and hence analytic functions are studied widely and hence whether a given function is analytic or not would be topic of interest for most of the mathematicians. And this function would serve the purpose.
 
-* **Roots** : As I mentioned, currently only polynomials with complex variable are solvable in SymPy. I want to extend this to make sure that every function which is solvable by any other CAS system will be solvable by SymPy.
+* **Zeros** : As I mentioned, currently only polynomials with complex variable are solvable in SymPy. I want to extend this to make sure that every function which is solvable by any other CAS system will be solvable by SymPy. Precisely I am targeting on polynomials, exponential and trigonometric functions.  
 
 * **Poles** : Ones we had a function to find the roots, it would not be very difficult to make a program to find poles and their multiplicity. 
 
@@ -89,8 +75,7 @@ Laplace and Fourier transformations are widely used linear transformations which
 
 ## **Benefits** : 
 
-Aim of my project is to create a platform for the development of functions in SymPy which can be used to work in complex analysis. 
-( I need to work on this )
+Aim of my project is to create a platform for the development of functions in SymPy which can be used to work in complex analysis. With this new tools, new doors for handling various mathematical problems with sympy will be opened. Sympy will be enriched with Laplace and Fourier transformation which are one of the most useful techniques in engineering related problems. Some of currently implemented techniques can be improved with this. As complex analysis forms the crucial base in applied mathematics, these new functions will serve the same purpose in sympy.
 
 
 ## Time line (Tentative) : 
@@ -109,13 +94,13 @@ Function to determine whether a given function is analytic (and Harmonic) or not
 
 * Week 3 : Roots and poles of function with complex variables.
 
-* Week 4 : Buffer time. 
+* Week 4 & 5 : Finding singularities and types of singularities
+
+* Week 6 : Moving complex functions out of functions/elementary/complex.py and to make it a module so that it will be easy for modifying in the future.
+
+* Week 7 : Buffer time.
 
 **Mid-term Evaluations**
-
-* Week 5 : Moving complex functions out of functions/elementary/complex.py and to make it a module so that it will be easy for modifying in the future.
-
-* Week 6 & 7 : Finding singularities and types of singularities
 
 * Week 8 & 9 : Working on residue and complex integration
 
@@ -141,7 +126,7 @@ I am a 4th year student of Integrated M.Sc. in Applied Mathematics at IIT Roorke
 * Real Analysis-I ( Riemann integrals, Metric space )
 * Real Analysis-II( Riemann Stieltje’s & Lebesgue integrals, Measure theory )
 * General Topology
-* Mathematical Methods
+* Mathematical Methods ( Laplace and Fourier Transforms )
 * Theory of Partial Differential Equations
 * Theory of Ordinary Differential Equations
 * Advanced Complex Analysis
@@ -163,7 +148,7 @@ Here is the brief description of my project work.
 * Algorithms for computing all cliques in undirected Graph.
 I did this project in last summer at Indian Statistical Institute - Kolkata. All coding was done in Python.
 
-* Prime-factorisation of a given number using concept of trees.
+* Prime-factorization of a given number using concept of trees.
 This was a semester long project as a part of academic curriculum. Coding of this was done in C++.
 
 * Implementing numerical methods to solve real life problem using MatLab.
