@@ -481,7 +481,7 @@ Consider these commit messages::
     $ git log --oneline
     7bbbc06 bugs fixing
     4d6137b some additional corrections.
-    **925d88fx** sequences base implementation.
+    925d88fx sequences base implementation.
 
 
 Then run *rebase* command in interactive mode::
@@ -491,10 +491,10 @@ Then run *rebase* command in interactive mode::
 Or you can use other ways to point to commits, e.g. *`git rebase --interactive HEAD^^`*
 or *`git rebase --interactive HEAD~2`*.
 
-New editor window will appear::
+New editor window will appear (note that order is reverted with comparison of `git log` command)::
 
-    pick 4d6137b bugs fixing
     pick 7bbbc06 some additional corrections.
+    pick 4d6137b bugs fixing
 
     # Rebase 925d88f..7bbbc06 onto 925d88f
     #
