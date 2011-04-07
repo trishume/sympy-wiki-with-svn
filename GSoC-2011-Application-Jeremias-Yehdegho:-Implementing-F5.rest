@@ -2,17 +2,35 @@
 GSoC 2011 Application Jeremias Yehdegho: Implementing F5
 ==========================================================
 
+Abstract
+--------
+SymPy currently uses Gröbner bases for computations in polynomial rings (GCD, LCM), computing minimal polynomials of algebraic numbers and solving systems of polynomial equations. I plan to implement the F5B flavor of the F5 algorithm in order to improve performance with such computations and allow for new applications, such as simplification of rational functions modulo prime ideals.
+
+Introduction
+------------
+A Gröbner basis is a special generating set of an ideal in a polynomial ring. Unlike polynomial rings with a single variable, it is not possible to perform division with remainder but it is possible to do something similar, namely division with remainder with respect to a set of polynomials. This may however yield different results for different orders of the polynomials, even worse: if a polynomial is an element of the ideal, its remainder need not be zero. Gröbner bases have the property that the remainder is always unique.
+
+Computing the division with remainder and Gröbner bases depends on an order relation on the monomials, such as the lexicographic term order. This term order has a useful elimination property, which makes it possible to solve ("overdetermined") systems of polynomial equations (solvers/polysys.py and similarly polys/numberfields.py for minimal polynomials).
+
+"Many problems" can be cleverly encoded in a problem of solving a system of polynomial equations, such as finding a 3-coloring of a graph. This implies that computing a Gröbner basis (with respect to the lexicographic term order) is an NP-hard problem.[3]
+
+Project
+-------
+I want to implement the F5B algorithm by Yao Sun and Dingkang Wang [1], which is a variation of Jean-Charles Faugère's F5 algorithm. The currently used Buchberger algorithm computes a Gröbner basis by repeatedly constructing a special polynomial from two polynomials in the generating set, computing its remainder with respect to the generating set and adding the remainder to the generating set if it is not zero. As it turns out, these remainders are often zero which gives no new information. In order to improve speed, Faugère's algorithm provides two criteria when a special polynomial will have remainder 0 and need not be further considered.
+
+Why F5B and not some other variant? F5B looks quite similar to Buchberger's algorithm, so I expect "Buchberger - many useless reductions to zero" to perform better than the current algorithm. Furthermore F5B allows any selection strategy [1] for the special polynomial, so I would at least try and benchmark the "sugar method" selection strategy.
+
+Additionally, I want to implement the second algorithm from [2] to compute a simplification of a rational function modulo a prime ideal. (This would also work with the current algorithm.)
+
+*If* I have enough time left, I would like to take a look at the Gröbner Walk algorithm, which converts a Gröbner basis with respect to one term order to a Gröbner basis with respect to another term order. I find the theory behind it quite interesting but I don't know much about it yet, so consider this optional.
+
+Lastly, this project overlaps with my prospective bachelor thesis, which among other things also includes implementing F5(B). This has been discussed with and agreed on by my thesis advisor.
+
 About
-=====
-
-My name is Jeremias Yehdegho and I'm a fourth year student of mathematics
+-----
+My name is Jeremias Yehdegho, I'm 22 years old and a fourth year student of mathematics
 ("Mathematical computer science") at the Graz University of Technology.
-Importantly, the suggested project (implementing F5) coincides with my
-bachelor thesis.  This has been discussed with and agreed on by my thesis
-advisor. Good performance at GSoC is in mutual interest with good performance
-at my bachelor thesis. :)
-
-Relevant (and perhaps not so relevant) courses include:
+A few relevant (and perhaps not so relevant) courses I've taken include:
 
  * Introductory course in algebra
  * Courses on field theory (one on finite fields and coding theory, one on
@@ -26,8 +44,7 @@ Relevant (and perhaps not so relevant) courses include:
 
 My favorite programming language is C, which I believe I know reasonably
 well. I know a bit of Python (through (very) small scripts, Project Euler and
-exercises using SAGE). Some other languages I know a bit more than nothing
-include: C++, Mathematica and Go.
+exercises using SAGE). Some other languages I know a bit include: C++, Mathematica and Go.
 
 If it matters, I've been using Linux for about three years exclusively (first
 Xubuntu, now ArchLinux).  I have not contributed to an open source project
@@ -35,58 +52,26 @@ before, however I wrote the first version of the "Jumanji" web browser (can
 be found [[here|https://github.com/Jerryy/jumanji-old]]). The current author
 rewrote it from scratch, however.
 
-Project
-=======
-
-What?
------
-
-I want to implement the F5B algorithm by Yao Sun and Dingkang Wang [1], which
-is a variation of Jean-Charles Faugère's F5 algorithm. Moreover I want to
-compare it to other implementations and try improvements like an iterative
-version, interreducing after each iteration and other selection strategies
-(e.g. sugar method).
-
-Furthermore, I want to implement the second algorithm in [2] by Michael Monagan and
-Roman Pearce in order to compute a simplification of a rational function modulo
-a prime ideal.
-
-Why?
-----
-
-In order to improve performance of SymPy's `groebner` function.  The currently
-used Buchberger algorithm computes Gröbner bases by reducing a special
-polynomial with respect to a generating set of an ideal. As it turns out,
-this reduction often yields zero, which gives no new information. In order
-to improve speed, Faugère's algorithm provides two criteria when this
-reduction will yield 0 and hence need not be computed.
-Why F5B and not some other variant? F5B looks very similar to Buchberger's
-algorithm, so I expect "Buchberger - many useless reductions to 0" to perform
-better than the current algorithm.
-
-Rational simplification was suggested by Mateusz Paprocki and looks quite
-interesting and achievable. However the focus lies on the first part.
-
-How? (Schedule)
----------------
-
-(Please help me with that one...)
-
-Tasks: 
+Schedule
+--------
+The prescribed dates don't align well with my courses, so I will postpone them to next year. This is fine except for an algebraic number theory class, which might not be offered by the same professor (whose lectures I very much enjoy) next year. The lecture and exercises are on Wednesday 8-10 and 12-14 and Thursay 8-10. To compensate I would start early in my easter break (April 16th to May 7th).
 
 * Write the datastructures (signature, labeled polynomial)
-* Write F5B (Don't know how long this will take)
-  * f5_reduction
-  * is_rewritable
-  * is_compareable
+* Write F5B
+   * f5_reduction
+   * is_rewritable
+   * is_compareable
+   * ...
 * Benchmark, improve, benchmark, improve, benchmark, improve, ...
-  * incremental algorithm (with and without interreduction)
-  * TOP/POT order for signatures (See "A natural Variation" in [1])
-  * sugar method selection strategy
+   * incremental algorithm (with and without interreduction)
+   * TOP/POT order for signatures (See "A natural Variation" in [1])
+   * sugar method selection strategy
 * Implement the second algorithm from [2]
 
+Since time is running out and I'm quite bad at estimating how long I will need for these tasks (sorry for not reaching out more concerning the schedule), I'll leave it at that and make changes to the schedule either tomorrow or later via the comments.
+
 Contact
-=======
+-------
 
 You can reach me via
 
@@ -97,10 +82,13 @@ or
 
 
 References
-==========
+----------
 
 [1] A New Proof for the Correctness of F5 (F5-Like) Algorithm,
 Yao Sun, Dingkang Wang, http://arxiv.org/abs/1004.0084v4
 
 [2] Rational Simplification Modulo a Polynomial Ideal,
 Michael Monagan, Roman Pearce, http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.4135&rep=rep1&type=pdf
+
+[3] Design and implementation issues of a~computer algebra system in an interpreted, dynamically typed programming language,
+Mateusz Paprocki, http://mattpap.github.com/masters-thesis/html/src/groebner.html#applications-of-groebner-bases
