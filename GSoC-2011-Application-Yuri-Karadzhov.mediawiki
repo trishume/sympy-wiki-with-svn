@@ -2,8 +2,8 @@ Title:	 SymPy: Implementation of basic Parametrization module, Symmetry search a
 
 Student:	 Yuri Karadzhov
 
-Abstract:	As for professional mathematician and physicist computer algebra system (CAS) mostly is the tool of handling simple yet technically large problems. Sure, it can solve some problems completely from the start to the end, but the main purpose we use CAS is to simplify our daily routine. So the goal of my project is improvement of base of Sympy which significantly reduce amount of repeated and cumbersome operations and give the basement for other more complex and specific tools.
-As for me this tools are – parametrization (which helps to solve ODE's and PDE's depending on arbitrary parameters) and concerned problem of searching and handling symmetries of single ODE or PDE or system of ones.	
+Abstract:	Computer algebra systems (CAS) for professional mathematicians and physicists mostly serve as a tool for handling simple yet technically complex problems. Sure, it can solve some problems entirely from the start till the end, but the main purpose of using CAS is to simplify our daily routine. So the goal of my project is to improve the base of Sympy. This will significantly reduce the amount of repeated and cumbersome operations and serve as base for other more complex and specific tools.
+For me this tools are – parametrization (that helps solve ODEs and PDEs depending on arbitrary parameters) and concerned problem of searching and handling symmetries of single ODE or PDE or system of such equations.	
 ----
 
 == Personal info ==
@@ -42,9 +42,9 @@ Former:
 
 Background which might be helpful: <i>Computation Theory, Algebra, Mathematical and Functional Analyses , Theoretical Physics, Quantum Mechanics, Integral Transformations, Special Functions, Differential Equations, Mathematical Physics, Supersymmetries and Symmetries Analyses</i>.
 
-Currently in applied math department I study the theory of Lie groups
-and it's application to the differential equations. The most recent
-works however concerned with supersymmetry of Schrödinger-Pauli
+Currently I'm studying the theory of Lie groups
+and its application to the differential equations at the applied math department. My most recent
+works are however concerned with supersymmetry of Schrödinger-Pauli
 equation of arbitrary dimension. The obtained results widely extend
 the number of exactly solvable Quantum Mechanic problems as well as
 generalize the approach of finding such problems.
@@ -55,7 +55,7 @@ generalize the approach of finding such problems.
 
 
 
-I've bin using <b>GNU Linux since 2001</b>. It is my only operation system for the last five years. I worked with  Mandrake, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as system administrator so I familiar with sh.
+I've bin using <b>GNU Linux since 2001</b>. It is my only operation system for the last five years. I worked with  Mandrake, Red Hat, Gentoo, Debian. Now I use Kubuntu as it is simple to configure and up to date. I used to work as a system administrator, so I am familiar with sh.
 
 Programmer experience:
 * Professional:
@@ -90,7 +90,7 @@ I completed the desired functionality as Maple Library and now porting it to Mat
 
 
 
-The main purpose I applied to this project is to investigate in base of the sympy, which gives the ability to improve more complex functionality which I need in my research. I expect to continue my work on sympy after the end of the project, especially on differential and Lie modules, they are in great interest of me. Because after my work on SSQM will be finished I will recalculate and correct Amaldi classification which incomplete version is used in Maple to solve systems of ODE's and PDE's.
+The main reason I applied to this project is to invest in the base of the sympy. This will help improve more complex functionality which I need in my research. I expect to continue my work on sympy after the end of the project, especially on differential and Lie modules, they are of great interest to me. This is why, after my work on SSQM is complete I will recalculate and correct Amaldi classification, incomplete version of which is used in Maple to solve systems of ODEs and PDEs.
 
 
 
@@ -104,7 +104,7 @@ The main purpose I applied to this project is to investigate in base of the symp
 
 The project itself includes many steps, but the main goal is to implement parameter checking functionality (the idea is original and has no realizations in any other CAS).
 
-e.g. Bernoulli differential equation depending on parameters
+e.g. Bernoulli differential equation dependent on parameters
 
 ''f ' ''(''x'') = ''af'' <sup>2</sup>(''x'') + ''b''
 
@@ -116,11 +116,11 @@ has different solutions depending on parameter values
 * ''f''(''x'') = sqrt(''b''/''a'') tan( sqrt(''ba'') (''x'' + ''C4'')) if ''a'' &ne; 0, ''b'' &ne; 0
 where ''Ci'' - integration constants.
 
-The other example of parameter depending answer is rank of the matrix
+The other example of a parameter dependent answer is a matrix rank.
 
-e.g. Assume that we have matrix depending on parameter
+e.g. Assume that we have a matrix dependent on parameter
 
-''A'' = Matrix((1, x),(1, 1))
+''A'' = Matrix((1, ''x''),(1, 1))
 
 this matrix has different rank depending on parameter ''x''
 
@@ -150,18 +150,18 @@ or for rank calculation
 
 
 
-The problem of searching symmetries of differential equation (system of equations) partial and ordinary is fundamental problem of analysis of differential equation. Assuming that we know symmetries of DE we can reduce its order or even completely solve it (in case of ODE), reproduce its solution and give some prediction about asymptotic behavior of solutions. Implementation of symmetries module lead to common integration procedure (by Lie) which significantly improve the ODE module.
+The problem of searching symmetries of a differential equation (system of equations) partial and ordinary is the fundamental problem of analysis of differential equations. Assuming that we know symmetries of DE we can reduce its order or even completely solve it, reproduce its solution and give some predictions about asymptotic behavior of solutions. Implementation of symmetries module leads to a common integration procedure (by Lie) which significantly improves the ODE module.
 
-Of course the problem of finding symmetries include the problem of integration of overdetermined system of DE's on the last step, which is huge and greedy to resources (and at least Gröbner basis implementation is required). Nevertheless it is usually easy to solve without computer.
+Of course, the problem of finding symmetries includes the problem of integration of overdetermined system of DE's at the last step, which is huge and resource consuming (and Gröbner basis implementation is required, at least). Nevertheless it is usually easy to solve without a computer.
 
 The huge routine part is obtaining the system of determining equations. So the goal of the project is to present tools to handle this problem:
 
 # Generate infinitesimal operator for given variables
 # Calculate the extension of infinitesimal operator of given order
-# Calculate differential sequence of given equation (system of equations)
+# Calculate a differential sequence of given equation (system of equations)
 # Apply the infinitesimal operator to the equation (system of equations)
-# Obtain system of determining equations
-# Obtain system of determining equations for classification problem
+# Obtain a system of determining equations
+# Obtain a system of determining equations for a classification problem
 
 
 The classic example for Heat Equation
@@ -187,34 +187,34 @@ diff(eta,t)-diff(eta,x,x)==0
 === Main Functionality ===
 
 <b>Parametrizator</b>
-* Two version of singular function should be implemented. This functions should
-return values of parameters which makes e.g. given expression singular.
+* Two versions of a singular function should be implemented. This functions should
+return values of parameters that makes given expression singular.
 The first one should work only with one parameter and the second one - with several.
 ```python
 >>> singular(tan(c)*y/(b*(a+x)),(a,b,c)) # searching for singular points of expression
 (b==0),(c==Pi/2+Pi*N_1)
 ```
-* Implement functions set which can handle different cases. Produce all different cases from given ones, intersect cases and so on.
-* Implement parametrizer casemap which do the require operation
+* Implement a function set that can handle different cases. Produce all different cases from the given ones, intersect cases and so on.
+* Implement parametrizer casemap that does the required operation
 parameter-wise (see examples above)
 
 <b>Symmetries</b>
-* Implement generation of infinitesimal operator for given variables
-* Implement calculation of the extension of infinitesimal operator of given order
-* Implement calculation of differential sequence of given equation (system of equations)
-* Implement function which apply the infinitesimal operator to the equation (system of equations)
+* Implement a generation of infinitesimal operator for given variables
+* Implement a calculation of the extension of infinitesimal operator of given order
+* Implement a calculation of a differential sequence of the given equation (system of equations)
+* Implement a function that applies the infinitesimal operator to the equation (system of equations)
 * Implement obtaining of the system of determining equations 
 
 === Additional Functionality ===
 
 <b>Parametrizator</b>
-* Implement function which return minimal list of linearly independent functions form given one.
+* Implement a function that returns minimal list of linearly independent functions form given ones.
 ```python
 >>> linind(cos(t+1), sin(t), cos(t))
 (sin(t), cos(t))
 ```
-* Implement functions to be able to collect similar members of
-expression containing functions and to gather coefficients of linearly
+* Implement functions that will help collect similar members of
+an expression containing functions and to gather coefficients of linearly
 independent members.
 ```python
 >>> collect(x*(a+b*y+sin(y))+y*(c+3*x+x^2)+x*sin(y+3)+x*cos(y)+f(x,y,t), x)
@@ -224,14 +224,14 @@ a*x+(b+c)*y+3*x*y+x^2*y+(1+cos(3))*x*sin(y)+(1+sin(3))*x*cos(y)+f(x,y,t)
 >>> o
 [x, y, x*y, x^2*y, x*sin(y), x*cos(y), f(x,y,t)]
 ```
-* Improve singular and casemap to be able to handle more complex cases e.g. 1/(''a''+''b''*''x'')
+* Improve singular and casemap functions to be able to handle more complex cases e.g. 1/(''a''+''b''*''x'')
 ```python
 >>> singular(1/(a+b*x), (a,b))
 (a==0, b==0)
 ```
 
 <b>Symmetries</b>
-* Adapt main functionality to classification problem
+* Adapt main functionality to a classification problem
 
 === Future Extensions ===
 
@@ -242,7 +242,7 @@ e.g. tanh(''a''(''x''+''b''))-> 1, ''b'' -> infinity if ''a'' &gt; 0
 
 and  tanh(''a''(''x''+''b''))-> -1, ''b'' -> infinity if ''a'' &lt; 0
 
-or example of integration of real functions
+or an example of integration of real functions:
 
 integrate(1/(''x''**2+''a''))
 
@@ -253,9 +253,9 @@ and -atanh(''x''/sqrt(-''a''))/sqrt(-''a'') if ''a'' &lt; 0
 so the answers are real if ''a'' is real.
 
 <b>Symmetries</b>
-* Create pde module which will be able to solve systems of PDE's
-* Add ability to solve overdetermined systems of PDE's
-* Add ability to find symmetries of ODE's and PDE's
+* Create pde module which will be able to solve systems of PDEs
+* Add ability to solve overdetermined systems of PDEs
+* Add ability to find symmetries of ODEs and PDEs
 * Classify obtaining algebras
 
 == Schedule ==
