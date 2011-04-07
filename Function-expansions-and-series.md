@@ -148,6 +148,11 @@ The work with processing of many various cases of series and limits was executed
 - convergence
 - singularity and branches
 
+
+# Links
+
+- [rmpoly](http://code.google.com/p/rmpoly/wiki/Tutorial) - nice Python project, by Mario Pernici. Handling polynomials and series.
+
 # Part-2
 At this page we will be concentrated to the end-user's aims of series usage in sympy:
 
