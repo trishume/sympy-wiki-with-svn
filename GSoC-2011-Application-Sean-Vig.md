@@ -36,19 +36,49 @@ My plan for this project would be to first implement this for coupling between t
 
 ## Code Implementation
 
-TODO
+* CG module
+
+The Clebsch-Gordon and Wigner-3nj symbols will be placed in a separate module within sympy.physics.quantum. I would choose to do this because these coefficients have uses outside of spin projection, such as in integrating spherical harmonics, and since there are possible projects in getting spherical harmonics working in physics.quantum, having these available would be useful.
+
+Within the CG module, the main class will likely be Wigner3j, as many of the symmetry relations are best described by the Wigner-3j symbols; this class will inherit from the Expr class. The `__new__` method will take 6 parameters (j,m,j1,m1,j2,m2) to define the symbol. This class would have @properties defined to retrieve these parameters. The doit() method would be used to evaluate the coefficients numerically, which would employ the algorithms currently in sympy.physics.wigner. In addition, there would be functions to properly print out the Wigner symbol.
+
+The CG class, which would inherit from the Wigner3j class, would create a Wigner3j object and would override methods such that the appropriate pre-factor is applied to the Wigner-3j symbol in evaluation and symbolic manipulation.
+
+An important method which would be in the CG module would be a `cg_simp()` function (similar to `tensor_product_simp()` in sympy.physics.quantum.tensorproduct). This method would take as its parameter an expression involving Clebsch-Gordon and Wigner coefficients. This method would apply symmetry relations and known properties between things such as sums and products of coefficients to simplify the input expression. In developing this module, this will likely be what is most time consuming to implement and test.
+
+In addition, when the rest of the Wigner-3jn symbols are implemented, they too would implemented as subclasses of Expr and would be placed in this module with the simplification method modified to include the simplification of these coefficients.
+
+* Spin states
+
+First, coupled spin states will be implemented using the current Jx/Jy/Jz eigenstates. The coupled states will be specified by passing a parameter `coupled` to the new method which will be a tuple giving the j1,j2,... quantum numbers of the spin states that are coupled together. The changes for how these states interact with other states is given below.
+
+The uncoupled states will be implemented by taking tensor products of the currently implemented Jx/Jy/Jz spin states, and thus will not require changes to how these states are created.  The changes for how these states interact with other states is given below.
+
+As for the functions for the spin states classes, there will be required changes to the printing of the states, but more important are the changes to how these spin states are projected. In the parent SpinState class, I will implement a _represent_base_coupled and _represent_base_uncoupled. These will be used to write the input spin states as vectors in the new basis and will use the CG coefficients developed earlier. These will be invoked by the spin kets when the represent(basis=SpinOp) is called on the state. Furthermore, the SpinState class will implement _rewrite_basis_coupled and _rewrite_basis_uncoupled, which will be called from the SpinState class by functions such as _rewrite_basis_as_J2, _rewrite_basis_as_Jz, etc. These methods will utilize the vector expansion of the states in the _represent_base functions to rewrite the state. The spin state kets will also implement _eval_innerproduct functions that call the _represent_base functions to evaluate inner products between states in different bases. In addition to these means of numerically expanding the states, symbolic methods will be implemented to expand states as arbitrary sums (see "Test cases and examples").
+
+If you see the "Current code work" under the spin_improvements branch, I have done some work implementing functions similar to those mentioned above, only for representing spin states in terms of Jx/Jy/Jz states. The code for the coupled and uncoupled states has been described to mirror this implementation.
+
+* Spin operators
+
+Spin operators must be changed to account for the new definitions of spin states. Spin operators as they currently stand will default to being operators in the coupled basis. In this way, any state created with or without the coupled parameter will be taken to be diagonalized in the basis of the spin operator. Spin operators will, however, need a `__new__` method that will check for a `space` parameter, which will set which space of the product basis the spin operator acts on.
+
+The way spin operators act will need to account for this new definition. The default operator acting on a coupled state or a single state will use the current implementation. When the `space` parameter is set, the evaluation of the operator on these states, which occurs in the `_apply_operator` methods, will need to utilize the `_represent` functions defined for the spin states to change the basis of the spin states, then allowing it to call the `_apply_operator` function for uncoupled states, described below.
+
+Furthermore `_apply_operator` methods will need to be developed to allow for uncoupled spin states to be acted on by the operator. In these methods, when the operator is coupled, the method will invoke the `_represent` functions of the spin states to rewrite the state in the proper basis, then allowing it to invoke the `_apply_operator` methods for the coupled basis. In the uncoupled basis, the operator will act on only the state which is defined by the `space` parameter (e.g. `space=1` will only act on the first state in the tensor product), and will act on this state by invoking the currently implemented `_apply_operator` methods.
 
 ## Timeline
 
 The specifics of each of these steps is outlined in the overview and implementation.
 
-During the official time frame of the Summer of Code, I have no other serious commitments and can easily commit to the required 40 hours of work per week and I'll put as much free time as I can into working this project because of the interesting subject matter.
+During the official time frame of the Summer of Code, I have no other serious commitments and can easily commit to the required 40 hours of work per week and I'll put as much free time as I can into working this project because of the interesting subject matter. I may be taking a 1 week vacation to go camping in the BWCA in the first week of June, but will be able to make up time between starting early and working beyond 40 hrs/week while I am in town the rest of the summer. Classes in the fall will begin on August 22, the firm pencils down date, and I should be able to complete any final evaluation by this time. Because this is mostly complete, it should be easily completable in the lead-in to the Summer of Code.
 
 **Before official start**
 
-Review the current source code and begin integrating with the community. Work with my mentor to finalize a plan of action and formulate a project design, then begin preliminary coding work on the project.
+Review the current source code and begin integrating with the community. Work with my mentor to finalize a plan of action and formulate a project design, then begin preliminary coding work on the project. I will be busy through the end of the school year, which extends through May 14, but would have no problem starting early on the project after this time.
 
-**Weeks 1-3**
+Also, before work begins on this project, some of the work done on representing Jx/Jy/Jz basis elements in terms of each other should be finished, documented and merged. The beginnings of this work can be seen in the spin_improvements branch linked in "Current code work" below. This project fills in the remaining algebra for working with the currently implemented spin states and will work within the current implementation without any of the CG/Wigner algebra this project develops. This work should be done before work is started on this project because it establishes the syntax for projecting between bases.
+
+** Weeks 1-3 **
 
 Work on implementing the Clebsch-Gordon class. This would include developing the basic functionality of the class, such as evaluation, use in equations and printing, but would also include the symbolic manipulation through the symmetry relations and properties of the Clebsch-Gordon coefficients.
 
@@ -56,24 +86,24 @@ Documentation on how to create and manipulate the coefficients will be done as t
 
 At this point, the implementation of the Clebsch-Gordon coefficients should be available for merging. While these coefficients are most useful in the context of coupled and product bases, they can stand alone and I will work to begin merging these at this time
 
-**Weeks 4-5**
+** Weeks 4-5 **
 
 Expand the spin states to work with both product and coupled spin states.
 
 With this addition, I will add documentation on how to define spin states in the coupled and uncoupled bases in addition to how to rewrite states in terms of one or the other basis. Tests will be implemented to test that these conversions are performed as expected (see below).
 
-**Weeks 6-7**
+** Weeks 6-7 **
 
 Modify spin operators to work with the new formulation of spin states. Prepare for midterm evaluation.
 
 During this phase, I will be adding documentation for defining spin operators that act in the various bases and acting them on spin states on these bases. The tests that will be added at this point will verify both that these operators function as expected on various spin states, but that this works with the above implemented conversions between bases.
 
-**Week 8**
+** Week 8 **
 Midterm evaluation
 
 Around this time, I should be finishing the spin states and operators that utilize the Clebsch-Gordon coefficients. I will begin merging the implementation, documentation and tests for these at this time. This should allow for the solving of any problem involving the coupling of two spin angular momenta.
 
-**Weeks 8-10**
+** Weeks 8-10 **
 
 Implement terms for coupling between more spin states, i.e. Wigner 6j and 9j symbols.
 
@@ -81,9 +111,13 @@ I will try to merge these as I complete the implementation for them, i.e. when t
 
 Documentation and tests for these symbols will be included as the symbols are developed. The documentation will expand the previously written documentation for defining spin states and operators and how these interact in the various bases. Tests similar to those for the two spin coupling case will be included, verifying that symbols obey the symmetry relations, states can be properly converted between bases and operators acting on these states can incorporate this functionality.
 
-**Week 11-12**
+** Week 11-12 **
 
 Finalize project, merging any final documentation, tests and bug fixes, and pencils down.
+
+** Beyond GSoC **
+
+After the Summer of Code, I would stick around to finalize, debug and document any remaining pieces of the project and future extensions to the framework this project implements. I'd love to continue to develop the physics code base in SymPy into the future as my coursework and outside research schedule would allow.
 
 ## Test cases and examples
 
@@ -155,7 +189,7 @@ The second part of this Hamiltonian can be evaluated directly from this basis, h
 ```
 Note `CG(j,m,j1,j1,j-j1,j-j1) == 1`.
 
-## Current code patches
+## Current code work
 
 **Closed pull requests**
 
