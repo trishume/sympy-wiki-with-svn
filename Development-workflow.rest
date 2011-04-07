@@ -493,8 +493,8 @@ or *`git rebase --interactive HEAD~2`*.
 
 New editor window will appear (note that order is reverted with comparison of `git log` command)::
 
-    pick 7bbbc06 some additional corrections.
-    pick 4d6137b bugs fixing
+    pick 4d6137b some additional corrections.
+    pick 7bbbc06 bugs fixing
 
     # Rebase 925d88f..7bbbc06 onto 925d88f
     #
