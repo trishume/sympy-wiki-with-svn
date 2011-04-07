@@ -24,7 +24,7 @@ General discussion takes place on `sympy@googlegroups.com`_ mailing list and in
 the issues_, and the code is discussed in `sympy-patches@googlegroups.com`_
 mailing list.
 
-As someone of you already know, software development is not just coding. A lot
+As some of you already know, software development is not just coding. A lot
 of non-coding tasks have to be done in order to produce *good* code. Just to
 mention a few: setting up infrastructure, designing, testing, documenting,
 assisting new developers (we are doing it here), and of course programming.
