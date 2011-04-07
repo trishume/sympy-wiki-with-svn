@@ -163,6 +163,7 @@ The huge routine part is obtaining the system of determining equations. So the g
 # Obtain system of determining equations
 # Obtain system of determining equations for classification problem
 
+
 The classic example for Heat Equation
 ```python
 >>> u = Function('u')(t,x)
@@ -198,6 +199,11 @@ The first one should work only with one parameter and the second one - with seve
 parameter-wise (see examples above)
 
 <b>Symmetries</b>
+* Implement generation of infinitesimal operator for given variables
+* Implement calculation of the extension of infinitesimal operator of given order
+* Implement calculation of differential sequence of given equation (system of equations)
+* Implement function which apply the infinitesimal operator to the equation (system of equations)
+* Implement obtaining of the system of determining equations 
 
 === Additional Functionality ===
 
@@ -225,6 +231,7 @@ a*x+(b+c)*y+3*x*y+x^2*y+(1+cos(3))*x*sin(y)+(1+sin(3))*x*cos(y)+f(x,y,t)
 ```
 
 <b>Symmetries</b>
+* Adapt main functionality to classification problem
 
 === Future Extensions ===
 
@@ -246,6 +253,10 @@ and -atanh(''x''/sqrt(-''a''))/sqrt(-''a'') if ''a'' &lt; 0
 so the answers are real if ''a'' is real.
 
 <b>Symmetries</b>
+* Create pde module which will be able to solve systems of PDE's
+* Add ability to solve overdetermined systems of PDE's
+* Add ability to find symmetries of ODE's and PDE's
+* Classify obtaining algebras
 
 == Schedule ==
 
@@ -262,3 +273,9 @@ so the answers are real if ''a'' is real.
 
 
 == References ==
+
+# <a href="http://en.wikipedia.org/wiki/Symmetry_in_mathematics#Symmetries_of_differential_equations">Symmetries of differential equations</a>
+# <a href="http://en.wikipedia.org/wiki/Symmetry_in_physics">Symmetry in physics</a>
+# <a href="http://en.wikipedia.org/wiki/Lie_group">Lie group</a>
+# <a href="http://en.wikipedia.org/wiki/Lie_algebra">Lie algebra</a>
+# <a href="http://books.google.com/books?id=sI2bAxgLMXYC&printsec=frontcover&dq=Peter+J.+Olver,+Applications+of+Lie+groups+to+differential+equations&source=bl&ots=c_FcNuCt40&sig=VxPvMRlIr1kKdvnLayLoj_j9NNU&hl=ru&ei=jJWdTejoFNHBswa7nIW4BA&sa=X&oi=book_result&ct=result&resnum=1&ved=0CBYQ6AEwAA#v=onepage&q&f=false">Peter J. Olver, Applications of Lie groups to differential equations</a>
