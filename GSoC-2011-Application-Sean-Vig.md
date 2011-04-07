@@ -1,9 +1,5 @@
 ## Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta
 
-***
-
-This is still a draft, if anyone has any comments or suggestions, please feel free to let me know.
-
 ## About me
 
 * Name: Sean Vig
@@ -40,7 +36,7 @@ My plan for this project would be to first implement this for coupling between t
 
 The Clebsch-Gordon and Wigner-3nj symbols will be placed in a separate module within sympy.physics.quantum. I would choose to do this because these coefficients have uses outside of spin projection, such as in integrating spherical harmonics, and since there are possible projects in getting spherical harmonics working in physics.quantum, having these available would be useful.
 
-Within the CG module, the main class will likely be Wigner3j, as many of the symmetry relations are best described by the Wigner-3j symbols; this class will inherit from the Expr class. The `__new__` method will take 6 parameters (j,m,j1,m1,j2,m2) to define the symbol. This class would have @properties defined to retrieve these parameters. The doit() method would be used to evaluate the coefficients numerically, which would employ the algorithms currently in sympy.physics.wigner. In addition, there would be functions to properly print out the Wigner symbol.
+Within the CG module, the main class will likely be Wigner3j, as many of the symmetry relations are best described by the Wigner-3j symbols; this class will inherit from the Expr class. The `__new__` method will take 6 parameters (j,m,j1,m1,j2,m2) to define the symbol. This class would have @properties defined to retrieve these parameters. The `doit()` method would be used to evaluate the coefficients numerically, which would employ the algorithms currently in sympy.physics.wigner. In addition, there would be functions to properly print out the Wigner symbol.
 
 The CG class, which would inherit from the Wigner3j class, would create a Wigner3j object and would override methods such that the appropriate pre-factor is applied to the Wigner-3j symbol in evaluation and symbolic manipulation.
 
@@ -54,7 +50,7 @@ First, coupled spin states will be implemented using the current Jx/Jy/Jz eigens
 
 The uncoupled states will be implemented by taking tensor products of the currently implemented Jx/Jy/Jz spin states, and thus will not require changes to how these states are created.  The changes for how these states interact with other states is given below.
 
-As for the functions for the spin states classes, there will be required changes to the printing of the states, but more important are the changes to how these spin states are projected. In the parent SpinState class, I will implement a _represent_base_coupled and _represent_base_uncoupled. These will be used to write the input spin states as vectors in the new basis and will use the CG coefficients developed earlier. These will be invoked by the spin kets when the represent(basis=SpinOp) is called on the state. Furthermore, the SpinState class will implement _rewrite_basis_coupled and _rewrite_basis_uncoupled, which will be called from the SpinState class by functions such as _rewrite_basis_as_J2, _rewrite_basis_as_Jz, etc. These methods will utilize the vector expansion of the states in the _represent_base functions to rewrite the state. The spin state kets will also implement _eval_innerproduct functions that call the _represent_base functions to evaluate inner products between states in different bases. In addition to these means of numerically expanding the states, symbolic methods will be implemented to expand states as arbitrary sums (see "Test cases and examples").
+As for the functions for the spin states classes, there will be required changes to the printing of the states, but more important are the changes to how these spin states are projected. In the parent SpinState class, I will implement a `_represent_base_coupled` and `_represent_base_uncoupled`. These will be used to write the input spin states as vectors in the new basis and will use the CG coefficients developed earlier. These will be invoked by the spin kets when the represent(basis=SpinOp) is called on the state. Furthermore, the SpinState class will implement `_rewrite_basis_coupled` and `_rewrite_basis_uncoupled`, which will be called from the SpinState class by functions such as `_rewrite_basis_as_J2`, `_rewrite_basis_as_Jz`, etc. These methods will utilize the vector expansion of the states in the `_represent_base` functions to rewrite the state. The spin state kets will also implement `_eval_innerproduct` functions that call the `_represent_base` functions to evaluate inner products between states in different bases. In addition to these means of numerically expanding the states, symbolic methods will be implemented to expand states as arbitrary sums (see "Test cases and examples").
 
 If you see the "Current code work" under the spin_improvements branch, I have done some work implementing functions similar to those mentioned above, only for representing spin states in terms of Jx/Jy/Jz states. The code for the coupled and uncoupled states has been described to mirror this implementation.
 
@@ -64,7 +60,7 @@ Spin operators must be changed to account for the new definitions of spin states
 
 The way spin operators act will need to account for this new definition. The default operator acting on a coupled state or a single state will use the current implementation. When the `space` parameter is set, the evaluation of the operator on these states, which occurs in the `_apply_operator` methods, will need to utilize the `_represent` functions defined for the spin states to change the basis of the spin states, then allowing it to call the `_apply_operator` function for uncoupled states, described below.
 
-Furthermore `_apply_operator` methods will need to be developed to allow for uncoupled spin states to be acted on by the operator. In these methods, when the operator is coupled, the method will invoke the `_represent` functions of the spin states to rewrite the state in the proper basis, then allowing it to invoke the `_apply_operator` methods for the coupled basis. In the uncoupled basis, the operator will act on only the state which is defined by the `space` parameter (e.g. `space=1` will only act on the first state in the tensor product), and will act on this state by invoking the currently implemented `_apply_operator` methods.
+Furthermore `_apply_operator` methods will need to be developed to allow for uncoupled spin states to be acted on by the operator. In these methods, when the operator is coupled, the method will invoke the `_represent` functions of the spin states to rewrite the state in the proper basis, then allowing it to invoke the `_apply_operator` methods for the coupled basis. In the uncoupled basis, the operator will act on only the state which is defined by the `space` parameter (e.g. an operator with the parameter`space=1` will only act on the first state in the tensor product), and will act on this state by invoking the currently implemented `_apply_operator` methods.
 
 ## Timeline
 
@@ -98,8 +94,7 @@ Modify spin operators to work with the new formulation of spin states. Prepare f
 
 During this phase, I will be adding documentation for defining spin operators that act in the various bases and acting them on spin states on these bases. The tests that will be added at this point will verify both that these operators function as expected on various spin states, but that this works with the above implemented conversions between bases.
 
-** Week 8 **
-Midterm evaluation
+** Week 8 - Midterm Evaluation**
 
 Around this time, I should be finishing the spin states and operators that utilize the Clebsch-Gordon coefficients. I will begin merging the implementation, documentation and tests for these at this time. This should allow for the solving of any problem involving the coupling of two spin angular momenta.
 
