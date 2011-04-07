@@ -46,5 +46,4 @@ By thinking about how to represent operators that depend on continuous variables
 * **Phase 4** (August 6-August 22): This can act as a buffer period in case the other pieces take longer than expected. If everything goes as planned, however, this could potentially be used to investigate writing a solver for symbolic Schrodinger equations in the bases that were implemented.
 
 ### Some implementation details
-
-
+* **Code design**: A good question to ask is how the position and momentum bases in the various coordinate systems will actually be implemented. I will attempt to model the structure after the cartesian.py file written by Brian Granger. The basic idea is to have classes such as XOp and POp for operators and XKet and PKet for the corresponding kets. The operator classes will implement methods such as ```python _eval_hilbert_space ``` and ```python apply_operator_XKet ```. 
