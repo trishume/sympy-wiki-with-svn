@@ -87,7 +87,7 @@ My final exams will get over by 13th May and I want to start coding well before 
 
 * **During coding period** :
 
-Early starting will give me 4 weeks before 1st mid-term evaluations and I am planning for :
+Early starting will give me 7 weeks before 1st mid-term evaluations and I am planning for :
 
 * Week 1 & 2 : Working on limit, continuity and differentiability of complex function. (and try to incorporate them for 'bi-variate function' in real plane)
 Function to determine whether a given function is analytic (and Harmonic) or not.
