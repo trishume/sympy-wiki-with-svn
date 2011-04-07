@@ -75,7 +75,7 @@ Laplace and Fourier transformations are widely used linear transformations which
 
 ## **Benefits** : 
 
-Aim of my project is to create a platform for the development of functions in SymPy which can be used to work in complex analysis. With this new tools, new doors for handling various mathematical problems with sympy will be opened. Sympy will be enriched with Laplace and Fourier transformation which are one of the most useful techniques in engineering related problems. Some of currently implemented techniques can be improved with this. As complex analysis forms the crucial base in applied mathematics, these new functions will serve the same purpose in sympy.
+Aim of my project is to create a platform for the development of functions in SymPy which can be used to work in complex domain. With this functions, new doors for handling various mathematical problems with sympy will be opened. Sympy will be enriched with Laplace and Fourier transformations which are one of the most useful techniques in engineering related problems. Some of currently implemented techniques can be improved with this. As complex analysis forms the crucial base in applied mathematics, and these new functions will serve the same purpose in sympy.
 
 
 ## Time line (Tentative) : 
