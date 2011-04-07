@@ -44,3 +44,7 @@ By thinking about how to represent operators that depend on continuous variables
 * **Phase 2** (June 18-July 16): Implementation of the key position and momentum bases; first modify the already existent 1D cartesian classes to include representations of momentum operator in the position basis and vice-versa. Then add 2D and 3D cartesian operators, as well as cylindrical and spherical equivalents;
 * **Phase 3** (July 16-August 6): Go crazy! Implement as many textbook QM systems as possible with the new framework that is in place! Topics include particle in a box in 1D, 2D, and 3D, both with infinite and finite potential walls, simple harmonic oscillator, hydrogen atom, delta function potential, etc.
 * **Phase 4** (August 6-August 22): This can act as a buffer period in case the other pieces take longer than expected. If everything goes as planned, however, this could potentially be used to investigate writing a solver for symbolic Schrodinger equations in the bases that were implemented.
+
+### Some implementation details
+
+
