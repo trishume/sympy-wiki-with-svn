@@ -22,7 +22,7 @@ other's work so that many eyes can see more thus raising the quality.
 
 General discussion takes place on `sympy@googlegroups.com`_ mailing list and in
 the issues_, and the code is discussed in `sympy-patches@googlegroups.com`_
-mailing list.
+mailing list. Also some discussion takes place on IRC (our channel is `#sympy at freenode`_).
 
 As some of you already know, software development is not just coding. A lot
 of non-coding tasks have to be done in order to produce *good* code. Just to
@@ -52,7 +52,7 @@ By the way, when reviewing other's patches you *learn* a lot, so why not to join
 How to send a patch
 ===================
 
-License: 'New BSD License'_ (see the `LICENSE`_ file for details) covers all files in the SymPy repository unless stated otherwise.
+License: `New BSD License`_ (see the `LICENSE`_ file for details) covers all files in the SymPy repository unless stated otherwise.
 
 There are a few ways to create and send a patch.
 
@@ -250,12 +250,22 @@ or in one command using ::
 To view in what branch you are type::
 
     $ git branch
-    
+
+It can be convenient to tune the bash to see current branch. For that. add the snippet below to your .bashrc or .bash_profile::
+
+    PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
+
+Don’t forget to “source” the file if need be, or restart terminal.
+
 And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
     
 
 Code modification
 ------------------
+
+...
+
+...
 
 ...
 
@@ -269,10 +279,18 @@ To ensure everything stays in shape, let’s see if all tests pass::
 
     $ ./bin/test
     $ ./bin/doctest
-    
+
 
 If they are not passed all, then the warning *DO NOT COMMIT* will appear.
 
+Code quality (unwanted spaces and indents) are checking by *./bin/test* utility too. But you can separately run this test with the help of this command::
+
+    $ ./bin/test quality
+
+it will show errors. And this one will fix unwanted spaces.
+
+    $ ./bin/strip_whitespace <file>
+    
 If you want to test only one set of tests try::
 
     $ ./bin/test sympy/concrete/tests/test_products.py
@@ -303,7 +321,7 @@ This makes the message work the best with the various things in git and GitHub t
 
 If your `commit message` is one line then you can use this command::
 
-    $ git commit -m "1234: sequences base implementation"
+    $ git commit -m "1234: sequences base implementation."
     
 or if you plan to enter big description::
 
@@ -313,7 +331,7 @@ And editor windows will appear automatically in this case. In Linux, this is vim
 
 Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
 
-    $ git commit -a -m "1234: sequences base implementation"
+    $ git commit -a -m "1234: sequences base implementation."
 
 If you want to stage only part of your changes, you can use the interactive commit feature.  Just type::
 
@@ -361,18 +379,24 @@ Updating your pull request
 
 If after a time you need to make changes in pull request then the best way is to again add new commit in you local repository and simply repeat push command::
 
-    $ git commit -m "1234: some additional corrections"
+    $ git commit -m "1234: some additional corrections."
     $ git push github 1234_sequences
 
 Note that if you do any rebasing or in any way edit your commit history, you will have to add the `-f` option to push for it to work::
 
     $ git push -f github
 
+
 Synchronization with master `sympy/sympy`.
 -------------------------------------------
 
-When clone a repo, it has a default remote called `origin` that points to the `sympy/sympy` repository.
-And your fork remote named as `github`. You can observe the remotes names::
+Note, that those operations must be carried out with accuracy and understanding what you do.
+**Your code changes and the history of them can be lost!**
+
+This is a frequent situation, when branch is out of date with sympy/sympy repository.
+
+Note, that after cloning a reposytory, it has a default remote called `origin` that points to the `sympy/sympy` repository.
+And your fork remote named as `github`. You can observe the remotes names with the help of this command::
 
     $ git remote -v
     github  git@github.com:mynick/sympy.git (fetch)
@@ -380,16 +404,158 @@ And your fork remote named as `github`. You can observe the remotes names::
     origin  git://github.com/sympy/sympy.git (fetch)
     origin  git://github.com/sympy/sympy.git (push)
 
-To keep track of the original repo, you need download changes::
+
+As an example, consider that we have those commits in the master branch of local git repository::
+
+  A---B---C        master
+
+Then we have divergent branch `1234_sequences`::
+
+
+    A---B---C           master
+             \
+              a---b     1234_sequences
+
+In the meantime the remote `sympy/sympy` master repository was updated too::
+
+    A---B---C---D       origin/master
+    A---B---C           master
+             \
+              a---b     1234_sequences
+
+There are basically two ways to get up to date with a changed master, rebasing and merging.  Rebasing is recommended for smaller branches, and is also the way to edit/squash commits (so you might as well do it if you are doing those too).  For people who are new to git, we pretty much exclusively recommend rebasing for this reason.  
+
+For larger branches (like 20+ commits or so), there are some advantages to merging instead of rebasing.  Rebasing reapplies each commit iteratively over master, and if the state of the files changed by that commit is different from when it was originally made, the commit will change.   This means what you can end up getting commits that are broken, or commits that do not do what they say they do (because the changes have been "rebased out").  This can lead to confusion if someone in the future tries to test something by checking out commits from the history.  
+
+Merging keeps everything intact.  The commits you make are exactly the same, down to the SHA1 hash, which means that if you checkout a commit from a merged branch, it is exactly the same as checking it out from a non-merged branch.  What it does instead is create a single commit, the merge commit, that makes it so that the history is both master and your branch.  This commit contains all merge conflict resolution information, which is another advantage of rebasing (all merge conflict resolutions when rebasing are "sifted" into the commits that caused them, making them invisible).  
+
+Since the guide is aimed at new git users, they should be learning how to rebase.  Also, git rebase has a very friendly interface (compared to git merge) that guides you through each action (editing commits, fixing merge conflicts, etc.).  And while the merge conflicts resolutions will be hidden in the final result, they are easier to apply with git rebase because you only have to apply the resolution for one commit at a time, instead of the whole branch at once.  
+
+
+Rebasing
+~~~~~~~~~
+
+The final aim, that we want to obtain is::
+
+    A---B---C---D           master
+                 \
+                  a---b     1234_sequences
+
+The way to do it is first of all to merge local repository with the remote `sympy/sympy`::
 
     $ git checkout master
-    $ git fetch
-    $ git merge 1234_sequences
-
-
-Or you can do it at a time in one command::
-
     $ git pull
+
+So we obtain::
+ 
+    A---B---C---D       master
+             \
+              a---b     1234_sequences
+
+Then::
+
+    $ git checkout 1234_sequences
+    $ git rebase master
+
+Note that this last one will require you to fix some merge conflicts, because of the change in master to the same file. Open the file that it tells you is wrong, fix the code with **>>>** and **<<<** around it to what it should be.
+
+Then be sure that  all tests pass::
+
+    $ ./bin/test
+    $ ./bin/doctest
+    
+Then do::
+    
+    $ git add sympy/matrices/your_conflict_file
+    $ git rebase --continue
+
+(git rebase will also guide you in this).
+
+Changing of commit messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the task consist just in to edit commit messages then it might be more simple rebasing usage.
+Consider these commit messages::
+
+    $ git log --oneline
+    7bbbc06 bugs fixing
+    4d6137b some additional corrections.
+    **925d88fx** sequences base implementation.
+
+
+Then run *rebase* command in interactive mode::
+
+    $ git rebase --interactive 925d88fx
+
+Or you can use other ways to point to commits, e.g. *`git rebase --interactive HEAD^^`*
+or *`git rebase --interactive HEAD~2`*.
+
+New editor window will appear::
+
+    pick 4d6137b bugs fixing
+    pick 7bbbc06 some additional corrections.
+
+    # Rebase 925d88f..7bbbc06 onto 925d88f
+    #
+    # Commands:
+    #  p, pick = use commit
+    #  r, reword = use commit, but edit the commit message
+    #  e, edit = use commit, but stop for amending
+    #  s, squash = use commit, but meld into previous commit
+    #  f, fixup = like "squash", but discard this commit's log message
+
+Change *pick* to *edit* (or on new versions of git, to *reword*) for those that you want to edit and save that file.
+
+After that, git will drop back you into your editor for every commit you want to reword, and into the shell for every commit you wanted to edit::
+
+    $ (Change the commit in any way you like.)
+    $ git commit --amend "your new message"
+    $ git rebase --continue
+
+Most of this sequence will be explained to you by the output of the various commands of git. Untill::
+
+    Successfully rebased and updated refs/heads/master.
+
+Merging
+~~~~~~~~
+
+Note, that for people who are new to git, we pretty much exclusively recommend rebasing for the above reasons.
+
+Nevertheless, firstly merge local repository with the remote::
+
+    $ git checkout master
+    $ git pull
+
+This result in:
+
+    A---B---C---D       master
+             \
+              a---b     1234_sequences
+
+Then merge your `1234_sequences` branch from `1234_sequences`:
+
+    $ git checkout 1234_sequences
+    $ git merge master
+
+Probably the last command will tell you that conflicts are must be solved for a few indicated files.
+
+if that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the code with **>>>** and **<<<** around it to what it should be.
+You must manually remove useless pieces, and leave only new changes from your branch.
+
+Then be sure that  all tests pass::
+
+    $ ./bin/test
+    $ ./bin/doctest
+
+and commit
+
+    $ git commit -m "Merging with master"
+
+So the result will be like that (automatic merging `c`):
+
+    A---B---C-------D     master
+             \       \ 
+              a---b---c   1234_sequences
 
 
 
@@ -440,7 +606,7 @@ This page based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and 
 .. _sympy@googlegroups.com:             http://groups.google.com/group/sympy
 .. _sympy-patches@googlegroups.com:     http://groups.google.com/group/sympy-patches
 .. _LICENSE:            https://github.com/sympy/sympy/blob/master/LICENSE
-.. _New BSD License:    http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29
+.. _`New BSD License`:    http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29
 .. _GitHub:             https://github.com/
 .. _sympy/sympy:        https://github.com/sympy/sympy
-
+.. _`#sympy at freenode`                 irc://irc.freenode.net/sympy
