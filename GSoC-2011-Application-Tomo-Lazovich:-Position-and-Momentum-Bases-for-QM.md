@@ -48,3 +48,10 @@ By thinking about how to represent operators that depend on continuous variables
 ### Some implementation details
 * **Code design**: A good question to ask is how the position and momentum bases in the various coordinate systems will actually be implemented. I will attempt to model the structure after the cartesian.py file written by Brian Granger. The basic idea is to have classes such as XOp and POp for operators and XKet and PKet for the corresponding kets. The operator classes will implement methods such as ```_eval_hilbert_space ``` and ```_apply_operator_XKet ```. These functions define the space on which the operator is defined and the behavior of the operator when applied to a wavefunction in a particular basis. An example of functionality that is not implemented, even in the example code, is given in the POp class. POp has a ```_apply_operator_PKet``` function but not an ```_apply_operator_XKet``` function. Applying the operator to an XKet requires taking a derivative, so such a function could only be implemented after having defined how we will represent derivatives in the modified represent.py
 
+* **Eigenstates**: The eigenstates, when represented in their bases, will actually take the form of functions in position or momentum space. Let's consider, for example, the classic particle in a box system, implemented as an example in piab.py. When represented in the X basis, it takes the form of a sine wave at different energy levels. Thus, part of the project will be characterizing these representations in the various bases. It would also be useful to be able to use sympy integration modules to transform between x and p space.
+
+* **Example systems**: Here I will provide a more complete list of the different example systems that I think are feasible to be implemented: Free particle in 1D, 2D, and 3D; Particle in an infinite potential well and particle in a finite potential well in 1D, 2D, and 3D; delta function potential; rectangular potential barrier (tunneling effect); quantum harmonic oscillator in 1D, 2D, and 3D, including creation and annihilation operators; hydrogen atom in spherical coordinates.
+
+
+
+
