@@ -26,7 +26,7 @@ Spin dynamics is an important part of dealing with quantum systems. The current 
 
 ## Project Overview
 
-The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input spin parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis. This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the number of relations that are implemented will be based on the amount of time available determined in discussions with my mentor.
+The basis of this project is the implementation of symbolic Clebsch-Gordon coefficients/Wigner symbols. To implement this, I will create coefficients as a subclass of Expr, which allows us to create symbolic expressions based on input spin parameters. In this case, the Clebsch-Gordon coefficients would take 6 parameters, 2 for each of the two particles in the product basis and 2 for the particle in the coupled basis, and are expressed as \(CG^{jm}_{j_1m_1j_2m_2}\). This can be extended to the coupling of more than two particles with Wigner-6j/9j/... symbols; these will be added if time allows, though this project will develop the framework that could be extended to include these objects. Numerical calculation of the coefficients will be possible by invoking the current numerical methods, but of note will be the implementation of symbolic manipulation and simplification by the various symmetries and properties that have been developed for evaluating Clebsch-Gordon coefficients (see Varshalovich pp 244-264 as a sample of the available relations). There are many such relations that could be implemented, and the number of relations that are implemented will be based on the amount of time available determined in discussions with my mentor.
 
 With the Clebsch-Gordon coefficients implemented, I will improve the spin states and spin algebra to fully utilize these terms. The first component of this will be to modify the treatment of spin states to be able to utilize product and coupled bases. This would involve using the current spin state implementation and tensor products to define uncoupled spin states and creating a new class inheriting from the current spin state classes to define coupled spin states. The coupled spin state classes would expand the current spin state states to include the spins of the corresponding uncoupled states. The algebra would be implemented such that if given a coupled state |j,m>, it could be written as the sum of tensor products of spin states with the appropriate Clebsch-Gordon cofficient and if given a tensor product of spin states, it could written as a sum of coupled states, again with the appropriate Clebsch-Gordon coefficient. Doing this allows calculations such as inner products between spin states to be evaluated.
 
@@ -124,15 +124,36 @@ JzKet(j,m,coupled=(j1,j2)).rewrite('Jz') == Sum(CG(j,m,j1,m1,j2,m2)*TensorProduc
 
 * Acting operators on states
 
-TODO
+Operators will be modified so they act properly on coupled and uncoupled states, both in states that are diagonalized and not diagonalized:
+```python
+J2*JzKet(1,0,coupled=(1,1)) == hbar**2*2*JzKet(1,0,coupled=(1,1))
+Jplus(space=2)*TensorProduct(JzKet(1,1),JzKet(1,0)) == hbar*sqrt(2)*TensorProduct(JzKet(1,1),JzKet(1,1))
+Jz(space=1)*JzKet(2,1,coupled=(1,1)) == hbar*CG(2,1,1,1,1,0)*TensorProduct(JzKet(1,1),JzKet(1,0))
+```
 
 * Example: Spin-Orbit coupling
 
-TODO
+If we have some Hamiltonian that goes as \(\omega J_1\cdot J_2\). If we want to find the expectation value of the Hamiltonian in an uncoupled state, we will need to use the tools developed by this project. We note \(J_1\cdot J_2 = \frac{1}{2}(J^2+J_1^2+J_2^2)\). If the initial state is \(|1,1;1,-1\rangle\), then we have as the input:
+```python
+1/2*TensorProduct(JzBra(1,1),JzBra(1,-1))*(J2+J2(space=1)+J2(space=2))*TensorProduct(JzKet(1,1),JzKet(1,-1))
+```
+If we have this evaluate, the kets will be projected into the coupled basis so that they can be acted upon by the J2 operator. After being acted on by the operators, they will be converted back to the product basis so the inner product can be evaluated. This gives as a result:
+```python
+(3*hbar**2+2*hbar)*CG(2,0,1,1,1,-1)**2+(hbar**2+2*hbar)*CG(1,0,1,1,1,-1)**2+2*hbar*CG(0,0,1,1,1,-1)
+```
 
 * Example: Zeeman effect
 
-TODO
+If we take a hydrogen atom in a uniform magnetic field, we will get interactions between the electron and the field. Take for this only the Zeeman effect and the coupling of the electron and proton spin, such that the Hamiltonian is given as \(g\mu J_e\cdot B+4WJ_e\cdot J_p\). Taking the magnetic field in the z direction, we have \(g\mu B J_{e,z}+2W(J^2+J_e^2+J_p^2)\). We can see what this does to a state in the coupled basis \(|1,1\rangle\). We give the input of this as
+```python
+g, mu, B, W = symbols('g mu B W'
+(g*mu*Jz(space=1)+2*W*(J2+J2(space=1)+J2(space=2))*JzKet(1,1,coupled=(1/2,1/2))
+```
+The second part of this Hamiltonian can be evaluated directly from this basis, however, the first part will require that the basis is switched to the product basis. Converting back then gives the result:
+```python
+(hbar*g*mu/2+14*W*hbar**2/2)*JzKet(1,1,coupled=(1/2,1/2))
+```
+Note `CG(j,m,j1,j1,j-j1,j-j1) == 1`.
 
 ## Current code patches
 
