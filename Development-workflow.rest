@@ -505,7 +505,7 @@ New editor window will appear (note that order is reverted with comparison of `g
     #  s, squash = use commit, but meld into previous commit
     #  f, fixup = like "squash", but discard this commit's log message
 
-Change *pick* to *edit* (or on new versions of git, to *reword*) for those that you want to edit and save that file.
+Change *pick* to *reword* (or on old versions of git, to *edit*) for those that you want to edit and save that file.
 
 After that, git will drop back you into your editor for every commit you want to reword, and into the shell for every commit you wanted to edit::
 
