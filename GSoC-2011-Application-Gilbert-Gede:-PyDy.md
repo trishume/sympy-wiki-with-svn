@@ -1,6 +1,8 @@
 # Gilbert Gede
- gilbertgede@gmail.com / ggede@ucdavis.edu
-2nd year PhD student at UC Davis in Mechanical & Aerospace Engineering
+
+gilbertgede@gmail.com / ggede@ucdavis.edu 
+
+2nd year PhD student at UC Davis in Mechanical & Aerospace Engineering 
 
 I’ve taken UC Davis’s graduate courses in dynamics and multibody dynamics, and am really excited to work on software that would help me and others in working on these problems.  Some problems I’ve studied include the dynamic equations for include the bicycle, a bicycle with a flywheel, a unicycle with a control moment gyroscope, and the two-circle roller (or oloid).  
 I have experience in the design and manufacture of mechanical structures, thermo-fluid systems, and medical devices.
@@ -46,7 +48,7 @@ UC Davis is unique in offering the capabilities to build a base of users and con
 ## Example
 
 The utility of software like PyDy becomes readily apparent once the system in question has a bit more complex kinematic relationships than a standard Physics 101 problem (although PyDy can handle simple problems just fine, too). For example, the following code shows how PyDy can compute the dot products, cross products, and time derivatives of a body rotated in 3D and SymPy takes care of all the symbolic algebra for us.
-
+``
 >>> from pydy import * 
 
 >>> N = NewtonianReferenceFrame('N') 
@@ -76,44 +78,44 @@ x1d*x2d*sin(x2(t))*sin(x3(t)))*a2> - (2*x1d*x3d*sin(x2(t)) -
 2*x1d*x2d*cos(x2(t))*cos(x3(t))*sin(x3(t)) + x3d**2 + 
 x1d**2*sin(x2(t))**2 + x2d**2*cos(x3(t))**2 + 
 x1d**2*cos(x2(t))**2*sin(x3(t))**2)*a3> 
+``
 # Long Term Goals
 
-Replace Autolev (currently used multibody dynamics software) for use in generation of equations of motion for all projects in the lab (10/1/2011)
-Grow the user base (100 users by 4/1/2012)
-Grow the development base (3-5 regular contributors by 4/1/2012)
-Make the project self sustaining -- this means it needs to be valuable and organized enough that if current project maintainers were to walk away from it without notice that somebody else would and could pick it up -- this means good documentation, clean code, and thorough testing of functionality.
+* Replace Autolev (currently used multibody dynamics software) for use in generation of equations of motion for all projects in the lab (10/1/2011)
+* Grow the user base (100 users by 4/1/2012)
+* Grow the development base (3-5 regular contributors by 4/1/2012)
+* Make the project self sustaining -- this means it needs to be valuable and organized enough that if current project maintainers were to walk away from it without notice that somebody else would and could pick it up -- this means good documentation, clean code, and thorough testing of functionality.
 
 # Summer Roadmap
 
-PyDy Development Planning. Keeping the Roadmap and Project Description in mind, decide on how the existing code can be reused and integrated into SymPy.  This will include familiarization with SymPy and planning the class structure reorganization, so coding can start right away during the GSoC.  
-Class structure reorganization.  Currently objects specific to kinematics, kinetics, and inertia have attributes that are specific to dynamics and/or the method associated with deriving the equations of motion.  A comprehensive class analysis of all objects is needed so that clear separation of functionality can be achieved.  To be specific, PyDy needs to be restructured for the following reasons:
-Enable symbolic 3D vector analysis to be performed without needing to specify anything related to dynamics.  This is a very general type of analysis that is commonly encountered in math, physics, and engineering curriculum.  Making this easy to use will certainly bring more users to Sympy.
-Clearly defining and separating classes from the three distinct aspects of classical mechanics:  kinetic, inertia, and kinematic aspects.  By cleanly separating these three aspects, they can all be used independently.
-Create the Particle and RigidBody classes as container classes for the types of classes relevant to the Newton-Euler equations.
-Equations of motion for systems with kinematic constraints (holonomic or nonholonomic) are dealt with very differently by the different dynamic approaches.  These kinematic constraints need to be managed separate from the dynamics, but their inclusion in the kinematics portion of PyDy needs to be done in a generic way that is usable by the different approaches to formulating dynamic equations.  These constraints introduce closed loops in the kinematic tree and these closed loops need to be identified and handled appropriately.  The class design will include appropriate classes or class methods to handle these types of constraints.
-Defining an fairly strict API for how to describe a dynamics problem and ensure all examples illustrate follow the same approach.
-Improve Functionality:  Once the class structure is reorganized and cleanly defined, adding new functionality will become much easier.  New functionality that is needed in PyDy includes:
-Adding quaternions as a way to describe orientation.
-Implementing the kinematic differential equations for all 24 of the Euler Angle conventions.
-Implementing kinematic differential equations for quaternions.
-Intelligently handle kinematic constraints in a way that is user friendly.  Most holonomic constraints are nonlinear, while most nonholonomic constraints are linear in the time derivatives of the coordinates.  Each of these constraints pose unique symbolic implementation challenges.
-Implement Kane’s approach for directly deriving linearized equations of motion.  Stability analysis or linear feedback control design is the end goal of many analysts, and in this case directly deriving linear equations is extremely beneficial.
-Implement Kane’s approach for deriving steady equations of motion.
-Improve code generation capabilities.  If numerical analysis of equations generated by PyDy is desired, there are certain standard forms the equations should be put in (i.e., for integrating ODE’s the equations need to be in first order form with a function that defines the right hand side of dx/dt = f(t,x)).  Clearly define a way to identify which quantities/equations should be “output”, and the format in which they should be output for use with the most common scientific packages (Scipy/Numpy/GSL/OpenOpt/Matlab/Octave/Simulink).
-Equation of motion unittests.  Currently, there are no unittests for the equations of motion that are generated by PyDy.  These need to be implemented so that as changes and refinements to algorithms are made, it can be ensured that the correct equations are still being derived.  The first tests of the motion equation derivation will be for simple systems, such as a particle, a pendulum, a double pendulum, and a rolling disc, all of which have well known and published equations of motion.
-Integration into Sympy.  Make PyDy a module of sympy/physics/classical and clearly document all functionality.  This step will involve improving PyDy documentation by adding it to the Sympy site and creating a Sphinx site for more detailed PyDy examples.
-Building more examples of use. -- ideas include 4-bar linkage, point foot walkers, spacecraft or aircraft models, systems with closed kinematic loops.
-Implement LaTeX printing of symbolic vector quantities. It is a common task to perform symbolic manipulation and then output LaTeX code, so PyDy will be extended to output specialized LaTeX printing of 3D vector quantities. 
-Submit a paper to Journal of Open Research Computation.  The paper will illustrate how PyDy works and that it correctly performs kinematic and dynamic analysis of many common systems.
+### 1. **PyDy Development Planning.** Keeping the Roadmap and Project Description in mind, decide on how the existing code can be reused and integrated into SymPy.  This will include familiarization with SymPy and planning the class structure reorganization, so coding can start right away during the GSoC.  
+### 2. **Class structure reorganization.**  Currently objects specific to kinematics, kinetics, and inertia have attributes that are specific to dynamics and/or the method associated with deriving the equations of motion.  A comprehensive class analysis of all objects is needed so that clear separation of functionality can be achieved.  To be specific, PyDy needs to be restructured for the following reasons:
+* Enable symbolic 3D vector analysis to be performed without needing to specify anything related to dynamics.  This is a very general type of analysis that is commonly encountered in math, physics, and engineering curriculum.  Making this easy to use will certainly bring more users to Sympy.
+* Clearly defining and separating classes from the three distinct aspects of classical mechanics:  kinetic, inertia, and kinematic aspects.  By cleanly separating these three aspects, they can all be used independently.
+* Create the Particle and RigidBody classes as container classes for the types of classes relevant to the Newton-Euler equations.
+* Equations of motion for systems with kinematic constraints (holonomic or nonholonomic) are dealt with very differently by the different dynamic approaches.  These kinematic constraints need to be managed separate from the dynamics, but their inclusion in the kinematics portion of PyDy needs to be done in a generic way that is usable by the different approaches to formulating dynamic equations.  These constraints introduce closed loops in the kinematic tree and these closed loops need to be identified and handled appropriately.  The class design will include appropriate classes or class methods to handle these types of constraints.
+* Defining an fairly strict API for how to describe a dynamics problem and ensure all examples illustrate follow the same approach.
+### 3. **Improve Functionality:**  Once the class structure is reorganized and cleanly defined, adding new functionality will become much easier.  New functionality that is needed in PyDy includes:
+* Adding quaternions as a way to describe orientation.
+* Implementing the kinematic differential equations for all 24 of the Euler Angle conventions.
+* Implementing kinematic differential equations for quaternions.
+* Intelligently handle kinematic constraints in a way that is user friendly.  Most holonomic constraints are nonlinear, while most nonholonomic constraints are linear in the time derivatives of the coordinates.  Each of these constraints pose unique symbolic implementation challenges.
+* Implement Kane’s approach for directly deriving linearized equations of motion.  Stability analysis or linear feedback control design is the end goal of many analysts, and in this case directly deriving linear equations is extremely beneficial.
+* Implement Kane’s approach for deriving steady equations of motion.
+* Improve code generation capabilities.  If numerical analysis of equations generated by PyDy is desired, there are certain standard forms the equations should be put in (i.e., for integrating ODE’s the equations need to be in first order form with a function that defines the right hand side of dx/dt = f(t,x)).  Clearly define a way to identify which quantities/equations should be “output”, and the format in which they should be output for use with the most common scientific packages (Scipy/Numpy/GSL/OpenOpt/Matlab/Octave/Simulink).
+### 4. **Equation of motion unittests. ** Currently, there are no unittests for the equations of motion that are generated by PyDy.  These need to be implemented so that as changes and refinements to algorithms are made, it can be ensured that the correct equations are still being derived.  The first tests of the motion equation derivation will be for simple systems, such as a particle, a pendulum, a double pendulum, and a rolling disc, all of which have well known and published equations of motion.
+### 5. **Integration into Sympy. ** Make PyDy a module of sympy/physics/classical and clearly document all functionality.  This step will involve improving PyDy documentation by adding it to the Sympy site and creating a Sphinx site for more detailed PyDy examples.
+### 6. **Building more examples of use.** -- ideas include 4-bar linkage, point foot walkers, spacecraft or aircraft models, systems with closed kinematic loops.
+### 7. **Implement LaTeX printing of symbolic vector quantities.** It is a common task to perform symbolic manipulation and then output LaTeX code, so PyDy will be extended to output specialized LaTeX printing of 3D vector quantities. 
+### 8. **Submit a paper to Journal of Open Research Computation.**  The paper will illustrate how PyDy works and that it correctly performs kinematic and dynamic analysis of many common systems.
 
 
-### Summer Timeline
-
-Before Summer:  Sympy familiarization and planning of PyDy Class Structure Reorganization and Design.
-Week 1 - Week 2: Class Structure Reorganization Implementation
-Week 3 - Week 4: Improve Functionality
-Week 5: Equation of motion unittests
-Week 6: Integration into Sympy
-Week 7 - Week 8: Building more examples of use
-Week 9 - Week 10: Implement LaTeX printing of symbolic vector quanitites
-Week 11 - Week 12:  Polish and submit journal paper and verify documentation and test coverage.
+## Summer Timeline
+* Before Summer:  Sympy familiarization and planning of PyDy Class Structure Reorganization and Design.
+* Week 1 - Week 2: Class Structure Reorganization Implementation
+* Week 3 - Week 4: Improve Functionality
+* Week 5: Equation of motion unittests
+* Week 6: Integration into Sympy
+* Week 7 - Week 8: Building more examples of use
+* Week 9 - Week 10: Implement LaTeX printing of symbolic vector quanitites
+* Week 11 - Week 12:  Polish and submit journal paper and verify documentation and test coverage.
