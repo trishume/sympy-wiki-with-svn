@@ -23,3 +23,4 @@ Project Proposals:
 * [GSoC 2011 Application Frank Kreimendahl: Matrix Abstraction and Sparse Matrices](Frank-Kreimendahl---GSoC-2011)
 * [[GSoC 2011 Application Pavel Fedotov: Multivariate polynomials and factorization]]
 * [[GSoC 2011 Application Hector1618 : Complex Analysis]]
+* [[GSoC 2011 Application Oscar Najera: Abstract Dirac notation]]
