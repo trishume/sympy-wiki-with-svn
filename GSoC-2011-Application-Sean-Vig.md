@@ -18,7 +18,7 @@ Spin dynamics is an important part of dealing with quantum systems. The current 
 ## Final product
 
 * Clebsch-Gordon module: Implement a new class which allows for the creation of Clebsch-Gordon coefficients and the symbolic manipulation of these coefficients
-* Coupled spin states: Implement classes inheriting from the current Jx/Jy/Jz spin states which will allow the state to be defined as coupled spin states of multiple particles.
+* Coupled spin states: Extend the functionality of the current Jx/Jy/Jz spin states which will allow the state to be defined as coupled spin states of multiple particles.
 * Uncoupled spin states: Work with existing Jx/Jy/Jz states and expand the implementation such that taking the TensorProduct of states will represent that these states are written in the uncoupled basis.
 * Integration of coefficients with spin algebra: Implement functions such that states can be projected between the coupled and uncoupled bases, allowing calculations such as the evaluation of innerproducts.
 * Integration of new bases with spin operators: Make spin operators act properly on the new spin states, which includes implementing a means of defining the basis and space over which spin operators act.
@@ -89,11 +89,38 @@ Finalize project, merging any final documentation, tests and bug fixes, and penc
 
 * Clebsch-Gordon symmetries
 
-TODO
+Symmetry relations on the coefficients should hold, such as
+```python
+CG(j,m,j1,m1,j2,m2)==(-1)**(j1+j2-j)*CG(j,-m,j1,-m1,j2,-m2)
+```
+In addition, expressions involving sums and products of Clebsch-Gordon coefficients should be simplified where possible by implemented relations:
+```python
+CG(0,m,1/2,1/2,1/2,-1/2)*CG(0,mprime,1/2,1/2,1/2,-1/2)+CG(0,m,1/2,-1/2,1/2,1/2)*CG(0,mprime,1/2,-1/2,1/2,1/2)==KroneckerDelta(m,mprime)
+```
+These can also be evaluated using the existing means of evaluation.
+```python
+CG(1,0,1/2,1/2,1/2,-1/2).doit() == 1/sqrt(2)
+```
 
 * Projecting states
 
-TODO
+One of the main uses of the Clebsch-Gordon coefficients is being able to rewrite states in terms of different bases. First, projecting coupled states onto the upcoupled basis:
+```python
+JzKet(3/2,1/2,coupled=(1,1/2)).rewrite('Jz') == CG(3/2,1/2,1,1,1/2,-1/2)*TensorProduct(JzKet(1,1),JzKet(1/2,-1/2))+GC(3/2,1/2,1,0,1/2,1/2)*TensorProduct(JzKet(1,0),JzKet(1/2,-1/2))
+```
+Similarly for acting from the product space back to the coupled space:
+```python
+TensorProduct(JzKet(1,1),JzKet(1,-1)).rewrite('J2') == CG(2,0,1,1,1,-1)*JzKet(2,0,coupled=(1,1))+CG(1,0,1,1,1,-1)*JzKet(1,0,coupled=(1,1))+CG(0,0,1,1,1,-1)*JzKet(0,0,coupled=(1,1))
+```
+This would allow innerproducts between states to be evaluated:
+```python
+Innerproduct(JzKet(1,0,coupled=(1/2,1/2)),TensorProduct(JzKet(1/2,1/2),JzKet(1/2,-1/2))) == CG(1,0,1/2,1/2,1/2,-1/2)
+```
+Ideally, this operation would be implemented symbolically so that we could take arbitrary states and recover the expansion in term of a sum:
+```python
+j,m,j1,j2 = symbols('j m j1 j2')
+JzKet(j,m,coupled=(j1,j2)).rewrite('Jz') == Sum(CG(j,m,j1,m1,j2,m2)*TensorProduct(JzKet(j1,m1),JzKet(j2,m2)),(m1,-j1,j1),(m2,-j2,j2))
+```
 
 * Acting operators on states
 
