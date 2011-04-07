@@ -52,6 +52,6 @@ By thinking about how to represent operators that depend on continuous variables
 
 * **Example systems**: Here I will provide a more complete list of the different example systems that I think are feasible to be implemented: Free particle in 1D, 2D, and 3D; Particle in an infinite potential well and particle in a finite potential well in 1D, 2D, and 3D; delta function potential; rectangular potential barrier (tunneling effect); quantum harmonic oscillator in 1D, 2D, and 3D, including creation and annihilation operators; hydrogen atom in spherical coordinates.
 
+* **Schrodinger equation solvers**: This project component would have to be explored a bit more if time permits at the end of the timeframe. However, the basic idea would be to use separate methods for the stationary and time dependent Schrodinger equations. The time dependent equation could be handled, at least in 1D and 2D, via the Crank-Nicolson method ([[http://en.wikipedia.org/wiki/Crank%E2%80%93Nicolson_method#Example:_1D_diffusion]]. For the time independent equation, we might consider sparse matrix representations or Cartesian mesh finite difference methods.
 
-
-
+* **Integrals of wavefunctions**: Framing the entire implementation of this system is the requirement that we must actually be able to integrate the wave functions that are produced by representing kets in a particular basis. With this we can then actually use the wavefunctions in integrals to calculate expectation values or with Delta functions. 
