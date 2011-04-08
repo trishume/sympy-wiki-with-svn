@@ -26,12 +26,16 @@ Coding Skills
 * At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. Among Python's many benefits is the fact that it is very easy to use, requiring fewer man-hours of coding time per output than just about any other programming language.
 * I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. 
 
-My Project
-----------
+SymPy: Improving multivariate polynomials
+-----------------------------------------
 
-* SymPy: Improving multivariate polynomials. 
-* Status: SymPy is an open source computer algebra system (CAS) written in Python. Support for multivariate polynomials is an important tool in algebra systems, very useful by its own, also used in symbolic integration algorithms, simplification of expressions, partial fractions, etc. Currently SymPy has quite efficient implementation of multivariate polynomials. Nevertheless there is a space where polynomial module can be improved. 
-* Idea: Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach [Subresultant] and Gröbner bases [Gröbner]).
+## Status
+
+SymPy is an open source computer algebra system (CAS) written in Python. Support for multivariate polynomials is an important tool in algebra systems, very useful by its own, also used in symbolic integration algorithms, simplification of expressions, partial fractions, etc. Currently SymPy has quite efficient implementation of multivariate polynomials. Nevertheless there is a space where polynomial module can be improved. 
+
+## Idea
+
+Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach [Subresultant] and Gröbner bases [Gröbner]).
 
 It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
 
@@ -41,8 +45,13 @@ I see further development in implementing efficient multivariate factorization o
 
 Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
 
+## My Qualifications
+
 * I choose this idea because here I should implement several math algorithms and this side of programming is one of the most attractive for me. 
 * I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
+
+## Schedule
+
 * I have to finish my master project at first days of June and need to work hard on it before this dates. But after 5-th of June I will be free from any work and studies. It means that I'm ready to a lot of time on GSoC. 
 I see the following plan for me: 
     - April - June 5 - 8-10 hours per week. 
@@ -53,10 +62,16 @@ I see the following plan for me:
     - Then I will deep inside polys module looking for things that could be improved in easy way. 
     - After I'll get closer with algorithms and methods listed in _Idea_ paragraph and polys module I will choose one of the method provided efficient multivariate polynomial arithmetics and GCD algorithm and implement it. 
 
+## Sources
 
 [EEZ-Wang]
+
 [EEZ-GCD]
+
 [Subresultant]
+
 [Gröbner]
+
 [Monagan]
+
 [Mattpap]
