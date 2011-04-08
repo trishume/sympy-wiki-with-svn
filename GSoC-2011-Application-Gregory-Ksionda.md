@@ -92,5 +92,5 @@ After the summer session has ended, assuming all has gone well, I would like to 
 
 ##Links  
 
-[0] http://code.google.com/p/sympy/issues/detail?id=2068  
-[1] https://github.com/sympy/sympy/pull/204
+[0] <http://code.google.com/p/sympy/issues/detail?id=2068>  
+[1] <https://github.com/sympy/sympy/pull/204>  
