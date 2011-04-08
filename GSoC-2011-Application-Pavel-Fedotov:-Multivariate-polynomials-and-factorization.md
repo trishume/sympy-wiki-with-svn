@@ -17,7 +17,7 @@ Coding Skills
    - [[http://rain.ifmo.ru/~fedotov/pub/Noplag.html]]. 
 * I'm also expirienced with Python, C, C++, C#, Matlab, Maple, Delphi, Haskell, MPS. 
 * At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. Among Python's many benefits is the fact that it is very easy to use, requiring fewer man-hours of coding time per output than just about any other programming language.
-* I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. 
+* I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. Msysgit is installed on my PC. 
 * I've graduated Academy of Modern Software Engineering. 
 
 SymPy: Improving multivariate polynomials
@@ -33,9 +33,11 @@ Support for polynomials was significantly improved over the past year. Most nota
 
 It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
 
-The next step is implementing algorithms for polynomial multiplication and division based on heaps [Monagan2007heaps]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials). This approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
+The next step is implementing algorithms for polynomial multiplication and division based on heaps [Monagan2007heaps]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials). Such approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
 
 I see further development in implementing efficient multivariate factorization over finite fields [Bernardin].
+
+Next steps may be aimed on support of non-commutative polynomials [Noncommutative]. 
 
 Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
 
@@ -53,15 +55,27 @@ Majority of ideas was derived from Mateusz Paprocki [Mattpap].
 
 ## Schedule [not finished yet]
 
-* I have to finish my master project at first days of June and need to work hard on it before this dates. But after 5-th of June I will be free from any work and studies. It means that I'm ready to a lot of time on GSoC. 
-I see the following plan for me: 
+* I have to finish my master project at last days of May and need to work hard on it before this dates. But after that, in June I will be free from any work and studies. It means that I will have a lot of time for GSoC. 
+According to this I see the following time distribution for GSoC: 
     - April - May - 8-10 hours per week. 
-    - June  - August 30 - 40-50 hours per week. 
-* Schedule. First steps. 
-    - I've started with installing git and studying how to work with it. 
-    - Then I'll clone repository of sympy and I'll write some tests for some parts of sympy or submit other EasyToFix patch. 
-    - Then I will deep inside polys module looking for things that could be improved in easy way. 
-    - After I'll get closer with algorithms and methods listed in _Idea_ paragraph and polys module I will choose one of the method provided efficient multivariate polynomial arithmetics and GCD algorithm and implement it. 
+    - June  - August - 40-50 hours per week. 
+
+* Schedule. 
+    * April - May 
+        - read documentation, learn the sources of SymPy, especially _polys_ module. 
+        - read the resources that I will need to implement the algorithms (see _Sources_ paragraph). 
+        - figure out how to use and configure git for work, make some patches (add tests, fix bugs, push EasyToFix pathces and patches related to polys module).
+        - think out and come to agreement with mentor about design of effective multivariate polynomials with different representations - dense recursive and distributed. 
+
+    * June - August
+        - start with implementing Karatsuba's polynomial multiplication algorithm. Althought this algorithm manipulates with univariate polynomials I think this is a good start point of improving _polys_ module. Implementing of well-known algorithm helps me to concentrate here on commit procedure rules, common development workflow in SymPy and prepares me for future more complicated commits. 
+        - integrate Karatsuba's polynomial multiplication algorithm instead of classic multiplication algorithm where it brings profit. 
+        - implement EEZ-GCD algorithm. 
+        - implement coefficient prediction sub-algorithm of EEZ. 
+        - implement arithmetic, i.e. addition, subtraction, multiplication and division of multivariate polynomials with usage of dynamic arrays, heaps and packed exponent vectors data structures. 
+        - integrate above arithmetic algorithms for sparse multivariate polynomials. 
+        - implement efficient multivariate polynomial factorization over finite fields. 
+        - continue work with _polys_ module. Implement support of non-commutative polynomials. 
 
 ## Sources
 
@@ -78,3 +92,5 @@ I see the following plan for me:
 [Monagan]
 
 [Bernardin, Monagan]
+
+[Noncommutative]
