@@ -27,7 +27,7 @@ Currently ironing out issue 2068 [0] with pull request 204 [1].
 Introduced myself on the mailing list at [2].  
 Been asking for help and talking a bit on the IRC.  
 
-Posted this wiki on the mailing list at [3] (coming soon).  
+Posted this wiki on the mailing list at [3].  
 
 ## The Project
 
@@ -95,4 +95,4 @@ After the summer session has ended, assuming all has gone well, I would like to 
 [0] <http://code.google.com/p/sympy/issues/detail?id=2068>  
 [1] <https://github.com/sympy/sympy/pull/204>  
 [2] <http://groups.google.com/group/sympy/browse_thread/thread/b9f82a41d8074217/0a1cc488d1f97668?lnk=gst&q=Gregory#0a1cc488d1f97668>  
-
+[3] <http://groups.google.com/group/sympy/browse_thread/thread/b443b6a8d151e51d>
