@@ -23,15 +23,24 @@ Coding Skills
    - [[http://rain.ifmo.ru/~fedotov/pub/GraphEditor.html]];  
    - [[http://rain.ifmo.ru/~fedotov/pub/Noplag.html]]. 
 * I'm also expirienced with Python, C, C++, C#, Matlab, Maple, Delphi, Haskell, MPS. 
-* At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. 
+* At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. Among Python's many benefits is the fact that it is very easy to use, requiring fewer man-hours of coding time per output than just about any other programming language.
 * I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. 
 
 My Project
 ----------
 
 * SymPy: Improving multivariate polynomials. 
-* Status: Factorization of multivariate polynomials is an important tool in algebra systems, very useful by its own, also used in symbolic integration algorithms, simplification of expressions, partial fractions, etc. Currently multivariate factorization algorithm is based on Kronecker's method, which is impractical for real life problems. Undergo there is implementation of Wang's algorithm, the most widely used method for the task.
-* Idea: Start with implementing efficient multivariate polynomial arithmetics and GCD algorithm. You do this by improving existing code, which is based on recursive dense representation or implement new methods based on your research in the field. There are many interesting methods, like Yan's geobuckets or heap based algorithms (Monagan & Pearce). Having this, implement efficient GCD algorithm over integers, which is not a heuristic, e.g. Zippel's SPMOD, Musser's EZ-GCD, Wang's EEZ-GCD. Help with implementing Wang's EEZ factorization algorithm or implement your favourite method, e.g. Gao's partial differential equations approach. You can go further and extend all this to polynomials with coefficients in algebraic domains or implement efficient multivariate factorization over finite fields.
+* Status: SymPy is an open source computer algebra system (CAS) written in Python. Support for multivariate polynomials is an important tool in algebra systems, very useful by its own, also used in symbolic integration algorithms, simplification of expressions, partial fractions, etc. Currently SymPy has quite efficient implementation of multivariate polynomials. Nevertheless there is a space where polynomial module can be improved. 
+* Idea: Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach [Subresultant] and Gröbner bases [Gröbner]).
+
+It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
+
+The next step is implementing algorithms for polynomial multiplication and division based on heaps [Monagan2007heaps]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials). This approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
+
+I see further development in implementing efficient multivariate factorization over finite fields.
+
+Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
+
 * I choose this idea because here I should implement several math algorithms and this side of programming is one of the most attractive for me. 
 * I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
 * I have to finish my master project at first days of June and need to work hard on it before this dates. But after 5-th of June I will be free from any work and studies. It means that I'm ready to a lot of time on GSoC. 
@@ -43,3 +52,11 @@ I see the following plan for me:
     - Then I'll clone repository of sympy and I'll write some tests for some parts of sympy or submit other EasyToFix patch. 
     - Then I will deep inside polys module looking for things that could be improved in easy way. 
     - After I'll get closer with algorithms and methods listed in _Idea_ paragraph and polys module I will choose one of the method provided efficient multivariate polynomial arithmetics and GCD algorithm and implement it. 
+
+
+[EEZ-Wang]
+[EEZ-GCD]
+[Subresultant]
+[Gröbner]
+[Monagan]
+[Mattpap]
