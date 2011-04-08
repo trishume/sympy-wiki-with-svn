@@ -30,15 +30,15 @@ SymPy is an open source computer algebra system (CAS) written in Python. Support
 
 The objective of the project is significantly acceleration of calculations for sparse multivariate polynomials and extension of multivariate polynomials capabilities in SymPy.
 
-Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach and Gröbner bases).
+Support for polynomials was significantly improved in SymPy over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach and Gröbner bases).
 
-It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
+It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [EEZ-Wang] (supposed to give huge speed ups for large sparse polynomials).
 
-The next step is implementing algorithms for polynomial arithmetics based on heaps [Monagan, Monagan2]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials) [Monagan3]. Such approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
+The next step is implementing algorithms for polynomial arithmetics based on heaps [Monagan, Monagan2]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials) [Monagan3][Paprocki]. Such approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation.
 
 I see further development in implementing efficient multivariate factorization over finite fields [Bernardin].
 
-Next steps may be aimed on support of non-commutative polynomials [Cohen]. 
+Next steps may be aimed on support of non-commutative polynomials [Cohen].
 
 Majority of ideas was derived from Mateusz Paprocki [Paprocki]. 
 
@@ -53,7 +53,7 @@ Majority of ideas was derived from Mateusz Paprocki [Paprocki].
     - Software Design;
     - Programming Paradigms. 
 * I've graduated Academy of Modern Software Engineering. 
-* I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
+* I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented various math methods and algorithms. This experience was interesting and successful.
 
 ## Schedule
 
