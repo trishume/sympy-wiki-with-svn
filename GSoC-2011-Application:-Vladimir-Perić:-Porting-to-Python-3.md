@@ -1,23 +1,23 @@
 ## Abstract
-Python 3 represents the future of the language. If SymPy is to be used as a library, it will have to be ported to Python 3. In order to accomplish this, a system for automatic testing will need to be established. A robust test system will ensure no regression happen and will ease the maintaining of a dual code-base. After the main porting is done, my goal is to attempt to support alternative Python compilers, to further ensure compatibility and reduce reliance on implementation details. 
+Python 3 represents the future of the language. If SymPy is to be used as a library, it will have to be ported to Python 3. In order to accomplish this, a system for automatic testing will need to be established. A robust test system will ensure no regression happen and will ease the maintaining of the code-base. After the main porting is done, my goal is to attempt to support alternative Python compilers, to further ensure compatibility and reduce reliance on implementation details. 
 
 
 ## Synopsis
 
 The first priority is to setup a system for automated testing across platforms and Python versions, based on either buildbot or Jenkins. This will ease current development, as some care already needs to be put into support Python 2.4 - 2.7, and will ensure no regressions happen as the porting commences. Afterward, porting will commence following the steps outlined in [this guide](http://techspot.zzzeek.org/2011/01/24/zzzeek-s-guide-to-python-3-porting/): use the -3 flag to root out obvious issues, and then run the 2to3 tool in a private branch and choose the right method of handling the problems that arise. In parallel, I will attempt to educate the current developers (and GSoC students) on writing Python 3 compatible code during their work, to minimize the chances of problems with integrating new code.
 
-I plan to use a dual code-base, which means that the 2to3 tool will be run automatically when the Python 3 version will be built; using distutils and distribute, it is easy to run the 2to3 tool automatically when we are building for Python 3, which is the preferred way of maintaining such a dual code-base. It is also possible to write and use custom "fixers" (rules that 2to3 uses when converting to Python 3 code) to cover any special cases which arise. 
+I plan to use a single code-base, which means that the 2to3 tool will be run automatically when the Python 3 version will be built; using distutils and distribute, it is easy to run the 2to3 tool automatically when we are building for Python 3, which is the preferred way of maintaining such a single code-base. It is also possible to write and use custom "fixers" (rules that 2to3 uses when converting to Python 3 code) to cover any special cases which arise. Using a classic dual code-base, with separate versions for Python 2 and 3, would only make development slower and spread the developers even thinner.
 
 After the main porting is completed and any bugs found ironed out, in the remaining time I intend to focus on making SymPy work on alternative Python 3 compilers, such as PyPy, Jython, IronPython. Of the three, PyPy has the most rapid pace of development and will be my first goal. This will eliminate the reliance on some implementation details of the official compiler, which leads to improved cross-platform compatibility and makes the code more robust. 
 
-In essence, my project is focused solely on infrastructure. None of the above-mentioned goals introduce any features at all, and might even make development harder in the short-term (as developers must write code for a dual code base). However, it is my belief that a strong infrastructure is essential for a project, especially a library, and that it will in the long-term help with implementing major features in a safe and, most-importantly, stable manner.
+In essence, my project is focused solely on infrastructure. None of the above-mentioned goals introduce any features at all, and might even make development harder in the short-term (as developers must write code for a more complex code base). However, it is my belief that a strong infrastructure is essential for a project, especially a library, and that it will in the long-term help with implementing major features in a safe and, most-importantly, stable manner.
 
 Post-GSoC, I would like to extend the test system to fulfill a benchmarking role, perhaps similar to the [PyPy Speed Center](http://speed.pypy.org/). I will also be available to help with further problems related to Python 3 support (for example, porting the works of other students to have them merged faster) and continue working on alternative compilers, as circumstances permit.
 
 ## Deliverables
 
  * Establish an automated building/testing system. 
- * Port to Python 3, using a dual code base.
+ * Port to Python 3, using a single code base.
  * (time permitting) Work on PyPy compatibility. 
 
 
@@ -31,7 +31,7 @@ Unfortunately, the beginning of my coding period coincides with start of all of 
  * Familiarize myself with the code in different parts of SymPy. Ascertain if our current testing framework is robust enough to handle multiple Python version; if required, write additional tests and encourage other developers and students to do the same.
  * Work on fixing all the warnings that "Python -3" produces, which is the first step towards porting. It will be important to identify the most critical parts of SymPy, as these should be ported first.
  * Further research Python 3 porting; contact various projects for advice or ideas. Notably, I wish to contact the developer of [mpmath](http://code.google.com/p/mpmath/), which was recently ported to Python 3 and might have faced similar problems; I also want to contact the author of the guide mentioned in the synopsis, as he might have further insights. Investigate the specific problems related to supporting both Python 2 and 3 in the same code base.
- * Bond with the community: get to know the developers responsible for the major parts of SymPy, so that I know who to turn to if problems arise; educate the current developers and new GSoC students on the good practices related to writing a dual-code base.
+ * Bond with the community: get to know the developers responsible for the major parts of SymPy, so that I know who to turn to if problems arise; educate the current developers and new GSoC students on best practices with such a code base.
 
 **May 23 – June 11 (Official coding period starts):**
 
@@ -69,3 +69,5 @@ My obligatory patch to SymPy was a trivial contribution in eliminating the depre
 ## Further reading
 
 [zzzeek's guide to Python 3 porting](http://techspot.zzzeek.org/2011/01/24/zzzeek-s-guide-to-python-3-porting/): The guide linked to in the synopsis. It has a detailed description of the process, including the more practical questions, as well as links to further resources. 
+
+[Official Porting to Python 3 guide](http://docs.python.org/dev/howto/pyporting.html#use-2to3): Further information related to supporting specific versions of Python, and other information.
