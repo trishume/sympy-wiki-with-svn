@@ -23,7 +23,11 @@ The languages I code in include C, Java, and Python (for current project purpose
 
 ## Support
 
-Currently ironing out issue 2068 [0] with pull request 204 [1].
+Currently ironing out issue 2068 [0] with pull request 204 [1].  
+Introduced myself on the mailing list at [2].  
+Been asking for help and talking a bit on the IRC.  
+
+Posted this wiki on the mailing list at [4].  
 
 ## The Project
 
