@@ -15,14 +15,15 @@ I plan to implement the Solovay-Kitaev algorithm using Nielsen and Dawson [0], N
 The default set \(G\) would be defined to be \(H\), \(T\), and \(T^{-1}\) for \(SU(2)\) and for \(SU(4)\) the same set but adding the \(CNOT\) gate. However if time allows I would like to allow for the user to specify a different set to use, given it complies with the requirements. That is all gates from the set are in \(SU(d)\) and their conjugated transpose is also in the set, and the set generates \(SU(d)\). It follows that if the user wishes to define a set, he/she would have to run the preparatory stage in order to use the SK algorithm. The idea would be to test this with \(SU(2)\) and \(SU(4)\) while having the implementation be extensible to \(d>4\) but not recommend it for the time being given the memory and time requirements.
 
 The idea is porting Pham's implementation in Python/numpy into Python/SymPy removing as much numpy dependencies as possible. This is possible since sympy.physics.quantum already has classes for gates, operators, and related methods. A possible class breakdown based on Pham's would be something as follows:  
+
 * **quantum[.skc]generatesu2:** this would define the default set for \(SU(2)\) and the associated settings for the preparatory stage. The settings include simplification rules, corresponding hilbert space, size of the eye.  
 * **quantum[.skc].generatesu4:** same as the last but for \(SU(4)\).  
 * **quantum[.skc].generate:** build the basic approximations and save the generations into files using the settings specified in one of the two modules before.  
 * **quantum[.skc].buildtree:** process the generations produced into a kd tree and save into a file to allow search during the sk algorithm.  
 * **quantum[.skc].searchtree:** for a given gate \(U\) it will search the tree for the generation that gives the best approximation using the operator norm as the distance.  
 * **quantum[.skc].simplify:** Engine to simplify gate sequences, since the basic approximation are all the possible permutation of the gates within the set \(G\) less than a length \(l_0\), simplification is needed to avoid having sequences that are equivalent.  
-* **quantum[.skc].bcgdecomposition:** This module will do a balanced group commutation decomposition with \(UU^{-1}\) as input. The result would ve \(V\),\(W\) such that \(VWV^{-1}W^{-1}=U\).  
-* **quantum[.skc].skc:** This will be the module someone would use to get an approximation \(S\) for an arbitrary gate \(U\)  
+* **quantum[.skc].bgcdecomposition:** This module will do a balanced group commutation decomposition with \(UU^{-1}\) as input. The result would ve \(V\),\(W\) such that \(VWV^{-1}W^{-1}=U\).  
+* **quantum[.skc].skc:** This will be the module someone would use to get an approximation \(S\) for an arbitrary gate \(U\). So this is the module where the sk algorithm is actually implemented.  
 
 Besides this there are some things that need implementation for example an implementation of kdtree, not sure where we would put this in SymPy since it is not something specific for sympy.physics.quantum. I would be leveraging quantum.tensorproduct quantum.gate, quantum.hilbert, quantum.dagger, quantum.matrixutils, quantum.operator and others. The operator norm would need to be added to quantum.operator since it it the basic condition in the algorithm. Further experimenting and exploration of SymPy's and Pham's codebase will help me refine the class structure and understand what is missing on SymPy to make the Solovay-Kitaev compiling to work.
 
@@ -32,16 +33,18 @@ Besides [0], [1], and [2], my first approach would be to read as much informatio
 As part of my school’s graduation reqs I need to work jointly with a professor on a project over the period of about one year and I plan on working with my QIP professor in quantum computing related research. So having sympy.physics.quantum as a tool would really help me. I plan on continuing to collaborate on SymPy well after the summer and continue to improve work in the quantum module but also on the other parts of SymPy.
 
 ## Schedule
-**Week 0 and before:** Read as much as possible about the Solovay-Kitaev algorithm, get a more in depth knowledge of the sympy's codebase. This would also work as a community bonding period. I finish with all my school related things by the beginning of May so before that I'll be working with limited time.
+**Week 0 and before:** Read as much as possible about the Solovay-Kitaev algorithm, get a more in depth knowledge of the sympy's codebase. This would also work as a community bonding period. I finish with all my school related things by the beginning of May so before that I'll be working with limited time. After being done with school I should be able to allocate 40-50 hrs/week. I mention the main modules in the schedule and things like the operator norm, modifications to existing modules, etc. would be implemented on a need basis. The idea would be to work as modular as possible to have various push ins throughout the summer. I work with a test driven approach, where I generate the basic test cases in the beginning so by the end of the implementation the basic tests pass and the testing after the dev phase is diminished.
 
 ### Beginning of program
-**Week 1:** Begin by laying down the
-**Week 2:**  
-**Week 5-7:**  
+**Week 1-2:** Implementation of kd tree based on Matej Drame's python implementation.  
+**Week 3:** Testing of kd tree, documentation, and getting code review to push in. Work on simplify.  
+**Week 4-5:** Work on generate, generatesu2, generatesu4.  
+**Week 6-7:** Work on buildtree, searchtree.
 ###Midterms
-**Week 8-9:**  
-**Week 10-11:**  
-**Week 12(-13):**  
+**Week 8:** Work on bgcdecomposition.  
+**Week 9:** Work skc.  
+**Week 10-11:** Testing and work on examples for documentation.  
+**Week 12(-13):** Code review, last bug fixes, finish pushing in everything.  
 
 ## Me
 * **Name:** Luis Garcia
@@ -57,4 +60,5 @@ My platform of choice is Mac OS X but also work on Windows and Linux. My distro 
 ## References
 [0]Dawson, Nielsen. The Solovay-Kitaev Algorithm. arXiv:quant-ph/0505030v2  
 [1]Nagy. On an implementation of the Solovay-Kitaev algorithm. arXiv:quant-ph/0606077v1  
-[2]Nielsen, Chuang. [Quantum Computation and Quantum Information](http://www.amazon.com/Quantum-Computation-Information-Cambridge-Sciences/dp/0521635039)
+[2]Nielsen, Chuang. [Quantum Computation and Quantum Information](http://www.amazon.com/Quantum-Computation-Information-Cambridge-Sciences/dp/0521635039)  
+[3] [Phalm's implementation](http://sourceforge.net/p/quantumcompiler/home/)
