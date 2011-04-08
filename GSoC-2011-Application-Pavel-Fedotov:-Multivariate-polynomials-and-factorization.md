@@ -53,14 +53,14 @@ Majority of ideas was derived from Mateusz Paprocki [Mattpap].
     - Programming Paradigms. 
 * I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
 
-## Schedule [not finished yet]
+## Schedule
 
 * I have to finish my master project at last days of May and need to work hard on it before this dates. But after that, in June I will be free from any work and studies. It means that I will have a lot of time for GSoC. 
 According to this I see the following time distribution for GSoC: 
     - April - May - 8-10 hours per week. 
     - June  - August - 40-50 hours per week. 
 
-* Schedule. 
+* Plan 
     * April - May 
         - read documentation, learn the sources of SymPy, especially _polys_ module. 
         - read the resources that I will need to implement the algorithms (see _Sources_ paragraph). 
@@ -77,7 +77,7 @@ According to this I see the following time distribution for GSoC:
         - implement efficient multivariate polynomial factorization over finite fields. 
         - continue work with _polys_ module. Implement support of non-commutative polynomials. 
 
-## Sources
+## Sources [not finished yet]
 
 [Mattpap] http://mattpap.github.com/masters-thesis/html/index.html
 
