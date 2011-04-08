@@ -4,6 +4,7 @@ List your GSoC2011 Project Proposal wiki page here
 
 Project Proposals:
 
+* [[GSoC 2011 Application Aashish Mishra]]
 * [GSoC 2011 Application Anatolii Koval: Perturbation theory](GSoC-2011-Application-Anatolii-Koval)
 * [[GSoC 2011 Application Ben McDonald: Optimising SymPy using Cython]]
 * [GSoC 2011 Application Frank Kreimendahl: Matrix Abstraction and Sparse Matrices](GSoC-2011-Application-Frank-Kreimendahl)
@@ -14,6 +15,7 @@ Project Proposals:
 * [[GSoC 2011 Application Jeremias Yehdegho: Implementing F5]]
 * [GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm](GSoC 2011 Application Luis-Garcia: Solovay Kitaev algorithm)
 * [[GSoC 2011 Application Matthew Rocklin: Random Variables]]
+* [[GSoC 2011 Application Nakul Kukar: Numerical Solvers for PDE]]
 * [[GSoC 2011 Application Oleksandr Gituliar]]
 * [[GSoC 2011 Application Oscar Najera: Abstract Dirac notation]]
 * [[GSoC 2011 Application Pavel Fedotov: Multivariate polynomials and factorization]]
