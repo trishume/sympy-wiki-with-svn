@@ -1,4 +1,4 @@
-# Gilbert Gede
+# GSoC 2011 Application Gilbert Gede: PyDy
 
 gilbertgede@gmail.com / ggede@ucdavis.edu 
 
