@@ -29,15 +29,15 @@ SymPy is an open source computer algebra system (CAS) written in Python. Support
 
 ## Idea
 
-Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach [Subresultant] and Gröbner bases [Gröbner]).
+Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach and Gröbner bases).
 
 It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
 
-The next step is implementing algorithms for polynomial multiplication and division based on heaps [Monagan2007heaps]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials). Such approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
+The next step is implementing algorithms for polynomial arithmetics based on heaps [Monagan, Monagan2]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials) [Monagan3]. Such approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
 
 I see further development in implementing efficient multivariate factorization over finite fields [Bernardin].
 
-Next steps may be aimed on support of non-commutative polynomials [Noncommutative]. 
+Next steps may be aimed on support of non-commutative polynomials [Cohen]. 
 
 Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
 
@@ -79,18 +79,18 @@ According to this I see the following time distribution for GSoC:
 
 ## Sources [not finished yet]
 
-[Mattpap] http://mattpap.github.com/masters-thesis/html/index.html
+[Mattpap] M. Paprocki. SymPy: Master’s Thesis. http://mattpap.github.com/masters-thesis/html/index.html
 
-[EEZ-Wang]
+[EEZ-Wang] P. S. Wang. An Improved Multivariate Polynomial Factoring Algorithm. Mathematics of Computation, Vol. 32, Oct. 1978, pp. 1215-1231. 
 
-[EEZ-GCD]
+[EEZ-GCD] P. S. Wang. The EEZ-GCD algorithm. http://portal.acm.org/citation.cfm?id=1089228
 
-[Subresultant]
+[Monagan] M. Monagan, R. Pearce. Polynomial multiplication and division using heap. http://www.cecm.sfu.ca/CAG/papers/SDMPheap08.pdf
 
-[Gröbner]
+[Monagan2] M. Monagan, R. Pearce. Polynomial Division Using Dynamic Arrays, Heaps, and Packed Exponent Vectors. Proceedings of CASC 2007, Springer (2007) 295-315.
 
-[Monagan]
+[Monagan3] M. Monagan, R. Pearce. Sparse Polynomial Multiplication and Division in Maple 14. http://www.cecm.sfu.ca/CAG/papers/SDMPmaple14.pdf
 
-[Bernardin, Monagan]
+[Bernardin] L. Bernardin, M. Monagan. Efficient Multivariate Factorization over Finite Fields. http://portal.acm.org/citation.cfm?id=677201
 
-[Noncommutative]
+[Cohen] A. Cohen. Non-commutative Polynomial Computations. http://www.win.tue.nl/~amc/pub/grobner/gbnp.pdf
