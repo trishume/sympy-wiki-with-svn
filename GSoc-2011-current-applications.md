@@ -25,3 +25,4 @@ Project Proposals:
 * [[GSoC 2011 Application Hector1618 : Complex Analysis]]
 * [[GSoC 2011 Application Oscar Najera: Abstract Dirac notation]]
 * [[GSoC 2011 Application Gilbert Gede: PyDy]]
+* [GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm](GSoc-2011-Application---Luis-Garcia---Solovay-Kitaev-algorithm)
