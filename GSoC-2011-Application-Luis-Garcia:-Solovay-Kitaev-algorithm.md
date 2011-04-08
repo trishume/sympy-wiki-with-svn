@@ -1,4 +1,4 @@
-#GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm
+#GSoC 2011 Application - Luis Garcia - Solovay-Kitaev algorithm
 ## Abstract
 The Solovay-Kitaev algorithm is an important step in the building of quantum computing as it provides a way of _compiling_ quantum algorithms with arbitrary \(U\) gates in \(SU(d)\) into sequences composed of gates from a fixed, finite set. The algorithm runs in \(polylog(1/e)\) time on a classical computer and returns a sequence of \(polylog(1/e)\) length, where \(e\) is the aimed accuracy. This algorithm requires a preparatory stage that is run once for each value of \(d\) required.
 
@@ -10,18 +10,25 @@ Another step forward to the construction of quantum computer is the Solovay-Kita
 In order to find the decomposition of an arbitrary \(U\) gate, the Solovay-Kitaev algorithm can be computed on a classical computer and it will give back the sequence \(S\) approximation for the desired accuracy. 
 
 ## Project Details
-I plan to implement the Solovay-Kitaev algorithm based on a first approach on Nielsen and Dawson [0] and implementing the preparatory stage based on Nagy [1].
+I plan to implement the Solovay-Kitaev algorithm based on a first approach on Nielsen and Dawson [0] and implementing the preparatory stage based on Nagy [1]. Based on Brian Granger's hint my first approach will be to port Paul Pham's implementation [4] into SymPy. Pham's implementation breaks it into three stages: generation, preparatory stage, where you generate the \(e_0\) approximations for arbitrary \(U\), build of search tree (this is needed for the actual algorithm), and finally the actual algorithm. The generation of the \(e_0\) sequences and the search tree is time consuming so Pham stores both as files and loads them into memory when they are needed.
 
-The preparatory stage implies on finding constant gate sequences up to length \(l_0\) that work as the base approximation upon which the Solovay-Kitaev algorithm builds recursively. Details of this can be found in [0]. This preparatory stage only needs to run once for a given set of gates \(G\) for \(SU(d)\).
-
-The default set G would be defined to be the Clifford group (Hadamard, CNOT, Pauli) and \(Pi/8\) gate. However if time allows I would like to allow for the user to specify a different set to use, given it complies with the requirements. That is all gates from the set are in \(SU(d)\) as well as their conjugated transpose and the set generates \(SU(d)\). It follows that if the user wishes to define a set, he/she would have to run the preparatory stage in order to use the SK algorithm.
+The default set G would be defined to be the Clifford group (Hadamard, CNOT, Pauli) and \(\pi/8\) gate. However if time allows I would like to allow for the user to specify a different set to use, given it complies with the requirements. That is all gates from the set are in \(SU(d)\) as well as their conjugated transpose and the set generates \(SU(d)\). It follows that if the user wishes to define a set, he/she would have to run the preparatory stage in order to use the SK algorithm. The idea would be to test this with \(SU(2)\) and \(SU(4)\) while having the implementation support \(d>4\) but not recommend it for the time being.
 
 Besides [0] and [1], my first approach would be to read as much information as possible about the theorem/algorithm. One of my other references would be Nielsen and Chuang [3]. I am currently taking a Quantum Information Processing class and we use [3] as our textbook so I’m familiar with it. In the class we cover quantum algorithms(Shor, Grover, Deutsch, Deutsch-Jozsa) , quantum circuits (QFT), adiabatic quantum computing, quantum information, compression, quantum entropy, quantum communication, quantum channels, quantum error correction, qkd, among others.
 
 As part of my school’s graduation reqs I need to work jointly with a professor on a project over the period of about one year and I plan on working with my QIP professor in quantum computing related research. So having sympy.physics.quantum as a tool would really help me. I plan on continuing to collaborate on SymPy well after the summer and continue to improve work in the quantum module but also on the other parts of SymPy.
 
 ## Schedule
-**Week 0 and before:** Read on the 
+**Week 0 and before:** Read as much as possible about the Solovay-Kitaev algorithm, get a more in depth knowledge of the sympy's codebase. This would also work as a community bonding period. I finish with all my school related things by the beginning of May so before that I'll be working with limited time.
+
+### Beginning of program
+**Week 1:** Definition of class structure, methods, and general, broad breakdown of the implementation. This requires to have a very good idea of SymPy's organization and the resources available to see what I can reuse and what needs to be done from scratch. On a general perspective I plan to divide work into two big the preparation stage and the actual algorithm. My idea right now is having   
+**Week 2:**  
+**Week 5-7:**  
+###Midterms
+**Week 8-9:**  
+**Week 10-11:**  
+**Week 12(-13):**  
 
 ## Me
 * **Name:** Luis Garcia
@@ -35,3 +42,6 @@ My completed coursework so far has  included: Classical mechanics, Electromagn
 My platform of choice is Mac OS X but also work on Windows and Linux. My distro of choice is Fedora.
 
 ## References
+[0]Dawson, Nielsen. The Solovay-Kitaev Algorithm. arXiv:quant-ph/0505030v2  
+[1]Nagy. On an implementation of the Solovay-Kitaev algorithm. arXiv:quant-ph/0606077v1  
+[3]Nielsen, Chuang. [Quantum Computation and Quantum Information](http://www.amazon.com/Quantum-Computation-Information-Cambridge-Sciences/dp/0521635039)
