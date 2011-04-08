@@ -1,4 +1,4 @@
-Title:	 SymPy: Implementation of basic Parametrization module, Symmetry search and handle module.
+Title:	 SymPy: Implementation of Parametrization module, Symmetry search and handle module.
 
 Student:	 Yuri Karadzhov
 
