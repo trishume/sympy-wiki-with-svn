@@ -6,22 +6,30 @@ About me
 
 * Pavel Fedotov, 22 years old. 
 * I'm sixth year student at Saint Petersburg State University of Information Technologies, Mechanics and Optics ([SPbSU ITMO](http://en.ifmo.ru/)). 
-* I graduated from Saint Petersburg Lyceum 239 that specializes in mathematics and physics in 2005. In 2009 I've got bachelor degree on apply math at SPbSU ITMO and at this time I'm working on my master's project at SPbSU ITMO. I have rather good knowledges in math and algorithms. 
+* I graduated from Saint Petersburg Lyceum 239 that specializes in mathematics and physics in 2005. In 2009 I've got bachelor degree on apply math at SPbSU ITMO and at this time I'm working on my master's project at SPbSU ITMO. I have rather solid math and algorithms background. 
+* Classes that I had related to the project: 
+    - Algorithms and Data Structures;
+    - Linear Algebra;
+    - Polynomials;
+    - Calculus Mathematics;
+    - Software Design;
+    - Programming Paradigms. 
 * Email: fedotovp@gmail.com
 
 Coding Skills
 -------------
 
 * My primary language is Java. I developed several rather big projects, you can see examples of my code here: 
-* [[http://rain.ifmo.ru/~fedotov/pub/GraphEditor.html]],  
-* [[http://rain.ifmo.ru/~fedotov/pub/Noplag.html]]. 
+   - [[http://rain.ifmo.ru/~fedotov/pub/GraphEditor.html]];  
+   - [[http://rain.ifmo.ru/~fedotov/pub/Noplag.html]]. 
 * I'm also expirienced with Python, C, C++, C#, Matlab, Maple, Delphi, Haskell, MPS. 
 * At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. 
+* I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. 
 
 My Project
 ----------
 
-* I want to take an idea from list: Multivariate polynomials and factorization. 
+* SymPy: Improving multivariate polynomials. 
 * Status: Factorization of multivariate polynomials is an important tool in algebra systems, very useful by its own, also used in symbolic integration algorithms, simplification of expressions, partial fractions, etc. Currently multivariate factorization algorithm is based on Kronecker's method, which is impractical for real life problems. Undergo there is implementation of Wang's algorithm, the most widely used method for the task.
 * Idea: Start with implementing efficient multivariate polynomial arithmetics and GCD algorithm. You do this by improving existing code, which is based on recursive dense representation or implement new methods based on your research in the field. There are many interesting methods, like Yan's geobuckets or heap based algorithms (Monagan & Pearce). Having this, implement efficient GCD algorithm over integers, which is not a heuristic, e.g. Zippel's SPMOD, Musser's EZ-GCD, Wang's EEZ-GCD. Help with implementing Wang's EEZ factorization algorithm or implement your favourite method, e.g. Gao's partial differential equations approach. You can go further and extend all this to polynomials with coefficients in algebraic domains or implement efficient multivariate factorization over finite fields.
 * I choose this idea because here I should implement several math algorithms and this side of programming is one of the most attractive for me. 
