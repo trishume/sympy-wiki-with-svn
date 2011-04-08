@@ -28,6 +28,8 @@ SymPy is an open source computer algebra system (CAS) written in Python. Support
 
 ## Idea
 
+The objective of the project is significantly acceleration of calculations for sparse multivariate polynomials and extension of multivariate polynomials capabilities in SymPy.
+
 Support for polynomials was significantly improved over the past year. Most notably Wang's multivariate factorization EEZ algorithm [EEZ-Wang] was implemented. At this stage it looks naturally to implement EEZ-GCD algorithm [EEZ-GCD] which can improve computation of GCDs of sparse multivariate polynomials over integers and rationals (current implementations for computing GCDs are based on subresultants approach and Gröbner bases).
 
 It would be also useful to implement coefficient prediction sub-algorithm of EEZ for iterations 2..n [Wang] (supposed to give huge speed ups for large sparse polynomials). 
