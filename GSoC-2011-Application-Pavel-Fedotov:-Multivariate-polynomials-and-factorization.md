@@ -1,5 +1,5 @@
-GSoC 2011 Application Pavel Fedotov: Multivariate polynomials and factorization
-================================================================================
+GSoC 2011 Application Pavel Fedotov: Improving multivariate polynomials
+=======================================================================
 
 About me
 --------
