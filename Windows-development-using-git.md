@@ -20,7 +20,7 @@ $ echo "export PATH=/c/Python26/:\$PATH" > .bashrc
 Close and open the bash terminal window again, then:
 
 ```bash
-$ git clone git://git.sympy.org/sympy.git
+$ git clone git://github.com/sympy/sympy.git
 $ cd sympy
 $ bin/isympy
 ```
