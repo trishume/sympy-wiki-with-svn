@@ -260,16 +260,13 @@ so the answers are real if ''a'' is real.
 
 == Schedule ==
 
-
-
-* Week 1
-* Week 2
-* Week 3
-* Week 4
-* Week 5
-* Week 6
-* Week 7
-* Week 8
+*<b>Before the beginning (April 25 - May 23):</b> I completed solutions for issue 2238, 2246, 2250. I will end up with issue 2249. Also I will create simple PDE module (to solve simple PDEs).
+*<b> (May 23 - June 27):</b> Main functionality (two versions of singular function, start working on case handle function, generation and extension of infinitesimal operator, calculation of a differential sequence).
+*<b> (June 27 - July 15):</b> Main functionality (finish case handle function, work on casemap function, apply infinitesimal operator to the equation, obtain the system of determining equations).
+<b>Midterm Evaluation</b>
+*<b> (July 15 - August 5):</b> Additional functionality (linear independent functions, improvement of casemap, classification problem).
+*<b> (August 5 - August 22):</b>  Final tests and documentation (classical examples will be checked in tests).
+<b>Final Evaluation</b>
 
 
 == References ==
