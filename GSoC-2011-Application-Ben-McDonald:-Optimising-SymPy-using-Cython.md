@@ -19,25 +19,19 @@ I am able to commit to 40 hours per week during the Google Summer of Code period
 **Before April 25:**
 
  * Familiarise myself with SymPy’s code, community and procedures.
-
  * Familiarise myself with SymPy’s current Cython use and build system.
-
  * Research ways to add Cython support (headers, decorators, etc.).
 
 **April 25 – May 23 (Before the official coding time):**
 
  * I will stay in constant contact with my mentor and the SymPy community using email, voice chat or instant messaging. I will participate in community discussions during this time on SymPy’s build system, use of Cython or performance. This will allow me to become a part of  the community and give me an understanding of the current direction of SymPy.
-
  * I will make use of this time to prioritise SymPy modules for optimisation. I will weigh community opinion, module dependence, module performance and stability of a module’s code to build a case for a prioritised list of modules to be optimised.
-
  * Lastly, I will report my approach of optimisation and prioritised list of modules to be optimised to the SymPy community. I will then review the feedback.
 
 **May 23 – June 11 (Official coding period starts):**
 
  * Write Cython code for chosen SymPy modules.
-
  * Write tests for Cython support, including benchmarks to measure performance improvements.
-
  * I will tweet completion of milestones, challenges encountered and comments as I go.
 
 **MID TERM EVALUATION**
@@ -84,7 +78,7 @@ The second half of the project will focus on code stability.
 
 >To aid my understanding of community opinion, I will search through the Google Groups page and the FreeNode logs for mentions of performance and Cython. For example, a need for optimisation in the physics module has been expressed. [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
 
->I have produced a dependency graph of sympy [ref]. Dependency is important in determining what to optimise. Slow modules that are used by many other modules can create bottlenecks that limit performance. Performance improvements in modules that are dependent upon by other modules will propagate to other parts of the software library. For example, the core of SymPy is dependent upon by all modules and improvements in the core will affect the whole library.
+>I have produced a dependency graph of sympy [[ref](https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B2R65mRBtRcyMTYxZjNjYzQtNGM2NS00YzdlLTgyOTEtOTMzODgwMDAzMWNi&hl=en_GB)]. Dependency is important in determining what to optimise. Slow modules that are used by many other modules can create bottlenecks that limit performance. Performance improvements in modules that are dependent upon by other modules will propagate to other parts of the software library. For example, the core of SymPy is dependent upon by all modules and improvements in the core will affect the whole library.
 
 >Speed improvements from cythonization will vary between modules.  In general compiled C code is faster than Python code. Yet the performance between C and Python can vary. For example, Python is specifically slow at iterating.
 
