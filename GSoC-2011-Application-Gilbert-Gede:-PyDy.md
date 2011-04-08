@@ -1,5 +1,3 @@
-# GSoC 2011 Application Gilbert Gede: PyDy
-
 gilbertgede@gmail.com / ggede@ucdavis.edu 
 
 2nd year PhD student at UC Davis in Mechanical & Aerospace Engineering 
