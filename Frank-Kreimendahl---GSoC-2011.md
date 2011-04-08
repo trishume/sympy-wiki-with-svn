@@ -49,7 +49,7 @@ Week 7:
 Continue implementing and testing an efficient Cholesky factorization algorithm.
 
 Weeks 8 and 9:
-Implement pivoting LU decomposition for solutions to more general linear systems than Cholesky factorization allows for. This 
+Implement pivoting LU decomposition for solutions to more general linear systems than Cholesky factorization allows for. 
 
 Week 10-12: Implement QR factorization, research and implement sparse matrix algorithms for eigenvalue and eigenvector solutions. Implement any remaining simple functions and write documentation for matrix interface.
 
