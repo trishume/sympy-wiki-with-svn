@@ -45,7 +45,7 @@ I will review and master the relevant content already learned from the mentioned
 
 I currently have no other work or educational plans for the summer of 2011. I am fully willing and able to work 40+ hours per week on this project. Though every summer I tend to do a small amount of traveling (to visit friends and family), there is always Internet connection where I go and generally the people I visit have full-time jobs and school giving me ample time to work.
 
-##### The plan  
+#### The plan  
 
 May 24th - 30th:  
 Acquire a more complete understanding of the ode module, checking its completeness against that of Maple, Mathematica, etc. Cross-check other python based software (Sage, python-xy, scipy) for their means of usage. Get a good idea of what the ODE class would be able to use, and what missing methods would be necessary for a more useful class. Consider the methods by which ODEs are set up and solved in other languages, and how the user may want them to be set up.
