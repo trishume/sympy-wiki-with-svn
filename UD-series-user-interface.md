@@ -1,3 +1,5 @@
+# UD - Function expansions and series - user interface
+
 At this page we will be concentrated to the end-user's aims of series usage.
 
 # Introduction
