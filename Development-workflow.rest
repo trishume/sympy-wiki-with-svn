@@ -34,7 +34,7 @@ code *and* preparing it so that the code can be included into the project.
 
 Both producing the code and bringing it to the project are important parts of
 the game -- without the code there is nothing to bring in, and having the code
-outside is a nowin for anyone.
+outside is a no-win for anyone.
 
 As already said above, we review changes. This idea was borrowed from
 successful projects like Linux, Python, SAGE and a lot more. In short each
@@ -72,7 +72,7 @@ The basic work-flow for both variants is consist of a few stages:
 5. Only then commit changes
 6. Create patch file or pull request for GitHub.
 
-All those are described in the details below `Workflow process`_, but before it it would be useful to acquaint with `Coding conventions in Sympy`_.
+All those are described in the details below `Workflow process`_, but before you read that, it would be useful to acquaint yourself with `Coding conventions in Sympy`_.
 
 If you have any questions you can ask them to us on the `mailinglist`_. 
 
@@ -109,7 +109,7 @@ In particular,
   
       class PolynomialRing(object)
   
-Note, however, that some functions do have uppercase letters where it makes sense. for example for matrices they are LUdecomposition or T (transposition) methods.
+Note, however, that some functions do have uppercase letters where it makes sense. For example for matrices they are LUdecomposition or T (transposition) methods.
 
 Documentation strings
 ----------------------
@@ -169,7 +169,7 @@ As you are going to use `GitHub`_  you should have a GitHub account. If you have
 
     - https://github.com/signup/free
 
-Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy github repository:
+Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy GitHub repository:
 
     - https://github.com/sympy/sympy
     
@@ -200,7 +200,7 @@ Basic git settings
 Git tracks who makes each commit by checking the user’s name and email.
 In addition, we use this info to associate your commits with your GitHub account.
 
-To set these, enter the code below, replacing the name and email with your own (`--global` is optional.)::
+To set these, enter the code below, replacing the name and email with your own (`--global` is optional).::
 
     $ git config --global user.name "Firstname Lastname"
     $ git config --global user.email "your_email@youremail.com"
@@ -209,7 +209,7 @@ The name should be your actual name, not your GitHub username.
 
 Some tools connect to GitHub without SSH. To use these tools properly you need to find and configure your API Token.
 
-On the GitHub site Click `“Account Settings”` > Click `“Account Admin.”`
+On the GitHub site, click `“Account Settings”` > click `“Account Admin.”`
 
     [[img/dev-guide-apitoken.png]]
 
@@ -251,7 +251,7 @@ To view in what branch you are type::
 
     $ git branch
 
-It can be convenient to tune the bash to see current branch. For that. add the snippet below to your .bashrc or .bash_profile::
+It can be convenient to tune the bash to see current branch. For that, add the snippet below to your .bashrc or .bash_profile::
 
     PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
 
@@ -287,7 +287,7 @@ Code quality (unwanted spaces and indents) are checking by *./bin/test* utility 
 
     $ ./bin/test quality
 
-it will show errors. And this one will fix unwanted spaces.
+If you have trailing whitespace it will show errors. This one will fix unwanted spaces.
 
     $ ./bin/strip_whitespace <file>
     
@@ -295,7 +295,7 @@ If you want to test only one set of tests try::
 
     $ ./bin/test sympy/concrete/tests/test_products.py
 
-but at the same time you must be sure that yours tests are connected with `./bin/test` properly too.
+But remember that all tests should pass before committing.
 
 
 Commit the changes
@@ -329,7 +329,7 @@ or if you plan to enter big description::
     
 And editor windows will appear automatically in this case. In Linux, this is vim by default.  You can change what editor pops up by changing the `$EDITOR` shell variable.
 
-Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.::
+Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.,::
 
     $ git commit -a -m "1234: sequences base implementation."
 
@@ -396,7 +396,7 @@ Note, that those operations must be carried out with accuracy and with understan
 
 This is a frequent situation, when branch is out of date with sympy/sympy repository.
 
-Note, that after cloning a reposytory, it has a default remote called `origin` that points to the `sympy/sympy` repository.
+Note, that after cloning a repository, it has a default remote called `origin` that points to the `sympy/sympy` repository.
 And your fork remote named as `github`. You can observe the remotes names with the help of this command::
 
     $ git remote -v
@@ -406,7 +406,7 @@ And your fork remote named as `github`. You can observe the remotes names with t
     origin  git://github.com/sympy/sympy.git (push)
 
 
-As an example, consider that we have those commits in the master branch of local git repository::
+As an example, consider that we have these commits in the master branch of local git repository::
 
   A---B---C        master
 
@@ -513,7 +513,7 @@ After that, git will drop back you into your editor for every commit you want to
     $ git commit --amend "your new message"
     $ git rebase --continue
 
-Most of this sequence will be explained to you by the output of the various commands of git. Untill::
+Most of this sequence will be explained to you by the output of the various commands of git. Continue until it says,::
 
     Successfully rebased and updated refs/heads/master.
 
@@ -540,7 +540,7 @@ Then merge your `1234_sequences` branch from `1234_sequences`::
 
 Probably the last command will tell you that conflicts are must be solved for a few indicated files.
 
-if that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the code with **>>>** and **<<<** around it to what it should be.
+If that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the code with **>>>** and **<<<** around it to what it should be.
 You must manually remove useless pieces, and leave only new changes from your branch.
 
 Then be sure that  all tests pass::
