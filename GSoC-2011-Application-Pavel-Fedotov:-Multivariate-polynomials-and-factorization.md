@@ -35,7 +35,7 @@ It would be also useful to implement coefficient prediction sub-algorithm of EEZ
 
 The next step is implementing algorithms for polynomial multiplication and division based on heaps [Monagan2007heaps]. Experimental data reveals that this is currently the best approach to compute with sparse polynomials in many variables (which is actually the most important case when computing with polynomials). This approach implies using of distributed multivariate polynomials internal representation along with current recursive dense representation. 
 
-I see further development in implementing efficient multivariate factorization over finite fields.
+I see further development in implementing efficient multivariate factorization over finite fields [Bernardin].
 
 Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
 
@@ -65,6 +65,8 @@ I see the following plan for me:
 
 ## Sources
 
+[Mattpap] http://mattpap.github.com/masters-thesis/html/index.html
+
 [EEZ-Wang]
 
 [EEZ-GCD]
@@ -75,4 +77,6 @@ I see the following plan for me:
 
 [Monagan]
 
-[Mattpap]
+[Bernardin, Monagan]
+
+[factorization over finite fields]
