@@ -18,7 +18,6 @@ Coding Skills
 * I'm also expirienced with Python, C, C++, C#, Matlab, Maple, Delphi, Haskell, MPS. 
 * At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. Among Python's many benefits is the fact that it is very easy to use, requiring fewer man-hours of coding time per output than just about any other programming language.
 * I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. Msysgit is installed on my PC. 
-* I've graduated Academy of Modern Software Engineering. 
 
 SymPy: Improving multivariate polynomials
 -----------------------------------------
@@ -39,7 +38,7 @@ I see further development in implementing efficient multivariate factorization o
 
 Next steps may be aimed on support of non-commutative polynomials [Cohen]. 
 
-Majority of ideas was derived from Mateusz Paprocki [Mattpap]. 
+Majority of ideas was derived from Mateusz Paprocki [Paprocki]. 
 
 ## My Qualifications
 
@@ -51,7 +50,8 @@ Majority of ideas was derived from Mateusz Paprocki [Mattpap].
     - Calculus Mathematics;
     - Software Design;
     - Programming Paradigms. 
-* I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
+* I've graduated Academy of Modern Software Engineering. 
+* I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
 
 ## Schedule
 
@@ -79,8 +79,6 @@ According to this I see the following time distribution for GSoC:
 
 ## Sources
 
-[Mattpap] M. Paprocki. SymPy: Master’s Thesis. http://mattpap.github.com/masters-thesis/html/index.html
-
 [EEZ-Wang] P. S. Wang. An Improved Multivariate Polynomial Factoring Algorithm. Mathematics of Computation, Vol. 32, Oct. 1978, pp. 1215-1231. 
 
 [EEZ-GCD] P. S. Wang. The EEZ-GCD algorithm. http://portal.acm.org/citation.cfm?id=1089228
@@ -94,3 +92,5 @@ According to this I see the following time distribution for GSoC:
 [Bernardin] L. Bernardin, M. Monagan. Efficient Multivariate Factorization over Finite Fields. http://portal.acm.org/citation.cfm?id=677201
 
 [Cohen] A. Cohen. Non-commutative Polynomial Computations. http://www.win.tue.nl/~amc/pub/grobner/gbnp.pdf
+
+[Paprocki] M. Paprocki. SymPy: Master’s Thesis. http://mattpap.github.com/masters-thesis/html/index.html
