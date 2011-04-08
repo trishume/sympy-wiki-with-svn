@@ -260,12 +260,16 @@ so the answers are real if ''a'' is real.
 
 == Schedule ==
 
-*<b>Before the beginning (April 25 - May 23):</b> I completed solutions for issue 2238, 2246, 2250. I will end up with issue 2249. Also I will create simple PDE module (to solve simple PDEs).
-*<b> (May 23 - June 27):</b> Main functionality (two versions of singular function, start working on case handle function, generation and extension of infinitesimal operator, calculation of a differential sequence).
-*<b> (June 27 - July 15):</b> Main functionality (finish case handle function, work on casemap function, apply infinitesimal operator to the equation, obtain the system of determining equations).
+<b>Before the beginning:</b> I completed solutions for issue 2238, 2246, 2250. I will end up with issue <a href="http://code.google.com/p/sympy/issues/detail?id=2249">2249</a>. Also I will create simple PDE module (to solve simple PDEs).
+*<b> Phase 1 (May 23 - June 27):</b> Main functionality (two versions of singular function, start working on case handle function, generation and extension of infinitesimal operator, calculation of a differential sequence).
+*<b> Phase 2 (June 27 - July 15):</b> Main functionality (finish case handle function, work on casemap function, apply infinitesimal operator to the equation, obtain the system of determining equations).
+
+
 <b>Midterm Evaluation</b>
-*<b> (July 15 - August 5):</b> Additional functionality (linear independent functions, improvement of casemap, classification problem).
-*<b> (August 5 - August 22):</b>  Final tests and documentation (classical examples will be checked in tests).
+*<b> Phase 3 (July 15 - August 5):</b> Additional functionality (linear independent functions, improvement of casemap, classification problem).
+*<b> Phase 4 (August 5 - August 22):</b>  Final tests and documentation (classical examples will be checked in tests, documentation will be created).
+
+
 <b>Final Evaluation</b>
 
 
