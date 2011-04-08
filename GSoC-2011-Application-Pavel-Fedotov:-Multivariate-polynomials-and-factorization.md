@@ -50,13 +50,13 @@ Majority of ideas was derived from Mateusz Paprocki [Mattpap].
 * I choose this idea because here I should implement several math algorithms and this side of programming is one of the most attractive for me. 
 * I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
 
-## Schedule
+## Schedule [not finished yet]
 
 * I have to finish my master project at first days of June and need to work hard on it before this dates. But after 5-th of June I will be free from any work and studies. It means that I'm ready to a lot of time on GSoC. 
 I see the following plan for me: 
-    - April - June 5 - 8-10 hours per week. 
-    - June 6 - August 30 - 40-50 hours per week. 
-* TODO. Schedule. First steps. 
+    - April - May - 8-10 hours per week. 
+    - June  - August 30 - 40-50 hours per week. 
+* Schedule. First steps. 
     - I've started with installing git and studying how to work with it. 
     - Then I'll clone repository of sympy and I'll write some tests for some parts of sympy or submit other EasyToFix patch. 
     - Then I will deep inside polys module looking for things that could be improved in easy way. 
