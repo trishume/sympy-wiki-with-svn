@@ -1,4 +1,4 @@
-#GSoC 2011 Application - Luis Garcia - Solovay-Kitaev algorithm
+#GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm
 ## Abstract
 The Solovay-Kitaev algorithm is an important step in the building of quantum computing as it provides a way of _compiling_ quantum algorithms with arbitrary \(U\) gates in \(SU(d)\) into sequences composed of gates from a fixed, finite set. The algorithm runs in \(polylog(1/e)\) time on a classical computer and returns a sequence of \(polylog(1/e)\) length, where \(e\) is the aimed accuracy. This algorithm requires a preparatory stage that is run once for each value of \(d\) required.
 
