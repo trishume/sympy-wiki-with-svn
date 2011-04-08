@@ -1,4 +1,4 @@
-GSoC 2011 Application Pavel Fedotov: Improving multivariate polynomials
+GSoC 2011 Application Pavel Fedotov: Improving Multivariate Polynomials
 =======================================================================
 
 About me
