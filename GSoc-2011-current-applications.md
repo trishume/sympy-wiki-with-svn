@@ -28,3 +28,4 @@ Project Proposals:
 * [[GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM]]
 * [GSoC 2011 Application Vladimir Lagunov: Expression simplification](GSoC 2011 Application Vladimir Lagunov: Expression simplification)
 * [GSoC 2011 Application Yuri Karadzhov: Parametrization and Symmetries](GSoC-2011-Application-Yuri-Karadzhov)
+* [[GSoC 2011 Application: Vladimir Perić: Porting to Python 3]]
