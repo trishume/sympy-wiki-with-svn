@@ -74,7 +74,7 @@ Bottom line: Is dseries running and is series ready to integrate different types
 ##July 15 – August 26
 (40-50 hours per week)
 
-**Week9-10:** Add Laurent series functionality for existing function base. For example, \(\log(x)\) has no taylor series about \(x = 0\) but does have a laurent series. Some composite functions like \(\exp(\frac{1}{x})\) have the same property. This should be handled by the system.
+**Week9-10:** Add Laurent series functionality for existing function base. For example, some composite functions like \(\exp(\frac{1}{x})\) have do not have a Taylor series about 0 but do have a Laurent series. Right now sympy treats this expansion the same way it treats any Taylor series.
 
 **Week11:** Additional series expansions. Puiseux series for example allow for \(\log(x)\) terms and can be used to define acosh\((x)\). This functionality would be a nice addition.
 
@@ -106,4 +106,4 @@ Stein, E. M. and Shakarchi, R. (2003). _Princeton Lectures in Analysis II: Compl
 Wade, W. R. (1999). _An Introduction to Analysis, Second Edition_. Prentice Hall.
 
 
-**Note:** The patch that I've submitted can be found here ([issue 2243](http://code.google.com/p/sympy/issues/detail?id=2243)).
+**Note:** The patch that I've submitted can be found here ([issue 2243](http://code.google.com/p/sympy/issues/detail?id=2243)). My pull request is number [190](https://github.com/sympy/sympy/pull/190).
