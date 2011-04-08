@@ -13,7 +13,7 @@ My current research at Davis is in optimization, specifically optimal control.  
 I’ve also worked with and designed Kalman filters for attitude (orientation) estimation.  I wrote Python code to implement a Kalman filter for an inertial measurement unit; this is at my github page. This is designed to work in conjunction with a microcontroller (I’ve used both Arduino and mbed microcontrollers with the code).  Additionally, I am in the Sports Biomechanics Lab at UC Davis, working with a number of other graduate students, all doing dynamics research.  
 
 I currently use C/C++, Python, Matlab, and Mathematica. I plan to work full-time on PyDy over the summer, starting June 13th, and by the end of the summer use it for my research. I currently work under OS X or Linux, use VIM and have begun integrating git into my workflow. 
-github page: https://github.com/gilbertgede
+github page: [https://github.com/gilbertgede](https://github.com/gilbertgede)
 # Project Description
 
 PyDy (Python Dynamics) is a computational tool built to easily compute complex symbolic kinematic relationships and symbolically derive equations of motion for systems governed by Newton’s laws of motion. The resulting symbolic equations of motion (as opposed to purely numerical methods of model derivation) provide advantages for model manipulation and clearer interpretation of the system dynamics.  This is useful to physicists, engineers, astronomers and anyone concerned with the motion of bodies.
