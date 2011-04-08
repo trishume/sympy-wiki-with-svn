@@ -18,6 +18,7 @@ Coding Skills
 * I'm also expirienced with Python, C, C++, C#, Matlab, Maple, Delphi, Haskell, MPS. 
 * At this time I'm mostly interested in Python as a language that is suitable for a lot of areas. Among Python's many benefits is the fact that it is very easy to use, requiring fewer man-hours of coding time per output than just about any other programming language.
 * I work under Windows 7 (32-bit) and use PyScripter for programming in Python. I also have installed Eclipse with PyDev plugin for SymPy development. 
+* I've graduated Academy of Modern Software Engineering. 
 
 SymPy: Improving multivariate polynomials
 -----------------------------------------
