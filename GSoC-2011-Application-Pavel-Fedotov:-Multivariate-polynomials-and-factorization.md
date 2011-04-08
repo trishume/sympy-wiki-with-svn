@@ -77,7 +77,7 @@ According to this I see the following time distribution for GSoC:
         - implement efficient multivariate polynomial factorization over finite fields. 
         - continue work with _polys_ module. Implement support of non-commutative polynomials. 
 
-## Sources [not finished yet]
+## Sources
 
 [Mattpap] M. Paprocki. SymPy: Master’s Thesis. http://mattpap.github.com/masters-thesis/html/index.html
 
