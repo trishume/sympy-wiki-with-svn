@@ -7,13 +7,6 @@ About me
 * Pavel Fedotov, 22 years old. 
 * I'm sixth year student at Saint Petersburg State University of Information Technologies, Mechanics and Optics ([SPbSU ITMO](http://en.ifmo.ru/)). 
 * I graduated from Saint Petersburg Lyceum 239 that specializes in mathematics and physics in 2005. In 2009 I've got bachelor degree on apply math at SPbSU ITMO and at this time I'm working on my master's project at SPbSU ITMO. I have rather solid math and algorithms background. 
-* Classes that I had related to the project: 
-    - Algorithms and Data Structures;
-    - Linear Algebra;
-    - Polynomials;
-    - Calculus Mathematics;
-    - Software Design;
-    - Programming Paradigms. 
 * Email: fedotovp@gmail.com
 
 Coding Skills
@@ -48,6 +41,13 @@ Majority of ideas was derived from Mateusz Paprocki [Mattpap].
 ## My Qualifications
 
 * I choose this idea because here I should implement several math algorithms and this side of programming is one of the most attractive for me. 
+* Classes that I had related to the project: 
+    - Algorithms and Data Structures;
+    - Linear Algebra;
+    - Polynomials;
+    - Calculus Mathematics;
+    - Software Design;
+    - Programming Paradigms. 
 * I had a Polynomials course in school and read book Polynomials (Algorithms and Computation in Mathematics) by Victor V. Prasolov. So I'm familiar with multivariate polynomials, Groebner bases, Buchberger algorithm that are connected with the topic. I also had a course of calculus mathematics where I particularly implemented different math methods and algorithms. This experience was interesting and successful. 
 
 ## Schedule [not finished yet]
