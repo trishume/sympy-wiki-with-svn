@@ -10,7 +10,7 @@ Install msysgit:
 
 [[http://code.google.com/p/msysgit/]]
 
-by downloading and running the .exe in "Featured Downloads". Select to only install "Git Bash". There should be a "Git Bash" executable on your Desktop. Run it:
+by downloading and running the .exe in "Featured Downloads". Select to only install "Git Bash". Select "Checkout as-is, commit as-is" option. There should be a "Git Bash" executable on your Desktop. Run it:
 ```bash
 $ echo "export PATH=/c/Python26/:\$PATH" > .bashrc
 ```
