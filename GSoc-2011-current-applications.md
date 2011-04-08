@@ -12,7 +12,7 @@ Project Proposals:
 * [[GSoC 2011 Application Hector1618 : Complex Analysis]]
 * [[GSoC 2011 Application Jack McCaffery: Improved Series]]
 * [[GSoC 2011 Application Jeremias Yehdegho: Implementing F5]]
-* [GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm](GSoc-2011-Application---Luis-Garcia---Solovay-Kitaev-algorithm)
+* [GSoC 2011 Application Luis Garcia: Solovay-Kitaev algorithm](GSoC 2011 Application Luis-Garcia: Solovay Kitaev algorithm)
 * [[GSoC 2011 Application Matthew Rocklin: Random Variables]]
 * [[GSoC 2011 Application Oleksandr Gituliar]]
 * [[GSoC 2011 Application Oscar Najera: Abstract Dirac notation]]
