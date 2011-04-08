@@ -2,7 +2,7 @@
 
 >The SymPy linear algebra library is extensive and has many tools. The extensive tool set can be used for a large range of problems (solving linear systems, physics, statistics problems, ...). Yet the application of SymPy to problems can be limited by the slow performance of the CPython interpreter it makes use of.
 
->This project aims to unshackle SymPy from the slow CPython compiler so it can be applied to computationally intensive problems such as physics simulations and image processing. This project will make use of the Cython language, which allows a compiler to generate efficient C code from Python code. The generated code could potentially increase the performance of SymPy 100-1000 times [[ref](http://www.google.com/url?q=http%3A%2F%2Fthread.gmane.org%2Fgmane.comp.python.cython.devel%2F4602%2Ffocus%3D4619&sa=D&sntz=1&usg=AFQjCNFHDU86V04yV21-UTQg-efARGkuUg)]. 
+>This project aims to unshackle SymPy from the slow CPython compiler so it can be applied to computationally intensive problems such as physics simulations and image processing. This project will make use of the Cython language, which allows a compiler to generate efficient C code from Python code. The generated code could potentially increase the performance of SymPy 100-1000 times [[ref](http://www.google.com/url?q=http%3A%2F%2Fthread.gmane.org%2Fgmane.comp.python.cython.devel%2F4602%2Ffocus%3D4619&sa=D&sntz=1&usg=AFQjCNFHDU86V04yV21-UTQg-efARGkuUg)].
 ## Deliverables
 
  * Increase the performance of SymPy.
@@ -11,7 +11,7 @@
  * Create a mature build system for Cython in SymPy that will produce binaries on major platforms.
 
 
->In addition to improving to SymPy performance, I hope to produce a lasting infrastructure to compile, test and distribute Cython code on SymPy. Such an infrastructure will allow the painless addition of Cython code to the SymPy project in the future.
+>In addition to improving to SymPy performance, I hope to enhance the infrastructure to compile, test and distribute Cython code on SymPy. I will focus on producing an infrastructure that will allow the painless addition of Cython code to the SymPy project in the future.
 ## Schedule
 
 I am able to commit to 40 hours per week during the Google Summer of Code period. I will also be committing to 6 hours per week tutoring Python and algorithm classes during this period.
@@ -19,19 +19,25 @@ I am able to commit to 40 hours per week during the Google Summer of Code period
 **Before April 25:**
 
  * Familiarise myself with SymPy’s code, community and procedures.
+
  * Familiarise myself with SymPy’s current Cython use and build system.
+
  * Research ways to add Cython support (headers, decorators, etc.).
 
 **April 25 – May 23 (Before the official coding time):**
 
  * I will stay in constant contact with my mentor and the SymPy community using email, voice chat or instant messaging. I will participate in community discussions during this time on SymPy’s build system, use of Cython or performance. This will allow me to become a part of  the community and give me an understanding of the current direction of SymPy.
- * I will make use of this time to prioritise SymPy modules for optimisation. I will weigh community opinion, module dependence, module performance and stability of a module’s code to build a case for a prioritised list of modules to be optimised. To aid my understanding of community opinion, I will search through the Google Groups page and the FreeNode logs for mentions of performance and Cython. I already have examples where SymPy members have expressed the need for performance improvements in certain modules [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
+
+ * I will make use of this time to prioritise SymPy modules for optimisation. I will weigh community opinion, module dependence, module performance and stability of a module’s code to build a case for a prioritised list of modules to be optimised.
+
  * Lastly, I will report my approach of optimisation and prioritised list of modules to be optimised to the SymPy community. I will then review the feedback.
 
 **May 23 – June 11 (Official coding period starts):**
 
  * Write Cython code for chosen SymPy modules.
+
  * Write tests for Cython support, including benchmarks to measure performance improvements.
+
  * I will tweet completion of milestones, challenges encountered and comments as I go.
 
 **MID TERM EVALUATION**
@@ -51,7 +57,7 @@ The second half of the project will focus on code stability.
  * Testing and cleaning up of code.
  * Completing documentation.
 
-## Cython
+## Cythonizing SymPy
 
 
 #### HOW CYTHON BENEFITS SYMPY
@@ -61,12 +67,12 @@ The second half of the project will focus on code stability.
 
 1. Generates static code that finds type errors.
 1. Adds functionality to the Python language (calling C code, constants).
-
 >Also, Cython does not require any rewriting of Python code. This is beneficial in two ways. First, this leaves a pure Python base that can be ported to other Python platforms such as Jython, IronPython, and Google App Engine. Second, it does not bind the original code to Cython. If SymPy moves to other optimisation techniques, there are no development costs to de-couple SymPy from Cython.   
 
 #### CURRENT STATE OF CYTHON IN SYMPY
 
->Cython is currently used only in the poly module. The poly module makes use of the ‘cythonized’ decorator from the utilities module, which declares specified local variables as ‘cython.int’ types. This implementation is efficient in increasing performance but only uses a subset of Cython's features.
+
+>Cython is currently used only in the poly module. The poly module makes use of the ‘cythonized’ decorator from the utilities module, which declares specified local variables as C ints. This implementation is efficient in increasing performance but only uses a subset of Cython's features. Floating point numbers are not used in SymPy, mpmath has its own arbitrary precision floating point implementation. Yet, the decorator method could be expanded to cover C arrays for lists and tuples. 
 
 >An alternative to decorators are Cython header files (.pyx). See http://wiki.cython.org/pure. Decorators and header files have both been suggested by SymPy members [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
 
@@ -74,7 +80,37 @@ The second half of the project will focus on code stability.
 
 #### Priority of Modules to Optimise
 
-#### Cythonizing Methods
+>I will weigh community opinion, module dependence, module performance and stability of a module’s code to build a case for a prioritised list of modules to be optimised. 
+
+>To aid my understanding of community opinion, I will search through the Google Groups page and the FreeNode logs for mentions of performance and Cython. For example, a need for optimisation in the physics module has been expressed. [[ref](http://www.google.com/url?q=http%3A%2F%2Fgroups.google.com%2Fgroup%2Fsympy%2Fbrowse_thread%2Fthread%2F5eccee5e2d02aa1a%2Fd6671be18f5c11ab%3Flnk%3Dgst%26q%3DCython%23d6671be18f5c11ab)].
+
+>I have produced a dependency graph of sympy [ref]. Dependency is important in determining what to optimise. Slow modules that are used by many other modules can create bottlenecks that limit performance. Performance improvements in modules that are dependent upon by other modules will propagate to other parts of the software library. For example, the core of SymPy is dependent upon by all modules and improvements in the core will affect the whole library.
+
+>Speed improvements from cythonization will vary between modules.  In general compiled C code is faster than Python code. Yet the performance between C and Python can vary. For example, Python is specifically slow at iterating.
+
+>If a Python function or class definition is changed then the Cython headers will may need updating. If a module is changing frequently then cythonization may best be delayed.
+
+#### Process for Optimising a Module
+
+**Step 1: Remove redundant code**
+
+To begin with I will clean the module’s code of redundant code. This will provide some minor speed increase and prevent me from optimising unused variables. There are some tools to find redundant code (pyline, pychecker, pyflakes). I will likely use pyflates because that tool is targeted at finding redundant code.
+
+**Step 2: Write benchmarks**
+
+Write benchmarks that stress test the code and particularly performance critical code.
+
+**Step 3: Cythonize**
+
+Determine the types of variables that will need optimising. Only ‘int’ data types have been cythonized in the poly module because that is the data type most used. If a module mainly makes use of ints and 90% can be cythonized using the decorator in the utilities class I will use that decorator. If the decorator is not powerful enough I will add more powerful decorators or use an alternative method such as a header file.
+
+**Step 4: Test**
+
+Check that the cythonized module passes all tests.
+
+**Step 5: Benchmark**
+
+Benchmark the code and record speed improvements.
 
 # About Me
 
@@ -92,18 +128,17 @@ The second half of the project will focus on code stability.
 
 >Coding platform: Ubuntu distribution called lubuntu with Wing IDE or Windows 7 with notepad++
 
->Python is currently my language of choice. I use Python in my studies and also tutor first-year university Python. I authored the [Python Shell for Google Chrome](http://www.google.com/url?q=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgdiimmpmdoofmahingpgabiikimjgcia) that allows you to execute Python code in a drop-down console in Google Chrome. The shell also includes the SymPy module so that calculations can be done in your browser. People spend more time in their browser now days  and this shell allows quick access to Python and mathematics tools.
+>Python is currently my language of choice. I use Python in my studies and also tutor first-year university Python. I authored the [Python Shell for Google Chrome](http://www.google.com/url?q=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgdiimmpmdoofmahingpgabiikimjgcia) that allows user to execute Python code in a drop-down console in Google Chrome. The shell also includes the SymPy module so that calculations can be done in your browser. People spend more time in their browser now days  and this shell allows quick access to Python and mathematics tools.
 
 >I would like to be active in one of the open source project I frequently make use of. Large projects can be daunting to get your head around and require time, which is not always available, to learn a code base. I hope that my participation in Google Summer of Code will allow me the time to understand the SymPy project’s structure and to become a contributing member of this open source project. I have an enthusiasm for learning and hope to become a better programmer through working with a knowledgeable community.
 
 >I have an interest in the project to optimise the core using Cython because it is a technique that I found useful in my own Master’s project. Cython allowed me to increase the performance of my code while leaving the original Python code unchanged. I added Cython headers (.pyx) to modules to allow the Python code to be converted into C++, adding significant performance, while not changing the Python modules, leaving a portable, pure Python base. This technique would be useful to any software library which requires processor/memory intensive methods.
 
->I am a dedicated programmer. Programming is a useful tool to build the software that interests me. The challenges in solving complex problems is what keeps me interested and I am passionate about the things I can create with computer code.
+>I am a dedicated programmer. Programming is a useful tool to build the software that interests me. The challenges in solving complex problems is what keeps me interested.
 
 #### Code patches
 
- * Working on [Issue 834](http://www.google.com/url?q=http%3A%2F%2Fcode.google.com%2Fp%2Fsympy%2Fissues%2Fdetail%3Fid%3D834)
-
+ * Working on [Issue 834](http://www.google.com/url?q=http%3A%2F%2Fcode.google.com%2Fp%2Fsympy%2Fissues%2Fdetail%3Fid%3D834) and [Issue 1456](http://www.google.com/url?q=http%3A%2F%2Fcode.google.com%2Fp%2Fsympy%2Fissues%2Fdetail%3Fid%3D1456)
 
 ## Relevant Personal Projects
 
@@ -112,7 +147,6 @@ The second half of the project will focus on code stability.
 Online Python shell for the Google Chrome browser.
 
 Relevant Languages: Python, SymPy
-
 [Link](http://www.google.com/url?q=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fgdiimmpmdoofmahingpgabiikimjgcia)
 #### A SILHOUETTE BASED TECHNIQUE FOR LOCATING AND RENDERING FOOT MOVEMENTS OVER A PLANE
 
