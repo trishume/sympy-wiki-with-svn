@@ -10,7 +10,7 @@ I've been using Gentoo Linux for the last 5 years, except for compilations times
 ## My project
 
 ### Goal
-Implement a framework where quantum calculations can be done using Dirac Bra-Ket Notation.
+Implement a framework where quantum calculations can be done using Dirac Bra-Ket Notation. Implement various quantum systems capable to use this framework.
 ### Motivation
 Dirac Notation greatly simplifies the treatment of quantum states, while working on a certain problem. But there always comes a time when calculations have to be done, that's when we use computers, but it is a tedious work to write the corresponding wavefuntion and the operator involved and then integrating over the whole space. There are many know quantum systems with analytically solved eigenstates, after implementing those solutions we could use Dirac Notation to call them and do some calculations like:
 Expected values:
@@ -24,7 +24,7 @@ Projections: \(|n><n|\psi>\), \(\sum_i |i><i|\psi>\)
 ### Timeline
 
 * **Warm up**(April 25 - May 23) Become familiar with the quantum code base. Design modules to be implemented and discuss them with the sympy community. Contact other GSoC students working in the quantum code base, discuss collaborative work if possible, if needed, if mandatory, for example people working on projects like implementing analytical solutions to QM system, Position and Momentum basis functions, etc. Fix bugs.
-* **Phase 1**(May 23 - June 27) Implement the inner product of two states \(<\phi|\psi>\), for Cartesian, cylindrical, and spherical coordinates in 1D, 2D, and 3D. This is very sensitive, because Kets are representation independent but for calculations a representation is needed. Thus inner product must be aware of the treated QM system, it's eigenstates and available implemented representations, space dimensions, coordinate system used, etc. (I won't be home from June 1 to June 9, but will compensate working additional hours during weekday and weekends before my trip. Project must be finished on time) Fix bugs.
-* **Phase 2**(June 27 - July 15) Include operators \(<\phi|H|\psi>\), same as before, hopefully faster development because only operator representations need to be worked on, previous work should take care of the calculations. Fix bugs.
+* **Phase 1**(May 23 - June 27) Implement the inner product of two states \(<\phi|\psi>\), for Cartesian, cylindrical, and spherical coordinates in 1D, 2D, and 3D. This is very sensitive, because Kets are representation independent but for calculations a representation is needed. Thus inner product must be aware of the treated QM system, it's eigenstates and available implemented representations, space dimensions, coordinate system used, etc. Include treatment for propagators for time dependent Kets, Include spin, total angular momentum. (I won't be home from June 1 to June 9, but will compensate working additional hours during weekday and weekends before my trip. Project must be finished on time) Fix bugs.
+* **Phase 2**(June 27 - July 15) Include operators \(<\phi|H|\psi>\), same as before, hopefully faster development because only operator representations need to be worked on, previous work should take care of the calculations. Fix bugs. Mid term evaluation.
 * **Phase 3** (July 15 - August 5) Implement as many QM systems as possible: eigenfunctions and their different representations. Implement perturbation theory expansion to second order, etc. As much as possible able to work this this new framework. Fix bugs.
 * **Phase 4**(August 5 - August 22) Buffer period in cases some elements of the project take longer than expected. Write documentation, examples, tests for the new framework. Fix bugs.
