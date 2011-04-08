@@ -1,14 +1,15 @@
-# Abstract
+#GSoC 2011 Application - Luis Garcia - Solovay-Kitaev algorithm
+## Abstract
 The Solovay-Kitaev algorithm is an important step in the building of quantum computing as it provides a way of _compiling_ quantum algorithms with arbitrary \(U\) gates in \(SU(d)\) into sequences composed of gates from a fixed, finite set. The algorithm runs in \(polylog(1/e)\) time on a classical computer and returns a sequence of \(polylog(1/e)\) length, where \(e\) is the aimed accuracy. This algorithm requires a preparatory stage that is run once for each value of \(d\) required.
 
-# Introduction
+## Introduction
 Quantum computing has been an active field of study in the twenty to thirty years, with a marked increase in activity after the introduction of Shor’s factoring algorithm. Great strides have been made in the development of the quantum computing and information theory, bringing validity and feasibility to the construction of quantum computing hardware. Quantum-error-correction codes were a huge milestone against criticisms of the impossibility of having completely isolated machines to avoid decoherence. 
 
 Another step forward to the construction of quantum computer is the Solovay-Kitaev theorem proves that any gate \(U\) in \(SU(d)\) can be approximated to a given accuracy \(e\) with a sequence \(S\) of gates \(g_n\) from a set \(G\) that fills \(SU(d)\) densely. The implications of this theorem are that any unitary gate used by a quantum algorithm can be constructed with a set of available gates. The gates on the available set would ideally be fault-tolerant, and constructable. With this you can tackle the issue of oracle and blackbox gates common in quantum algorithms and break them down into a sequence of known gates.
 
 In order to find the decomposition of an arbitrary \(U\) gate, the Solovay-Kitaev algorithm can be computed on a classical computer and it will give back the sequence \(S\) approximation for the desired accuracy. 
 
-# Project Details
+## Project Details
 I plan to implement the Solovay-Kitaev algorithm based on a first approach on Nielsen and Dawson [0] and implementing the preparatory stage based on Nagy [1].
 
 The preparatory stage implies on finding constant gate sequences up to length \(l_0\) that work as the base approximation upon which the Solovay-Kitaev algorithm builds recursively. Details of this can be found in [0]. This preparatory stage only needs to run once for a given set of gates \(G\) for \(SU(d)\).
@@ -19,10 +20,10 @@ Besides [0] and [1], my first approach would be to read as much information as p
 
 As part of my school’s graduation reqs I need to work jointly with a professor on a project over the period of about one year and I plan on working with my QIP professor in quantum computing related research. So having sympy.physics.quantum as a tool would really help me. I plan on continuing to collaborate on SymPy well after the summer and continue to improve work in the quantum module but also on the other parts of SymPy.
 
-# Schedule
+## Schedule
 **Week 0 and before:** Read on the 
 
-# Me
+## Me
 * **Name:** Luis Garcia
 * **University:** Physics major in Tec de Monterrey (Mexico)
 * **Email:** ppn (dot) online (at) me (dot) com
