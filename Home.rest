@@ -13,7 +13,7 @@ Links
 `Planet SymPy (blogs) <http://planet.sympy.org>`_ |
 `Mailing list <http://groups.google.com/group/sympy>`_ |
 `Download current version <http://sympy.org/download.html>`_ |
-`Documentation <http://docs.sympy.org/dev/index.html>` _
+`Documentation <http://docs.sympy.org/dev/index.html>`_
 
 
 What is SymPy?
