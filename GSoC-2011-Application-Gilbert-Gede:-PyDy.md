@@ -55,9 +55,11 @@ The utility of software like PyDy becomes readily apparent once the system in qu
 
 >>> N = NewtonianReferenceFrame('N') 
 
->>> (x1,x2,x3), (x1d,x2d,x3d) = N.declare_coords('x', 3) 
+>>> (x1,x2,x3), (x1d,x2d,x3d) = N.declare_coords('x', 3)
+ 
+>>> # create a new frame "A" by body fixed 3-1-2 (x1, x2, x3) rotations.
 
->>> A = N.rotate("A", "BODY312", (x1, x2, x3))  # create a new frame "A" by body fixed 3-1-2 (x1, x2, x3) rotations. 
+>>> A = N.rotate("A", "BODY312", (x1, x2, x3))  
 
 >>> print dot(A[1], N[2])     # Dot product 
 cos(x3(t))*sin(x1(t)) + cos(x1(t))*sin(x2(t))*sin(x3(t)) 
