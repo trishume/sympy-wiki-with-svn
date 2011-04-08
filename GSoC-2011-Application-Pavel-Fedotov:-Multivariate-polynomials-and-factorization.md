@@ -78,5 +78,3 @@ I see the following plan for me:
 [Monagan]
 
 [Bernardin, Monagan]
-
-[factorization over finite fields]
