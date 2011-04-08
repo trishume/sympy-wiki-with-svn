@@ -6,7 +6,7 @@ Project Proposals:
 
 * [GSoC 2011 Application Anatolii Koval: Perturbation theory](GSoC-2011-Application-Anatolii-Koval)
 * [[GSoC 2011 Application Ben McDonald: Optimising SymPy using Cython]]
-* [GSoC 2011 Application Frank Kreimendahl: Matrix Abstraction and Sparse Matrices](Frank-Kreimendahl---GSoC-2011)
+* [GSoC 2011 Application Frank Kreimendahl: Matrix Abstraction and Sparse Matrices](GSoC-2011-Application-Frank-Kreimendahl)
 * [[GSoC 2011 Application Geoffrey Ehrman]]
 * [[GSoC 2011 Application Gilbert Gede: PyDy]]
 * [[GSoC 2011 Application Hector1618 : Complex Analysis]]
