@@ -165,6 +165,83 @@ Create your environment
 
 Creating of environment is once-only.
 
+Install git
+~~~~~~~~~~~~~~~~~~
+
+To install `git` in Linux-like systems you can do it via your native package management system: ::
+
+    $ yum install git
+
+or::
+    
+    $ sudo apt-get install git
+
+In Windows systems, first of all, install Python from::
+
+    http://python.org/download/
+
+by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not forget add Python at the $PATH environment. And install `msysgit`:
+
+    [[http://code.google.com/p/msysgit/]]
+
+
+In both Mac 10.4 and 10.5, you can install Git via MacPorts ::
+
+    $ sudo port install git
+
+
+Basic git settings
+~~~~~~~~~~~~~~~~~~
+
+Git tracks who makes each commit by checking the user’s name and email.
+In addition, we use this info to associate your commits with your GitHub account.
+
+To set these, enter the code below, replacing the name and email with your own (`--global` is optional).::
+
+    $ git config --global user.name "Firstname Lastname"
+    $ git config --global user.email "your_email@youremail.com"
+
+The name should be your actual name, not your GitHub username.
+
+This global (i.e. actual for every repositories) options are placed in `~/.gitconfig`. 
+You can edit this file to add setup colors and some handy shortcuts: ::
+
+    [user]
+        name = Firstname Lastname
+        email = your_email@youremail.com
+
+    [color]
+        diff  = auto
+        status= auto
+        branch= auto
+        interactive = true
+
+    [alias]
+        ci = commit
+        di = diff --color-words
+        st = status
+        co = checkout
+        log1 = log --pretty=oneline --abbrev-commit
+        logs = log --stat
+
+Advanced tuning
+~~~~~~~~~~~~~~~~
+It can be convenient in future to tune the bash to see current git branch.
+
+The easy way to do it, is just adding the snippet below to your .bashrc or .bash_profile::
+
+    PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
+
+But more better is to use `git-completion` from sources of `git`. This also has the advantage of adding tab completion to just about every git command.  This also does other fancy stuff like useful promptings. For that choose place and download the sources of `git` (about 27 MiB)::
+
+    git clone git://git.kernel.org/pub/scm/git/git.git
+    cp git/contrib/completion/git-completion.bash ~/.git-completion.sh
+
+Read instructions in '~/.git-completion.sh'
+
+Create GitHub account
+~~~~~~~~~~~~~~~~~~~~~
+
 As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
 
     - https://github.com/signup/free
@@ -182,30 +259,6 @@ Now you have your own repository respect to SymPy project. If your username in G
     - https://github.com/mynick/sympy
     
     [[img/dev-guide-forking-result.png]]
-    
-
-On your local machine choose work place, and clone (download) the code from SymPy's original repository (about 20 MiB)::
-
-    $ git clone git://github.com/sympy/sympy.git
-    $ cd sympy
-
-Then assign your read-and-write repo to a remote called "github"::
-
-    $ git remote add github git@github.com:mynick/sympy.git
-
-
-Basic git settings
-~~~~~~~~~~~~~~~~~~
-
-Git tracks who makes each commit by checking the user’s name and email.
-In addition, we use this info to associate your commits with your GitHub account.
-
-To set these, enter the code below, replacing the name and email with your own (`--global` is optional).::
-
-    $ git config --global user.name "Firstname Lastname"
-    $ git config --global user.email "your_email@youremail.com"
-
-The name should be your actual name, not your GitHub username.
 
 Some tools connect to GitHub without SSH. To use these tools properly you need to find and configure your API Token.
 
@@ -221,6 +274,20 @@ Then enter the code below, replacing the `mynick` and `012-api-token` with your 
 *Note* If you ever change your GitHub password, a new token will be created and will need to be updated.
 
 
+Cloning SymPy
+~~~~~~~~~~~~~~
+
+On your local machine choose work place, and clone (download) the latest code from SymPy's original repository (about 20 MiB)::
+
+    $ git clone git://github.com/sympy/sympy.git
+    $ cd sympy
+
+Then assign your read-and-write repo to a remote called "github"::
+
+    $ git remote add github git@github.com:mynick/sympy.git
+
+
+
 For more information about GitHub forking and tuning see: [8]_, [9]_ and [11]_.
 
 Set up SSH keys
@@ -231,6 +298,7 @@ To establish a secure connection between your computer and GitHub see detailed i
 If you have any problems with SSH access to GitHub see troubleshooting instructions at [12]_, or ask us in mail-list.
 
 And now, do not forget to go to the `Create separated branch`_ instructions before code changing.
+
 
 Create separated branch
 ------------------------
@@ -251,14 +319,10 @@ To view in what branch you are type::
 
     $ git branch
 
-It can be convenient to tune the bash to see current branch. For that, add the snippet below to your .bashrc or .bash_profile::
-
-    PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
-
-Don’t forget to “source” the file if need be, or restart terminal.
-
 And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
-    
+
+
+
 
 Code modification
 ------------------
