@@ -182,7 +182,7 @@ In Windows systems, first of all, install Python from::
 
 by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not forget add Python at the $PATH environment. And install `msysgit`:
 
-    [[http://code.google.com/p/msysgit/]]
+    http://code.google.com/p/msysgit/
 
 
 In both Mac 10.4 and 10.5, you can install Git via MacPorts ::
@@ -234,8 +234,8 @@ The easy way to do it, is just adding the snippet below to your .bashrc or .bash
 
 But more better is to use `git-completion` from sources of `git`. This also has the advantage of adding tab completion to just about every git command.  This also does other fancy stuff like useful promptings. For that choose place and download the sources of `git` (about 27 MiB)::
 
-    git clone git://git.kernel.org/pub/scm/git/git.git
-    cp git/contrib/completion/git-completion.bash ~/.git-completion.sh
+    $ git clone git://git.kernel.org/pub/scm/git/git.git
+    $ cp git/contrib/completion/git-completion.bash ~/.git-completion.sh
 
 Read instructions in '~/.git-completion.sh'
 
