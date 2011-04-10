@@ -10,14 +10,11 @@ Install msysgit:
 
 [[http://code.google.com/p/msysgit/]]
 
-by downloading and running the .exe in "Featured Downloads". Select to only install "Git Bash". Select "Checkout as-is, commit as-is" option. There should be a "Git Bash" executable on your Desktop. Run it and type:
-```bash
-$ echo "export PATH=$PATH" > .bashrc
-```
+by downloading and running the .exe in "Featured Downloads". Select to only install "Git Bash". Select "Checkout as-is, commit as-is" option. There should be a "Git Bash" executable on your Desktop. 
 
 ## Clone SymPy repository
 
-Close and open the bash terminal window again, then:
+Run "Git Bash" terminal window, then:
 
 ```bash
 $ git clone git://github.com/sympy/sympy.git
