@@ -12,7 +12,7 @@ Install msysgit:
 
 by downloading and running the .exe in "Featured Downloads". Select to only install "Git Bash". Select "Checkout as-is, commit as-is" option. There should be a "Git Bash" executable on your Desktop. Run it and type:
 ```bash
-$ echo "export PATH=/c/Python26/:\$PATH" > .bashrc
+$ echo "export PATH=$PATH" > .bashrc
 ```
 
 ## Clone SymPy repository
@@ -27,7 +27,7 @@ $ bin/isympy
 
 Enjoy!
 
-You can also run python just like on linux:
+You can also run python just like on linux. In sympy directory type:
 ```bash
 $ python
 >>> import sympy
