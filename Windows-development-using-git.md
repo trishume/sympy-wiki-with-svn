@@ -4,7 +4,7 @@ Install Python from:
 
 [[http://python.org/download/]]
 
-by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it.
+by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Add python directory to your system environment path variable (My Computer -> Advanced -> Environment Variables -> Path -> Edit). 
 
 Install msysgit:
 
