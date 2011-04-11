@@ -79,6 +79,17 @@ According to this I see the following time distribution for GSoC:
         - implement efficient multivariate polynomial factorization over finite fields. 
         - continue work with _polys_ module. Implement support of non-commutative polynomials. 
 
+## Current Community Activity
+
+- [[https://github.com/sympy/sympy/pull/208]]  (Submit a patch for Issue 604: write tests for p = x**3+2*x**2+8; pull request)
+- [[https://github.com/sympy/sympy/pull/214]]  (Submit a patch for Issue 760: property is_number fixed; pull request)
+- [[http://code.google.com/p/sympy/issues/detail?id=694#c25]]  (Submit a patch. Add tests from "Review of CAS mathematical capabilities", by Michael Wester)
+- [[http://code.google.com/p/sympy/issues/detail?id=1095#c8]]  (Ask a question about need of test)
+- [[http://code.google.com/p/sympy/issues/detail?id=834#c8]] (Discussion about need of @property)
+- [[http://code.google.com/p/sympy/issues/detail?id=1464#c2]] (Docs: adding instructions how to get stuff working on windows)
+- [[http://code.google.com/p/sympy/issues/detail?id=2111#c1]]  (Send bug report)
+
+
 ## Sources
 
 [EEZ-Wang] P. S. Wang. An Improved Multivariate Polynomial Factoring Algorithm. Mathematics of Computation, Vol. 32, Oct. 1978, pp. 1215-1231. 
