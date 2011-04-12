@@ -31,7 +31,7 @@ The **Taylor series** at \(x_0\) of a smooth function \(f\) is the formal power 
 
 The n-th order **Taylor polynomial** of f at \(x_0\) is the degree-n polynomial \(TP_{n, x_0}(f) = \sum_{n = 0}^n \frac{f^{(k)}(x_0)}{k!} X^k\). If f is analytic, \(TP_{n, x_0}(f)\) is the degree-n truncation of \(TS_{x_0}(f)\).
 
-A **generalised power series**, as used by the gruntz algorithm for computing limits, is an expression of the form \(sum_{n > 0} a_n x^{b_n}\). Here the numbers \(b_n\) may be any complex numbers, but their real parts must be increasing: \(Re(b_1) < Re(b_2) < \dots\). The \(a_n\) are elements of the logarithmic closure of \(\mathbb{C}(log(x))\), that is finite expressions involving complex numbers, field operations, the function log, and the symbol log(x). Any laurent series with finite principal part is such a generalised power series.
+A **generalised power series, as used by the gruntz algorithm** for computing limits, is an expression of the form \(\sum_{n > 0} a_n x^{b_n}\). Here the numbers \(b_n\) may be any complex numbers, but their real parts must be increasing: \(Re(b_1) < Re(b_2) < \dots\). The \(a_n\) are elements of the logarithmic closure of \(\mathbb{C}(log(x))\), that is finite expressions involving complex numbers, field operations, the function log, and the symbol log(x). Any laurent series with finite principal part is such a generalised power series.
 
 These are all of the generalised power series type:
 
