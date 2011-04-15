@@ -1,0 +1,11 @@
+GSoC 2011 Report
+================
+
+This will become our SymPy GSoC 2011 report. So far only preliminary results are here, so that we can then polish it at the end of the summer.
+
+Traffic
+-------
+
+Traffic data for March at github:
+
+.. image:: github_gsoc_2011_traffic.png
