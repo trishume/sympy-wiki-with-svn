@@ -17,9 +17,10 @@ This is used to multiply permutations
 
 #### MULT(n, \(\alpha\), \(\beta\), \(\gamma\)) ####
 
-*for* i \(\Leftarrow\) 0 to n-1                                                                                               
-           *do* \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]]                                                               *for* i \(\Leftarrow\) 0 to n-1                                                                                        
-           *do* \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
+* *for* i \(\Leftarrow\) 0 to n-1
+**    *do* \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]]
+* *for* i \(\Leftarrow\) 0 to n-1
+**    *do* \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
 
 Note that we use an auxiliary permutation here to prevent bugs arising because of modifications to the arrays \(\alpha\) & \(\beta\)
 
