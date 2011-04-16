@@ -158,8 +158,8 @@ Algorithm for generating the Schreier Sims representation of a group
         1. *for each* h \(\in\) \(U_{j}\)
             1. MULT(n, h, g, f)
             2. ENTER(n, f, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
-2. *for i \(\Leftarrow\) 0 to n - 1
-    1. do \(U_{i}) \(\Leftarrow\) {I}
+2. *for* i \(\Leftarrow\) 0 to n - 1
+    1. do \(U_{i}\) \(\Leftarrow\) {I}
 3. *for each* \(\alpha\) \(\in\) \(\tau\)
     1. do ENTER(n, \(\alpha\), G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
 4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)]  
