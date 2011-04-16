@@ -17,5 +17,5 @@ This is used to multiply permutations
 
 MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
 
-*for* i \(\Leftarrow\) 0 to n-1
+*for* i \(\Leftarrow\) 0 to n-1 \n
   do \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[ \(\beta\) [i]]
