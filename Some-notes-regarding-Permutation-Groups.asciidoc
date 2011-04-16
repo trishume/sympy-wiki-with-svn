@@ -14,5 +14,9 @@ Thus we can see that composition of two permutations is again a permutation.
 
 === Algorithm 1 ===
 This is used to multiply permutations
-==== MULT(n, \(\alpha\), \(\beta\), \(\gamma\)) ====
-*for* i \(\Leftarrow\)
+
+MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
+
+*for* i \(\Leftarrow\) 0 to n-1
+
+  do
