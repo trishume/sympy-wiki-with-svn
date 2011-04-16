@@ -70,5 +70,18 @@ If we need to make use of a permutation group then we need to be able to
 3. Enumerate all the elements of the group without repetition
 
 Now, suppose we store a group as a list of lexicographically arranged permutations then we can observe a few things.
+
 1. The space complexity in the worst case is n!
-2. To test membership using binary search is O(\(n^2\) \(\log(n)\)
+2. Testing membership using binary search is O(\(n^2\) \(\log(n)\))
+3. Generating elements takes O(1) time
+
+Alternatively, we can just store the generators. Enumeration of elements will then involve products in the generators of length one, length two and so on. We cross out duplicates as and when we need to.
+
+### Algorithm 4 ###
+Algorithm to generate a group \(\G\) from its generators \(\tau\)
+
+#### SIMPLE_GEN (n, \(\tau\)) ####
+1. \(\G\) \(\Leftarrow\) \(\phi\)
+2. New \(\Leftarrow\) {I}
+3. while New != \(\phi\)
+    1. \(\G\) \(\Leftarrow\) \(\G\) \(\union\) New
