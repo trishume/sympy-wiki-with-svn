@@ -105,3 +105,46 @@ We now set \(U_{0}\) = {\(h_{0,1}\), \(h_{0,2}\) .., \(h_{0 ,n_{0}}\) }
 
 *Theorem*: Let \(G\), \(U_{0}\) and \(G_{0}\) be defined as above. Then \(U_{0}\) is a left transversal of \(G_{0}\) in \(G\). A left transversal is a left coset representation of a group.
 
+The data structure G = [\(U_{1}\), \(U_{2}\) .., \(U_n_{0}\)] is called the Schreier-Sims representation of the group G.
+So the problem remains to construct a Schreier-Sims representation of the group G as once this representation is at hand then a simple backtracking procedure can be used to generate all the elements of the group. This can be done in \(O(n^{2})\) time by the following algorithm.
+
+### Algorithm 5 ###
+List the elements of the group without repetition
+#### RUN(n, G, USE()) ####
+% USE(g) is a higher order function that specifies what needs to be done with g. In python we can represent it using the lambda keyword
+1. global DoneEarly
+2. def proc RUN_BACKTRACK(n, l, G, g, USE())
+    1. if DoneEarly then return
+    2. if l = n
+        1. then USE(n, g)
+    3. else
+        1. *for each* h \(\in\) \(\U_{l}\)
+             1. MULT(n, g, h, \(\f_{l}\)
+             2. RUN_BACKTRACK(n, l + 1, G, \(\f_{l}\, USE())
+3. main
+    1. RUN_BACKTRACK(0, G, I, USE())
+
+Testing for representation is also simple once we have the transversals.
+
+### Algorithm 6 ###
+Test if a permutation g is in a group, given the transversals of the group.
+
+#### TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_n_{0}\)]) ####
+1. *for* i \(\Leftarrow\) 0 to n - 1
+    1. x \(\Leftarrow\) g[i]
+    2. if there exists an h \(\in\) \(U_{i}\) such that h(i) = x
+        1. INV(n, h, \(\pi_{2}\))
+        2. MULT(n, \(\pi_{2}\), g, \(\pi_{3}\))
+        3. for j \(\Leftarrow\) 0 to n-1
+            1. do g[j] \(\Leftarrow\) \(\pi_{3}\)[j]
+    3 else return i
+2 return n
+
+If i < n is returned then the following condition is observed:
+
+(\(f^{-1} g\))(x) = x for all x < i and (\(f^{-1} g\))(i) = j
+but there is no h \(\in) \(U_{i}\) such that h(i) = j
+
+Now we just need to specify the algorithm required to generate the transversals.
+
+(to be continued)
