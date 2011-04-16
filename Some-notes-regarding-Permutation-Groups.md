@@ -162,4 +162,4 @@ Algorithm for generating the Schreier Sims representation of a group
     1. do \(U_{i}) \(\Leftarrow\) {I}
 3. *for each* \(\alpha\) \(\in\) \(\tau\)
     1. do ENTER(n, \(\alpha\), G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
-4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])  
+4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)]  
