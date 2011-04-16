@@ -60,3 +60,15 @@ CYCLE_TO_ARRAY (n, C)
         1. A[x] \(\Leftarrow\) z
         2. i \(\Leftarrow\) i + 1
 
+Similarly, we can construct an algorithm to convert an array to a cycle.
+
+## Data structure to store a group ##
+
+If we need to make use of a permutation group then we need to be able to
+1. Efficiently store the group
+2. Allow testing of membership to be done very rapidly
+3. Enumerate all the elements of the group without repetition
+
+Now, suppose we store a group as a list of lexicographically arranged permutations then we can observe a few things.
+1. The space complexity in the worst case is n!
+2. To test membership using binary search is O(\(n^2\) \(\log(n)\)
