@@ -77,10 +77,16 @@ Now, suppose we store a group as a list of lexicographically arranged permutatio
 Alternatively, we can just store the generators. Enumeration of elements will then involve products in the generators of length one, length two and so on. We cross out duplicates as and when we need to.
 
 ### Algorithm 4 ###
-Algorithm to generate a group \(\G\) from its generators \(\tau\)
+Algorithm to generate a group \(G \) from its generators \(\tau\)
 
 #### SIMPLE_GEN (n, \(\tau\)) ####
 1. \(G \) \(\Leftarrow\) \(\phi\)
 2. New \(\Leftarrow\) {I}
 3. while New != \(\phi\)
     1. \(G \) \(\Leftarrow\) \(G \) \(\cup\) New
+    2. Last \(\Leftarrow) New
+    3. New \(\Leftarrow) \(\phi\)
+    4. *for each* g \(\in\) \(\tau\)
+        1. *for each* h \(\in\) Last
+            1. MULT (n, g, h, f)
+            2. if f \(\notin\) \(G \) then New \(\Leftarrow\) {f} \(\cup\) New
