@@ -5,4 +5,4 @@ A permutation can be represented as a function on a set of points and can also b
 So if \[\pi = (0, 3 , 4, 1)(2)(5, 6)(7)\] then the fixed points are 2 and 7 and we rewrite it as
 \[\pi = (0, 3 , 4, 1)(5, 6)\]
 
-Multiplication of two permutations, say,  are defined by function composition
+Multiplication of two permutations, say, \[\alpha and \beta \] are defined by function composition
