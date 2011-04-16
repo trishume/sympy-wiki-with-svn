@@ -81,7 +81,7 @@ Alternatively, we can just store the generators. Enumeration of elements will th
 Algorithm to generate a group \(\G\) from its generators \(\tau\)
 
 #### SIMPLE_GEN (n, \(\tau\)) ####
-1. \(\(G)\) \(\Leftarrow\) \(\phi\)
+1. \(G \) \(\Leftarrow\) \(\phi\)
 2. New \(\Leftarrow\) {I}
 3. while New != \(\phi\)
-    1. \(\(G)\) \(\Leftarrow\) \(\(G)\) \(\union\) New
+    1. \(G \) \(\Leftarrow\) \(G \) \(\cup\) New
