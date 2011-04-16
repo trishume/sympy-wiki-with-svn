@@ -111,7 +111,8 @@ So the problem remains to construct a Schreier-Sims representation of the group 
 ### Algorithm 5 ###
 List the elements of the group without repetition
 #### RUN(n, G, USE()) ####
-% USE(g) is a higher order function that specifies what needs to be done with g. In python we can represent it using the lambda keyword
+0. USE(g) is a higher order function that specifies what needs to be done with g. In python we can represent it using the lambda keyword
+
 1. global DoneEarly
 2. def proc RUN_BACKTRACK(n, l, G, g, USE())
     1. if DoneEarly then return
