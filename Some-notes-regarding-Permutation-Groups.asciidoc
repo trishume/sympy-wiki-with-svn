@@ -15,4 +15,4 @@ Thus we can see that composition of two permutations is again a permutation.
 === Algorithm 1 ===
 This is used to multiply permutations
 MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
-*for* i \(\Longarrow\)
+*for* i \(\Leftarrow\)
