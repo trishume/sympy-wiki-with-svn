@@ -18,9 +18,43 @@ This is used to multiply permutations
 MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
 
 *for* i \(\Leftarrow\) 0 to n-1
-  do \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]] 
+  *do* \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]] 
 
 *for* i \(\Leftarrow\) 0 to n-1
-  do \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
+  *do* \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
 
-Note that we use an auxiliary permutation here to prevent bugs arising because of modifications to the arrays \(\alpha\) & \(\beta\) 
+Note that we use an auxiliary permutation here to prevent bugs arising because of modifications to the arrays \(\alpha\) & \(\beta\)
+
+=== Algorithm 2 ===
+This is used to compute the inversion of a permutation
+
+INV(n, \(\alpha\),
+
+*for* i \(\Leftarrow\) 0 to n-1
+  *do* \(\beta\)[\(\alpha\)[i]] \(\Leftarrow\) i
+
+=== Algorithm 3 ===
+This is used to convert a cycle to an array
+
+CYCLE_TO_ARRAY (n, C)
+
+*for* i \(\Leftarrow\) 0 to n-1
+  *do* \(A\)[i]] \(\Leftarrow\) i
+
+i \(\Leftarrow\) i
+
+Set l to be the length of string C
+
+*while* i < l:
+
+if C[i] = "(" then:
+
+i \(\Leftarrow\) i + 1
+
+*if* C[i] \(\in\) {0, 1, ..., 9} then:
+
+Get x starting at i
+
+z \(\Leftarrow\) y
+
+Increment i to the position after x
