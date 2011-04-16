@@ -84,7 +84,7 @@ Algorithm to generate a group \(G \) from its generators \(\tau\)
 2. New \(\Leftarrow\) {I}
 3. while New != \(\phi\)
     1. \(G \) \(\Leftarrow\) \(G \) \(\cup\) New
-    2. Last \(\Leftarrow) New
+    2. Last \(\Leftarrow\) New
     3. New \(\Leftarrow\) \(\phi\)
     4. *for each* g \(\in\) \(\tau\)
         1. *for each* h \(\in\) Last
@@ -99,6 +99,6 @@ Let \(G \) be a permutation group on \(\chi\) = {0, 1, 2, .., n-1} and set
 Then we can show that they are all subgroups.
 Define orb(0) = {g(0):g \(\in\) \(G\)}, which is the orbit of 0 under G. Then |orb(0)| = \(n_{0}\) where 0 < \(n_{0}\) < n.
 
-Write orb(0) = {\(x_{0,1})\, \(x_{0,2})\ .., \(x_{0,n_{0})\} and for some i, choose some \(h_{0,i})\ \(\in\) \(G\) such that \(h_{0,i})\ = \(x_{0,i})\.
+Write orb(0) = { \(x_{0,1})\ , \(x_{0,2})\ .., \(x_{0,\(n_{0}\)\} and for some i, choose some \(h_{0,i})\ \(\in\) \(G\) such that \(h_{0,i})\ = \(x_{0,i})\.
 
 We now set \(U_{0}\) = {\(h_{0,1})\, \(h_{0,2})\ .., \(h_{0,n_{0})\ }
