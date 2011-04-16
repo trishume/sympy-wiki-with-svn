@@ -29,24 +29,34 @@ This is used to compute the inversion of a permutation
 
 #### INV(n, \(\alpha\),) ####
 
-*for* i \(\Leftarrow\) 0 to n-1
-  *do* \(\beta\)[\(\alpha\)[i]] \(\Leftarrow\) i
+1. *for* i \(\Leftarrow\) 0 to n-1
+    1. *do* \(\beta\)[\(\alpha\)[i]] \(\Leftarrow\) i
 
 ### Algorithm 3 ###
 This is used to convert a cycle to an array
 
 CYCLE_TO_ARRAY (n, C)
 
-*for* i \(\Leftarrow\) 0 to n-1
-  *do* \(A\)[i]] \(\Leftarrow\) i
+1. *for* i \(\Leftarrow\) 0 to n-1
+    1. *do* \(A\)[i]] \(\Leftarrow\) i
 
-i \(\Leftarrow\) i
-Set l to be the length of string C
-*while* i < l: 
-   if C[i] = "(" then:
-      i \(\Leftarrow\) i + 1
-      *if* C[i] \(\in\) {0, 1, ..., 9} then:
-         Get x starting at i
-         z \(\Leftarrow\) y
+2. i \(\Leftarrow\) i
+3. Set l to be the length of string C
+4. *while* i < l: 
+    1. if C[i] = "(" then:
+        1. i \(\Leftarrow\) i + 1
+        2. *if* C[i] \(\in\) {0, 1, ..., 9} then:
+           1. Get x starting at i
+           2. z \(\Leftarrow\) y
+           3. Increment i to the position after x
+    2. if C[i] = ","
+        1. i \(\Leftarrow\) i + 1
+        2. *if* C[i] \(\in\) {0, 1, ..., 9} then:
+           1. Get y starting at i
+           2. A[z] \(\leftarrow\) y 
+           3. Increment i to the position after y
+           4. x \(\Leftarrow\) y
+    3. if C[i] = ")"
+        1. A[x] \(\Leftarrow\) z
+        2. i \(\Leftarrow\) i + 1
 
-Increment i to the position after x
