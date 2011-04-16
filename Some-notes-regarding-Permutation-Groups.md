@@ -1,4 +1,4 @@
-# Permutation Groups #
+*# Permutation Groups #
 
 ## Preliminaries ##
 A permutation can be represented as a function on a set of points and can also be represented in a cyclic notation. We normally do not write out cycles of length one (these are also called fixed points).
@@ -17,10 +17,10 @@ This is used to multiply permutations
 
 #### MULT(n, \(\alpha\), \(\beta\), \(\gamma\)) ####
 
-* *for* i \(\Leftarrow\) 0 to n-1
-**    *do* \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]]
-* *for* i \(\Leftarrow\) 0 to n-1
-**    *do* \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
+1. *for* i \(\Leftarrow\) 0 to n-1
+    1.1 *do* \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]]
+2. *for* i \(\Leftarrow\) 0 to n-1
+    2.1 *do* \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
 
 Note that we use an auxiliary permutation here to prevent bugs arising because of modifications to the arrays \(\alpha\) & \(\beta\)
 
