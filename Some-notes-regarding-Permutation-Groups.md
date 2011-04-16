@@ -105,7 +105,7 @@ We now set \(U_{0}\) = {\(h_{0,1}\), \(h_{0,2}\) .., \(h_{0 ,n_{0}}\) }
 
 *Theorem*: Let \(G\), \(U_{0}\) and \(G_{0}\) be defined as above. Then \(U_{0}\) is a left transversal of \(G_{0}\) in \(G\). A left transversal is a left coset representation of a group.
 
-The data structure G = [\(U_{1}\), \(U_{2}\) .., \(U_n_{0}\)] is called the Schreier-Sims representation of the group G.
+The data structure G = [\(U_{1}\), \(U_{2}\) .., \(U_{n_{0}}\)] is called the Schreier-Sims representation of the group G.
 So the problem remains to construct a Schreier-Sims representation of the group G as once this representation is at hand then a simple backtracking procedure can be used to generate all the elements of the group. This can be done in \(O(n^{2})\) time by the following algorithm.
 
 ### Algorithm 5 ###
