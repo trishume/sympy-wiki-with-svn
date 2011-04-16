@@ -118,9 +118,9 @@ List the elements of the group without repetition
     2. if l = n
         1. then USE(n, g)
     3. else
-        1. *for each* h \(\in\) \(\U_{l}\)
-             1. MULT(n, g, h, \(\f_{l}\)
-             2. RUN_BACKTRACK(n, l + 1, G, \(\f_{l}\, USE())
+        1. *for each* h \(\in\) \(U_{l}\)
+             1. MULT(n, g, h, \(f_{l}\)
+             2. RUN_BACKTRACK(n, l + 1, G, \(f_{l}\), USE())
 3. main
     1. RUN_BACKTRACK(0, G, I, USE())
 
