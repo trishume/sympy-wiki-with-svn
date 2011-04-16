@@ -129,7 +129,7 @@ Testing for representation is also simple once we have the transversals.
 ### Algorithm 6 ###
 Test if a permutation g is in a group, given the transversals of the group.
 
-#### TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_n_{0}\)]) ####
+#### TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n_{0}}\) ]) ####
 1. *for* i \(\Leftarrow\) 0 to n - 1
     1. x \(\Leftarrow\) g[i]
     2. if there exists an h \(\in\) \(U_{i}\) such that h(i) = x
@@ -142,7 +142,7 @@ Test if a permutation g is in a group, given the transversals of the group.
 
 If i < n is returned then the following condition is observed:
 
-(\(f^{-1} g\))(x) = x for all x < i and (\(f^{-1} g\))(i) = j
+(\(f^{-1}\)\(g\))(x) = x for all x < i and (\(f^{-1} g\))(i) = j
 but there is no h \(\in) \(U_{i}\) such that h(i) = j
 
 Now we just need to specify the algorithm required to generate the transversals.
