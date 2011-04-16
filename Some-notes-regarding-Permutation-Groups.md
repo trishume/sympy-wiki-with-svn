@@ -145,7 +145,7 @@ If i < n is returned then the following condition is observed:
 (\(f^{-1}\)\(g\))(x) = x for all x < i and (\(f^{-1} g\))(i) = j
 but there is no h \(\in\) \(U_{i}\) such that h(i) = j
 
-Now we just need to specify the algorithm required to generate the transversals.
+Now we just need to specify the algorithm required to generate the all the transversals.
 
 ### Algorithm 7 ###
 Algorithm for generating the Schreier Sims representation of a group
@@ -162,4 +162,8 @@ Algorithm for generating the Schreier Sims representation of a group
     1. do \(U_{i}\) \(\Leftarrow\) {I}
 3. *for each* \(\alpha\) \(\in\) \(\tau\)
     1. do ENTER(n, \(\alpha\), G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
-4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)]  
+4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)] 
+
+Computing the order of the group is extremely straightforward once we have the Schreier Sims representation. All we need to do is to multiply the orders of all the transversals to get the order of the group.
+
+Algorithms for computing stabilizers and orbits will be discussed later.
