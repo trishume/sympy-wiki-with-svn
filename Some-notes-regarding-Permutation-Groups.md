@@ -129,7 +129,7 @@ Testing for representation is also simple once we have the transversals.
 ### Algorithm 6 ###
 Test if a permutation g is in a group, given the transversals of the group.
 
-#### TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n_{0}}\) ]) ####
+#### TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\) ]) ####
 1. *for* i \(\Leftarrow\) 0 to n - 1
     1. x \(\Leftarrow\) g[i]
     2. if there exists an h \(\in\) \(U_{i}\) such that h(i) = x
@@ -143,8 +143,23 @@ Test if a permutation g is in a group, given the transversals of the group.
 If i < n is returned then the following condition is observed:
 
 (\(f^{-1}\)\(g\))(x) = x for all x < i and (\(f^{-1} g\))(i) = j
-but there is no h \(\in) \(U_{i}\) such that h(i) = j
+but there is no h \(\in\) \(U_{i}\) such that h(i) = j
 
 Now we just need to specify the algorithm required to generate the transversals.
 
-(to be continued)
+### Algorithm 7 ###
+Algorithm for generating the Schreier Sims representation of a group
+#### GEN(n, \(\tau\)) ####
+1. def procedure ENTER(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
+    1. i \(\Leftarrow\) TEST(n, g, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\) ])
+    2. if i = n then return
+    3. else \(U_{i}\) \(\Leftarrow\) \(U_{1}\) \(\cup\) {g}
+    4. *for* j \(\Leftarrow\) i to n - 1
+        1. *for each* h \(\in\) \(U_{j}\)
+            1. MULT(n, h, g, f)
+            2. ENTER(n, f, G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
+2. *for i \(\Leftarrow\) 0 to n - 1
+    1. do \(U_{i}) \(\Leftarrow\) {I}
+3. *for each* \(\alpha\) \(\in\) \(\tau\)
+    1. do ENTER(n, \(\alpha\), G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])
+4. return G = [\(U_{1}\), \(U_{2}\) .., \(U_{n-1}\)])  
