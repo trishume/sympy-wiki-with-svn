@@ -7,3 +7,12 @@ So if \[\pi = (0, 3 , 4, 1)(2)(5, 6)(7)\] then the fixed points are 2 and 7 and 
 
 Multiplication of two permutations, say, \(\alpha\) and \(\beta\) are defined by function composition that is
 (\(\alpha\)\(\beta\))(x) = \(\alpha\)(\(\beta\) x)
+
+Thus we can see that composition of two permutations is again a permutation.
+
+== Some basic algorithms ==
+
+=== Algorithm 1 ===
+This is used to multiply permutations
+MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
+{\bf for} i <-
