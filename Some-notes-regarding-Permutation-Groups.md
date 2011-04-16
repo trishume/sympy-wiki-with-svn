@@ -39,7 +39,6 @@ CYCLE_TO_ARRAY (n, C)
 
 1. *for* i \(\Leftarrow\) 0 to n-1
     1. *do* \(A\)[i]] \(\Leftarrow\) i
-
 2. i \(\Leftarrow\) i
 3. Set l to be the length of string C
 4. *while* i < l: 
