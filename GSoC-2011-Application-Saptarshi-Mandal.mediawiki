@@ -85,7 +85,7 @@ After this I will implement the deterministic version of Schreier-Sims algorithm
 Given a group G acting on a finite X, along with a partial base B and partial strong generating set S, show that B is a complete base and S is is a strong generating set or extend B and S so that they are.
 Now normally a group is given in the form  of a generating set. An algorithm to convert this input into a partial base B and a partial strong generating set S has also been given in [7]. With this information we can proceed with the Schreier-Sims algorithm.
 
-Some further notes regarding Permutation Groups implementation [Permutation Groups]
+Some further notes regarding Permutation Groups implementation [https://github.com/sympy/sympy/wiki/Some-notes-regarding-Permutation-Groups]
 == Related Work ==
 
 Apart from Combinatorica and Sage, maple has the combinat library. Where Mathematica really shines though is their graph visualization tools. For graph visualization, it seems that graphviz is a good choice. It is a mature library and offers a vast selection of algorithms to display graphs and has several Python bindings. GAP is a CAS with support for computational group theoretic algorithms.
