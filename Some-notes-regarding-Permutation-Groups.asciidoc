@@ -15,12 +15,12 @@ Thus we can see that composition of two permutations is again a permutation.
 === Algorithm 1 ===
 This is used to multiply permutations
 
-___
 MULT(n, \(\alpha\), \(\beta\), \(\gamma\))
 
 *for* i \(\Leftarrow\) 0 to n-1
-  do \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]]
+  do \(\pi_{0}\)[i] \(\Leftarrow\) \(\alpha\)[\(\beta\)[i]] 
 
 *for* i \(\Leftarrow\) 0 to n-1
   do \(\gamma\)[i] \(\Leftarrow\) \(\pi_{0}\)[i]
-___
+
+Note that we use an auxiliary permutation here to prevent bugs arising because of modifications to the arrays \(\alpha) and (\beta)\
