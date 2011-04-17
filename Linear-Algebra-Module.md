@@ -1,5 +1,5 @@
 # Linear Algebra Module
-
+<!-- wikitest release -->
 ## Introduction
 
 The SymPy linear algebra module is an easy-to-learn, functional library for matrix manipulation. The module includes the ability to use symbolic variables.
@@ -13,12 +13,15 @@ The linear algebra module is designed to be as simple as possible. First, we imp
     >>> from sympy import *
     >>> from sympy.matrices import Matrix
     >>> Matrix([ [1,0], [0,1] ])
+    [1, 0]
+    [0, 1]
 
 
 This is the standard manner one creates a matrix, i.e. with a list of appropriately-sizes lists. !SymPy also supports more advanced methods of matrix creation including a single list of values and dimension inputs:
 
     >>> Matrix(2, 3, [1, 2, 3, 4, 5, 6])
-
+    [1, 2, 3]
+    [4, 5, 6]
 
 More interestingly (and usefully), we can use a 2-variable function (or lambda) to make one. Here we create an indicator function which is 1 on the diagonal and then use it to make the identity matrix:
 
@@ -30,6 +33,10 @@ More interestingly (and usefully), we can use a 2-variable function (or lambda) 
     ...             return 0
     ...
     >>> Matrix(4, 4, f)
+    [1, 0, 0, 0]
+    [0, 1, 0, 0]
+    [0, 0, 1, 0]
+    [0, 0, 0, 1]    
 
 Finally let's use lambda to create a 1-line matrix with 1's in the even permutation entries:
 
@@ -58,7 +65,7 @@ There are also a couple of special constructors for quick matrix construction - 
     [1, 1]
     [1, 1]
 
-    >>> diag(1, 4*ones(2), 3)
+    >>> diag(1, 4*ones(2), 3) #
     [1, 0, 0, 0]
     [0, 4, 4, 0]
     [0, 4, 4, 0]
@@ -328,15 +335,15 @@ Let's take a look at the vectors:
     >>> for i in out2:
     ...      print i
     ...
-    [2*(1/38)**(1/2)]
-    [3*(1/38)**(1/2)]
-    [5*(1/38)**(1/2)]
-    [(23/19)*19**(1/2)*(1/353)**(1/2)]
-    [(63/19)*19**(1/2)*(1/353)**(1/2)]
-    [ -47/19*19**(1/2)*(1/353)**(1/2)]
-    [(12/353)*706**(1/2)]
-    [ -11/706*706**(1/2)]
-    [  -3/706*706**(1/2)]
+    [  38**(1/2)/19]
+    [3*38**(1/2)/38]
+    [5*38**(1/2)/38]
+    [ 23*6707**(1/2)/6707]
+    [ 63*6707**(1/2)/6707]
+    [-47*6707**(1/2)/6707]
+    [ 12*706**(1/2)/353]
+    [-11*706**(1/2)/706]
+    [ -3*706**(1/2)/706]
 
 We can spot-check their orthogonality with `dot()` and their orthogonality with `norm()`:
 
@@ -366,14 +373,14 @@ Ignoring that fact that there is an eigenvalue function, let's consider the task
     >>> M = Matrix(( (5,0,2), (3,2,0), (0,0,1) ))
     >>> f = M.charpoly(x)
     >>> f
-    (1 - x)*(2 - x)*(5 - x)
+    Poly(x**3 - 8*x**2 + 17*x - 10, x, domain='ZZ')
 
 Now we can use the handy solver from the polynomial module to get our roots:
 
-    >>> from sympy.polynomials import roots
+    >>> from sympy.polys import roots
     >>> r = roots(f, x)
     >>> r
-    [1, 2, 5]
+    {1: 1, 2: 1, 5: 1}
 
 Now that we have our eigenvalues we need the eigenvectors. What we need to do is find the basis vectors for the nullspace of the system
 
@@ -431,7 +438,7 @@ Clearly, this is not the canonical form we're looking for. We're really trying t
     >>> for i in range(len(L)): det *= L[i] - L[i-1]
     ...
     >>> det
-    (x - z)*(y - x)*(z - y)
+    (y - x)*(z - y)*(x - z)
 
 But notice that if we use the expression expansion function, we can see that they are equal:
 
