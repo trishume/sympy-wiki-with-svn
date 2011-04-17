@@ -1,5 +1,5 @@
 # Linear Algebra Module
-<!-- wikitest release -->
+<!-- wikitest release,master -->
 ## Introduction
 
 The SymPy linear algebra module is an easy-to-learn, functional library for matrix manipulation. The module includes the ability to use symbolic variables.
