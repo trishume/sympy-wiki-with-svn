@@ -1,7 +1,8 @@
-
 **This page is obsoleted!**
 
 See [[Development-workflow]] instead.
+
+I think it shouldn't be.  This page is for developers who have been around long enough to get push access.  [[Development-workflow]] is aimed more toward people who are new to the project (and git).  --Aaron
 
 ---
 
