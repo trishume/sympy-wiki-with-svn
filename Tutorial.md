@@ -1,5 +1,7 @@
 # Introduction
 
+<!-- wikitest release,master -->
+
 This tutorial gives an overview and introduction to SymPy. Read this to have an idea what SymPy can do for you (and how) and if you want to know more, read the [[API|http://sympy.googlecode.com/svn/api/sympy.html]] documentation (that is generated from the sources) or the [[sources|http://sympy.googlecode.com/svn/trunk/]] directly.
 
 ## Installation
@@ -65,10 +67,10 @@ We also have some special constants, like `e` and `pi`, that are treated as symb
 >>> pi**2
 pi**2
 
->>> pi.evalf()
+>>> pi.evalf()                  # doctest: +SKIP
 3.141592653589793238462643383
 
->>> (pi+exp(1)).evalf()
+>>> (pi+exp(1)).evalf()         # doctest: +SKIP
 5.859874482049203234066343309
 ```
 
@@ -100,17 +102,17 @@ Then you can play with them:
 2*x
 
 >>> (x+y)**2
-(x+y)**2
+(x + y)**2
 
 >>> ((x+y)**2).expand()
-2*x*y+x**2+y**2
+2*x*y + x**2 + y**2
 ```
 
 And substitute them for other symbols or numbers using `subs(var, substitution)`:
 
 ```py
 >>> ((x+y)**2).subs(x, 1)
-(1+y)**2
+(1 + y)**2
 
 >>> ((x+y)**2).subs(x, y)
 4*y**2
@@ -141,7 +143,7 @@ oo
 >>> limit(x**x, x, 0)
 1
 
->>> limit((5**x+3**x)**(1/x), x, oo)
+>>> limit((5**x + 3**x)**(1/x), x, oo)  # doctest: +SKIP
 5
 ```
 
@@ -160,14 +162,14 @@ cos(x)
 2*cos(2*x)
 
 >>> diff(tan(x), x)
-cos(x)**(-2)
+1 + tan(x)**2
 ```
 
 You can check, that it is correct by:
 
 ```py
 >>> limit((tan(x+y)-tan(x))/y, y, 0)
-cos(x)**(-2)
+1 + tan(x)**2
 ```
 
 Higher derivatives can be calculated using the `diff(func, var, n)` method:
@@ -191,9 +193,9 @@ Use `.series(var, order)`:
 >>> from sympy import *
 >>> x = Symbol('x')
 >>> cos(x).series(x, 0, 10)
-1 - 1/2*x**2 + (1/24)*x**4 - 1/720*x**6 + (1/40320)*x**8 + O(x**10)
+1 - x**2/2 + x**4/24 - x**6/720 + x**8/40320 + O(x**10)
 >>> (1/cos(x)).series(x, 0, 10)
-1 + (1/2)*x**2 + (5/24)*x**4 + (61/720)*x**6 + (277/8064)*x**8 + O(x**10)
+1 + x**2/2 + 5*x**4/24 + 61*x**6/720 + 277*x**8/8064 + O(x**10)
 ```
 
 ## Integration
@@ -213,16 +215,16 @@ x**6
 >>> integrate(sin(x), x)
 -cos(x)
 >>> integrate(log(x), x)
-x*log(x) - x
+-x + x*log(x)
 >>> integrate(2*x + sinh(x), x)
-x**2 + cosh(x)
+cosh(x) + x**2
 ```
 
 Also special functions are handled easily:
 
 ```py
 >>> integrate(exp(-x**2)*erf(x), x)
-(1/4)*pi**(1/2)*erf(x)**2
+pi**(1/2)*erf(x)**2/4
 ```
 
 It is possible to compute definite integral:
@@ -253,7 +255,7 @@ Also improper integrals are supported as well:
 >>> exp(I*x).expand()
 exp(I*x)
 >>> exp(I*x).expand(complex=True)
-1/exp(im(x))*cos(re(x)) + I/exp(im(x))*sin(re(x))
+I*exp(-im(x))*sin(re(x)) + cos(re(x))*exp(-im(x))
 >>> x = Symbol("x", real=True)
 >>> exp(I*x).expand(complex=True)
 I*sin(x) + cos(x)
@@ -348,7 +350,7 @@ One can also make use of the `WildFunction` class to perform more specific match
 {p_: 3, f_: cos}
 >>> g = WildFunction('g', nofargs=2)
 >>> (5*cos(x)).match(p*g)
-None
+{p_: 5, g_: cos(x)}
 ```
 
 One can also use the `exclude` parameter of the `Wild` class to ensure that certain things do not show up in the result:
