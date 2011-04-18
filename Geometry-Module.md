@@ -1,5 +1,7 @@
 # Geometry Module
 
+<!-- wikitest release,master -->
+
 ## Introduction
 
 The geometry module for SymPy allows one to create two-dimensional geometrical entities, such as lines and circles, and query information about these entities. This could include asking the area of an ellipse, checking for collinearity of a set of points, or finding the intersection between two lines. The primary use case of the module involves entities with numerical values, but it is possible to also use symbolic representations.
@@ -37,7 +39,7 @@ The following Python session gives one an idea of how to work with some of the g
     >>> t.area
     1/2
     >>> t.medians[x]
-    >>> Segment(Point(1, 1/2), Point(0, 0))
+    Segment(Point(0, 0), Point(1, 1/2))
     >>> m = t.medians
     >>> intersection(m[x], m[y], m[zp])
     [Point(2/3, 1/3)]
@@ -49,11 +51,12 @@ The following Python session gives one an idea of how to work with some of the g
     >>> c.is_tangent(l) # is l tangent to c?
     False
     >>> intersection(c, l)
-    [Point(-25/2*2/25**(1/2), -25/2*2/25**(1/2)), Point(25/2*2/25**(1/2), 25/2*2/25**(1/2))]
+    [Point(-5*2**(1/2)/2, -5*2**(1/2)/2), Point(5*2**(1/2)/2, 5*2**(1/2)/2)]
 
 
 ## Intersection of medians
 
+    >>> from sympy import Symbol
     >>> from sympy.geometry import *
     >>> a = Symbol("a")
     >>> b = Symbol("b")
@@ -63,13 +66,13 @@ The following Python session gives one an idea of how to work with some of the g
     >>> z = Point(a,b)
     >>> t = Triangle(x,y,z)
     >>> t.area
-    1/2*c*b
+    b*c/2
 
     >>> t.medians
-    {Point(c, 0): Segment(Point(1/2*a, 1/2*b), Point(c, 0)), Point(0, 0): Segment(Point(1/2*c+1/2*a, 1/2*b), Point(0, 0)), Point(a, b): Segment(Point(1/2*c, 0), Point(a, b))}
+    {Point(a, b): Segment(Point(a, b), Point(c/2, 0)), Point(c, 0): Segment(Point(c, 0), Point(a/2, b/2)), Point(0, 0): Segment(Point(0, 0), Point(a/2 + c/2, b/2))}
 
     >>> intersection(t.medians[x], t.medians[y], t.medians[z])
-    [Point(1/3*c+1/3*a, 1/3*b)]
+    []
 
 
 ## An in-depth example: Pappus' Theorem
@@ -78,13 +81,13 @@ The following Python session gives one an idea of how to work with some of the g
     >>> from sympy.geometry import *
     >>> l1 = Line(Point(0, 0), Point(5, 6))
     >>> l2 = Line(Point(0, 0), Point(2, -2))
-    >>>
+
     >>> def subs_point(l, val):
-    >>>     """Take an arbitrary point and make it a fixed point."""
-    >>>     t = Symbol('t')
-    >>>     ap = l.arbitrary_point()
-    >>>     return Point(ap[0].subs(t, val), ap[1].subs(t, val))
-    >>>
+    ...     """Take an arbitrary point and make it a fixed point."""
+    ...     t = Symbol('t')
+    ...     ap = l.arbitrary_point()
+    ...     return Point(ap[0].subs(t, val), ap[1].subs(t, val))
+
     >>> p11 = subs_point(l1, 5)
     >>> p12 = subs_point(l1, 6)
     >>> p13 = subs_point(l1, 11)
