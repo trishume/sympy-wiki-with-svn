@@ -1,12 +1,19 @@
 This page gives quick examples of common symbolic calculations in SymPy. Print it and keep it under your pillow!
+<!-- wikitest release -->
 
 ## Elementary operations
+```py
+ >>> from sympy import *
+ >>> x, y, z, t = symbols('x y z t')
+ >>> k, m, n = symbols('k m n', integer=True)
+ >>> f, g, h = map(Function, 'fgh')
+```
+
 ### Construct a symbolic expression
 Construct the formula \( \frac{3 \pi}{2} + \frac{e^{ix}}{x^2 + y}\) :
 ```py
- >>> var('x y')
  >>> Rational(3,2)*pi + exp(I*x) / (x**2 + y)
- (3/2)*pi + 1/(y + x**2)*exp(I*x)
+ 3*pi/2 + exp(I*x)/(y + x**2)
 ```
 
 ### Evaluate a symbolic expression
@@ -14,8 +21,8 @@ Construct the formula \( \frac{3 \pi}{2} + \frac{e^{ix}}{x^2 + y}\) :
 Calculate the value of \( e^{ix}\)  for \( x=\pi\) :
 ```py
  >>> x = Symbol('x')
- >>> exp(I*x).subs(x,pi).evalf()
- -1
+ >>> exp(I*x).subs(x,pi).evalf()    #doctest: +SKIP
+ -1.00000000000000
 ```
 
 ### Deconstruct an expression
@@ -24,7 +31,7 @@ Calculate the value of \( e^{ix}\)  for \( x=\pi\) :
  >>> expr.__class__
  <class 'sympy.core.add.Add'>
  >>> expr.args
- (x, 2*y)
+ (2*y, x)
 ```
 
 ### Calculate a numerical value
@@ -39,7 +46,7 @@ Calculate 50 digits of \( e^{\pi \sqrt{163}}\) :
 Expand \( (x+y)^2 (x+1)\) :
 ```py
  >>> ((x+y)**2 * (x+1)).expand()
- x**2 + x**3 + y**2 + x*y**2 + 2*x*y + 2*y*x**2
+ 2*x*y + x**2 + y**2 + x*y**2 + 2*y*x**2 + x**3
 ```
 
 ### Simplify a formula
@@ -68,19 +75,20 @@ For details, see: [[Finding roots of polynomials]].
 Solve the equation system \( \left(x+5y=2, -3x+6y=15\right)\) :
 ```py
  >>> solve([Eq(x + 5*y, 2), Eq(-3*x + 6*y, 15)], [x, y])
- {y: 1, x: -3}
+ {x: -3, y: 1}
 ```
 or
 ```py
  >>> solve([x + 5*y - 2, -3*x + 6*y - 15], [x, y])
- {y: 1, x: -3}
+ {x: -3, y: 1}
 ```
 
 ### Calculate a sum
 Evaluate \( \sum_{n=a}^b 6 n^2 + 2^n\) :
 ```py
+ >>> a, b = symbols('a b')
  >>> sum(6*n**2 + 2**n, (n, a, b))
- b + 2**(1 + b) - a - 2**a - 2*a**3 + 2*b**3 + 3*a**2 + 3*b**2
+ b - a + 3*a**2 + 3*b**2 - 2*a**3 + 2*b**3 - 2**a + 2**(1 + b)
 ```
 
 ### Calculate a product
@@ -102,14 +110,14 @@ Evaluate \( \lim_{x\to 0} \frac{\sin x - x}{x^3}\) :
 Find the Maclaurin series of \( \frac{1}{\cos x}\)  up to the \( O(x^6)\)  term:
 ```py
  >>> (1/cos(x)).series(x, 0, 6)
- 1 + (1/2)*x**2 + (5/24)*x**4 + O(x**6)
+ 1 + x**2/2 + 5*x**4/24 + O(x**6)
 ```
 
 ### Calculate a derivative
 Differentiate \( \frac{\cos(x^2)^2}{1+x}\) :
 ```py
  >>> diff(cos(x**2)**2 / (1+x), x)
- -(1 + x)**(-2)*cos(x**2)**2 - 4*x/(1 + x)*cos(x**2)*sin(x**2)
+ -4*x*cos(x**2)*sin(x**2)/(1 + x) - cos(x**2)**2/(1 + x)**2
 ```
 
 ### Calculate an integral
@@ -122,7 +130,7 @@ Calculate the indefinite integral \( \int x^2 \cos x \, dx\)
 Calculate the definite integral \( \int_0^{\pi/2} x^2 \cos x \, dx\) :
 ```py
  >>> integrate(x**2 * cos(x), (x, 0, pi/2))
- (-2) + (1/4)*pi**2
+ -2 + pi**2/4
 ```
 
 ### Solve an ordinary differential equation
@@ -131,22 +139,15 @@ Solve \( f''(x) + 9 f(x) = 1\,\!\) :
 ```py
  >>> f = Function('f')
  >>> dsolve(Eq(Derivative(f(x),x,x) + 9*f(x), 1), f(x))
-f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
+ f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
 ```
 
 You can also use `.diff()`, like here (an example in `isympy`)
 
 ```py
-In [1]: f = Function("f")
-
-In [2]: Eq(f(x).diff(x, x) + 9*f(x), 1)
-Out[2]:
-            2
-           d
-9⋅f(x) + ─────(f(x)) = 1
-         dx dx
-
-In [3]: dsolve(_, f(x))
-Out[3]: f(x) = 1/9 + C₁⋅sin(3⋅x) + C₂⋅cos(3⋅x)
-
+ >>> f = Function("f")
+ >>> Eq(f(x).diff(x, x) + 9*f(x), 1)
+ 9*f(x) + D(f(x), x, x) == 1
+ >>> dsolve(_, f(x))
+ f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
 ```
