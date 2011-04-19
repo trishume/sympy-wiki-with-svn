@@ -1,13 +1,3 @@
-**This page is obsoleted!**
-
-See [[Development-workflow]] instead.
-
-I think it shouldn't be.  This page is for developers who have been around long enough to get push access.  [[Development-workflow]] is aimed more toward people who are new to the project (and git).  --Aaron
-
----
-
----
-
 If you have been around for some time and actively participating in
 SymPy's development, you will be granted push access to the main
 repository.  Then you can push in patches that passed review.
