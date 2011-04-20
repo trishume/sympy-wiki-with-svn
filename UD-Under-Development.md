@@ -83,7 +83,7 @@ Related with:
  - sympy/function s/elementary/piecewise.py
 ( http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.70.4127&rep=rep1&type=pdf)
 
-Can be use Sequnses to describe infinite number of points in (or out of) intervals.
+Can be use Sequences to describe infinite number of points in (or out of) intervals.
 
 
 ## Singularities
@@ -131,7 +131,7 @@ Required for:
 
 Related with:
 
-- sympy/solvers/recurr.py: rsolve() (recurences solving for sequenses)
+- sympy/solvers/recurr.py: rsolve() (recurrences solving for sequences)
 - Set class.
 
 
