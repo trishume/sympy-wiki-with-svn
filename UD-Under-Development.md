@@ -5,23 +5,24 @@ This page written to estimate the current situation and some fundamental problem
 
 The problems with Assumptions have a few types:
  
- 1. Entangled current assumption system.
+1. Entangled current assumption system.
  It is not well described what `is_something` means exactly. Especially in the case
  when `is_something` have not boolean value but a None.
  Also it turned out that `S.One.is_complex` means that integer field *can be* extends to complex plane.
  
- 2. Existence of another variant of assumption system.
+2. Existence of another variant of assumption system.
  This "ask" system is not well tested.
  Additionally the situation is raised: the more we use the old system (for development of new code), the less new system tested.
  And the less new system tested, the less it is used in coding.
  
- 3. It turned out that that some assumptions are inflexibly and globally stitched into in Sympy, and it is impossible to regulate it.
+3. It turned out that that some assumptions are inflexibly and globally stitched into in Sympy, and it is impossible to regulate it.
+
 
 - New assumption system creation [issue 1047](http://code.google.com/p/sympy/issues/detail?id=1047)
 - New assumption system `sympy/sympy/assumptions/ask.py`, `sympy/assumptions/assume.py`
 - Stitched global assumption [issue 2260](http://code.google.com/p/sympy/issues/detail?id=2260#c16)
 
-See also: [[Assumptions]
+See also: [[Assumptions]]
 
 
 ## Series
@@ -29,7 +30,7 @@ See also: [[Assumptions]
 For series this section are dedicated:
     [[UD-series]]
     
-The main problem that they have many entangled problems, and it is became imposiible to operate
+The main problem that they have many entangled problems, and it is became impossible to operate
 with them as ordinary SymPy expressions.
 For effective and clear operation with them we must use special types of series and apply appropriated algorithms.
 
