@@ -17,6 +17,7 @@ The problems with Assumptions have a few types:
  
 3. It turned out that that some assumptions are inflexibly and globally stitched into in Sympy, and it is impossible to regulate it.
 
+Links:
 
 - New assumption system creation [issue 1047](http://code.google.com/p/sympy/issues/detail?id=1047)
 - New assumption system `sympy/sympy/assumptions/ask.py`, `sympy/assumptions/assume.py`
@@ -36,7 +37,8 @@ For effective and clear operation with them we must use special types of series 
 
 Now the series mostly used for limits calculation, and they slave for this aim (so they are turned out to be transseries)
 
-They might used some missed in SymPy topics too:
+They might use some missed in SymPy topics too:
+
  - sequences (to describe internal structure)
 
 Algorithms:
@@ -47,12 +49,13 @@ for multiplication, division, resolution of differential equations, composition 
 
 ## limits
 
+...
 
 ## The operation with intervals
 
 Introduction: http://en.wikipedia.org/wiki/Interval_arithmetic
 
-It is missed in SymPy only some things are present: `Peace-wises`, `Fields` (with no operations)
+It is missed in SymPy, only some things are present: `Peace-wises`, `Fields` (with no operations)
 
 Desired behaviour:
 
@@ -94,9 +97,11 @@ Can be use Sequences to describe infinite number of points in (or out of) interv
     [0]  # Infinite singularity
 
 Needed for:
+
 - to analyse the continuous of functions 
     
 Might use other topics:
+
 - Solve (for finding the roots in denominator)
 - Resolve question is_equal_zero (mixing python == and relative operation with expressions, `zero-test` problem)
 
