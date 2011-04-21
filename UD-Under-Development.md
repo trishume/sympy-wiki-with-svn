@@ -55,15 +55,21 @@ for multiplication, division, resolution of differential equations, composition 
 
 Introduction: http://en.wikipedia.org/wiki/Interval_arithmetic
 
-It is missed in SymPy, only some things are present: `Peace-wises`, `Fields` (with no operations)
+Only some things are present now in SymPy:
 
-Desired behaviour:
+-`Interval`, `Union` (set of Intervals), with operation of intersection and union.
+And only real intervals are supported. (sympy/core/sets.py)
+
+- `Peace-wises`
+- `Fields` (with no operations)
+
+Desired behaviour is to have arithmetic operations upon Intervals:
 
 Real axes:
 
-    >>> Interval([-1, 1])
+    >>> Interval(-1, 1)
     [-1, 1]
-    >>> Interval([-1, 1])**2
+    >>> Interval(-1, 1])**2
     [0, 1]
     
     >>> Interval(RR - S.Zero)
