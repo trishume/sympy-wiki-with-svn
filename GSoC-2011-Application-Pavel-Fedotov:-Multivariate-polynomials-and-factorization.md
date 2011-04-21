@@ -81,8 +81,8 @@ According to this I see the following time distribution for GSoC:
 
 ## Current Community Activity
 
+- [[https://github.com/sympy/sympy/pull/214]]  (Submit a patch for Issue 760: property is_number fixed; pushed in)
 - [[https://github.com/sympy/sympy/pull/208]]  (Submit a patch for Issue 604: write tests for p = x**3+2*x**2+8; pull request)
-- [[https://github.com/sympy/sympy/pull/214]]  (Submit a patch for Issue 760: property is_number fixed; pull request)
 - [[http://code.google.com/p/sympy/issues/detail?id=694#c25]]  (Submit a patch. Add tests from "Review of CAS mathematical capabilities", by Michael Wester)
 - [[http://code.google.com/p/sympy/issues/detail?id=1095#c8]]  (Ask a question about need of test)
 - [[http://code.google.com/p/sympy/issues/detail?id=834#c8]] (Discussion about need of @property)
