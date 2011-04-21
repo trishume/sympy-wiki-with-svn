@@ -369,7 +369,10 @@ None
 
 # Printing
 
-SymPy comes pre-packed with several ways of printing expressions. The most basic way to print an expression is simply though the use of `str(expression)` or `repr(expression)`. The output of `repr(expression)` can vary depending on the representation level set. By default it is set to level 1, but can be set through the `Basic.set_repr_level` function. The available levels are:
+SymPy comes pre-packed with several ways of printing expressions. The most basic way to print an expression is simply though the use of `str(expression)` or `repr(expression)`. 
+
+**to be removed (begin)**
+The output of `repr(expression)` can vary depending on the representation level set. By default it is set to level 1, but can be set through the `Basic.set_repr_level` function. The available levels are:
 
 * **Level 0**, the lowest printing level. Expressions are printed in such a way that they should be able to be evaluated with Python's `eval()` function.
 * **Level 1**, the default printing level. Expressions are printed in a parsable format, but cannot necessarily be passed to Python's `eval()` method. This level is much more readable than Level 0 and is useful for interactive use.
@@ -393,7 +396,10 @@ Rational(101, 123)
 >>>
 ```
 
-Note that there is also a printing module available, `sympy.printing`. Level 2 printing is made possible through the pretty printing component of the printing module. Other printing methods available trough this module are:
+Note that there is
+**to be removed (end) **
+
+also a printing module available, `sympy.printing`. Level 2 printing is made possible through the pretty printing component of the printing module. Other printing methods available trough this module are:
 
 * `pretty(expr)`, `pretty_print(expr)`, `pprint(expr)`
     * Return or print, respectively, a pretty representation of `expr`. This is the same as the second level of representation described above.
