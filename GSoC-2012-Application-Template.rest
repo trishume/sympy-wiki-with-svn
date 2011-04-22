@@ -29,7 +29,7 @@ Do the following:
 * Find something in sympy that doesn't work or needs improvement and send us a
   git patch fixing it (if you need inspiration, feel free to fix any issue from
   our easy to fix issues list
-  http://code.google.com/p/sympy/issues/list?q=label:EasyToFix. Aside from the issues, search for ``FIXME`` or ``TODO`` in the code).
+  http://code.google.com/p/sympy/issues/list?q=label:EasyToFix. Aside from the issues, search for ``FIXME`` or ``TODO`` in the code. You can grep from the command line with the following: grep -r -H "TODO" ./).
 * Report success on the sympy list
 * Publish your patch for peer review by creating a pull request on GitHub.  You
   must submit a patch that is successfully reviewed and pushed in to be
