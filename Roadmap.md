@@ -29,6 +29,7 @@ The next release after 0.6.7 should be a 0.7 release.
 
 ## sympy 0.9.0 ##
 
+* All important common features of a symbolic mathematics library implemented. Priority should be to make SymPy a complete CAS. 
 * Begin to implement a more complete type system that includes coercion/casting, sets+elements, etc.
 
 ## 1.0 ##
