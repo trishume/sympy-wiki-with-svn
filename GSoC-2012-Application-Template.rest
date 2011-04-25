@@ -3,6 +3,7 @@ GSoC 2012 Application Template
 
 You
 ---
+Please put this information at the top of your proposal.
 
     * Name
     * University / current enrollment
