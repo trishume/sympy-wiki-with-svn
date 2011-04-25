@@ -5,9 +5,8 @@
 ```py
     >>> from sympy.matrices import Matrix
     >>> M = Matrix(4, 4, lambda i,j: i*j+1)
-    >>> M.eigenvals()
-                 ____           ____    
-    {0: 2, 9 + \/ 61 : 1, 9 - \/ 61 : 1}
+    >>> M.eigenvals()                           # doctest: -PRETTY
+    {0: 2, 9 + 61**(1/2): 1, 9 - 61**(1/2): 1}
 ```
 
 ```py

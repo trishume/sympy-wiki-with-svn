@@ -53,9 +53,9 @@ Proceed with caution while working with Python's `int` since they truncate integ
 You can however do:
 
 ```py
->>> from __future__ import division
+>>> from __future__ import division # doctest: +SKIP
 
->>> 1/2 #doctest: +SKIP
+>>> 1/2 # doctest: +SKIP
 0.5
 ```
 
@@ -216,8 +216,9 @@ x**6
 -cos(x)
 >>> integrate(log(x), x)
 -x + x*log(x)
->>> integrate(2*x + sinh(x), x)
-cosh(x) + x**2
+>>> integrate(2*x + sinh(x), x)     # doctest: +PRETTY
+           2
+cosh(x) + x 
 ```
 
 Also special functions are handled easily:

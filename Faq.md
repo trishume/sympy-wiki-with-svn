@@ -216,8 +216,10 @@ Even though you are working with sympy objects, not everything you type is a sym
     >>> a=4; 1/a
     0
     >>> from __future__ import division
-    >>> 1/a         # doctest: +SKIP
+    >>> 1/a
     0.25
+    
+    >>> del division
 ```
 
 This could be the source of the difference that you see when you copy and paste a result. The work-around for this is to use sympify() on that copied expression which changes integers to a sympy object or just use a index to access the piece of the output that you are interested in:
