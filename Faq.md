@@ -225,7 +225,7 @@ Even though you are working with sympy objects, not everything you type is a sym
 This could be the source of the difference that you see when you copy and paste a result. The work-around for this is to use sympify() on that copied expression which changes integers to a sympy object or just use a index to access the piece of the output that you are interested in:
 ```py
     >>> from sympy import solve, sympify
-    >>> a,b = symbols('ab')
+    >>> a,b = symbols('a b')
     
     >>> solve((2*a-b)*a-3, a)
     [b/4 - (24 + b**2)**(1/2)/4, b/4 + (24 + b**2)**(1/2)/4]
