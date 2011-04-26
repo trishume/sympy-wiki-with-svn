@@ -421,7 +421,7 @@ Even though SymPy has some really great functionality, one should always keep in
 
 Let's take an example. Now, at any time this may no longer be a problem but for now let's play with the [http://en.wikipedia.org/wiki/Vandermonde_matrix Vandermonde Matrix]. First, let's use our Matrix to find the determinant
 
-    >>> x, y, z = symbols("xyz")
+    >>> x, y, z = symbols("x y z")
     >>> V = Matrix( [ [1, x, x**2], [1, y, y**2], [1, z, z**2] ] )
     >>> V
     [1, x, x**2]
