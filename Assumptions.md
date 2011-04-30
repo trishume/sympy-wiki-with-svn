@@ -19,7 +19,7 @@ The following issues have been brought up about the new assumptions system:
 Haz has said that this should probably not be an issue.
 
 #### Cleaning global assumptions
-The cleanest way to do this would seem to me to have assumptions store weak references to symbols they involve, and have assumptions be cleared out when their symbols die. It is clear that python does not make guarantees about when objects are garbage collected, but that would seem OK to me.
+The cleanest way to do this would seem to me to have assumptions store weak references to symbols they involve, and have assumptions be cleared out when their symbols die. It is clear that python does not make guarantees about when objects are garbage collected, but that would seem OK to me: we don't need assumptions to go away for correctness, we want to have them go away for speed.
 
 In case I am not clear this is what I mean about weak references.
 
