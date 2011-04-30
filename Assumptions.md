@@ -6,7 +6,7 @@ Here we discuss the merits of each approach to replacing the old assumption syst
 
 
 ### Tom
-DISCLAIMER: I have no knowledge of the inner workings of the assumption system, and of the rationale of the switch to the new system. I shall follow Haz in assuming that there is a general consensus that assumptions should be stored separately, not alongside the objects, and that the old assumptions system should be phased out.
+DISCLAIMER: I have no knowledge of the inner workings of the assumption system, or of the rationale of the switch to the new system. I shall follow Haz in assuming that there is a general consensus that assumptions should be stored separately, not alongside the objects, and that the old assumptions system should be phased out.
 
 The following issues have been brought up about the new assumptions system:
 
