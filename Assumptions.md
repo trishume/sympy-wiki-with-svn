@@ -15,7 +15,8 @@ The following issues have been brought up about the new assumptions system:
 3. The Symbol('x', positive=True) syntax.
 4. Interaction of the cache with changing assumptions.
 
-Haz has said that 1. should probably not be an issue.
+#### Slow for trivial queries
+Haz has said that this should probably not be an issue.
 
 #### Cleaning global assumptions
 The cleanest way to do this would seem to me to have assumptions store weak references to symbols they involve, and have assumptions be cleared out when their symbols die. It is clear that python does not make guarantees about when objects are garbage collected, but that would seem OK to me.
