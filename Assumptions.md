@@ -60,6 +60,8 @@ Instead we could just do something like this:
 
 I did something similar regarding argument types (namely for functions to automatically evalf() it is necessary for the cache to distinguish Integer(1) and Real(1)).
 
+Actually the cache *itself* would have to be made to use weakrefs, because otherwise cached symbols can never go away.
+
 ## Assumption Examples
 <pre>
 M ... Mathematica
