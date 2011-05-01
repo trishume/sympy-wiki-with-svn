@@ -61,8 +61,8 @@ As outlined by Vinzent in the discussion of issue [[1884|http://code.google.com/
 
 *Vinzent:* I think this approach in not as intrusive as other approaches, because it allows to use both assumption systems in parallel. This would allow to replace the old system gradually with the new one, without changing the interface. (If we decide to, we can still deprecate and remove the old syntax.)
 Also it does not require a lot of work, because basically we let Python do the scoping.
-(I think global assumptions are completely broken by design, they work only in interactive sessions, not in a library, so it should be removed.)
-The `x.is_assumption` syntax would be equivalent to `ask(x, Q.assumption)` and could be kept.
+(I think global assumptions are completely broken by design, they work only in interactive sessions, not in a library, so they should be removed.)
+The `x.is_assumption` syntax would be equivalent to `ask(x, Q.assumption)` and could be kept. The same applies for `Symbol('x', assumption=True)`.
 
 #### Symbol('x', positive=True) syntax
 If the weakreferencing can be done, this would just be sugar for convenience.
