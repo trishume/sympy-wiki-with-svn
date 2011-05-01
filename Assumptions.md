@@ -18,6 +18,23 @@ The following issues have been brought up about the new assumptions system:
 #### Slow for trivial queries
 Haz has said that this should probably not be an issue.
 
+Consider this trivial benchmark:
+
+<pre>
+In [1]: x = Symbol('x', positive=True)
+
+In [2]: global_assumptions.add(Assume(x, Q.positive))
+
+In [3]: %timeit x.is_positive
+1000000 loops, best of 3: 418 ns per loop
+
+In [4]: %timeit ask(x, Q.positive)
+10000 loops, best of 3: 97.3 us per loop
+</pre>
+
+This is probably fast enough, even if it is about 200 times slower.
+
+
 #### Cleaning global assumptions
 The cleanest way to do this would seem to me to have assumptions store weak references to symbols they involve, and have assumptions be cleared out when their symbols die. It is clear that python does not make guarantees about when objects are garbage collected, but that would seem OK to me: we don't need assumptions to go away for correctness, we want to have them go away for speed.
 
