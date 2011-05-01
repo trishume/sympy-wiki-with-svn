@@ -67,6 +67,12 @@ Also it does not require a lot of work, because basically we let Python do the s
 (I think global assumptions are completely broken by design, they work only in interactive sessions, not in a library, so they should be removed.)
 The `x.is_assumption` syntax would be equivalent to `ask(x, Q.assumption)` and could be kept. The same applies for `Symbol('x', assumption=True)`.
 
+*Ondrej:*
+Even though the hack is simple, it is still a hack, so my gut
+feeling is telling me, that this will bite us quite substantially in
+the future. (E.g. if you want to rewrite the core in C/C++, will this
+design still work?)
+
 #### Symbol('x', positive=True) syntax
 If the weakreferencing can be done, this would just be sugar for convenience.
 
