@@ -39,6 +39,9 @@ But note that in any case weak referencing refers a concept, not an implementati
 
 One objection is that this is not very much different from storing assumptions with objects in the first place. I'm not sure about this, but one essential difference is that assumptions can be removed and introduced manually, all the weakreferencing does is to make sure assumptions go away when the objects do.
 
+#### Replacing global assumptions by local assumptions
+As outlined by Vinzent in the discussion of issue [[1884|http://code.google.com/p/sympy/issues/detail?id=1884]], even if global assumptions can be cleaned automatically as symbols die, this still would hardly be the desired behaviour. A better approach would be to use local assumptions, and inject a local assumptions context in the stack frame of the symbol creation. This has the disadvantage of being somewhat hackish, but apart from that it would have all the benefits of the above solution, plus more desirable semantics. 
+
 #### Symbol('x', positive=True) syntax
 If the weakreferencing can be done, this would just be sugar for convenience.
 
