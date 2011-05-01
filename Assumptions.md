@@ -59,7 +59,7 @@ One objection is that this is not very much different from storing assumptions w
 #### Replacing global assumptions by local assumptions
 As outlined by Vinzent in the discussion of issue [[1884|http://code.google.com/p/sympy/issues/detail?id=1884]], even if global assumptions can be cleaned automatically as symbols die, this still would hardly be the desired behaviour. A better approach would be to use local assumptions, and inject a local assumptions context in the stack frame of the symbol creation. This has the disadvantage of being somewhat hackish, but apart from that it would have all the benefits of the above solution, plus more desirable semantics.
 
-Vinzent: I think this approach in not as intrusive as other approaches, because it allows to use both assumption systems in parallel. This would allow to replace the old system gradually with the new one.
+*Vinzent:* I think this approach in not as intrusive as other approaches, because it allows to use both assumption systems in parallel. This would allow to replace the old system gradually with the new one.
 Also it does not require a lot of work, because basically we let Python do the scoping.
 (I think global assumptions are completely broken by design, they work only in interactive sessions, not in a library, so it should be removed.)
 
