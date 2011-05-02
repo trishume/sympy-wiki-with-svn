@@ -73,6 +73,9 @@ feeling is telling me, that this will bite us quite substantially in
 the future. (E.g. if you want to rewrite the core in C/C++, will this
 design still work?)
 
+*Tom:*
+I think this should not be a problem, if it is made clear that "core library" code should not use the positive=True etc syntax, just like it should not use var.
+
 #### Symbol('x', positive=True) syntax
 If the weakreferencing can be done, this would just be sugar for convenience.
 
