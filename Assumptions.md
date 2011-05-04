@@ -5,6 +5,79 @@ The assumptions in SymPy need to be rewritten. This page is dedicated to discuss
 Here we discuss the merits of each approach to replacing the old assumption system.
 
 
+### Algebra Objects
+
+#### Introduction and Goals
+As for all proposals on this page, the main aim is to figure out a way to disconnect assumptions from the core, within the time frame before the next release.
+
+A closely related aim is to sort out the entanglement of assumptions, core and caching.
+
+Thirdly, this proposal also aims to resolve some conceptual tensions and practical shortcomings I see with the current object model in Sympy. Obviously this last part has a good chance of being mis-guided since I don't know sympy very well. So I will try to concentrate on the first two aims.
+
+For an example of a practical shortcoming I see, consider the treatment of order terms. Since we want to be general the dominance problem has to be solved by computing limits. But this is slow if we are actually working with power series, where the dominance problem is a simple comparison of exponents. We could special-case this (which is what I essentially did in one of my commits), but it remains delicate. The underlying problem is that a *simple* object (a power series + order term) gets a *complicated* representation (indeed the most general representation of objects we allow).
+
+This brings me to the conceptual tension: in the one case in sympy where we really want to "crunch simple objects", namely polys, the principal objects of interest become sort of "second-class citizens". By this I mean that (as far as I can see) the polys functions that are exposed to the user take an arbitrary sympy expression, convert it into the private (efficient) representation and then proceed. Finally the private representation is converted back to an ordinary sympy expression. This works (obviously) but it is cumbersome and hence not done a lot in other parts of the code. But I think whenever there are time-intensive computations, the sympy object model should naturally encourage using the most efficient representation of data.
+
+What follows will be an amalgamation of the ideas of Frederik and Pearu (i.e. sympycore). All cleverness is theirs and all stupidity of the presentation is mine :-).
+
+#### The Element/Algebra Model
+
+The basic idea is that to every expression that is to be manipulated (sin(x), x**2 + 7, ...) we associate an explicit *algebra* object. This algebra object defines how elements can be operated on. For example if A and B are two expressions, then A+B will cause Basic.__add__ to check if A and B belong to the same algebra, and if so call A.algebra.do_add(B). The result will be a new element of the same algebra.
+
+The "core" algebra, i.e. the one which most closely resembles the current objects of sympy, will be called "calculus" in what follows.
+
+##### Verbatim: the most general algebra there is
+
+Since algebras are allowed to represent their elements in any way they like, it is important to introduce a uniform way of converting them. The verbatim algebra can store and manipulate arbitrary elements, without making any assumption about their meaning. To do this it stores what is usually called S-expressions: much like in the current design, every element is stored as a pair (head, args) where head is any kind of identifier (not necessarily a callable) and args represents the parameters for head. Args is a tuple of S-expressions. So for example (ADD, (x, y, 5)) represents x+y+5.
+
+In order to allow conversion between algebras, every algebra needs to be able to convert its elements into elements of Verbatim, and it needs to provide a general method to construct its own representations of a given S-expr. For this to make sense the possible heads have to be standardised somewhat, but not completely: while (probably) every algebra needs to represent addition and should use ADD for that, not every algebra knows about the sine function. In general if compatibility with other algebras is not important, private identifiers can be used for the heads. If an algebra encounters an unrecognised head, it can simply throw an exception.
+
+Note that e.g. the pretty printing can usefully operate on the verbatim algebra.
+
+##### Extension, Specialisation and Unification of Algebras
+
+*Extension* refers to the process of creating a new algebra from a given one, where the new one provides additional functionality. For example there could be a CachingAlgebra which extends any given algebra and caches all operations. Note that I use the term extension here only for thin wrappers like this. For example the calculus algebra can represent any object of a polynomial algbra, but the representation is totally different so it should not be seen as an extension for the purpose of this writing.
+
+*Specialisation* refers to the process of using a more efficient representation for a subset of the elements of a given algebra, while retaining extensions. For example computing limits could be done in a cached version of the calculus algebra. However one crucial part is series expansions, and this could usefully be done in a "truncated generalised power series" algebra. We would, however, like to keep all the extensions of the original algebra (in particular the caching).
+
+A third operation is *unification*: what to do if the user requests an operation on two elements of differing algebras? Throwing an exception would be one possibility, but in particular for transition purposes, and also for convenience, it would be helpful to just pick an algebra that can represent both objects, convert them, and continue operating there.
+
+#### Use Case 1: Caching
+As mentioned above, caching would be an obvious candidate for specialisation. An algorithm that relies on caching for reasons of performance would create a cached version of whatever algebra it is supposed to operate in and convert all objects to there as the first step. Note that 1) the caching algebra constructor can be intelligent so as not to add several layers of caching, 2) the cache is cleared automatically after the algorithm is finished, since the caching algebra object was constructed specially for this purpose (except if the ground algebra already had caching...), and 3) the algorithm now has to ensure that all requirements for caching are fulfilled, e.g. no assumptions are changed in interim.
+
+The CachingAlgebra presumably would not necessarily cache *all* operations, but only those marked @cachethis. Normally @cachethis would be a no-op.
+
+#### Use Case 2: Assumptions
+This is a bit more complicated, especially if we want to be able to use both caching and assumptions at the same time. There has been a sentiment of removing all assumptions from objects, but I think this is wrong (or mis-represented). If assumptions are tied to objects (implicitely using global assumptions or explicitely by making them part of the objects), then the cache *has* to know this.
+
+But notice that the original goal (as far as I know) was not principally to remove assumptions from objects, but to simplify the core. So it would be enough if objects of the calculus algebra simply don't have assumptions. So here is how I could imagine assumptions being implemented:
+
+1. Basic retains all the standard is_... properties, but they always return None. In the calculus algebra, Add etc don't overwrite any of the is_... properties.
+2. There is an AssumptionsAlgebra extension algebra which adds assumptions to symbols. Also all of the objects that can do assumption inference (e.g. Add) overwrite the appropriate is_... methods again.
+
+Finally with things separated out like this, it would also be easy to instead of using the old implementations of is_... in step two to refer to the ask interface. The ask function then would have to be changed to ignore all is_... properties except those on symbols.
+
+Passing around explicit assumptions in addition would also be possible, but this needs some thinking on how it can play along nicely with extension/specialisation of algebras etc.
+
+#### Implementation Strategy
+As far as I can see the following steps would be necessary to solve the caching and assumptions issues in the new framework.
+
+1. Add an Algebra base class.
+2. Add the verbatim algebra.
+3. Make most of the current core part of a new calculus algebra.
+4. Separate assumptions inference from calculus algebra objects, and move them to an AssumptionsAlgebra extension algebra.
+5. Make the "Symbol" constructor alias calculus.Symbol if no assumptions are passed, and the assumptions version otherwise.
+6. Add CachingAlgebra extension algebra.
+7. Add the necessary unification code.
+8. Extend non-core code that relies on caching to create CachingAlgebras.
+
+The following steps would be desirable in the long term, but are not essential initially:
+9. Make the pretty printers operate on Verbatim.
+10. Separate out non-commutative code from the core, create a NonCommutativeCalculus algebra.
+11. Make polys part of the algebras framework.
+12. Add a TruncatedGeneralisedPowerSeries algebra for series expansions.
+
+
 ### Tom
 DISCLAIMER: I have no knowledge of the inner workings of the assumption system, or of the rationale of the switch to the new system. I shall follow Haz in assuming that there is a general consensus that assumptions should be stored separately, not alongside the objects, and that the old assumptions system should be phased out.
 
