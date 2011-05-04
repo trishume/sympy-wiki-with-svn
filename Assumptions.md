@@ -22,7 +22,7 @@ What follows will be an amalgamation of the ideas of Frederik and Pearu (i.e. sy
 
 #### The Element/Algebra Model
 
-The basic idea is that to every expression that is to be manipulated (sin(x), `x**2 + 7`, ...) we associate an explicit *algebra* object. This algebra object defines how elements can be operated on. For example if A and B are two expressions, then A+B will cause Basic.__add__ to check if A and B belong to the same algebra, and if so call A.algebra.do_add(B). The result will be a new element of the same algebra.
+The basic idea is that to every expression that is to be manipulated (sin(x), `x**2 + 7`, ...) we associate an explicit *algebra* object. This algebra object defines how elements can be operated on. For example if A and B are two expressions, then A+B will cause `Basic.__add__` to check if A and B belong to the same algebra, and if so call A.algebra.do_add(B). The result will be a new element of the same algebra.
 
 The "core" algebra, i.e. the one which most closely resembles the current objects of sympy, will be called "calculus" in what follows.
 
