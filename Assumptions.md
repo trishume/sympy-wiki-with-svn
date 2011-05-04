@@ -55,7 +55,7 @@ But notice that the original goal (as far as I know) was not principally to remo
 1. Basic retains all the standard `is_...` properties, but they always return None. In the calculus algebra, Add etc don't overwrite any of the `is_...` properties.
 2. There is an AssumptionsAlgebra extension algebra which adds assumptions to symbols. Also all of the objects that can do assumption inference (e.g. Add) overwrite the appropriate `is_...` methods again.
 
-Finally with things separated out like this, it would also be easy to instead of using the old implementations of is_... in step two to refer to the ask interface. The ask function then would have to be changed to ignore all is_... properties except those on symbols.
+Finally with things separated out like this, it would also be easy to instead of using the old implementations of `is_...` in step two to refer to the ask interface. The ask function then would have to be changed to ignore all `is_...` properties except those on symbols.
 
 Passing around explicit assumptions in addition would also be possible, but this needs some thinking on how it can play along nicely with extension/specialisation of algebras etc.
 
