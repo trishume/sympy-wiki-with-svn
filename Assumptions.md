@@ -52,8 +52,8 @@ This is a bit more complicated, especially if we want to be able to use both cac
 
 But notice that the original goal (as far as I know) was not principally to remove assumptions from objects, but to simplify the core. So it would be enough if objects of the calculus algebra simply don't have assumptions. So here is how I could imagine assumptions being implemented:
 
-1. Basic retains all the standard is_... properties, but they always return None. In the calculus algebra, Add etc don't overwrite any of the is_... properties.
-2. There is an AssumptionsAlgebra extension algebra which adds assumptions to symbols. Also all of the objects that can do assumption inference (e.g. Add) overwrite the appropriate is_... methods again.
+1. Basic retains all the standard `is_...` properties, but they always return None. In the calculus algebra, Add etc don't overwrite any of the `is_...` properties.
+2. There is an AssumptionsAlgebra extension algebra which adds assumptions to symbols. Also all of the objects that can do assumption inference (e.g. Add) overwrite the appropriate `is_...` methods again.
 
 Finally with things separated out like this, it would also be easy to instead of using the old implementations of is_... in step two to refer to the ask interface. The ask function then would have to be changed to ignore all is_... properties except those on symbols.
 
