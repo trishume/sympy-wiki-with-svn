@@ -72,6 +72,7 @@ As far as I can see the following steps would be necessary to solve the caching 
 8. Extend non-core code that relies on caching to create CachingAlgebras.
 
 The following steps would be desirable in the long term, but are not essential initially:
+
 9. Make the pretty printers operate on Verbatim.
 10. Separate out non-commutative code from the core, create a NonCommutativeCalculus algebra.
 11. Make polys part of the algebras framework.
