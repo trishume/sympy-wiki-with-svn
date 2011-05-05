@@ -173,6 +173,19 @@ I did something similar regarding argument types (namely for functions to automa
 
 Actually the cache *itself* would have to be made to use weakrefs, because otherwise cached symbols can never go away.
 
+### Ronan
+
+My general approach is to refactor both the old and new assumptions to make their code simpler and to bring them progressively closer together.
+
+#### Use predicates and propositions instead of "Assume objects"
+
+The idea is to write `~Q.real(x)` instead of `Assume(x, Q.real, False)`.
+It's shorter, easier to understand and doesn't suggest wrongly that
+creating the object does anything beyond that.
+
+Consistent use of this syntax also suggests further ways to simplify the API of the new assumption system.
+It doesn't directly help with removing the old system but makes the new one more usable.
+
 ## Assumption Examples
 <pre>
 M ... Mathematica
