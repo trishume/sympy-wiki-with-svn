@@ -44,7 +44,7 @@ is the code pushed in.
 Like it takes effort to write good and clear code, reviewing other's work needs
 effort too. There are good practices how to do this so that reviewing is fun
 for both the author and the reviewer. We try to follow these good practices, and
-we'll try to show you how to follow too.
+we'll try to show you how to follow them too.
 
 When reviewing other's patches you *learn* a lot, so why not participate
 as a reviewer too?
