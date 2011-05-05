@@ -17,36 +17,37 @@ Introduction
 In SymPy_ we encourage collaborative work.
 
 Everyone is welcome to join and to implement new feature, fix some bug, give
-general advice, etc... Also, we try to discuss everything and to review each
+general advice, etc. Also, we try to discuss everything and to review each
 other's work so that many eyes can see more thus raising the quality.
 
 General discussion takes place on `sympy@googlegroups.com`_ mailing list and in
 the issues_, and the code is discussed in `sympy-patches@googlegroups.com`_
-mailing list. Also some discussion takes place on IRC (our channel is `#sympy at freenode`_).
+mailing list. Some discussion also takes place on IRC (our channel is `#sympy at freenode`_).
 
-As some of you already know, software development is not just coding. A lot
-of non-coding tasks have to be done in order to produce *good* code. Just to
-mention a few: setting up infrastructure, designing, testing, documenting,
+As some of you already know, software development is not just coding. Many
+non-coding tasks have to be done in order to produce *good* code. For
+example: setting up infrastructure, designing, testing, documenting,
 assisting new developers (we are doing it here), and of course programming.
 
 But even programming is not all about writing the code, it is about writing the
-code *and* preparing it so that the code can be included into the project.
+code *and* preparing it so that the code can be included in the project.
 
 Both producing the code and bringing it to the project are important parts of
 the game -- without the code there is nothing to bring in, and having the code
 outside is a no-win for anyone.
 
 As already said above, we review changes. This idea was borrowed from
-successful projects like Linux, Python, SAGE and a lot more. In short each
-change is first reviewed by other developers and only when it is approved the
-code is pushed in.
+successful projects like Linux, Python, SAGE and many more. In short, each
+change is first reviewed by other developers and only when it is approved
+is the code pushed in.
 
 Like it takes effort to write good and clear code, reviewing other's work needs
-effort too. There are good practices how to do things so that reviewing is fun
-for both the author and the reviewer. We try to follow them, and we'll try to
-show you how to follow too.
+effort too. There are good practices how to do this so that reviewing is fun
+for both the author and the reviewer. We try to follow these good practices, and
+we'll try to show you how to follow too.
 
-By the way, when reviewing other's patches you *learn* a lot, so why not to join as a reviewer too?
+When reviewing other's patches you *learn* a lot, so why not participate
+as a reviewer too?
 
 
 How to send a patch
@@ -57,24 +58,25 @@ License: `New BSD License`_ (see the `LICENSE`_ file for details) covers all fil
 There are a few ways to create and send a patch.
 
 The best way is to send a GitHub pull request against the `sympy/sympy`_ repository. We'll review it and push it in. 
-The GitHub pull request is a preferred method, as that makes it easy for us to review and push the code in.
+The GitHub pull request is the preferred method, because it makes it easy for us to review and push the code in.
 
-More quickly, but not convenient for reviewing and merging, is to create patch-file with the help of pure git.
-This way can be used if the patch has high-priority or significant, only one or two files are involved or you just have not enough time for more accurate way.
-(We will be thankful for any improvements of sympy.)
+More quickly, but not convenient for reviewing and merging, is to create a patch-file using git alone.
+This way can be used if the patch has a high-priority or is significant, only one or two files are
+involved, or you don't have enough time to use the preferred method.
+(We are grateful for any improvements of sympy.)
 
-The basic work-flow for both variants is consist of a few stages:
+The basic work-flow for both variants consist of a few stages:
 
 1. Create your environment, if it was not created earlier.
-2. Create separated branch
-3. Modify code and/or create tests of it
-4. Be sure that all tests of SymPy have been passed.
-5. Only then commit changes
-6. Create patch file or pull request for GitHub.
+2. Create a new branch.
+3. Modify code and/or create tests of it.
+4. Be sure that all tests of SymPy pass.
+5. Only then commit changes.
+6. Create patch file, or pull request from GitHub.
 
 All those are described in the details below `Workflow process`_, but before you read that, it would be useful to acquaint yourself with `Coding conventions in Sympy`_.
 
-If you have any questions you can ask them to us on the `mailinglist`_. 
+If you have any questions you can ask them on the `mailinglist`_. 
 
 
 Coding conventions in Sympy
@@ -83,7 +85,7 @@ Coding conventions in Sympy
 Standard Python coding conventions
 -----------------------------------
 
-Follow the standard Style Guide for Python Code when writing code for Sage, as explained at the following URLs:
+Follow the standard Style Guide for Python Code when writing code for SymPy, as explained at the following URLs:
 
     - http://www.python.org/dev/peps/pep-0008
     - http://www.python.org/dev/peps/pep-0257
@@ -109,7 +111,7 @@ In particular,
   
       class PolynomialRing(object)
   
-Note, however, that some functions do have uppercase letters where it makes sense. For example for matrices they are LUdecomposition or T (transposition) methods.
+Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
 
 Documentation strings
 ----------------------
@@ -117,9 +119,9 @@ Documentation strings
 The beginning of the docstring of methods or properties would look like this::
 
     """
-    The convention is to end the first line of a docstring with a dot.
+    A brief, single sentence description of the method or property.
     
-    More detailed description is optional, but it must be wrapped so that no
+    A more detailed description is optional, but it must be wrapped so that no
     line is longer than 80 characters.
     
     According to the "try_block_diag" parameter, it will try to form block
@@ -153,7 +155,8 @@ The beginning of the docstring of methods or properties would look like this::
     
     """
     
-Also, if you start a module, docstring has to contain the description of main functions or classes if they are present.
+Also, if you create a new module, the docstring has to contain the description of the
+main functions or classes if they are present.
 
 
 
@@ -166,7 +169,7 @@ Create your environment
 Creating of environment is once-only.
 
 Install git
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
 
 To install `git` in Linux-like systems you can do it via your native package management system: ::
 
@@ -180,7 +183,7 @@ In Windows systems, first of all, install Python from::
 
     http://python.org/download/
 
-by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not forget add Python at the $PATH environment. And install `msysgit`:
+by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not forget add Python to the $PATH environment. And install `msysgit`:
 
     http://code.google.com/p/msysgit/
 
@@ -203,7 +206,7 @@ To set these, enter the code below, replacing the name and email with your own (
 
 The name should be your actual name, not your GitHub username.
 
-This global (i.e. actual for every repositories) options are placed in `~/.gitconfig`. 
+These global (i.e. it applies to all repositories) options are placed in `~/.gitconfig`. 
 You can edit this file to add setup colors and some handy shortcuts: ::
 
     [user]
@@ -226,13 +229,15 @@ You can edit this file to add setup colors and some handy shortcuts: ::
 
 Advanced tuning
 ~~~~~~~~~~~~~~~~
-It can be convenient in future to tune the bash to see current git branch.
+It can be convenient in future to tune the bash prompt to display the current git branch.
 
-The easy way to do it, is just adding the snippet below to your .bashrc or .bash_profile::
+The easiest way to do it, is to add the snippet below to your .bashrc or .bash_profile::
 
     PS1="[\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
 
-But more better is to use `git-completion` from sources of `git`. This also has the advantage of adding tab completion to just about every git command.  This also does other fancy stuff like useful promptings. For that choose place and download the sources of `git` (about 27 MiB)::
+But better is to use `git-completion` from the `git` source. This also has the advantage of adding tab completion to just about every git command. It also includes many other useful features, for example,
+promptings. To use `git-completion`, first download the `git` source code (about 27 MiB), then copy
+the file to your profile directory::
 
     $ git clone git://git.kernel.org/pub/scm/git/git.git
     $ cp git/contrib/completion/git-completion.bash ~/.git-completion.sh
@@ -242,11 +247,11 @@ Read instructions in '~/.git-completion.sh'
 Create GitHub account
 ~~~~~~~~~~~~~~~~~~~~~
 
-As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then just sign up at:
+As you are going to use `GitHub`_  you should have a GitHub account. If you have not one yet then sign up at:
 
     - https://github.com/signup/free
 
-Then begin your own *forking* of SymPy project (If you have not yet). Go at the SymPy GitHub repository:
+Then create your own *fork* of the SymPy project (if you have not yet). Go to the SymPy GitHub repository:
 
     - https://github.com/sympy/sympy
     
@@ -254,30 +259,31 @@ and click the “Fork” button.
 
     [[img/dev-guide-forking.png]]
 
-Now you have your own repository respect to SymPy project. If your username in GitHub is `mynick` then the forked project will be placed something like:
+Now you have your own repository for the SymPy project. If your username in GitHub is `mynick` then the address of the forked project will look something like:
     
     - https://github.com/mynick/sympy
     
     [[img/dev-guide-forking-result.png]]
 
-Some tools connect to GitHub without SSH. To use these tools properly you need to find and configure your API Token.
+Some tools connect to GitHub using SSH. To use these tools properly you need to find and configure your API Token.
 
-On the GitHub site, click `“Account Settings”` > click `“Account Admin.”`
+On GitHub, click `“Account Settings”` then `“Account Admin.”`
 
     [[img/dev-guide-apitoken.png]]
 
-Then enter the code below, replacing the `mynick` and `012-api-token` with your own::
+Enter the code below, replacing the `mynick` and `012-api-token` with your own::
 
     $ git config --global github.user mynick
     $ git config --global github.token 012-api-token
 
-*Note* If you ever change your GitHub password, a new token will be created and will need to be updated.
+*Note*: if you ever change your GitHub password, a new token will be created and will need to be updated.
 
 
 Cloning SymPy
 ~~~~~~~~~~~~~~
 
-On your local machine choose work place, and clone (download) the latest code from SymPy's original repository (about 20 MiB)::
+On your machine browse to where you would like to store SymPy, and clone (download) the latest
+code from SymPy's original repository (about 20 MiB)::
 
     $ git clone git://github.com/sympy/sympy.git
     $ cd sympy
@@ -295,18 +301,19 @@ Set up SSH keys
 
 To establish a secure connection between your computer and GitHub see detailed instructions in [11]_.
 
-If you have any problems with SSH access to GitHub see troubleshooting instructions at [12]_, or ask us in mail-list.
+If you have any problems with SSH access to GitHub, read the troubleshooting instructions at [12]_, or ask us in mail-list.
 
-And now, do not forget to go to the `Create separated branch`_ instructions before code changing.
+And now, do not forget to go to the `Create separated branch`_ instructions before modifying the code.
 
 
 Create separated branch
 ------------------------
 
-From creating of brunches usually the work with issue is beginning. Also pull request related with them.
+Typically, you will create a new branch to begin work on a new issue. Also pull request related with them.
 
-Think about branch name, that is similar to  topic of the patch or pull request, but short.
-If you know the issue number then the branch name would be something like `1234_sequences`. So create it (first command) and go into (second) ::
+A branch name should briefly describe the topic of the patch or pull request.
+If you know the issue number, then the branch name could be, for example, `1234_sequences`. To create
+and checkout (that is, make it the working branch) a new branch ::
 
     $ git branch 1234_sequences
     $ git checkout 1234_sequences
@@ -315,12 +322,11 @@ or in one command using ::
 
     $ git checkout -b 1234_sequences
     
-To view in what branch you are type::
+To view all branches, with your current branch highlighted, type::
 
     $ git branch
 
 And remember, **never type the following commands in master**: `git merge`, `git commit`, `git rebase`.
-
 
 
 
@@ -333,11 +339,11 @@ Code modification
 
 ...
 
-Do not forget that all new functionality should be tested, and all new methods/functions/classes should have some doctests showing how to use them.
+Do not forget that all new functionality should be tested, and all new methods, functions, and classes should have doctests showing how to use them.
 
 
-Be sure that all tests of SymPy_ have been passed
--------------------------------------------------
+Be sure that all tests of SymPy_ pass
+-------------------------------------
 
 To ensure everything stays in shape, let’s see if all tests pass::
 
@@ -345,9 +351,9 @@ To ensure everything stays in shape, let’s see if all tests pass::
     $ ./bin/doctest
 
 
-If they are not passed all, then the warning *DO NOT COMMIT* will appear.
+If they don't all pass, then the warning *DO NOT COMMIT* will appear.
 
-Code quality (unwanted spaces and indents) are checking by *./bin/test* utility too. But you can separately run this test with the help of this command::
+Code quality (unwanted spaces and indents) are checked by *./bin/test* utilities too. But you can separately run this test with the help of this command::
 
     $ ./bin/test quality
 
@@ -369,15 +375,15 @@ You can check what files are changed::
 
     $ git status
 
-Add new files to be upon version control system if necessary::
+Add new files to the index if necessary::
 
     $ git add new_file.py
 
-Check total changes if it is interesting::
+Check total changes::
     
     $ git diff
     
-So you are ready to commit changes in your local version control system. A commit also contains a `commit message` which describes it.
+So you are ready to commit changes locally. A commit also contains a `commit message` which describes it.
 
 It is best if your commit messages are wrapped so that no line is longer than 80 characters.
 Also, the first line should be separated from the rest of the message by a blank line.
@@ -387,13 +393,13 @@ If your `commit message` is one line then you can use this command::
 
     $ git commit -m "1234: sequences base implementation."
     
-or if you plan to enter big description::
+or if you plan to enter a fuller description::
 
     $ git commit
     
-And editor windows will appear automatically in this case. In Linux, this is vim by default.  You can change what editor pops up by changing the `$EDITOR` shell variable.
+An editor window will appear automatically in this case. In Linux, this is vim by default. You can change what editor pops up by changing the `$EDITOR` shell variable.
 
-Also with the help of option `-a` you can tell to the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.,::
+Also with the help of option `-a` you can tell the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.,::
 
     $ git commit -a -m "1234: sequences base implementation."
 
@@ -404,13 +410,14 @@ If you want to stage only part of your changes, you can use the interactive comm
 and choose the changes you want in the resulting interface.
 
 
-Create patch file or pull request for GitHub
+Create a patch file or pull request for GitHub
 ----------------------------------------------
 
 Be sure that you are in your own branch, and run::
 
     $ git push github 1234_sequences
 
+This will send your local changes to your fork of the SymPy repository.
 Then navigate to your repository with the changes you want someone else to pull:
 
     https://github.com/mynick/sympy    
@@ -441,12 +448,13 @@ See also `Updating your pull request`_
 Updating your pull request
 ---------------------------
 
-If after a time you need to make changes in pull request then the best way is to again add new commit in you local repository and simply repeat push command::
+If after a time you need to make changes in pull request then the best way is to add a new commit in you local repository and simply repeat push command::
 
     $ git commit -m "1234: some additional corrections."
     $ git push github 1234_sequences
 
-Note that if you do any rebasing or in any way edit your commit history, you will have to add the `-f` option to push for it to work::
+Note that if you do any rebasing or in any way edit your commit history, you will have to add
+the `-f` (force) option to the push command for it to work::
 
     $ git push -f github
 
@@ -458,7 +466,7 @@ Note, that those operations must be carried out with accuracy and with understan
 
 **Your code changes and the history of them can be lost!**
 
-This is a frequent situation, when branch is out of date with sympy/sympy repository.
+This is a frequent situation, when the branch is out of date with sympy/sympy repository.
 
 Note, that after cloning a repository, it has a default remote called `origin` that points to the `sympy/sympy` repository.
 And your fork remote named as `github`. You can observe the remotes names with the help of this command::
@@ -488,13 +496,13 @@ In the meantime the remote `sympy/sympy` master repository was updated too::
              \
               a---b     1234_sequences
 
-There are basically two ways to get up to date with a changed master, rebasing and merging.  Rebasing is recommended for smaller branches, and is also the way to edit/squash commits (so you might as well do it if you are doing those too).  For people who are new to git, we pretty much exclusively recommend rebasing for this reason.  
+There are basically two ways to get up to date with a changed master: rebasing and merging.  Rebasing is recommended for smaller branches, and is also the way to edit/squash commits (so you might as well do it if you are doing those too).  For people who are new to git, we recommend rebasing for this reason.  
 
-For larger branches (like 20+ commits or so), there are some advantages to merging instead of rebasing.  Rebasing reapplies each commit iteratively over master, and if the state of the files changed by that commit is different from when it was originally made, the commit will change.   This means what you can end up getting commits that are broken, or commits that do not do what they say they do (because the changes have been "rebased out").  This can lead to confusion if someone in the future tries to test something by checking out commits from the history.  
+For larger branches (for example, 20 commits or more), there are some advantages to merging instead of rebasing.  Rebasing reapplies each commit iteratively over master, and if the state of the files changed by that commit is different from when it was originally made, the commit will change.   This means what you can end up getting commits that are broken, or commits that do not do what they say they do (because the changes have been "rebased out").  This can lead to confusion if someone in the future tries to test something by checking out commits from the history.  
 
-Merging keeps everything intact.  The commits you make are exactly the same, down to the SHA1 hash, which means that if you checkout a commit from a merged branch, it is exactly the same as checking it out from a non-merged branch.  What it does instead is create a single commit, the merge commit, that makes it so that the history is both master and your branch.  This commit contains all merge conflict resolution information, which is another advantage of rebasing (all merge conflict resolutions when rebasing are "sifted" into the commits that caused them, making them invisible).  
+Merging keeps everything intact.  The commits you make are exactly the same, down to the SHA1 hash, which means that if you checkout a commit from a merged branch, it is exactly the same as checking it out from a non-merged branch.  What it does instead is create a single commit, the merge commit, that makes it so that the history is both master and your branch.  This commit contains all merge conflict resolution information, which is another advantage over rebasing (all merge conflict resolutions when rebasing are "sifted" into the commits that caused them, making them invisible).  
 
-Since the guide is aimed at new git users, they should be learning how to rebase.  Also, git rebase has a very friendly interface (compared to git merge) that guides you through each action (editing commits, fixing merge conflicts, etc.).  And while the merge conflicts resolutions will be hidden in the final result, they are easier to apply with git rebase because you only have to apply the resolution for one commit at a time, instead of the whole branch at once.  
+Since this guide is aimed at new git users, you should be learning how to rebase.  Also, git rebase has a very friendly interface (compared to git merge) that guides you through each action (editing commits, fixing merge conflicts, etc.).  And, while the merge conflict resolutions will be hidden in the final result, they are easier to apply with git rebase because you only have to apply the resolution for one commit at a time, instead of the whole branch at once.  
 
 
 Rebasing
@@ -522,9 +530,9 @@ Then::
     $ git checkout 1234_sequences
     $ git rebase master
 
-Note that this last one will require you to fix some merge conflicts, because of the change in master to the same file. Open the file that it tells you is wrong, fix the code with **>>>** and **<<<** around it to what it should be.
+Note that this last one will require you to fix some merge conflicts if there are changes to the same file in `master` and `1234_sequences`. Open the file that it tells you is wrong, fix the code with **>>>** and **<<<** around it to what it should be.
 
-Then be sure that  all tests pass::
+Then be sure that all tests pass::
 
     $ ./bin/test
     $ ./bin/doctest
@@ -555,7 +563,7 @@ Then run *rebase* command in interactive mode::
 Or you can use other ways to point to commits, e.g. *`git rebase --interactive HEAD^^`*
 or *`git rebase --interactive HEAD~2`*.
 
-New editor window will appear (note that order is reverted with comparison of `git log` command)::
+A new editor window will appear (note that order is reversed with respect to the `git log` command)::
 
     pick 4d6137b some additional corrections.
     pick 7bbbc06 bugs fixing
@@ -571,27 +579,27 @@ New editor window will appear (note that order is reverted with comparison of `g
 
 Change *pick* to *reword* (or on old versions of git, to *edit*) for those that you want to edit and save that file.
 
-After that, git will drop back you into your editor for every commit you want to reword, and into the shell for every commit you wanted to edit::
+After that, git will drop you back into your editor for every commit you want to reword, and into the shell for every commit you wanted to edit::
 
     $ (Change the commit in any way you like.)
     $ git commit --amend "your new message"
     $ git rebase --continue
 
-Most of this sequence will be explained to you by the output of the various commands of git. Continue until it says,::
+Most of this sequence will be explained to you by the output of the various commands of git. Continue until it says: ::
 
     Successfully rebased and updated refs/heads/master.
 
 Merging
 ~~~~~~~~
 
-Note, that for people who are new to git, we pretty much exclusively recommend rebasing for the above reasons.
+Note, that for people who are new to git, we recommend rebasing for the above reasons.
 
-Nevertheless, firstly merge local repository with the remote::
+Nevertheless, first merge your local repository with the remote::
 
     $ git checkout master
     $ git pull
 
-This result in::
+This results in::
 
     A---B---C---D       master
              \
@@ -602,12 +610,12 @@ Then merge your `1234_sequences` branch from `1234_sequences`::
     $ git checkout 1234_sequences
     $ git merge master
 
-Probably the last command will tell you that conflicts are must be solved for a few indicated files.
+Probably the last command will tell you that conflicts must be solved for a few indicated files.
 
 If that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the code with **>>>** and **<<<** around it to what it should be.
 You must manually remove useless pieces, and leave only new changes from your branch.
 
-Then be sure that  all tests pass::
+Then be sure that all tests pass::
 
     $ ./bin/test
     $ ./bin/doctest
@@ -629,16 +637,16 @@ Quick patch variant
 
 Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
 
-In this way just clone read-only copy::
+First clone the read-only SymPy repository::
 
     $ git clone git://github.com/sympy/sympy.git
     $ cd sympy
 
-then you can create git branch, for your code modifications.
+then you can create a new branch for your code modifications.
 
-Also take into account all which was  written for the GitHub procedure about git tuning, code conversions, the testing and the commit operations.
+Also take into account all which was written for the GitHub procedure about git tuning, code conversions, the testing and the commit operations.
 
-Then just create patch-file::
+Then create a patch-file::
 
     $ git format-patch master --stdout > 1234_sequences_base_implementation.patch
 
@@ -646,7 +654,7 @@ And send us it.
 
 .. .. rubric:: Footnotes
 
-This page based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
+This page is based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
 
 .. [1] http://lkml.org/lkml/2000/8/25/132
 
