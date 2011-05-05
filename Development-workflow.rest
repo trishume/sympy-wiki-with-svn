@@ -156,7 +156,7 @@ The beginning of the docstring of methods or properties would look like this::
     """
     
 Also, if you create a new module, the docstring has to contain the description of the
-main functions or classes if they are present.
+main functions or classes when present.
 
 
 
@@ -183,7 +183,8 @@ In Windows systems, first of all, install Python from::
 
     http://python.org/download/
 
-by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not forget add Python to the $PATH environment. And install `msysgit`:
+by downloading the "Python 2.7 Windows installer" (or Python 2.6 or 2.5) and running it. Then do not
+forget to add Python to the $PATH environment. And install `msysgit`:
 
     http://code.google.com/p/msysgit/
 
@@ -206,7 +207,7 @@ To set these, enter the code below, replacing the name and email with your own (
 
 The name should be your actual name, not your GitHub username.
 
-These global (i.e. it applies to all repositories) options are placed in `~/.gitconfig`. 
+These global options (i.e. applying to all repositories) are placed in `~/.gitconfig`. 
 You can edit this file to add setup colors and some handy shortcuts: ::
 
     [user]
@@ -383,7 +384,7 @@ Check total changes::
     
     $ git diff
     
-So you are ready to commit changes locally. A commit also contains a `commit message` which describes it.
+You are ready to commit changes locally. A commit also contains a `commit message` which describes it.
 
 It is best if your commit messages are wrapped so that no line is longer than 80 characters.
 Also, the first line should be separated from the rest of the message by a blank line.
@@ -397,9 +398,12 @@ or if you plan to enter a fuller description::
 
     $ git commit
     
-An editor window will appear automatically in this case. In Linux, this is vim by default. You can change what editor pops up by changing the `$EDITOR` shell variable.
+An editor window will appear automatically in this case. In Linux, this is vim by default. You
+can change what editor pops up by changing the `$EDITOR` shell variable.
 
-Also with the help of option `-a` you can tell the command `commit` to automatically stage files that have been modified and deleted, but new files you have not told git about will not be affected, e.g.,::
+Also with the help of option `-a` you can tell the command `commit` to automatically stage files
+that have been modified and deleted, but new files you have not told git about will not be
+affected, e.g.,::
 
     $ git commit -a -m "1234: sequences base implementation."
 
@@ -426,19 +430,25 @@ Select branch, and press the `Pull Request` button.
 
     [[img/dev-guide-pull-1-2.png]]
 
-After pressing the `Pull Request` button, you are presented with a preview page where you can enter a title and optional description, see exactly what commits will be included when the pull request is sent, and also see who the pull request will be sent to:
+After pressing the `Pull Request` button, you are presented with a preview page where you can
+enter a title and optional description, see exactly what commits will be included when the pull
+request is sent, and also see who the pull request will be sent to:
 
     [[img/dev-guide-pull-2.png]]
 
-If you’re sending from a topic branch, the title is pre-filled based on the name of the branch. Markdown is supported in the description, so you can embed images or use preformatted text blocks.
+If you’re sending from a topic branch, the title is pre-filled based on the name of the branch.
+Markdown is supported in the description, so you can embed images or use preformatted text blocks.
 
     [[img/dev-guide-pull-3.png]]
 
-You can switch to the `Commits` tab to ensure that the correct set of changes is being sent. And review the diff of all changes by switching to the `Files Changed`.
+You can switch to the `Commits` tab to ensure that the correct set of changes is being sent.
+And review the diff of all changes by switching to the `Files Changed`.
 
-Once you’ve entered the title and description, made any necessary customizations to the commit range, and reviewed the commits and file changes to be sent, press the `Send pull request` button.
+Once you’ve entered the title and description, made any necessary customizations to the commit
+range, and reviewed the commits and file changes to be sent, press the `Send pull request` button.
 
-The pull request is sent immediately. You’re taken to the main pull request discussion and review page. Additionally, all repository collaborators and followers will see an event in their dashboard.
+The pull request is sent immediately. You’re taken to the main pull request discussion and review
+page. Additionally, all repository collaborators and followers will see an event in their dashboard.
 
 That's all.
 
@@ -448,7 +458,8 @@ See also `Updating your pull request`_
 Updating your pull request
 ---------------------------
 
-If after a time you need to make changes in pull request then the best way is to add a new commit in you local repository and simply repeat push command::
+If after a time you need to make changes in pull request then the best way is to add a new commit
+in you local repository and simply repeat push command::
 
     $ git commit -m "1234: some additional corrections."
     $ git push github 1234_sequences
@@ -468,8 +479,10 @@ Note, that those operations must be carried out with accuracy and with understan
 
 This is a frequent situation, when the branch is out of date with sympy/sympy repository.
 
-Note, that after cloning a repository, it has a default remote called `origin` that points to the `sympy/sympy` repository.
-And your fork remote named as `github`. You can observe the remotes names with the help of this command::
+Note, that after cloning a repository, it has a default remote called `origin` that points
+to the `sympy/sympy` repository.
+And your fork remote named as `github`. You can observe the remotes names with the help
+of this command::
 
     $ git remote -v
     github  git@github.com:mynick/sympy.git (fetch)
@@ -496,13 +509,33 @@ In the meantime the remote `sympy/sympy` master repository was updated too::
              \
               a---b     1234_sequences
 
-There are basically two ways to get up to date with a changed master: rebasing and merging.  Rebasing is recommended for smaller branches, and is also the way to edit/squash commits (so you might as well do it if you are doing those too).  For people who are new to git, we recommend rebasing for this reason.  
+There are basically two ways to get up to date with a changed master: rebasing and merging.
+Rebasing is recommended for smaller branches, and is also the way to edit/squash commits
+(so you might as well do it if you are doing those too).  For people who are new to git,
+we recommend rebasing for this reason.  
 
-For larger branches (for example, 20 commits or more), there are some advantages to merging instead of rebasing.  Rebasing reapplies each commit iteratively over master, and if the state of the files changed by that commit is different from when it was originally made, the commit will change.   This means what you can end up getting commits that are broken, or commits that do not do what they say they do (because the changes have been "rebased out").  This can lead to confusion if someone in the future tries to test something by checking out commits from the history.  
+For larger branches (for example, 20 commits or more), there are some advantages to merging
+instead of rebasing.  Rebasing reapplies each commit iteratively over master, and if the
+state of the files changed by that commit is different from when it was originally made, the
+commit will change.   This means what you can end up getting commits that are broken, or
+commits that do not do what they say they do (because the changes have been "rebased out").
+This can lead to confusion if someone in the future tries to test something by checking out
+commits from the history.  
 
-Merging keeps everything intact.  The commits you make are exactly the same, down to the SHA1 hash, which means that if you checkout a commit from a merged branch, it is exactly the same as checking it out from a non-merged branch.  What it does instead is create a single commit, the merge commit, that makes it so that the history is both master and your branch.  This commit contains all merge conflict resolution information, which is another advantage over rebasing (all merge conflict resolutions when rebasing are "sifted" into the commits that caused them, making them invisible).  
+Merging keeps everything intact.  The commits you make are exactly the same, down to the SHA1
+hash, which means that if you checkout a commit from a merged branch, it is exactly the same
+as checking it out from a non-merged branch.  What it does instead is create a single commit,
+the merge commit, that makes it so that the history is both master and your branch.  This
+commit contains all merge conflict resolution information, which is another advantage over
+rebasing (all merge conflict resolutions when rebasing are "sifted" into the commits that
+caused them, making them invisible).  
 
-Since this guide is aimed at new git users, you should be learning how to rebase.  Also, git rebase has a very friendly interface (compared to git merge) that guides you through each action (editing commits, fixing merge conflicts, etc.).  And, while the merge conflict resolutions will be hidden in the final result, they are easier to apply with git rebase because you only have to apply the resolution for one commit at a time, instead of the whole branch at once.  
+Since this guide is aimed at new git users, you should be learning how to rebase.  Also, git
+rebase has a very friendly interface (compared to git merge) that guides you through each
+action (editing commits, fixing merge conflicts, etc.).  And, while the merge conflict
+resolutions will be hidden in the final result, they are easier to apply with git rebase
+because you only have to apply the resolution for one commit at a time, instead of the
+whole branch at once.  
 
 
 Rebasing
@@ -530,7 +563,9 @@ Then::
     $ git checkout 1234_sequences
     $ git rebase master
 
-Note that this last one will require you to fix some merge conflicts if there are changes to the same file in `master` and `1234_sequences`. Open the file that it tells you is wrong, fix the code with **>>>** and **<<<** around it to what it should be.
+Note that this last one will require you to fix some merge conflicts if there are changes
+to the same file in `master` and `1234_sequences`. Open the file that it tells you is wrong,
+fix the code with **>>>** and **<<<** around it to what it should be.
 
 Then be sure that all tests pass::
 
@@ -577,15 +612,18 @@ A new editor window will appear (note that order is reversed with respect to the
     #  s, squash = use commit, but meld into previous commit
     #  f, fixup = like "squash", but discard this commit's log message
 
-Change *pick* to *reword* (or on old versions of git, to *edit*) for those that you want to edit and save that file.
+Change *pick* to *reword* (or on old versions of git, to *edit*) for those that you want
+to edit and save that file.
 
-After that, git will drop you back into your editor for every commit you want to reword, and into the shell for every commit you wanted to edit::
+After that, git will drop you back into your editor for every commit you want to reword,
+and into the shell for every commit you wanted to edit::
 
     $ (Change the commit in any way you like.)
     $ git commit --amend "your new message"
     $ git rebase --continue
 
-Most of this sequence will be explained to you by the output of the various commands of git. Continue until it says: ::
+Most of this sequence will be explained to you by the output of the various commands of git.
+Continue until it says: ::
 
     Successfully rebased and updated refs/heads/master.
 
@@ -612,7 +650,8 @@ Then merge your `1234_sequences` branch from `1234_sequences`::
 
 Probably the last command will tell you that conflicts must be solved for a few indicated files.
 
-If that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the code with **>>>** and **<<<** around it to what it should be.
+If that's the case then the marks **>>>** and **<<<** will appear at those files. Fix the
+code with **>>>** and **<<<** around it to what it should be.
 You must manually remove useless pieces, and leave only new changes from your branch.
 
 Then be sure that all tests pass::
@@ -635,7 +674,8 @@ So the result will be like that (automatic merging `c`)::
 Quick patch variant
 ====================
 
-Note that the GitHub variant is *highly* preferred, and will increase your chances of the patch not being lost or forgotten about.
+Note that the GitHub variant is *highly* preferred, and will increase your chances of the
+patch not being lost or forgotten about.
 
 First clone the read-only SymPy repository::
 
@@ -644,7 +684,8 @@ First clone the read-only SymPy repository::
 
 then you can create a new branch for your code modifications.
 
-Also take into account all which was written for the GitHub procedure about git tuning, code conversions, the testing and the commit operations.
+Also take into account all which was written for the GitHub procedure about git tuning,
+code conversions, the testing and the commit operations.
 
 Then create a patch-file::
 
@@ -654,7 +695,8 @@ And send us it.
 
 .. .. rubric:: Footnotes
 
-This page is based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and inspired by Sage guide [10]:
+This page is based upon present SymPy_ pages [2-6], GitHub help [8-9], [11-12] and inspired
+by Sage guide [10]:
 
 .. [1] http://lkml.org/lkml/2000/8/25/132
 
