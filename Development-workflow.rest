@@ -65,7 +65,7 @@ This way can be used if the patch has a high-priority or is significant, only on
 involved, or you don't have enough time to use the preferred method.
 (We are grateful for any improvements of sympy.)
 
-The basic work-flow for both variants consist of a few stages:
+The basic work-flow for both variants is a follows:
 
 1. Create your environment, if it was not created earlier.
 2. Create a new branch.
