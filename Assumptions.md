@@ -31,6 +31,7 @@ Use some logic and facts to implement calculation in convenient mode.
 
 - related with symbols for simplification, e.g. `Q.positive`, `Q.even`. 
 - related with algebraic fields/rings, e.g. `Q.real`, `Q.complex`.
+- related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on.
 
 ## Approaches
 Here we discuss the merits of each approach to replacing the old assumption system.
