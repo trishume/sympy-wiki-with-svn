@@ -177,6 +177,8 @@ Actually the cache *itself* would have to be made to use weakrefs, because other
 
 My general approach is to refactor both the old and new assumptions to make their code simpler and to bring them progressively closer together.
 
+*Note by Tom*: If I understand correctly assumptions then become a mixin that is, in principle, optional.
+
 #### Use predicates and propositions instead of "Assume objects"
 
 The idea is to write `~Q.real(x)` instead of `Assume(x, Q.real, False)`.
