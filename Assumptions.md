@@ -1,6 +1,37 @@
 ## Introduction
 The assumptions in SymPy need to be rewritten. This page is dedicated to discussing the best way to go about this.
 
+## The aims of assumptions 
+### for end-user.
+
+To simplify expressions:
+
+    # positive, even
+    >>> refine(Abs(x), Assume(x, Q.positive))
+    x
+    >>> refine(sqrt(x**2), Assume(x, Q.positive)) 
+    x
+    >>> refine((-1)**(x+y), Assume(x, Q.even))
+    (-1)**y
+    # algebraic fields
+    >>> refine(sqrt(x**2), Assume(x, Q.real))
+    Abs(x)
+    # mixed
+    >>> refine(exp(pi*I*2*(x+Rational(1,4))), Assume(x, Q.integer))
+    I
+
+### for core
+
+Use some logic and facts to implement calculation in convenient mode.
+
+`.is_bounded`, `is_infinity`, `is_zero` and so on.
+
+
+## Classification of assumptions
+
+- related with symbols for simplification, e.g. `Q.positive`, `Q.even`. 
+- related with algebraic fields/rings, e.g. `Q.real`, `Q.complex`.
+
 ## Approaches
 Here we discuss the merits of each approach to replacing the old assumption system.
 
