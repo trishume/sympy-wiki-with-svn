@@ -2,7 +2,7 @@
 The assumptions in SymPy need to be rewritten. This page is dedicated to discussing the best way to go about this.
 
 ## The aims of assumptions 
-### for end-user.
+### for the end-user.
 
 To simplify expressions:
 
@@ -20,12 +20,20 @@ To simplify expressions:
     >>> refine(exp(pi*I*2*(x+Rational(1,4))), Assume(x, Q.integer))
     I
 
-### for core
+### for the core
 
 Use some logic and facts to implement calculation in convenient mode.
 
 `.is_bounded`, `is_infinity`, `is_zero` and so on.
 
+### for the end-user and for th core
+
+How to manipulate with symbols in mathematical sense.
+
+    >>> 1/0 (ExtendedReal field)
+    oo
+    >>> 1/0 (ExtendedComplex field)
+    zoo
 
 ## Classification of assumptions
 
