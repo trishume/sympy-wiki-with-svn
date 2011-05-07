@@ -1,5 +1,13 @@
+# Assumptions
+
 ## Introduction
 The assumptions in SymPy need to be rewritten. This page is dedicated to discussing the best way to go about this.
+
+As we have current situation (two systems, a few branches which improved them). So we collect the description of them, and describe variants what to do with them on optimal ways (Approaches section).
+
+But at the same time we must keep in the mind the ideal solution of the assumption system (target vision).
+
+# Target vision
 
 ## The aims of assumptions 
 ### for the end-user.
@@ -41,13 +49,17 @@ How to manipulate with symbols in mathematical sense.
 - related with algebraic fields/rings, e.g. `Q.real`, `Q.complex`.
 - related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on.
 
-## Approaches
+
+# Approaches
 Here we discuss the merits of each approach to replacing the old assumption system.
 
+## Current situation
 
-### Algebra Objects
+### Current branches description
 
-#### Introduction and Goals
+## Algebra Objects
+
+### Introduction and Goals
 As for all proposals on this page, the main aim is to figure out a way to disconnect assumptions from the core, within the time frame before the next release.
 
 A closely related aim is to sort out the entanglement of assumptions, core and caching.
@@ -60,13 +72,13 @@ This brings me to the conceptual tension: in the one case in sympy where we real
 
 What follows will be an amalgamation of the ideas of Frederik and Pearu (i.e. sympycore). All cleverness is theirs and all stupidity of the presentation is mine :-).
 
-#### The Element/Algebra Model
+### The Element/Algebra Model
 
 The basic idea is that to every expression that is to be manipulated (sin(x), `x**2 + 7`, ...) we associate an explicit *algebra* object. This algebra object defines how elements can be operated on. For example if A and B are two expressions, then A+B will cause `Basic.__add__` to check if A and B belong to the same algebra, and if so call A.algebra.do_add(B). The result will be a new element of the same algebra.
 
 The "core" algebra, i.e. the one which most closely resembles the current objects of sympy, will be called "calculus" in what follows.
 
-##### Verbatim: the most general algebra there is
+#### Verbatim: the most general algebra there is
 
 Since algebras are allowed to represent their elements in any way they like, it is important to introduce a uniform way of converting them. The verbatim algebra can store and manipulate arbitrary elements, without making any assumption about their meaning. To do this it stores what is usually called S-expressions: much like in the current design, every element is stored as a pair (head, args) where head is any kind of identifier (not necessarily a callable) and args represents the parameters for head. Args is a tuple of S-expressions. So for example (ADD, (x, y, 5)) represents x+y+5.
 
@@ -74,7 +86,7 @@ In order to allow conversion between algebras, every algebra needs to be able to
 
 Note that e.g. the pretty printing can usefully operate on the verbatim algebra.
 
-##### Extension, Specialisation and Unification of Algebras
+#### Extension, Specialisation and Unification of Algebras
 
 *Extension* refers to the process of creating a new algebra from a given one, where the new one provides additional functionality. For example there could be a CachingAlgebra which extends any given algebra and caches all operations. Note that I use the term extension here only for thin wrappers like this. For example the calculus algebra can represent any object of a polynomial algbra, but the representation is totally different so it should not be seen as an extension for the purpose of this writing.
 
@@ -82,12 +94,12 @@ Note that e.g. the pretty printing can usefully operate on the verbatim algebra.
 
 A third operation is *unification*: what to do if the user requests an operation on two elements of differing algebras? Throwing an exception would be one possibility, but in particular for transition purposes, and also for convenience, it would be helpful to just pick an algebra that can represent both objects, convert them, and continue operating there.
 
-#### Use Case 1: Caching
+### Use Case 1: Caching
 As mentioned above, caching would be an obvious candidate for specialisation. An algorithm that relies on caching for reasons of performance would create a cached version of whatever algebra it is supposed to operate in and convert all objects to there as the first step. Note that 1) the caching algebra constructor can be intelligent so as not to add several layers of caching, 2) the cache is cleared automatically after the algorithm is finished, since the caching algebra object was constructed specially for this purpose (except if the ground algebra already had caching...), and 3) the algorithm now has to ensure that all requirements for caching are fulfilled, e.g. no assumptions are changed in interim.
 
 The CachingAlgebra presumably would not necessarily cache *all* operations, but only those marked @cachethis. Normally @cachethis would be a no-op.
 
-#### Use Case 2: Assumptions
+### Use Case 2: Assumptions
 This is a bit more complicated, especially if we want to be able to use both caching and assumptions at the same time. There has been a sentiment of removing all assumptions from objects, but I think this is wrong (or mis-represented). If assumptions are tied to objects (implicitely using global assumptions or explicitely by making them part of the objects), then the cache *has* to know this.
 
 But notice that the original goal (as far as I know) was not principally to remove assumptions from objects, but to simplify the core. So it would be enough if objects of the calculus algebra simply don't have assumptions. So here is how I could imagine assumptions being implemented:
@@ -99,7 +111,7 @@ Finally with things separated out like this, it would also be easy to instead of
 
 Passing around explicit assumptions in addition would also be possible, but this needs some thinking on how it can play along nicely with extension/specialisation of algebras etc.
 
-#### Implementation Strategy
+### Implementation Strategy
 As far as I can see the following steps would be necessary to solve the caching and assumptions issues in the new framework.
 
 1. Add an Algebra base class.
@@ -119,7 +131,7 @@ The following steps would be desirable in the long term, but are not essential i
 12. Add a TruncatedGeneralisedPowerSeries algebra for series expansions.
 
 
-### Tom
+## Tom
 DISCLAIMER: I have no knowledge of the inner workings of the assumption system, or of the rationale of the switch to the new system. I shall follow Haz in assuming that there is a general consensus that assumptions should be stored separately, not alongside the objects, and that the old assumptions system should be phased out.
 
 The following issues have been brought up about the new assumptions system:
@@ -129,7 +141,7 @@ The following issues have been brought up about the new assumptions system:
 3. The Symbol('x', positive=True) syntax.
 4. Interaction of the cache with changing assumptions.
 
-#### Slow for trivial queries
+### Slow for trivial queries
 Haz has said that this should probably not be an issue.
 
 Consider this trivial benchmark:
@@ -149,7 +161,7 @@ In [4]: %timeit ask(x, Q.positive)
 This is probably fast enough, even if it is about 200 times slower.
 
 
-#### Cleaning global assumptions
+### Cleaning global assumptions
 The cleanest way to do this would seem to me to have assumptions store weak references to symbols they involve, and have assumptions be cleared out when their symbols die. It is clear that python does not make guarantees about when objects are garbage collected, but that would seem OK to me: we don't need assumptions to go away for correctness, we want to have them go away for speed.
 
 In case I am not clear this is what I mean about weak references.
