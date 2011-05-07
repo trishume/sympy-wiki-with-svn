@@ -47,8 +47,9 @@ How to manipulate with symbols in mathematical sense.
 
 - related with symbols for simplification, e.g. `Q.positive`, `Q.even`. 
 - related with algebraic fields/rings, e.g. `Q.real`, `Q.complex`.
-- related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on.
+- related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on. They are help us to operate with calculation in core. Apparently they are derived from the above other classes of assumptions (while start-upping of the objects). Or they derived from expression's analyze.
 
+Apparently the algorithms and use cases can be differ for every classes.
 
 # Approaches
 Here we discuss the merits of each approach to replacing the old assumption system.
