@@ -47,7 +47,7 @@ How to manipulate with symbols in mathematical sense.
 
 - related with symbols for simplification, e.g. `Q.positive`, `Q.even`. 
 - related with algebraic fields/rings, e.g. `Q.real`, `Q.complex`.
-- related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on. They are help us to operate with calculation in core. Apparently they are derived from the above other classes of assumptions (while start-upping of the objects). Or they derived from expression's analyze.
+- related with some facts, e.g. `.is_bounded`, `is_infinity`, `is_zero` and so on. They are help us to operate with calculation in core. Apparently they are derived from the above other classes of assumptions (while start-upping of the objects) (in this case e.g. is_zero is means that it is a Zero for the ring). Or they can be derived from expression's analyze: in this case we can create some class of assumption that are calculated (in this case is_zero can be means but it this sort of calculation is a difficult so called "zero test" problem). In any case we can realize in mind with what we deal exactly (now in the core somewhere we used is_zero in second sense).
 
 Apparently the algorithms and use cases can be differ for every classes.
 
