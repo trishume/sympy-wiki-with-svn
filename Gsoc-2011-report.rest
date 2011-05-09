@@ -11,7 +11,7 @@ Accepted Students
 
 - Definite Integration using Meijer G-functions, Tom Bachmann, Aaron Meurer, [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]]
 
-- PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]]
+- PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]], [[http://gilbertgede.wordpress.com/]]
 
 - Position and Momentum Bases for Quantum Mechanics, Tomo Lazovich, Brian Granger, [[GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]]
 
