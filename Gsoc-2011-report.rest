@@ -9,21 +9,21 @@ Accepted Students
 
 (Proposal, Student, Mentor, Application, Blog)
 
-- Definite Integration using Meijer G-functions, Tom Bachmann, Aaron Meurer, [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]]
+- Definite Integration using Meijer G-functions, Tom Bachmann, Aaron Meurer, [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]], http://nessgrh.wordpress.com/
 
-- PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]], [[http://gilbertgede.wordpress.com/]]
+- PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]]
 
-- Position and Momentum Bases for Quantum Mechanics, Tomo Lazovich, Brian Granger, [[GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]]
+- Position and Momentum Bases for Quantum Mechanics, Tomo Lazovich, Brian Granger, [[GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]], http://lazovichsympy.wordpress.com/
 
 - Combinatorics package for Sympy, Saptarshi Mandal, Christian Muise, [[GSoC-2011-Application-Saptarshi-Mandal]]
 
-- Symbolic Linear Algebra, Sherjil Ozair, Vinzent Steinberg, [[GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]]
+- Symbolic Linear Algebra, Sherjil Ozair, Vinzent Steinberg, [[GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]], http://sherjilozair.wordpress.com/
 
 - Porting to Python 3, Vladimir Perić, Ronan Lamy, [[GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]]
 
-- SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]]
+- SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]], http://sympystats.wordpress.com/
 
-- Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]]
+- Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]], http://seanvig.blogspot.com/
 
 - Implementing F5, Jeremias Yehdegho, Mateusz Paprocki, [[GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]]
 
