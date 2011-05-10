@@ -19,7 +19,7 @@ Accepted Students
 
 - Symbolic Linear Algebra, Sherjil Ozair, Vinzent Steinberg, [[GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]], http://sherjilozair.wordpress.com/
 
-- Porting to Python 3, Vladimir Perić, Ronan Lamy, [[GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]]
+- Porting to Python 3, Vladimir Perić, Ronan Lamy, [[GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]], http://vperic.blogspot.com/
 
 - SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]], http://sympystats.wordpress.com/
 
