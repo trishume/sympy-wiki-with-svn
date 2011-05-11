@@ -25,7 +25,7 @@ Accepted Students
 
 - Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]], http://seanvig.blogspot.com/
 
-- Implementing F5, Jeremias Yehdegho, Mateusz Paprocki, [[GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]]
+- Implementing F5, Jeremias Yehdegho, Mateusz Paprocki, [[GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]], https://f1728.wordpress.com/
 
 More Stuff
 ==========
