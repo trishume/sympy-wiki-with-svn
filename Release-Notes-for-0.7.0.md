@@ -14,6 +14,16 @@ WARNING: Python 2.4 will not be supported any more after this release
 # Major Changes
 ## Polys (TODO)
 Mateusz, can you write this?
+ 
+ * Improved Gröbner bases algorithm (see: ff65e9f, 891e4de, 310a585)
+ * New internal representations of dense and sparse polynomials (see: 31c9aa4)
+ * Real root isolation intervals (see: 3acac67, 4b75dae, fa1206e)
+ * Field isomorphism algorithm (see: b097b01, 08482bf)
+ * Efficient orthogonal polynomials (see: b8fbd59)
+ * Configuration framework for polys (see: 33d8cdb)
+ * Function for computing minimal polynomials (see: 88bf187, f800f95)
+ * Function for generating Viete's formulas (see: 1027408)
+
 ## Quantum (TODO)
 Brian, can you and your students write this?
 * Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm... I got lost already :)
