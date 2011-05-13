@@ -4,11 +4,11 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 WARNING: Python 2.4 will not be supported any more after this release
 
 * no longer support creating matrices without brackets (see: issue 930)
-* Renamed ode_renumber to constant_renumber
-* Rename sum() to summation() (see: 3e763a8, issues 1376, 1727)
-* Rename abs() to Abs() (see: 64a12a4, issue 1727)
+* Rename sum() to summation() (see: 3e763a8, issues 1376, 1727).  This was changed so that it no longer overrides the built-in sum().  The unevaluated summation is still called Sum().
+* Rename abs() to Abs() (see: 64a12a4, issue 1727).  This was also changed so that it no longer overrides the built-in abs().  Note that because of __abs__ magic, you can still do abs(expr) with the built-in abs(), and it will return Abs(expr).
 * Rename max_, min_ to now Max, Min (see: 99a271e, issue 2153)
-* Change behavior of symbols(); symbols('xyz') is now a single symbol, not three (see: f6452a8)
+* Change behavior of symbols(); symbols('xyz') is now a single symbol, not three (see: f6452a8).  Use symbols('x, y, z') or symbols('x y z').
+* Split class Basic into new classes Expr, Boolean (see: a0ab479, 635d89c).  Classes that are designed to be part of standard symbolic expressions (like x**2*sin(x)) should subclass from Expr.  More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like .args and basic methods like .subs() should only subclass from Basic.
 ... ?
 
 # Major Changes
@@ -28,12 +28,13 @@ Mateusz, can you write this?
 Brian, can you and your students write this?
 * Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm... I got lost already :)
 
+## What other major changes?
+
 # Everything else
 
 * Implement symarray, providing numpy nd-arrays of symbols.
 * update mpmath to 0.16
 * Add a tensor module (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]])
-* Don't import runtests or pytest when importing sympy (see: 7ba29a1)
 
 * Assumptions:
  * Refine 
@@ -41,11 +42,10 @@ Brian, can you and your students write this?
  * Implement a SAT solver (see: [[http://code.google.com/p/sympy/wiki/SuperchargingAssumptionsReport]], 2d96329, acfbe75, etc.)
 
 * Core:
- * Split class Basic into new classes Expr, Boolean (see: a0ab479, 635d89c)
  * Split Atom into Atom and AtomicExpr (see: 965aa91)
  * Various sympify improvements
- * Added functionality for action verbs (can be called both as global functions and as methods e.g. a.simplify() = simplify(a) )
- * Improve handling of rationals (see: 053a045, issue 1778)
+ * Added functionality for action verbs (many functions can be called both as global functions and as methods e.g. a.simplify() == simplify(a))
+ * Improve handling of rational strings (see: 053a045, issue 1778)
  * Major changes to factoring of integers (see: 273f450, issue 2003)
  * Optimized has() (see: c83c9b0, issue 1980; d86d08f)
  * Improvements to power (see: c8661ef, issue 1963)
@@ -59,6 +59,7 @@ Brian, can you and your students write this?
 * isympy
  * fix the -p switch
  * Caching can be disabled
+ * lexicographic order is now the default.  Now finally things will print as x**2 + x + 1 instead of 1 + x + x**2.  You can get the old order (and other orderings) by setting the -o option to isympy.
 
 * Functions:
  * Added Piecewise, B-splines
@@ -82,7 +83,7 @@ Brian, can you and your students write this?
  * Allow all geometry objects to accept a tuple as Point args
 
 * Solvers:
- * ODE improvements (see: d12a2aa, 3542041; 73fb9ac
+ * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
 
 * Integrals:
  * Various improvements (see eg. issues 1772, 1999, 1992, 1987.. etc)
@@ -93,4 +94,4 @@ Brian, can you and your students write this?
  * Improve cartes, for generating the Cartesian product (see: b1b10ed)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
 
-In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. 
+In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes.
