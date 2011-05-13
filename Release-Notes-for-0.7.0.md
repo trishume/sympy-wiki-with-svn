@@ -26,6 +26,7 @@ Mateusz, can you write this?
 
 ## Quantum (TODO)
 Brian, can you and your students write this?
+
 * Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm... I got lost already :)
 
 ## What other major changes?
