@@ -1,8 +1,8 @@
 This is the changelog for the 0.7.0 release. This is a draft.  Please help fill it out.
 
 # Backwards compatibility breaks
-WARNING: Python 2.4 will not be supported any more after this release
 
+* This will be the last release of SymPy to support Python 2.4.  Dropping support for Python 2.4 will let us move forward with things like supporting Python 3, and will let use things that were introduced in Python 2.5, like with statement context managers.
 * no longer support creating matrices without brackets (see: issue 930)
 * Rename sum() to summation() (see: 3e763a8, issues 1376, 1727).  This was changed so that it no longer overrides the built-in sum().  The unevaluated summation is still called Sum().
 * Rename abs() to Abs() (see: 64a12a4, issue 1727).  This was also changed so that it no longer overrides the built-in abs().  Note that because of __abs__ magic, you can still do abs(expr) with the built-in abs(), and it will return Abs(expr).
