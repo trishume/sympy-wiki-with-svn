@@ -11,4 +11,8 @@ Brian, can you and your students write this?
 ## What else?
 
 # Everything else
-We don't need to detail every bug fix, but we should point out all pretty major changes.  
+Matrices: Extended QR factorization for general full ranked mxn matrices, various tests for different matrix forms, exponentiation of matrices
+
+Integrator: Several bugfixes
+
+Functions: Several failing tests for hyperbolic functions have been fixed.
