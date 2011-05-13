@@ -9,7 +9,7 @@ WARNING: Python 2.4 will not be supported any more after this release
 * Rename max_, min_ to now Max, Min (see: 99a271e, issue 2153)
 * Change behavior of symbols(); symbols('xyz') is now a single symbol, not three (see: f6452a8).  Use symbols('x, y, z') or symbols('x y z').
 * Split class Basic into new classes Expr, Boolean (see: a0ab479, 635d89c).  Classes that are designed to be part of standard symbolic expressions (like x**2*sin(x)) should subclass from Expr.  More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like .args and basic methods like .subs() should only subclass from Basic.
-... ?
+* ... ?
 
 # Major Changes
 ## Polys (TODO)
