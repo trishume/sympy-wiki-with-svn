@@ -17,12 +17,19 @@ Mateusz, can you write this?
  
  * Improved Gröbner bases algorithm (see: ff65e9f, 891e4de, 310a585)
  * New internal representations of dense and sparse polynomials (see: 31c9aa4)
- * Real root isolation intervals (see: 3acac67, 4b75dae, fa1206e)
+ * Implemented algorithms for real and complex root isolation (see: 3acac67, 4b75dae, fa1206e)
  * Field isomorphism algorithm (see: b097b01, 08482bf)
- * Efficient orthogonal polynomials (see: b8fbd59)
- * Configuration framework for polys (see: 33d8cdb)
+ * Implemented efficient orthogonal polynomials (see: b8fbd59)
+ * Added configuration framework for polys (see: 33d8cdb)
  * Function for computing minimal polynomials (see: 88bf187, f800f95)
  * Function for generating Viete's formulas (see: 1027408)
+ * roots() supports more classes of polynomials (e.g. cyclotomic) (see: d8c8768)
+ * Added a function for recognizing cyclotomic polynomials (see: b9c2a9a)
+ * Added a function for computing Horner form of polynomials (see: 8d235c7)
+ * Added a function for computing symmetric reductions of polynomials (see: 6d560f3)
+ * Added generators of Swinnerton-Dyer, cyclotomic, symmetric, random and interpolating polynomials (see: dad03dd, 6ccf20c, dc728d6, 2f17684, 3004db8)
+ * Added a function computing isolation intervals of algebraic numbers (see: 37a58f1)
+ * 
 
 ## Quantum (TODO)
 Brian, can you and your students write this?
@@ -50,6 +57,7 @@ Brian, can you and your students write this?
  * Major changes to factoring of integers (see: 273f450, issue 2003)
  * Optimized has() (see: c83c9b0, issue 1980; d86d08f)
  * Improvements to power (see: c8661ef, issue 1963)
+ * Added range and lexicographic syntax to `symbols()` and `var()` (see: f6452a8, 9aeb220, 957745a)
 
 * Logic
  * implies object adheres to negative normal form
