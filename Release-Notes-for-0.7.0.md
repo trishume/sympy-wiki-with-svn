@@ -31,14 +31,21 @@ Mateusz, can you write this?
  * Added generators of Swinnerton-Dyer, cyclotomic, symmetric, random and interpolating polynomials (see: dad03dd, 6ccf20c, dc728d6, 2f17684, 3004db8)
  * Added a function computing isolation intervals of algebraic numbers (see: 37a58f1)
  * Polynomial division (`div()`, `rem()`, `quo()`) now defaults to a field (see: a72d188)
- * Added wrappers for numerical roots finding algorithms (see: f638fcf)
+ * Added wrappers for numerical root finding algorithms (see: 0d98945, f638fcf)
  * Added symbolic capabilities to `factor()`, `sqf()` and related functions (see: d521c7f, 548120b, f6f74e6, b1c49cd, 3527b64)
  * `together()` was significantly improved (see: dc327fe)
  * Added support for iterable containers to `gcd()` and `lcm()` (see: e920870)
  * Added a function for constructing domains from coefficient containers (see: a8f20e6)
  * Implemented greatest factorial factorization (see: d4dbbb5)
  * Added partial fraction decomposition algorithm based on undetermined coefficient approach (see: 9769d49, 496f08f)
- * `RootOf` and `RootSum` were significantly improved (see: f3e432, 4c88be6, 41502d7,  
+ * `RootOf` and `RootSum` were significantly improved (see: f3e432, 4c88be6, 41502d7)
+ * Added support for gmpy (GNU Multiple Precision Arithmetic Library) (see: 38e1683)
+ * Added documentation based on Wester's examples (see: 1c23792)
+ * Allow symmetric and non-symmetric representations over finite fields (see: 60fbff4)
+ * More consistent factorization forms from `factor()` and `sqf()` (see: 5df77f5)
+ * Added support for automatic recognition algebraic extensions (see: 7de602c)
+ * Irreducibility testing over finite fields (see: 17e8f1f)
+ * Implemented Trager's algorithms for factorization over algebraic number fields (see: bd0be06)
 
 ## Quantum (TODO)
 Brian, can you and your students write this?
@@ -55,7 +62,8 @@ Brian, can you and your students write this?
 
 * Assumptions:
  * Refine 
- * Add Predicates (see: 7c0b857, 53f0e1a, d1dd6a3..)
+ * Added predicates (see: 7c0b857, 53f0e1a, d1dd6a3..)
+ * Added query handlers for algebraic numbers (see: f3bee7a)
  * Implement a SAT solver (see: [[http://code.google.com/p/sympy/wiki/SuperchargingAssumptionsReport]], 2d96329, acfbe75, etc.)
 
 * Core:
@@ -69,6 +77,7 @@ Brian, can you and your students write this?
  * Added range and lexicographic syntax to `symbols()` and `var()` (see: f6452a8, 9aeb220, 957745a)
  * Added `modulus` argument to `expand()` (see: 1ea5be8)
  * Allow to convert `Interval` to relational form (see: 4c269fe)
+ * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a) 
 
 * Logic
  * implies object adheres to negative normal form
@@ -105,6 +114,7 @@ Brian, can you and your students write this?
 
 * Simplify:
  * Added `use()` (see: 147c142)
+ * `ratsimp()` now uses `cancel()` and `reduced()` (see: 108fb41)
 
 * Solvers:
  * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
@@ -121,5 +131,9 @@ Brian, can you and your students write this?
  * Allow to setup a customized printer in `lambdify()` (see: c1ad905)
  * `flatten()` was significantly improved (see: 31ed8d7)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
+
+* Printing:
+
+ * `sympy.printing` now supports ordering of terms and factors (see: 859bb33)
 
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F5%2F14+&sort=closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles). (TODO: change closed-before date with the actual date of the release)
