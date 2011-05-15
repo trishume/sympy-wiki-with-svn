@@ -16,9 +16,9 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 ## Polys (TODO)
 Mateusz, can you write this?
  
- * Improved Gröbner bases algorithm (see: ff65e9f, 891e4de, 310a585)
- * New internal representations of dense and sparse polynomials (see: 31c9aa4)
+ * New internal representations of dense and sparse polynomials (see: 6aecdb7, 31c9aa4)
  * Implemented algorithms for real and complex root isolation and counting (see: 3acac67, 4b75dae, fa1206e, 103b928, 45c9b22, 8870c8b, b348b30)
+ * Improved Gröbner bases algorithm (see: ff65e9f, 891e4de, 310a585)
  * Field isomorphism algorithm (see: b097b01, 08482bf)
  * Implemented efficient orthogonal polynomials (see: b8fbd59)
  * Added configuration framework for polys (see: 33d8cdb, 7eb81c9)
@@ -40,12 +40,17 @@ Mateusz, can you write this?
  * Added partial fraction decomposition algorithm based on undetermined coefficient approach (see: 9769d49, 496f08f)
  * `RootOf` and `RootSum` were significantly improved (see: f3e432, 4c88be6, 41502d7)
  * Added support for gmpy (GNU Multiple Precision Arithmetic Library) (see: 38e1683)
+ * Allow to compile `sympy.polys` with Cython (see: afb3886)
+ * Improved configuration of variables in `Poly` (see: 22c4061)
  * Added documentation based on Wester's examples (see: 1c23792)
+ * Irreducibility testing over finite fields (see: 17e8f1f)
  * Allow symmetric and non-symmetric representations over finite fields (see: 60fbff4)
  * More consistent factorization forms from `factor()` and `sqf()` (see: 5df77f5)
  * Added support for automatic recognition algebraic extensions (see: 7de602c)
- * Irreducibility testing over finite fields (see: 17e8f1f)
- * Implemented Trager's algorithms for factorization over algebraic number fields (see: bd0be06)
+ * Implemented Collins' modular algorithm for computing resultants (see: 950969b)
+ * Implemented Berlekamp's algorithm for factorization over finite fields (see: 70353e9)
+ * Implemented Trager's algorithm for factorization over algebraic number fields (see: bd0be06)
+ * Improved Wang's algorithm for efficient factorization of multivariate polynomials (see: 425e225)
 
 ## Quantum (TODO)
 Brian, can you and your students write this?
