@@ -4,11 +4,11 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 
 * This will be the last release of SymPy to support Python 2.4.  Dropping support for Python 2.4 will let us move forward with things like supporting Python 3, and will let use things that were introduced in Python 2.5, like with statement context managers.
 * no longer support creating matrices without brackets (see: issue 930)
-* Rename sum() to summation() (see: 3e763a8, issues 1376, 1727).  This was changed so that it no longer overrides the built-in sum().  The unevaluated summation is still called Sum().
-* Rename abs() to Abs() (see: 64a12a4, issue 1727).  This was also changed so that it no longer overrides the built-in abs().  Note that because of __abs__ magic, you can still do abs(expr) with the built-in abs(), and it will return Abs(expr).
-* Rename max_, min_ to now Max, Min (see: 99a271e, issue 2153)
-* Change behavior of symbols(); symbols('xyz') is now a single symbol, not three (see: f6452a8).  Use symbols('x, y, z') or symbols('x y z').
-* Split class Basic into new classes Expr, Boolean (see: a0ab479, 635d89c).  Classes that are designed to be part of standard symbolic expressions (like x**2*sin(x)) should subclass from Expr.  More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like .args and basic methods like .subs() should only subclass from Basic.
+* Renamed `sum()` to `summation()` (see: 3e763a8, issues 1376, 1727). This was changed so that it no longer overrides the built-in `sum()`. The unevaluated summation is still called `Sum()`.
+* Renamed `abs()` to `Abs()` (see: 64a12a4, issue 1727).  This was also changed so that it no longer overrides the built-in `abs()`. Note that because of `__abs__` magic, you can still do `abs(expr)` with the built-in `abs()`, and it will return `Abs(expr)`.
+* Renamed `max_()` and `min_()` to now `Max()` and `Min()` (see: 99a271e, issue 2153)
+* Changed behaviour of `symbols()`. `symbols('xyz')` gives now a single symbol (`'xyz'`), not three (`'x'`, `'y'` and `'z'`) (see: f6452a8). Use `symbols('x,y,z')` or `symbols('x y z')` to get three symbols.
+* Split class `Basic` into new classes `Expr`, `Boolean` (see: a0ab479, 635d89c). Classes that are designed to be part of standard symbolic expressions (like `x**2*sin(x)`) should subclass from `Expr`. More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like `.args` and basic methods like `.subs()` should only subclass from `Basic`.
 * `as_basic()` method was renamed to `as_expr()` to reflect changes in the core (see: e61819d, 80dfe91)
 * ... ?
 
@@ -24,7 +24,7 @@ Mateusz, can you write this?
  * Added configuration framework for polys (see: 33d8cdb, 7eb81c9)
  * Function for computing minimal polynomials (see: 88bf187, f800f95)
  * Function for generating Viete's formulas (see: 1027408)
- * roots() supports more classes of polynomials (e.g. cyclotomic) (see: d8c8768)
+ * `roots()` supports more classes of polynomials (e.g. cyclotomic) (see: d8c8768)
  * Added a function for recognizing cyclotomic polynomials (see: b9c2a9a)
  * Added a function for computing Horner form of polynomials (see: 8d235c7)
  * Added a function for computing symmetric reductions of polynomials (see: 6d560f3)
@@ -59,12 +59,12 @@ Brian, can you and your students write this?
  * Implement a SAT solver (see: [[http://code.google.com/p/sympy/wiki/SuperchargingAssumptionsReport]], 2d96329, acfbe75, etc.)
 
 * Core:
- * Split Atom into Atom and AtomicExpr (see: 965aa91)
- * Various sympify improvements
- * Added functionality for action verbs (many functions can be called both as global functions and as methods e.g. a.simplify() == simplify(a))
+ * Split `Atom` into `Atom` and `AtomicExpr` (see: 965aa91)
+ * Various `sympify()` improvements
+ * Added functionality for action verbs (many functions can be called both as global functions and as methods e.g. `a.simplify() == simplify(a)`)
  * Improve handling of rational strings (see: 053a045, issue 1778)
  * Major changes to factoring of integers (see: 273f450, issue 2003)
- * Optimized has() (see: c83c9b0, issue 1980; d86d08f)
+ * Optimized `.has()` (see: c83c9b0, issue 1980; d86d08f)
  * Improvements to power (see: c8661ef, issue 1963)
  * Added range and lexicographic syntax to `symbols()` and `var()` (see: f6452a8, 9aeb220, 957745a)
  * Added `modulus` argument to `expand()` (see: 1ea5be8)
@@ -72,7 +72,7 @@ Brian, can you and your students write this?
 
 * Logic
  * implies object adheres to negative normal form
- * Create new boolean class, logic.boolalg.Boolean
+ * Create new boolean class, `logic.boolalg.Boolean`
  * Added XOR operator (^) support 
  * Added the dpll algorithm
 
@@ -80,7 +80,7 @@ Brian, can you and your students write this?
  * Fixed the `-p` switch (see: TODO)
  * Caching can be disabled using `-C` switch (see: 0d8d748)
  * Ground types can be set using `-t` switch (see: 75734f8)
- * lexicographic order is now the default.  Now finally things will print as x**2 + x + 1 instead of 1 + x + x**2.  You can get the old order (and other orderings) by setting the -o option to isympy.
+ * lexicographic order is now the default.  Now finally things will print as `x**2 + x + 1` instead of `1 + x + x**2`. You can get the old order (and other orderings) by setting the `-o` option to isympy.
 
 * Functions:
  * Added Piecewise, B-splines
@@ -88,20 +88,20 @@ Brian, can you and your students write this?
  * Add series expansions of multivariate functions (see: d4d351d)
 
 * Series:
- * Implement a function to calculate residues, residue()
- * Implement nseries and lseries to handle x0!=0, series should be more robust now (see: 2c99999, issues 2122-2124)
+ * Implement a function to calculate residues, `residue()`
+ * Implement nseries and lseries to handle `x0 != 0`, series should be more robust now (see: 2c99999, issues 2122-2124)
  * Improvements to Gruntz algorithm
 
 * Matrices:
  * Add elementwise product (Hadamard product)
  * Extended QR factorization for general full ranked mxn matrices
- * Remove deprecated functions zero(), zeronm(), one() (see: 5da0884)
+ * Remove deprecated functions `zero()`, `zeronm()`, `one()` (see: 5da0884)
 
 * Geometry:
  * Various improvements to Ellipse
  * Updated documentation to numpy standard
  * Polygon and Line improvements
- * Allow all geometry objects to accept a tuple as Point args
+ * Allow all geometry objects to accept a tuple as `Point` args
 
 * Simplify:
  * Added `use()` (see: 147c142)
