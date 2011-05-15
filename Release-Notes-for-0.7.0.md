@@ -9,6 +9,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 * Rename max_, min_ to now Max, Min (see: 99a271e, issue 2153)
 * Change behavior of symbols(); symbols('xyz') is now a single symbol, not three (see: f6452a8).  Use symbols('x, y, z') or symbols('x y z').
 * Split class Basic into new classes Expr, Boolean (see: a0ab479, 635d89c).  Classes that are designed to be part of standard symbolic expressions (like x**2*sin(x)) should subclass from Expr.  More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like .args and basic methods like .subs() should only subclass from Basic.
+* `as_basic()` method was renamed to `as_expr()` to reflect changes in the core (see: e61819d, 80dfe91)
 * ... ?
 
 # Major Changes
@@ -29,7 +30,10 @@ Mateusz, can you write this?
  * Added a function for computing symmetric reductions of polynomials (see: 6d560f3)
  * Added generators of Swinnerton-Dyer, cyclotomic, symmetric, random and interpolating polynomials (see: dad03dd, 6ccf20c, dc728d6, 2f17684, 3004db8)
  * Added a function computing isolation intervals of algebraic numbers (see: 37a58f1)
- * 
+ * Polynomial division (`div()`, `rem()`, `quo()`) now defaults to a field (see: a72d188)
+ * Added wrappers for numerical roots finding algorithms (see: f638fcf)
+ * Added symbolic capabilities to `factor()`, `sqf()` and related functions (see: d521c7f, 548120b, f6f74e6, b1c49cd)
+ * `together()` was significantly improved (see: dc327fe)
 
 ## Quantum (TODO)
 Brian, can you and your students write this?
@@ -66,8 +70,9 @@ Brian, can you and your students write this?
  * Added the dpll algorithm
 
 * isympy
- * fix the -p switch
- * Caching can be disabled
+ * Fixed the `-p` switch (see: TODO)
+ * Caching can be disabled using `-C` switch (see: 0d8d748)
+ * Ground types can be set using `-t` switch (see: 75734f8)
  * lexicographic order is now the default.  Now finally things will print as x**2 + x + 1 instead of 1 + x + x**2.  You can get the old order (and other orderings) by setting the -o option to isympy.
 
 * Functions:
@@ -91,6 +96,9 @@ Brian, can you and your students write this?
  * Polygon and Line improvements
  * Allow all geometry objects to accept a tuple as Point args
 
+* Simplify:
+ * Added `use()` (see: 147c142)
+
 * Solvers:
  * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
 
@@ -101,6 +109,7 @@ Brian, can you and your students write this?
 
 * Utilities:
  * Improve cartes, for generating the Cartesian product (see: b1b10ed)
+ * Added a function computing topological sort of graphs (see: b2ce27b)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
 
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F5%2F14+&sort=closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles). (TODO: change closed-before date with the actual date of the release)
