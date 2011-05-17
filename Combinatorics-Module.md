@@ -27,7 +27,7 @@ The following Python session gives one an idea of how to work with the permutati
 
     >>> from sympy.combinatorics.permutations import Permutation
     >>> x = Permutation([0,1,2,3])
-    >>> x.rank
+    >>> x.rank_nonlex
     23
     >>> x.inversions
     0
