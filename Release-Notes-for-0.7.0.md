@@ -13,8 +13,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 * ... ?
 
 # Major Changes
-## Polys (TODO)
-Mateusz, can you write this?
+## Polys
  
  * New internal representations of dense and sparse polynomials (see: 6aecdb7, 31c9aa4)
  * Implemented algorithms for real and complex root isolation and counting (see: 3acac67, 4b75dae, fa1206e, 103b928, 45c9b22, 8870c8b, b348b30)
@@ -71,6 +70,10 @@ Brian, can you and your students write this?
  * Added query handlers for algebraic numbers (see: f3bee7a)
  * Implement a SAT solver (see: [[http://code.google.com/p/sympy/wiki/SuperchargingAssumptionsReport]], 2d96329, acfbe75, etc.)
 
+* Concrete
+ * Finalized implementation of Gosper's algorithm (see: 0f187e5, 5888024)
+ * Removed redundant `Sum2` and related classes (see: ef1f6a7)
+
 * Core:
  * Split `Atom` into `Atom` and `AtomicExpr` (see: 965aa91)
  * Various `sympify()` improvements
@@ -116,6 +119,9 @@ Brian, can you and your students write this?
  * Updated documentation to numpy standard
  * Polygon and Line improvements
  * Allow all geometry objects to accept a tuple as `Point` args
+
+* Printing:
+ * Implemented pretty printing of binomials (see: 58c1dad)
 
 * Simplify:
  * Added `use()` (see: 147c142)
