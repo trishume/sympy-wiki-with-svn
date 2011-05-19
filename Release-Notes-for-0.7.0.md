@@ -91,6 +91,7 @@ Brian, can you and your students write this?
  * implies object adheres to negative normal form
  * Create new boolean class, `logic.boolalg.Boolean`
  * Added XOR operator (^) support 
+ * Added If-then-else (ITE) support
  * Added the dpll algorithm
 
 * isympy
