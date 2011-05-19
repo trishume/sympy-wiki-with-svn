@@ -123,6 +123,7 @@ Brian, can you and your students write this?
 
 * Printing:
  * Implemented pretty printing of binomials (see: 58c1dad)
+ * Implemented pretty printing of Sum() (see: 84f2c22, 95b4321)
 
 * Simplify:
  * Added `use()` (see: 147c142)
