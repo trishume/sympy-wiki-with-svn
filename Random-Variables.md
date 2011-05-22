@@ -40,5 +40,16 @@ Both (Rain==False) and (Temp > 20) are Events on their respective spaces (condit
 
 # Implementations
 ## Discrete Random Variable
-## Continuous Random Variable
+A Discrete Random Variable is a function on a countable sample space. Common examples include the result of a die {1,2,3,4,5,6}, a coin toss {'H', 'T'}, or The number of Heads before a Tails on a sequence of coin tosses {0,1,2,3, ... }. 
+
+The Probability Measure is encoded trivially as an assignment of a probability to each elementary element of the set. 
+
+## Continuous 1D Random Variable
+Our first implementation of a Continuous 1D Random Variable is a function on a the real numbers as a sample space. Common examples include the time a radioactive isotope takes to decay, the height of a person, wait time in line at the grocery store. 
+
+The Probability Measure is encoded analytically as a SymPy function. 
+
 ## Multivariate Normal Random Variable
+Much active statistics research acts on multivariate random variables. These are generally functions from R^n to R^m. Common examples include the state of the weather (all of it), risk of diabetes given weight, glucose levels, age, etc.... 
+
+Multivariate Normal Random Variables are commonly used because they can be encoded simply as a mean vector and a covariance matrix. 
