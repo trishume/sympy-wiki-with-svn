@@ -6,7 +6,7 @@ To define Random variables we must first define probability spaces. A Probabilit
 
 * A Sample Space - a set of possible values of some process ({1,2,3,4,5,6} in the above example)
 
-* A set of Events ({{1}, {2}, {1,2}, {2,4,6}, ... }, 
+* A set of Events ({{1}, {2}, {1,2}, {2,4,6}, ... }, subsets of the sample space.
 
 * A measure P which assigns probabilities to events ( P({1,3,5}) = 1/2 ). 
 
