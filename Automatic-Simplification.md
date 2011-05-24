@@ -18,3 +18,5 @@ It usually happens that the simplification that you want to apply do hold for a 
 For example, suppose that you wanted to apply the rules `log(a**p) == p*log(a)` and `log(a*b) == log(a) + log(b)` automatically, where `a` and `b` are positive integers and `p` is real (apologies to Chris Smith, who wanted to do this; if you can think of a better example, I will use it instead).  This rule is correct, because of the assumptions on `a`, `b`, and `p`.  If you look at small values, it looks like it might be something worth doing.  For example, `log(18) == log(2*3**2) == log(2) + 2*log(3)`.  And it would allow things like `log(6) - log(2)` to automatically simplify to `log(3)`, because the `log(6)` would automatically be expanded to `log(2) + log(3)`, and the `log(2)`s would cancel.  
 
 But if you consider large inputs values, you will soon see that this makes things much less simple.  `log(factorial(10))` would become `2*log(5) + 4*log(3) + 8*log(2) + log(7)` instead of just `log(3628800)`.  You can imagine what `log(factorial(100))` would look like.  
+
+*More to come…*
