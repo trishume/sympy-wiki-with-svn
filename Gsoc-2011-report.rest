@@ -15,7 +15,7 @@ Accepted Students
 
 - Position and Momentum Bases for Quantum Mechanics, Tomo Lazovich, Brian Granger, [[GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]], http://lazovichsympy.wordpress.com/
 
-- Combinatorics package for Sympy, Saptarshi Mandal, Christian Muise, [[GSoC-2011-Application-Saptarshi-Mandal]]
+- Combinatorics package for Sympy, Saptarshi Mandal, Christian Muise, [[GSoC-2011-Application-Saptarshi-Mandal]], http://saptman.wordpress.com/
 
 - Symbolic Linear Algebra, Sherjil Ozair, Vinzent Steinberg, [[GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]], http://sherjilozair.wordpress.com/
 
