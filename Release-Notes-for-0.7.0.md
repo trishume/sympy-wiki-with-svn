@@ -10,7 +10,6 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 * Changed behaviour of `symbols()`. `symbols('xyz')` gives now a single symbol (`'xyz'`), not three (`'x'`, `'y'` and `'z'`) (see: f6452a8). Use `symbols('x,y,z')` or `symbols('x y z')` to get three symbols.
 * Split class `Basic` into new classes `Expr`, `Boolean` (see: a0ab479, 635d89c). Classes that are designed to be part of standard symbolic expressions (like `x**2*sin(x)`) should subclass from `Expr`. More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like `.args` and basic methods like `.subs()` should only subclass from `Basic`.
 * `as_basic()` method was renamed to `as_expr()` to reflect changes in the core (see: e61819d, 80dfe91)
-* ... ?
 
 # Major Changes
 ## Polys
@@ -23,7 +22,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Added configuration framework for polys (see: 33d8cdb, 7eb81c9)
  * Function for computing minimal polynomials (see: 88bf187, f800f95)
  * Function for generating Viete's formulas (see: 1027408)
- * `roots()` supports more classes of polynomials (e.g. cyclotomic) (see: d8c8768)
+ * `roots()` supports more classes of polynomials (e.g. cyclotomic) (see: d8c8768, 75c8d2d)
  * Added a function for recognizing cyclotomic polynomials (see: b9c2a9a)
  * Added a function for computing Horner form of polynomials (see: 8d235c7)
  * Added a function for computing symmetric reductions of polynomials (see: 6d560f3)
@@ -85,7 +84,8 @@ Brian, can you and your students write this?
  * Added range and lexicographic syntax to `symbols()` and `var()` (see: f6452a8, 9aeb220, 957745a)
  * Added `modulus` argument to `expand()` (see: 1ea5be8)
  * Allow to convert `Interval` to relational form (see: 4c269fe)
- * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a) 
+ * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a)
+ * `Real` and `.is_Real` were renamed to `Float` and `.is_Float` (see: abe1c49)
 
 * Logic
  * implies object adheres to negative normal form
@@ -95,10 +95,10 @@ Brian, can you and your students write this?
  * Added the dpll algorithm
 
 * isympy
- * Fixed the `-p` switch (see: TODO)
+ * Fixed the `-p` switch (see: e8cb04a)
  * Caching can be disabled using `-C` switch (see: 0d8d748)
  * Ground types can be set using `-t` switch (see: 75734f8)
- * lexicographic order is now the default.  Now finally things will print as `x**2 + x + 1` instead of `1 + x + x**2`. You can get the old order (and other orderings) by setting the `-o` option to isympy.
+ * Printing ordering cab be set using `-o` switch (see: fcc6b13, 4ec9dc5)
 
 * Functions:
  * Added Piecewise, B-splines
@@ -114,6 +114,7 @@ Brian, can you and your students write this?
  * Add elementwise product (Hadamard product)
  * Extended QR factorization for general full ranked mxn matrices
  * Remove deprecated functions `zero()`, `zeronm()`, `one()` (see: 5da0884)
+ * `SMatrix` was renamed to `SparseMatrix` (see: acd1685)
 
 * Geometry:
  * Various improvements to Ellipse
@@ -124,10 +125,13 @@ Brian, can you and your students write this?
 * Printing:
  * Implemented pretty printing of binomials (see: 58c1dad)
  * Implemented pretty printing of Sum() (see: 84f2c22, 95b4321)
+ * `sympy.printing` now supports ordering of terms and factors (see: 859bb33)
+ * Lexicographic order is now the default. Now finally things will print as `x**2 + x + 1` instead of `1 + x + x**2`, however series still print using reversed ordering, e.g. `x - x**3/6 + O(x**5)`. You can get the old order (and other orderings) by setting the `-o` option to isympy (see: 08b4932, a30c5a3)
 
 * Simplify:
  * Added `use()` (see: 147c142)
  * `ratsimp()` now uses `cancel()` and `reduced()` (see: 108fb41)
+ * Implemented EPath (see: 696139d, bf90689)
 
 * Solvers:
  * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
@@ -144,9 +148,5 @@ Brian, can you and your students write this?
  * Allow to setup a customized printer in `lambdify()` (see: c1ad905)
  * `flatten()` was significantly improved (see: 31ed8d7)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
-
-* Printing:
-
- * `sympy.printing` now supports ordering of terms and factors (see: 859bb33)
 
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F5%2F14+&sort=closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles). (TODO: change closed-before date with the actual date of the release)
