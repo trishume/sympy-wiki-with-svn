@@ -139,6 +139,8 @@ Brian, can you and your students write this?
 
 * Integrals:
  * Various improvements (see eg. issues 1772, 1999, 1992, 1987.. etc)
+
+* Physics
  * Hydrogen radial wavefunctions added
  * Ported wigner from Sage
 
