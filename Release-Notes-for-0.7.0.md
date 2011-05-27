@@ -62,6 +62,7 @@ Brian, can you and your students write this?
 * Implement symarray, providing numpy nd-arrays of symbols.
 * update mpmath to 0.16
 * Add a tensor module (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]])
+* A lot of stuff was being imported with `from sympy import *` that shouldn't have been (like `sys`).  This has been fixed.
 
 * Assumptions:
  * Refine 
