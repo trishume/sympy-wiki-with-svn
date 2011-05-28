@@ -9,9 +9,9 @@ Then, create a tox.ini file in the root directory (where setup.py is located). (
     [tox]
     envlist = py25, py26, py27, docs
     [testenv]
-    commands=python ./bin/test []
+    commands=python bin/test []
     [testenv:docs]
-    commands=python ./bin/doctest [] 
+    commands=python bin/doctest [] 
 
 The first specifies the environments to be tested; py24-py32 are builtin environments (as are jython and pypy) while docs is a (simple) custom one defined later. Following [testenv] we have some basic commands to be executed (in our case, we simply call our test script, but it can be anything). The last part defines a custom "environment", which is just a way of running doctests separately. The brackets [] allow us to pass arguments to the script we are calling (see next part).
 
