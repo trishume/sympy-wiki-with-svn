@@ -1,4 +1,4 @@
-Tox as is a generic virtualenv management and test command line tool, see the [web page](http://tox.testrun.org/en/0.9/index.html) for more information. The idea is to set it up and run tests locally in different environments (different Python versions, different ground types etc). 
+Tox as is a generic virtualenv management and test command line tool, see the [web page](http://tox.testrun.org/en/0.9/index.html) or [this PyCon 2011 talk](http://python.mirocommunity.org/video/4240/pycon-2011-supporting-all-vers) for more information. The idea is to set it up and run tests locally in different environments (different Python versions, different ground types etc). 
 
 The first step is installing it:
 
