@@ -2,7 +2,7 @@ Tox as is a generic virtualenv management and test command line tool, see the [w
 
 The first step is installing it:
 
-    pip tox
+    pip install tox
 
 Then, create a tox.ini file in the root directory (where setup.py is located). (perhaps there should be a "canonical" tox.ini file that will be tracked by git; for now, just create it) The following is an example:
 
