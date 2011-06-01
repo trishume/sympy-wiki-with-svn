@@ -94,7 +94,7 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
 | git pull --rebase  # or: git fetch ; git rebase origin
 |-
 | hg addremove
-| XXX | git add .; git ls-files --deleted | xargs git rm
+| XXX | git add -A (or: git add .; git ls-files --deleted | xargs git rm)
 |-
 | hg revert -a
 | git reset --hard
