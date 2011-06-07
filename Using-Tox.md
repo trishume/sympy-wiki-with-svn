@@ -30,3 +30,10 @@ Tox will automatically create the necessary virtualenv, reusing them if they alr
 It is also possible to call just specific tests, with the same syntax we currently support (that is the reason for [] in the tox.ini file). For example, the following command will recreate the Python 2.5 and 2.7 environments and run the hydrogen tests in them.
 
     tox --recreate -e py25,py27 hydrogen
+
+## Installing multiple Python versions
+In case your distribution doesn't provide multiple Python versions easily, you could try installing them from source. The trick is to use the following command:
+
+    sudo make altinstall
+
+which will append the number version to the executable (ie. Python2.4, Python2.5 ..). This will assure that the system remains functioning; Tox will find the correct executables.
