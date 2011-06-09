@@ -36,4 +36,4 @@ In case your distribution doesn't provide multiple Python versions easily, you c
 
     sudo make altinstall
 
-which will append the number version to the executable (ie. Python2.4, Python2.5 ..). This will assure that the system remains functioning; Tox will find the correct executables.
+which will append the number version to the executable (ie. Python2.4, Python2.5 ..). This will assure that the system remains functioning; Tox will find the correct executables, if they are in your PATH. Otherwise, you may use the `basepython` variable inside the desired environment, as demonstrated in the sample tox.ini file.
