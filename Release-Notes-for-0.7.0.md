@@ -86,7 +86,7 @@ Brian, can you and your students write this?
  * Added `modulus` argument to `expand()` (see: 1ea5be8)
  * Allow to convert `Interval` to relational form (see: 4c269fe)
  * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a)
- * `Real` and `.is_Real` were renamed to `Float` and `.is_Float`.  `Real` and `is_Real` still remain as deprecated shortcuts to `Float` and `is_Float` for backwards compatibility. (see: abe1c49)
+ * `Real` and `.is_Real` were renamed to `Float` and `.is_Float`.  `Real` and `.is_Real` still remain as deprecated shortcuts to `Float` and `is_Float` for backwards compatibility. (see: abe1c49)
 
 * Logic
  * implies object adheres to negative normal form
