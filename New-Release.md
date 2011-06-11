@@ -12,6 +12,8 @@ Proposed workflow (for the 0.7.0 release, for example)
 6. Merge 0.7.0 with master, delete the branch.
 7. If more fixes are needed, simply fork from the latest 0.7.0 tag, and push more fixes, release and merge.
 
+Note that some of the stuff below tests things in master (like the test_pure* scripts). If you choose this route, you may need to modify them to test the 0.7.0 branch). 
+
 ## Are all tests included?
 
 As directed in `setup.py`, check the tests list using the command:
