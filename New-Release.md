@@ -111,6 +111,49 @@ Note that like the test_pure test above, this requires Debian.
 Important is the `[0]: cos(x)*sin(y), ...` line, that shows that plotting was ok
 and pyglet started. It cannot plot in the chroot, so the segmentation fault happens. That's ok. If it says "cannot import pyglet", that's bad and needs to be fixed.
 
+I did this with tox on Mac OS X by creating a file `plotting.py` with
+
+```python
+from sympy import Symbol, cos, sin, Plot, log, tan
+from sympy.abc import x, y
+print Plot(cos(x)*sin(y), sin(x)*sin(y), cos(y)+log(tan(y/2))+0.2*x, [x, -0.00,
+    12.4, 40], [y, 0.1, 2, 40])
+```
+
+(this is what the `test_pure_plotting.py` file creates).  Then I created a file `tox.ini.plotting` with
+
+```
+[tox]
+envlist = py24,py25,py26,py27
+
+[testenv:py24]
+basepython = /Library/Frameworks/Python.framework/Versions/2.4/bin/python2.4
+deps=ctypes
+commands = pythonw plotting.py
+
+[testenv:py25]
+basepython = /Library/Frameworks/Python.framework/Versions/2.5/bin/python2.5
+deps=ctypes
+commands = pythonw plotting.py
+
+[testenv:py26]
+basepython = /Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6
+commands = pythonw plotting.py
+
+[testenv:py27]
+basepython = /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7
+commands = pythonw plotting.py
+```
+
+(Python 2.4 and 2.5 appear to require ctypes). You can make this work in non-Mac OS X by modifying the basepython lines, or just removing them.
+
+Then, I ran
+
+```bash
+$tox -c tox.ini.plotting 
+```
+
+And verified that the plots opened correctly all four times.  
 ## check all tests in sympy/test_external
 
 Currently numpy and sage.
