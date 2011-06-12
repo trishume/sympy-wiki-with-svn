@@ -192,8 +192,10 @@ Change version in `sympy/__init__.py` and `doc/src/conf.py`, e.g.
 ``` bash
 vim doc/src/conf.py  # Or your preferred text editor
 vim sympy/__init__.py
-git ci -a -m v0.5.9
+git ci -a -m v0.7.0
 ```
+
+Make sure you also change it anywhere else by doing `git grep 0\.6\.7` (replacing `0\.6\.7` with the last release version).
 
 Change the copyright year in README if needed.  Note that this should be done at the beginning of each year.
 
