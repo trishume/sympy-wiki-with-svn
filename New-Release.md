@@ -218,8 +218,8 @@ Compile the html documentation
 cd doc
 make html
 cd _build
-mv html sympy-0.5.9-docs-html
-zip -9lr sympy-0.5.9-docs-html.zip sympy-0.5.9-docs-html
+mv html sympy-0.7.0-docs-html
+zip -9lr sympy-0.7.0-docs-html.zip sympy-0.7.0-docs-html
 ```
 
 And put dist/sympy-0.7.0.tar.gz, dist/sympy-0.7.0.win32.exe and sympy-0.7.0-docs-html.zip on the website.
