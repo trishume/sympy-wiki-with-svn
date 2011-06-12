@@ -156,7 +156,7 @@ $tox -c tox.ini.plotting
 And verified that the plots opened correctly all four times.  
 ## check all tests in sympy/test_external
 
-Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.
+Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/test_external/test_sage.py` (see the docstring of the `sympy/test_external/test_sage.py` file).
 
 ## check docs
 
