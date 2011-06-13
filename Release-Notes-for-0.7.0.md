@@ -53,7 +53,9 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 ## Quantum (TODO)
 
 * Hydrogen wave functions (Schroedinger) and energies (both Schroedinger and Dirac)
-* Wave functions for 3D spherically symmetric harmonic oscillator
+* Wave functions and energies for 1D harmonic oscillator
+* Wave functions and energies for 3D spherically symmetric harmonic oscillator
+* Wigner and Clebsch Gordan coefficients
 * Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm
 
 ## What other major changes?
@@ -143,8 +145,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Various improvements (see eg. issues 1772, 1999, 1992, 1987.. etc)
 
 * Physics
- * Hydrogen radial wavefunctions added
- * Ported wigner from Sage
+ * See the Quantum section
 
 * Utilities:
  * Improve cartes, for generating the Cartesian product (see: b1b10ed)
