@@ -51,9 +51,10 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Improved Wang's algorithm for efficient factorization of multivariate polynomials (see: 425e225)
 
 ## Quantum (TODO)
-Brian, can you and your students write this?
 
-* Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm... I got lost already :)
+* Hydrogen wave functions (Schroedinger) and energies (both Schroedinger and Dirac)
+* Wave functions for 3D spherically symmetric harmonic oscillator
+* Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm
 
 ## What other major changes?
 
