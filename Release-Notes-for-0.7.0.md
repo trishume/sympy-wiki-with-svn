@@ -50,12 +50,13 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Implemented Trager's algorithm for factorization over algebraic number fields (see: bd0be06)
  * Improved Wang's algorithm for efficient factorization of multivariate polynomials (see: 425e225)
 
-## Quantum (TODO)
+## Quantum
 
 * Hydrogen wave functions (Schroedinger) and energies (both Schroedinger and Dirac)
 * Wave functions and energies for 1D harmonic oscillator
 * Wave functions and energies for 3D spherically symmetric harmonic oscillator
 * Wigner and Clebsch Gordan coefficients
+* Added second (canonical) quantization formalism
 * Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm
 
 ## What other major changes?
