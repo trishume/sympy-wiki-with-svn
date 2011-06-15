@@ -57,7 +57,9 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 * Wave functions and energies for 3D spherically symmetric harmonic oscillator
 * Wigner and Clebsch Gordan coefficients
 * Added second (canonical) quantization formalism
-* Added qubit, hilbert, Matrix support for Dagger, QFT and Shor's algorithm
+* Dirac braket formalism
+* Hilbert space, creation/anihilation operators
+* Quantum computing: qubit, gates, QFT and Shor's algorithm
 
 ## What other major changes?
 
