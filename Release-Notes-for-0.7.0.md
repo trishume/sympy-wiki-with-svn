@@ -121,6 +121,8 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Add elementwise product (Hadamard product)
  * Extended QR factorization for general full ranked mxn matrices
  * Remove deprecated functions `zero()`, `zeronm()`, `one()` (see: 5da0884)
+ * Added cholesky and LDL factorizations, and respective solves.
+ * Added functions for efficient triangular and diagonal solves.
  * `SMatrix` was renamed to `SparseMatrix` (see: acd1685)
 
 * Geometry:
