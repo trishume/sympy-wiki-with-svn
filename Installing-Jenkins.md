@@ -6,10 +6,12 @@ First I followed this page to install Jenkins: https://wiki.jenkins-ci.org/displ
 
 Installation:
 
-    wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-    sudo echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
-    sudo aptitude update
-    sudo aptitude install jenkins
+```bash
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
+sudo aptitude update
+sudo aptitude install jenkins
+```
 
 What does this package do?
 
@@ -53,8 +55,10 @@ Then I followed the Tox guide on working with Jenkins: http://tox.testrun.org/en
 
 * add a Python-build step with this content (see also next example):
 
-    import tox
-    tox.cmdline() # environment is selected by ``TOXENV`` env variable
+```python
+import tox
+tox.cmdline() # environment is selected by ``TOXENV`` env variable
+```
 
 * check Publish JUnit test result report and enter **/junit-*.xml as the pattern so that Jenkins collects test results in the JUnit XML format.  (we don't do this currently)
 
@@ -66,7 +70,9 @@ First I had to hack up some way to have a tox.ini available for Jenkins to find.
 
 Then it'll probably complain "Please tell me who you are". Apparently, git tries to do some tags (why??) and needs to be setup to do so. The following should be enough:
 
-    su jenkins
-    cd /var/lib/jenkins/jobs/SymPy/workspace  #this assumes the job is named SymPy, obviously :)
-    git config user.email "some@email.com"
-    git config user.name "jenkins"
+```bash
+su jenkins
+cd /var/lib/jenkins/jobs/SymPy/workspace  #this assumes the job is named SymPy, obviously :)
+git config user.email "some@email.com"
+git config user.name "jerkins"
+```
