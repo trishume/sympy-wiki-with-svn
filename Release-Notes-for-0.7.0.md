@@ -11,6 +11,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 * Split class `Basic` into new classes `Expr`, `Boolean` (see: a0ab479, 635d89c). Classes that are designed to be part of standard symbolic expressions (like `x**2*sin(x)`) should subclass from `Expr`. More generic objects that do not work in symbolic expressions but still want the basic SymPy structure like `.args` and basic methods like `.subs()` should only subclass from `Basic`.
 * `as_basic()` method was renamed to `as_expr()` to reflect changes in the core (see: e61819d, 80dfe91)
 * Methods `as_coeff_terms` and `as_coeff_factors` were renamed to `as_coeff_mul` and `as_coeff_add`, respectively.
+* Removed the `trim()` function.  The function is redundant with the new polys (see below).  Use the `cancel()` function instead.
 
 # Major Changes
 ## Polys
