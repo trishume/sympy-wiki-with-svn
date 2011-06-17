@@ -66,4 +66,5 @@ TODO
 Much active statistics research acts on multivariate random variables. These are generally functions on R^n. Common examples include the state of the weather, the position of an airplane, noisy measurements of the position of an airplane (the noise has it's own probability space), risk of diabetes given weight, glucose levels, age, etc.... 
 
 Multivariate Normal Random Variables are commonly used because they can be encoded with only a mean vector and a covariance matrix. 
-![A diagram of the class structure](http://people.cs.uchicago.edu/~mrocklin/class_diagram.pdf)
+
+[A diagram of the class structure](http://people.cs.uchicago.edu/~mrocklin/class_diagram.pdf)
