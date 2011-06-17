@@ -4,68 +4,66 @@ Random variables are like any other variable except that rather than taking on a
 ## Mathematical Formalism
 To define Random variables we must first define probability spaces. A Probability Space consists of the following: 
 
-* A Sample Space - a set of possible values of some process ({1,2,3,4,5,6} in the above example)
+* A Sample Space - a set of possible values of some process ( such as {1,2,3,4,5,6})
 
 * A set of Events ({{1}, {2}, {1,2}, {2,4,6}, ... }, subsets of the sample space.
 
-* A measure P which assigns probabilities to events ( P({1,3,5}) = 1/2 ). 
+* A measure P which assigns probabilities to events ( such as P({1,3,5}) = 1/2 ). 
 
 A Random Variable is then a function on the sample space with all of the probability space formalism attached. Such as the square of the die roll or the value mod 2. 
 
-Conditionals on Random Variables are again events `(die % 2 == 0)` which have defined probabilities under the measure. 
+Conditionals on Random Variables such as X > 3 are again events  which have defined probabilities under the measure, P(die > 3) == 1/2. 
 
 ## Python Formalism
-We implement this formalism with the following constructs. 
 
-The Sample Space is simply a SymPy Set. These will need to be enhanced. 
+Mathematical sets are represented by SymPy Sets. 
 
-Events are enhanced Sets. They must also encode from which Sample Space they come so that we may differentiate between die one being odd ({1,3,5}, die1) and die two being odd ({1,3,5}, die2).
+ProbabilityMeasures are implemented directly for finite (as a dict) and continuous real sets (as a pdf/cdf expression). 
 
-A Probability Measure is a mapping of events to the positive reals under various conditions (P(Sample Space) = 1, P>0 , P(A+B) = P(A)+P(B)-(A Intersect B), etc...)
+ProbabilitySpaces contain a sample_space (Set) and a ProbabilityMeasure.
 
-The following are examples of random variables given probability spaces, die1, die2. 
+Events contain a Set and a ProbabilitySpace. This lets us differentiate between die one being odd (die1 in {1,3,5}) and die two being odd (die2 in {1,3,5}).
 
-`X = Identity(die1)`
+Random Variables do not have a class. They are represented by SymPy Exprs when that Expr contains a RandomSymbol. A RandomSymbol is just like ordinary SymPy Symbol except that it points back to a ProbabilitySpace. This is made more clear by an example:
 
-`X = die1**2`
+`>>> d = Die(6) # An intuiitve probability space`
 
-`X = die1+die2`
+`>>> X = d.value # a RandomSymbol which represents this space in expressions`
 
-`X = die1 % 2`
+`>>> X**2+1 # A normal SymPy Expr containing a RandomSymbol - we think of this Expr as a random variable`
+
+`>>> expectation(X**2+1) # Special functions know to look for RandomSymbols within SymPy Exprs`
+
+`    8`
+
+
 
 ## Why Abstract?
 
 We define Random Variables abstractly first so that different implementations can interact nicely and so that a standard formalism is maintained in the future. The abstract class will be mainly an empty interface with logic to handle heterogeneous combinations of variables. 
-Imagine a sports team deciding if it should practice given two random variables Rain (Discrete) and Temp (Continuous) defined on different probability spaces. 
-
-`Practice =  Rain==False or Temp > 20`
-
-Both (Rain==False) and (Temp > 20) are Events on their respective spaces (conditionals turn Random Variables into Events). (Rain==False or Temp > 20) is an event on the Cartesian product of these two spaces which is itself another probability space. One could consider Compound Random Variables which mix several types of different implementations. 
 
 # Implementations
-## Discrete Random Variable
-A Discrete Random Variable is a function on a countable sample space. Common examples include the result of a die {1,2,3,4,5,6}, a coin toss {'H', 'T'}, or The number of Heads before a Tails on a sequence of coin tosses {0,1,2,3, ... }. 
+## FiniteProbabilitySpace
+Common examples include the result of a die {1,2,3,4,5,6}, a coin toss {'H', 'T'}. This does not include countably infinite spaces such as the number of Heads before a Tails on a sequence of coin tosses {0,1,2,3, ... }. 
 
-Events are simple discrete Sets. 
+Event sets are FiniteSets or Unions thereof. 
 
-The Probability Measure is encoded as a probability density function, in this case simply the assignment of a probability to each elementary element of the set. 
+The Probability Measure is encoded as a dict assigning a probability to each elementary element of the sample_space. 
 
-## Continuous 1D Random Variable
-Our implementation of a Continuous 1D Random Variable is a function on the sample space of the real numbers. Common examples include the time a radioactive isotope takes to decay, the height of a person, wait time in line at the grocery store, etc.... 
+## Continuous Probability Space
+Common examples include the time a radioactive isotope takes to decay, the height of a person, wait time in line at the grocery store, etc.... 
 
-Events are restricted to be Unions of SymPy Intervals such as (0,1), (a,b), (x, oo). 
+Event sets are Intervals or Unions thereof. 
 
-The Probability Measure is commonly encoded as either a CDF or PDF. Given an event/interval one can compute the probability either by asking for values of the CDF at the interval endpoints or by performing a SymPy integral on the PDF over the intervals. 
+The Probability Measure is encoded as either a PDF (generally) or a CDF. 
+
+## Product Probability Spaces
+Elementary Probability Spaces are assumed independent. Statements on multiple spaces invoke ProductProbabilitySpaces. 
 
 ## Multivariate Normal Random Variable
+TODO
+
 Much active statistics research acts on multivariate random variables. These are generally functions on R^n. Common examples include the state of the weather, the position of an airplane, noisy measurements of the position of an airplane (the noise has it's own probability space), risk of diabetes given weight, glucose levels, age, etc.... 
 
-Multivariate Normal Random Variables are commonly used because they can be encoded simply as a mean vector and a covariance matrix. 
-
-# External Issues
-There are a few things that I will need to change outside of the statistics package to make things clean. 
-
-* General Set class that can handle discrete sets {1,2,3}, continuous intervals (0, oo), infinite countable sets {1,2,3, ... }, and larger abstract continuous spaces R^n.
-* I'll need to modify elementary functions like Sin and Log so that they know how to work on Random Variables
-* Abstract matrices that have only a shape and possibly attributes (i.e. is_positive_definite) 
-* A clean way to obtain function inverses which fails gracefully when the problem is difficult. Consider the event "Sin(X) > .5" when X is a process that has values on R. I'll need to generate an infinite sequence of intervals. If people have suggestions on how best to handle this sort of thing I'm open. What I need is naively implemented currently in sympy/statsistics/distributions.py : class PDF . 
+Multivariate Normal Random Variables are commonly used because they can be encoded with only a mean vector and a covariance matrix. 
+![A diagram of the class structure](http://people.cs.uchicago.edu/~mrocklin/class_diagram.pdf)
