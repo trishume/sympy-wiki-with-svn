@@ -107,7 +107,7 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Fixed the `-p` switch (see: e8cb04a)
  * Caching can be disabled using `-C` switch (see: 0d8d748)
  * Ground types can be set using `-t` switch (see: 75734f8)
- * Printing ordering cab be set using `-o` switch (see: fcc6b13, 4ec9dc5)
+ * Printing ordering can be set using `-o` switch (see: fcc6b13, 4ec9dc5)
 
 * Functions:
  * Added Piecewise, B-splines
