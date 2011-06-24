@@ -54,14 +54,22 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
 
 ## Quantum
 
+
+* Symbolic, abstract dirac notation in `sympy.physics.quantum`. This includes operators,
+  states (bras and kets), commutators, anticommutators, dagger, inner products, outer
+  products, tensor products and Hilbert spaces
+* Symbolic quantum computing framework that is based on the general capabilities in 
+  `sympy.physics.quantum`. This includes qubits (`sympy.physics.quantum.qubit`), gates
+  (`sympy.physics.quantum.gate`), Grover's algorithm (`sympy.physics.quantum.grover`),
+  the quantum Fourier transform (`sympy.physics.quantum.qft`), Shor's algorithm
+  (`sympy.physics.quantum.shor`) and circuit plotting (`sympy.physics.quantum.circuitplot`)
+* Second quantization framework that inclues creation/anihilation operators for
+  both Fermions and Bosons and Wick's theorem for Fermions (`sympy.physics.secondquant`).
+* Symbolic quantum angular momentum (spin) algebra (`sympy.physics.quantum.spin`)
 * Hydrogen wave functions (Schroedinger) and energies (both Schroedinger and Dirac)
 * Wave functions and energies for 1D harmonic oscillator
 * Wave functions and energies for 3D spherically symmetric harmonic oscillator
 * Wigner and Clebsch Gordan coefficients
-* Added second (canonical) quantization formalism
-* Dirac braket formalism
-* Hilbert space, creation/anihilation operators
-* Quantum computing: qubit, gates, QFT and Shor's algorithm
 
 ## What other major changes?
 
