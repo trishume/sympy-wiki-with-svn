@@ -2,6 +2,7 @@ If you have been around for some time and actively participating in
 SymPy's development, you will be granted push access to the main
 repository.  Then you can push in patches that passed review.
 
+###From command line
 
 You need to add a remote repository for the main sympy repo if you don't
 already have one (``git remote`` will show you all your remote
@@ -33,6 +34,14 @@ the history to master, it will screw up the history of everyone who pulls from
 it.  If you want to change what has been pushed in, you need to do it using
 additional patches, like with ``git revert``.
 
+### Graphically
+
+If a [pull request](https://github.com/sympy/sympy/pulls) can be merged without conflicts, GitHub will display a green _Merge pull request_ button at the bottom right.
+
+So, once pull request has passed review and all tests, you may simply use it (as said below, please wait at least 24 hours for non trivial changes before doing so). 
+
+### In any case
+
 Once you have pushed the test branch in, if test is the same as the
 commit from a pull request at GitHub, or if you merged with master,
 GitHub will close the pull request on its own.  Otherwise, i.e., if you
@@ -54,6 +63,9 @@ yes, just push it in, it can be improved later.
 For non-trivial patches it makes sense to wait until the patch has been
 under review for at least 24 hours before pushing, so others have a
 chance to state their objections.
+
+
+
 
 ## Checklist
 
