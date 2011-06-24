@@ -1,5 +1,6 @@
 # Assumptions
 
+_Note: see also [this thread](https://groups.google.com/d/topic/sympy/0mEGrbBZnqE/discussion) on the mailing list._
 ## Introduction
 The assumptions in SymPy need to be rewritten. This page is dedicated to discussing the best way to go about this.
 
@@ -186,6 +187,11 @@ One objection is that this is not very much different from storing assumptions w
 *Nicolas:*
 Concerning implementation, if using weakref is not possible, maybe a `Symbol.__del__()` method could help.
 However, it would imply that symbols are somehow aware of assumptions about them.
+
+*Aaron*
+This was already discussed (see the mailing list thread linked to at the top of this page).  Using `__del__` is almost certainly a bad idea, since it does not really behavior like you might think it would.  First, `del x` does *not* call `__del__`.  It decrements the reference count of `x` by 1.  Only when that count reaches 0 is `__del__` called, and then only when a garbage collection event occurs.  There are also some other potential issues with it.  See <http://docs.python.org/reference/datamodel.html?highlight=__del__#object.__del__>.
+
+And not to mention the fact that this would perform drastically differently in Python implementations with different garbage collection systems (like PyPy).
 
 #### Replacing global assumptions by local assumptions
 As outlined by Vinzent in the discussion of issue [[1884|http://code.google.com/p/sympy/issues/detail?id=1884]], even if global assumptions can be cleaned automatically as symbols die, this still would hardly be the desired behaviour. A better approach would be to use local assumptions, and inject a local assumptions context in the stack frame of the symbol creation. This has the disadvantage of being somewhat hackish, but apart from that it would have all the benefits of the above solution, plus more desirable semantics.
