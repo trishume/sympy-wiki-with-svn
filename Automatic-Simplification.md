@@ -9,7 +9,9 @@ When creating a new object, or modifying an already existing one, there is often
 3. The rule is very cheap in every case. 
 4. The rule is so trivial that no one will ever not want it done. 
 
-**1.** is probably the most obvious of the rules, but it often does not hold.  For example, in SymPy 0.6.5 and earlier, `sqrt(x*y)` was automatically reduced to `sqrt(x)*sqrt(y)`.  But this does not hold for general `x` and `y`, for the same reason that `sqrt(x**2)` does not equal `x` in general.  For example, if `x == y == -1`, then `sqrt(x*y) == sqrt(-1*-1) == sqrt(1) == 1`, but `sqrt(-1)*sqrt(-1) == I*I == -1`. This simplification is only true in general if `x, y >= 0`.  If `x` and `y` are given these assumptions (`x, y = symbols('x y', nonnegative=True)`), then SymPy will automatically convert `sqrt(x*y)` to `sqrt(x)*sqrt(y)`.
+**1.** is probably the most obvious of the rules, but it often does not hold.  For example, in SymPy 0.6.5 and earlier, `sqrt(x*y)` was automatically reduced to `sqrt(x)*sqrt(y)`.  But this does not hold for general `x` and `y`, for the same reason that `sqrt(x**2)` does not equal `x` in general.  For example, if `x == y == -1`, then `sqrt(x*y) == sqrt(-1*-1) == sqrt(1) == 1`, but `sqrt(-1)*sqrt(-1) == I*I == -1`. This simplification is only true in general if `x, y >= 0`.  
+
+As of SymPy 0.6.6, if `x` and `y` are given these assumptions (`x, y = symbols('x y', nonnegative=True)`), then SymPy will automatically convert `sqrt(x*y)` to `sqrt(x)*sqrt(y)`, but if they do not have those assumptions, then `sqrt(x*y)` will remain unevaluated.
 
 It usually happens that the simplification that you want to apply do hold for a subset of possible inputs, like above, but fail to be correct in the general case.  In SymPy, 99% of the time this is related to assumptions.
 
