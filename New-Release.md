@@ -238,11 +238,16 @@ Don't forget to finally push you changes back to the main repository:
 git push git@github.com:sympy/sympy.git master
 ```
 
+## Get list of authors who contributed to the release
+Use `git log sympy-0.6.7.. --format="%aN" --reverse | sort -u` to get the list of contributors (see [this page](http://stackoverflow.com/questions/6482436/list-of-authors-in-git-since-a-given-commit)). If there are duplicates, update the `.mailmap` file.  You may need to email the people in question concerning the preferred spelling of their names/preferred email addresses (you can see people's emails by using `%aN <%eN>` as the format specifier to the above `git log` command).  
+
+Sort the authors everywhere by last name.  Note that we decided to do this, instead of sorting by number commits or number of lines changed for fairness purposes (for example, if someone updates mpmath, they will unfairly have a larger count of line's changed; this can also happen, e.g., if someone moves some files around).  If you know a bash command to sort by last name, please edit this page and update the above command with it.
+
 ## Sites to update
 
   * http://code.google.com/p/sympy/ (FrontPage)
   * http://wiki.sympy.org
-  * http://code.google.com/p/sympy/wiki/Changes  (use `git log sympy-0.6.7.. --format="%aN" --reverse | perl -e 'my %dedupe; while (<STDIN>) { print unless $dedupe{$_}++}' | sort` to get the list of contributors, taken from [this page](http://stackoverflow.com/questions/6482436/list-of-authors-in-git-since-a-given-commit); if there are duplicates, update .mailmap)
+  * http://code.google.com/p/sympy/wiki/Changes
   * http://en.wikipedia.org/wiki/SymPy
   * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems
   * http://freshmeat.net/projects/sympy/
