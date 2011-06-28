@@ -18,14 +18,16 @@ This would be my strategy to set up the structure of the new Matrix module.
 
 6. [More tests] Now that SparseMatrix is a respected working separate class in its own right, write tests for old and new functionality.
 
-At this point, We have DOKMatrix(Matrix), DenseMatrix(Matrix), and Matrix(object) in three separate files, with tests written in separate files for each. Matrix(...) is working and returns a DenseMatrix object. isinstance(A, Matrix) also works. Only after this is complete, I will add another file lilmatrix.py which will have the LILMatrix class deriving from Matrix.
+> At this point, We have DOKMatrix(Matrix), DenseMatrix(Matrix), and Matrix(object) in three separate files, with tests written in separate files for each. Matrix(...) is working and returns a DenseMatrix object. isinstance(A, Matrix) also works. Only after this is complete, I will add another file lilmatrix.py which will have the LILMatrix class deriving from Matrix.
+
 7. [LILMatrix] Add LILMatrix code that I have written. Write tests for it.
 
 8. [Misc] Write miscellaneous functions and ensure all operations can be done on both the sparse matrices even if that algorithm has not been written.
 
 ( Note: One major example is that LILMatrix does not support an efficient matrix multiplication algorithm, If a user calls LILmatrix * LILmatrix, both the matrices will be converted to a DOKMatrix and then multiplied and then return the product DOKMatrix. Note that LILMatrix * LILMatrix --> DOKMatrix. But I don't think that is a problem since even if the user assumes the product to be a LILMatrix and carries out an operation of LILMatrix, if the DOKMatrix does not have that operation, then it will be converted back to LILMatrix and that operation performed. In short, Matrix interconversions would be implicit. Of course, the user will also be given explicit conversion functions like .to_dokmatrix.)
 
-At this point three matrix representations will be have been implemented along with tests.
+> At this point three matrix representations will be have been implemented along with tests.
+
 9. [Domainifying] Add the `domain` kwarg to relevant constructors and functions. Write some more tests to check for matrix functionality over some domains from polys like QQ, FF(q), etc. Write some random matrix generator function over such domains. A small experiment I did indicated that this is reasonably easy, but generates some random bugs. Fixing bugs depends on changing Polys code and for this reason might be slow.
 
 10.[Putting it all together] Write the Matrix constructor, which will take into account 1. the domain specified and 2. the sparsity of the data passed to it. If the domain is not explicitly specified, I would use construct_domain to set the domain. The user can also explicitly state that he wants his matrix to have no domain i.e. domain=object. If the given data is sparse enough, the data will be passed to one of the sparse matrices.
