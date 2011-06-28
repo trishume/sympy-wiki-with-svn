@@ -1,5 +1,5 @@
 # Release Notes for SymPy 0.7.0
-These are the release notes for SymPy 0.7.0. 
+These are the release notes for SymPy 0.7.0.
 
 ## Backwards compatibility breaks
 
@@ -16,7 +16,7 @@ These are the release notes for SymPy 0.7.0.
 
 ## Major Changes
 ### Polys
- 
+
  * New internal representations of dense and sparse polynomials (see: 6aecdb7, 31c9aa4)
  * Implemented algorithms for real and complex root isolation and counting (see: 3acac67, 4b75dae, fa1206e, 103b928, 45c9b22, 8870c8b, b348b30)
  * Improved Gröbner bases algorithm (see: ff65e9f, 891e4de, 310a585)
@@ -59,7 +59,7 @@ These are the release notes for SymPy 0.7.0.
 * Symbolic, abstract dirac notation in `sympy.physics.quantum`. This includes operators,
   states (bras and kets), commutators, anticommutators, dagger, inner products, outer
   products, tensor products and Hilbert spaces
-* Symbolic quantum computing framework that is based on the general capabilities in 
+* Symbolic quantum computing framework that is based on the general capabilities in
   `sympy.physics.quantum`. This includes qubits (`sympy.physics.quantum.qubit`), gates
   (`sympy.physics.quantum.gate`), Grover's algorithm (`sympy.physics.quantum.grover`),
   the quantum Fourier transform (`sympy.physics.quantum.qft`), Shor's algorithm
@@ -80,7 +80,7 @@ These are the release notes for SymPy 0.7.0.
 * A lot of stuff was being imported with `from sympy import *` that shouldn't have been (like `sys`).  This has been fixed.
 
 ### Assumptions:
- * Refine 
+ * Refine
  * Added predicates (see: 7c0b857, 53f0e1a, d1dd6a3..)
  * Added query handlers for algebraic numbers (see: f3bee7a)
  * Implement a SAT solver (see: [[http://code.google.com/p/sympy/wiki/SuperchargingAssumptionsReport]], 2d96329, acfbe75, etc.)
@@ -103,12 +103,14 @@ These are the release notes for SymPy 0.7.0.
  * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a)
  * `Real` and `.is_Real` were renamed to `Float` and `.is_Float`.  `Real` and `.is_Real` still remain as deprecated shortcuts to `Float` and `is_Float` for backwards compatibility. (see: abe1c49)
 
-### Logic
- * implies object adheres to negative normal form
- * Create new boolean class, `logic.boolalg.Boolean`
- * Added XOR operator (^) support 
- * Added If-then-else (ITE) support
- * Added the dpll algorithm
+### Geometry:
+ * Various improvements to Ellipse
+ * Updated documentation to numpy standard
+ * Polygon and Line improvements
+ * Allow all geometry objects to accept a tuple as `Point` args
+
+### Integrals:
+ * Various improvements (see eg. issues 1772, 1999, 1992, 1987.. etc)
 
 ### isympy
  * Fixed the `-p` switch (see: e8cb04a)
@@ -116,15 +118,17 @@ These are the release notes for SymPy 0.7.0.
  * Ground types can be set using `-t` switch (see: 75734f8)
  * Printing ordering can be set using `-o` switch (see: fcc6b13, 4ec9dc5)
 
+### Logic
+ * implies object adheres to negative normal form
+ * Create new boolean class, `logic.boolalg.Boolean`
+ * Added XOR operator (^) support
+ * Added If-then-else (ITE) support
+ * Added the dpll algorithm
+
 ### Functions:
  * Added Piecewise, B-splines
  * Spherical Bessel function of the second kind implemented
  * Add series expansions of multivariate functions (see: d4d351d)
-
-### Series:
- * Implement a function to calculate residues, `residue()`
- * Implement nseries and lseries to handle `x0 != 0`, series should be more robust now (see: 2c99999, issues 2122-2124)
- * Improvements to Gruntz algorithm
 
 ### Matrices:
  * Add elementwise product (Hadamard product)
@@ -134,17 +138,19 @@ These are the release notes for SymPy 0.7.0.
  * Added functions for efficient triangular and diagonal solves.
  * `SMatrix` was renamed to `SparseMatrix` (see: acd1685)
 
-### Geometry:
- * Various improvements to Ellipse
- * Updated documentation to numpy standard
- * Polygon and Line improvements
- * Allow all geometry objects to accept a tuple as `Point` args
+### Physics
+ * See the Quantum section
 
 ### Printing:
  * Implemented pretty printing of binomials (see: 58c1dad)
  * Implemented pretty printing of Sum() (see: 84f2c22, 95b4321)
  * `sympy.printing` now supports ordering of terms and factors (see: 859bb33)
  * Lexicographic order is now the default. Now finally things will print as `x**2 + x + 1` instead of `1 + x + x**2`, however series still print using reversed ordering, e.g. `x - x**3/6 + O(x**5)`. You can get the old order (and other orderings) by setting the `-o` option to isympy (see: 08b4932, a30c5a3)
+
+### Series:
+ * Implement a function to calculate residues, `residue()`
+ * Implement nseries and lseries to handle `x0 != 0`, series should be more robust now (see: 2c99999, issues 2122-2124)
+ * Improvements to Gruntz algorithm
 
 ### Simplify:
  * Added `use()` (see: 147c142)
@@ -155,12 +161,6 @@ These are the release notes for SymPy 0.7.0.
  * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
  * Added support for solving inequalities (see: 328eaba, 8455147, f8fcaa7)
 
-### Integrals:
- * Various improvements (see eg. issues 1772, 1999, 1992, 1987.. etc)
-
-### Physics
- * See the Quantum section
-
 ### Utilities:
  * Improve cartes, for generating the Cartesian product (see: b1b10ed)
  * Added a function computing topological sort of graphs (see: b2ce27b)
@@ -168,7 +168,7 @@ These are the release notes for SymPy 0.7.0.
  * `flatten()` was significantly improved (see: 31ed8d7)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
 
-In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes.  The command `git log sympy-0.6.7..sympy-0.7.0` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F6%2F13&sort=-closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles). 
+In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes.  The command `git log sympy-0.6.7..sympy-0.7.0` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F6%2F13&sort=-closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles).
 
 ## Authors
 
