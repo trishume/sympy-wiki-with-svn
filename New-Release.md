@@ -242,7 +242,7 @@ git push git@github.com:sympy/sympy.git master
 
   * http://code.google.com/p/sympy/ (FrontPage)
   * http://wiki.sympy.org
-  * http://code.google.com/p/sympy/wiki/Changes  (use `git shortlog -n sympy-0.6.7.. | sort` to get the list of contributors)
+  * http://code.google.com/p/sympy/wiki/Changes  (use `git log sympy-0.6.7.. --format="%aN" --reverse | perl -e 'my %dedupe; while (<STDIN>) { print unless $dedupe{$_}++}' | sort` to get the list of contributors, taken from [this page](http://stackoverflow.com/questions/6482436/list-of-authors-in-git-since-a-given-commit); if there are duplicates, update .mailmap)
   * http://en.wikipedia.org/wiki/SymPy
   * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems
   * http://freshmeat.net/projects/sympy/
