@@ -1,5 +1,3 @@
-This is the changelog for the 0.7.0 release. This is a draft.  Please help fill it out.
-
 # Backwards compatibility breaks
 
 * This will be the last release of SymPy to support Python 2.4.  Dropping support for Python 2.4 will let us move forward with things like supporting Python 3, and will let us use things that were introduced in Python 2.5, like with-statement context managers.
@@ -170,3 +168,70 @@ This is the changelog for the 0.7.0 release. This is a draft.  Please help fill 
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
 
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F5%2F14+&sort=closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles). (TODO: change closed-before date with the actual date of the release)
+
+# Authors
+The following people contributed at least one patch to this release (names are given in alphabetical order by last name).  A total of 64 people contributed to this release.  People with a * by their names contributed a patch for the first time for this release.  Thirty-seven people contributed for the first time for this release. Over half of the people who contributed to this release contributed for the first time!
+
+* Tom Bachmann*
+* Tomas Bambas*
+* Matthew Brett*
+* Ondřej Čertík
+* Renato Coutinho
+* Addison Cugini*
+* Matt Curry*
+* Raffaele De Feo*
+* Mark Dewing
+* Thomas Dixon*
+* Harold Erbin
+* Pavel Fedotov*
+* Gilbert Gede*
+* Oleksandr Gituliar*
+* Brian Granger
+* Alexey U. Gudchenko*
+* Øyvind Jensen
+* Fredrik Johansson
+* Felix Kaiser
+* Yuri Karadzhov*
+* Gary Kerr*
+* Kibeom Kim*
+* Nicholas J.S. Kinar*
+* Anatolii Koval*
+* Sebastian Krämer
+* Ryan Krauss
+* Gregory Ksionda*
+* Priit Laes
+* Vladimir Lagunov
+* Ronan Lamy
+* Tomo Lazovich*
+* Saptarshi Mandal*
+* David Marek
+* Jack McCaffery*
+* Benjamin McDonald*
+* Aaron Meurer
+* Christian Muise*
+* Óscar Nájera*
+* Jezreel Ng*
+* Sherjil Ozair*
+* Mateusz Paprocki
+* James Pearson
+* Fernando Perez
+* Vladimir Perić*
+* Mario Pernici*
+* Nicolas Pourcelot
+* rayman*
+* Matthew Rocklin*
+* Christian Schubert
+* Andre de Fortier Smit*
+* Chris Smith
+* Cristóvão Sousa*
+* Akshay Srinivasan
+* Vinzent Steinberg
+* Prafullkumar P. Tale*
+* Andy R. Terrel
+* Kazuo Thow*
+* Toon Verstraelen
+* Sean Vig*
+* Luca Weihs*
+* Thomas Wiecki
+* Shai 'Deshe' Wyborski*
+* Jeremias Yehdegho*
