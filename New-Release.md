@@ -239,7 +239,9 @@ git push git@github.com:sympy/sympy.git master
 ```
 
 ## Get list of authors who contributed to the release
-Use `git log sympy-0.6.7.. --format="%aN" --reverse | sort -u` to get the list of contributors (see [this page](http://stackoverflow.com/questions/6482436/list-of-authors-in-git-since-a-given-commit)). If there are duplicates, update the `.mailmap` file.  You may need to email the people in question concerning the preferred spelling of their names/preferred email addresses (you can see people's emails by using `%aN <%eN>` as the format specifier to the above `git log` command).  
+Use `git log sympy-0.6.7.. --format="%aN" --reverse | sort -u` to get the list of contributors (see [this page](http://stackoverflow.com/questions/6482436/list-of-authors-in-git-since-a-given-commit)). 
+
+This is a good time to update the `.mailmap` file, so that there are no duplicates.  You may need to email the people in question concerning the preferred spelling of their names/preferred email addresses.  Note that when you update the `.mailmap` file, you should use the command `git log --format="%aN <%eN>" --reverse | sort -u`, which will show the whole log and include email addresses. 
 
 Sort the authors everywhere by last name.  Note that we decided to do this, instead of sorting by number commits or number of lines changed for fairness purposes (for example, if someone updates mpmath, they will unfairly have a larger count of line's changed; this can also happen, e.g., if someone moves some files around).  If you know a bash command to sort by last name, please edit this page and update the above command with it.
 
