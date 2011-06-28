@@ -172,7 +172,9 @@ In addition to the more noticeable changes listed above, there have been numerou
 
 ## Authors
 
-The following people contributed at least one patch to this release (names are given in alphabetical order by last name).  A total of 64 people contributed to this release.  People with a * by their names contributed a patch for the first time for this release.  Thirty-seven people contributed for the first time for this release.  Over half of the people who contributed to this release contributed for the first time!
+The following people contributed at least one patch to this release (names are given in alphabetical order by last name).  A total of 64 people contributed to this release.  People with a * by their names contributed a patch for the first time for this release.  Thirty-seven people contributed for the first time for this release.  Over half of the people who contributed to this release contributed for the first time!  
+
+Thanks to everyone who contributed to this release!
 
 * Tom Bachmann*
 * Tomas Bambas*
