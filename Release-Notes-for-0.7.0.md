@@ -102,6 +102,7 @@ These are the release notes for SymPy 0.7.0.
  * Allow to convert `Interval` to relational form (see: 4c269fe)
  * SymPy won't manipulate minus sign of expressions any more (see: 6a26941, 9c6bf0f, e9f4a0a)
  * `Real` and `.is_Real` were renamed to `Float` and `.is_Float`.  `Real` and `.is_Real` still remain as deprecated shortcuts to `Float` and `is_Float` for backwards compatibility. (see: abe1c49)
+ * Methods coeff and as_coefficient are now non-commutative aware. (see a4ea170)
 
 ### Geometry:
  * Various improvements to Ellipse
@@ -156,6 +157,7 @@ These are the release notes for SymPy 0.7.0.
  * Added `use()` (see: 147c142)
  * `ratsimp()` now uses `cancel()` and `reduced()` (see: 108fb41)
  * Implemented EPath (see: 696139d, bf90689)
+ * a new keyword `rational` was added to nsimplify which will replace Floats with Rational approximations. (see: 053a045)
 
 ### Solvers:
  * ODE improvements (see: d12a2aa, 3542041; 73fb9ac)
@@ -167,6 +169,7 @@ These are the release notes for SymPy 0.7.0.
  * Allow to setup a customized printer in `lambdify()` (see: c1ad905)
  * `flatten()` was significantly improved (see: 31ed8d7)
  * Major improvements to the Fortran code generator (see: [[http://code.google.com/p/sympy/wiki/CodeGenerationReport]], 3383aa3, 7ab2da2, etc.)
+
 
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~2000 commits in this release. See the git log for a full list of all changes.  The command `git log sympy-0.6.7..sympy-0.7.0` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F3%2F17+closed-before%3A2011%2F6%2F13&sort=-closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles).
 
