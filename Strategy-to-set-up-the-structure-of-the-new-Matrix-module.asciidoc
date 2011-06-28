@@ -12,13 +12,12 @@ This would be my strategy to set up the structure of the new Matrix module.
 4. [Structuring] Put the three classes in separate files, and also split the test file. Change imports accordingly.
 
 
-5.a. [Renaming] Rename Matrix to DenseMatrix, _Matrix to Matrix, SparseMatrix to DOKMatrix. This might break tests all over sympy, but solution is most likely to be trivial. Fix those tests.
-5.b. Because of the renaming Matrix(...) constructor won't work. A small getaway as of now would be to write a __new__method which will divert the construction to the DenseMatrix constructor. (This will be changed later.)
+5. [Renaming] Rename Matrix to DenseMatrix, _Matrix to Matrix, SparseMatrix to DOKMatrix. This might break tests all over sympy, but solution is most likely to be trivial. Fix those tests. Because of the renaming Matrix(...) constructor won't work. A small getaway as of now would be to write a __new__method which will divert the construction to the DenseMatrix constructor. (This will be changed later.)
 
 
 6. [More tests] Now that SparseMatrix is a respected working separate class in its own right, write tests for old and new functionality.
 
-> At this point, We have DOKMatrix(Matrix), DenseMatrix(Matrix), and Matrix(object) in three separate files, with tests written in separate files for each. Matrix(...) is working and returns a DenseMatrix object. isinstance(A, Matrix) also works. Only after this is complete, I will add another file lilmatrix.py which will have the LILMatrix class deriving from Matrix.
+    At this point, We have DOKMatrix(Matrix), DenseMatrix(Matrix), and Matrix(object) in three separate files, with tests written in separate files for each. Matrix(...) is working and returns a DenseMatrix object. isinstance(A, Matrix) also works. Only after this is complete, I will add another file lilmatrix.py which will have the LILMatrix class deriving from Matrix.
 
 7. [LILMatrix] Add LILMatrix code that I have written. Write tests for it.
 
@@ -26,7 +25,7 @@ This would be my strategy to set up the structure of the new Matrix module.
 
 ( Note: One major example is that LILMatrix does not support an efficient matrix multiplication algorithm, If a user calls LILmatrix * LILmatrix, both the matrices will be converted to a DOKMatrix and then multiplied and then return the product DOKMatrix. Note that LILMatrix * LILMatrix --> DOKMatrix. But I don't think that is a problem since even if the user assumes the product to be a LILMatrix and carries out an operation of LILMatrix, if the DOKMatrix does not have that operation, then it will be converted back to LILMatrix and that operation performed. In short, Matrix interconversions would be implicit. Of course, the user will also be given explicit conversion functions like .to_dokmatrix.)
 
-> At this point three matrix representations will be have been implemented along with tests.
+    At this point three matrix representations will be have been implemented along with tests.
 
 9. [Domainifying] Add the `domain` kwarg to relevant constructors and functions. Write some more tests to check for matrix functionality over some domains from polys like QQ, FF(q), etc. Write some random matrix generator function over such domains. A small experiment I did indicated that this is reasonably easy, but generates some random bugs. Fixing bugs depends on changing Polys code and for this reason might be slow.
 
