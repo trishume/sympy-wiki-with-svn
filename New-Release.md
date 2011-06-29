@@ -257,7 +257,8 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
   * http://freshmeat.net/projects/sympy/
   * http://pypi.python.org/pypi/sympy/ (see below)
   * http://live.sympy.org/
-  * http://docs.sympy.org/
+  * http://docs.sympy.org/ (via https://github.com/sympy/sympy_doc)
+  * http://sympy.org/ (via https://github.com/sympy/sympy.github.com)
 
 === pypi ===
 
