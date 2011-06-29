@@ -276,5 +276,5 @@ Make sure it is installable using easy_install and pip.
 ## Other things
 
   * Create a Debian package
-  * Create a [SymPyspkg SymPy spkg] Sage package
+  * Create a SymPy spkg Sage package (see http://code.google.com/p/sympy/wiki/SymPyspkg)
   * Send an email to the list.
