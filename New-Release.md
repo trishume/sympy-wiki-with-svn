@@ -249,6 +249,8 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
 
 ## Sites to update
 
+If you don't have privileges to write to any of these, ask Aaron, and he will either give you write access or do it himself.
+
   * http://code.google.com/p/sympy/ (FrontPage)
   * https://github.com/sympy/sympy/wiki/ (May not be much to do here)
   * http://code.google.com/p/sympy/wiki/Changes
@@ -259,6 +261,7 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
   * http://live.sympy.org/
   * http://docs.sympy.org/ (via https://github.com/sympy/sympy_doc)
   * http://sympy.org/ (via https://github.com/sympy/sympy.github.com)
+  * http://sympy.blogspot.com/
 
 === pypi ===
 
