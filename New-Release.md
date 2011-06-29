@@ -269,7 +269,7 @@ $ python setup.py sdist upload
 You may have to fix the uploaded file by hand over the web, so that it has the
 same md5sum as the one on googlecode.  See also http://guide.python-distribute.org/contributing.html.
 
-Make sure it is installable using easy_install
+Make sure it is installable using easy_install and pip.
 
 
 ## Other things
