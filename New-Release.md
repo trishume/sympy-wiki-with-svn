@@ -250,7 +250,7 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
 ## Sites to update
 
   * http://code.google.com/p/sympy/ (FrontPage)
-  * http://wiki.sympy.org
+  * https://github.com/sympy/sympy/wiki/ (May not be much to do here)
   * http://code.google.com/p/sympy/wiki/Changes
   * http://en.wikipedia.org/wiki/SymPy
   * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems
