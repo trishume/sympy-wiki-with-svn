@@ -253,7 +253,7 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
   * https://github.com/sympy/sympy/wiki/ (May not be much to do here)
   * http://code.google.com/p/sympy/wiki/Changes
   * http://en.wikipedia.org/wiki/SymPy
-  * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems
+  * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems (Both version and features)
   * http://freshmeat.net/projects/sympy/
   * http://pypi.python.org/pypi/sympy/
   * http://live.sympy.org/
