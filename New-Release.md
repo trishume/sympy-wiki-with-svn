@@ -255,7 +255,7 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
   * http://en.wikipedia.org/wiki/SymPy
   * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems (Both version and features)
   * http://freshmeat.net/projects/sympy/
-  * http://pypi.python.org/pypi/sympy/
+  * http://pypi.python.org/pypi/sympy/ (see below)
   * http://live.sympy.org/
   * http://docs.sympy.org/
 
@@ -267,7 +267,7 @@ $ python setup.py register
 $ python setup.py sdist upload
 ```
 You may have to fix the uploaded file by hand over the web, so that it has the
-same md5sum as the one on googlecode.
+same md5sum as the one on googlecode.  See also http://guide.python-distribute.org/contributing.html.
 
 Make sure it is installable using easy_install
 
