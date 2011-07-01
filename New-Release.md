@@ -279,5 +279,5 @@ Make sure it is installable using easy_install and pip.
 ## Other things
 
   * Create a Debian package
-  * Create a SymPy spkg Sage package (see http://code.google.com/p/sympy/wiki/SymPyspkg)
+  * Create a SymPy spkg Sage package. See http://code.google.com/p/sympy/wiki/SymPyspkg, which is kind of outdated.  You can get a more up-to-date guide from the current Sage spkg.  See http://trac.sagemath.org/sage_trac/ticket/11560#comment:8
   * Send an email to the list.
