@@ -13,6 +13,7 @@ These are the release notes for SymPy 0.7.0.
 * `as_basic()` method was renamed to `as_expr()` to reflect changes in the core (see: e61819d, 80dfe91)
 * Methods `as_coeff_terms` and `as_coeff_factors` were renamed to `as_coeff_mul` and `as_coeff_add`, respectively.
 * Removed the `trim()` function.  The function is redundant with the new polys (see below).  Use the `cancel()` function instead.
+* The `assume_pos_real` option to `logcombine()` was renamed to `force` to be consistant with similar `force` options to other functions.
 
 ## Major Changes
 ### Polys
