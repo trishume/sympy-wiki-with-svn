@@ -86,5 +86,5 @@ _Sean and/or Ondrej, can you fill this out?_
   Note that internally, derivatives that can be computed are always
   computed in the order that they are given in.
 
-- Added functions ordered_iter() and iterable() for determining if
+- Added functions `ordered_iter()` and `iterable()` for determining if
   something is an ordered iterable or normal iterable.
