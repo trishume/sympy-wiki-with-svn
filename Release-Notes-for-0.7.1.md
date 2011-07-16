@@ -82,9 +82,9 @@ _Sean and/or Ondrej, can you fill this out?_
   so it can simplify expressions like `f(x, y).diff(x, y) - f(x,
   y).diff(y, x)`.  If you want to create a Derivative object without
   sorting the args, you should create it explicitly with `Derivative`,
-  so that you will get `Derivative(f(x, y), x, y) != Derivative(f(x, y),
-  y, x)`.  Note that internally, derivatives that can be computed are
-  always computed in the order that they are given in.
+  so that you will get `Derivative(f(x, y), x, y) != Derivative(f(x, y), y, x)`.
+  Note that internally, derivatives that can be computed are always
+  computed in the order that they are given in.
 
 - Added functions ordered_iter() and iterable() for determining if
   something is an ordered iterable or normal iterable.
