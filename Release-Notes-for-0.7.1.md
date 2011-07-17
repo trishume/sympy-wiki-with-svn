@@ -41,7 +41,6 @@ _Tom, can you fill this out?_
  - Added as_relational method to sets, producing boolean statements using And, Or, Eq, Lt, Gt, etc...
  - Changed reduce_poly_inequalities to return unions of sets rather than lists of sets
 
- - 
 
 ## Iterables
 - Added generating routines for integer partitions and binary partitions. The routine for integer partitions takes 3 arguments, the number itself, the maximum possible element allowed in the partitions generated and the maximum possible number of elements that will be in the partition. Binary partitions are characterized by containing only powers of two.
