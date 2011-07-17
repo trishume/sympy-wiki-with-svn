@@ -34,7 +34,15 @@ _Tom, can you fill this out?_
 _Matthew, can you fill this out?_
 
 ## Iterables
-_Chris and/or Saptarshi, can you fill this out?_
+- Added generating routines for integer partitions and binary partitions. The routine for integer partitions takes 3 arguments, the number itself, the maximum possible element allowed in the partitions generated and the maximum possible number of elements that will be in the partition. Binary partitions are characterized by containing only powers of two.
+
+- Added generating routine for multi-set partitions. Given a multiset, the algorithm implemented will generate all possible partitions of that multi-set.
+
+- Added generating routines for bell permutations, derangements, and involutions. A bell permutation is one in which the cycles that compose it consist of integers in a decreasing order. A derangement is a permutation such that the ith element is not at the ith position. An involution is a permutation that when multiplied by itself gives the identity permutation.
+
+- Added generating routine for unrestricted necklaces. An unrestricted necklace is an a-ary string of n characters, each of a possible types. These have been characterized by the parameters n and k in the routine.
+
+- Added generating routine for oriented forests. This is an implementation of algorithm S in TAOCP Vol 4A.
 
 ## Solvers/Simplify
 _Chris and/or Nicolas, can you fill this out?_
