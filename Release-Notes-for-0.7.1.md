@@ -31,7 +31,17 @@ These are the release notes for SymPy 0.7.1.
 _Tom, can you fill this out?_
 
 ## Sets
-_Matthew, can you fill this out?_
+ - Added FiniteSet class to mimic python set behavior while also interacting with existing Intervals and Unions
+ - FiniteSets and Intervals interact so that, for example Interval(0, 10) - FiniteSet(0, 5) produces (0, 5) U (5, 10]
+ - FiniteSets also handle non-numerical objects so the following is possible {1, 2, 'one', 'two', {a, b}}
+ - Added ProductSet to handle Cartesian products of sets
+ - Create using * operator, i.e. twodice = FiniteSet(1, 2, 3, 4, 5, 6) * FiniteSet(1, 2, 3, 4, 5, 6) or square = Interval(0, 1) * Interval(0, 1)
+ - pow operator also works as expected: R3 = Interval(-oo, oo)**3 ; (3, -5, 0) in R3 == True
+ - Subtraction, union, measurement all work taking complex intersections into account. 
+ - Added as_relational method to sets, producing boolean statements using And, Or, Eq, Lt, Gt, etc...
+ - Changed reduce_poly_inequalities to return unions of sets rather than lists of sets
+
+ - 
 
 ## Iterables
 - Added generating routines for integer partitions and binary partitions. The routine for integer partitions takes 3 arguments, the number itself, the maximum possible element allowed in the partitions generated and the maximum possible number of elements that will be in the partition. Binary partitions are characterized by containing only powers of two.
