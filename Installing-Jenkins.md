@@ -73,3 +73,7 @@ su jenkins
 git config --global user.email "some@email.com"
 git config --global user.name "Jenkins CI Server"
 ```
+
+***
+
+And that's it! The above steps are enough to have Jenkins test SymPy (as of July 2011). I'm sure improvements can be made but this is the basic install. This document should probably be updated later to note all the specific settings we use, which is something we'll see with time. 
