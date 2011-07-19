@@ -54,9 +54,6 @@ These are the release notes for SymPy 0.7.1.
 
 - Added generating routine for oriented forests. This is an implementation of algorithm S in TAOCP Vol 4A.
 
-## Solvers/Simplify
-_Chris and/or Nicolas, can you fill this out?_
-
 ## xyz Spin bases
 
 - The represent, rewrite and InnerProduct logic has been improved to work between any two spin bases. This was done by utilizing the Wigner-D matrix, implemented in the WignerD class, in defining the changes between the various bases. Representing a state, i.e. `represent(JzKet(1,0), basis=Jx)`, can be used to give the vector representation of any get in any of the x/y/z bases for numerical values of j and m in the spin eigenstate. Similarly, rewriting states into different bases, i.e. `JzKet(1,0).rewrite('Jx')`, will write the states as a linear combination of elements of the given basis. Because this relies on the represent function, this only works for numerical j and m values. The inner product of two eigenstates in different bases can be evaluated, i.e. `InnerProduct(JzKet(1,0),JxKet(1,1))`. When two different bases are used, one state is rewritten into the other basis, so this requires numerical values of j and m, but innerproducts of states in the same basis can still be done symbolically.
@@ -78,6 +75,8 @@ _Chris and/or Nicolas, can you fill this out?_
 - Fix a some bugs with lambdify()
 
 - Fix a bug with as_independent and non-commutative symbols.
+
+- Fix a bug with collect (issue 2516)
 
 - Many fixes relating to porting SymPy to Python 3.  Thanks to our GSoC
   student Vladimir Perić, this task is almost completed.
