@@ -64,15 +64,12 @@ tox.cmdline() # environment is selected by ``TOXENV`` env variable
 
 ***
 
-And now problems start. :)
-
-First I had to hack up some way to have a tox.ini available for Jenkins to find. [TODO: Edit the way once I figure out something smart] 
+A bit of a problem now is how to make the tox.ini file available to Jenkins. In the end, the best solution I've found is to put a tox.ini file in the Jenkins home directory (/var/lib/jenkins) and copy that over as a build step. So, add an "execute shell" build step before the Python one with "cp -f ~/tox.ini ./tox.ini". Not the cleanest solution but it works.
 
 Then it'll probably complain "Please tell me who you are". Apparently, git tries to do some tags (why??) and needs to be setup to do so. The following should be enough:
 
 ```bash
 su jenkins
-cd /var/lib/jenkins/jobs/SymPy/workspace  #this assumes the job is named SymPy, obviously :)
-git config user.email "some@email.com"
-git config user.name "jerkins"
+git config --global user.email "some@email.com"
+git config --global user.name "Jenkins CI Server"
 ```
