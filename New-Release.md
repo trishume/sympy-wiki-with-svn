@@ -214,6 +214,8 @@ Prepare the release tarball and win32 installer (should work ok even on Linux)
 ./setup.py bdist_wininst
 ```
 
+Note: It's possible to make a 64-bit Windows installer if you are on Windows.  See http://docs.python.org/distutils/builtdist.html#cross-compiling-on-windows and http://code.google.com/p/sympy/issues/detail?id=1235.
+
 Compile the html documentation
 
 ```bash
