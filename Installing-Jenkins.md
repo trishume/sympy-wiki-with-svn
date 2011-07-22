@@ -77,3 +77,5 @@ git config --global user.name "Jenkins CI Server"
 ***
 
 And that's it! The above steps are enough to have Jenkins test SymPy (as of July 2011). I'm sure improvements can be made but this is the basic install. This document should probably be updated later to note all the specific settings we use, which is something we'll see with time. 
+
+Note: To use gmpy, you'll probably need to specify the address directly in tox (deps = http://gmpy.googlecode.com/files/gmpy-1.14.zip), as it'll try to install gmpy2 by default (not really sure why, it should be fixed now). You'll also need to install the appropriate dev package for gmp, on Ubuntu/Debian it's libgmp3-dev. Then just define a testenv for Tox like usually (see tox.ini.sample in the repo) and add it to TOXENV in the job configuration on Jenkins.
