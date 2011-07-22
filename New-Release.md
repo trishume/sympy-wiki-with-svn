@@ -29,16 +29,9 @@ As directed in `setup.py`, check the module list using the command:
 $ for i in `find sympy -name __init__.py | rev | cut -f 2- -d '/' | rev | egrep -v "^sympy$" `; do echo "'${i//\//.}',"; done | sort
 ```
 
-## Does it depend on python2.4 only?
+## Does it depend on Python 2.5-2.7 only?
 
-Do this on the git version:
-
-``` bash
-$ cd bin
-$ sudo pbuilder --execute test_pure
-```
-
-All tests need to run here.  Note that this request debian to work.  It's actually much better to run the tests sandboxed using tox.  See [[Using-Tox]] and the tox.ini.sample file in the git repo.
+Run the tests sandboxed using tox.  See [[Using-Tox]] and the tox.ini.sample file in the git repo.
 
 ## speed of import
 
