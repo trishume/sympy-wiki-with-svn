@@ -26,7 +26,7 @@ $ python bin/generate_test_list.py
 As directed in `setup.py`, check the module list using the command:
 
 ```bash
-$ for i in `find * -name __init__.py | rev | cut -f 2- -d '/' | rev | egrep -v "^sympy$ | thirdparty" `; do echo "'${i//\//.}',"; done | sort
+$ for i in `find sympy -name __init__.py | rev | cut -f 2- -d '/' | rev | egrep -v "^sympy$" `; do echo "'${i//\//.}',"; done | sort
 ```
 
 ## Does it depend on python2.4 only?
