@@ -72,7 +72,7 @@ These are the release notes for SymPy 0.7.1.
 
 - Added support for gmpy and mpmath's types to sympify()
 
-- Fix a some bugs with lambdify()
+- Fix some bugs with lambdify()
 
 - Fix a bug with as_independent and non-commutative symbols.
 
