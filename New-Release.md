@@ -128,7 +128,10 @@ Then, run
 $tox -c tox.ini.plotting 
 ```
 
-And verify that the plots open correctly all three times.  
+And verify that the plots open correctly all three times.
+
+Note, because of the `pythonw` calls, the above tox call does not actually run from the virtualenv.  Therefore, you will have to have Pyglet installed in each version of Python. You can get it at http://www.pyglet.org/.  We should support whatever the latest version is.
+ 
 ## check all tests in sympy/test_external
 
 Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/test_external/test_sage.py` (see the docstring of the `sympy/test_external/test_sage.py` file).
