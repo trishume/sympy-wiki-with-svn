@@ -142,6 +142,7 @@ Currently numpy, scipy, sage, and some fortran compilers.  Open the test files t
 
 ```bash
 $ cd doc
+$ make clean
 $ make html
 $ epiphany _build/html/index.html # Or your preferred web browser
 ```
