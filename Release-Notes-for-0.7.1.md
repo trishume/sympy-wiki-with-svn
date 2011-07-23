@@ -106,5 +106,5 @@ These are the release notes for SymPy 0.7.1.
   Note that internally, derivatives that can be computed are always
   computed in the order that they are given in.
 
-- Added functions `ordered_iter()` and `iterable()` for determining if
+- Added functions `is_sequence()` and `iterable()` for determining if
   something is an ordered iterable or normal iterable.
