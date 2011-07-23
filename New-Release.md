@@ -136,7 +136,7 @@ In Linux, it might work without the `pythonw`.  So if it says it can't find `pyt
  
 ## check all tests in sympy/test_external
 
-Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/test_external/test_sage.py` (see the docstring of the `sympy/test_external/test_sage.py` file).
+Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/external/tests/test_sage.py` (see the docstring of the `sympy/external/tests/test_sage.py` file).
 
 ## check docs
 
