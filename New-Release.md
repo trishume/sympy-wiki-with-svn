@@ -88,27 +88,7 @@ NO FAILED EXAMPLES
 
 ## Does pyglet work?
 
-Do this on the git version:
-
-``` bash
-$ cd bin
-$ sudo pbuilder --execute test_pure_plotting
-[...]
-running install_egg_info
-Writing /usr/lib/python2.4/site-packages/sympy-0.5.10_hg.egg-info
-[0]: cos(x)*sin(y), sin(x)*sin(y), 0.2000000000000000111022302463*x + cos(y) + log(tan((1/2)*y)), 'mode=parametric'
-Window initialization failed: Cannot connect to ""
-/run: line 36: 14889 Segmentation fault      python plotting.py
-Was the plot successful? If not, fix it and do 'python plotting.py'.
-root@fuji:/# 
-```
-
-Note that like the test_pure test above, this requires Debian.  
-
-Important is the `[0]: cos(x)*sin(y), ...` line, that shows that plotting was ok
-and pyglet started. It cannot plot in the chroot, so the segmentation fault happens. That's ok. If it says "cannot import pyglet", that's bad and needs to be fixed.
-
-I did this with tox on Mac OS X by creating a file `plotting.py` with
+Create a file `plotting.py` with
 
 ```python
 from sympy import Symbol, cos, sin, Plot, log, tan
@@ -117,40 +97,38 @@ print Plot(cos(x)*sin(y), sin(x)*sin(y), cos(y)+log(tan(y/2))+0.2*x, [x, -0.00,
     12.4, 40], [y, 0.1, 2, 40])
 ```
 
-(this is what the `test_pure_plotting.py` file creates).  Then I created a file `tox.ini.plotting` with
+Then I create a file `tox.ini.plotting` with
 
 ```
 [tox]
-envlist = py24,py25,py26,py27
-
-[testenv:py24]
-basepython = /Library/Frameworks/Python.framework/Versions/2.4/bin/python2.4
-deps=ctypes
-commands = pythonw plotting.py
+envlist = py25,py26,py27
 
 [testenv:py25]
 basepython = /Library/Frameworks/Python.framework/Versions/2.5/bin/python2.5
-deps=ctypes
+deps=ctypes 
+    pyglet
 commands = pythonw plotting.py
 
 [testenv:py26]
+deps=pyglet
 basepython = /Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6
 commands = pythonw plotting.py
 
 [testenv:py27]
+deps=pyglet
 basepython = /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7
 commands = pythonw plotting.py
 ```
 
-(Python 2.4 and 2.5 require ctypes, see <http://docs.sympy.org/dev/modules/plotting.html>). You can make this work in non-Mac OS X by modifying the basepython lines, or just removing them.
+(Python 2.4 and 2.5 require ctypes, see <http://docs.sympy.org/dev/modules/plotting.html>). If you do not use Mac OS X, you will need to modify the basepython lines, or just remove them.
 
-Then, I ran
+Then, run
 
 ```bash
 $tox -c tox.ini.plotting 
 ```
 
-And verified that the plots opened correctly all four times.  
+And verify that the plots open correctly all three times.  
 ## check all tests in sympy/test_external
 
 Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/test_external/test_sage.py` (see the docstring of the `sympy/test_external/test_sage.py` file).
