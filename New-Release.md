@@ -120,7 +120,7 @@ basepython = /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7
 commands = pythonw plotting.py
 ```
 
-(Python 2.4 and 2.5 require ctypes, see <http://docs.sympy.org/dev/modules/plotting.html>). If you do not use Mac OS X, you will need to modify the basepython lines, or just remove them.
+(Python 2.5 requires ctypes, see <http://docs.sympy.org/dev/modules/plotting.html>). If you do not use Mac OS X, you will need to modify the basepython lines, or just remove them.
 
 Then, run
 
