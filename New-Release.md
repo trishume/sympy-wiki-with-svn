@@ -191,6 +191,7 @@ git tag sympy-0.7.0
 Prepare the release tarball and win32 installer (should work ok even on Linux)
 
 ```bash 
+./setup.p clean
 ./setup.py sdist
 ./setup.py bdist_wininst
 ```
@@ -201,6 +202,7 @@ Compile the html documentation
 
 ```bash
 cd doc
+make clean
 make html
 cd _build
 mv html sympy-0.7.0-docs-html
