@@ -134,7 +134,7 @@ Note, because of the `pythonw` calls, the above tox call does not actually run f
 
 In Linux, it might work without the `pythonw`.  So if it says it can't find `pythonw`, try changing it to just `python`.
  
-## check all tests in sympy/test_external
+## check all tests in sympy/external
 
 Currently numpy, scipy, sage, and some fortran compilers.  Open the test files to see what libraries you need to install for them to run.  To run the sage tests, you have to run `sage -python bin/test sympy/external/tests/test_sage.py` (see the docstring of the `sympy/external/tests/test_sage.py` file).
 
