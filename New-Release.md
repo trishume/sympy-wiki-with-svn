@@ -131,6 +131,8 @@ $tox -c tox.ini.plotting
 And verify that the plots open correctly all three times.
 
 Note, because of the `pythonw` calls, the above tox call does not actually run from the virtualenv.  Therefore, you will have to have Pyglet installed in each version of Python. You can get it at http://www.pyglet.org/.  We should support whatever the latest version is.
+
+In Linux, it might work without the `pythonw`.  So if it says it can't find `pythonw`, try changing it to just `python`.
  
 ## check all tests in sympy/test_external
 
