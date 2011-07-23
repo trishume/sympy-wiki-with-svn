@@ -56,6 +56,10 @@ Number of tests: 10
 The speed of "import sympy" is: 0.119651 +- 0.008924
 ```
 
+Run this in the last release and see it the tolerance intervals overlap. If they do, there is no statistically significant change in the import time.  If they do not, and the new time is slower, you should investigate.
+
+You should not compare them with the timings pasted here, as they were probably run on a different machine, and are thus not comparable to yours. 
+
 ## Do all tests run in the isolated environment?
 
 Do this on the git version:
