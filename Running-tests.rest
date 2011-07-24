@@ -1,0 +1,135 @@
+=============
+Running tests
+=============
+
+All directories are taken relative to the sympy root folder.
+
+.. _source code testing:
+
+Source code tests
+=================
+
+Every module has a suite of accompanying tests. If module's code is stored in
+``sympy/module_name``, then the tests are stored in
+``sympy/module_name/tests`` folder. Furthermore, if module's code is divided
+in multiple files (e.g. ``sympy/module_name/file1.py``,
+``sympy/module_name/file2.py``, ...), then the corresponding tests are in
+files ``sympy/module_name/tests/test_file1.py``,
+``sympy/module_name/tests/test_file2.py``, ...
+
+Testing framework is based on `pytest <http://pytest.org/latest/>`_, but not
+completely compatible with it. It is implemented in
+``sympy/utilities/runtests.py``.
+
+There are several interfaces to the testing framework. The main interface (the
+most configurable and used by other interfaces) is the
+library interface ``sympy.test(*paths, **kwargs)``. There are also two script interfaces,
+that are sometimes more practical to use: ``bin/test`` and ``python setup.py
+test``.
+
+``sympy.test(*paths, **kwargs)``
+--------------------------------
+
+This function runs a specific test, if at least one pattern from the ``paths``
+tuple is found in the path of the test file (one exception: if ``paths`` tuple is
+empty, all tests are run). For example, ``sympy.test('func')`` will run all
+tests of the ``functions`` module, as well as some other tests, whose name
+includes pattern *func* (e.g. ``sympy/core/tests/test_functions.py``).
+
+Basic examples (for more information look at the docstring)::
+
+        >>> import sympy
+
+Run all tests::
+
+        >>> sympy.test()
+
+Run just the tests for the ``sympy/core/basic.py`` file. Either of the
+following two commands will do it::
+
+        >>> sympy.test("sympy/core/tests/test_basic.py")
+        >>> sympy.test("_basic")
+
+Run all tests for the *functions* module and all tests for
+``sympy/core/basic.py`` file::
+
+        >>> sympy.test("sympy/core/tests/test_basic.py", "sympy/functions")
+
+Run all tests for *core* and *utilities* modules::
+
+        >>> sympy.test("/core", "/util")
+
+``bin/test``
+------------
+
+This script takes a number of options and arguments and then passes them to
+``sympy.test(*paths, **kwargs)``. For help on arguments and options run
+``bin/test --help``. Arguments are passed directly to ``sympy.test(*paths,
+**kwargs)``, so the same rules apply to them as to the arguments of the
+``sympy.test(*paths, **kwargs)``. Therefore to run all tests, you type::
+
+        bin/test
+
+To run just the tests in ``sympy/core/basic.py`` file::
+
+        bin/test test_basic
+
+Run all tests for *functions* module and tests in the
+``sympy/core/tests/test_basic.py`` file::
+        
+        bin/test /functions test_basic
+
+Run all tests for *core* and *utilities* modules::
+        
+        bin/test /core /utilities
+
+
+``python setup.py test``
+------------------------
+
+This command internally first runs ``sympy.test()`` and if all tests pass it
+continues with ``sympy.doctest()``. It thus runs all tests under the sympy root
+folder. It does not take any options or extra arguments.
+
+Doctests
+========
+
+A doctest is a block of code that begins with a line of the form::
+
+        >>> some_python_code
+
+and ends with a blank line. All lines in between (python commands and their
+outputs) have to be at the same indentation level. Another way to put it would
+be that doctests are interactive python sessions. 
+
+Doctests can be put into docstrings, tutorial sources, user's guide sources etc.
+Here is an example of a doctest in docstring of *Ellipse*'s method *center*
+(``sympy.geometry.Ellipse``)::
+
+        """The center of the ellipse.
+
+        Returns
+        -------
+        center : number
+
+        Examples
+        --------
+        >>> from sympy import Point, Ellipse
+        >>> p1 = Point(0, 0)
+        >>> e1 = Ellipse(p1, 3, 1)
+        >>> e1.center
+        Point(0, 0)
+
+        """
+
+Note the final blank line in the docstring that delimits the doctest.
+
+Similarly to source code testing, the doctests framework is implemented in file 
+``sympy/utilities/runtests.py``.
+
+Again there are several interfaces to the doctesting framework. The main interface (the
+most configurable and used by other interfaces) is the
+library interface ``sympy.doctest(*paths, **kwargs)``. There are also two script interfaces,
+that are sometimes more practical to use: ``bin/doctest`` and ``python setup.py
+test``. All three interfaces act pretty much the same as the corresponding
+interfaces for the `source code testing`_.
