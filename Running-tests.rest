@@ -59,6 +59,8 @@ Run all tests for *core* and *utilities* modules::
 
         >>> sympy.test("/core", "/util")
 
+See also the docstring of ``sympy.test``.
+
 ``bin/test``
 ------------
 
