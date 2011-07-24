@@ -9,7 +9,7 @@ All directories are taken relative to the sympy root folder.
 Source code tests
 =================
 
-Every module has a suite of accompanying tests. If module's code is stored in
+Every module has a suite of accompanying tests. In general, if module's code is stored in
 ``sympy/module_name``, then the tests are stored in
 ``sympy/module_name/tests`` folder. Furthermore, if module's code is divided
 in multiple files (e.g. ``sympy/module_name/file1.py``,
