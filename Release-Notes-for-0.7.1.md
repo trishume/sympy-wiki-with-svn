@@ -22,7 +22,7 @@ These are the release notes for SymPy 0.7.1.
   notes at http://mpmath.googlecode.com/svn/trunk/CHANGES.
 
 - Added a Subs object for representing unevaluated substitutions.  This
-  lets us finally represent derivatives evaluated at a point, i.e.,
+  finally lets us represent derivatives evaluated at a point, i.e.,
   `diff(f(x), x).subs(x, 0)` returns `Subs(Derivative(f(_x), _x), (_x,), (0,))`.
   This also means that SymPy can now correctly compute the chain rule
   when this functionality is required, such as with `f(g(x)).diff(x)`.
