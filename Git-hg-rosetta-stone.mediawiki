@@ -137,14 +137,14 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
 
 ~/.hgrc:
 
-<source lang="bash">
+<pre lang="bash">
  [ui]
  username = Ondrej Certik <ondrej@certik.cz>
-</source>
+</pre>
 
 ~/.gitconfig:
 
-<source lang="bash">
+<pre lang="bash">
  [user]
      name = Ondrej Certik
      email = ondrej@certik.cz
@@ -159,7 +159,7 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
      ci = commit
      di = diff --color-words
      st = status
-</source>
+</pre>
 
 == More Information ==
 
@@ -199,7 +199,7 @@ and at many other pages.
 
 You can use this script:
 
-<source lang="bash">
+<pre lang="bash">
 #! /bin/bash
 
 work=`mktemp -t -d sym.XXX`
@@ -209,14 +209,14 @@ sed -i '4a\\' $work/*
 cd ~/repos/sympy.hg/
 hg import $work/*
 rm -r $work
-</source>
+</pre>
 
 to convert all patches between master..HEAD to mercurial repository sitting at ~/repos/sympy.hg/.
 
 == how to checkout remote branch ==
 
 Start with some repository, for example create a new one from scratch:
-<source lang="bash">
+<pre lang="bash">
 $ mkdir sympy
 $ cd sympy
 $ git init
@@ -225,16 +225,16 @@ or clone our official repository:
 <source lang="bash">
 $ git clone git://git.sympy.org/sympy.git
 $ cd sympy
-</source>
+</pre>
 Now let's say you want to checkout some branch from git://github.com/certik/sympy.git. The canonical way is to add it to your remotes:
-<source lang="bash">
+<pre lang="bash">
 $ git remote add ondrej git://github.com/certik/sympy.git
-</source>
+</pre>
 Then fetch all branches from there into your remote branches:
-<source lang="bash">
+<pre lang="bash">
 $ git fetch ondrej
-</source>
+</pre>
 You can now list them with "git branch -r", or examine them with "git log ondrej/some_branch". Finally, to checkout the mpmath5 branch, do:
-<source lang="bash">
+<pre lang="bash">
 $ git checkout -b mpmath5 ondrej/mpmath5
-</source>
+</pre>
