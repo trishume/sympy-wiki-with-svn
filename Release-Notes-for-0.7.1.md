@@ -28,7 +28,7 @@ These are the release notes for SymPy 0.7.1.
   when this functionality is required, such as with `f(g(x)).diff(x)`.
 
 ## Hypergeometric functions/Meijer G-Functions
-- Added classes hyper() and meijerg() to represent Hypergeometric and Meijer G-functions. They support numerical evaluation (using mpmath) and symbolic differentiation (not with respect to the parameters).
+- Added classes hyper() and meijerg() to represent Hypergeometric and Meijer G-functions, respectively. They support numerical evaluation (using mpmath) and symbolic differentiation (not with respect to the parameters).
 - Added an algorithm for rewriting hypergeometric and meijer g-functions in terms of more familiar, named special functions. It is accessible via the function hyperexpand(), or also via expand_func(). This algorithm recognises many elementary functions, and also complete and incomplete gamma functions, bessel functions and error functions. It can easily be extended to handle more classes of special functions.
 
 ## Sets
