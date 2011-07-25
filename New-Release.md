@@ -4,7 +4,7 @@ This is a step by step to make a new release of SymPy.  If you are following it 
 
 Proposed workflow (for the 0.7.0 release, for example)
 
-1. Fix all blockers (i.e., issues marked with the label Milestone-Release0.7.0).
+1. Fix all blockers (i.e., issues marked with the label Milestone-Release0.7.0), or postpone them if they aren't too important and will take too much work to fix.
 2. Create a new branch 0.7.0, do the release patches in it.
 3. Continue in master just like if nothing was happening.
 4. Create rc1 from the 0.7.0 branch, test it, push fixes to 0.7.0. do rc2 etc. do final release.
@@ -262,9 +262,17 @@ same md5sum as the one on googlecode.  See also http://guide.python-distribute.o
 
 Make sure it is installable using easy_install and pip.  For the documentation to upload for http://packages.python.org/sympy, the zip file you created above won't work, because it is a zip of the directory, and it wants an index.html at the root level.  I was able to fix it by selecting everything in the `sympy-0.7.0-docs-html` directory in the Finder in Mac OS X and right clicking and choosing "Compress", and uploading the `Archive.zip` file that created.
 
+## Release notes
+
+If you haven't done it already, write up the release notes at [[Release-Notes-for-0.7.0]], replacing "0.7.0" with this version.  Use the notes from pervious versions as a guide.  Go through the git log and include all important changes from the user perspective (there's no need to document changes that only affect internals).  There's no need to be exhaustive against every single change, as there always exists the git log.
+
+It's generally a good idea to enlist the people who made the various changes to write that section of the release notes, especially if you aren't familiar with that code or change.
+
+But the most important changes up front (at the top).  This includes major new functionality and any backwards compatibility breaks.
 
 ## Other things
 
   * Create a Debian package
   * Create a SymPy spkg Sage package. See http://code.google.com/p/sympy/wiki/SymPyspkg, which is kind of outdated.  You can get a more up-to-date guide from the current Sage spkg.  See http://trac.sagemath.org/sage_trac/ticket/11560#comment:8
-  * Send an email to the list.
+  * Send an email to the list.  Include a copy of the release notes and the list of people who contributed to the release.
+  * Make sure that there are milestone labels in the issue tracker for at least two versions in the future.  So if 0.7.0 is the most recently released version, make sure there are Milestone-release0.7.1 and Milestone-release0.7.2 labels.
