@@ -29,18 +29,27 @@ These are the release notes for SymPy 0.7.1.
 
 ## Hypergeometric functions/Meijer G-Functions
 - Added classes hyper() and meijerg() to represent Hypergeometric and Meijer G-functions, respectively. They support numerical evaluation (using mpmath) and symbolic differentiation (not with respect to the parameters).
+
 - Added an algorithm for rewriting hypergeometric and meijer g-functions in terms of more familiar, named special functions. It is accessible via the function hyperexpand(), or also via expand_func(). This algorithm recognises many elementary functions, and also complete and incomplete gamma functions, bessel functions, and error functions. It can easily be extended to handle more classes of special functions.
 
 ## Sets
- - Added FiniteSet class to mimic python set behavior while also interacting with existing Intervals and Unions
- - FiniteSets and Intervals interact so that, for example Interval(0, 10) - FiniteSet(0, 5) produces (0, 5) U (5, 10]
- - FiniteSets also handle non-numerical objects so the following is possible {1, 2, 'one', 'two', {a, b}}
- - Added ProductSet to handle Cartesian products of sets
- - Create using * operator, i.e. twodice = FiniteSet(1, 2, 3, 4, 5, 6) * FiniteSet(1, 2, 3, 4, 5, 6) or square = Interval(0, 1) * Interval(0, 1)
- - pow operator also works as expected: R3 = Interval(-oo, oo)**3 ; (3, -5, 0) in R3 == True
- - Subtraction, union, measurement all work taking complex intersections into account. 
- - Added as_relational method to sets, producing boolean statements using And, Or, Eq, Lt, Gt, etc...
- - Changed reduce_poly_inequalities to return unions of sets rather than lists of sets
+- Added FiniteSet class to mimic python set behavior while also interacting with existing Intervals and Unions
+
+- FiniteSets and Intervals interact so that, for example `Interval(0, 10) - FiniteSet(0, 5)` produces `(0, 5) U (5, 10]`
+
+- FiniteSets also handle non-numerical objects so the following is possible `{1, 2, 'one', 'two', {a, b}}`
+
+- Added ProductSet to handle Cartesian products of sets
+
+- Create using the `*` operator, i.e. `twodice = FiniteSet(1, 2, 3, 4, 5, 6) * FiniteSet(1, 2, 3, 4, 5, 6) or square = Interval(0, 1) * Interval(0, 1)`
+
+- pow operator also works as expected: `R3 = Interval(-oo, oo)**3 ; (3, -5, 0) in R3 == True`
+
+- Subtraction, union, measurement all work taking complex intersections into account. 
+
+- Added as_relational method to sets, producing boolean statements using And, Or, Eq, Lt, Gt, etc...
+
+- Changed reduce_poly_inequalities to return unions of sets rather than lists of sets
 
 
 ## Iterables
