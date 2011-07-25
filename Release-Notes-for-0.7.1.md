@@ -107,4 +107,4 @@ These are the release notes for SymPy 0.7.1.
   computed in the order that they are given in.
 
 - Added functions `is_sequence()` and `iterable()` for determining if
-  something is an ordered iterable or normal iterable.
+  something is an ordered iterable or normal iterable, respectively.
