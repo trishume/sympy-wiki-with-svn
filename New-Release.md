@@ -1,4 +1,4 @@
-This is a step by step to make a new release of SymPy.  If you are following it to make a new release, please update it with any corrections or problems that you come across.  This guide was written with 0.7.0 as the sample release.  Replace "0.7.0" in the commands with the version that you are releasing, and "0.6.7" with the previous version.
+This is a step by step guide on how to make a new release of SymPy.  If you are following it to make a new release, please update it with any corrections or problems that you come across.  This guide was written with 0.7.0 as the sample release.  Replace "0.7.0" in the commands with the version that you are releasing, and "0.6.7" with the previous version.
 
 # How to make a new release 
 
