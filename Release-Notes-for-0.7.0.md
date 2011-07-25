@@ -1,5 +1,5 @@
 # Release Notes for SymPy 0.7.0
-These are the release notes for SymPy 0.7.0.
+These are the release notes for SymPy 0.7.0.  SymPy 0.7.0 was released on June 28, 2011.
 
 ## Backwards compatibility breaks
 
