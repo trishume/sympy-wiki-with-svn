@@ -36,28 +36,38 @@ empty, all tests are run). For example, ``sympy.test('func')`` will run all
 tests of the ``functions`` module, as well as some other tests, whose name
 includes pattern *func* (e.g. ``sympy/core/tests/test_functions.py``).
 
-Basic examples (for more information look at the docstring)::
+Basic examples (for more information look at the docstring):
 
-        >>> import sympy
+```python
+>>> import sympy
+```
 
-Run all tests::
+Run all tests:
 
-        >>> sympy.test()
+```python
+>>> sympy.test()
+```
 
 Run just the tests for the ``sympy/core/basic.py`` file. Either of the
-following two commands will do it::
+following two commands will do it:
 
-        >>> sympy.test("sympy/core/tests/test_basic.py")
-        >>> sympy.test("_basic")
+```python
+>>> sympy.test("sympy/core/tests/test_basic.py")
+>>> sympy.test("_basic")
+```
 
 Run all tests for the *functions* module and all tests for
-``sympy/core/basic.py`` file::
+``sympy/core/basic.py`` file:
 
-        >>> sympy.test("sympy/core/tests/test_basic.py", "sympy/functions")
+```python
+>>> sympy.test("sympy/core/tests/test_basic.py", "sympy/functions")
+```
 
-Run all tests for *core* and *utilities* modules::
+Run all tests for *core* and *utilities* modules:
 
-        >>> sympy.test("/core", "/util")
+```python
+>>> sympy.test("/core", "/util")
+```
 
 See also the docstring of ``sympy.test``.
 
@@ -68,22 +78,30 @@ This script takes a number of options and arguments and then passes them to
 ``sympy.test(*paths, **kwargs)``. For help on arguments and options run
 ``bin/test --help``. Arguments are passed directly to ``sympy.test(*paths,
 **kwargs)``, so the same rules apply to them as to the arguments of the
-``sympy.test(*paths, **kwargs)``. Therefore to run all tests, you type::
+``sympy.test(*paths, **kwargs)``. Therefore to run all tests, you type:
 
-        bin/test
+```bash
+$bin/test
+```
 
-To run just the tests in ``sympy/core/basic.py`` file::
+To run just the tests in ``sympy/core/basic.py`` file:
 
-        bin/test test_basic
+```bash
+$bin/test test_basic
+```
 
 Run all tests for *functions* module and tests in the
-``sympy/core/tests/test_basic.py`` file::
+``sympy/core/tests/test_basic.py`` file:
         
-        bin/test /functions test_basic
+```bash
+$bin/test /functions test_basic
+```
 
-Run all tests for *core* and *utilities* modules::
+Run all tests for *core* and *utilities* modules:
         
-        bin/test /core /utilities
+```bash
+$bin/test /core /utilities
+```
 
 
 ``python setup.py test``
@@ -96,9 +114,11 @@ folder. It does not take any options or extra arguments.
 Doctests
 ========
 
-A doctest is a block of code that begins with a line of the form::
+A doctest is a block of code that begins with a line of the form:
 
-        >>> some_python_code
+```python
+>>> some_python_code
+```
 
 and ends with a blank line. All lines in between (python commands and their
 outputs) have to be at the same indentation level. Another way to put it would
@@ -106,23 +126,25 @@ be that doctests are interactive python sessions.
 
 Doctests can be put into docstrings, tutorial sources, user's guide sources etc.
 Here is an example of a doctest in docstring of *Ellipse*'s method *center*
-(``sympy.geometry.Ellipse``)::
+(``sympy.geometry.Ellipse``):
 
-        """The center of the ellipse.
+```python
+"""The center of the ellipse.
 
-        Returns
-        -------
-        center : number
+Returns
+-------
+center : number
 
-        Examples
-        --------
-        >>> from sympy import Point, Ellipse
-        >>> p1 = Point(0, 0)
-        >>> e1 = Ellipse(p1, 3, 1)
-        >>> e1.center
-        Point(0, 0)
+Examples
+--------
+>>> from sympy import Point, Ellipse
+>>> p1 = Point(0, 0)
+>>> e1 = Ellipse(p1, 3, 1)
+>>> e1.center
+Point(0, 0)
 
-        """
+"""
+```
 
 Note the final blank line in the docstring that delimits the doctest.
 
