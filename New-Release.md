@@ -191,7 +191,7 @@ git tag sympy-0.7.0
 Prepare the release tarball and win32 installer (should work ok even on Linux)
 
 ```bash 
-./setup.p clean
+./setup.py clean
 ./setup.py sdist
 ./setup.py bdist_wininst
 ```
