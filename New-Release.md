@@ -4,7 +4,7 @@ This is a step by step guide on how to make a new release of SymPy.  If you are 
 
 Proposed workflow (for the 0.7.0 release, for example)
 
-1. Fix all blockers (i.e., issues marked with the label Milestone-Release0.7.0), or postpone them if they aren't too important and will take too much work to fix.
+1. Fix all blockers (i.e., issues marked with the label Milestone-Release0.7.0), or postpone them if they aren't too important and will take too much work to fix.  While you're doing this, it's a good idea to start writing the release notes.  See "Release notes" below.
 2. Create a new branch 0.7.0, do the release patches in it.
 3. Continue in master just like if nothing was happening.
 4. Create rc1 from the 0.7.0 branch, test it, push fixes to 0.7.0. do rc2 etc. do final release.
