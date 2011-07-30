@@ -28,11 +28,13 @@ These are the release notes for SymPy 0.7.1.
   when this functionality is required, such as with `f(g(x)).diff(x)`.
 
 ## Hypergeometric functions/Meijer G-Functions
+
 - Added classes hyper() and meijerg() to represent Hypergeometric and Meijer G-functions, respectively. They support numerical evaluation (using mpmath) and symbolic differentiation (not with respect to the parameters).
 
 - Added an algorithm for rewriting hypergeometric and meijer g-functions in terms of more familiar, named special functions. It is accessible via the function hyperexpand(), or also via expand_func(). This algorithm recognises many elementary functions, and also complete and incomplete gamma functions, bessel functions, and error functions. It can easily be extended to handle more classes of special functions.
 
 ## Sets
+
 - Added FiniteSet class to mimic python set behavior while also interacting with existing Intervals and Unions
 
 - FiniteSets and Intervals interact so that, for example `Interval(0, 10) - FiniteSet(0, 5)` produces `(0, 5) U (5, 10]`
@@ -53,6 +55,7 @@ These are the release notes for SymPy 0.7.1.
 
 
 ## Iterables
+
 - Added generating routines for integer partitions and binary partitions. The routine for integer partitions takes 3 arguments, the number itself, the maximum possible element allowed in the partitions generated and the maximum possible number of elements that will be in the partition. Binary partitions are characterized by containing only powers of two.
 
 - Added generating routine for multi-set partitions. Given a multiset, the algorithm implemented will generate all possible partitions of that multi-set.
