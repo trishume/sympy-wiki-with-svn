@@ -262,7 +262,7 @@ $ python setup.py sdist upload
 You may have to fix the uploaded file by hand over the web, so that it has the
 same md5sum as the one on googlecode.  See also http://guide.python-distribute.org/contributing.html.
 
-Make sure it is installable using easy_install and pip.  For the documentation to upload for http://packages.python.org/sympy, the zip file you created above won't work, because it is a zip of the directory, and it wants an index.html at the root level.  I was able to fix it by selecting everything in the `sympy-0.7.0-docs-html` directory in the Finder in Mac OS X and right clicking and choosing "Compress", and uploading the `Archive.zip` file that created.
+Make sure it is installable using easy_install and pip.  For the documentation to upload for http://packages.python.org/sympy, the zip file you created above won't work, because it is a zip of the directory, and it wants an index.html at the root level.  I was able to fix it by selecting everything in the `sympy-0.7.0-docs-html` directory in the Finder in Mac OS X and right clicking and choosing "Compress", and uploading the `Archive.zip` file that created.  No doubt this could also be done with the command line (if you know how, please update the zip command above to do it).
 
 ## Release notes
 
