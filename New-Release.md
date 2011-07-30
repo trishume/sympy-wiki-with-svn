@@ -274,7 +274,9 @@ But the most important changes up front (at the top).  This includes major new f
 
 ## Other things
 
+  * Merge the 0.7.0 branch back with master.
   * Create a Debian package
   * Create a SymPy spkg Sage package. See http://code.google.com/p/sympy/wiki/SymPyspkg, which is kind of outdated.  You can get a more up-to-date guide from the current Sage spkg.  See http://trac.sagemath.org/sage_trac/ticket/11560#comment:8
   * Send an email to the list.  Include a copy of the release notes and the list of people who contributed to the release.
   * Make sure that there are milestone labels in the issue tracker for at least two versions in the future.  So if 0.7.0 is the most recently released version, make sure there are Milestone-release0.7.1 and Milestone-release0.7.2 labels.
+  * Make sure any issues in the issue tracker that were fixed by the release are closed (this should not be done until the 0.7.0 branch is merged with master).
