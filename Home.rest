@@ -25,7 +25,7 @@ SymPy is a computer algebra system (CAS) written in the `Python
 <http://python.org>`_ programming language. SymPy is easy to use and install (see the
 `download instructions
 <http://code.google.com/p/sympy/wiki/DownloadInstallation?tm=2>`_ and
-[[tutorial]] for more information), and works everywhere where Python 2.4 or
+[[tutorial]] for more information), and works everywhere where Python 2.5 or
 newer is installed (Linux, Windows, Mac OS X, ...). SymPy's features include:
 
 * Arbitrary precision integers, rationals and floats, as well as symbolic expressions
