@@ -250,7 +250,7 @@ If you don't have privileges to write to any of these, ask Aaron, and he will ei
   * http://sympy.org/ (via https://github.com/sympy/sympy.github.com)
   * http://sympy.blogspot.com/
 
-=== pypi ===
+### pypi
 
 ```bash
 $ git co sympy-0.7.0
