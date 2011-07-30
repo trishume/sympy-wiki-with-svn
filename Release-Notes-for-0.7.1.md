@@ -117,3 +117,38 @@ These are the release notes for SymPy 0.7.1.
 
 - Added functions `is_sequence()` and `iterable()` for determining if
   something is an ordered iterable or normal iterable, respectively.
+
+In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~300 commits in this release. See the git log for a full list of all changes.  The command `git log sympy-0.7.0..sympy-0.7.1` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F6%2F13+closed-before%3A2011%2F7%2F30&sort=-closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles).
+
+## Authors
+
+The following people contributed at least one patch to this release (names are given in alphabetical order by last name).  A total of 26 people contributed to this release.  People with a * by their names contributed a patch for the first time for this release.  Five people contributed for the first time for this release.  
+
+Thanks to everyone who contributed to this release!
+
+* Tom Bachmann
+* Ondřej Čertík
+* Renato Coutinho
+* Bill Flynn
+* Bradley Froehle*
+* Gilbert Gede
+* Brian Granger
+* Emma Hogan*
+* Yuri Karadzhov
+* Stefan Krastanov*
+* Ronan Lamy
+* Tomo Lazovich
+* Sam Magura*
+* Saptarshi Mandal
+* Aaron Meurer
+* Sherjil Ozair
+* Mateusz Paprocki
+* Vladimir Perić
+* Mario Pernici
+* Nicolas Pourcelot
+* Min Ragan-Kelley*
+* Matthew Rocklin
+* Chris Smith
+* Vinzent Steinberg
+* Sean Vig
+* Thomas Wiecki
