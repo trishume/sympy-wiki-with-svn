@@ -234,6 +234,8 @@ This is a good time to update the `.mailmap` file, so that there are no duplicat
 
 Sort the authors everywhere by last name.  Note that we decided to do this, instead of sorting by number commits or number of lines changed for fairness purposes (for example, if someone updates mpmath, they will unfairly have a larger count of line's changed; this can also happen, e.g., if someone moves some files around).  If you know a bash command to sort by last name, please edit this page and update the above command with it.
 
+This list should be included at the bottom of the release notes.  Mark anyone who contributed for the first time for this release with a `*` (you can get this list by running `git diff sympy-0.6.7..sympy-0.7.0 -- AUTHORS`).
+
 ## Sites to update
 
 If you don't have privileges to write to any of these, ask Aaron, and he will either give you write access or do it himself.
