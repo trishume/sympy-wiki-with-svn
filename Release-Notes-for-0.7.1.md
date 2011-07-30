@@ -118,6 +118,8 @@ These are the release notes for SymPy 0.7.1.
 - Added functions `is_sequence()` and `iterable()` for determining if
   something is an ordered iterable or normal iterable, respectively.
 
+- Enabled an option in Sphinx that adds a `source` link next to each function, which links to a copy of the source code for that function.
+
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the ~300 commits in this release. See the git log for a full list of all changes.  The command `git log sympy-0.7.0..sympy-0.7.1` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](http://code.google.com/p/sympy/issues/list?can=1&q=closed-after%3A2010%2F6%2F13+closed-before%3A2011%2F7%2F30&sort=-closed&colspec=ID+Type+Status+Priority+Milestone+Owner+Summary+Stars+Closed&cells=tiles).
 
 ## Authors
