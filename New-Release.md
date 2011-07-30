@@ -211,7 +211,7 @@ zip -9lr sympy-0.7.0-docs-html.zip sympy-0.7.0-docs-html
 
 And put `dist/sympy-0.7.0.tar.gz`, `dist/sympy-0.7.0.win32.exe` and `sympy-0.7.0-docs-html.zip` on the website.  Note that depending on what operating system you run the above in, you may need to rename the Windows binary to `sympy-0.7.0.win32.exe` (as mentioned above, even if you compile it in Linux or Mac OS X, it should still work in Windows).
 
-Upload these files to http://code.google.com/p/sympy/downloads/ (use the files from previous versions as a guide).
+Upload these files to http://code.google.com/p/sympy/downloads/ Use the files from previous versions as a guide.  Be sure to remove the "Featured" tag from the files from the previous release.
 
 Change version to 0.7.0-git, and start new development cycle
 
