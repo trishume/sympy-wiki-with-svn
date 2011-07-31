@@ -3,7 +3,7 @@ Writing documentation
 =====================
 
 Docstrings
-==========
+----------
 
 Docstrings in Sympy should be written according to the `Numpy docstring standard
 <https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt>`_.
@@ -15,11 +15,11 @@ mostly simple and self-explanatory and can thus be briefly explained in the
 *Extended summary* section. 
 
 Modules reference 
-=================
+-----------------
 
 TODO.
 
 Tutorial
-========
+--------
 
 TODO.
