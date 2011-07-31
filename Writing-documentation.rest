@@ -1,0 +1,21 @@
+Docstrings
+==========
+
+Docstrings in Sympy should be written according to the `Numpy docstring standard
+<https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt>`_.
+Because the aforementioned standard is very strict and originally written for
+the needs of a slightly different library, it is not mandatory to follow it
+100% in Sympy. E.g. it makes sense to make the *Parameters* and *Returns*
+sections optional in Sympy docstrings, since the parameters and returns are
+mostly simple and self-explanatory and can thus be briefly explained in the
+*Extended summary* section. 
+
+Modules reference 
+=================
+
+TODO.
+
+Tutorial
+========
+
+TODO.
