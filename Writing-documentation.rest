@@ -1,6 +1,5 @@
 *Note: This document is a draft.*
 
-=====================
 Writing documentation
 =====================
 
