@@ -18,7 +18,7 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
 
 3. First, you will need Xcode to compile some stuff.  In Lion, just install it from the App store (note, this installs an installer, which you then need to run).  I used Xcode 4, but this might also work with Xcode 3.
 
-4. Next, you need to install QT.  Install the QT *Library* (not the SDK) for Mac OS X from http://qt.nokia.com/downloads.  If you installed the right one, there should now be a QT folder in `/Developer/Applications`.  
+4. Next, you need to install QT.  Install the QT **Library** (not the SDK) for Mac OS X from http://qt.nokia.com/downloads.  If you installed the right one, there should now be a QT folder in `/Developer/Applications`.  
 
 5. Here is the hard part: pyqt.  Don't even try compiling this yourself; it won't work (or at least that's what I've been told; I haven't tried it since a few months ago when I was using Mac OS X 10.6, when it didn't work).  You want to rather use [homebrew](https://github.com/mxcl/homebrew) to compile it for you (alternately, you can try manually applying the [homebrew formula](https://github.com/mxcl/homebrew/blob/master/Library/Formula/pyqt.rb) for it; I haven't tried this myself).  
 
