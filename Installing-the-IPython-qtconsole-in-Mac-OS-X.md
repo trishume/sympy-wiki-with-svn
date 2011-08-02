@@ -74,7 +74,7 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
 
 - `./setup.py clean` doesn't work very well in most repositories (such as IPython).  If you are using git, you can clean everything better using `git clean -Xdn` first (this is a dry run), and then `git clean -Xdf` if you are OK with what it will delete.
 
-- If you use fink, or for whatever reason have some other version of Python from the system one in your `PATH`, make sure you always explicitly call `/Library/Frameworks/Python.framework/Versions/2.7/bin/2.7` in all the `setup.py install` steps.  If you installed something but it still can't find it, this is likely the culprit.  Do a hard clean (see above) and try again.
+- If you use fink, or for whatever reason have some other version of Python from the system one in your `PATH`, make sure you always explicitly call `/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7` in all the `setup.py install` steps.  If you installed something but it still can't find it, this is likely the culprit.  Do a hard clean (see above) and try again.
 
 - To use the qtconsole with SymPy, run `ipython qtconsole --profile=sympy`.  This makes the qtconsole run similar to isympy.  It's also supposed to use LaTeX for the math, though this hasn't been the case for me.
 
