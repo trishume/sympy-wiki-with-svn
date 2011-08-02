@@ -68,7 +68,7 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
     $ ipython qtconsole
     ```
 
-    If it works, the Python rocketship application should open, and a GUI window with a IPython shell should open up.  This is the qtconsole.
+    If it works, the Python rocketship application should open, and a GUI window with a IPython shell should open up.  This is the qtconsole!
 
 # Notes
 
