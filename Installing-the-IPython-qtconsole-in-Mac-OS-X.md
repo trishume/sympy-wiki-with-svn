@@ -8,7 +8,7 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
     print '32-bit' if isinstance(int(2**42), long) else '64-bit'
     ```
 
-    in Python.  If it isn't, download the 10.6/10.7 installer at http://www.python.org/download/.
+    in Python.  You can also just run `python -c "print '32-bit' if isinstance(int(2**42), long) else '64-bit'"`. If it isn't 64-bit, download the 10.6/10.7 installer at http://www.python.org/download/.
 
 2. Now, you need to install IPython.  A simple `pip install ipython` or `easy_install ipython` should do it.  Alternately, you can download the source, or clone the [git repo](https://github.com/ipython/ipython) and install from that.
 
