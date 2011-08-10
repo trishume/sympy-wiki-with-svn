@@ -86,31 +86,28 @@ To get LaTeX printing for SymPy, you need matplotlib.  This in turn requires num
 
 1. `sudo pip install numpy`
 
-2. `sudo pip install matplotlib`.  If this gives you
+2. `sudo pip install matplotlib` did not work for me.  Rather, I had to clone the git repo and install from that
 
-```pytb
-Traceback (most recent call last):
-
-  File "<string>", line 14, in <module>
-
-  File "/Users/aaronmeurer/Documents/python/sympy/sympy-scratch/build/matplotlib/setup.py", line 151, in <module>
-
-    if check_for_tk() or (options['build_tkagg'] is True):
-
-  File "setupext.py", line 836, in check_for_tk
-
-    (Tkinter.__version__.split()[-2], Tkinter.TkVersion, Tkinter.TclVersion))
-
-IndexError: list index out of range
+```bash
+git clone git://github.com/matplotlib/matplotlib.git
+cd matplotlib
+sudo python setup.py install
 ```
 
-Then you need to edit the file `build/matplotlib/setupext.py` (this will require sudo permissions), and comment out the line 836.  Something like
+You can test that the latex printing works by first cd'ing out of the matplotlib directory, and doing
 
-```python
-    if gotit:
-        pass
-        #print_status("Tkinter", "Tkinter: %s, Tk: %s, Tcl: %s" %
-          #  (Tkinter.__version__.split()[-2], Tkinter.TkVersion, Tkinter.TclVersion))
+```
+ipython qtconsole --profile=sympy
 ```
 
-This line isn't important.  It's just trying to print something.
+and then typing something like
+
+```
+Integral(sin(1/x), x)
+```
+
+If this works, you should see something like
+
+\(\int \sin\left(\frac{1}{x}\right)\,dx\)
+
+(only it will look kind of crappy because matplotlib LaTeX rendering sucks).
