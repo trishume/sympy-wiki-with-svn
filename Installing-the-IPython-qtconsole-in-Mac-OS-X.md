@@ -108,6 +108,6 @@ Integral(sin(1/x), x)
 
 If this works, you should see something like
 
-\(\int \sin\left(\frac{1}{x}\right)\,dx\)
+\[\int \sin\left(\frac{1}{x}\right)\,dx\]
 
 (only it will look kind of crappy because matplotlib LaTeX rendering sucks).
