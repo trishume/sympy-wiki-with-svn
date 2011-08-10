@@ -8,7 +8,7 @@
 
 # Equation mode math
 
-\[\int x^2\, dx\]
+\[\int x^2\,  dx\]
 
 \[\int \sin\left(\frac{1}{x^2}\right)\, dx\]
 
