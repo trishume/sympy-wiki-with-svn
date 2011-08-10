@@ -76,7 +76,41 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
 
 - If you use fink, or for whatever reason have some other version of Python from the system one in your `PATH`, make sure you always explicitly call `/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7` in all the `setup.py install` steps.  If you installed something but it still can't find it, this is likely the culprit.  Do a hard clean (see above) and try again.
 
-- To use the qtconsole with SymPy, run `ipython qtconsole --profile=sympy`.  This makes the qtconsole run similar to isympy.  It's also supposed to use LaTeX for the math, though this hasn't been the case for me.
+- To use the qtconsole with SymPy, run `ipython qtconsole --profile=sympy`.  This makes the qtconsole run similar to isympy.  <del>It's also supposed to use LaTeX for the math, though this hasn't been the case for me.</del> See below for how to make LaTeX printing work.
 
 - This is all just how I did it.  Hopefully I didn't forget anything.  Your milage may vary.
 
+# Getting LaTeX printing for SymPy
+
+To get LaTeX printing for SymPy, you need matplotlib.  This in turn requires numpy. So do
+
+1. `sudo pip install numpy`
+
+2. `sudo pip install matplotlib`.  If this gives you
+
+```pytb
+Traceback (most recent call last):
+
+  File "<string>", line 14, in <module>
+
+  File "/Users/aaronmeurer/Documents/python/sympy/sympy-scratch/build/matplotlib/setup.py", line 151, in <module>
+
+    if check_for_tk() or (options['build_tkagg'] is True):
+
+  File "setupext.py", line 836, in check_for_tk
+
+    (Tkinter.__version__.split()[-2], Tkinter.TkVersion, Tkinter.TclVersion))
+
+IndexError: list index out of range
+```
+
+Then you need to edit the file `build/matplotlib/setupext.py` (this will require sudo permissions), and comment out the line 836.  Something like
+
+```python
+    if gotit:
+        pass
+        #print_status("Tkinter", "Tkinter: %s, Tk: %s, Tcl: %s" %
+          #  (Tkinter.__version__.split()[-2], Tkinter.TkVersion, Tkinter.TclVersion))
+```
+
+This line isn't important.  It's just trying to print something.
