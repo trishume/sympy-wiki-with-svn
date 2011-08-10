@@ -10,6 +10,8 @@
 
 \[\int x^2\, dx\]
 
+\[\int x^2\,  dx\]
+
 \[\int \sin\left(\frac{1}{x^2}\right)\, dx\]
 
 \[\int_{-\infty}^\infty \Phi \left(x\right)\, dx\]
