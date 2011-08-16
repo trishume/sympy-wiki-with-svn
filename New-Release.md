@@ -76,7 +76,7 @@ And check manually, that no py.test run generated a stack trace. (search for "CO
 ## Do all examples work?
 
 ```bash
-$ examples/all.py
+$ examples/all.py -w
 ```
 
 Make sure no traceback is generated and this is printed at the end:
@@ -85,6 +85,9 @@ Make sure no traceback is generated and this is printed at the end:
 NO FAILED EXAMPLES
 ```
 
+Note that the `-w` will make it also run windowed examples, which will require things like pyglet and matplotlib to be installed to work.  
+
+Also, make sure that all the examples are included in `all.py` by comparing the included modules with the output of `ls -R examples`.
 
 ## Does pyglet work?
 
