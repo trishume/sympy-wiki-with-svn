@@ -7,9 +7,9 @@ Accepted Students
 -----------------
 (Someone who knows rest, can you make this into a table, like we had for previous years on the Google Code wiki?)
 
-(Proposal, Student, Mentor, Application, Blog)
+(Proposal, Student, Mentor, Application, Blog, Report)
 
-- Definite Integration using Meijer G-functions, Tom Bachmann, Aaron Meurer, [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]], http://nessgrh.wordpress.com/
+- Definite Integration using Meijer G-functions, Tom Bachmann, Aaron Meurer, [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]], http://nessgrh.wordpress.com/, [[GSoC-2011-Report-Tom-Bachmann:-Definite-Integration]]
 
 - PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]], [[http://gilbertgede.wordpress.com/]]
 
