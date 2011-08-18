@@ -2,9 +2,28 @@ This page is a report on my work on SymPy as part of the "Google Summer of Code"
 
 About Me
 ********
+My name is Tom Bachmann, and I study mathematics at the University of Cambridge, England. I will enter part II of the Mathematical Tripos in october 2011, which obviously will be my third year of study ;). My primary interests are arithmetic, analytic and algebraic geometry, which is why I applied to implement a heuristic symbolic definite integration algorithm ;).
 
 Introduction
 ************
 
+I know it is advantageous to do (lots of) internships or similar. However, I had to sort of settle on the conclusion that there are just no internships in pure maths. I have known about the existence of GSoC for a long time, and sort of by accident one day I found myself browsing through the accepted organisations and proposed projects for 2011. As it turns out, there indeed seemed to be one organisation offering projects that I was vaguely interested in: mathematical computations not involving floating point numbers. Indeed there was a proposed project in symbolic integration, and even though I know nothing about how to implement this it had always seemed intriguing.
+
+I am not going to describe my application process in great lenght. Needless to say, I looked at the literature, read up on the theory involved, and thought hard about what I believed I would be able to do. Then I wrote a draft proposal and kept bugging people on IRC to tell me what else they wanted to know; special thanks go to Ronan and Aaron (the latter also my mentor) for comments at this stage. During this time and the ensuing waiting period I familiarised myself with SymPy by fixing bugs. I started with random stuff tagged EasyToFix. Eventually I hit an EasyToFix issue that turned out to involve rewriting half of the gruntz algorithm (for computing limits)...
+
+Eventually my proposal was accepted and I spent the summer coding.
+
+Looking back, I'm surprised to say that I implemented pretty much what I proposed (although the proposal was admittedly vague about the second half). My contributions can be split into four categories:
+
+- Miscellaneous improvements.
+- Addition of new special functions.
+- The hyperexpand() function.
+- The meijerint family of functions.
+
+In the next section I will describe each of these categories separately, instead of describing the actual order of implementation. The actual order was something something like 2-3-4-1-3-4-2-3...; i.e. a mess.
+
 GSoC Review
 ************
+
+Outlook
+*******
