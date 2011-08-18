@@ -15,15 +15,19 @@ Eventually my proposal was accepted and I spent the summer coding.
 
 Looking back, I'm surprised to say that I implemented pretty much what I proposed (although the proposal was admittedly vague about the second half). My contributions can be split into four categories:
 
-- Miscellaneous improvements.
-- Addition of new special functions.
-- The hyperexpand() function.
-- The meijerint family of functions.
-
-In the next section I will describe each of these categories separately, instead of describing the actual order of implementation. The actual order was something something like 2-3-4-1-3-4-2-3...; i.e. a mess.
+- (1) Miscellaneous improvements.
+- (2) Addition of new special functions.
+- (3) The hyperexpand() function.
+- (4) The meijerint family of functions.
 
 GSoC Review
 ************
+
+GSoC started well before the end of my academic term. For this reason, I of course began coding even before the official GSoC start ;). In all seriousness, in cambridge you actually get about six weeks of preparation time for exams *with no lectures at all*! So while it was clear that I could not be working full time during term time, indeed not at all during examination period, it was also clear to me that I would have significant amounts of free time during the preparation period to work on SymPy. (I'm the first the admit that tripos exams are extremely challenging, but how exactly are you supposed to prepare full time for six weeks?)
+
+I began by adding bessel functions (2) and then I started the hyperexpand() function (3). Then I had exams. I also submitted my first pull request (creatively named "gsoc"). After that I started meijerint (4). This was of course the bulk of my project, so I spent a long time on it. I did lots of minor and not-so-minor improvements across many parts of sympy (1), and I also kept improving hyperexpand (3) until I felt my code produced halfway-satisfactory results. I submitted a pull request ("gsoc-2") and started further polishing. I added lerch transcendent (2, 3), improved the meijerint heuristics and performance (4) and added exponential integrals (2). As I suppose happens to everyone, I kept doing minor improvements "all over the place" (1).
+
+With this rough outline of my actual working in place, in the next subsections I will describe each of the four categories mentioned in the introduction separately. This seems more advantageous than fleshing out the actual order of implementation sketched above, which as can be easily seen was a mess :-).
 
 Outlook
 *******
