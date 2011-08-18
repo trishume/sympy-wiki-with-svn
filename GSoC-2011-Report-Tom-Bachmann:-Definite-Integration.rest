@@ -27,7 +27,34 @@ GSoC started well before the end of my academic term. For this reason, I of cour
 
 I began by adding bessel functions (2) and then I started the hyperexpand() function (3). Then I had exams. I also submitted my first pull request (creatively named "gsoc"). After that I started meijerint (4). This was of course the bulk of my project, so I spent a long time on it. I did lots of minor and not-so-minor improvements across many parts of sympy (1), and I also kept improving hyperexpand (3) until I felt my code produced halfway-satisfactory results. I submitted a pull request ("gsoc-2") and started further polishing. I added lerch transcendent (2, 3), improved the meijerint heuristics and performance (4) and added exponential integrals (2). As I suppose happens to everyone, I kept doing minor improvements "all over the place" (1). All code is submitted for inclusion in SymPy master ("gsoc-3").
 
-With this rough outline of my actual working in place, in the next subsections I will describe each of the four categories mentioned in the introduction separately. This seems more advantageous than fleshing out the actual order of implementation sketched above, which as can be easily seen was a mess :-).
+With this rough outline of my actual working in place, in the next subsections I will describe each of the four categories mentioned in the introduction separately. This seems more advantageous than fleshing out the actual order of implementation sketched above, which as can be easily seen was a mess :-). In any case, a collection of much more lively snapshots of the development history is provided by my blog.
+
+Miscellaneous Improvements
+==========================
+It would be a lenghty and unenlightening process to describe many details here. So let me just illustrate one highlight: polar numbers. There are functions defined on (say) the positive real line which, for various purposes, one might wish to extend to the complex numbers. It is clear (principle of isolation of zeros) that under reasonable circumstances there is at most one way to do this, and for many functions, e.g. \(\sin{x}\), such continuations are well known. On the other hand other functions, like \(\sqrt{x}\) have **no** such extension. One can define \(\sqrt{x}\) on a *cut plane* \(\mathbb{C} \setminus \mathbb{R}_{\le 0}\), but it is impossible to (continuously) extend it further. Of course the right thing to do is to define \(\sqrt{x}\) on a double cover of \(\mathbb{C} \setminus \{0\}\), any section over a simply connected subset of the base will then yield such an extension with "branch cuts" as before.
+
+While this is a very neat solution, it is very difficult to use on a computer. This is because there is no practiclar uniform description (I am aware of) of all Riemann surfaces which arise in this way. Polar numbers are a sort of middle ground: they represent elements of the Riemann surface of the logarithm, i.e. the universal cover \(\mathcal{S}\) of \(\mathbb{C} \setminus \{0\}\). In particular the (for this GSoC project) all-important Meijer G-functions are defined as (discontinuous) functions on \(\mathcal{S}\).
+
+In down-to-earth terms, then, polar numbers are complex numbers in polar form, i.e. in the form \(re^{i \theta}\) where \(\theta\) is remembered in full, and not modulo \(2 \pi\). There are variety of functions implemented to deal with these numbers. **exp_polar(x)** is the most direct way to create a polar number, and it's meaning should be self-evident. **polar_lift(z)** can be used to convert an ordinary complex expression into a polar expression by lifting to the standard branch. The function **unbranched_argument(z)** can be used to represent/evaluate the argument of a polar number (note that this argument can of course be any real number). Symbols can be given an assumption "polar" to express that they are polar numbers.
+
+Various identities that hold between positive reals but not in general between complex numbers hold between all positive numbers. Examples of this are \(\log{ab} = \log{a} + \log{b}\) and \((xy)^a = x^a y^a\). All of these things work (or should work) if the correct assumptions are in place.
+
+New Special Functions
+=====================
+In the course of my work I added the Bessel \(J, I, Y, K\) and Hankel \(H^{(1)}, H^{(2)}\) functions, the hypergeometric and Meijer G-functions, the exponential integrals Ei, \(E_n\), the trigonometric integrals Si, Ci, the hyperbolic integrals Shi, Chi, the polylogarithm and the lerch transcendent. All come with extensive docstrings and various basic functionality such as differentiation and rewriting. I also improved numerous other special functions, like the error function and the incomplete gamma functions. In particular many of these functions come with "branching prescriptions", i.e. if the relevant function is branched at the origin and passed a polar argument outside the standard branch, it will be reduced. For example:
+
+    In [1]: Ci(x*exp_polar(2*I*pi))
+
+    Out[1]: Ci(x) + 2⋅ⅈ⋅π
+
+
+The hyperexpand() Function
+==========================
+The hypergeometric and Meijer G-functions are very general in that they can represent the vast majority of commonly occuring special functions. They are also very convenient in that they allow us to describe and understand these special functions in a uniform way. They inconvenient in that they are somewhat "obscure". In particular it is often possible (though far from obvious how) to express hypergeometric or Meijer G-functions in terms of more common named special functions. This is the sole purpose of the function hyperexpand(). It implements an algorithm by Kelly Roach that uses a combination of properties of said functions and lookup tables. The results are impressive and underlie any integral (or sum) computed with my code.
+
+The meijerint Family of Functions
+=================================
+The real reason for my project was of course to compute *integrals*. In particular, by rewriting the integrand using G-functions and then employing integral theorems, many non-elementary definite integrals can be evaluated. It would be too much to go into details here, they can be found in documentation files. Let me just say that this way we can compute some indefinite integrals, some definite integrals over finite intervals, and fairly many integrals over the positive reals or the entire real line (in particular if the integrand is moderately simple). The latter category of course includes all common integral transforms, and also integrals from probability theory. There is special support for fourier, laplace and mellin transforms, and also for their inverses (which in the case of mellin and laplace transforms are computed using different trickery involving G-functions). Let me just give a very small sample to convey the flavour of the results of my work: http://pastebin.com/raw.php?i=C59eKRMk. For many more interesting and complicated examples, refer to my blog posts.
 
 Outlook
 *******
