@@ -2,7 +2,7 @@ This page is a report on my work on SymPy as part of the "Google Summer of Code"
 
 About Me
 ********
-My name is Tom Bachmann, and I study mathematics at the University of Cambridge, England. I will enter part II of the Mathematical Tripos in october 2011, which obviously will be my third year of study ;). My primary interests are arithmetic, analytic and algebraic geometry, which is why I applied to implement a heuristic symbolic definite integration algorithm ;).
+My name is Tom Bachmann, and I study mathematics at the University of Cambridge, England. I will enter part II of the Mathematical Tripos in october 2011, which obviously will be my third year of undergraduate study ;). My primary interests are arithmetic, analytic and algebraic geometry, which is why I applied to implement a heuristic symbolic definite integration algorithm ;).
 
 Introduction
 ************
