@@ -1,3 +1,7 @@
+***************************************************
+GSoC 2011 Report Tom Bachmann: Definite Integration
+***************************************************
+
 This page is a report on my work on SymPy as part of the "Google Summer of Code" program.
 
 About Me
