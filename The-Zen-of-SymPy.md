@@ -4,7 +4,7 @@ We all know about the Zen of Python (if you're not familiar with is, go and type
     The user interface matters.
     Printing matters.
     Pure Python can be fast enough.
-    If it's too slow, improve your algorithm/data structure.
+    If it's too slow, its (probably) your fault.
     Documentation matters.
     Correctness is more important than speed.
     Push it in now and improve upon it later.
