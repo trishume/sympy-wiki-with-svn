@@ -23,7 +23,7 @@ Accepted Students
 
 - SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]], http://sympystats.wordpress.com/
 
-- Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]], http://seanvig.blogspot.com/
+- Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]], [[GSoC 2011 Report Sean Vig]], http://seanvig.blogspot.com/
 
 - Implementing F5, Jeremias Yehdegho, Mateusz Paprocki, [[GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]], https://f1728.wordpress.com/
 
