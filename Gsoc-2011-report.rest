@@ -21,7 +21,7 @@ Accepted Students
 
 - Porting to Python 3, Vladimir Perić, Ronan Lamy, [[GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]], http://vperic.blogspot.com/
 
-- SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]], http://sympystats.wordpress.com/
+- SymPy Stats: Random Variables, Matthew Rocklin, Andy Terrel, [[GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]], http://sympystats.wordpress.com/, [[GSoC-2011-Report-Matthew-Rocklin:-Random-Variables]]
 
 - Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta, Sean Vig, Ondřej Čertík, [[GSoC 2011 Application Sean Vig]], [[GSoC 2011 Report Sean Vig]], http://seanvig.blogspot.com/
 
