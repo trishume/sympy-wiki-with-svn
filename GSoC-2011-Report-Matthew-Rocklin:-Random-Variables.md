@@ -57,6 +57,26 @@ Multivariate Normals are the most restrictive of the three implementations. They
 
 ## Supplementary Work
 
+### Sets
+
+SymPy Sets now contain a FiniteSet class which mimics the Python set and support cartesian products of sets. This, combined with the previous work describing Intervals and Unions makes describing complex sets in Rn very intuitive. 
+
+### Matrix Expressions
+
+Matrices in SymPy are currently only represented explicitly. Matrix Expressions allow for the representation of Expr's containing matrices, their inverses, and transposes. MatrixExpr classes pass basic flattening rules onto the traditional Expr classes but add rules for Matrix Identies and Zeros. Additionally, for the Multivariate Normal RVs block matrices were formed. 
+
+## Status of Current Work
+
+Matrix Expressions are in an active pull request. 
+
+The Random Variables branch is waiting for Tom Bachmann's integration code to enter SymPy before a pull is submitted. 
+
+The Multivariate Normal branch depends on the previous two and is also not yet a pull. 
+
+Sets and various smaller bug-fix branches have been merged into SymPy master. 
+
+There are a few miscellaneous errors or errata that are present in issues. 
+
 ## Conclusion and Future Work
 
-Conclusion
+We now have a Random Variable type that integrates smoothly with the rest of SymPy. It is capable of reproducing a number of results in statistics. On the simple side it can computing general means and variances of well known expressions, the sort of which are found in elementary statistics books. As a case study it was used in [this blogpost](http://sympystats.wordpress.com/2011/07/02/a-lesson-in-data-assimilation-using-sympy/) to illustrate univariate data assimilation. Additionally the Multivariate Normals are capable of reproducing the Kalman Filter, a fundamental and well used result, as shown in [this blogpost](http://sympystats.wordpress.com/2011/07/19/multivariate-normal-random-variables/). 
