@@ -56,7 +56,9 @@ I had a hell of a time getting the qtconsole for the new [IPython 0.11](http://i
 
     Note that I had some errors when I did `make check`, but it doesn't seem to be a problem.
 
-8. Now, get pyzmq.  Again, you can go [tarball](http://www.zeromq.org/bindings:python) or [git](https://github.com/zeromq/pyzmq).  `easy_install`/`pip` won't work because you need to specify the zmq path when you build.  
+    You can also use homebrew.  Do `brew install zeromq  --universal`.  I didn't do this, so I can't say if it works, though it should.
+
+8. Now, get pyzmq.  Again, you can go [tarball](http://www.zeromq.org/bindings:python) or [git](https://github.com/zeromq/pyzmq).  `pip` won't work because it builds from source and you need to specify the zmq path when you build (but you can try it).  `easy_install` might work.  They didn't for me, though, which is why I installed it from git.
 
     8a. Note, if you use git, you will first need to install cython (you might as well use [git](https://github.com/cython/cython) for this too).  
 
