@@ -50,3 +50,5 @@ Traffic
 Traffic data for March at github.  Google announced that SymPy was a mentoring organization on March 18, 2011.
 
 .. image:: github_gsoc_2011_traffic.png
+
+During the month of March 2011, SymPy was the number 1 forked Python project on GitHub, according to https://github.com/languages/Python.
