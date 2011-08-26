@@ -1,7 +1,15 @@
 GSoC 2011 Report
 ================
 
-This will become our SymPy GSoC 2011 report. So far only preliminary results are here, so that we can then polish it at the end of the summer.
+This is our SymPy GSoC 2011 report.  This was our first year as an official mentoring organization for the program.  In previous years, students worked for SymPy under the umbrella of other organizations.  See http://www.google-melange.com/ for more information about Google Summer of Code.
+
+We accepted nine students, listed below. All nine students were successful in the program.
+
+The application is a draft of the application for each student that they posted on the wiki.  It may or may not be exactly the same as the final application that was submitted.
+
+The students updated their blogs weekly throughout the summer with their progress, and may continue to write posts beyond the program.
+
+Each student has written a detailed report on his project, which is linked to under the **Report** column in the table below.
 
 Accepted Students
 -----------------
@@ -35,6 +43,6 @@ More Stuff
 Traffic
 ^^^^^^^
 
-Traffic data for March at github:
+Traffic data for March at github.  Google announced that SymPy was a mentoring organization on March 18, 2011.
 
 .. image:: github_gsoc_2011_traffic.png
