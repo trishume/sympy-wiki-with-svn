@@ -5,7 +5,7 @@ This will become our SymPy GSoC 2011 report. So far only preliminary results are
 
 Accepted Students
 -----------------
-If you don't see a table below, it's because I'm currently editing this and can't get the rest tables to work.
+**If you don't see a table below, it's because I'm currently editing this and can't get the rest tables to work. --Aaron**
 
 +-----------------------------------------------+--------------+--------------+--------------------------------------------------------------+-------------------------------+---------------------------------------------------------+
 |                    Proposal                   |   Student    |    Mentor    |                          Application                         |                Blog           |                          Report                         |
