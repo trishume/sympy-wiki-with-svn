@@ -16,5 +16,5 @@
 |          Proposal        |   Student    |    Mentor    |                          Application                         |
 +==========================+==============+==============+==============================================================+
 | Definite Integration     |              |              |                                                              |
-| using Meijer G-functions | Tom Bachmann | Aaron Meurer | [[GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]] |
+| using Meijer G-functions | Tom Bachmann | Aaron Meurer |   GSoC-2011-Application-Tom-Bachmann:-Definite-Integration   |
 +--------------------------+--------------+--------------+--------------------------------------------------------------+
