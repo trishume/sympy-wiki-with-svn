@@ -5,13 +5,13 @@ This will become our SymPy GSoC 2011 report. So far only preliminary results are
 
 Accepted Students
 -----------------
-Note to people editing this file: Due to a `bug in Gollum <https://github.com/github/gollum/issues/42>`_, internal links (to other pages on the wiki) in the table do not work.  For now, just use the full url.
+Note to people editing this file: Due to a `bug in Gollum <https://github.com/github/gollum/issues/42>`_, internal links (to other pages on the wiki using the [[ ]] syntax) in the table do not work.  For now, just use the full url with an rest style link.
 
-+-----------------------------------------------+--------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------+
-|                    Proposal                   |   Student    |    Mentor    |                                         Application                                            |                Blog           |                                       Report                                            |
-+===============================================+==============+==============+================================================================================================+===============================+=========================================================================================+
-| Definite Integration using Meijer G-functions | Tom Bachmann | Aaron Meurer |   https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Tom-Bachmann:-Definite-Integration | http://nessgrh.wordpress.com/ | https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Tom-Bachmann:-Definite-Integration |
-+-----------------------------------------------+--------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------+
++-----------------------------------------------+--------------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|                    Proposal                   |   Student    |    Mentor    |                                         Application                                                            |                Blog           |                                          Report                                                     |
++===============================================+==============+==============+================================================================================================================+===============================+=====================================================================================================+
+| Definite Integration using Meijer G-functions | Tom Bachmann | Aaron Meurer |   `Application <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Tom-Bachmann:-Definite-Integration>`_| http://nessgrh.wordpress.com/ | `Report <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Tom-Bachmann:-Definite-Integration>`_ |
++-----------------------------------------------+--------------+--------------+----------------------------------------------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 - PyDy, Gilbert Gede, Luke Peterson, [[GSoC-2011-Application-Gilbert-Gede:-PyDy]], [[http://gilbertgede.wordpress.com/]]
 
