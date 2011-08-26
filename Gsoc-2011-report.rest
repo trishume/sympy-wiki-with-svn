@@ -5,7 +5,7 @@ This will become our SymPy GSoC 2011 report. So far only preliminary results are
 
 Accepted Students
 -----------------
-Note to people editing this file: Due to a [bug in Gollum](https://github.com/github/gollum/issues/42), internal links (to other pages on the wiki) in the table do not work.  For now, just use the full url.
+Note to people editing this file: Due to a `bug in Gollum <https://github.com/github/gollum/issues/42>`_, internal links (to other pages on the wiki) in the table do not work.  For now, just use the full url.
 
 +-----------------------------------------------+--------------+--------------+------------------------------------------------------------------------------------------------+-------------------------------+-----------------------------------------------------------------------------------------+
 |                    Proposal                   |   Student    |    Mentor    |                                         Application                                            |                Blog           |                                       Report                                            |
