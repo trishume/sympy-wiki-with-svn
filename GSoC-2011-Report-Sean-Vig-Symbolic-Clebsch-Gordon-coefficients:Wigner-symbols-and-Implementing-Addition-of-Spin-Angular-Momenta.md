@@ -6,7 +6,7 @@ My name is Sean Vig. This last spring, I completed my undergrad at the Universit
 
 For my project, my goal was to implement symbolic Clebsch-Gordan coefficients, then use these symbolic objects to implement coupled spin algebra. This would include implementing the code to use uncoupled states and operators with the existing TensorProduct class, creating new classes for coupled spin states and defining the algebra to go back and forth between these and apply operators to states.
 
-My initial application can be seen here: [[GSoC 2011 Application Sean Vig]]. My progress over the course of the summer is documented on my blog [here](http://seanvig.blogspot.com)
+My initial application can be seen here: [[GSoC 2011 Application Sean Vig Symbolic Clebsch Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta]]. My progress over the course of the summer is documented on my blog [here](http://seanvig.blogspot.com)
 
 ## GSoC Project
 
@@ -38,7 +38,7 @@ Acting the operators on the states with qapply was very straightforward. With un
 
 The last part of the project was coupling and uncoupling of states, which is the part of the project that uses the Clebsch-Gordan coefficients. The methods `couple()` and `uncouple()` were created to move back and forth between coupled and uncoupled states. The `coupled()` method takes either a coupled spin state or a normal spin state and the j values of the states that coupled spaces and this method returns a linear combination of TensorProduct's of states. The `uncoupled()` method takes a TensorProduct of states and returns a coupled state corresponding to the coupling of the state. Currently, these methods and states only work for coupling of two spin spaces.
 
-The currently open pull request for the first implementation of coupled spin spaces, addressing both coupling/uncoupling and coupled and uncoupled spin states and operators can be seen [here](https://github.com/sympy/sympy/pull/524).
+The pull request for the first implementation of coupled spin spaces, addressing both coupling/uncoupling and coupled and uncoupled spin states and operators can be seen [here](https://github.com/sympy/sympy/pull/524).
 
 ## Evaluating progress
 
