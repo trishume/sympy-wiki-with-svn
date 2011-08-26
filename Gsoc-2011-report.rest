@@ -47,7 +47,7 @@ More Stuff
 Traffic
 ^^^^^^^
 
-Traffic data for March at github.  Google announced that SymPy was a mentoring organization on March 18, 2011.
+`Traffic <https://github.com/sympy/sympy/graphs/traffic>`_ data for March at github.  Google announced that SymPy was a mentoring organization on March 18, 2011.
 
 .. image:: github_gsoc_2011_traffic.png
 
