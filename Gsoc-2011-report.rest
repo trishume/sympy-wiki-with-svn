@@ -15,7 +15,6 @@ You can find links to reports for previous years for GSoC at http://code.google.
 
 Accepted Students
 -----------------
-Note to people editing this file: Due to a `bug in Gollum <https://github.com/github/gollum/issues/42>`_, internal links (to other pages on the wiki using the double square bracket syntax) in the table do not work.  For now, just use the full url with an rest style link.
 
 .. list-table::
    :header-rows: 1
@@ -29,57 +28,57 @@ Note to people editing this file: Due to a `bug in Gollum <https://github.com/gi
    * - Definite Integration using Meijer G-functions
      - Tom Bachmann
      - Aaron Meurer
-     - `GSoC 2011 Application Tom Bachmann: Definite Integration <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Tom-Bachmann:-Definite-Integration>`_
+     - [[GSoC 2011 Application Tom Bachmann: Definite Integration|GSoC-2011-Application-Tom-Bachmann:-Definite-Integration]]
      - http://nessgrh.wordpress.com/
-     - `GSoC 2011 Report Tom Bachmann: Definite Integration <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Tom-Bachmann:-Definite-Integration>`_
+     - [[GSoC 2011 Report Tom Bachmann: Definite Integration|GSoC-2011-Report-Tom-Bachmann:-Definite-Integration]]
    * - PyDy
      - Gilbert Gede
      - Luke Peterson
-     - `GSoC 2011 Application Gilbert Gede: PyDy <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Gilbert-Gede:-PyDy>`_
+     - [[GSoC 2011 Application Gilbert Gede: PyDy|GSoC-2011-Application-Gilbert-Gede:-PyDy]]
      - http://gilbertgede.wordpress.com/
-     - `GSoC 2011 Report Gilbert Gede: PyDy <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Gilbert-Gede:-PyDy>`_
+     - [[GSoC 2011 Report Gilbert Gede: PyDy|GSoC-2011-Report-Gilbert-Gede:-PyDy]]
    * - Position and Momentum Bases for Quantum Mechanics
      - Tomo Lazovich
      - Brian Granger
-     - `GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM>`_
+     - [[GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM|GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]]
      - http://lazovichsympy.wordpress.com/
-     - `GSoC 2011 Report Tomo Lazovich: Position and Momentum Bases for QM <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM>`_ **(Not finished yet)**
+     - [[GSoC 2011 Report Tomo Lazovich: Position and Momentum Bases for QM|GSoC-2011-Report-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]] **(Not finished yet)**
    * - Combinatorics package for Sympy
      - Saptarshi Mandal
      - Christian Muise
-     - `GSoC 2011 Application Saptarshi Mandal: Combinatorics package for Sympy <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Saptarshi-Mandal:-Combinatorics-package-for-Sympy>`_
+     - [[GSoC 2011 Application Saptarshi Mandal: Combinatorics package for Sympy|GSoC-2011-Application-Saptarshi-Mandal:-Combinatorics-package-for-Sympy]]
      - http://saptman.wordpress.com/
-     - `GSoC 2011 Report Saptarshi Mandal: Combinatorics package for Sympy <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Saptarshi-Mandal:-Combinatorics-package-for-Sympy>`_
+     - [[GSoC 2011 Report Saptarshi Mandal: Combinatorics package for Sympy|GSoC-2011-Report-Saptarshi-Mandal:-Combinatorics-package-for-Sympy]]
    * - Symbolic Linear Algebra
      - Sherjil Ozair
      - Vinzent Steinberg
-     - `GSoC 2011 Application Sherjil Ozair: Symbolic Linear Algebra <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra>`_
+     - [[GSoC 2011 Application Sherjil Ozair: Symbolic Linear Algebra|GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]]
      - http://sherjilozair.wordpress.com/
-     - `GSoC 2011 Report Sherjil Ozair: Symbolic Linear Algebra <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Sherjil-Ozair:-Symbolic-Linear-Algebra>`_ **(Not finished yet)**
+     - [[GSoC 2011 Report Sherjil Ozair: Symbolic Linear Algebra|GSoC-2011-Report-Sherjil-Ozair:-Symbolic-Linear-Algebra]] **(Not finished yet)**
    * - Porting to Python 3
      - Vladimir Peric
      - Ronan Lamy
-     - `GSoC 2011 Application: Vladimir Peric: Porting to Python 3 <https://github.com/sympy/sympy/wiki/GSoC-2011-Application:-Vladimir-Peric:-Porting-to-Python-3>`_
+     - [[GSoC 2011 Application: Vladimir Peric: Porting to Python 3|GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]]
      - http://vperic.blogspot.com/
-     - `GSoC 2011 Report: Vladimir Peric: Porting to Python 3 <https://github.com/sympy/sympy/wiki/GSoC-2011-Report:-Vladimir-Peric:-Porting-to-Python-3>`_ **(Not finished yet)**
+     - [[GSoC 2011 Report: Vladimir Peric: Porting to Python 3|GSoC-2011-Report:-Vladimir-Peric:-Porting-to-Python-3]] **(Not finished yet)**
    * - SymPy Stats: Random Variables
      - Matthew Rocklin
      - Andy Terrel
-     - `GSoC 2011 Application Matthew Rocklin: Random Variables <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Matthew-Rocklin:-Random-Variables>`_
+     - [[GSoC 2011 Application Matthew Rocklin: Random Variables|GSoC-2011-Application-Matthew-Rocklin:-Random-Variables]]
      - http://sympystats.wordpress.com/
-     - `GSoC 2011 Report Matthew Rocklin: Random Variables <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Matthew-Rocklin:-Random-Variables>`_
+     - [[GSoC 2011 Report Matthew Rocklin: Random Variables|GSoC-2011-Report-Matthew-Rocklin:-Random-Variables]]
    * - Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta
      - Sean Vig
      - Ondrej Certík
-     - `GSoC 2011 Application Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta>`_
+     - [[GSoC 2011 Application Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta|GSoC-2011-Application-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta]]
      - http://seanvig.blogspot.com/
-     - `GSoC 2011 Report Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta>`_
+     - [[GSoC 2011 Report Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta|GSoC-2011-Report-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta]]
    * - Implementing F5
      - Jeremias Yehdegho
      - Mateusz Paprocki
-     - `GSoC 2011 Application Jeremias Yehdegho: Implementing F5 <https://github.com/sympy/sympy/wiki/GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5>`_
+     - [[GSoC 2011 Application Jeremias Yehdegho: Implementing F5|GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]]
      - https://f1728.wordpress.com/
-     - `GSoC 2011 Report Jeremias Yehdegho: Implementing F5 <https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Jeremias-Yehdegho:-Implementing-F5>`_ **(Not finished yet)**
+     - [[GSoC 2011 Report Jeremias Yehdegho: Implementing F5|GSoC-2011-Report-Jeremias-Yehdegho:-Implementing-F5]] **(Not finished yet)**
 
 More Stuff
 ----------
