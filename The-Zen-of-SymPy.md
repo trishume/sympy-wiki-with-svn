@@ -8,3 +8,6 @@ We all know about the Zen of Python (if you're not familiar with is, go and type
     Documentation matters.
     Correctness is more important than speed.
     Push it in now and improve upon it later.
+    Coverage by testing matters.
+    Smart tests are better than random tests.
+    But random tests sometimes find what your smartest test missed.
