@@ -1,6 +1,6 @@
 The sympy git server is at http://git.sympy.org/ . The main Sympy repository may be cloned with "git clone git://git.sympy.org/sympy.git".
 
-The first and the most important thing is that you should understand that git is '''different'''. For example it uses staging area (so called index) for iteratively preparing commits. This and other great and unique features of git make it really ''superior'' to hg and other SCMs I've ever seen, so go read its documentation - you would not regret!
+The first and the most important thing is that you should understand that git is '''different'''. For example it uses staging area (so called index) for iteratively preparing commits. This and other great and unique features of git make it the preference of many developers, so go read its documentation - you would not regret!
 
  - git project page  http://git.or.cz/
  - git faq explaining many things http://git.or.cz/gitwiki/GitFaq
