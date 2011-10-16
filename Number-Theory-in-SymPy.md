@@ -25,7 +25,24 @@ False
 >>> factorint(primorial(10) + 1)
 {331: 1, 571: 1, 34231: 1}
 # None of [331, 571, 34231] are among the first 10 primes.
+
+# Next prime after 10
+>>> nextprime(10)
+11
+# 4th prime after 10
+>>> nextprime(10, 4)
+19
+
+# No of primes below N
+>>> primepi(100)
+25
+# Prime Number Theorem
+>>> pp = primepi(10**8)
+>>> a = (10**8) / ln(10**8)
+>>> pp / a
+1.06129923175648
 ```
+
 ## GCD and LCM
 ```python
 >>> gcd(4369, 42823)
@@ -41,3 +58,18 @@ False
 True
 ```
 
+## Partition function
+```python
+>>> npartitions(10)
+42
+```
+
+## Euler's Totient function
+```python
+>>> totient(100)
+40
+>>> F = factorint(100)
+>>> [totient(pow(p, e)) for p, e in F.iteritems()]
+[2, 20]
+# Hence, totient(100) = totient(2**2) * totient(5**2)
+```
