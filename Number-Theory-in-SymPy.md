@@ -86,6 +86,9 @@ True
 >>> [totient(pow(p, e)) for p, e in F.iteritems()]
 [2, 20]
 # Hence, totient(100) = totient(2**2) * totient(5**2)
+>>> n = 1435234
+>>> sum([totient(d) for d in divisors(n)]) == n
+True
 ```
 
 
