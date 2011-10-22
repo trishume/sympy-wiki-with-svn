@@ -69,7 +69,7 @@ Accepted Students
      - [[GSoC 2011 Report Matthew Rocklin: Random Variables|GSoC-2011-Report-Matthew-Rocklin:-Random-Variables]]
    * - Symbolic Clebsch-Gordon coefficients/Wigner symbols and Implementing Addition of Spin Angular Momenta
      - Sean Vig
-     - Ondrej Certík
+     - Ondřej Čertík
      - [[GSoC 2011 Application Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta|GSoC-2011-Application-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta]]
      - http://seanvig.blogspot.com/
      - [[GSoC 2011 Report Sean Vig Symbolic Clebsch-Gordon coefficients:Wigner symbols and Implementing Addition of Spin Angular Momenta|GSoC-2011-Report-Sean-Vig-Symbolic-Clebsch-Gordon-coefficients:Wigner-symbols-and-Implementing-Addition-of-Spin-Angular-Momenta]]
