@@ -17,4 +17,4 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Email**: jo@durchholz.org
 
-**Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer, but he has professional translation experience and will be mentoring translations to German.
+**Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer but has several years of experience as a professional software translator, so he will be mentoring translations from English to German.
