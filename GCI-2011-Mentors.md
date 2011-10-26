@@ -10,3 +10,11 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **IRC Nick**: asmeurer
 
 **Bio**: Aaron Meurer is a bachelors student studying mathematics at New Mexico Tech in Socorro, New Mexico.  He started working with SymPy under [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2011) in 2009, and in 2011, he became the lead developer of SymPy.
+
+# Joachim Durchholz
+
+**GitHub account**: https://github.com/toolforger
+
+**Email**: jo@durchholz.org
+
+**Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer, but he has professional translation experience and will be mentoring translations to German.
