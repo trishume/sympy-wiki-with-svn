@@ -42,7 +42,7 @@ Accepted Students
      - Brian Granger
      - [[GSoC 2011 Application Tomo Lazovich: Position and Momentum Bases for QM|GSoC-2011-Application-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]]
      - http://lazovichsympy.wordpress.com/
-     - [[GSoC 2011 Report Tomo Lazovich: Position and Momentum Bases for QM|GSoC-2011-Report-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]] **(Not finished yet)**
+     - [[GSoC 2011 Report Tomo Lazovich: Position and Momentum Bases for QM|GSoC-2011-Report-Tomo-Lazovich:-Position-and-Momentum-Bases-for-QM]]
    * - Combinatorics package for Sympy
      - Saptarshi Mandal
      - Christian Muise
