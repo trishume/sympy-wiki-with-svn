@@ -20,7 +20,7 @@ Representations of states in the position or momentum basis usually take the for
 
 As mentioned previously, the representation in continuous bases works by inserting dummy states into the expression and then integrating over their coordinates. One desired piece of functionality, then, was to have the user to be able to specify simply the class of the basis they wish to represent in, and then have default dummy states instantiated based on that class. As a result, a default argument infrastructure was introduced for the states in sympy.physics.quantum. This allows for someone to simply instantiate a state or operator (such as XOp()) without any arguments, and have the default arguments for that class be used to instantiate the object. This is very convenient, and aids in the making of dummy states for insertion into the expression. 
 
-### Changes to basis methodology and operator <-> state mapping
+### Changes to basis methodology and addition of operator <-> state mapping
 
 Previously in represent, there was a specified API for building representations of a specific basis into a given state or operator class. The API involved writing a _represent_Operator type method in the class. Particularly, the Operator class for a basis was used to specify which basis to represent in. A more natural choice, particularly for continuous bases, though, is to specify the basis state to represent in, rather than specifying an operator class. Thus, one change made to pre-existing classes was to shift all _represent_Operator methods to _represent_State methods.
 
