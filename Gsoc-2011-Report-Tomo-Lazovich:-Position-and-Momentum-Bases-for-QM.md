@@ -28,9 +28,27 @@ Additionally, when a user is calling the represent function on some expression, 
 
 ### Final represent program flow
 
+The final behavior for the represent function in continuous bases is as follows:
 
-## Evaluating progress
+* Call internal ``_represent_FooBasis`` method on the given ``QExpr``,
+passing an index with the options. The resulting expression will be a
+Wavefunction, DifferentialOperator, or DiracDelta expression.
+* If the original expression in the recursion tree was a Mul, then combine
+all of the resulting expressions multiplicatively.
+* Integrate over any unities (|x_1><x_1|) that resulted in a DiracDelta
+function being produced.
+* Combine any subsequent Wavefunctions in the Mul into a single
+Wavefunction, so that DifferentialOperator can be applied appropriately.
+* Call qapply on the expression, so the DifferentialOperators are applied to
+Wavefunctions.
+* Unwrap any remaining Wavefunction objects to get their contained
+expressions, so that they can be integrated.
+* Integrate over any remaining unities.
+* Collapse the indices of the dummy coordinates to the lowest
+available. This is so that you don't end up with expressions in terms of x_2
+or higher indices if you had many ``QExpr``s in your original expression.
+* Wrap a single Wavefunction object around the resulting expression if it is
+still a function. Otherwise, return the Expr as is.
 
-
-## Conclusion and looking forward
+## Conclusion
 
