@@ -14,7 +14,7 @@ The first and most important portion of my project was introducing modifications
 
 ### DifferentialOperator and Wavefunction
 
-Representations of states in the position or momentum basis usually take the form of some sort of function (for example, a sine in the case of a particle in the box eigenstate). Additionally, operators when represented in these bases can be in the form of derivatives (for example, the representation of the momentum operator in position space). To facilitate the expression of these continuous representations, the DifferentialOperator and Wavefunction classes were created. 
+Representations of states in the position or momentum basis usually take the form of some sort of function (for example, a sine in the case of a particle in the box eigenstate). Additionally, operators when represented in these bases can be in the form of derivatives (for example, the representation of the momentum operator in position space). To facilitate the expression of these continuous representations, the DifferentialOperator and Wavefunction classes were created. The Wavefunction object is designed to hold a symbolic expression which is the eigenfunction representation of a state in a particular basis. The object has much desirable built in functionality, including functions for calculating the normalization. Objects are also callable, so that the functional expression can immediately be evaluated at different values. DifferentialOperator inherits from Operator and gives the ability to specify an arbitrary expression involving derivatives. Any Wavefunction object that this DifferentialOperator is applied to then has its contents substituted into the differential expression, and a new Wavefunction is returned. 
 
 
 ## Evaluating progress
