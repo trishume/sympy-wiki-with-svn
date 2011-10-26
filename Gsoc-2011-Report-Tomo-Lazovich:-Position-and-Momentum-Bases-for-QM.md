@@ -52,3 +52,5 @@ still a function. Otherwise, return the Expr as is.
 
 ## Conclusion
 
+In conclusion, many new features have been added to facilitate representing in continuous bases. While I was unable to implement many different coordinate systems as originally planned, I think alot of good work has gone into a making a robust and general framework that will work with many different systems. Some interesting final results can be found on the blog [here](http://lazovichsympy.wordpress.com/2011/08/13/cool-results-in-represent/). I still have one branch waiting to be merged in that still needs a few more changes, but after these are put in I think a very solid framework will be in place. 
+
