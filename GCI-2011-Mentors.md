@@ -18,3 +18,12 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Email**: jo@durchholz.org
 
 **Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer but has several years of experience as a professional software translator, so he will be mentoring translations from English to German.
+
+# Hector
+![Hector](http://www.gravatar.com/avatar/30b8bfc5301823153751267ddb31755f.png)
+
+**GitHub** : https://github.com/hector1618
+
+**Email** : hector1618@gmail.com
+
+**Bio** : Hector (Prafullkumar P. Tale) is a final year student of 5-year Integrated M.Sc. program in Applied Mathematics at IIT Roorkee, India. He is open source enthusiast and works in scientific computing. He is one of the authors of SymPy since April 2011.
