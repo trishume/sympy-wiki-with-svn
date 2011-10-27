@@ -45,4 +45,4 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Email**: sapta.iitkgp@gmail.com
 
-**Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on Sympy for fun. He was a participated in GSoC 2011 and was responsible for the creation of the combinatorics library. His area of interests are combinatorics (surprise!), optimization and differential equations.
+**Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on Sympy for fun. He was a participant in GSoC 2011 and was responsible for the creation of the combinatorics module. His area of interests are combinatorics (surprise!), optimization and differential equations.
