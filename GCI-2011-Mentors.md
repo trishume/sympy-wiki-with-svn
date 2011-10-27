@@ -11,6 +11,17 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Bio**: Aaron Meurer is a bachelors student studying mathematics at New Mexico Tech in Socorro, New Mexico.  He started working with SymPy under [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2011) in 2009, and in 2011, he became the lead developer of SymPy.
 
+# Mateusz Paprocki
+![Mateusz Paprocki](http://www.gravatar.com/avatar/89164142ec718a76a7e04481062acaea.png)
+
+**GitHub account**: https://github.com/mattpap
+
+**Email**: mattpap@gmail.com
+
+**IRC Nick**: mattpap
+
+**Bio**: Mateusz Paprocki is a software developer and a computer scientist. He obtained masters degree in computer science and engineering in 2010 from Technical University of Wrocław in Poland. Mateusz has been working on SymPy since 2007. His main areas of expertise are polynomials and simplification of expressions. In 2007 he was a Google Summer of Code student working on implementation of recurrence solving and symbolic summation algorithms. He was also a Google Summer of Code mentor in 2009, 2010, 2011, and participated as mentor in Google Highly Open Participation Contest in 2008. Mateusz has been a participant and a speaker of several Python scientific conferences and events (SciPy, EuroSciPy, Py4Science, ...). 
+
 # Joachim Durchholz
 
 **GitHub account**: https://github.com/toolforger
