@@ -38,3 +38,11 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Email** : hector1618@gmail.com
 
 **Bio** : Hector (Prafullkumar P. Tale) is a final year student of 5-year Integrated M.Sc. program in Applied Mathematics at IIT Roorkee, India. He is open source enthusiast and works in scientific computing. He is one of the authors of SymPy since April 2011.
+
+# Saptarshi Mandal
+
+**GitHub account**: https://github.com/saptman
+
+**Email**: sapta.iitkgp@gmail.com
+
+**Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on Sympy for fun. He was a participated in GSoC 2011 and was responsible for the creation of the combinatorics library. His area of interests are combinatorics (surprise!), optimization and differential equations.
