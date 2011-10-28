@@ -45,6 +45,9 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
 | hg status
 | git status
 |-
+| hg manifest
+| git ls-tree -r --name-only --full-tree HEAD
+|-
 | hg parents
 | git log   # you can read all the information you need from there (as long as you already know the answer to the question you're asking)
 |-
