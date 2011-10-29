@@ -22,7 +22,7 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Webpage**: http://ondrejcertik.com/
 
-**Bio**: Ondřej is a PhD student at University of Nevada, Reno. He started SymPy in 2006, and passed the leadership to Aaron in 2011. He is still involved with SymPy, helping with Google Summer of Code and other administrative tasks. His research is in atomic structure calculations and he uses Python and SymPy almost daily.
+**Bio**: Ondřej is a PhD student at University of Nevada, Reno. He started SymPy in 2006, and passed the leadership to Aaron in 2011. He is still involved with SymPy, helping with Google Summer of Code and other administrative tasks. His research is in atomic structure calculations and he uses Python and SymPy almost daily. Besides that, his research is done mainly in (modern) Fortran and C/C++.
 
 
 # Mateusz Paprocki
