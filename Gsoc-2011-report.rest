@@ -78,7 +78,7 @@ Accepted Students
      - Mateusz Paprocki
      - [[GSoC 2011 Application Jeremias Yehdegho: Implementing F5|GSoC-2011-Application-Jeremias-Yehdegho:-Implementing-F5]]
      - https://f1728.wordpress.com/
-     - [[GSoC 2011 Report Jeremias Yehdegho: Implementing F5|GSoC-2011-Report-Jeremias-Yehdegho:-Implementing-F5]] **(Not finished yet)**
+     - [[GSoC 2011 Report Jeremias Yehdegho: Implementing F5|GSoC-2011-Report-Jeremias-Yehdegho:-Implementing-F5]] 
 
 More Stuff
 ----------
