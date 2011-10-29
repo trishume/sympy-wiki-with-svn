@@ -22,14 +22,6 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Bio**: Mateusz Paprocki is a software developer and a computer scientist. He obtained masters degree in computer science and engineering in 2010 from Technical University of Wrocław in Poland. Mateusz has been working on SymPy since 2007. His main areas of expertise are polynomials and simplification of expressions. In 2007 he was a Google Summer of Code student working on implementation of recurrence solving and symbolic summation algorithms. He was also a Google Summer of Code mentor in 2009, 2010, 2011, and participated as mentor in Google Highly Open Participation Contest in 2008. Mateusz has been a participant and a speaker of several Python scientific conferences and events (SciPy, EuroSciPy, Py4Science, ...). 
 
-# Joachim Durchholz
-
-**GitHub account**: https://github.com/toolforger
-
-**Email**: jo@durchholz.org
-
-**Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer but has several years of experience as a professional software translator, so he will be mentoring translations from English to German.
-
 # Hector
 ![Hector](http://www.gravatar.com/avatar/30b8bfc5301823153751267ddb31755f.png)
 
@@ -46,3 +38,11 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Email**: sapta.iitkgp@gmail.com
 
 **Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on Sympy for fun. He was a participant in GSoC 2011 and was responsible for the creation of the combinatorics module. His area of interests are combinatorics (surprise!), optimization and differential equations.
+
+# Joachim Durchholz
+
+**GitHub account**: https://github.com/toolforger
+
+**Email**: jo@durchholz.org
+
+**Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer but has several years of experience as a professional software translator, so he will be mentoring translations from English to German.
