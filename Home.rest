@@ -68,6 +68,7 @@ Google Summer of Code
 Google Code In
 ==============
 * [[GCI-2011-Mentors]] -- Mentors for the Google Code In 2011
+* [[GCI-2011-Organization-Application]] -- Our application to be an organization for Google Code In 2011
 
 Development
 ==========
