@@ -11,6 +11,20 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Bio**: Aaron Meurer is a bachelors student studying mathematics at New Mexico Tech in Socorro, New Mexico.  He started working with SymPy under [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2011) in 2009, and in 2011, he became the lead developer of SymPy.
 
+# Ondřej Čertík
+![Ondřej Čertík](http://www.gravatar.com/avatar/f65ea1dfe7ef7b9f889ed6877fcc69b8.png)
+
+**GitHub account**: https://github.com/certik
+
+**Email**: ondrej.certik@gmail.com
+
+**IRC Nick**: ondrej
+
+**Webpage**: http://ondrejcertik.com/
+
+**Bio**: Ondřej is a PhD student at University of Nevada, Reno. He started SymPy in 2006, and passed the leadership to Aaron in 2011. He is still involved with SymPy, helping with Google Summer of Code and other administrative tasks. His research is in atomic structure calculations and he uses Python and SymPy almost daily.
+
+
 # Mateusz Paprocki
 ![Mateusz Paprocki](http://www.gravatar.com/avatar/89164142ec718a76a7e04481062acaea.png)
 
