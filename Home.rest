@@ -65,6 +65,10 @@ Google Summer of Code
 * [[GSoC-2011-Current-Applications]] -- A list of active proposals. Link your GSoC2011 Project Proposal here.  
 * [[GSoC-2011-Report]] -- Report for the GSoC 2011
 
+Google Code In
+==============
+* [[GCI-2011-Mentors]] -- Mentors for the Google Code In 2011
+
 Development
 ==========
 
