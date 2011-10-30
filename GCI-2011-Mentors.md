@@ -68,3 +68,13 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Email**: krastanov.stefan@gmail.com
 
 **Bio**: Stefan is a MSc physics student at École Normale Supérieure de Lyon. He has some minor contributions to the codebase concerning the physics module and plotting, but he is still new to the project. He will be mentoring mainly the translations to Bulgarian (if any), documentation tasks and maybe translations to French.
+
+# Vladimir Perić
+
+**GitHub account:** https://github.com/vperic
+
+**Email:** vlada.peric AT gmail
+
+**IRC Nick**: vperic
+
+**Bio:** Vladimir is a Bc student of [Open Informatics](http://informatika.fel.cvut.cz/en/for-students/bachelor-program) at the Faculty of Electrical Engineering, Czech Technical University in Prague. He worked on making SymPy Python 3 compatible, as part of GSoC 2011. He is interested in the infrastructure surrounding the project, particularly the testing framework, and in outreach and popularizing SymPy. He will also mentor translations to Serbian.
