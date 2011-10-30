@@ -22,3 +22,7 @@ Here is a detailed page with photos and short bios: https://github.com/sympy/sym
 We have four core developers, and five non-core developers. But we expect that a lot more people in the community will help out (for example we had nine mentors for GSoC). Schedule of core mentors: till December 16 (Ondrej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondrej might skip a few days here and there).  
 
 SymPy doesn’t have any mentor specific areas, so all mentors will have access to Melange to approve a task, and any trustworthy mentor will have push access to SymPy. As such, if some mentor becomes unresponsive, some other mentor will step in. So far, we never had any problem with disappearing mentors in GSoC. We have also participated in GHOP previously, and it seems we were able to handle things just fine.
+
+# Please provide a link to your task ideas page. This is much like the ideas page for Google Summer of Code but must include at least 5 tasks in all of the 8 categories sorted by difficulty level.*
+
+https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
