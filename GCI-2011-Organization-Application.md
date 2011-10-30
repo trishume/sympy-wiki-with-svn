@@ -14,7 +14,10 @@ We have usually been quite efficient in accepting lots of patches from a lot of 
 People in this thread on the mailing list (http://groups.google.com/group/sympy/browse_thread/thread/8d99ab98d7af607a) have committed to helping out. 
 
 Admins: Aaron, Ondrej
+
 Mentors: Mateusz, Hector, Stefan, Joachim, Matthew, Chris, Vladimir
+
+Here is a detailed page with photos and short bios: https://github.com/sympy/sympy/wiki/GCI-2011-Mentors
 
 We have four core developers, and five non-core developers. But we expect that a lot more people in the community will help out (for example we had nine mentors for GSoC). Schedule of core mentors: till December 16 (Ondrej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondrej might skip a few days here and there).  
 
