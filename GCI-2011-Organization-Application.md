@@ -26,3 +26,5 @@ SymPy doesn’t have any mentor specific areas, so all mentors will have access 
 # Please provide a link to your task ideas page. This is much like the ideas page for Google Summer of Code but must include at least 5 tasks in all of the 8 categories sorted by difficulty level.*
 
 https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
+
+# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.*
