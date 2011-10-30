@@ -60,3 +60,11 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Email**: jo@durchholz.org
 
 **Bio**: Jo is a Master of Computer Science, with a few decades of practice in the software industry. He is totally green as a Sympy developer but has several years of experience as a professional software translator, so he will be mentoring translations from English to German.
+
+# Stefan Krastanov
+
+**GitHub account**: https://github.com/krastanov
+
+**Email**: krastanov.stefan@gmail.com
+
+**Bio**: Stefan is a MSc physics student at École Normale Supérieure de Lyon. He has some minor contributions to the codebase concerning the physics module and plotting, but he is still new to the project. He will be mentoring mainly the translations to Bulgarian (if any), documentation tasks and maybe translations to French.
