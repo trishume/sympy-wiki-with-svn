@@ -40,7 +40,7 @@ We have already created over 130 tasks for Code-In (see the link to the Google D
 
 https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
 
-# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.*
+# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
 Our main development list is sympy@googlegroups.com.  You can subscribe at http://groups.google.com/group/sympy.  All of our main communication goes through this list.  If you have any questions, or just want to introduce yourself there, this is the place to go.  We are very friendly and helpful on this list, so don't be afraid to post.
 
