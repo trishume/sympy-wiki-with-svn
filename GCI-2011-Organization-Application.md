@@ -23,9 +23,12 @@ Admins: Aaron, Ondřej
 
 Mentors: Mateusz, Hector, Stefan, Joachim, Matthew, Chris, Vladimir
 
+These are the people who have committed so far, but it is likely that others will help out too.  For example, we had nine Google Summer of Code students, and only two have committed to helping out so far (Matthew and Vladimir).  So we may be able to recruit some more of them.  Also, two or three core developers have not responded yet, but they will no doubt help out here and there with reviewing stuff.
+
+Here is a schedule of some of the core mentors (who have told us when they can help): till December 16 (Ondřej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondřej might skip a few days here and there).  Vladimir can help on US and religious holidays.  
+
 Here is a detailed page with photos and short bios: https://github.com/sympy/sympy/wiki/GCI-2011-Mentors
 
-We have four core developers, and five non-core developers. But we expect that a lot more people in the community will help out (for example we had nine mentors for GSoC). Schedule of core mentors: till December 16 (Ondřej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondřej might skip a few days here and there).
 
 SymPy doesn’t have any mentor specific areas, so all mentors will have access to Melange to approve a task, and any trustworthy mentor will have push access to SymPy. As such, if some mentor becomes unresponsive, some other mentor will step in. So far, we never had any problem with disappearing mentors in GSoC. We have also participated in GHOP previously, and it seems we were able to handle things just fine.
 
