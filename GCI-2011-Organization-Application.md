@@ -41,13 +41,13 @@ https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3Wkh
 
 # What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
-Our main development list is sympy@googlegroups.com.  You can subscribe at http://groups.google.com/group/sympy.  All of our main communication goes through this list.  If you have any questions, or just want to introduce yourself there, this is the place to go.  We are very friendly and helpful on this list, so don't be afraid to post.
+Our main development list is sympy@googlegroups.com.  You can subscribe at http://groups.google.com/group/sympy.  All of our main communication goes through this list.  If you have any questions, or just want to introduce yourself, the list is the place to go.  We are very friendly and helpful on it, so don't be afraid to post. The list is relatively low-traffic, though that is expected to spike during the Code-In period.
 
-We also have an IRC channel at irc://irc.freenode.net/sympy.  You may be able to find help there.  If no one on the IRC channel can help you, try asking on the mailing list.
+We also have an IRC channel at irc://irc.freenode.net/sympy.  You may be able to find help there.  If no one on the IRC channel can help you, try asking on the mailing list. Note that IRC is not exactly like real-time chat, so consider that it might take a couple of hours to get an answer to your question (as the other developers might be busy and just leave their IRC clients on in the background). However, once people actually start talking about an issue, it allows for very rapid communication and is more practical for small questions than the mailing list.
 
 The main people who will be helping out with Google Code-In are at https://github.com/sympy/sympy/wiki/gci-2011-mentors.  Note that it is preferable to contact the mailing list than a specific mentor, as a specific mentor may not be able to help you with your specific problem, or at that given time.
 
-Our issue tracker is at http://code.google.com/p/sympy/issues/list.  All of our Google Code-In tasks are issues in the issue tracker.
+Our issue tracker is at http://code.google.com/p/sympy/issues/list.  All of our Google Code-In tasks are issues in the issue tracker, and are clearly marked with their Code-In category and difficulty. 
 
 All patches to SymPy should be submitted as a pull request to our GitHub organization at https://github.com/sympy/ (except for those where this is not relevant, such as improvements to the wiki).  We have an extensive guide on how to do this at https://github.com/sympy/sympy/wiki/Development-workflow. (Note to Google: we will probably convert this into a more friendly page for the Google Code-In students).
 
