@@ -10,7 +10,7 @@ It is built and tested regularly on all major platforms and all major architectu
 
 # Why has your org chosen to participate in Google Code-in?
 
-We believe that Google Code-in is a great opportunity to get some fresh blood into our project, from students that would not otherwise participate or find SymPy. We think that we can get some good contributions that way and some students might even stick around (that would be the ideal situation). Every outreach that we do with SymPy, be it GSoC, or conferences and other talks or getting mentioned on the Google Open Source blog, usually bring us some new users.
+We believe that Google Code-in is a great opportunity to get some fresh blood into our project, from students who would not otherwise participate or even find SymPy. We think that we can get some good contributions this way and some students might even stick around (that would be the ideal situation). Every outreach that we do with SymPy, be it GSoC, or conferences and other talks or getting mentioned on the Google Open Source blog, usually brings us some new users, and generally brings new developers, even if it's just someone who submits a patch every once in a while.
 
 Another reason is that it allows us to collaborate more with other SymPy mentors and recruit new ones, and so the participation in Google Code-in helps the whole SymPy community.
 We have usually been quite efficient in accepting lots of patches from a lot of people, but every such opportunity is great to streamline our review/merge process even more and force us to think how we can lower the entry barrier for new contributors.
