@@ -29,6 +29,11 @@ We have four core developers, and five non-core developers. But we expect that a
 
 SymPy doesn’t have any mentor specific areas, so all mentors will have access to Melange to approve a task, and any trustworthy mentor will have push access to SymPy. As such, if some mentor becomes unresponsive, some other mentor will step in. So far, we never had any problem with disappearing mentors in GSoC. We have also participated in GHOP previously, and it seems we were able to handle things just fine.
 
+We will require all students to submit patches through GitHub's pull request system (except for those for which this is not relevant, such as the tasks to improve the wiki). We have been using GitHub's pull request system since it's inception last August, and it has greatly increased our productivity with respect to reviewing patches and pushing them in.  Because of the high efficiency of this system, combined with a test running bot that we have been developing to run the unit tests on pull requests, we believe that we can handle the increase in pull requests that Google Code-In would produce.  Also, all of our core developers would put priority on reviewing Google Code-In pull requests.
+
+We have already created over 130 tasks for Code-In (see the link to the Google Docs spreadsheet).  We have used our already existing issue tracker at Google Code (http://code.google.com/p/sympy/issues/list), creating labels for the various Code-In categories and difficulties. For our tasks, we will direct the students to the respective issue in the issue tracker, where there may already be some discussion about how to fix the issue.
+
+
 # Please provide a link to your task ideas page. This is much like the ideas page for Google Summer of Code but must include at least 5 tasks in all of the 8 categories sorted by difficulty level.*
 
 https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
