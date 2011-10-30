@@ -21,7 +21,7 @@ Admins: Aaron, Ondřej
 
 Mentors: Mateusz, Chris, Hector, Stefan, Joachim, Matthew, Vladimir
 
-These are the people who have committed so far, but it is likely that others will help out too.  For example, we had nine Google Summer of Code students, and only two have committed to helping out so far (Matthew and Vladimir). Also, two or three core developers have not responded yet, but they will no doubt help out here and there with reviewing stuff. There was a surge of new contributors during the GSoC application period (as each applicant needed to submit one patch to SymPy) and it was handled fine.
+These are the people who have committed so far, but it is likely that others will help out too.  For example, we had nine Google Summer of Code students, and only two have committed to helping out so far (Matthew and Vladimir). Also, two or three core developers have not responded yet, but they will no doubt help out here and there with reviewing stuff. There was a surge of new contributors during the GSoC application period (as each applicant needed to submit one patch to SymPy) and it was handled fine.  See the "More Stuff/Traffic" section of https://github.com/sympy/sympy/wiki/gsoc-2011-report.  And now we have an even large community because many of our Google Summer of Code students have stuck around.
 
 Here is a schedule of some of the core mentors (who have told us when they can help): till December 16 (Ondřej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondřej might skip a few days here and there).  Vladimir can help on US and Catholic religious holidays. As our mentors are from all around the world, someone will be around for all holidays.
 
