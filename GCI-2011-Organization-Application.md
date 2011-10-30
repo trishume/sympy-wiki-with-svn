@@ -17,19 +17,18 @@ We have usually been quite efficient in accepting lots of patches from a lot of 
 
 # Please tell us about how your organization has prepared for Google Code-in, including what (and how many) mentors and organization administrators have agreed to help, what your schedule and response time will be during the holidays (and otherwise during the contest period) and how you plan to deal with unresponsive mentors.
 
-People in this thread on the mailing list (http://groups.google.com/group/sympy/browse_thread/thread/8d99ab98d7af607a) have committed to helping out.
-
 Admins: Aaron, Ondřej
 
-Mentors: Mateusz, Hector, Stefan, Joachim, Matthew, Chris, Vladimir
+Mentors: Mateusz, Chris, Hector, Stefan, Joachim, Matthew, Vladimir
 
-These are the people who have committed so far, but it is likely that others will help out too.  For example, we had nine Google Summer of Code students, and only two have committed to helping out so far (Matthew and Vladimir).  So we may be able to recruit some more of them.  Also, two or three core developers have not responded yet, but they will no doubt help out here and there with reviewing stuff.
+These are the people who have committed so far, but it is likely that others will help out too.  For example, we had nine Google Summer of Code students, and only two have committed to helping out so far (Matthew and Vladimir). Also, two or three core developers have not responded yet, but they will no doubt help out here and there with reviewing stuff. There was a surge of new contributors during the GSoC application period (as each applicant needed to submit one patch to SymPy) and it was handled fine.
 
-Here is a schedule of some of the core mentors (who have told us when they can help): till December 16 (Ondřej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondřej might skip a few days here and there).  Vladimir can help on US and religious holidays.  
+Here is a schedule of some of the core mentors (who have told us when they can help): till December 16 (Ondřej +Aaron full, Mateusz might skip a few days here and there), after December 16 (Aaron+Mateusz full time, Ondřej might skip a few days here and there).  Vladimir can help on US and Catholic religious holidays. As our mentors are from all around the world, someone will be around for all holidays.
 
 Here is a detailed page with photos and short bios: https://github.com/sympy/sympy/wiki/GCI-2011-Mentors
 
-SymPy doesn’t have any mentor specific areas, so all mentors will have access to Melange to approve a task, and any trustworthy mentor will have push access to SymPy. As such, if some mentor becomes unresponsive, some other mentor will step in. So far, we never had any problem with disappearing mentors in GSoC. We have also participated in GHOP previously, and it seems we were able to handle things just fine.
+
+SymPy doesn’t have any mentor specific areas, so all mentors will have access to Melange to approve a task, and any trustworthy mentor will have push access to SymPy. As such, if some mentor becomes unresponsive, others can step in. So far, we never had any problem with disappearing mentors in GSoC. We have also participated in GHOP previously, without any problems.
 
 We will require all students to submit patches through GitHub's pull request system (except for those for which this is not relevant, such as the tasks to improve the wiki). We have been using GitHub's pull request system since it's inception last August, and it has greatly increased our productivity with respect to reviewing patches and pushing them in.  Because of the high efficiency of this system, combined with a test running bot that we have been developing to run the unit tests on pull requests, we believe that we can handle the increase in pull requests that Google Code-In would produce.  Also, all of our core developers would put priority on reviewing Google Code-In pull requests.
 
