@@ -21,7 +21,8 @@ Since SymPy is a symbolic library, it would be a useful asset to have matrices d
 
 Merging with dense matrices and a common API
 ------------------------------------------
-
+TODO
 
 Looking Back
 ==============================
+TODO
