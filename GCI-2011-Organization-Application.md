@@ -7,7 +7,7 @@ SymPy is a Python library for symbolic mathematics. It aims to become a full-fea
 We believe that Google Code-in is a great opportunity to get some fresh blood into our project, from students that would not otherwise participate or find SymPy. We think that we can get some good contributions that way and some students might even stick around (that would be the ideal situation). Every outreach that we do with SymPy, be it GSoC, or conferences and other talks or getting mentioned on the Google Open Source blog, usually bring us some new users.
 
 Another reason is that it allows us to collaborate more with other SymPy mentors and recruit new ones, and so the participation in Google Code-in helps the whole SymPy community.
-We have usually been quite efficient in accepting lots of patches from a lot of people, but every such opportunity is great to streamline our review/merge process even more and force us to think how we can lower the entry for new contributors.
+We have usually been quite efficient in accepting lots of patches from a lot of people, but every such opportunity is great to streamline our review/merge process even more and force us to think how we can lower the entry barrier for new contributors.
 
 # Please tell us about how your organization has prepared for Google Code-in, including what (and how many) mentors and organization administrators have agreed to help, what your schedule and response time will be during the holidays (and otherwise during the contest period) and how you plan to deal with unresponsive mentors.
 
