@@ -58,9 +58,9 @@ Accepted Students
    * - Porting to Python 3
      - Vladimir Peric
      - Ronan Lamy
-     - [[GSoC 2011 Application: Vladimir Peric: Porting to Python 3|GSoC-2011-Application:-Vladimir-Perić:-Porting-to-Python-3]]
+     - [[GSoC 2011 Application: Vladimir Perić: Porting to Python 3|GSoC-2011-report:-Vladimir-Perić:-Porting-to-Python-3]]
      - http://vperic.blogspot.com/
-     - [[GSoC 2011 Report: Vladimir Peric: Porting to Python 3|GSoC-2011-Report:-Vladimir-Peric:-Porting-to-Python-3]] **(Not finished yet)**
+     - [[GSoC 2011 Report: Vladimir Perić: Porting to Python 3|GSoC-2011-report:-Vladimir-Perić:-Porting-to-Python-3]]
    * - SymPy Stats: Random Variables
      - Matthew Rocklin
      - Andy Terrel
