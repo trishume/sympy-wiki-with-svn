@@ -54,7 +54,7 @@ Accepted Students
      - Vinzent Steinberg
      - [[GSoC 2011 Application Sherjil Ozair: Symbolic Linear Algebra|GSoC-2011-Application-Sherjil-Ozair:-Symbolic-Linear-Algebra]]
      - http://sherjilozair.wordpress.com/
-     - [[GSoC 2011 Report Sherjil Ozair: Symbolic Linear Algebra|GSoC-2011-Report-Sherjil-Ozair:-Symbolic-Linear-Algebra]] **(Not finished yet)**
+     - [[GSoC 2011 Report Sherjil Ozair: Symbolic Linear Algebra|GSoC-2011-Report-Sherjil-Ozair:-Symbolic-Linear-Algebra]]
    * - Porting to Python 3
      - Vladimir Peric
      - Ronan Lamy
