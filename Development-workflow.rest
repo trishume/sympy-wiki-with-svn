@@ -245,6 +245,16 @@ the file to your profile directory::
 
 Read instructions in '~/.git-completion.sh'
 
+Note that if you install git from the package manager in many Linux distros, this file is already installed for you.  You can check if it is installed by seeing if tab completion works on git commands (try, e.g., `git commi<TAB>`, or `git log --st<TAB>`). You can also check if the PS1 commands work by doing something like
+
+    $ PS1='\W$(__git_ps1 "%s")\$'
+
+And your command prompt should change to something like
+
+    sympy master$
+
+Note, it is important to define your PS1 using single quotes ('), not double quotes ("), or else bash will not update the branch name.
+
 Create GitHub account
 ~~~~~~~~~~~~~~~~~~~~~
 
