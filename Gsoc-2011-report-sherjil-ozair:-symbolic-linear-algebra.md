@@ -21,8 +21,9 @@ Since SymPy is a symbolic library, it would be a useful asset to have matrices d
 
 Merging with dense matrices and a common API
 ------------------------------------------
-TODO
+The effort in this part of the project was to make the new sparse classes work seamlessly with the old dense matrix class. This was so that the user does not have to choose the internal representation. That should be done automatically. The idea was to emulate the sympy.polys design, which followed a four level hierarchy, in which the the low-level code was fast procedural code, and the high level was user-friendly object oriented code. This was the hardest part of the project but not because of technical difficulty. This required understanding complex parts of Sympy code and tracking traces all over the SymPy code. Work in this part of the project is not over yet.
 
 Looking Back
 ==============================
-TODO
+It was a roller-coaster ride. I learnt much during GSoC. Time has been well spent during the summer. I researched, read research papers, reflected on matrices, wrote my own algorithms, coded my own and others' algorithms. Some just didn't work. Some depended on specific data structures to work. Some were plain un-understandable. One research paper had a typo in it, that costed me hours of frustration. I learnt coding. I learnt hard work. How to write code for more than 6 hours a day. How to manage your personal life + family life along with a project work of such a prestigious nature. It was fun being busy all the time.
+For future students, I would advise that you should be in contact with your mentors every day. There should be nothing else you should do for the whole summer. A GSoC project requires much concentration and dedication especially if you don't have experience working with an organization on a large codebase.
