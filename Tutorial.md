@@ -105,14 +105,14 @@ Then you can play with them:
 (x + y)**2
 
 >>> ((x+y)**2).expand()
-2*x*y + x**2 + y**2
+ x**2 + 2*x*y + y**2
 ```
 
 And substitute them for other symbols or numbers using `subs(var, substitution)`:
 
 ```py
 >>> ((x+y)**2).subs(x, 1)
-(1 + y)**2
+(y + 1)**2
 
 >>> ((x+y)**2).subs(x, y)
 4*y**2
@@ -162,14 +162,14 @@ cos(x)
 2*cos(2*x)
 
 >>> diff(tan(x), x)
-1 + tan(x)**2
+tan(x)**2 + 1
 ```
 
 You can check, that it is correct by:
 
 ```py
 >>> limit((tan(x+y)-tan(x))/y, y, 0)
-1 + tan(x)**2
+tan(x)**2 + 1
 ```
 
 Higher derivatives can be calculated using the `diff(func, var, n)` method:
@@ -215,10 +215,10 @@ x**6
 >>> integrate(sin(x), x)
 -cos(x)
 >>> integrate(log(x), x)
--x + x*log(x)
+x*log(x) - x
 >>> integrate(2*x + sinh(x), x)     # doctest: +PRETTY
-           2
-cosh(x) + x 
+     2          
+    x  + cosh(x)
 ```
 
 Also special functions are handled easily:
@@ -256,7 +256,7 @@ Also improper integrals are supported as well:
 >>> exp(I*x).expand()
 exp(I*x)
 >>> exp(I*x).expand(complex=True)
-I*exp(-im(x))*sin(re(x)) + cos(re(x))*exp(-im(x))
+I*exp(-im(x))*sin(re(x)) + exp(-im(x))*cos(re(x))
 >>> x = Symbol("x", real=True)
 >>> exp(I*x).expand(complex=True)
 I*sin(x) + cos(x)
@@ -312,8 +312,8 @@ You can also put symbols in it:
 [y, 1]
 
 >>> A**2
-[1 + x*y,     2*x]
-[    2*y, 1 + x*y]
+[x*y + 1,     2*x]
+[    2*y, x*y + 1]
 ```
 
 For more information and examples with matrices, see the [[Linear Algebra tutorial|Linear Algebra Module]].
