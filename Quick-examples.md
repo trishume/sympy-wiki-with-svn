@@ -13,7 +13,7 @@ This page gives quick examples of common symbolic calculations in SymPy. Print i
 Construct the formula \( \frac{3 \pi}{2} + \frac{e^{ix}}{x^2 + y}\) :
 ```py
  >>> Rational(3,2)*pi + exp(I*x) / (x**2 + y)
- 3*pi/2 + exp(I*x)/(y + x**2)
+ 3*pi/2 + exp(I*x)/(x**2 + y)
 ```
 
 ### Evaluate a symbolic expression
@@ -46,7 +46,7 @@ Calculate 50 digits of \( e^{\pi \sqrt{163}}\) :
 Expand \( (x+y)^2 (x+1)\) :
 ```py
  >>> ((x+y)**2 * (x+1)).expand()
- 2*x*y + x**2 + y**2 + x*y**2 + 2*y*x**2 + x**3
+ x**3 + 2*x**2*y + x**2 + x*y**2 + 2*x*y + y**2
 ```
 
 ### Simplify a formula
@@ -87,15 +87,18 @@ or
 Evaluate \( \sum_{n=a}^b 6 n^2 + 2^n\) :
 ```py
  >>> a, b = symbols('a b')
- >>> sum(6*n**2 + 2**n, (n, a, b))
- b - a + 3*a**2 + 3*b**2 - 2*a**3 + 2*b**3 - 2**a + 2**(1 + b)
+ >>> s = Sum(6*n**2 + 2**n, (n, a, b))
+ >>> s
+ Sum(2**n + 6*n**2, (n, a, b))
+ >>> s.doit()
+ -2**a + 2**(b + 1) - 2*a**3 + 3*a**2 - a + 2*b**3 + 3*b**2 + b
 ```
 
 ### Calculate a product
 Evaluate \( \prod_{n=1}^b n (n+1)\) :
 ```py
  >>> product(n*(n+1), (n, 1, b))
- RisingFactorial(2, b)*gamma(1 + b)
+ RisingFactorial(2, b)*b!
 ```
 
 ## Calculus
@@ -117,14 +120,14 @@ Find the Maclaurin series of \( \frac{1}{\cos x}\)  up to the \( O(x^6)\)  term:
 Differentiate \( \frac{\cos(x^2)^2}{1+x}\) :
 ```py
  >>> diff(cos(x**2)**2 / (1+x), x)
- -4*x*cos(x**2)*sin(x**2)/(1 + x) - cos(x**2)**2/(1 + x)**2
+ -4*x*sin(x**2)*cos(x**2)/(x + 1) - cos(x**2)**2/(x + 1)**2
 ```
 
 ### Calculate an integral
 Calculate the indefinite integral \( \int x^2 \cos x \, dx\)
 ```py
  >>> integrate(x**2 * cos(x), x)
- -2*sin(x) + x**2*sin(x) + 2*x*cos(x)
+ x**2*sin(x) + 2*x*cos(x) - 2*sin(x)
 ```
 
 Calculate the definite integral \( \int_0^{\pi/2} x^2 \cos x \, dx\) :
@@ -139,7 +142,7 @@ Solve \( f''(x) + 9 f(x) = 1\,\!\) :
 ```py
  >>> f = Function('f')
  >>> dsolve(Eq(Derivative(f(x),x,x) + 9*f(x), 1), f(x))
- f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
+ f(x) == C1*cos(3*x) + C2*sin(3*x) + 1/9
 ```
 
 You can also use `.diff()`, like here (an example in `isympy`)
@@ -147,7 +150,7 @@ You can also use `.diff()`, like here (an example in `isympy`)
 ```py
  >>> f = Function("f")
  >>> Eq(f(x).diff(x, x) + 9*f(x), 1)
- 9*f(x) + D(f(x), x, x) == 1
+ 9*f(x) + Derivative(f(x), x, x) == 1
  >>> dsolve(_, f(x))
- f(x) == 1/9 + C1*sin(3*x) + C2*cos(3*x)
+ f(x) == C1*cos(3*x) + C2*sin(3*x) + 1/9
 ```
