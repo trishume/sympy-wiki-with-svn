@@ -429,7 +429,7 @@ Let's take an example. Now, at any time this may no longer be a problem but for 
     [1, z, z**2]
 
     >>> V.det()
-    x*y**2 + y*z**2 + z*x**2 - x*z**2 - y*x**2 - z*y**2
+    -x**2*y + x**2*z + x*y**2 - x*z**2 - y**2*z + y*z**2
 
 Clearly, this is not the canonical form we're looking for. We're really trying to find:
 
@@ -438,11 +438,11 @@ Clearly, this is not the canonical form we're looking for. We're really trying t
     >>> for i in range(len(L)): det *= L[i] - L[i-1]
     ...
     >>> det
-    (y - x)*(z - y)*(x - z)
+    (-x + y)*(x - z)*(-y + z)
 
 But notice that if we use the expression expansion function, we can see that they are equal:
 
     >>> det.expand()
-    x*z**2 + y*x**2 + z*y**2 - x*y**2 - y*z**2 - z*x**2
+    x**2*y - x**2*z - x*y**2 + x*z**2 + y**2*z - y*z**2
 
 So what is the message? This is your opportunity to contribute. When you come across an inconsistency, see if you can figure out what kind of bug it is. Then help us out by posting an issues on the  [issues list](http://code.google.com/p/sympy/issues/list "issues list").
