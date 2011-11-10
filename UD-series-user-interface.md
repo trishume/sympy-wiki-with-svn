@@ -321,7 +321,7 @@ through list (only finite sequence)
 through sequences (or like sequences constructor)
  
  
-    >>> s = TaylorSeries(sequence = Sequence((0, oo), [1, 0, -1, 0], periodical=True))
+    >>> s = TaylorSeries(x, sequence = Sequence((0, oo), [1, 0, -1, 0], periodical=True))
     1 - x**2/2 + x**4/24 + ...
 
 from source function
