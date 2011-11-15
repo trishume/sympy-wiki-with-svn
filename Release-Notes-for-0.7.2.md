@@ -14,38 +14,38 @@ The following people contributed at least one patch to this release (names are g
 
 Thanks to everyone who contributed to this release!
 
-hector (**TODO** should we contact Hector and if he wants his real name listed here? Or at least upper-cased.. :) ?)
-Tom Bachmann
-Raoul Bourquin*
-Ondřej Čertík
-Roberto Colistete-Jr*
-Renato Coutinho
-Luis Garcia*
-Gilbert Gede
-Brian Granger
-Gert-Ludwig Ingold*
-Fredrik Johansson
-Stefan Krastanov
-Priit Laes
-Tim Lahey
-Ronan Lamy
-Tomo Lazovich
-Dale Lukas Peterson
-Sam Magura
-Saptarshi Mandal
-Miha Marolt*
-Aaron Meurer
-Jason Moore
-Mateusz Paprocki
-Vladimir Perić
-Mario Pernici
-Nicolas Pourcelot
-Julien Rioux*
-Matthew Rocklin
-Nikhil Sarda
-Chris Smith
-Alexey U. Gudchenko
-Srinivas Vasudevan
-Sean Vig
-Luca Weihs
-Jeremias Yehdegho
+* hector (**TODO** should we contact Hector and if he wants his real name listed here? Or at least upper-cased.. :) ?)
+* Tom Bachmann
+* Raoul Bourquin*
+* Ondřej Čertík
+* Roberto Colistete-Jr*
+* Renato Coutinho
+* Luis Garcia*
+* Gilbert Gede
+* Brian Granger
+* Gert-Ludwig Ingold*
+* Fredrik Johansson
+* Stefan Krastanov
+* Priit Laes
+* Tim Lahey
+* Ronan Lamy
+* Tomo Lazovich
+* Dale Lukas Peterson
+* Sam Magura
+* Saptarshi Mandal
+* Miha Marolt*
+* Aaron Meurer
+* Jason Moore
+* Mateusz Paprocki
+* Vladimir Perić
+* Mario Pernici
+* Nicolas Pourcelot
+* Julien Rioux*
+* Matthew Rocklin
+* Nikhil Sarda
+* Chris Smith
+* Alexey U. Gudchenko
+* Srinivas Vasudevan
+* Sean Vig
+* Luca Weihs
+* Jeremias Yehdegho
