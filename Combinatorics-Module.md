@@ -20,7 +20,7 @@ and elements are 0 indexed. This restriction can be very easily handled and the 
 by using a dict instead of a list as a container for the permutation.
 
 There are three rankings supported: lexicographical, Trotter-Johnson and Myrvold-Ruskey;
-the latter is non standard and is in linear time.
+the latter, called here `nonlex`, is in linear time.
 For a full API listing and an explanation of the methods and their return values please view the documentation that comes with SymPy or visit the API listing available in the [git repository](https://github.com/sympy/sympy).
 
 ## Example Usage
@@ -32,9 +32,9 @@ The following Python session gives one an idea of how to work with the permutati
     23
     >>> x.inversions()
     0
-    >>> x = Permutation([[0,1],[2,3]])
+    >>> x = Permutation([ [0,1],[2,3] ])
     >>> x.cyclic_form
-    [[0, 1], [2, 3]]
+    [ [0, 1], [2, 3] ]
     >>> x.array_form
     [1, 0, 3, 2]
     >>> x*(~x) == Permutation([0,1,2,3])
