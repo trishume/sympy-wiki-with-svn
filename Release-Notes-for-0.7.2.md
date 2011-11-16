@@ -4,6 +4,8 @@ These are the release notes for SymPy 0.7.2. SymPy 0.7.0 was released on Decembe
 ## Backwards compatibility breaks
 
 ## Major Changes
+### Combinatorics
+A new module called Combinatorics was added which is the result of a successful GSoC project. It attempts to replicate the functionality of Combinatorica and currently has full featured support for Permutations, Subsets, Gray codes and Prufer Codes.
 
 ## Other Changes
 
