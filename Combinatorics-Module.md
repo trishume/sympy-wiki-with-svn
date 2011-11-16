@@ -34,7 +34,7 @@ The following Python session gives one an idea of how to work with the permutati
     0
     >>> x = Permutation([ [0,1],[2,3] ])
     >>> x.cyclic_form
-    [ [0, 1], [2, 3] ]
+    [[0, 1], [2, 3]]
     >>> x.array_form
     [1, 0, 3, 2]
     >>> x*(~x) == Permutation([0,1,2,3])
