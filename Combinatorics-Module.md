@@ -26,6 +26,7 @@ For a full API listing and an explanation of the methods and their return values
 ## Example Usage
 The following Python session gives one an idea of how to work with the permutation module.
 
+```python
     >>> from sympy.combinatorics.permutations import Permutation
     >>> x = Permutation([0,1,2,3])
     >>> x.rank_nonlex()
@@ -44,8 +45,8 @@ The following Python session gives one an idea of how to work with the permutati
     10
     >>> x**10 == Permutation(range(10))
     True
-    
-    
+```
+
 Other additional features such as displaying Rothe diagrams will depend on presence of other container
 structures, such as the tableform by Ondrej.
 
