@@ -4,6 +4,12 @@ These are the release notes for SymPy 0.7.2. SymPy 0.7.0 was released on Decembe
 ## Backwards compatibility breaks
 
 ## Major Changes
+### Python 3 support
+SymPy now supports Python 3. The officially supported version is 3.2, but 3.1 should also work in a pinch. The Python 3-compatible tarballs will be provided separately, but it's also possible to download Python 2 code and convert it manually, via the bin/use2to3 utility. See the README for more information.
+
+### PyPy support
+SymPy also supports the latest version of PyPy (1.6). However, NumPy is disabled completely when running with PyPy, as it only has partial support for it. 
+
 ### Combinatorics
 A new module called Combinatorics was added which is the result of a successful GSoC project. It attempts to replicate the functionality of Combinatorica and currently has full featured support for Permutations, Subsets, Gray codes and Prufer Codes.
 
