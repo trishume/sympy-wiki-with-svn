@@ -47,6 +47,7 @@ Finally let's use lambda to create a 1-line matrix with 1's in the even permutat
 
 There are also a couple of special constructors for quick matrix construction - `eye` is the identity matrix, `zeros` matrix functions, `ones`, and `diag`:
 
+```python
     >>> eye(4)
     [1, 0, 0, 0]
     [0, 1, 0, 0]
@@ -57,7 +58,11 @@ There are also a couple of special constructors for quick matrix construction - 
     [0, 0]
     [0, 0]
 
-    >>> zeros([2,5])
+    >>> zeros([2,5])        #doctest: +RELEASE_ONLY
+    [0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0]
+
+    >>> zeros(2,5)          #doctest: +FUTURE_ONLY
     [0, 0, 0, 0, 0]
     [0, 0, 0, 0, 0]
 
@@ -70,7 +75,7 @@ There are also a couple of special constructors for quick matrix construction - 
     [0, 4, 4, 0]
     [0, 4, 4, 0]
     [0, 0, 0, 3]
-
+```
 
 # Basic Manipulation
 
@@ -290,7 +295,7 @@ We can perform a QR factorization which is handy for solving systems:
 
     >>> A = Matrix([ [1,1,1],[1,1,3],[2,3,4] ])
     >>> Q, R = A.QRdecomposition()
-    >>> Q
+    >>> Q               #doctest: +RELEASE_ONLY
     [6**(1/2)/6, -3**(1/2)/3, -2**(1/2)/2]
     [6**(1/2)/6, -3**(1/2)/3,  2**(1/2)/2]
     [6**(1/2)/3,  3**(1/2)/3,           0]
@@ -332,7 +337,7 @@ Let's take a look at the vectors:
     [ 1692/353]
     [-1551/706]
     [ -423/706]
-    >>> for i in out2:
+    >>> for i in out2:      #doctest: +RELEASE_ONLY
     ...      print i
     ...
     [  38**(1/2)/19]
@@ -372,7 +377,7 @@ Ignoring that fact that there is an eigenvalue function, let's consider the task
     >>> x = Symbol('x')
     >>> M = Matrix(( (5,0,2), (3,2,0), (0,0,1) ))
     >>> f = M.charpoly(x)
-    >>> f
+    >>> f           #doctest: +RELEASE_ONLY
     Poly(x**3 - 8*x**2 + 17*x - 10, x, domain='ZZ')
 
 Now we can use the handy solver from the polynomial module to get our roots:
@@ -406,7 +411,7 @@ where the k's are the eigenvalues. Luckily we have a handy nullspace function an
 The last print we used the transpose operation for readability. So we're almost there, now we just call the GramSchmidt procedure to orthogonalize:
 
     >>> normal = GramSchmidt(vlist, True)
-    >>> for i in normal:
+    >>> for i in normal:        #doctest: +RELEASE_ONLY
     ...     print i.T
     ...
     [-14**(1/2)/14, 3*14**(1/2)/14, 14**(1/2)/7]
