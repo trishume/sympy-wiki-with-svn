@@ -16,7 +16,7 @@ The following people contributed at least one patch to this release (names are g
 
 Thanks to everyone who contributed to this release!
 
-* Prafullkumar P. Tale (Hector)
+
 * Tom Bachmann
 * Raoul Bourquin*
 * Ondřej Čertík
@@ -46,6 +46,7 @@ Thanks to everyone who contributed to this release!
 * Matthew Rocklin
 * Nikhil Sarda
 * Chris Smith
+* Prafullkumar P. Tale (Hector)
 * Alexey U. Gudchenko
 * Srinivas Vasudevan
 * Sean Vig
