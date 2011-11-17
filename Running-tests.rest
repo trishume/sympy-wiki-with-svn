@@ -1,3 +1,5 @@
+.. wikitest skip
+
 =============
 Running tests
 =============
