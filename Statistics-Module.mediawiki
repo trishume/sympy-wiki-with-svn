@@ -9,6 +9,7 @@ from sympy.statistics import *
 <tt>Normal(mu, sigma)</tt> creates a normal distribution with mean value <tt>mu</tt> and standard deviation <tt>sigma</tt>. The <tt>Normal</tt> class defines several useful methods and properties. Various properties can be accessed directly as follows:
 
 <source lang="python">
+>>> from sympy.statistics import *
 >>> N = Normal(0, 1)
 >>> N.mean
 0
@@ -18,37 +19,41 @@ from sympy.statistics import *
 1
 >>> N.stddev
 1
+
 </source>
 
 You can generate random numbers from the desired distribution with the <tt>random</tt> method:
 
 <source lang="python">
 >>> N = Normal(10, 5)
->>> N.random()
+>>> N.random()                  #doctest: +SKIP
 4.914375200829805834246144514
->>> N.random()
+>>> N.random()                  #doctest: +SKIP
 11.84331557474637897087177407
->>> N.random()
+>>> N.random()                  #doctest: +SKIP
 17.22474580071733640806996846
->>> N.random()
+>>> N.random()                  #doctest: +SKIP
 9.864643097429464546621602494
 </source>
 
 The probability density function (pdf) and cumulative distribution function (cdf) of a distribution can be computed, either in symbolic form or for particular values:
 
 <source lang="python">
+>>> from sympy import Symbol, oo
+>>> from sympy.statistics import *
 >>> N = Normal(1, 1)
 >>> x = Symbol('x')
 >>> N.pdf(1)
-(1/2)**(1/2)*pi**(-1/2)
->>> N.pdf(3).evalf()
+2**(1/2)/(2*pi**(1/2))
+>>> N.pdf(3).evalf()    #doctest: +SKIP
 0.05399096651318805195056420043
 >>> N.cdf(x)
-1/2 - 1/2*erf((1/2)**(1/2)*(1 - x))
+erf(2**(1/2)*(x - 1)/2)/2 + 1/2
 >>> N.cdf(-oo), N.cdf(1), N.cdf(oo)
 (0, 1/2, 1)
 >>> N.cdf(5).evalf()
 0.999968328758167
+
 </source>
 
 The method <tt>probability</tt> gives the total probability on a given interval (a convenient alternative syntax for cdf(b)-cdf(a)):
@@ -61,6 +66,7 @@ The method <tt>probability</tt> gives the total probability on a given interval 
 (1/2)*erf(2*(1/2)**(1/2))
 >>> _.evalf()
 0.477249868051821
+
 </source>
 
 You can also generate a symmetric confidence interval from a given desired confidence level (given as a fraction 0-1). For the normal distribution, 68%, 95% and 99.7% confidence levels respectively correspond to approximately 1, 2 and 3 standard deviations:
@@ -73,12 +79,14 @@ You can also generate a symmetric confidence interval from a given desired confi
 (-1.95996398454005, 1.95996398454005)
 >>> N.confidence(0.997)
 (-2.96773792534179, 2.96773792534179)
+
 </source>
 
 Plug the interval back in to see that the value is correct:
 <source lang="python">
 >>> N.probability(*N.confidence(0.95)).evalf()
 0.95
+
 </source>
 
 =Other distributions=
