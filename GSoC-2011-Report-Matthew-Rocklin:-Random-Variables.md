@@ -67,7 +67,7 @@ Matrices in SymPy are currently only represented explicitly. Matrix Expressions 
 
 ## Status of Current Work
 
-Matrix Expressions are in an active pull request. 
+Matrix Expressions are in. 
 
 The Random Variables branch is waiting for Tom Bachmann's integration code to enter SymPy before a pull is submitted. 
 
