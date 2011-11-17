@@ -1,3 +1,4 @@
+# Tutorial
 # Introduction
 
 <!-- wikitest release,master -->
@@ -224,8 +225,10 @@ x*log(x) - x
 Also special functions are handled easily:
 
 ```py
->>> integrate(exp(-x**2)*erf(x), x)
+>>> integrate(exp(-x**2)*erf(x), x)     #doctest: +RELEASE_ONLY
 pi**(1/2)*erf(x)**2/4
+>>> integrate(exp(-x**2)*erf(x), x)     #doctest: +FUTURE_ONLY
+sqrt(pi)*erf(x)**2/4
 ```
 
 It is possible to compute definite integral:
