@@ -189,11 +189,11 @@ changes made afterwards. Consider the following:
 ```py
     >>> a = Symbol('a') # create an object with name 'a' for variable a to point to
     >>> b = a + 1; b    # create another object that refers to what 'a' refers to
-    1 + a
+    a + 1
     >>> a = 4; a        # a now points to the literal integer 4, not Symbol('a')
     4
     >>> b               # but b is still pointing at Symbol('a')
-    1 + a
+    a + 1
 ```
 
 Changing quantity `a` does not change `b`; you are not working with a set of simultaneous equations. It might be helpful to remember that the string that gets printed when you print a variable refering to
@@ -227,18 +227,19 @@ This could be the source of the difference that you see when you copy and paste 
     >>> from sympy import solve, sympify
     >>> a,b = symbols('a b')
     
-    >>> solve((2*a-b)*a-3, a)
-    [b/4 - (24 + b**2)**(1/2)/4, b/4 + (24 + b**2)**(1/2)/4]
-    
+    >>> solve((2*a-b)*a-3, a)               #doctest: +RELEASE_ONLY
+    [b/4 - (b**2 + 24)**(1/2)/4, b/4 + (b**2 + 24)**(1/2)/4]
+    >>> solve((2*a-b)*a-3, a)               #doctest: +FUTURE_ONLY
+        [b/4 - sqrt(b**2 + 24)/4, b/4 + sqrt(b**2 + 24)/4]
     >>> root1 = b/4 - (24 + b**2)**(1/2)/4; root1               # the 1/2 went to 0
-    -1/4 + b/4
-    >>> root1 = sympify('b/4 - (24 + b**2)**(1/2)/4'); root1    # sympy preserves the integers
-    b/4 - (24 + b**2)**(1/2)/4
-    
+    b/4 - 1/4
+    >>> root1 = sympify('b/4 - (24 + b**2)**(1/2)/4'); root1  # sympy preserves the integers #doctest: +RELEASE_ONLY
+    b/4 - (b**2 + 24)**(1/2)/4
+
     >>> solve((2*a-b)*a-3,a)
-    [b/4 - (24 + b**2)**(1/2)/4, b/4 + (24 + b**2)**(1/2)/4]
+    [b/4 - (b**2 + 24)**(1/2)/4, b/4 + (b**2 + 24)**(1/2)/4]
     >>> root1=_[0]; root1
-    b/4 - (24 + b**2)**(1/2)/4
+    b/4 - (b**2 + 24)**(1/2)/4
 ```
 
 ## How can I get sympy to not change what I enter?
