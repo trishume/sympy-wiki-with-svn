@@ -16,17 +16,17 @@ But at the same time we must keep in the mind the ideal solution of the assumpti
 To simplify expressions:
 
     # positive, even
-    >>> refine(Abs(x), Assume(x, Q.positive))
+    >>> refine(Abs(x), Assume(x, Q.positive))       #doctest: +FUTURE_ONLY
     x
-    >>> refine(sqrt(x**2), Assume(x, Q.positive)) 
+    >>> refine(sqrt(x**2), Assume(x, Q.positive))   #doctest: +FUTURE_ONLY
     x
-    >>> refine((-1)**(x+y), Assume(x, Q.even))
+    >>> refine((-1)**(x+y), Assume(x, Q.even))      #doctest: +FUTURE_ONLY
     (-1)**y
     # algebraic fields
-    >>> refine(sqrt(x**2), Assume(x, Q.real))
+    >>> refine(sqrt(x**2), Assume(x, Q.real))       #doctest: +FUTURE_ONLY
     Abs(x)
     # mixed
-    >>> refine(exp(pi*I*2*(x+Rational(1,4))), Assume(x, Q.integer))
+    >>> refine(exp(pi*I*2*(x+Rational(1,4))), Assume(x, Q.integer)) #doctest: +FUTURE_ONLY
     I
 
 ### for the core
@@ -39,9 +39,9 @@ Use some logic and facts to implement calculation in convenient mode.
 
 How to manipulate with symbols in mathematical sense.
 
-    >>> 1/0 (ExtendedReal field)
+    >>> 1/0 (ExtendedReal field)        #doctest: +FUTURE_ONLY
     oo
-    >>> 1/0 (ExtendedComplex field)
+    >>> 1/0 (ExtendedComplex field)     #doctest: +FUTURE_ONLY
     zoo
 
 ## Classification of assumptions
