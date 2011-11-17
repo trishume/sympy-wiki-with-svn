@@ -4,21 +4,13 @@ This will be our landing page for students wishing to participated in Google Cod
 
 ## SymPy
 
-_Put a description of SymPy aimed to mid to high school students here._
-
-_The present version is maybe too dumbed-down_
-
-_The tutorial that I've linked here shows a download link for sympy 0.5 That could be confusing_
-
 SymPy is an open source python library for symbolic computing. In the SymPy community we all believe in the merits and greatness of the open source approach but for the moment let us focus on the "symbolic computing" part.
 
-Symbolic computing (a.k.a computer algebra) systems are used in research and engineering for easing or even automating the solution of a variety of mathematical problems. In modern labs you will rarely see a researcher solving mundane equations by hand. They usually give them to a computer algebra system to solve so they can spend their time on more interesting and intricate work.
+Symbolic computing systems, also called computer algebra systems (CASs) are used in research and engineering for solving a variety of mathematical problems symbolically. In modern labs you will rarely see a researcher solving mundane equations by hand. They usually give them to a computer algebra system to solve so they can spend their time on more interesting and intricate work.
 
-But already since the beginning of the digital age computers were used for calculations so you may ask what is so special about a CAS (computer algebra system). It is the fact that the CAS is able to give you a general symbolic solution to your problem and not just a special case numeric evaluation as the ordinary calculator. Such a general solution brings much deeper understanding of the problem.
+What does it mean to solve problems symbolically?  It means that instead of giving a numerical solution, as many systems do, a CAS will derive the solution using symbolic algebra, the same way that you would do it if you were to do it by hand on paper.  So if you tell SymPy to solve the equation <math>x^2 = 2</math> for <math>x</math>, it will give you <math>\sqrt{2}</math> and <math>-\sqrt{2}</math>, *exactly*.
 
-You can see our tutorial http://docs.sympy.org/dev/tutorial.html#introduction for examples of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid, there is much that you can do for the project that does not involve hard math. You can look also at Wolfram Alpha www.wolframalpha.com to see another (proprietary and more feature complete) CAS. Actually Wolfram Alpha is just one service based on the Mathematica CAS but that is not important for out discussion.
-
-Let us now see how Sympy is capable of all that. _Some very simple discussion about the inner working of sympy in one paragraph_
+You can see for examples [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at Wolfram Alpha (www.wolframalpha.com) to see another example of a CAS This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
 
 ## How to get started
 
