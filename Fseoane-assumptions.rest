@@ -1,3 +1,5 @@
+(Depricated ?)
+
 SymPy is a computer algebra system implemented in Python. It has a rudimentary assumption system, which has many weaknesses. This project aims to implement a new assumption system that does not suffer from these limitations.
 
 By assumption system I mean a framework in which we can specify (mathematical) properties about objects, simplify expressions binded to some properties and infer other properties from the original ones. The assumption system is always a central part of a computer algebra, used across many modules. For example, the solver module might use assumptions to restrict solutions to admissible solutions, simplification uses assumptions extensively to reduce the length of an expression without loosing properties, etc.
@@ -8,10 +10,11 @@ Current limitations
 
 The current assumption system in binded to objects:
 
+    >>> from sympy import Symbol
     >>> x = Symbol('x', integer=True)
     >>> x.is_Integer
-    True
-   
+    True            
+
 This approach has many disadvantages:
 
     1. Can't assume relations. It is not possible to specify relations between different
@@ -44,12 +47,15 @@ This project aims to implement a new assumption system, with the following highl
 
     4. Refine method. The refine method will take into account assumptions and return
         a simplified expression.
-        >>> refine(abs(x), Assume(x, 'positive'))
+
+        >>> from sympy import *
+        >>> refine(abs(x), Assume(x, 'positive'))      #doctest: +SKIP
         x
 
     3. Support for arbitrary relations:
-        >>> assump = Assume(Gt(x, y)) # assume x is greater than y
-        >>> refine(abs(x-y), assump)
+        
+        >>> assump = Assume(Gt(x, y)) # assume x is greater than y #doctest: +SKIP
+        >>> refine(abs(x-y), assump)    #doctest: +SKIP
         x-y
        
         this method will have a design pattern similar to the query method
