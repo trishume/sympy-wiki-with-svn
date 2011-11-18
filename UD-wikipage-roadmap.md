@@ -14,14 +14,14 @@ This page describe current situation with wiki pages, and what (and whom) to do 
 
 Not formated at all. And they have a bad view. And ./wikitest, btw,  does not find out any examples into them.
 
-[[Euroscipy2008-examples]]
-[[Finding-roots-of-polynomials]]
-[[Geometric-Algebra-Module]]
-[[ODEnotes]]
-[[Profiler-output]]
-[[Related-software]] - links are incorrect.
-[[Scipy2008-examples]]
-[[Symbolic-integration]]
+- [[Euroscipy2008-examples]]
+- [[Finding-roots-of-polynomials]]
+- [[Geometric-Algebra-Module]]
+- [[ODEnotes]]
+- [[Profiler-output]]
+- [[Related-software]] - links are incorrect.
+- [[Scipy2008-examples]]
+- [[Symbolic-integration]]
 
 #### Pages with incorrect title or filename.
 
@@ -59,7 +59,7 @@ These pages has unknown usage. Or even misleading how the SymPy works now.
 1. [[SymPy-in-the-news]] - add news (2008 the last one)
 1. [[SymPy Papers]] - add papers (This task have [issue](http://code.google.com/p/sympy/issues/detail?id=2800) in the issue tracker.)
 1. [[Technical-References]] - may be to add some references?
-1. [[DocstringsModules referenceTutorial]] - draft
+1. [[Writing-documentation]] - draft
 
 #### With bugs (issues must be)
 
