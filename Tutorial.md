@@ -351,7 +351,7 @@ One can also make use of the `WildFunction` class to perform more specific match
 >>> f = WildFunction('f', nofargs=1)
 >>> (5*cos(x)).match(p*f)
 {p_: 5, f_: cos(x)}
->>> (cos(3*x)).match(f(p*x))
+>>> (cos(3*x)).match(f(p*x))   # XFail #doctest: +FUTURE_ONLY
 {p_: 3, f_: cos}
 >>> g = WildFunction('g', nofargs=2)
 >>> (5*cos(x)).match(p*g)
