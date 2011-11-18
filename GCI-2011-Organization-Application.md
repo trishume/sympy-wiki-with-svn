@@ -1,5 +1,6 @@
 # GCI 2011 Organization Application
-# Organization description
+
+## Organization description
 
 SymPy is a Python library for symbolic mathematics. It aims to become a full-featured computer algebra system (CAS) while keeping the code as simple as possible in order to be comprehensible and easily extensible. SymPy is written entirely in Python and does not require any external libraries, which makes it available everywhere Python can be used. It also has a liberal BSD license allowing other open source projects and commercial companies to make use of SymPy in their own projects.
 
@@ -9,14 +10,14 @@ SymPy has a large, active development team that has increased non-stop since 200
 
 It is built and tested regularly on all major platforms and all major architectures to ensure that it can reach the widest possible audience.
 
-# Why has your org chosen to participate in Google Code-in?
+## Why has your org chosen to participate in Google Code-in?
 
 We believe that Google Code-in is a great opportunity to get some fresh blood into our project, from students who would not otherwise participate or even find SymPy. We think that we can get some good contributions this way and some students might even stick around (that would be the ideal situation). Every outreach that we do with SymPy, be it GSoC, or conferences and other talks or getting mentioned on the Google Open Source blog, usually brings us some new users, and generally brings new developers, even if it's just someone who submits a patch every once in a while.
 
 Another reason is that it allows us to collaborate more with other SymPy mentors and recruit new ones, and so the participation in Google Code-in helps the whole SymPy community.
 We have usually been quite efficient in accepting lots of patches from a lot of people, but every such opportunity is great to streamline our review/merge process even more and force us to think how we can lower the entry barrier for new contributors.
 
-# What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
+## What is the main development mailing list for your organization? This question will be shown to students who would like to get more information about applying to your organization for Google Code-in 2010-11. If your organization uses more than one list, please make sure to include a description of the list so students know which to use.
 
 Our main development list is sympy@googlegroups.com.  You can subscribe at http://groups.google.com/group/sympy.  All of our main communication goes through this list.  If you have any questions, or just want to introduce yourself, the list is the place to go.  We are very friendly and helpful on it, so don't be afraid to post. The list is relatively low-traffic, though that is expected to spike during the Code-In period.
 
@@ -28,7 +29,7 @@ Our issue tracker is at http://code.google.com/p/sympy/issues/list.  All of our 
 
 All patches to SymPy should be submitted as a pull request to our GitHub organization at https://github.com/sympy/ (except for those where this is not relevant, such as improvements to the wiki).  We have an extensive guide on how to do this at https://github.com/sympy/sympy/wiki/Development-workflow. (Note to Google: we will probably convert this into a more friendly page for the Google Code-In students).
 
-# Please tell us about how your organization has prepared for Google Code-in, including what (and how many) mentors and organization administrators have agreed to help, what your schedule and response time will be during the holidays (and otherwise during the contest period) and how you plan to deal with unresponsive mentors.
+## Please tell us about how your organization has prepared for Google Code-in, including what (and how many) mentors and organization administrators have agreed to help, what your schedule and response time will be during the holidays (and otherwise during the contest period) and how you plan to deal with unresponsive mentors.
 
 Admins: Aaron, Ondřej
 
@@ -48,7 +49,7 @@ We will require all students to submit patches through GitHub's pull request sys
 We have already created over 130 tasks for Code-In (see the link to the Google Docs spreadsheet).  We have used our already existing issue tracker at Google Code (http://code.google.com/p/sympy/issues/list), creating labels for the various Code-In categories and difficulties. For our tasks, we will direct the students to the respective issue in the issue tracker, where there may already be some discussion about how to fix the issue.
 
 
-# Please provide a link to your task ideas page. This is much like the ideas page for Google Summer of Code but must include at least 5 tasks in all of the 8 categories sorted by difficulty level.*
+## Please provide a link to your task ideas page. This is much like the ideas page for Google Summer of Code but must include at least 5 tasks in all of the 8 categories sorted by difficulty level.*
 
 https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
 
