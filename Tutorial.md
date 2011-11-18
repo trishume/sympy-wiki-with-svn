@@ -329,8 +329,8 @@ Use the `.match()` method, along with the `Wild` class, to perform pattern match
 ```py
 >>> from sympy import *
 >>> x = Symbol('x')
->>> p = Wild('p')
->>> q = Wild('q')
+>>> p = Wild('p', exclude=[x])
+>>> q = Wild('q', exclude=[x])
 >>> (5*x**2 + 3*x).match(p*x**2 + q*x)
 {p_: 5, q_: 3}
 
