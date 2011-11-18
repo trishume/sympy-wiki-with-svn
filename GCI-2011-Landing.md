@@ -4,7 +4,7 @@ This will be our landing page for students wishing to participated in Google Cod
 
 ## SymPy
 
-![logo]()
+![logo](https://github.com/sympy/sympy.github.com/raw/master/media/logo-200x200.png)
 
 SymPy is an open source python library for symbolic computing. In the SymPy community we all believe in the merits and greatness of the open source approach but for the moment let us focus on the "symbolic computing" part.
 
