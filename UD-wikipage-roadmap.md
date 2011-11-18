@@ -17,6 +17,11 @@ Not formated at all. And they have a bad view. And ./wikitest, btw,  does not fi
 [[Euroscipy2008-examples]]
 [[Finding-roots-of-polynomials]]
 [[Geometric-Algebra-Module]]
+[[ODEnotes]]
+[[Profiler-output]]
+[[Related-software]] - links are incorrect.
+[[Scipy2008-examples]]
+[[Symbolic-integration]]
 
 #### Pages with incorrect title or filename.
 
@@ -36,18 +41,25 @@ Reasons:
 - [About Me Introduction GSoC Review](https://github.com/sympy/sympy/wiki/GSoC-2011-Report-Tom-Bachmann:-Definite-Integration) - incorrect title.
 
 - [Introduction](https://github.com/sympy/sympy/wiki/Matrix-Expressions) - incorrect title.
+- [[Random-Variables]] ??? compare with [[GSoC 2011 Application Matthew Rocklin: Random Variables]] and [[GSoC 2011 Report Matthew Rocklin: Random Variables]]
 
-#### Likely deprecated.
+#### Likely deprecated or draft.
 
 These pages has unknown usage. Or even misleading how the SymPy works now.
 
 1. [Integration](https://github.com/sympy/sympy/wiki/Femtec2009-examples). 
 (Correct title too)
-2. [[Ideas]] ???
-3. [Polynomials-Module](https://github.com/sympy/sympy/wiki/Polynomials-Module)
-4. [[Git-hg-rosetta-stone]] - incorrect sympy repository `git://git.sympy.org/sympy.git`
-5. [[Million-digits-of-pi]] - may be
-
+1. [[Ideas]] ???
+1. [Polynomials-Module](https://github.com/sympy/sympy/wiki/Polynomials-Module)
+1. [[Git-hg-rosetta-stone]] - incorrect sympy repository `git://git.sympy.org/sympy.git`
+1. [[Million-digits-of-pi]] - may be depricated.
+1. [[Ray-transfer-matrix-calculations]] - may be depricated, or under development, or not well formatted.
+1. [[Roadmap]] or [[Plan-for-SymPy-1.0]] - one page is actual?
+1. [[Sage-Symbench]] - may be depricated.
+1. [[SymPy-in-the-news]] - add news (2008 the last one)
+1. [[SymPy Papers]] - add papers (This task have [issue](http://code.google.com/p/sympy/issues/detail?id=2800) in the issue tracker.)
+1. [[Technical-References]] - may be to add some references?
+1. [[DocstringsModules referenceTutorial]] - draft
 
 #### With bugs (issues must be)
 
@@ -63,14 +75,29 @@ Pages that contains tests, which are failed because of SymPy bugs, so it is for 
 
 This pages contains fails for unexplained reasons (may be depricated usage), requiring research.
 
-[[Geometry-Module]]
+- [[Geometry-Module]]
+- [[Number-Theory-in-SymPy]]
 
 #### GSoC and so on.
 
-#### Under Development pages, or proposals.
+#### Under Development theme, or proposals.
 
-[[Assumptions]]
-[[Elastic-Layer-Analysis-(ELA)]]
-[[Infinities-and-Singularities]] Tom Bachmann's proposals about infinities and singularities.
-[[Mathtest]] (test)
-[[MediaWiki test]] (test)
+- [[Assumptions]]
+- [[Elastic-Layer-Analysis-(ELA)]]
+- [[Infinities-and-Singularities]] Tom Bachmann's proposals about infinities and singularities.
+- [[Mathtest]] (test page)
+- [[MediaWiki test]] (test page)
+- [[Rest test]] (test page)
+- [[Sandbox]] 
+- [[SCSP Branches]]
+- [[SCSP-Issues]]
+- [[Some-notes-regarding-Permutation-Groups]]
+- [[Strategy-to-set-up-the-structure-of-the-new-Matrix-module]]
+- [[sympy-series]] -
+- [[table-test]] (test page)
+- [[UD - Function expansions and series]]
+- [[UD - Function expansions and series - definitions]]
+- [[UD - Function expansions and series - current situation and applications]]
+- [[UD - Function expansions and series - user interface]
+- [[UD Under Development]]
+- [[UD Wikipages roadmap]]
