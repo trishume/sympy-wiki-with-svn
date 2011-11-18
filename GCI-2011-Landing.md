@@ -4,7 +4,7 @@ This will be our landing page for students wishing to participated in Google Cod
 
 ## SymPy
 
-![logo](https://github.com/sympy/sympy.github.com/raw/master/media/logo-200x200.png)
+![logo]()
 
 SymPy is an open source python library for symbolic computing. In the SymPy community we all believe in the merits and greatness of the open source approach but for the moment let us focus on the "symbolic computing" part.
 
@@ -17,6 +17,10 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 ## How to get started
 
 _Adapt [[Development Workflow]] to something aimed for GCI students.  Also, include information on how to contact the mailing list/IRC, how to use SymPy, etc._
+
+## Development Guidelines
+
+_Talk about running tests, code style, etc._
 
 ## Mentors
 
