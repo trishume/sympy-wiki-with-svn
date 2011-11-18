@@ -1,4 +1,4 @@
-# Google Code-In 2011
+# GCI 2011 Landing
 
 This will be our landing page for students wishing to participated in Google Code-In 2011 with SymPy.
 
