@@ -1,3 +1,5 @@
+<!-- wikitest skip -->
+
 # UD Wikipages roadmap
 
 ## Introduction
@@ -31,11 +33,10 @@ These pages has unknown usage. Or even misleading how the SymPy works now.
 Pages that contains tests, which are failed because of SymPy bugs, so it is for issues. (And it silly SKIPs them now)
 
 1. Totorial
-    '''
-        >>> (5*x**2 + 3*x).match(p*x**2 + q*x)
+
+    `(5*x**2 + 3*x).match(p*x**2 + q*x)`
     Got:
-        {p_: 3/x, q_: 5*x}
-    '''
+        `{p_: 3/x, q_: 5*x}`
 
 #### With bugs (unexplained reasons, requiring research.)
 
