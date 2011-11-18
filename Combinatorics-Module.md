@@ -1,6 +1,6 @@
 # Combinatorics Module
 
-<!-- wikitest release,master -->
+<!-- wikitest (future_only) -->
 
 ## Introduction
 
@@ -27,7 +27,7 @@ For a full API listing and an explanation of the methods and their return values
 The following Python session gives one an idea of how to work with the permutation module.
 
 ```python
-    >>> from sympy.combinatorics.permutations import Permutation
+    >>> from sympy.combinatorics.permutations import Permutation #doctest: +FUTURE_ONLY
     >>> x = Permutation([0,1,2,3])
     >>> x.rank_nonlex()
     23
