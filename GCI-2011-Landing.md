@@ -28,7 +28,7 @@ Any one of those (python or IPython) supports the help command. Writing help(obj
 
 ### Development Workflow
 
-As many people are working on sympy at the same time we need some way to collaborate. We are using the git system together with the github.com website. Those permit us to keep a track of all changes to the project and review each-others work.
+As many people are working on sympy at the same time we need some way to collaborate. We are using the git system together with the github.com website. Those permit us to keep track of all changes to the project and review each-others work.
 
 The git software is installed on every developers computer and tracks their own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug or even just adding a sentence to a documentation string he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (ie _merge_ the change).
 
