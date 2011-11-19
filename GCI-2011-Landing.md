@@ -12,10 +12,17 @@ Symbolic computing systems, also called computer algebra systems (CASs) are used
 
 What does it mean to solve problems symbolically?  It means that instead of giving a numerical solution, as many systems do, a CAS will derive the solution using symbolic algebra, the same way that you would do it if you were to do it by hand on paper.  So if you tell SymPy to solve the equation *x<sup>2</sup> = 2* for *x*, it will give you *&radic;2* and *-&radic;2*, *exactly*.
 
-You can see for examples [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
+You can see for examples [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS. This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
 
 ## How to get started
 
+### Using SymPy
+
+First install SymPy (you need to install python before that). If you want to just get a feel of it you can use the latest package available for you operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
+
+Now that you have SymPy there are a number of different ways to use it. Some people use SymPy just as a library for building another software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]]. 
+
+### Development Workflow
 
 See [[Development-workflow]] for detailed instructions. And here a brief list of basic steps how to make a patch:
 
