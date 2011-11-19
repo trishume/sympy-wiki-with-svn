@@ -54,7 +54,7 @@ We have already created over 130 tasks for Code-In (see the link to the Google D
 https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc
 
 ## Links:
-- [[GCI-2011-Landing]]
-- [[GCI-2011-Mentors]]
-- [CGI-20011 Task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
-- [[GCI-2011-Organization-Application]]
+- [[GCI-2011 Landing]]
+- [[GCI-2011 Mentors]]
+- [CGI-2011 Task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
+- [[GCI-2011 Organization Application]]
