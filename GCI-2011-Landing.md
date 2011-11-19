@@ -56,12 +56,14 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
         $ git branch your_task_branch_name
         $ git checkout your_task_branch_name
 
-3. Do with the code whatever is needed to fix the task.
+3. Do with the code whatever is needed to complete the task.
 
-4. Be sure that all tests are pass:
+4. Be sure that all tests pass. If you are fixing a bug or implementing a feature you should write new tests to ensure that the problem does not occur again. Test are written in the appropriate `test` folders. To run all tests use:
 
         $ ./bin/test
         $ ./bin/doctest
+
+Be aware that there is also a code style tests that warns you if your code is badly structured (trailing whitespaces, etc).
 
 5. Commit the changes to your branch and push the branch to your fork:
 
