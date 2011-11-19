@@ -20,7 +20,7 @@ _Adapt [[Development Workflow]] to something aimed for GCI students.  Also, incl
 
 ## Development Guidelines
 
-_Talk about running tests, code style, doctests, docstrings, etc._
+_Talk about running tests, code style, doctests, docstrings, etc. Don't forget the importance of adding tests for every fixed bug or new functionality._
 
 ## Mentors
 
