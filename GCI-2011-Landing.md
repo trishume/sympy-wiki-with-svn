@@ -16,6 +16,42 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 ## How to get started
 
+See [[Development-workflow]] for detailed instructions. And here a brief list of basic steps how to make a patch:
+
+1. Setup your environment:
+
+    a) Create your [github](https://github.com/) account, if it was not created earlier, and
+    create your fork of the [SymPy repository](https://github.com/sympy/sympy) (click `Fork` button on this page).
+    Install [git](http://git-scm.com/download).
+    
+    b) Get a clone of [SymPy repository](https://github.com/sympy/sympy) with the shell commands:
+
+        $ git clone git://github.com/sympy/sympy.git
+        $ cd sympy
+
+    c) assign your read-and-write repo to a remote called "github"
+
+        $ git remote add github git@github.com:mynick/sympy.git
+
+2. Choose the task from a [list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc), create git branch for it, and enter to it:
+
+        $ git branch your_task_branch
+        $ git checkout your_task_branch
+
+3. Modify code to solve it.
+
+4. Be sure that all tests are passed
+
+        $ ./bin/test
+        $ ./bin/doctest
+
+5. Commit changes in your branch and push branch to your fork:
+
+        $ git commit
+        $ git push github your_task_branch
+
+6. Create pull request: navigate to https://github.com/**your_nick**/sympy, select your task's branch, and press the *Pull Request* button.
+
 _Adapt [[Development Workflow]] to something aimed for GCI students.  Also, include information on how to contact the mailing list/IRC, how to use SymPy, etc._
 
 ## Development Guidelines
