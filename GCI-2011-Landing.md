@@ -78,3 +78,9 @@ _Talk about running tests, code style, doctests, docstrings, etc. Don't forget t
 ## Mentors
 
 See [[GCI-2011-Mentors]] for a list of the people who will be mentoring for Google Code-In.
+
+## Links:
+- [[GCI-2011 Landing]]
+- [[GCI-2011 Mentors]]
+- [CGI-2011 Task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
+- [[GCI-2011 Organization Application]]
