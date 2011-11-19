@@ -20,11 +20,11 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 First install SymPy (you need to install python before that). If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
 
-Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building another software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]]. Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
+Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building other software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]]. Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
 
 Most of the advanced users use a more powerful interface to the python interactive interpreter called IPython. You do not need to have it to use or contribute to sympy.
 
-Any one of those (python or IPython) supports the help command. Writing help(object_of_interest) will give you the documentation string.
+Any one of those (python or IPython) supports the help command. Typing `help(object_of_interest)` will give you the documentation string.
 
 ### Development Workflow
 
