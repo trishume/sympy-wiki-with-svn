@@ -28,6 +28,8 @@ Any one of those (python or IPython) supports the help command. Typing `help(obj
 
 ### Development Workflow
 
+If your task does not include editing code then you probably don't need the information here. It explains how to set up the system that we use for tracking changes to our code.
+
 As many people are working on sympy at the same time we need some way to collaborate. We are using the git system together with the github.com website. Those permit us to keep track of all changes to the project and review each-others work.
 
 The git software is installed on every developers computer and tracks their own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug or even just adding a sentence to a documentation string he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (ie _merge_ the change).
@@ -51,7 +53,7 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
         $ git remote add github git@github.com:mynick/sympy.git
 
-2. Choose your task from the [task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc), create git branch for it, and enter to it. Creating a branch is the way to isolate your changes from the main stable state of the code(also called _master_).
+2. Create a git branch for your task and make it the current working branch. Creating a branch is the way to isolate your changes from the main stable state of the code (also called _master_).
 
         $ git branch your_task_branch_name
         $ git checkout your_task_branch_name
