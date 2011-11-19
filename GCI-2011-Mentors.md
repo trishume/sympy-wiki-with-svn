@@ -1,34 +1,34 @@
-Here is a list of some of the mentors for Google Code-In.  The preferred communication is through our [mailing list](http://groups.google.com/group/sympy) or IRC channel (#sympy on freenode).  Specific mentors may be busy at various time throughout the program, so the best way is to contact the entire community.  This is also more aligned with the way that open source development works.
+Here is a list of some of the mentors for Google Code-In.  The preferred communication is through our [mailing list]() or IRC channel (#sympy on freenode).  Specific mentors may be busy at various time throughout the program, so the best way is to contact the entire community.  This is also more aligned with the way that open source development works.
 
 # Aaron Meurer
-![Aaron Meurer](http://en.gravatar.com/userimage/7754439/ecebba885eadcbe6f2a6134d92bacead.jpg)
+![Aaron Meurer]()
 
-**GitHub account**: https://github.com/asmeurer
+**GitHub account**: 
 
 **Email**: asmeurer@gmail.com
 
 **IRC Nick**: asmeurer
 
-**Bio**: Aaron Meurer is a bachelors student studying mathematics at New Mexico Tech in Socorro, New Mexico.  He started working with SymPy under [Google Summer of Code](http://www.google-melange.com/gsoc/homepage/google/gsoc2011) in 2009, and in 2011, he became the lead developer of SymPy.
+**Bio**: Aaron Meurer is a bachelors student studying mathematics at New Mexico Tech in Socorro, New Mexico.  He started working with SymPy under [Google Summer of Code]() in 2009, and in 2011, he became the lead developer of SymPy.
 
 # Ondřej Čertík
-![Ondřej Čertík](http://www.gravatar.com/avatar/f65ea1dfe7ef7b9f889ed6877fcc69b8.png)
+![Ondřej Čertík]()
 
-**GitHub account**: https://github.com/certik
+**GitHub account**: 
 
 **Email**: ondrej.certik@gmail.com
 
 **IRC Nick**: ondrej
 
-**Webpage**: http://ondrejcertik.com/
+**Webpage**: 
 
 **Bio**: Ondřej is a PhD student at University of Nevada, Reno. He started SymPy in 2006, and passed the leadership to Aaron in 2011. He is still involved with SymPy, helping with Google Summer of Code and other administrative tasks. His research is in atomic structure calculations and he uses Python and SymPy almost daily. Besides that, his research is done mainly in (modern) Fortran and C/C++.
 
 
 # Mateusz Paprocki
-![Mateusz Paprocki](http://www.gravatar.com/avatar/89164142ec718a76a7e04481062acaea.png)
+![Mateusz Paprocki]()
 
-**GitHub account**: https://github.com/mattpap
+**GitHub account**: 
 
 **Email**: mattpap@gmail.com
 
@@ -37,9 +37,9 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Bio**: Mateusz Paprocki is a software developer and a computer scientist. He obtained masters degree in computer science and engineering in 2010 from Technical University of Wrocław in Poland. Mateusz has been working on SymPy since 2007. His main areas of expertise are polynomials and simplification of expressions. In 2007 he was a Google Summer of Code student working on implementation of recurrence solving and symbolic summation algorithms. He was also a Google Summer of Code mentor in 2009, 2010, 2011, and participated as mentor in Google Highly Open Participation Contest in 2008. Mateusz has been a participant and a speaker of several Python scientific conferences and events (SciPy, EuroSciPy, Py4Science, ...). 
 
 # Hector
-![Hector](http://www.gravatar.com/avatar/30b8bfc5301823153751267ddb31755f.png)
+![Hector]()
 
-**GitHub** : https://github.com/hector1618
+**GitHub** : 
 
 **Email** : hector1618@gmail.com
 
@@ -47,7 +47,7 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 # Saptarshi Mandal
 
-**GitHub account**: https://github.com/saptman
+**GitHub account**: 
 
 **Email**: sapta.iitkgp@gmail.com
 
@@ -55,7 +55,7 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 # Joachim Durchholz
 
-**GitHub account**: https://github.com/toolforger
+**GitHub account**: 
 
 **Email**: jo@durchholz.org
 
@@ -63,7 +63,7 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 # Stefan Krastanov
 
-**GitHub account**: https://github.com/krastanov
+**GitHub account**: 
 
 **Email**: krastanov.stefan@gmail.com
 
@@ -71,25 +71,20 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 # Vladimir Perić
 
-**GitHub account:** https://github.com/vperic
+**GitHub account:** 
 
 **Email:** vlada.peric AT gmail
 
 **IRC Nick**: vperic
 
-**Bio:** Vladimir is a Bc student of [Open Informatics](http://informatika.fel.cvut.cz/en/for-students/bachelor-program) at the Faculty of Electrical Engineering, Czech Technical University in Prague. He worked on making SymPy Python 3 compatible, as part of GSoC 2011. He is interested in the infrastructure surrounding the project, particularly the testing framework, and in outreach and popularizing SymPy. He will also mentor translations to Serbian.
+**Bio:** Vladimir is a Bc student of [Open Informatics]() at the Faculty of Electrical Engineering, Czech Technical University in Prague. He worked on making SymPy Python 3 compatible, as part of GSoC 2011. He is interested in the infrastructure surrounding the project, particularly the testing framework, and in outreach and popularizing SymPy. He will also mentor translations to Serbian.
 
 # Matthew Rocklin
-![Matthew Rocklin](http://www.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957.png)
+![Matthew Rocklin]()
 
-**GitHub account**: https://github.com/mrocklin
+**GitHub account**: 
 
-**Webpage**: http://people.cs.uchicago.edu/~mrocklin/
+**Webpage**: 
 
 **Bio**: Matthew is a PhD student at the University of Chicago. He is interested in scientific computing, particularly simulating systems that contain uncertainty like weather forecasting. In SymPy he is engaged in  the statistics, sets, and linear algebra modules. 
 
-## Links:
-- [[GCI-2011 Landing]]
-- [[GCI-2011 Mentors]]
-- [CGI-2011 Task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
-- [[GCI-2011 Organization Application]]
