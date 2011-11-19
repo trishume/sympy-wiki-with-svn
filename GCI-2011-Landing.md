@@ -56,31 +56,30 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
         $ git branch your_task_branch
         $ git checkout your_task_branch
 
-3. Modify code to solve it.
+3. Do with the code whatever is needed to fix the task.
 
-4. Be sure that all tests are passed
+4. Be sure that all tests are pass:
 
         $ ./bin/test
         $ ./bin/doctest
 
-5. Commit changes in your branch and push branch to your fork:
+5. Commit the changes to your branch and push the branch to your fork:
 
         $ git commit
         $ git push github your_task_branch
 Another way is to use the `git gui` command that gives you a graphical interface.
 
-6. Create pull request: navigate to https://github.com/mynick/sympy, select your task's branch, and press the *Pull Request* button.
+6. Create the pull request: navigate to https://github.com/<YOUR-USERNAME>/sympy, select your task's branch, and press the *Pull Request* button.
 
 
 Everyone is welcome to join and to implement new feature, fix some bug, give
 general advice, etc. Also, we try to discuss everything and to review each
 other's work so that many eyes can see more thus raising the quality.
 
-General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in
-the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
-mailing list. Some discussion also takes place on IRC (our channel is [#sympy at freenode](irc://irc.freenode.net/sympy)).
+### Contact us
 
-_Adapt [[Development Workflow]] to something aimed for GCI students.  Also, include information on how to contact the mailing list/IRC, how to use SymPy, etc._
+General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
+mailing list. Some discussion also takes place on IRC (our channel is [#sympy at freenode](irc://irc.freenode.net/sympy)).
 
 ## Development Guidelines
 
