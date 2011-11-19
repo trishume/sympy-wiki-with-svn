@@ -67,8 +67,11 @@ Google Summer of Code
 
 Google Code In
 ==============
-* [[GCI-2011-Mentors]] -- Mentors for the Google Code In 2011
-* [[GCI-2011-Organization-Application]] -- Our application to be an organization for Google Code In 2011
+* [[GCI 2011 Landing]] -- Landing page for students wishing to participated in Google Code-In 2011 with SymPy
+* [[GCI 2011 Mentors]] -- Mentors for the Google Code In 2011
+* [[GCI 2011 Organization Application]] -- Our application to be an organization for Google Code In 2011
+* `CGI 2011 Task list <https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc>`_ -- Our task list for Google Code In 2011
+
 
 Development
 ==========
