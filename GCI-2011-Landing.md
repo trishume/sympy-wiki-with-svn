@@ -16,6 +16,7 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 ## How to get started
 
+
 See [[Development-workflow]] for detailed instructions. And here a brief list of basic steps how to make a patch:
 
 1. Setup your environment:
@@ -23,7 +24,7 @@ See [[Development-workflow]] for detailed instructions. And here a brief list of
     a) Create your [github](https://github.com/) account, if it was not created earlier, and
     create your fork of the [SymPy repository](https://github.com/sympy/sympy) (click `Fork` button on this page).
     Install [git](http://git-scm.com/download).
-    
+
     b) Get a clone of [SymPy repository](https://github.com/sympy/sympy) with the shell commands:
 
         $ git clone git://github.com/sympy/sympy.git
@@ -50,7 +51,16 @@ See [[Development-workflow]] for detailed instructions. And here a brief list of
         $ git commit
         $ git push github your_task_branch
 
-6. Create pull request: navigate to https://github.com/**your_nick**/sympy, select your task's branch, and press the *Pull Request* button.
+6. Create pull request: navigate to https://github.com/mynick/sympy, select your task's branch, and press the *Pull Request* button.
+
+
+Everyone is welcome to join and to implement new feature, fix some bug, give
+general advice, etc. Also, we try to discuss everything and to review each
+other's work so that many eyes can see more thus raising the quality.
+
+General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in
+the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
+mailing list. Some discussion also takes place on IRC (our channel is [#sympy at freenode](irc://irc.freenode.net/sympy)).
 
 _Adapt [[Development Workflow]] to something aimed for GCI students.  Also, include information on how to contact the mailing list/IRC, how to use SymPy, etc._
 
