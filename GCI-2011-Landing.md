@@ -51,10 +51,10 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
         $ git remote add github git@github.com:mynick/sympy.git
 
-2. Choose the task from a [list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc), create git branch for it, and enter to it. Creating a branch is the way to isolate your changes from the main stable state of the code(also called _master_).
+2. Choose your task from the [task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc), create git branch for it, and enter to it. Creating a branch is the way to isolate your changes from the main stable state of the code(also called _master_).
 
-        $ git branch your_task_branch
-        $ git checkout your_task_branch
+        $ git branch your_task_branch_name
+        $ git checkout your_task_branch_name
 
 3. Do with the code whatever is needed to fix the task.
 
