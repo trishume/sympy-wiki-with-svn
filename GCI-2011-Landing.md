@@ -18,15 +18,21 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 ### Using SymPy
 
-First install SymPy (you need to install python before that). If you want to just get a feel of it you can use the latest package available for you operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
+First install SymPy (you need to install python before that). If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
 
-Now that you have SymPy there are a number of different ways to use it. Some people use SymPy just as a library for building another software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]]. Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
+Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building another software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]]. Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
 
 Most of the advanced users use a more powerful interface to the python interactive interpreter called IPython. You do not need to have it to use or contribute to sympy.
 
 Any one of those (python or IPython) supports the help command. Writing help(object_of_interest) will give you the documentation string.
 
 ### Development Workflow
+
+As many people are working on sympy at the same time we need some way to collaborate. We are using the git system together with the github.com website. Those permit us to keep a track of all changes to the project and review each-others work.
+
+The git software is installed on every developers computer and tracks their own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug or even just adding a sentence to a documentation string he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (ie _merge_ the change).
+
+We use github.com for the central repositories, for keeping a copy of our own repository and for making, discussing and merging the pull requests.
 
 See [[Development-workflow]] for detailed instructions. And here a brief list of basic steps how to make a patch:
 
