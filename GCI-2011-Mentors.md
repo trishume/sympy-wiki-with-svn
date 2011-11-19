@@ -79,6 +79,14 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Bio:** Vladimir is a Bc student of [Open Informatics](http://informatika.fel.cvut.cz/en/for-students/bachelor-program) at the Faculty of Electrical Engineering, Czech Technical University in Prague. He worked on making SymPy Python 3 compatible, as part of GSoC 2011. He is interested in the infrastructure surrounding the project, particularly the testing framework, and in outreach and popularizing SymPy. He will also mentor translations to Serbian.
 
+# Matthew Rocklin
+![Matthew Rocklin](http://www.gravatar.com/avatar/8749ec52cee260c4c1f67f2dec29d957.png)
+
+**GitHub account**: https://github.com/mrocklin
+
+**Webpage**: http://people.cs.uchicago.edu/~mrocklin/
+
+**Bio**: Matthew is a PhD student at the University of Chicago. He is interested in scientific computing, particularly simulating systems that contain uncertainty like weather forecasting. In SymPy he is engaged in  the statistics, sets, and linear algebra modules. 
 
 ## Links:
 - [[GCI-2011 Landing]]
