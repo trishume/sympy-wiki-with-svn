@@ -32,9 +32,9 @@ As many people are working on sympy at the same time we need some way to collabo
 
 The git software is installed on every developers computer and tracks their own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug or even just adding a sentence to a documentation string he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (ie _merge_ the change).
 
-We use github.com for the central repositorie, for keeping a copy of our own repository and for making, discussing and merging the pull requests.
+We use github.com for the central repository, for keeping a copy of our own repository and for making, discussing and merging the pull requests.
 
-See the [[Development-workflow]] page for detailed instructions. And here is a brief list of the basic steps for making a patch:
+Here are the basic steps for making a patch. The list was adapted from [[Development-workflow]].
 
 1. Setup your environment on your computer (only the first time, so you have a copy of our code):
 
