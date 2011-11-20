@@ -94,3 +94,12 @@ Forks
 ^^^^^
 
 During the month of March 2011, SymPy was the number 1 forked Python project on GitHub, according to https://github.com/languages/Python.
+
+
+Links
+=====
+* [[GSoC-2011-Ideas]] -- Ideas for Google Summer of Code projects
+* [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
+* [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
+* [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
+* [[GSoC-2011-Current-Applications]] -- A list of active proposals.
