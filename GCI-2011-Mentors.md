@@ -90,6 +90,6 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 ## Links:
 - [[GCI-2011 Landing]]
-- [[GCI-2011 Mentors]]
-- [CGI-2011 Task list](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
+- [CGI-2011 Task list (spreadsheet)](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
+- [GCI-2011 Task list (wiki)](https://github.com/sympy/sympy/wiki/GCI-2011-Task-list)
 - [[GCI-2011 Organization Application]]
