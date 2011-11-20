@@ -8,12 +8,120 @@ The source if this page is based on the [google-malange](https://docs.google.com
 ## Categories
 
 <ul>
-    <li><a href="##Hard">Hard</a></li>
-    <li><a href="##Medium">Medium</a></li>
-    <li><a href="##Easy">Easy</a></li>
+<li><a href="##Hard">Hard</a>
+<ul>
+<li><a href="##93">Square root denesting</a></li>
+<li><a href="##2319">LaTeX input</a></li>
+<li><a href="##2626">Piecewise should use a different syntax for "otherwise"</a></li>
+<li><a href="##2773">Implement the trigsimp algorithm by fu et al</a></li>
+<li><a href="##2789">minpoly should work with roots of unity in exponential form</a></li>
+<li><a href="##1594">bin/test --random should also shuffle tests inside a file</a></li>
+<li><a href="##2791">Allow to manage slow tests better with our test runner</a></li>
+<li><a href="##2799">coverage testing should be part of the bot test</a></li>
+<li><a href="##2812">Fix failures found by shuffling tests in test file</a></li>
+<li><a href="##1941">Objects that know how to combine themselves</a></li>
+<li><a href="##2765">Research ways to do the assumptions system, including removing the old system</a></li>
+<li><a href="##2792">Investigate how to employ complexity measures in functions like trigsimp(), etc.</a></li>
+<li><a href="##1817">SymPy Cheat Sheet</a></li>
+<li><a href="##2771">Write a document showing the difference between SymPy and other mathematical systems: Maple</a></li>
+<li><a href="##2521">live.sympy.org isn't so easy to use on a mobile device</a></li>
+<li><a href="##2768">Add a feed of what people are doing at SymPy Live</a></li>
+<li><a href="##2772">Some UI/GUI for the test runner</a></li>
+</ul>
+</li>
+<li><a href="##Medium">Medium</a>
+<ul>
+<li><a href="##281">Infinity should not be a subclass of Rational</a></li>
+<li><a href="##363">Add a split() method for sympy expressions</a></li>
+<li><a href="##716">either tangent_line or is_tangent is wrong</a></li>
+<li><a href="##754">Have re and im call expand(complex=True)</a></li>
+<li><a href="##2513">Create a SymPyDeprecationWarning for deprecated SymPy behavior</a></li>
+<li><a href="##2552">(1/(x*y)).subs(x*y, whatever) doesn't work</a></li>
+<li><a href="##2632">Add isympy -c qtconsole</a></li>
+<li><a href="##2793">The dsolve solver for 1st_exact should use integration</a></li>
+<li><a href="##2794">Implement ode solvers from the Moses "Stormy Decade" paper: Almost Linear</a></li>
+<li><a href="##2841">integrate() can not integrate the Abs() function, fix it</a></li>
+<li><a href="##2849">Better heuristics and simplification for integral of cos(x)/sin(x)**n and similar</a></li>
+<li><a href="##294">Pass coverage_doctest.py</a></li>
+<li><a href="##707">move some wikis to github.com/sympy/sympy/wiki</a></li>
+<li><a href="##2470">Fix all sphinx errors and warnings</a></li>
+<li><a href="##2770">Update stuff that SymPy can do on the homepage</a></li>
+<li><a href="##2779">``See Also`` feature in Geometry</a></li>
+<li><a href="##2801">lambdify() is not mentioned anywhere</a></li>
+<li><a href="##2528">Update SymPy's Wikipedia article</a></li>
+<li><a href="##2764">Improve our webpage</a></li>
+<li><a href="##2787">Create sticker for SymPy based on the logo</a></li>
+<li><a href="##2796">Package the latest version of SymPy for the major distributions: Debian / Ubuntu</a></li>
+<li><a href="##1456">use pyflakes to identify simple bugs in sympy and fix them</a></li>
+<li><a href="##1752">setup.py test should run the doctests even when the regular tests fail</a></li>
+<li><a href="##2786">Fill in missing tests for sympy.physics module in test_args.py</a></li>
+<li><a href="##1235">Problem installing in Windows</a></li>
+<li><a href="##2762">Investigate ways to improve substitution, pattern matching, etc.</a></li>
+<li><a href="##2795">Investigate a robust way to have translated documentation</a></li>
+<li><a href="##2798">Research ways to extract statistics from the issue tracker</a></li>
+<li><a href="##2803">Investigate how to make the rewrite framework more flexible</a></li>
+<li><a href="##2790">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
+<li><a href="##2766">Translate tutorial to German</a></li>
+<li><a href="##2767">Improve the interface of SymPy Live</a></li>
+<li><a href="##2857">sqrt(2).is_irrational is None (should be True)</a></li>
+</ul>
+</li>
+<li><a href="##Easy">Easy</a>
+<ul>
+<li><a href="##615">Fix the occasions where functions are called with wrong name and write tests</a></li>
+<li><a href="##654">Remove dead code from _eval_subs()</a></li>
+<li><a href="##1058">Classifying formulas</a></li>
+<li><a href="##2276">integrate() should use the ode module's undetermined coefficients solver when possible</a></li>
+<li><a href="##2427">Check for incorrect usage of expr.atoms() and change it to free_symbols</a></li>
+<li><a href="##2534">Use "with open" instead of "open … close"</a></li>
+<li><a href="##2570">Remove bare except statements</a></li>
+<li><a href="##2639">The Product() class should not evaluate by default</a></li>
+<li><a href="##2683">det() is called when inverting matrix through GE</a></li>
+<li><a href="##2760">latex(symbol_names) not working with ~x</a></li>
+<li><a href="##2776">``See Also`` feature in integrals</a></li>
+<li><a href="##2784">1/function() should be printed differently by latex printer</a></li>
+<li><a href="##2785">Use \functionname instead of \operatorname{functionname} whenever possible</a></li>
+<li><a href="##2815">Parts of the pyglet plotting module does not follow PEP 8, fix it</a></li>
+<li><a href="##2817">Make sure all the built-in __methods__ are defined</a></li>
+<li><a href="##2830">checkodesol() should use force=True</a></li>
+<li><a href="##2838">Move the KroneckerDelta class to another module </a></li>
+<li><a href="##2846">Integral.transform should allow a change to a different variable</a></li>
+<li><a href="##16">Check and compare an old patch concerning object with indices against current sympy</a></li>
+<li><a href="##1886">Documentation for the Expr class</a></li>
+<li><a href="##2115">Move stuff from the Google Code SVN to git</a></li>
+<li><a href="##2160">List of dependencies</a></li>
+<li><a href="##2204">Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1</a></li>
+<li><a href="##2367">SymPy's readthedocs documentation is broken</a></li>
+<li><a href="##2597">Import all public functions and classes into Sphinx: polys</a></li>
+<li><a href="##2599">Update isympy manpage</a></li>
+<li><a href="##2679">Refactor GA* documentation to use doctests (or move it to examples/)</a></li>
+<li><a href="##2774">``See Also`` feature in Number Theory</a></li>
+<li><a href="##2775">``See Also`` feature in Combinotorics </a></li>
+<li><a href="##2777">``See Also`` feature in functions</a></li>
+<li><a href="##2778">``See Also`` feature in functions/special</a></li>
+<li><a href="##2780">``See Also`` feature in Matrices</a></li>
+<li><a href="##2763">Fix the SymPy Logo</a></li>
+<li><a href="##2800">Flesh out the SymPy Papers wiki page</a></li>
+<li><a href="##1616">Bug in subs</a></li>
+<li><a href="##2493">Clean up test_lambdify.py</a></li>
+<li><a href="##2788">Commented out tests should be XFAILed</a></li>
+<li><a href="##2157">sympy development rules</a></li>
+<li><a href="##2769">Make video tutorials for SymPy</a></li>
+<li><a href="##2806">Add more tips to the tips page (10 tips)</a></li>
+<li><a href="##2797">Translate our webpage to German</a></li>
+<li><a href="##2797">Translate our webpage to French</a></li>
+<li><a href="##2797">Translate our webpage to Czech</a></li>
+<li><a href="##2797">Translate our webpage to Polish</a></li>
+<li><a href="##2797">Translate our webpage to Bulgarian</a></li>
+<li><a href="##2797">Translate our webpage to Serbian</a></li>
+<li><a href="##2637">Unicode Sigma for pretty printed Sum</a></li>
+<li><a href="##2636">Pretty print Product</a></li>
+</ul>
+</li>
 </ul>
 
 ## <a name="#Hard">Hard</a>
+<a name="#93"></a>
 ### [93](http://code.google.com/p/sympy/issues/detail?id=93&q=label%3ACodeInImportedIntoSpreadsheet) - Square root denesting
 <pre>
 Just an idea: implement the &quot;square root denesting&quot; ideas of
@@ -27,6 +135,7 @@ I am happy to work on this after the prettyprinter works: that we can see what w
 - *Category:* Code
 - *Time to complete:* 144 hours
 
+<a name="#2319"></a>
 ### [2319](http://code.google.com/p/sympy/issues/detail?id=2319&q=label%3ACodeInImportedIntoSpreadsheet) - LaTeX input
 <pre>
 So my friend pointed out to me that WolphramAlpha lets you enter any LaTeX formula, and it will parse it and evaluate it.  I think we should have a parser that lets us do the same thing. In his case, he takes notes in LaTeX and does all of his homework in it, and he was able to just paste an expression from his homework into WolphramAlpha and it did if for him. 
@@ -35,6 +144,7 @@ So my friend pointed out to me that WolphramAlpha lets you enter any LaTeX formu
 - *Category:* Code
 - *Time to complete:* 144 hours
 
+<a name="#2626"></a>
 ### [2626](http://code.google.com/p/sympy/issues/detail?id=2626&q=label%3ACodeInImportedIntoSpreadsheet) - Piecewise should use a different syntax for "otherwise"
 <pre>
 This is something that's been bothering me for a while.  Piecewise has the following syntax (I quote the docstring):
@@ -101,6 +211,7 @@ This should be done before the next release, so we can start a deprecation cycle
 - *Category:* Code
 - *Time to complete:* 144 hours
 
+<a name="#2773"></a>
 ### [2773](http://code.google.com/p/sympy/issues/detail?id=2773&q=label%3ACodeInImportedIntoSpreadsheet) - Implement the trigsimp algorithm by fu et al
 <pre>
 Implement the algorithm for trigonometric simplification from the paper &quot;Automated and readable simplification of trigonometric expressions&quot; by Fu, et. al. (you should be able to find the paper for free from Google Scholar, otherwise email me and I will send it to you). 
@@ -109,6 +220,7 @@ Implement the algorithm for trigonometric simplification from the paper &quot;Au
 - *Category:* Code
 - *Time to complete:* 144 hours
 
+<a name="#2789"></a>
 ### [2789](http://code.google.com/p/sympy/issues/detail?id=2789&q=label%3ACodeInImportedIntoSpreadsheet) - minpoly should work with roots of unity in exponential form
 <pre>
 In [12]: minpoly(exp(I*pi/8))
@@ -144,6 +256,7 @@ Marking as Code-In difficulty hard because this is a nontrivial algorithm, espec
 - *Category:* Code
 - *Time to complete:* 144 hours
 
+<a name="#1594"></a>
 ### [1594](http://code.google.com/p/sympy/issues/detail?id=1594&q=label%3ACodeInImportedIntoSpreadsheet) - bin/test --random should also shuffle tests inside a file
 Also it is related with issue 1594: once we have the shuffling, we should fix all the failures caused by it. Marking this as a hard task for Code-In, per Aaron's comment on the other issue. 
 
@@ -155,6 +268,7 @@ Currently it only shuffles the test files, not the test functions.
 - *Labels:* Priority-Medium, Testing, Type-Defect
 - *Time to complete:* 144 hours
 
+<a name="#2791"></a>
 ### [2791](http://code.google.com/p/sympy/issues/detail?id=2791&q=label%3ACodeInImportedIntoSpreadsheet) - Allow to manage slow tests better with our test runner
 Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. Also, almost all skipped tests (or maybe all) are currently skipped because they are slow, so after this is implemented, they should all be converted. 
 
@@ -166,6 +280,7 @@ Currently slow tests are simply skipped, but this makes it hard to actually run 
 - *Labels:* Priority-Medium, Testing, Type-Enhancement
 - *Time to complete:* 144 hours
 
+<a name="#2799"></a>
 ### [2799](http://code.google.com/p/sympy/issues/detail?id=2799&q=label%3ACodeInImportedIntoSpreadsheet) - coverage testing should be part of the bot test
 <pre>
 Two things on my wish list for testing;
@@ -183,6 +298,7 @@ Someone who likes parsing html (beautiful soup (*) might help with this) might e
 - *Labels:* Priority-Medium, Testing, Type-Enhancement
 - *Time to complete:* 144 hours
 
+<a name="#2812"></a>
 ### [2812](http://code.google.com/p/sympy/issues/detail?id=2812&q=label%3ACodeInImportedIntoSpreadsheet) - Fix failures found by shuffling tests in test file
 <pre>
 This builds on <a title="bin/test --random should also shuffle tests inside a file"  href="/p/sympy/issues/detail?id=1594">issue 1594</a>: once we have the shuffling, we should fix all the failures caused by it. Marking this as a hard task for Code-In, per Aaron's comment on the other issue. 
@@ -191,6 +307,7 @@ This builds on <a title="bin/test --random should also shuffle tests inside a fi
 - *Category:* QA
 - *Time to complete:* 144 hours
 
+<a name="#1941"></a>
 ### [1941](http://code.google.com/p/sympy/issues/detail?id=1941&q=label%3ACodeInImportedIntoSpreadsheet) - Objects that know how to combine themselves
 <pre>
 This is related to <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a>.  When I met with Ondrej last summer, we worked on a core where 
@@ -210,6 +327,7 @@ into doing this too.
 - *Category:* Research
 - *Time to complete:* 144 hours
 
+<a name="#2765"></a>
 ### [2765](http://code.google.com/p/sympy/issues/detail?id=2765&q=label%3ACodeInImportedIntoSpreadsheet) - Research ways to do the assumptions system, including removing the old system
 <pre>
 See <a href="https://github.com/sympy/sympy/wiki/Assumptions" rel="nofollow">https://github.com/sympy/sympy/wiki/Assumptions</a> and some threads on the mailing list, as well as any issue with the Assumptions label.  We have two assumptions systems in SymPy, the old system, which works like 
@@ -228,6 +346,7 @@ True
 - *Labels:* Assumptions, 
 - *Time to complete:* 144 hours
 
+<a name="#2792"></a>
 ### [2792](http://code.google.com/p/sympy/issues/detail?id=2792&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate how to employ complexity measures in functions like trigsimp(), etc.
 <pre>
 simplify() already implements measure argument and uses it to choose over alternative expressions given by pairs of specific simplification routines. However, those specific simplification routines (like trigsimp()) don't support measure argument and make arbitrary built-in choices when simplifying expressions. This leads to simplification results that are dependent on the implicit measure built-in into a particular simplification step of a function. Those functions should use a measure to verify whether a candidate simplified expression is really simpler than an input expression. Investigate how to implement measures in those functions (at least in trigsimp()) to avoid combinatorial explosion of choices. You may have to employ optimization techniques like greedy algorithms, dynamic programming, meta heuristics, etc. Prepare sample non-trivial inputs, measures and outputs that can be used as tests for the algorithm(s) you will propose. 
@@ -236,6 +355,7 @@ simplify() already implements measure argument and uses it to choose over altern
 - *Category:* Research
 - *Time to complete:* 144 hours
 
+<a name="#1817"></a>
 ### [1817](http://code.google.com/p/sympy/issues/detail?id=1817&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy Cheat Sheet
 <pre>
 See <a href="http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748" rel="nofollow">http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748</a>
@@ -248,6 +368,7 @@ Maybe if we have a doc-day 2010...
 - *Category:* Training
 - *Time to complete:* 144 hours
 
+<a name="#2771"></a>
 ### [2771](http://code.google.com/p/sympy/issues/detail?id=2771&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Maple
 <pre>
 We should document the differences between SymPy and other mathematical systems.  For Code-In, a task should be for one other system. 
@@ -256,6 +377,7 @@ We should document the differences between SymPy and other mathematical systems.
 - *Category:* Training
 - *Time to complete:* 144 hours
 
+<a name="#2521"></a>
 ### [2521](http://code.google.com/p/sympy/issues/detail?id=2521&q=label%3ACodeInImportedIntoSpreadsheet) - live.sympy.org isn't so easy to use on a mobile device
 <pre>
 I tried the new live.sympy.org on my 1st gen iPod touch (iOS 3).  There are a couple of things that make the usage difficult:
@@ -274,6 +396,7 @@ I tried the new live.sympy.org on my 1st gen iPod touch (iOS 3).  There are a co
 - *Category:* UI
 - *Time to complete:* 144 hours
 
+<a name="#2768"></a>
 ### [2768](http://code.google.com/p/sympy/issues/detail?id=2768&q=label%3ACodeInImportedIntoSpreadsheet) - Add a feed of what people are doing at SymPy Live
 It would be cool to have a little feed at the right on live.sympy.org to show what other people are entering, so that people can see what sorts of things are being done.  
 
@@ -285,6 +408,7 @@ It would be cool to have a little feed at the right on live.sympy.org to show wh
 - *Labels:* Live, Priority-Medium, Type-Defect
 - *Time to complete:* 144 hours
 
+<a name="#2772"></a>
 ### [2772](http://code.google.com/p/sympy/issues/detail?id=2772&q=label%3ACodeInImportedIntoSpreadsheet) - Some UI/GUI for the test runner
 <pre>
 It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. 
@@ -297,6 +421,7 @@ It would be cool to have some UI/GUI for the test runner that makes it easier to
 It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. E.g. like http://sourceforge.net/apps/mediawiki/cppunit/nfs/project/c/cp/cppunit/c/c2/Qttestrunner_exa.png  
 
 ## <a name="#Medium">Medium</a>
+<a name="#281"></a>
 ### [281](http://code.google.com/p/sympy/issues/detail?id=281&q=label%3ACodeInImportedIntoSpreadsheet) - Infinity should not be a subclass of Rational
 <pre>
 &gt;&gt;&gt; isinstance(oo, Rational)
@@ -310,6 +435,7 @@ This is clearly wrong. Infinity is not a rational number.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#363"></a>
 ### [363](http://code.google.com/p/sympy/issues/detail?id=363&q=label%3ACodeInImportedIntoSpreadsheet) - Add a split() method for sympy expressions
 <pre>
 I think a method that does the opposite of reduce(operator, [x,y,...])
@@ -347,6 +473,7 @@ underlying representation.
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#716"></a>
 ### [716](http://code.google.com/p/sympy/issues/detail?id=716&q=label%3ACodeInImportedIntoSpreadsheet) - either tangent_line or is_tangent is wrong
 <pre>
 In [1]: e = Ellipse(Point(0,0), 3, 2)
@@ -364,6 +491,7 @@ most probably right, so [3] is wrong.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#754"></a>
 ### [754](http://code.google.com/p/sympy/issues/detail?id=754&q=label%3ACodeInImportedIntoSpreadsheet) - Have re and im call expand(complex=True)
 <pre>
 Here is a nice integral that SymPy is able to compute:
@@ -421,6 +549,7 @@ adds them together.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2513"></a>
 ### [2513](http://code.google.com/p/sympy/issues/detail?id=2513&q=label%3ACodeInImportedIntoSpreadsheet) - Create a SymPyDeprecationWarning for deprecated SymPy behavior
 <pre>
 DeprecationWarning is turned off by default in Python 2.7, so all of our deprecated behavior that we deprecate with DeprecationWarning is not shown to the majority of our users (unless they are specifically looking for it, they won't find it).  This was done because most users of Python programs can't do anything if the program uses deprecated behavior, so they don't care to see the warning.  But I think most developers don't really do a good job of turning the warnings on, unfortunately.
@@ -431,6 +560,7 @@ I think we should create a SymPyDeprecationWarning that subclasses from Deprecat
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2552"></a>
 ### [2552](http://code.google.com/p/sympy/issues/detail?id=2552&q=label%3ACodeInImportedIntoSpreadsheet) - (1/(x*y)).subs(x*y, whatever) doesn't work
 This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
 
@@ -446,6 +576,7 @@ x⋅y
 - *Labels:* Priority-High, Type-Defect
 - *Time to complete:* 96 hours
 
+<a name="#2632"></a>
 ### [2632](http://code.google.com/p/sympy/issues/detail?id=2632&q=label%3ACodeInImportedIntoSpreadsheet) - Add isympy -c qtconsole
 <pre>
 You can open the IPython qtconsole with a sympy session by typing &quot;IPython qtconsole --profile=sympy&quot;, but you should also be able to do it by typing &quot;isympy -c ipython-qtconsole&quot;.  Unlike the former, the latter should perhaps not rely on IPython's built-in sympy profile to work. 
@@ -454,6 +585,7 @@ You can open the IPython qtconsole with a sympy session by typing &quot;IPython 
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2793"></a>
 ### [2793](http://code.google.com/p/sympy/issues/detail?id=2793&q=label%3ACodeInImportedIntoSpreadsheet) - The dsolve solver for 1st_exact should use integration
 <pre>
 The method used by the 1st_exact solver is a nice one to use by hand, but it's kind of flaky.  I didn't realize at the time of writing it that you can actually express the solution using integrals without introducing parameters or dummy integration limits.  This solution is given in Table II of the paper &quot;Symbolic Integration: The Stormy Decade&quot; by Joel Moses.  I was able to download this paper for free from Google Scholar.  If you cannot access it and are interested in fixing this issue, contact me and I will send it to you. 
@@ -462,6 +594,7 @@ The method used by the 1st_exact solver is a nice one to use by hand, but it's k
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2794"></a>
 ### [2794](http://code.google.com/p/sympy/issues/detail?id=2794&q=label%3ACodeInImportedIntoSpreadsheet) - Implement ode solvers from the Moses "Stormy Decade" paper: Almost Linear
 <pre>
 See Table II of the paper &quot;Symbolic Integration: The Stormy Decade&quot; by Joel Moses.  Some of these are not implemented yet, in particular, the last three.  
@@ -476,6 +609,7 @@ Each solver should be a separate Code-In task.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2841"></a>
 ### [2841](http://code.google.com/p/sympy/issues/detail?id=2841&q=label%3ACodeInImportedIntoSpreadsheet) - integrate() can not integrate the Abs() function, fix it
 <pre>
 In Dev version
@@ -599,6 +733,7 @@ TypeError: 'NoneType' object is not iterable
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#2849"></a>
 ### [2849](http://code.google.com/p/sympy/issues/detail?id=2849&q=label%3ACodeInImportedIntoSpreadsheet) - Better heuristics and simplification for integral of cos(x)/sin(x)**n and similar
 <pre>
 The result of integrate(cos(x)/sin(x)**n, x) is
@@ -624,6 +759,7 @@ Gabor Takacs
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#294"></a>
 ### [294](http://code.google.com/p/sympy/issues/detail?id=294&q=label%3ACodeInImportedIntoSpreadsheet) - Pass coverage_doctest.py
 <pre>
 This may have been mentioned before, but I'm creating an issue specific for it.
@@ -639,6 +775,7 @@ code and documenting everything, or getting a good start on it.
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#707"></a>
 ### [707](http://code.google.com/p/sympy/issues/detail?id=707&q=label%3ACodeInImportedIntoSpreadsheet) - move some wikis to github.com/sympy/sympy/wiki
 <pre>
 Move all wikis, that have an equivalent on wiki.sympy.org to it? I.e. let's
@@ -654,6 +791,7 @@ So that we have just one source of documentation to reduce confusion.
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#2470"></a>
 ### [2470](http://code.google.com/p/sympy/issues/detail?id=2470&q=label%3ACodeInImportedIntoSpreadsheet) - Fix all sphinx errors and warnings
 <pre>
 Currently when we issue:
@@ -747,6 +885,7 @@ I have a branch (well, one commit) that fixes all those problems, but one (the f
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#2770"></a>
 ### [2770](http://code.google.com/p/sympy/issues/detail?id=2770&q=label%3ACodeInImportedIntoSpreadsheet) - Update stuff that SymPy can do on the homepage
 <pre>
 The list of things that SymPy can do on the homepage is not up to date, because we can actually do a lot more things than that.  This should be updated. 
@@ -755,6 +894,7 @@ The list of things that SymPy can do on the homepage is not up to date, because 
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#2779"></a>
 ### [2779](http://code.google.com/p/sympy/issues/detail?id=2779&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Geometry
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -778,6 +918,7 @@ There are around 150 functions which one needs to understand (the input paramete
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#2801"></a>
 ### [2801](http://code.google.com/p/sympy/issues/detail?id=2801&q=label%3ACodeInImportedIntoSpreadsheet) - lambdify() is not mentioned anywhere
 <pre>
 lambdify() is one of most important functions in SymPy (for interoperability with numerical libraries the most important). However it's not mentioned anywhere, although it has a good docstring. The result of `git grep` stands for itself:
@@ -794,6 +935,7 @@ lambdify's docstring must be pulled into docs (there is already a generic issue 
 - *Category:* Documentation
 - *Time to complete:* 96 hours
 
+<a name="#2528"></a>
 ### [2528](http://code.google.com/p/sympy/issues/detail?id=2528&q=label%3ACodeInImportedIntoSpreadsheet) - Update SymPy's Wikipedia article
 <pre>
 I just noticed that <a href="http://en.wikipedia.org/wiki/SymPy" rel="nofollow">http://en.wikipedia.org/wiki/SymPy</a> is a little old with its information.  None of it is wrong, but I think the features list could be updated.  It seems to be roughly the same as the features listed at sympy.org and <a href="http://code.google.com/p/sympy/" rel="nofollow">http://code.google.com/p/sympy/</a>, so perhaps those should be updated too.
@@ -804,6 +946,7 @@ Also, SymPy's stuff at <a href="http://en.wikipedia.org/wiki/Comparison_of_compu
 - *Category:* Outreach
 - *Time to complete:* 96 hours
 
+<a name="#2764"></a>
 ### [2764](http://code.google.com/p/sympy/issues/detail?id=2764&q=label%3ACodeInImportedIntoSpreadsheet) - Improve our webpage
 <pre>
 Our webpage at <a href="http://sympy.org/" rel="nofollow">http://sympy.org/</a> could probably be made nicer, like with some nice CSS or html5.  The code is at <a href="https://github.com/sympy/sympy.github.com" rel="nofollow">https://github.com/sympy/sympy.github.com</a>.  Also, it maybe could use better examples/explanation of what SymPy is. 
@@ -812,6 +955,7 @@ Our webpage at <a href="http://sympy.org/" rel="nofollow">http://sympy.org/</a> 
 - *Category:* Outreach
 - *Time to complete:* 96 hours
 
+<a name="#2787"></a>
 ### [2787](http://code.google.com/p/sympy/issues/detail?id=2787&q=label%3ACodeInImportedIntoSpreadsheet) - Create sticker for SymPy based on the logo
 <pre>
 The sticker should contain SymPy's logo [1], project name and description. Alternative version may skip description. Sticker must be in SVG format.
@@ -822,6 +966,7 @@ The sticker should contain SymPy's logo [1], project name and description. Alter
 - *Category:* Outreach
 - *Time to complete:* 96 hours
 
+<a name="#2796"></a>
 ### [2796](http://code.google.com/p/sympy/issues/detail?id=2796&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: Debian / Ubuntu
 <pre>
 Most distributions have old versions of SymPy packaged (or none at all, eg. openSUSE). These should be updated to the latest version of SymPy (0.7.1 as of now). Ideally, the scripts used to generate these packages should also be saved and uploaded somewhere, so it will be easier to update them to newer versions. I'm marking this for Code-In, but consider that each major distro could be a separate task.
@@ -832,6 +977,7 @@ This most likely means deleting the bundled mpmath/ and making SymPy play nice w
 - *Category:* Outreach
 - *Time to complete:* 96 hours
 
+<a name="#1456"></a>
 ### [1456](http://code.google.com/p/sympy/issues/detail?id=1456&q=label%3ACodeInImportedIntoSpreadsheet) - use pyflakes to identify simple bugs in sympy and fix them
 <pre>
 Example:
@@ -888,6 +1034,7 @@ used, so it should be removed.
 
 Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/ directory, but not one of the ones that only has a few files in it).  
 
+<a name="#1752"></a>
 ### [1752](http://code.google.com/p/sympy/issues/detail?id=1752&q=label%3ACodeInImportedIntoSpreadsheet) - setup.py test should run the doctests even when the regular tests fail
 <pre>
 Two things annoy me about ./setup.py test.  First, if a regular test fails, then it does not run the 
@@ -902,6 +1049,7 @@ I don't know how easy it would be to change the second item, but the first one s
 - *Labels:* EasyToFix, Priority-High, Testing, Type-Defect
 - *Time to complete:* 96 hours
 
+<a name="#2786"></a>
 ### [2786](http://code.google.com/p/sympy/issues/detail?id=2786&q=label%3ACodeInImportedIntoSpreadsheet) - Fill in missing tests for sympy.physics module in test_args.py
 <pre>
 All tests decorated with @SKIP(&quot;TODO: sympy.physics&quot;) must be fixed. 
@@ -910,6 +1058,7 @@ All tests decorated with @SKIP(&quot;TODO: sympy.physics&quot;) must be fixed.
 - *Category:* QA
 - *Time to complete:* 96 hours
 
+<a name="#1235"></a>
 ### [1235](http://code.google.com/p/sympy/issues/detail?id=1235&q=label%3ACodeInImportedIntoSpreadsheet) - Problem installing in Windows
 <pre>
 Hi!
@@ -932,6 +1081,7 @@ Thanks for any answer.
 - *Category:* Research
 - *Time to complete:* 96 hours
 
+<a name="#2762"></a>
 ### [2762](http://code.google.com/p/sympy/issues/detail?id=2762&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate ways to improve substitution, pattern matching, etc.
 <pre>
 This is related to <a title="Exact, algebraic, and integer_power substitution"  href="/p/sympy/issues/detail?id=2026">issue 2026</a> and this thread on the mailing list (<a href="http://groups.google.com/group/sympy/browse_thread/thread/4a19d0f39f51fda6" rel="nofollow">http://groups.google.com/group/sympy/browse_thread/thread/4a19d0f39f51fda6</a>).  The subs mechanism should be refactored so that it is more flexible.  Also, I believe it should be using the same thing internally as the pattern matching.  
@@ -942,6 +1092,7 @@ The (Code-In) task here is to study this problem and discuss optimal ways to sol
 - *Category:* Research
 - *Time to complete:* 96 hours
 
+<a name="#2795"></a>
 ### [2795](http://code.google.com/p/sympy/issues/detail?id=2795&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate a robust way to have translated documentation
 <pre>
 Some of the Code-In tasks include translating our documentation to different languages. If this happens, we would need a way to manage all of these files (we might have many languages, after all). It's also important to know when and how much are these files out of date (as they eventually will be). Usually, GUI applications use gettext and have tons of .po files lying around, but I'm not sure that's the right approach for us. Marking this as a Code-In Research task. 
@@ -950,6 +1101,7 @@ Some of the Code-In tasks include translating our documentation to different lan
 - *Category:* Research
 - *Time to complete:* 96 hours
 
+<a name="#2798"></a>
 ### [2798](http://code.google.com/p/sympy/issues/detail?id=2798&q=label%3ACodeInImportedIntoSpreadsheet) - Research ways to extract statistics from the issue tracker
 <pre>
 The issue tracker can provide some valuable statistics about the health of the project - it might be interesting to graph the number of open issues, number of issues per category, the average &quot;age&quot; of the (closed/open) issues, who closes the most issues, the number of issue reports by users (as opposed to developers of SymPy) etc. This likely involves interfacing somehow with the Google API. 
@@ -958,6 +1110,7 @@ The issue tracker can provide some valuable statistics about the health of the p
 - *Category:* Research
 - *Time to complete:* 96 hours
 
+<a name="#2803"></a>
 ### [2803](http://code.google.com/p/sympy/issues/detail?id=2803&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate how to make the rewrite framework more flexible
 <pre>
 Currently, the rewrite framework only allows expr.rewrite(function) (e.g., cos(x).rewrite(exp)), and it implements only one rule per function pair.  This should be made more general.  Sometimes, you can't express a rewrite rule with just a function.  Other times, there is more than one way to rewrite one function in terms of another (for example cos(x) == sqrt(1 - sin(x)) == sin(pi/2 - x)).  
@@ -968,6 +1121,7 @@ The issue is to consider ways to make the rewrite framework stronger, but still 
 - *Category:* Research
 - *Time to complete:* 96 hours
 
+<a name="#2790"></a>
 ### [2790](http://code.google.com/p/sympy/issues/detail?id=2790&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
 <pre>
 Examples/short tutorials should show how to use SymPy to solve illustrative problems in high school mathematics/physics. Notebooks must contain code split into logical blocks, text cells with problem description and references to other materials, books, videos, etc. 
@@ -976,6 +1130,7 @@ Examples/short tutorials should show how to use SymPy to solve illustrative prob
 - *Category:* Training
 - *Time to complete:* 96 hours
 
+<a name="#2766"></a>
 ### [2766](http://code.google.com/p/sympy/issues/detail?id=2766&q=label%3ACodeInImportedIntoSpreadsheet) - Translate tutorial to German
 <pre>
 The tutorial (<a href="http://docs.sympy.org/0.7.1/tutorial.html" rel="nofollow">http://docs.sympy.org/0.7.1/tutorial.html</a>) should be translated into various languages, e.g., Czech, Polish, French, German, etc. 
@@ -984,6 +1139,7 @@ The tutorial (<a href="http://docs.sympy.org/0.7.1/tutorial.html" rel="nofollow"
 - *Category:* Translation
 - *Time to complete:* 96 hours
 
+<a name="#2767"></a>
 ### [2767](http://code.google.com/p/sympy/issues/detail?id=2767&q=label%3ACodeInImportedIntoSpreadsheet) - Improve the interface of SymPy Live
 <pre>
 The interface at live.sympy.org should be improved, so that it looks and feels nicer, perhaps using some more advanced html5/css, etc. 
@@ -992,6 +1148,7 @@ The interface at live.sympy.org should be improved, so that it looks and feels n
 - *Category:* UI
 - *Time to complete:* 96 hours
 
+<a name="#2857"></a>
 ### [2857](http://code.google.com/p/sympy/issues/detail?id=2857&q=label%3ACodeInImportedIntoSpreadsheet) - sqrt(2).is_irrational is None (should be True)
 <pre>
 It seems that sqrt(2).is_irrational should return True
@@ -1031,6 +1188,7 @@ The same sort of problems exist for Add: while `sqrt(2) + sqrt(6)` is definitely
 - *Time to complete:* 96 hours
 
 ## <a name="#Easy">Easy</a>
+<a name="#615"></a>
 ### [615](http://code.google.com/p/sympy/issues/detail?id=615&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the occasions where functions are called with wrong name and write tests
 <pre>
 /home/matt/hg/sympy/sympy/functions/elementary/exponential.py in
@@ -1065,6 +1223,7 @@ left, this should be fixed soon.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#654"></a>
 ### [654](http://code.google.com/p/sympy/issues/detail?id=654&q=label%3ACodeInImportedIntoSpreadsheet) - Remove dead code from _eval_subs()
 <pre>
 &gt; &gt; diff --git a/sympy/functions/elementary/exponential.py b/sympy/functions=
@@ -1109,6 +1268,7 @@ I'm not sure how to do it now, please advise.
 - *Category:* Code
 - *Time to complete:* 96 hours
 
+<a name="#1058"></a>
 ### [1058](http://code.google.com/p/sympy/issues/detail?id=1058&q=label%3ACodeInImportedIntoSpreadsheet) - Classifying formulas
 <pre>
 I've written some code for determining the &quot;class&quot; of a formula. The
@@ -1192,6 +1352,7 @@ can be compared more easily in terms of the complexity() measure?
 - *Labels:* Priority-Medium, Type-Enhancement
 - *Time to complete:* 48 hours
 
+<a name="#2276"></a>
 ### [2276](http://code.google.com/p/sympy/issues/detail?id=2276&q=label%3ACodeInImportedIntoSpreadsheet) - integrate() should use the ode module's undetermined coefficients solver when possible
 <pre>
 So my comment 8 from <a title="Arbitrary constants in indefinite integration"  href="/p/sympy/issues/detail?id=2219">issue 2219</a> made me realize something.  Consider the following:
@@ -1224,6 +1385,7 @@ So I think if the integral has the correct form, that internally integrate(expr,
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2427"></a>
 ### [2427](http://code.google.com/p/sympy/issues/detail?id=2427&q=label%3ACodeInImportedIntoSpreadsheet) - Check for incorrect usage of expr.atoms() and change it to free_symbols
 <pre>
 If any code wants to know if there are variables that are free like x but not y in Integral(y, (y, 1, x)) then it should use expr.free_symbols, not .atoms(Symbol) (since that would have given x and y for the example given). The code should be checked for instances of .atoms(Symbol) to see what the author intended and corrected if necessary. 
@@ -1232,6 +1394,7 @@ If any code wants to know if there are variables that are free like x but not y 
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2534"></a>
 ### [2534](http://code.google.com/p/sympy/issues/detail?id=2534&q=label%3ACodeInImportedIntoSpreadsheet) - Use "with open" instead of "open … close"
 Please see http://code.google.com/p/sympy/issues/detail?id=2534 for full information on this task. Please read https://github.com/sympy/sympy/wiki/gci-2011-landing before completing any tasks for SymPy.  
 
@@ -1256,6 +1419,7 @@ There are a handful of places in the code where we open() stuff (do git grep &qu
 - *Labels:* EasyToFix, Priority-Medium, Type-Defect
 - *Time to complete:* 48 hours
 
+<a name="#2570"></a>
 ### [2570](http://code.google.com/p/sympy/issues/detail?id=2570&q=label%3ACodeInImportedIntoSpreadsheet) - Remove bare except statements
 <pre>
 If you do git grep &quot;except:&quot; you will see that there are several places in the code with bare except statements that should be rewritten to catch explicit exceptions.  To quote the Zen of Python:
@@ -1297,6 +1461,7 @@ To be sure, some of the bare except cases in the code are correct by the above (
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2639"></a>
 ### [2639](http://code.google.com/p/sympy/issues/detail?id=2639&q=label%3ACodeInImportedIntoSpreadsheet) - The Product() class should not evaluate by default
 <pre>
 Unlike other unevaluated operators, Product() is not always unevaluated.  Attempted evaluation should be the job of product().  This is how Sum/summation works:
@@ -1323,6 +1488,7 @@ Out[5]: 3
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2683"></a>
 ### [2683](http://code.google.com/p/sympy/issues/detail?id=2683&q=label%3ACodeInImportedIntoSpreadsheet) - det() is called when inverting matrix through GE
 <pre>
 As noted at <a href="http://groups.google.com/group/sympy/browse_thread/thread/ba37b597b851df7c#" rel="nofollow">http://groups.google.com/group/sympy/browse_thread/thread/ba37b597b851df7c#</a>, det() is called when inverting a Matrix with the GE method.  This is used only the check if it is non-degenerate.  This should instead be checked by the output of rref(). 
@@ -1331,6 +1497,7 @@ As noted at <a href="http://groups.google.com/group/sympy/browse_thread/thread/b
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2760"></a>
 ### [2760](http://code.google.com/p/sympy/issues/detail?id=2760&q=label%3ACodeInImportedIntoSpreadsheet) - latex(symbol_names) not working with ~x
 <pre>
 Read this for more information
@@ -1353,6 +1520,7 @@ and you don't have to use a special dictionary everytime you need to typeset the
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2776"></a>
 ### [2776](http://code.google.com/p/sympy/issues/detail?id=2776&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in integrals
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1372,6 +1540,7 @@ There are around 19 functions which one needs to understand (the input parameter
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2784"></a>
 ### [2784](http://code.google.com/p/sympy/issues/detail?id=2784&q=label%3ACodeInImportedIntoSpreadsheet) - 1/function() should be printed differently by latex printer
 <pre>
 In [1]: latex(1/cos(x))
@@ -1388,6 +1557,7 @@ cos(x)
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2785"></a>
 ### [2785](http://code.google.com/p/sympy/issues/detail?id=2785&q=label%3ACodeInImportedIntoSpreadsheet) - Use \functionname instead of \operatorname{functionname} whenever possible
 <pre>
 SymPy uniformly uses \operatorname when latex printing functions. However, tex engine in matplotlib doesn't support it. It would be convenient to use \functionname directly whenever possible (trigonometric and hyperbolic functions, exp, log and maybe other). 
@@ -1396,6 +1566,7 @@ SymPy uniformly uses \operatorname when latex printing functions. However, tex e
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2815"></a>
 ### [2815](http://code.google.com/p/sympy/issues/detail?id=2815&q=label%3ACodeInImportedIntoSpreadsheet) - Parts of the pyglet plotting module does not follow PEP 8, fix it
 <pre>
 The code there is a bit hard to read. It would be nice to have it refactored so it follows PEP8.
@@ -1406,6 +1577,7 @@ There are certain parts that are not pythonic but that's another problem needing
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2817"></a>
 ### [2817](http://code.google.com/p/sympy/issues/detail?id=2817&q=label%3ACodeInImportedIntoSpreadsheet) - Make sure all the built-in __methods__ are defined
 <pre>
 At <a href="http://docs.python.org/reference/datamodel.html" rel="nofollow">http://docs.python.org/reference/datamodel.html</a>, it lists all the __methods__ that Python works with (like __int__, __contains__, etc.).  We should go through all of these and make sure they are all defined on Basic, Expr, or whatever relevant subclass, so that we don't have simple bugs like
@@ -1424,6 +1596,7 @@ Regarding where they should be defined, stuff that makes sense for any object sh
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2830"></a>
 ### [2830](http://code.google.com/p/sympy/issues/detail?id=2830&q=label%3ACodeInImportedIntoSpreadsheet) - checkodesol() should use force=True
 <pre>
 &gt; @@ -542,7 +542,11 @@ def test_1st_homogeneous_coeff_ode_check3():
@@ -1446,6 +1619,7 @@ log(f(x)/x) + log(x/f(x))
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2838"></a>
 ### [2838](http://code.google.com/p/sympy/issues/detail?id=2838&q=label%3ACodeInImportedIntoSpreadsheet) - Move the KroneckerDelta class to another module 
 <pre>
 KroneckerDelta would be useful for more than just quantum physics.  I think it should be moved into the functions module and imported with &quot;from sympy import *&quot;. 
@@ -1454,6 +1628,7 @@ KroneckerDelta would be useful for more than just quantum physics.  I think it s
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#2846"></a>
 ### [2846](http://code.google.com/p/sympy/issues/detail?id=2846&q=label%3ACodeInImportedIntoSpreadsheet) - Integral.transform should allow a change to a different variable
 <pre>
 Integral.transform is confusing, since it requires you to use the same integration variable.  But usually, when we do a transfrom on an integral we change the name of the variable.  It should allow something like
@@ -1470,6 +1645,7 @@ Related is <a title="Integral manipulations"  href="/p/sympy/issues/detail?id=22
 - *Category:* Code
 - *Time to complete:* 48 hours
 
+<a name="#16"></a>
 ### [16](http://code.google.com/p/sympy/issues/detail?id=16&q=label%3ACodeInImportedIntoSpreadsheet) - Check and compare an old patch concerning object with indices against current sympy
 Please see http://code.google.com/p/sympy/issues/detail?id=16 for full information on this task. <br><br>Please read https://github.com/sympy/sympy/wiki/gci-2011-landing before completing any tasks for SymPy. <br><br>Additional Note(s): Check out comment 32 in the bug report. 
 
@@ -1487,6 +1663,7 @@ matrix for the metric tensor, and it would figure all the rest by itself.
 
 Check out comment 32 in the bug report. 
 
+<a name="#1886"></a>
 ### [1886](http://code.google.com/p/sympy/issues/detail?id=1886&q=label%3ACodeInImportedIntoSpreadsheet) - Documentation for the Expr class
 <pre>
 Expr needs a docstring. The split between Basic and Expr must be explained. 
@@ -1495,6 +1672,7 @@ Expr needs a docstring. The split between Basic and Expr must be explained.
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2115"></a>
 ### [2115](http://code.google.com/p/sympy/issues/detail?id=2115&q=label%3ACodeInImportedIntoSpreadsheet) - Move stuff from the Google Code SVN to git
 <pre>
 Everything from here <a href="http://code.google.com/p/sympy/source/browse/" rel="nofollow">http://code.google.com/p/sympy/source/browse/</a> needs to be moved either to the GitHub wiki or the main repo.  Details on how to checkout the files on your computer are here: <a href="http://code.google.com/p/sympy/source/checkout" rel="nofollow">http://code.google.com/p/sympy/source/checkout</a>.  Does anyone know how to transfer svn to git without losing the history?
@@ -1505,6 +1683,7 @@ By the way, this includes the Google Code wiki pages in it.
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2160"></a>
 ### [2160](http://code.google.com/p/sympy/issues/detail?id=2160&q=label%3ACodeInImportedIntoSpreadsheet) - List of dependencies
 <pre>
 We should include in the README, and probably in the docs somewhere too, a list of all the &quot;dependencies&quot; of SymPy.  Now, obviously, SymPy's only dependency is Python, but there are several optional dependencies like IPython and gmpy that are not required but extent the capabilities of SymPy if they are installed. 
@@ -1547,6 +1726,7 @@ I just realized that the best way to do this would be through the wiki.  So if a
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2204"></a>
 ### [2204](http://code.google.com/p/sympy/issues/detail?id=2204&q=label%3ACodeInImportedIntoSpreadsheet) - Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1
 <pre>
 After pickling and unpickling pi, a simple cos(pi) no longer nicely simplifies to -1 on its own (it does if you nsimplify it)
@@ -1583,6 +1763,7 @@ Expected output:
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2367"></a>
 ### [2367](http://code.google.com/p/sympy/issues/detail?id=2367&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy's readthedocs documentation is broken
 <pre>
 See <a href="http://readthedocs.org/docs/sympy/en/latest/" rel="nofollow">http://readthedocs.org/docs/sympy/en/latest/</a>.  It just shows
@@ -1601,6 +1782,7 @@ and that's it.
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2597"></a>
 ### [2597](http://code.google.com/p/sympy/issues/detail?id=2597&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: polys
 <pre>
 There are some methods that do have docstrings, but are not shown in the documentation (docs.sympy.org).
@@ -1611,6 +1793,7 @@ For example, method norm in matrices.matrices.py has a docstring, but is not sho
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2599"></a>
 ### [2599](http://code.google.com/p/sympy/issues/detail?id=2599&q=label%3ACodeInImportedIntoSpreadsheet) - Update isympy manpage
 <pre>
 The manpage for isympy (doc/man/isympy) needs to be updated with all the latest options, etc. 
@@ -1619,6 +1802,7 @@ The manpage for isympy (doc/man/isympy) needs to be updated with all the latest 
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2679"></a>
 ### [2679](http://code.google.com/p/sympy/issues/detail?id=2679&q=label%3ACodeInImportedIntoSpreadsheet) - Refactor GA* documentation to use doctests (or move it to examples/)
 <pre>
 There are some .py files in doc/src/modules/galgebra/GA which have some strange indentation (and aren't valid Python source files either). Aaron also noticed this and they produce (harmless) errors when 2to3 is ran on them. I've finally had a chance to look at them and they seem to be included in the main GA module documentation, GAsympy.txt. In fact, they seem to be used like a doctest - the first part of the file (indented) are the comments that produce the second half of the file (not indented). These should be converted to be actual doctests. 
@@ -1637,6 +1821,7 @@ RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/hyperbolic
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2774"></a>
 ### [2774](http://code.google.com/p/sympy/issues/detail?id=2774&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Number Theory
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1659,6 +1844,7 @@ Docstring:
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2775"></a>
 ### [2775](http://code.google.com/p/sympy/issues/detail?id=2775&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Combinotorics 
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1678,6 +1864,7 @@ There are around 98(at max) functions which one needs to understand (the input p
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2777"></a>
 ### [2777](http://code.google.com/p/sympy/issues/detail?id=2777&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1701,6 +1888,7 @@ There are around 52 functions which one needs to understand (the input parameter
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2778"></a>
 ### [2778](http://code.google.com/p/sympy/issues/detail?id=2778&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions/special
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1725,6 +1913,7 @@ There are around 62 functions which one needs to understand (the input parameter
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2780"></a>
 ### [2780](http://code.google.com/p/sympy/issues/detail?id=2780&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Matrices
 <pre>
 Edit the doc-string to add list of other function that are closely related to the query.
@@ -1739,6 +1928,7 @@ There are around 69 functions which one needs to understand (the input parameter
 - *Category:* Documentation
 - *Time to complete:* 48 hours
 
+<a name="#2763"></a>
 ### [2763](http://code.google.com/p/sympy/issues/detail?id=2763&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the SymPy Logo
 <pre>
 The original logo is found at <a href="http://code.google.com/p/sympy/source/browse/#svn%2Fmaterials%2Flogo" rel="nofollow">http://code.google.com/p/sympy/source/browse/#svn%2Fmaterials%2Flogo</a>.  The problem is that the transparency is not done correctly on the tail, so that it does not look good unless the background is white.  We need to fix it so that it uses the correct kind of alpha channel, so that it looks good everywhere.  There is a svg image there, though I didn't have much luck with it. 
@@ -1747,6 +1937,7 @@ The original logo is found at <a href="http://code.google.com/p/sympy/source/bro
 - *Category:* Outreach
 - *Time to complete:* 48 hours
 
+<a name="#2800"></a>
 ### [2800](http://code.google.com/p/sympy/issues/detail?id=2800&q=label%3ACodeInImportedIntoSpreadsheet) - Flesh out the SymPy Papers wiki page
 <pre>
 We have a page on the wiki[1] that should list (scientific) papers mentioning SymPy, but it's currently empty. Populating this would be interesting and could also persuade other academics to try out/use SymPy. Google Scholar can be used to track down papers. See also the thread which originally asked about this[2].
@@ -1759,6 +1950,7 @@ We have a page on the wiki[1] that should list (scientific) papers mentioning Sy
 - *Category:* Outreach
 - *Time to complete:* 48 hours
 
+<a name="#1616"></a>
 ### [1616](http://code.google.com/p/sympy/issues/detail?id=1616&q=label%3ACodeInImportedIntoSpreadsheet) - Bug in subs
 <pre>
 In [1]: c2,c3,q1p,q2p,c1,s1,s2,s3= symbols('c2 c3 q1p q2p c1 s1 s2 s3')
@@ -2027,6 +2219,7 @@ In [7]:
 - *Category:* QA
 - *Time to complete:* 48 hours
 
+<a name="#2493"></a>
 ### [2493](http://code.google.com/p/sympy/issues/detail?id=2493&q=label%3ACodeInImportedIntoSpreadsheet) - Clean up test_lambdify.py
 <pre>
 test_lambdify.py has a bunch of try blocks that should be using raises(). 
@@ -2035,6 +2228,7 @@ test_lambdify.py has a bunch of try blocks that should be using raises().
 - *Category:* QA
 - *Time to complete:* 48 hours
 
+<a name="#2788"></a>
 ### [2788](http://code.google.com/p/sympy/issues/detail?id=2788&q=label%3ACodeInImportedIntoSpreadsheet) - Commented out tests should be XFAILed
 <pre>
 If you &quot;git grep '# *assert'&quot;, you'll see a bunch of tests where the test line is commented out.  These should be changed to be XFAIL tests, so that we can see if they start passing.  Also, they should be double checked to see if they really would start passing (e.g., they don't have syntax errors). 
@@ -2043,6 +2237,7 @@ If you &quot;git grep '# *assert'&quot;, you'll see a bunch of tests where the t
 - *Category:* QA
 - *Time to complete:* 48 hours
 
+<a name="#2157"></a>
 ### [2157](http://code.google.com/p/sympy/issues/detail?id=2157&q=label%3ACodeInImportedIntoSpreadsheet) - sympy development rules
 <pre>
 I think there is a consensus about the requirements for inclusion of a (nontrivial) patch in sympy:
@@ -2065,6 +2260,7 @@ What do you think?
 - *Category:* Training
 - *Time to complete:* 48 hours
 
+<a name="#2769"></a>
 ### [2769](http://code.google.com/p/sympy/issues/detail?id=2769&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
 <pre>
 We can have several Code-In tasks for this.  Create some video tutorials for SymPy, and upload them to some SymPy channel on YouTube. 
@@ -2073,6 +2269,7 @@ We can have several Code-In tasks for this.  Create some video tutorials for Sym
 - *Category:* Training
 - *Time to complete:* 48 hours
 
+<a name="#2806"></a>
 ### [2806](http://code.google.com/p/sympy/issues/detail?id=2806&q=label%3ACodeInImportedIntoSpreadsheet) - Add more tips to the tips page (10 tips)
 <pre>
 We have a page of tips that we are compiling at <a href="https://github.com/sympy/sympy/wiki/tips" rel="nofollow">https://github.com/sympy/sympy/wiki/tips</a>.  This should be really fleshed out, so that we have enough tips to do something interesting with.
@@ -2083,6 +2280,7 @@ For Code-In, we can create multiple tasks.  Each task (easy) can be to create sa
 - *Category:* Training
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to German
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2091,6 +2289,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to French
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2099,6 +2298,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Czech
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2107,6 +2307,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Polish
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2115,6 +2316,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Bulgarian
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2123,6 +2325,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2797"></a>
 ### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Serbian
 <pre>
 Our webpage can be translated to other languages. Note that this is connected with <a title="Improve our webpage"  href="/p/sympy/issues/detail?id=2764">issue #2764</a>, about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change. 
@@ -2131,6 +2334,7 @@ Our webpage can be translated to other languages. Note that this is connected wi
 - *Category:* Translation
 - *Time to complete:* 48 hours
 
+<a name="#2637"></a>
 ### [2637](http://code.google.com/p/sympy/issues/detail?id=2637&q=label%3ACodeInImportedIntoSpreadsheet) - Unicode Sigma for pretty printed Sum
 <pre>
 I've been looking into how to pretty print the Sigma using unicode.  Here's what I've got so far:
@@ -2166,6 +2370,7 @@ There are these unicode symbols
 - *Category:* UI
 - *Time to complete:* 48 hours
 
+<a name="#2636"></a>
 ### [2636](http://code.google.com/p/sympy/issues/detail?id=2636&q=label%3ACodeInImportedIntoSpreadsheet) - Pretty print Product
 - *Category:* Code
 - *Time to complete:* 48 hours
