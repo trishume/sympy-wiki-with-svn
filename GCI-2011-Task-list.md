@@ -124,12 +124,12 @@ The source if this page is based on the [google-malange](https://docs.google.com
 <a name="#93"></a>
 ### [93](http://code.google.com/p/sympy/issues/detail?id=93&q=label%3ACodeInImportedIntoSpreadsheet) - Square root denesting
 <pre>
-Just an idea: implement the &quot;square root denesting&quot; ideas of
+Just an idea: implement the "square root denesting" ideas of
 <a href="http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf" rel="nofollow">http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf</a>
 doesn't look to complicated.
-I am happy to work on this after the prettyprinter works: that we can see what we are doing :-)
 
-- Jurjen 
+
+ 
 </pre>
 
 - *Category:* Code
@@ -320,8 +320,8 @@ units.  Right now, Mul.flatten is cluttered with code for handling all these thi
 to handle additional classes is to either completely separate them from Basic (as with Poly), or to 
 add more special case code in Mul.flatten.  
 
-Anyway, if we ever rework the core as suggested in <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a> or elsewhere, we should also look 
-into doing this too. 
+Anyway, if we ever rework the core as suggested in <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a> or elsewhere, we should also look into doing this too.
+ 
 </pre>
 
 - *Category:* Research
@@ -358,11 +358,11 @@ simplify() already implements measure argument and uses it to choose over altern
 <a name="#1817"></a>
 ### [1817](http://code.google.com/p/sympy/issues/detail?id=1817&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy Cheat Sheet
 <pre>
-See <a href="http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748" rel="nofollow">http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748</a>
+See [maillist](http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748)
 
-The idea is to make a cheat sheet for sympy, similar to <a href="http://wiki.sagemath.org/quickref" rel="nofollow">http://wiki.sagemath.org/quickref</a>.  
+The idea is to make a cheat sheet for sympy, similar to PSageMath quickref](http://wiki.sagemath.org/quickref)
 
-Maybe if we have a doc-day 2010... 
+ 
 </pre>
 
 - *Category:* Training
@@ -424,12 +424,16 @@ It would be cool to have some UI/GUI for the test runner that makes it easier to
 <a name="#281"></a>
 ### [281](http://code.google.com/p/sympy/issues/detail?id=281&q=label%3ACodeInImportedIntoSpreadsheet) - Infinity should not be a subclass of Rational
 <pre>
-&gt;&gt;&gt; isinstance(oo, Rational)
-True
-&gt;&gt;&gt; oo.is_rational
-True
 
-This is clearly wrong. Infinity is not a rational number. 
+```py
+>>> isinstance(oo, Rational)
+True
+>>> oo.is_rational
+True
+```
+
+This is clearly wrong. Infinity is not a rational number.
+ 
 </pre>
 
 - *Category:* Code
@@ -441,20 +445,10 @@ This is clearly wrong. Infinity is not a rational number.
 I think a method that does the opposite of reduce(operator, [x,y,...])
 would be useful. Something like this:
 
-&gt;&gt;&gt; (x+y+z).split('+')
+>>> (x+y+z).split('+')
 (x, y+z)
-&gt;&gt;&gt; (x+y+z).split('+', flatten=True)
+>>> (x+y+z).split('+', flatten=True)
 (x, y, z)
-&gt;&gt;&gt; (x+y+z).split('*')
-(x+y+z,)
-&gt;&gt;&gt; (x+y+z).split('*', coefficient=True)
-(1, x+y+z)
-&gt;&gt;&gt; (x/y).split('/')
-(x, y)
-&gt;&gt;&gt; (x*y).split('/')
-(x, 1/y)
-&gt;&gt;&gt; (x**2).split('**')
-(x, 2)
 
 Various keyword arguments could be added for whether to split rational
 numbers, etc. With such options, split() could replace several existing
@@ -467,7 +461,8 @@ even though we have no Div class).
 
 A method like this would be especially useful if Add and Mul are changed as
 discussed in <a title="Possible speed improvements to core"  href="/p/sympy/issues/detail?id=362">issue 362</a>, as its interface would be independent of the
-underlying representation. 
+underlying representation.
+ 
 </pre>
 
 - *Category:* Code
@@ -476,16 +471,19 @@ underlying representation.
 <a name="#716"></a>
 ### [716](http://code.google.com/p/sympy/issues/detail?id=716&q=label%3ACodeInImportedIntoSpreadsheet) - either tangent_line or is_tangent is wrong
 <pre>
+
+```py
 In [1]: e = Ellipse(Point(0,0), 3, 2)
 
 In [2]: t = e.tangent_line(e.random_point())
 
 In [3]: e.is_tangent(t)
 Out[3]: False
-
+```
 
 Obviously [2] and [3] are in contradiction. By plotting the result, [2] is
-most probably right, so [3] is wrong. 
+most probably right, so [3] is wrong.
+ 
 </pre>
 
 - *Category:* Code
@@ -496,54 +494,26 @@ most probably right, so [3] is wrong.
 <pre>
 Here is a nice integral that SymPy is able to compute:
 
-&gt;&gt;&gt; from sympy import *
-&gt;&gt;&gt; var('y')
+```
+>>> from sympy import *
+>>> var('y')
 y
-&gt;&gt;&gt; a = integrate((16*y-16)/(y**4-2*y**3+4*y-4), (y, 0, 1))
-&gt;&gt;&gt; a = simplify(a)
-&gt;&gt;&gt; pprint(a)
+>>> a = integrate((16*y-16)/(y**4-2*y**3+4*y-4), (y, 0, 1))
+>>> a = simplify(a)
+>>> pprint(a)
                                               ___
 -2*log(2) + 2*pi + 2*log(1 + I) + 2*log(1 + \/ 2 ) + 2*log(1 - I) + 2*log(1 -
 
   ___
 \/ 2 ) - 2*pi*I - 2*I*log(1 - I) + 2*I*log(1 + I)
 
+```
+
 Simplifying the answer by hand is straightforward (add up the real and
 imaginary parts), but unfortunately, SymPy is unable to do this. (It also
-fails to produce a numerical value: a.evalf() -&gt; ValueError.) It seems that
-currently re and as_real_imag don't know anything about logarithms:
-
-&gt;&gt;&gt; re(a)
--2*log(2) + 2*pi + 2*log(1 + 2**(1/2)) + re(2*log(1 + I) + 2*log(1 - I) +
-2*log(1 - 2**(1/2)) - 2*I*log(1 - I) + 2*I*log(1 + I))
-&gt;&gt;&gt; a.as_real_imag()
-(pi + 2*log(1 + I) - 2*I*log(1 + I) + log(2) + log(1 + 2**(1/2)) + log(1 -
-2**(1/2)), 2*log(2))
-&gt;&gt;&gt; a.expand(complex=True)
-pi + 2*log(1 + I) - 2*I*log(1 + I) + 2*I*log(2) + log(2) + log(1 +
-2**(1/2)) + log(1 - 2**(1/2))
-
-I was thinking of fixing this, but I'm not sure where the right place is.
-According to re(), &quot;This function performs only elementary analysis and so
-it will fail to decompose properly more complicated expressions. If
-completely simplified result is needed then use Basic.as_real_imag() or
-perform complex expansion on instance of this function.&quot; This doesn't even
-seem to be correct: re() actually performs some analysis, while
-Basic.as_real_imag() only looks for multiples of I without further
-analysis. Then there is _eval_expand_complex, which seems to use an
-entirely separate implementation (I tried implementing _eval_expand_complex
-in log, which didn't affect the output of re or as_real_imag() -- in fact,
-implementing it didn't even make a.expand(complex=True) work).
-
-I think there should be only one function that implements expansion of an
-expression into real and imaginary parts, and this should be used by re,
-im, as_real_imag, expand(complex=True), etc (are there others?). It should
-use a recursive algorithm and overloading a single method in a custom class
-should be enough to make all these functions work.
-
-Last, we may want to add a heuristic to simplify() that splits the
-expression into real and imaginary parts, simplifies those separately, and
-adds them together. 
+fails to produce a numerical value: a.evalf() -> ValueError.) It seems that
+currently re and as_real_imag don't know anything about logarithms.
+ 
 </pre>
 
 - *Category:* Code
@@ -762,14 +732,13 @@ Gabor Takacs
 <a name="#294"></a>
 ### [294](http://code.google.com/p/sympy/issues/detail?id=294&q=label%3ACodeInImportedIntoSpreadsheet) - Pass coverage_doctest.py
 <pre>
-This may have been mentioned before, but I'm creating an issue specific for it.
-
 I think there should soon be documentation in the code for most, if not
 all, of the classes and functions, even if it is only a single line. This
 can be useful for both the generated API documentation, and through
 interactive help (i.e., the help() command in an interactive Python
 session). If there is a need for this, I am fine going through all of the
-code and documenting everything, or getting a good start on it. 
+code and documenting everything, or getting a good start on it.
+ 
 </pre>
 
 - *Category:* Documentation
@@ -778,14 +747,10 @@ code and documenting everything, or getting a good start on it.
 <a name="#707"></a>
 ### [707](http://code.google.com/p/sympy/issues/detail?id=707&q=label%3ACodeInImportedIntoSpreadsheet) - move some wikis to github.com/sympy/sympy/wiki
 <pre>
-Move all wikis, that have an equivalent on wiki.sympy.org to it? I.e. let's
-remove
-
-<a href="http://code.google.com/p/sympy/wiki/Tutorial" rel="nofollow">http://code.google.com/p/sympy/wiki/Tutorial</a>
-
-and similar, and update all links to wiki.sympy.org?
-
-So that we have just one source of documentation to reduce confusion. 
+Move all wikis from [code.google.com](http://code.google.com/p/sympy/w/list) to
+[github](https://github.com/sympy/sympy/wiki).
+So that we have just one source of documentation to reduce confusion.
+ 
 </pre>
 
 - *Category:* Documentation
@@ -982,50 +947,22 @@ This most likely means deleting the bundled mpmath/ and making SymPy play nice w
 <pre>
 Example:
 
-sudo apt-get install pyflakes
-
+```
+$ sudo apt-get install pyflakes
 $ pyflakes sympy/integrals/
-sympy/integrals/rationaltools.py:3: 'div' imported but unused
-sympy/integrals/rationaltools.py:121: redefinition of unused 'symbols' from
-line 3
-sympy/integrals/risch.py:4: 'Pow' imported but unused
-sympy/integrals/risch.py:5: 'Function' imported but unused
-sympy/integrals/risch.py:7: 'Atom' imported but unused
-sympy/integrals/risch.py:8: 'Integer' imported but unused
-sympy/integrals/deltafunctions.py:2: 'Symbol' imported but unused
-sympy/integrals/deltafunctions.py:2: 'S' imported but unused
-sympy/integrals/deltafunctions.py:2: 'Wild' imported but unused
-sympy/integrals/integrals.py:2: 'Pow' imported but unused
-sympy/integrals/integrals.py:9: 'apart' imported but unused
 sympy/integrals/integrals.py:10: 'limit' imported but unused
 sympy/integrals/integrals.py:13: 'DiracDelta' imported but unused
 sympy/integrals/integrals.py:13: 'Heaviside' imported but unused
-sympy/integrals/integrals.py:111: redefinition of unused 'limit' from line 10
-sympy/integrals/__init__.py:8: 'integrate' imported but unused
-sympy/integrals/__init__.py:8: 'line_integrate' imported but unused
-sympy/integrals/__init__.py:8: 'Integral' imported but unused
-sympy/integrals/tests/test_rationaltools.py:4: 'log_to_atan' imported but
-unused
-sympy/integrals/tests/test_rationaltools.py:4: 'log_to_real' imported but
-unused
-sympy/integrals/tests/test_rationaltools.py:4: 'ratint_ratpart' imported
-but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'cos' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'Integral' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'sympify' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'integrate' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'diff' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'pi' imported but unused
-sympy/integrals/tests/test_lineintegrals.py:1: 'sin' imported but unused
-sympy/integrals/tests/test_integrals.py:1: redefinition of unused 'atan'
-from line 1
-sympy/integrals/tests/test_integrals.py:1: 'I' imported but unused
-sympy/integrals/tests/test_integrals.py:5: 'skip' imported but unused
-sympy/integrals/tests/test_integrals.py:5: 'XFAIL' imported but unused
-
-
+```
 it finds (among other things) that the Heaviside is imported but never
-used, so it should be removed. 
+used, so it should be removed.
+
+There is also pychecker, which shows a lot of things similar to this (I can't get pyflakes to work, so I can't say if it 
+does more or not).  You can just install and run pychecker sympy --limit 1000 to see them all (it takes a few 
+minutes to run).
+
+Note that there are lots of warnings coming from polys/densepolys.py, polys/densetools.py and polys/sparsepolys.py, but these modules are known not to work, cf. issue 2371.
+ 
 </pre>
 
 - *Category:* QA
@@ -1037,12 +974,13 @@ Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/
 <a name="#1752"></a>
 ### [1752](http://code.google.com/p/sympy/issues/detail?id=1752&q=label%3ACodeInImportedIntoSpreadsheet) - setup.py test should run the doctests even when the regular tests fail
 <pre>
-Two things annoy me about ./setup.py test.  First, if a regular test fails, then it does not run the 
+Two things annoy me about `./setup.py test`.  First, if a regular test fails, then it does not run the 
 doctests.  But this is supposed to be a shortcut to both the regular tests and the doctests in one.  
 Second, if you keyboard interrupt during the tests, it then proceeds to run the doctests.  But when I 
 keyboard interrupt, I want it to stop the whole script.  
 
-I don't know how easy it would be to change the second item, but the first one should be fixable. 
+I don't know how easy it would be to change the second item, but the first one should be fixable.
+ 
 </pre>
 
 - *Category:* QA
@@ -1061,21 +999,23 @@ All tests decorated with @SKIP(&quot;TODO: sympy.physics&quot;) must be fixed.
 <a name="#1235"></a>
 ### [1235](http://code.google.com/p/sympy/issues/detail?id=1235&q=label%3ACodeInImportedIntoSpreadsheet) - Problem installing in Windows
 <pre>
-Hi!
-
 I've downloaded the Windows installer, and tries to run the program - but 
-I get an error message: &quot;No Python information found in the registry&quot;. But 
+I get an error message: "No Python information found in the registry". But 
 I have Python installed.
 
 This is what I get when running the Python command in the command line:
 
-&quot;C:\Users\Fredrik\Documents\programme\discalc&gt;PYTHON
-Python 2.5.1 (<a href="/p/sympy/source/detail?r=251">r251</a>:54863, Apr 18 2007, 08:51:08) [MSC v.1310 32 bit 
+"C:\Users\Fredrik\Documents\programme\discalc>PYTHON
+Python 2.5.1 (r251:54863, Apr 18 2007, 08:51:08) [MSC v.1310 32 bit 
 (Intel)] on win32
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;&quot;
+Type "help", "copyright", "credits" or "license" for more information.
+>>>"
 
-Thanks for any answer. 
+Thanks for any answer.
+
+The problem is that we need someone with a 64-bit Windows machine to volunteer to do it (see #16).
+
+ 
 </pre>
 
 - *Category:* Research
@@ -1191,33 +1131,24 @@ The same sort of problems exist for Add: while `sqrt(2) + sqrt(6)` is definitely
 <a name="#615"></a>
 ### [615](http://code.google.com/p/sympy/issues/detail?id=615&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the occasions where functions are called with wrong name and write tests
 <pre>
-/home/matt/hg/sympy/sympy/functions/elementary/exponential.py in
-_eval_subs(self, old, new)
-    125         o = old
-    126         if isinstance(old, Basic.Pow): # handle
-(exp(3*log(x))).subs(x**2, z) -&gt; z**(3/2)
---&gt; 127             old = exp(old.exp * S.Log(old.base))
-    128         if isinstance(old, exp):
-    129             b,e = self.as_base_exp()
 
-/home/matt/hg/sympy/sympy/core/basic.py in __getattr__(self, clsname)
-   1293         obj = Singleton.__dict__.get(clsname)
-   1294         if obj is None:
--&gt; 1295             cls = getattr(Basic, clsname)
-   1296             assert issubclass(cls, Singleton),`cls`
-   1297             obj = cls()
-
-/home/matt/hg/sympy/sympy/core/basic_methods.py in __getattr__(cls, name)
+```
+    /home/matt/hg/sympy/sympy/core/basic_methods.py in __getattr__(cls, name)
     216         try: return MetaBasicMeths.classnamespace[name]
     217         except KeyError: pass
---&gt; 218         raise AttributeError(&quot;'%s' object has no attribute '%s'&quot;%
+--> 218         raise AttributeError("'%s' object has no attribute '%s'"%
     219                              (cls.__name__, name))
     220 
+```
 
-AttributeError: 'Basic' object has no attribute 'Log'
+AttributeError: 'Basic' object has no attribute 'Log'.
 
 Some time ago functions were renamed but in many places there are old names
-left, this should be fixed soon. 
+left, this should be fixed soon.
+
+And especially tests need to be written to catch these bugs. Because what is
+not tested for is broken.
+ 
 </pre>
 
 - *Category:* Code
@@ -1226,43 +1157,34 @@ left, this should be fixed soon.
 <a name="#654"></a>
 ### [654](http://code.google.com/p/sympy/issues/detail?id=654&q=label%3ACodeInImportedIntoSpreadsheet) - Remove dead code from _eval_subs()
 <pre>
-&gt; &gt; diff --git a/sympy/functions/elementary/exponential.py b/sympy/functions=
-/elementary/exponential.py
-&gt; &gt; --- a/sympy/functions/elementary/exponential.py
-&gt; &gt; +++ b/sympy/functions/elementary/exponential.py
-&gt; &gt; @@ -13,7 +13,7 @@ class exp(Function):
-&gt; &gt;              raise ArgumentIndexError(self, argindex)
-&gt; &gt;
-&gt; &gt;      def inverse(self, argindex=3D1):
-&gt; &gt; -        return S.Log
-&gt; &gt; +        return log
-&gt; &gt;
-&gt; &gt;      @classmethod
-&gt; &gt;      def _eval_apply_subs(self, *args):
-&gt; &gt; @@ -124,7 +124,7 @@ class exp(Function):
-&gt; &gt;          arg =3D self.args[0]
-&gt; &gt;          o =3D old
-&gt; &gt;          if isinstance(old, Basic.Pow): # handle (exp(3*log(x))).subs(x*=
-*2, z) -&gt; z**(3/2)
-&gt; &gt; -            old =3D exp(old.exp * S.Log(old.base))
-&gt; &gt; +            old =3D exp(old.exp * log(old.base))
-&gt; &gt;          if isinstance(old, exp):
-&gt; &gt;              b,e =3D self.as_base_exp()
-&gt; &gt;              bo,eo =3D old.as_base_exp()
-&gt;=20
-&gt; I would suggest to either write tests, or remove the code.
-&gt;=20
-&gt; But yes, this patch can go in, but unless there are tests for this, I
-&gt; don't see any point of having such a code.
-
 It seems this piece of code is never (?) executed in sympy since
 exp(3*log(x)) canonize to x**3.
 
+```
+--- a/sympy/functions/elementary/exponential.py
+@@ -13,7 +13,7 @@ class exp(Function):
+             raise ArgumentIndexError(self, argindex)
+
+     def inverse(self, argindex=3D1):
+-        return S.Log
++        return log
+
+     @classmethod
+     def _eval_apply_subs(self, *args):
+@@ -124,7 +124,7 @@ class exp(Function):
+         arg =3D self.args[0]
+         o =3D old
+         if isinstance(old, Basic.Pow): # handle (exp(3*log(x))).subs(x*=
+*2, z) -&gt; z**(3/2)
+-            old =3D exp(old.exp * S.Log(old.base))
++            old =3D exp(old.exp * log(old.base))
+```
+
 On the other hand when autoevaluation would be turned off exp(3*log(x))
 will be just that -- so there should be a test which constructs
-unevaluated exp(3*log(x)) and calls subs.
+unevaluated exp(3*log(x), evaluate=False) and calls subs.
 
-I'm not sure how to do it now, please advise. 
+ 
 </pre>
 
 - *Category:* Code
@@ -1271,13 +1193,16 @@ I'm not sure how to do it now, please advise.
 <a name="#1058"></a>
 ### [1058](http://code.google.com/p/sympy/issues/detail?id=1058&q=label%3ACodeInImportedIntoSpreadsheet) - Classifying formulas
 <pre>
-I've written some code for determining the &quot;class&quot; of a formula. The
+
+Finish this innovation.
+
+I've written some code for determining the "class" of a formula. The
 function classify(expr, x) walks the expression top-down and at each level
 classifies it as a function of x. It distinguishes between various classes
 of functions, including:
 
 * linear expressions
-* polynomials (degree &gt; 1)
+* polynomials (degree > 1)
 * rational functions
 * algebraic roots
 * exponentials
@@ -1286,66 +1211,19 @@ of functions, including:
 * etc
 
 It then recursively classifies all subexpressions and returns the path with
-the &quot;greatest&quot; complexity. The following test outputs should hopefully make
+the "greatest" complexity. The following test outputs should hopefully make
 it more clear:
 
+```py
 pi []
 1 + 3*x [LINEAR]
 3*x + x**2 [POLYNOMIAL]
-(1 + pi)*(5 + 4*x) [LINEAR]
-(1 + pi)*(5 + E*(pi + 8*x)) [LINEAR]
-(1 + 2*x)*(5 + 4*x) [POLYNOMIAL]
-1/x [RATIONAL]
-1/(1 + 2*x) [RATIONAL]
-1/(2*x + x**2) [RATIONAL]
-(1 + x)/(1 - x) [RATIONAL]
-(4 + x)/(2*x + x**2) [RATIONAL]
-(4 + x)/(2*x + x**2) + x**2 [RATIONAL]
-x**2*(4 + x)/(2*x + x**2) [RATIONAL]
-(1 + 3*x)**(1/2) [ROOT, LINEAR]
-x**(3/2) [ROOT, LINEAR]
-x**pi [EXP, LINEAR, LOG]
 2*x + exp(1 + 2*x) + exp(4 + 3*x) [LINEAR, EXP, LINEAR]
 2*x + (exp(3*x) + exp(1 + x))/(1 + 5*x) [RATIONAL, EXP, LINEAR]
 2*x + sin(1 + 2*x)**2 + cos(4 + x)**4 [POLYNOMIAL, TRIGONOMETRIC, LINEAR]
-2*x + (sin(1 + 2*x)**2 + cos(4 + x)**4)/(1 + 5*x) [RATIONAL, TRIGONOMETRIC,
-LINEAR]
-2**x [EXP, LINEAR]
-x**x [EXP, LOG, LINEAR]
-(1 + 2*x)**x [EXP, LOG, LINEAR]
-(1 + acosh(x))**x [EXP, LOG, LINEAR, INVHYPERBOLIC, LINEAR]
-exp(exp(x)) [EXP, EXP, LINEAR]
-exp(exp(1/x)) [EXP, EXP, RATIONAL]
-exp(exp(x)) + exp(exp(1/x)) [LINEAR, EXP, EXP, RATIONAL]
-exp(gamma(x)**2) [EXP, POLYNOMIAL, NONELEMENTARY, LINEAR]
 
-(The trailing LINEAR for f(a*x+b) could perhaps be dropped when a*x+b is
-actually precisely x.)
 
-The classification gives an ordering roughly similar to (though more coarse
-than) that used in integral tables like Gradshteyn and Ryzhik. I think this
-could be used by various symbolic algorithms to decide which heuristic
-algorithms to try. For example, integrate could choose heuristics among
-these (and other) cases:
-
-[POLYNOMIAL] -- use a polynomial integrator
-[RATIONAL] -- use a rational integrator
-[LINEAR ROOT, LINEAR] -- try looking up a direct formula in a table
-[LINEAR, NONELEMENTARY, LINEAR] -- try looking up a formula in a table
-[POLYNOMIAL, TRIGONOMETRIC, LINEAR] -- try the integrator for trigonometric
-polynomials
-
-There is a clear advantage to the fact that only a single pass through the
-expression is required, instead of requiring every heuristic to &quot;smell&quot; the
-expression. So it becomes cheaper to have lots of special-purpose heuristics.
-
-The output can also be used to determine whether a function is elementary,
-transcendental, etc.
-
-What do you think? Where should the code go, does it need improvements,
-should the SYMBOLS perhaps be something else (e.g. strings)? Maybe return
-an object with __eq__, __le__ methods etc so that computed classifications
-can be compared more easily in terms of the complexity() measure? 
+ 
 </pre>
 
 - *Category:* Code
@@ -1675,9 +1553,10 @@ Expr needs a docstring. The split between Basic and Expr must be explained.
 <a name="#2115"></a>
 ### [2115](http://code.google.com/p/sympy/issues/detail?id=2115&q=label%3ACodeInImportedIntoSpreadsheet) - Move stuff from the Google Code SVN to git
 <pre>
-Everything from here <a href="http://code.google.com/p/sympy/source/browse/" rel="nofollow">http://code.google.com/p/sympy/source/browse/</a> needs to be moved either to the GitHub wiki or the main repo.  Details on how to checkout the files on your computer are here: <a href="http://code.google.com/p/sympy/source/checkout" rel="nofollow">http://code.google.com/p/sympy/source/checkout</a>.  Does anyone know how to transfer svn to git without losing the history?
+Everything from here http://code.google.com/p/sympy/source/browse/ needs to be moved either to the GitHub wiki or the main repo.  Details on how to checkout the files on your computer are here: http://code.google.com/p/sympy/source/checkout.  Does anyone know how to transfer svn to git without losing the history?
 
-By the way, this includes the Google Code wiki pages in it. 
+By the way, this includes the Google Code wiki pages in it.
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1686,41 +1565,9 @@ By the way, this includes the Google Code wiki pages in it.
 <a name="#2160"></a>
 ### [2160](http://code.google.com/p/sympy/issues/detail?id=2160&q=label%3ACodeInImportedIntoSpreadsheet) - List of dependencies
 <pre>
-We should include in the README, and probably in the docs somewhere too, a list of all the &quot;dependencies&quot; of SymPy.  Now, obviously, SymPy's only dependency is Python, but there are several optional dependencies like IPython and gmpy that are not required but extent the capabilities of SymPy if they are installed. 
+We should include in the README, and probably in the docs somewhere too, a list of all the "dependencies" of SymPy.  Now, obviously, SymPy's only dependency is Python, but there are several optional dependencies like IPython and gmpy that are not required but extent the capabilities of SymPy if they are installed. 
 
-I am putting this here instead of just doing it and making a pull request because I don't know exactly how things work with things like numpy and scipy, and I also don't know if I am forgetting anything.  So far, I have this:
-
-&quot;&quot;&quot;
-Dependencies
-------------
-
-One of the fundamental design decisions behind SymPy is that it should not have any external dependencies besides Python to install.  Therefore, the only real &quot;dependency&quot; of SymPy is an installation of Python 2.4, 2.5, 2.6, or 2.7 (note that Python 2.4 support is deprecated and will no longer work in the next release).
-
-However, there are several packages that are not required to use SymPy, but that will enhance SymPy if they are installed.  These packages are:
-
-- IPython (<a href="http://ipython.scipy.org/moin/" rel="nofollow">http://ipython.scipy.org/moin/</a>).  IPython is a third party Python interactive shell that has many more features over the built-in Python interactive shell, such as tab-completetion and [what other important features should I mention here?].  If IPython is installed, isympy will automatically use it.  Otherwise, it will fall back to the regular Python interactive shell.  You can override this behavior by setting the -c option to isympy, like `isympy -c python`.
-
-- gmpy (<a href="http://code.google.com/p/gmpy/" rel="nofollow">http://code.google.com/p/gmpy/</a>). gmpy is a Python wrapper around the GNU Multiple Precision Arithmetic Library (GMP). If gmpy is installed, it may make certain operations in SymPy faster, because it will use gmpy as the ground type instead of the built-in Python ground types.  If gmpy is not installed, it will fall back to the default Python ground types.  You can override this behavior by setting the SYMPY_GROUND_TYPES environment variable, such as `SYMPY_GROUND_TYPES=python isympy`. [Note: this should be an option to isympy!]
-
-- Cython. [What exactly is the situation with Cython?]
-
-- Numpy. [Ditto]
-
-- Scipy. [Ditto]
-
-- [Code generation dependencies?]
-
-- [Other dependencies?]
-
-Note that mpmath and pyglet, our floating point and plotting libraries respectively, are included with SymPy, so it is unnecessary to install them.  Indeed, SymPy will always use the version of mpmath or pyglet that comes with SymPy, even if a newer version is installed in the system.  This is done for compatibility reasons.
-
-&quot;&quot;&quot;
-
-OK, the text in [] are comments.  I need help from others writing the rest of this.  Note that I do not want to include any development dependencies here (like Sphinx), because the user does not care about that (maybe we could have that list somewhere else in our development docs).   
-
-But basically for the others, explain what happens when they are installed and what happens when they are not (and how to override, if relevant).  
-
-I just realized that the best way to do this would be through the wiki.  So if anyone has anything to add to this, please do it at <a href="https://github.com/sympy/sympy/wiki/Dependencies" rel="nofollow">https://github.com/sympy/sympy/wiki/Dependencies</a>.  And then when we have it finished we can add it to the README and regular docs. 
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1953,12 +1800,16 @@ We have a page on the wiki[1] that should list (scientific) papers mentioning Sy
 <a name="#1616"></a>
 ### [1616](http://code.google.com/p/sympy/issues/detail?id=1616&q=label%3ACodeInImportedIntoSpreadsheet) - Bug in subs
 <pre>
+
+```py
 In [1]: c2,c3,q1p,q2p,c1,s1,s2,s3= symbols('c2 c3 q1p q2p c1 s1 s2 s3')
 
 In [2]: test=c2**2*q2p*c3 + c1**2*s2**2*q2p*c3 + s1**2*s2**2*q2p*c3 -
 c1**2*q1p*c2*s3 - s1**2*q1p*c2*s3
+```
 
 In [3]: test.subs({c1**2 : 1-s1**2, c2**2 : 1-s2**2, c3**3: 1-s3**2})
+
 ERROR: An unexpected error occurred while tokenizing input           
 The following traceback may be corrupted or invalid                  
 The error message is: ('EOF in multi-line statement', (22, 0))       
@@ -1966,254 +1817,9 @@ The error message is: ('EOF in multi-line statement', (22, 0))
 ERROR: An unexpected error occurred while tokenizing input
 The following traceback may be corrupted or invalid       
 The error message is: ('EOF in multi-line statement', (96, 0))
+```
 
----------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-
-/home/luke/lib/python/sympy/&lt;ipython console&gt; in &lt;module&gt;()
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1021             sequence = args[0]                               
-   1022             if isinstance(sequence, dict):                   
--&gt; 1023                 return self._subs_dict(sequence)             
-   1024             elif isinstance(sequence, (list, tuple)):        
-   1025                 return self._subs_list(sequence)             
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_dict(self, sequence)
-   1111                 subst.append(pattern)                                 
-   1112         subst.reverse()                                               
--&gt; 1113         return self._subs_list(subst)                                 
-   1114                                                                       
-   1115     def _seq_subs(self, old, new):                                    
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_list(self, sequence)
-   1064         for old, new in sequence:                                     
-   1065             if hasattr(result, 'subs'):                               
--&gt; 1066                 result = result.subs(old, new)                        
-   1067         return result                                                 
-   1068                                                                       
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1028         elif len(args) == 2:                                 
-   1029             old, new = args                                  
--&gt; 1030             return self._subs_old_new(old, new)              
-   1031         else:                                                
-   1032             raise TypeError(&quot;subs accepts either 1 or 2 arguments&quot;)
-
-/home/luke/lib/python/sympy/sympy/core/cache.pyc in wrapper(*args, **kw_args)
-     83         except KeyError:                                             
-     84             pass                                                     
----&gt; 85         func_cache_it_cache[k] = r = func(*args, **kw_args)          
-     86         return r                                                     
-     87                                                                      
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_old_new(self,
-old, new)
-   1037         old = sympify(old)                                        
-      
-   1038         new = sympify(new)                                        
-      
--&gt; 1039         return self._eval_subs(old, new)                          
-      
-   1040                                                                   
-      
-   1041     def _eval_subs(self, old, new):                               
-      
-
-/home/luke/lib/python/sympy/sympy/core/add.pyc in _eval_subs(self, old, new)
-    310                     ret_set = self_set - old_set                    
-    311                     return Add(new, coeff_self, -coeff_old,
-*[s._eval_subs(old, new) for s in ret_set])
---&gt; 312         return self.__class__(*[s._eval_subs(old, new) for s in
-self.args])                            
-    313                                                                   
-                                    
-    314     @cacheit                                                      
-                                    
-
-/home/luke/lib/python/sympy/sympy/core/mul.pyc in _eval_subs(self, old, new)
-    809                     # collect commutative terms                     
-
-    810                     else:
---&gt; 811                         comms_final.remove(ele)
-    812                                                
-    813                 # continue only if all commutative terms in old are
-present
-
-
-ValueError: list.remove(x): x not in list
-
-In [4]: test.subs({c1**2 : 1-s1**2})
-Out[4]:                             
-         2 ⎛      2⎞             ⎛      2⎞            2            2   2  
-            2
-c₃⋅q2p⋅s₂ ⋅⎝1 - s₁ ⎠ - c₂⋅q1p⋅s₃⋅⎝1 - s₁ ⎠ + c₃⋅q2p⋅c₂  + c₃⋅q2p⋅s₁ ⋅s₂  -
-c₂⋅q1p⋅s₃⋅s₁ 
-
-In [5]: test.subs({c2**2 : 1-s2**2})
-ERROR: An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid       
-The error message is: ('EOF in multi-line statement', (22, 0))
-
-ERROR: An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid       
-The error message is: ('EOF in multi-line statement', (96, 0))
-
----------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-
-/home/luke/lib/python/sympy/&lt;ipython console&gt; in &lt;module&gt;()
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1021             sequence = args[0]                               
-   1022             if isinstance(sequence, dict):                   
--&gt; 1023                 return self._subs_dict(sequence)             
-   1024             elif isinstance(sequence, (list, tuple)):        
-   1025                 return self._subs_list(sequence)             
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_dict(self, sequence)
-   1111                 subst.append(pattern)                                 
-   1112         subst.reverse()                                               
--&gt; 1113         return self._subs_list(subst)                                 
-   1114                                                                       
-   1115     def _seq_subs(self, old, new):                                    
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_list(self, sequence)
-   1064         for old, new in sequence:                                     
-   1065             if hasattr(result, 'subs'):                               
--&gt; 1066                 result = result.subs(old, new)                        
-   1067         return result                                                 
-   1068                                                                       
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1028         elif len(args) == 2:                                 
-   1029             old, new = args                                  
--&gt; 1030             return self._subs_old_new(old, new)              
-   1031         else:                                                
-   1032             raise TypeError(&quot;subs accepts either 1 or 2 arguments&quot;)
-
-/home/luke/lib/python/sympy/sympy/core/cache.pyc in wrapper(*args, **kw_args)
-     83         except KeyError:                                             
-     84             pass                                                     
----&gt; 85         func_cache_it_cache[k] = r = func(*args, **kw_args)          
-     86         return r                                                     
-     87                                                                      
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_old_new(self,
-old, new)
-   1037         old = sympify(old)                                        
-      
-   1038         new = sympify(new)                                        
-      
--&gt; 1039         return self._eval_subs(old, new)                          
-      
-   1040                                                                   
-      
-   1041     def _eval_subs(self, old, new):                               
-      
-
-/home/luke/lib/python/sympy/sympy/core/add.pyc in _eval_subs(self, old, new)
-    310                     ret_set = self_set - old_set                    
-    311                     return Add(new, coeff_self, -coeff_old,
-*[s._eval_subs(old, new) for s in ret_set])
---&gt; 312         return self.__class__(*[s._eval_subs(old, new) for s in
-self.args])                            
-    313                                                                   
-                                    
-    314     @cacheit                                                      
-                                    
-
-/home/luke/lib/python/sympy/sympy/core/mul.pyc in _eval_subs(self, old, new)
-    809                     # collect commutative terms                     
-
-    810                     else:
---&gt; 811                         comms_final.remove(ele)
-    812                                                
-    813                 # continue only if all commutative terms in old are
-present
-
-
-ValueError: list.remove(x): x not in list
-
-In [6]: test.subs({c3**2 : 1-s3**2})
-ERROR: An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid       
-The error message is: ('EOF in multi-line statement', (22, 0))
-
-ERROR: An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid       
-The error message is: ('EOF in multi-line statement', (96, 0))
-
----------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-
-/home/luke/lib/python/sympy/&lt;ipython console&gt; in &lt;module&gt;()
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1021             sequence = args[0]                               
-   1022             if isinstance(sequence, dict):                   
--&gt; 1023                 return self._subs_dict(sequence)             
-   1024             elif isinstance(sequence, (list, tuple)):        
-   1025                 return self._subs_list(sequence)             
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_dict(self, sequence)
-   1111                 subst.append(pattern)                                 
-   1112         subst.reverse()                                               
--&gt; 1113         return self._subs_list(subst)                                 
-   1114                                                                       
-   1115     def _seq_subs(self, old, new):                                    
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_list(self, sequence)
-   1064         for old, new in sequence:                                     
-   1065             if hasattr(result, 'subs'):                               
--&gt; 1066                 result = result.subs(old, new)                        
-   1067         return result                                                 
-   1068                                                                       
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in subs(self, *args)
-   1028         elif len(args) == 2:
-   1029             old, new = args
--&gt; 1030             return self._subs_old_new(old, new)
-   1031         else:
-   1032             raise TypeError(&quot;subs accepts either 1 or 2 arguments&quot;)
-
-/home/luke/lib/python/sympy/sympy/core/cache.pyc in wrapper(*args, **kw_args)
-     83         except KeyError:
-     84             pass
----&gt; 85         func_cache_it_cache[k] = r = func(*args, **kw_args)
-     86         return r
-     87
-
-/home/luke/lib/python/sympy/sympy/core/basic.pyc in _subs_old_new(self,
-old, new)
-   1037         old = sympify(old)
-   1038         new = sympify(new)
--&gt; 1039         return self._eval_subs(old, new)
-   1040
-   1041     def _eval_subs(self, old, new):
-
-/home/luke/lib/python/sympy/sympy/core/add.pyc in _eval_subs(self, old, new)
-    310                     ret_set = self_set - old_set
-    311                     return Add(new, coeff_self, -coeff_old,
-*[s._eval_subs(old, new) for s in ret_set])
---&gt; 312         return self.__class__(*[s._eval_subs(old, new) for s in
-self.args])
-    313
-    314     @cacheit
-
-/home/luke/lib/python/sympy/sympy/core/mul.pyc in _eval_subs(self, old, new)
-    809                     # collect commutative terms
-
-    810                     else:
---&gt; 811                         comms_final.remove(ele)
-    812
-    813                 # continue only if all commutative terms in old are
-present
-
-
-ValueError: list.remove(x): x not in list
-
-In [7]: 
+ 
 </pre>
 
 - *Category:* QA
@@ -2247,14 +1853,11 @@ I think there is a consensus about the requirements for inclusion of a (nontrivi
 3. Wait at least 24 hours before pushing it in.
 
 
-I think it should be easily accessible from the website [1], probably from the README too. It should be clear to newcomers that not only contribution is very welcome, but also reviewing patches. (The latter currently lacks somewhat imho.) People new to sympy should not be afraid to review patches.
+I think it should be easily accessible from the website [1](http://sympy.org/development.html), probably from the README too. It should be clear to newcomers that not only contribution is very welcome, but also reviewing patches. (The latter currently lacks somewhat imho.) People new to sympy should not be afraid to review patches.
 
-Maybe there should even be a short how-to about reviewing patches.
+Maybe there should even be a short **how-to about reviewing patches**.
 
-What do you think?
-
-
-[1] <a href="http://sympy.org/development.html" rel="nofollow">http://sympy.org/development.html</a> 
+ 
 </pre>
 
 - *Category:* Training
