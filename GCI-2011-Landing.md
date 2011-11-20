@@ -51,7 +51,7 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
     c) Assign your read-and-write repo to a remote called "github". That means that you connect the remote repository (that you have created on github) to your local repository (that you have created with the clone command). You will use your local repository to make changes to the code. Then you will communicate those changes to your remote repository (that is you will _push the commits_) so we can see them.
 
-        $ git remote add github git@github.com:mynick/sympy.git
+        $ git remote add github git@github.com:YOUR-USERNAME/sympy.git
 
 2. Create a git branch for your task and make it the current working branch. Creating a branch is the way to isolate your changes from the main stable state of the code (also called _master_).
 
@@ -73,7 +73,7 @@ Be aware that there is also a code style tests that warns you if your code is ba
         $ git push github your_task_branch
 Another way is to use the `git gui` command that gives you a graphical interface.
 
-6. Create the pull request: navigate to https://github.com/<YOUR-USERNAME>/sympy, select your task's branch, and press the *Pull Request* button.
+6. Create the pull request: navigate to https://github.com/YOUR-USERNAME/sympy, select your task's branch, and press the *Pull Request* button.
 
 
 Everyone is welcome to join and to implement new feature, fix some bug, give
@@ -83,9 +83,17 @@ other's work so that many eyes can see more thus raising the quality.
 ### Contact us
 
 General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
-mailing list. Some discussion also takes place on IRC (our channel is [#sympy at freenode](irc://irc.freenode.net/sympy)).
+mailing list. Some discussion also takes place on IRC (our channel is #sympy at freenode: irc://irc.freenode.net/sympy).
 
 ## Development Guidelines
+
+Please follow the standard code style, as recommended by Style Guide for Python Code ([PEP-0008](http://www.python.org/dev/peps/pep-0008), [PEP-0257](http://www.python.org/dev/peps/pep-0257)). In particular:
+
+- use four spaces instead of tabs for indentation levels.
+- the name of the functions should be lowercase with words separated by underscores: `def set_some_value():`
+- the name of classes should be CamelCase: `class PolynomialRing(object):`
+
+Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
 
 _Talk about running tests, code style, doctests, docstrings, etc. Don't forget the importance of adding tests for every fixed bug or new functionality._
 
