@@ -1,6 +1,6 @@
 # GCI 2011 Landing
 
-This is our landing page for students wishing to participated in Google Code-In 2011 with SymPy.
+This is our landing page for students wishing to participate in Google Code-In 2011 with SymPy.
 
 ## SymPy
 
@@ -12,7 +12,7 @@ Symbolic computing systems, also called computer algebra systems (CASs) are used
 
 What does it mean to solve problems symbolically?  It means that instead of giving a numerical solution, as many systems do, a CAS will derive the solution using symbolic algebra, the same way that you would do it if you were to do it by hand on paper.  So if you tell SymPy to solve the equation *x<sup>2</sup> = 2* for *x*, it will give you *&radic;2* and *-&radic;2*, *exactly*.
 
-You can see for examples [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS. This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
+You can see some [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS. This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
 
 ## How to get started
 
@@ -20,7 +20,7 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 First [install SymPy](http://code.google.com/p/sympy/wiki/DownloadInstallation) (you need to install python before that). If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
 
-Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building other software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt.
+Now that you have SymPy there are a number of ways to use it. Some people use SymPy as a library for building other software, but we will focus on interactive use: the Python interpreter permits interactive use of all of SymPy's functionality. Just start the interpreter with the `python` command from your shell or command prompt.
 
 
 ```py
@@ -40,9 +40,9 @@ Look at our [[Quick examples]].
 
 Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
 
-Most of the advanced users use a more powerful interface to the python interactive interpreter called IPython. You do not need to have it to use or contribute to sympy.
+Most of the advanced users use a more powerful interface to the python interactive interpreter called [IPython](http://ipython.org/). You do not need to have it to use or contribute to SymPy.
 
-Any one of those (python or IPython) supports the help command. Typing `help(object_of_interest)` will give you the documentation string.
+Both of these (python or IPython) support the help command. Typing `help(object_of_interest)` will give you the documentation string.
 
 ### Development Workflow
 
@@ -101,7 +101,7 @@ other's work so that many eyes can see more thus raising the quality.
 ### Contact us
 
 General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
-mailing list. Some discussion also takes place on IRC (our channel is #sympy at freenode: irc://irc.freenode.net/sympy).
+mailing list. Some discussion also takes place on IRC (our channel is #sympy at freenode: irc://irc.freenode.net/sympy). Do not hesitate to contact us for any help you might need.
 
 ## Development Guidelines
 
@@ -123,9 +123,9 @@ If you implement a new feature, write a test case for it (and as long as this te
 
 This also means, that any refactoring is easy to do, just make sure all the tests run. And because refactoring is easy, we are not afraid of making huge changes if we think the code will be more readable or simpler. If you want to find more about this kind of attitude, google the phrase "extreme programming".
 
-Every module has a suite of accompanying tests. In general, if module's code is stored in `sympy/path/modulename`, then the tests are stored in `sympy/path/modulename/tests` folder. Firther, the corresponding tests are in files `sympy/path/module_name/tests/test_something.py`, `sympy/path/module_name/tests/test_otherthings.py`,  and so on.
+Every module has a suite of accompanying tests. In general, if module's code is stored in `sympy/path/modulename`, then the tests are stored in `sympy/path/modulename/tests` folder. Furthermore, the corresponding tests are in files `sympy/path/module_name/tests/test_something.py`, `sympy/path/module_name/tests/test_otherthings.py`,  and so on.
 
-In addition, significant test for main functionality of classes and functions, must be present in the docstrings of function and classes (as a docstrings itself).
+In addition, tests for the main functionality of classes and functions must be present in the appropriate docstrings:
 
 
 ```
@@ -153,7 +153,7 @@ Tests verified by running the commands in shell:
     $ ./bin/doctest
 ```
 
-How to create and run tests written in more detail [[Running-tests]].
+How to create and run tests is written in more detail at [[Running-tests]].
 
 
 _Talk about running tests, code style, doctests, docstrings, etc. Don't forget the importance of adding tests for every fixed bug or new functionality._
