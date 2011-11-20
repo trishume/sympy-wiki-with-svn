@@ -1,6 +1,9 @@
-
-
 # GCI-2011 Task list
+
+
+The source if this page is based on the [google-malange](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc#gid=0) spreadsheet.
+
+## Categories
 
 <ul>
     <li><a href="##Hard">Hard</a></li>
