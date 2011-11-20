@@ -29,3 +29,11 @@ Project Proposals:
 * [GSoC 2011 Application Vladimir Lagunov: Expression simplification](GSoC 2011 Application Vladimir Lagunov: Expression simplification)
 * [GSoC 2011 Application Yuri Karadzhov: Parametrization and Symmetries](GSoC-2011-Application-Yuri-Karadzhov)
 * [[GSoC 2011 Application: Vladimir Perić: Porting to Python 3]]
+
+
+# Links
+- [[GSoC-2011-Ideas]] -- Ideas for Google Summer of Code projects
+- [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
+- [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
+- [[GSoC-2011-Report]] -- Report for the GSoC 2011
+- [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
