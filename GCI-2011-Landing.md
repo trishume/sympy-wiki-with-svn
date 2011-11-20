@@ -160,7 +160,7 @@ _Talk about running tests, code style, doctests, docstrings, etc. Don't forget t
 
 ## Mentors
 
-See [[GCI-2011-Mentors]] for a list of the people who will be mentoring for Google Code-In.
+See [[GCI-2011-Mentors]] for a list of the people who will be mentoring for Google Code-In. In the list you can see which areas the respective mentors work on, as well as contact information for each individual mentor. However, he preferred method of communication is through our mailing list or IRC channel (see "Contact Us", above). Specific mentors may be busy at various time throughout the program, so the best way is to contact the entire community. This is also more aligned with the way open-source development works.
 
 ## Links:
 - [[GCI-2011 Mentors]]
