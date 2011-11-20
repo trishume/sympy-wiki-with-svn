@@ -128,7 +128,7 @@ Point(0, 0)
 """
 ```
 
-The tests are checked by the command in shell:
+Tests verified by running the commands in shell:
 
 ```
     $ ./bin/test
