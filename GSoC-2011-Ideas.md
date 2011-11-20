@@ -222,3 +222,12 @@ If you are willing to mentor, please add yourself here.  I also need your link_i
 * Ronan Lamy (rlamy)
 * Santosh Lakshman (luckymurari)
 * Luis Lira (lglira) Physics
+
+
+## Links
+
+- [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
+- [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
+- [[GSoC-2011-Current-Applications]] -- A list of active proposals.
+- [[GSoC-2011-Report]] -- Report for the GSoC 2011
+- [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
