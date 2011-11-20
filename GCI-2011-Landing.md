@@ -97,7 +97,7 @@ Please follow the standard code style, as recommended by Style Guide for Python 
 
 Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
 
-# Tests and doc strings:
+### Tests and doc strings:
 
 All new features should be documented and have tests.
 
