@@ -149,3 +149,11 @@ We tried to answer all the questions above as best as we could, but ultimately, 
 # Backup Admin (Link ID):
 
 certik
+
+
+# Links
+- [[GSoC-2011-Ideas]] -- Ideas for Google Summer of Code projects
+- [[GSoC-2011-Application-Template]] -- The template for student applications for Google Summer of Code.
+- [[GSoC-2011-Current-Applications]] -- A list of active proposals.
+- [[GSoC-2011-Report]] -- Report for the GSoC 2011
+- [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
