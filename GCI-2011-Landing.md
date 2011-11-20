@@ -87,6 +87,8 @@ mailing list. Some discussion also takes place on IRC (our channel is #sympy at 
 
 ## Development Guidelines
 
+### Code style
+
 Please follow the standard code style, as recommended by Style Guide for Python Code ([PEP-0008](http://www.python.org/dev/peps/pep-0008), [PEP-0257](http://www.python.org/dev/peps/pep-0257)). In particular:
 
 - use four spaces instead of tabs for indentation levels.
@@ -94,6 +96,47 @@ Please follow the standard code style, as recommended by Style Guide for Python 
 - the name of classes should be CamelCase: `class PolynomialRing(object):`
 
 Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
+
+# Tests and doc strings:
+
+All new features should be documented and have tests.
+
+If you implement a new feature, write a test case for it (and as long as this test case passes, the feature is considered to work). If you think there is a bug, write a test case which fails and then fix the bug. If you think some other test case should be modified, please discuss it on the mailing list first. It's very important, so let's repeat it once more: if you don't write a test case for all your features that you implement/fix, it will be like you contributed nothing and just wasted your time, because those features will stop working the next time we refactor the library (and conversely, if you write tests for the new features, they will be guaranteed to work forever). 
+
+This also means, that any refactoring is easy to do, just make sure all the tests run. And because refactoring is easy, we are not afraid of making huge changes if we think the code will be more readable or simpler. If you want to find more about this kind of attitude, google the phrase "extreme programming".
+
+Every module has a suite of accompanying tests. In general, if module's code is stored in `sympy/path/modulename`, then the tests are stored in `sympy/path/modulename/tests` folder. Firther, the corresponding tests are in files `sympy/path/module_name/tests/test_something.py`, `sympy/path/module_name/tests/test_otherthings.py`,  and so on.
+
+In addition, significant test for main functionality of classes and functions, must be present in the docstrings of function and classes (as a docstrings itself).
+
+
+```
+"""The center of the ellipse.
+
+Returns
+-------
+center : number
+
+Examples
+--------
+>>> from sympy import Point, Ellipse
+>>> p1 = Point(0, 0)
+>>> e1 = Ellipse(p1, 3, 1)
+>>> e1.center
+Point(0, 0)
+
+"""
+```
+
+The tests are checked by the command in shell:
+
+```
+    $ ./bin/test
+    $ ./bin/doctest
+```
+
+How to create and run tests written in more detail [[Running-tests]].
+
 
 _Talk about running tests, code style, doctests, docstrings, etc. Don't forget the importance of adding tests for every fixed bug or new functionality._
 
