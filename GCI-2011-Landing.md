@@ -20,7 +20,7 @@ You can see for examples [[Quick examples]] to start to get an idea of the rich 
 
 First [install SymPy](http://code.google.com/p/sympy/wiki/DownloadInstallation) (you need to install python before that). If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
 
-Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building other software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt and look at our [[Quick examples]].
+Now that you have SymPy there is a number of different ways to use it. Some people use SymPy just as a library for building other software, but we will focus on the interactive use: the python interpreter permits interactive use of all of sympy's functionality. Just start the interpreter with the `python` command from your shell or command prompt.
 
 
 ```py
@@ -35,6 +35,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 sin(x)
 
 ```
+
+Look at our [[Quick examples]].
 
 Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
 
