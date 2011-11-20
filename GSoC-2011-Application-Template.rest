@@ -71,3 +71,11 @@ Answer the following questions in your proposal:
 You do not need to format your application as a question/answer format
 for the above questions, but we expect to see all of the above questions
 answered in your application somewhere.
+
+Links
+=====
+* [[GSoC-2011-Ideas]] -- Ideas for Google Summer of Code projects
+* [[GSoC-2011-Organization-Application]] -- Our application to be an organization for Google Summer of Code 2011
+* [[GSoC-Previous-Applications]] -- Some examples of successful Google Summer of Code applications from the past.
+* [[GSoC-2011-Current-Applications]] -- A list of active proposals.
+* [[GSoC-2011-Report]] -- Report for the GSoC 2011
