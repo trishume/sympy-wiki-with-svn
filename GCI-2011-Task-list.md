@@ -382,15 +382,16 @@ We should document the differences between SymPy and other mathematical systems.
 <pre>
 I tried the new live.sympy.org on my 1st gen iPod touch (iOS 3).  There are a couple of things that make the usage difficult:
 
-- Pressing both &quot;Return&quot; and &quot;Shift-Return&quot; on the keyboard just creates a newline in the input, regardless of whether the &quot;Enter/Shift-Enter&quot; popup is set to.  You can still enter the expression by pressing the &quot;Evaluate&quot; button, but it would be nice if the keyboard worked.
+- Pressing both "Return" and "Shift-Return" on the keyboard just creates a newline in the input, regardless of whether the "Enter/Shift-Enter" popup is set to.  You can still enter the expression by pressing the "Evaluate" button, but it would be nice if the keyboard worked.
 
-- There's no way to access the history.  There is no &quot;Control&quot; key on an iPod touch.
+- There's no way to access the history.  There is no "Control" key on an iPod touch.
 
 - You cannot scroll within a frame in mobile Safari, so you can't access the history of the session beyond a few inputs.
 
-- This may be an inherent problem with the fonts in iOS, but the unicode output of the result of dsolve(f(x).diff(x, x) + 2*f(x).diff(x) + f(x) - exp(x) + sin(x), f(x)) is a little off.  I'm happy to report that the LaTeX output works great, though.
+- This may be an inherent problem with the fonts in iOS, but the unicode output of the result of `dsolve(f(x).diff(x, x) + 2*f(x).diff(x) + f(x) - exp(x) + sin(x), f(x))` is a little off.  I'm happy to report that the LaTeX output works great, though.
 
-- There are a few minor issues with the size of things, which would be fixed the best if there were a mobile version of the site.  But this is a lower priority.  If the above items can be fixed, the site as it is will work just fine in a mobile environment. 
+- There are a few minor issues with the size of things, which would be fixed the best if there were a mobile version of the site.  But this is a lower priority.  If the above items can be fixed, the site as it is will work just fine in a mobile environment.
+ 
 </pre>
 
 - *Category:* UI
@@ -535,11 +536,16 @@ I think we should create a SymPyDeprecationWarning that subclasses from Deprecat
 This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
 
 <pre>
-In [1]: (1/(x*y)).subs(x*y, 2)
-Out[1]: 
+
+Incorrect example:
+
+```py
+>>> (1/(x*y)).subs(x*y, 2)
  1 
 ───
-x⋅y 
+x⋅y
+```
+ 
 </pre>
 
 - *Category:* Code
@@ -667,90 +673,19 @@ So that we have just one source of documentation to reduce confusion.
 <pre>
 Currently when we issue:
 
+```
 $ cd doc
 $ make html
+```
 
 we get a lot of errors/warnings related to improper syntax in documentation and docstrings:
 
-/home/mateusz/repo/git/sympy/doc/src/aboutus.txt:: (WARNING/2) Duplicate explicit target name: &quot;more info&quot;.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:13: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:18: (WARNING/2) Literal block expected; none found.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:22: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:39: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:48: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:60: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.as_coeff_add:16: (WARNING/2) Inline emphasis start-string without end-string.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.as_coeff_mul:16: (WARNING/2) Inline emphasis start-string without end-string.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.as_independent:4: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.as_independent:7: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.compute_leading_term:5: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.compute_leading_term:7: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.is_polynomial:3: (WARNING/2) Inline emphasis start-string without end-string.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.is_polynomial:3: (WARNING/2) Inline emphasis start-string without end-string.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.series:17: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.series:18: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.series:29: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.series:30: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/expr.py:docstring of sympy.core.expr.Expr.series:31: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/core/add.py:docstring of sympy.core.add.Add.primitive:4: (SEVERE/4) Unexpected section title.
-
-Example
-=======
-/home/mateusz/repo/git/sympy/doc/src/modules/core.txt:29: (WARNING/2) Explicit markup ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/doc/src/modules/evalf.txt:38: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Min:4: (SEVERE/4) Unexpected section title.
-
-Example
--------
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Min:27: (SEVERE/4) Unexpected section title.
-
-See Also
---------
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Max:21: (SEVERE/4) Unexpected section title.
-
-Example
--------
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Max:53: (SEVERE/4) Unexpected section title.
-
-Algorithm
----------
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Max:80: (SEVERE/4) Unexpected section title.
-
-See Also
---------
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/complexes.py:docstring of sympy.functions.elementary.complexes.sign:3: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/functions/special/delta_functions.py:docstring of sympy.functions.special.delta_functions.DiracDelta:5: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/functions/special/delta_functions.py:docstring of sympy.functions.special.delta_functions.DiracDelta:6: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/functions/special/delta_functions.py:docstring of sympy.functions.special.delta_functions.Heaviside:4: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/functions/special/delta_functions.py:docstring of sympy.functions.special.delta_functions.Heaviside:5: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/functions/special/delta_functions.py:docstring of sympy.functions.special.delta_functions.Heaviside:7: (WARNING/2) Enumerated list ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/functions/elementary/miscellaneous.py:docstring of sympy.functions.elementary.miscellaneous.Max:58: (ERROR/3) Unknown target name: &quot;1&quot;.
-/home/mateusz/repo/git/sympy/doc/src/modules/logic.txt:15: (WARNING/2) Inline substitution_reference start-string without end-string.
-/home/mateusz/repo/git/sympy/doc/src/modules/logic.txt:44: (WARNING/2) error while formatting arguments for sympy.logic.boolalg.Xor: Xor is not a Python function
-/home/mateusz/repo/git/sympy/doc/src/modules/logic.txt:46: (WARNING/2) error while formatting arguments for sympy.logic.boolalg.Nand: Nand is not a Python function
-/home/mateusz/repo/git/sympy/doc/src/modules/logic.txt:48: (WARNING/2) error while formatting arguments for sympy.logic.boolalg.Nor: Nor is not a Python function
-/home/mateusz/repo/git/sympy/doc/src/modules/logic.txt:50: (WARNING/2) error while formatting arguments for sympy.logic.boolalg.Equivalent: Equivalent is not a Python function
-/home/mateusz/repo/git/sympy/sympy/matrices/matrices.py:docstring of sympy.matrices.matrices.Matrix.print_nonzero:6: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/sympy/printing/fcode.py:docstring of sympy.printing.fcode.fcode:10: (WARNING/2) Definition list ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/printing/fcode.py:docstring of sympy.printing.fcode.fcode:12: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/printing/fcode.py:docstring of sympy.printing.fcode.fcode:13: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/sympy/simplify/simplify.py:docstring of sympy.simplify.simplify.collect:119: (ERROR/3) Inconsistent literal block quoting.
-/home/mateusz/repo/git/sympy/doc/src/modules/simplify.txt:2: WARNING: duplicate object description of sympy.simplify.simplify.powsimp, other instance in /home/mateusz/repo/git/sympy/doc/src/gotchas.txt, use :noindex: for one of them
-/home/mateusz/repo/git/sympy/doc/src/modules/simplify.txt:2: WARNING: duplicate object description of sympy.simplify.cse_main.cse, other instance in /home/mateusz/repo/git/sympy/doc/src/modules/rewriting.txt, use :noindex: for one of them
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode.ode_1st_homogeneous_coeff_best:14: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode.ode_1st_homogeneous_coeff_subs_dep_div_indep:49: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode.ode_Liouville:5: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode.ode_Liouville:30: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode.ode_separable:33: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/solvers/ode.py:docstring of sympy.solvers.ode:40: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/sympy/tensor/indexed.py:docstring of sympy.tensor.indexed.Indexed.ranges:3: (WARNING/2) Inline literal start-string without end-string.
-/home/mateusz/repo/git/sympy/sympy/utilities/autowrap.py:docstring of sympy.utilities.autowrap.autowrap:25: (WARNING/2) Inline interpreted text or phrase reference start-string without end-string.
-/home/mateusz/repo/git/sympy/doc/src/tutorial.txt:99: (WARNING/2) Explicit markup ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/doc/src/tutorial.txt:112: (ERROR/3) Unexpected indentation.
-/home/mateusz/repo/git/sympy/doc/src/tutorial.txt:113: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-/home/mateusz/repo/git/sympy/doc/src/tutorial.txt:114: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
-
-I have a branch (well, one commit) that fixes all those problems, but one (the first one). I will have to rebase it over master and I will submit a pull request. 
+```
+sympy/doc/src/aboutus.txt:: (WARNING/2) Duplicate explicit target name: "more info".
+sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:13: (ERROR/3) Inconsistent literal block quoting.
+...
+```
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1141,29 +1076,30 @@ pi []
 <pre>
 So my comment 8 from <a title="Arbitrary constants in indefinite integration"  href="/p/sympy/issues/detail?id=2219">issue 2219</a> made me realize something.  Consider the following:
 
-In [242]: integrate(x**2*exp(x)*sin(x), x)
-Out[242]: 
+```py
+>>> integrate(x**2*exp(x)*sin(x), x)
    x           2  x                  x                  2         x
   ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
 - ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
       2            2             2                          2      
 
-In [245]: dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
-Out[245]: 
+>>> dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
              x           2  x                  x                  2         x
             ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
 f(x) = C₁ - ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
                 2            2             2                          2      
 
-In [246]: %timeit integrate(x**2*exp(x)*sin(x), x)
+>>> %timeit integrate(x**2*exp(x)*sin(x), x)
 1 loops, best of 3: 10.7 s per loop
 
-In [247]: %timeit dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
+>>>  %timeit dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
 1 loops, best of 3: 232 ms per loop
+```
 
-dsolve() is way faster because it just computes the necessary form of the integral and solves for the undetermined coefficients.  No complicated integration algorithm is needed.  
+`dsolve()` is way faster because it just computes the necessary form of the integral and solves for the undetermined coefficients.  No complicated integration algorithm is needed.  
 
-So I think if the integral has the correct form, that internally integrate(expr, x, x, ...) should use dsolve's internal undetermined coefficient algorithms for solving f(x).diff(x, x, …) - expr.  All the necessary stuff is already in ode.py, including the function that checks if expr is of the correct form. 
+So I think if the integral has the correct form, that internally `integrate(expr, x, x, ...)` should use dsolve's internal undetermined coefficient algorithms for solving `f(x).diff(x, x, …)` - expr.  All the necessary stuff is already in ode.py, including the function that checks if expr is of the correct form.
+ 
 </pre>
 
 - *Category:* Code
@@ -1172,7 +1108,8 @@ So I think if the integral has the correct form, that internally integrate(expr,
 <a name="#2427"></a>
 ### [2427](http://code.google.com/p/sympy/issues/detail?id=2427&q=label%3ACodeInImportedIntoSpreadsheet) - Check for incorrect usage of expr.atoms() and change it to free_symbols
 <pre>
-If any code wants to know if there are variables that are free like x but not y in Integral(y, (y, 1, x)) then it should use expr.free_symbols, not .atoms(Symbol) (since that would have given x and y for the example given). The code should be checked for instances of .atoms(Symbol) to see what the author intended and corrected if necessary. 
+If any code wants to know if there are variables that are free like `x` but not `y` in `Integral(y, (y, 1, x))` then it should use expr.free_symbols, not `.atoms(Symbol)` (since that would have given x and y for the example given). The code should be checked for instances of `.atoms(Symbol)` to see what the author intended and corrected if necessary.
+ 
 </pre>
 
 - *Category:* Code
@@ -1185,18 +1122,22 @@ Please see http://code.google.com/p/sympy/issues/detail?id=2534 for full informa
 <pre>
 Now that we don't support Python 2.4, we can use with statement context managers.  One of the best places to use this is when opening a file.  You can do
 
+```py
 with open(file) as f:
     do stuff
-
+```
 instead of 
 
+```py
 f = open(file)
 do stuff
 f.close()
+```
 
 And it's not only more readable, but also the with statement context manager will automatically close the file, even if an exception is raised. 
 
-There are a handful of places in the code where we open() stuff (do git grep &quot;open\(&quot;).  Remember that to support the with statement in Python 2.5, you have to add &quot;from __future__ import with_statement&quot; to the top of the file. 
+There are a handful of places in the code where we open() stuff (do git grep "open\(").  Remember that to support the with statement in Python 2.5, you have to add "from __future__ import with_statement" to the top of the file.
+ 
 </pre>
 
 - *Category:* Code
@@ -1206,13 +1147,14 @@ There are a handful of places in the code where we open() stuff (do git grep &qu
 <a name="#2570"></a>
 ### [2570](http://code.google.com/p/sympy/issues/detail?id=2570&q=label%3ACodeInImportedIntoSpreadsheet) - Remove bare except statements
 <pre>
-If you do git grep &quot;except:&quot; you will see that there are several places in the code with bare except statements that should be rewritten to catch explicit exceptions.  To quote the Zen of Python:
+If you do git grep "except:" you will see that there are several places in the code with bare except statements that should be rewritten to catch explicit exceptions.  To quote the Zen of Python:
 
 Errors should never pass silently.
 Unless explicitly silenced.
 
 And to quite PEP 8:
 
+```
 - When catching exceptions, mention specific exceptions
       whenever possible instead of using a bare 'except:' clause.
 
@@ -1238,8 +1180,10 @@ And to quite PEP 8:
          2) If the code needs to do some cleanup work, but then lets
             the exception propagate upwards with 'raise'.
             'try...finally' is a better way to handle this case.
+```
 
-To be sure, some of the bare except cases in the code are correct by the above (like the ones in the test runner), but many are not. 
+To be sure, some of the bare except cases in the code are correct by the above (like the ones in the test runner), but many are not.
+ 
 </pre>
 
 - *Category:* Code
@@ -1482,9 +1426,11 @@ We should include in the README, and probably in the docs somewhere too, a list 
 <a name="#2204"></a>
 ### [2204](http://code.google.com/p/sympy/issues/detail?id=2204&q=label%3ACodeInImportedIntoSpreadsheet) - Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1
 <pre>
-After pickling and unpickling pi, a simple cos(pi) no longer nicely simplifies to -1 on its own (it does if you nsimplify it)
+After pickling and unpickling `pi`, a simple `cos(pi)` no longer nicely simplifies to -1 on its own (it does if you nsimplify it)
 
 Code:
+
+```
 $ cat test.py 
 from sympy import *
 from pickle import *
@@ -1510,7 +1456,9 @@ cos(pi)
 Expected output:
 -1
 -1
--1 
+-1
+```
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1519,17 +1467,18 @@ Expected output:
 <a name="#2367"></a>
 ### [2367](http://code.google.com/p/sympy/issues/detail?id=2367&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy's readthedocs documentation is broken
 <pre>
-See <a href="http://readthedocs.org/docs/sympy/en/latest/" rel="nofollow">http://readthedocs.org/docs/sympy/en/latest/</a>.  It just shows
+See http://readthedocs.org/docs/sympy/en/latest/  It just shows
 
-&quot;&quot;&quot;
+"""
 This is an automaticaly generated API documentation from SymPy sources.
 
 Click the “modules” (Module Index) link in the top right corner to browse the modules.
 
 Or click the “index” to see an index of all SymPy functions, methods and classes.
-&quot;&quot;&quot;
+"""
 
-and that's it. 
+and that's it.
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1540,7 +1489,8 @@ and that's it.
 <pre>
 There are some methods that do have docstrings, but are not shown in the documentation (docs.sympy.org).
 
-For example, method norm in matrices.matrices.py has a docstring, but is not shown in <a href="http://docs.sympy.org/dev/modules/matrices.html" rel="nofollow">http://docs.sympy.org/dev/modules/matrices.html</a>. I thought that the bad formatting (there is no blank line after the first line of docstring) of the docstring might be the reason for this, but there are other methods with baddly formatted docstrings, that are properly shown in the documentation (e.g. method is_symmetric for matrices.matrices.py). 
+For example, method norm in matrices.matrices.py has a docstring, but is not shown in http://docs.sympy.org/dev/modules/matrices.html. I thought that the bad formatting (there is no blank line after the first line of docstring) of the docstring might be the reason for this, but there are other methods with baddly formatted docstrings, that are properly shown in the documentation (e.g. method `is_symmetric` for `matrices.matrices.py`).
+ 
 </pre>
 
 - *Category:* Documentation
@@ -1734,7 +1684,8 @@ The error message is: ('EOF in multi-line statement', (96, 0))
 <a name="#2493"></a>
 ### [2493](http://code.google.com/p/sympy/issues/detail?id=2493&q=label%3ACodeInImportedIntoSpreadsheet) - Clean up test_lambdify.py
 <pre>
-test_lambdify.py has a bunch of try blocks that should be using raises(). 
+`test_lambdify.py` has a bunch of try blocks that should be using `raises()`.
+ 
 </pre>
 
 - *Category:* QA
