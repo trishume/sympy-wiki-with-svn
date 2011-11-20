@@ -584,111 +584,13 @@ Each solver should be a separate Code-In task.
 <pre>
 In Dev version
 
-&gt;&gt;&gt; import sympy
-&gt;&gt;&gt; x = sympy.Symbol('x')
-&gt;&gt;&gt; i = sympy.integrate(sympy.Abs(x), (x, -1, 1))
-&gt;&gt;&gt; i.n()
-
-/env/src/sympy/sympy/core/evalf.pyc in evalf(self, n, subs, maxn, chop, strict, quad, verbose)
-   1022             options['quad'] = quad
-   1023         try:
--&gt; 1024             result = evalf(self, prec+4, options)
-   1025         except NotImplementedError:
-   1026             # Fall back to the ordinary evalf
+```
+>>> import sympy
+>>> x = sympy.Symbol('x')
+>>> i = sympy.integrate(sympy.Abs(x), (x, -1, 1))
+>>> i.n()
 
 
-/env/src/sympy/sympy/core/evalf.pyc in evalf(x, prec, options)
-    954     try:
-    955         rf = evalf_table[x.func]
---&gt; 956         r = rf(x, prec, options)
-    957     except KeyError:
-    958         #r = finalize_complex(x._eval_evalf(prec)._mpf_, fzero, prec)
-
-
-/env/src/sympy/sympy/core/evalf.pyc in evalf_integral(expr, prec, options)
-    741     maxprec = options.get('maxprec', INF)
-    742     while 1:
---&gt; 743         result = do_integral(expr, workprec, options)
-    744         accuracy = complex_accuracy(result)
-    745         if accuracy &gt;= prec or workprec &gt;= maxprec:
-
-/env/src/sympy/sympy/core/evalf.pyc in do_integral(expr, prec, options)
-    706             quadrature_error = MINUS_INF
-    707         else:
---&gt; 708             result, quadrature_error = quadts(f, [xlow, xhigh], error=1)
-    709             quadrature_error = fastlog(quadrature_error._mpf_)
-    710 
-
-/env/src/sympy/sympy/mpmath/calculus/quadrature.pyc in quadts(ctx, *args, **kwargs)
-    784         &quot;&quot;&quot;
-    785         kwargs['method'] = 'tanh-sinh'
---&gt; 786         return ctx.quad(*args, **kwargs)
-    787 
-    788     def quadgl(ctx, *args, **kwargs):
-
-/env/src/sympy/sympy/mpmath/calculus/quadrature.pyc in quad(ctx, f, *points, **kwargs)
-    741             ctx.prec += 20
-    742             if dim == 1:
---&gt; 743                 v, err = rule.summation(f, points[0], prec, epsilon, m, verbose)
-    744             elif dim == 2:
-    745                 v, err = rule.summation(lambda x: \
-
-/env/src/sympy/sympy/mpmath/calculus/quadrature.pyc in summation(self, f, points, prec, epsilon, max_degree, verbose)
-    230                     print(&quot;Integrating from %s to %s (degree %s of %s)&quot; % \
-    231                         (ctx.nstr(a), ctx.nstr(b), degree, max_degree))
---&gt; 232                 results.append(self.sum_next(f, nodes, degree, prec, results, verbose))
-    233                 if degree &gt; 1:
-    234                     err = self.estimate_error(results, prec, epsilon)
-
-/env/src/sympy/sympy/mpmath/calculus/quadrature.pyc in sum_next(self, f, nodes, degree, prec, previous, verbose)
-    302         else:
-    303             S = self.ctx.zero
---&gt; 304         S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
-    305         return h*S
-    306 
-
-/env/src/sympy/sympy/mpmath/ctx_mp_python.pyc in fdot(ctx, A, B, conjugate)
-    923         hasattr_ = hasattr
-    924         types = (ctx.mpf, ctx.mpc)
---&gt; 925         for a, b in A:
-    926             if type(a) not in types: a = ctx.convert(a)
-    927             if type(b) not in types: b = ctx.convert(b)
-
-/env/src/sympy/sympy/mpmath/calculus/quadrature.pyc in &lt;genexpr&gt;((x, w))
-    302         else:
-    303             S = self.ctx.zero
---&gt; 304         S += self.ctx.fdot((w,f(x)) for (x,w) in nodes)
-    305         return h*S
-    306 
-
-/env/src/sympy/sympy/core/evalf.pyc in f(t)
-    679 
-    680         def f(t):
---&gt; 681             re, im, re_acc, im_acc = evalf(func, mp.prec, {'subs':{x:t}})
-    682 
-    683             have_part[0] = re or have_part[0]
-
-/env/src/sympy/sympy/core/evalf.pyc in evalf(x, prec, options)
-    954     try:
-    955         rf = evalf_table[x.func]
---&gt; 956         r = rf(x, prec, options)
-    957     except KeyError:
-    958         #r = finalize_complex(x._eval_evalf(prec)._mpf_, fzero, prec)
-
-
-/env/src/sympy/sympy/core/evalf.pyc in evalf_abs(expr, prec, options)
-    140 
-    141 def evalf_abs(expr, prec, options):
---&gt; 142     return get_abs(expr.args[0], prec, options)
-    143 
-    144 def evalf_re(expr, prec, options):
-
-/env/src/sympy/sympy/core/evalf.pyc in get_abs(expr, prec, options)
-    125         return libmp.mpc_abs((re, im), prec), None, re_acc, None
-    126     else:
---&gt; 127         return mpf_abs(re), None, re_acc, None
-    128 
-    129 def get_complex_part(expr, no, prec, options):
 
 /env/src/sympy/sympy/mpmath/libmp/libmpf.pyc in mpf_abs(s, prec, rnd)
     653     precision. The prec argument can be omitted to generate an
@@ -697,7 +599,11 @@ In Dev version
     656     if (not man) and exp:
     657         if s == fninf:
 
-TypeError: 'NoneType' object is not iterable 
+TypeError: 'NoneType' object is not iterable
+```
+
+Marking as Code-In difficulty medium as I have no idea why this is happening.  It could actually be easy or hard.
+ 
 </pre>
 
 - *Category:* Code
@@ -1221,7 +1127,7 @@ pi []
 2*x + exp(1 + 2*x) + exp(4 + 3*x) [LINEAR, EXP, LINEAR]
 2*x + (exp(3*x) + exp(1 + x))/(1 + 5*x) [RATIONAL, EXP, LINEAR]
 2*x + sin(1 + 2*x)**2 + cos(4 + x)**4 [POLYNOMIAL, TRIGONOMETRIC, LINEAR]
-
+```
 
  
 </pre>
