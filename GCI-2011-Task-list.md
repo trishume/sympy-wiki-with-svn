@@ -1,3 +1,5 @@
+
+
 # GCI-2011 Task list
 
 
@@ -8,47 +10,34 @@ The source if this page is based on the [google-malange](https://docs.google.com
 <ul>
 <li><a href="##Medium">Medium</a>
 <ul>
-<li><a href="##2470">1/function() should be printed differently by latex printer</a></li>
-<li><a href="##2770">use pyflakes to identify simple bugs in sympy and fix them</a></li>
-<li><a href="##2771">use pyflakes to identify simple bugs in sympy and fix them</a></li>
-<li><a href="##2772">Create a SymPyDeprecationWarning for deprecated SymPy behavior</a></li>
-<li><a href="##2773">Update SymPy's Wikipedia article</a></li>
-<li><a href="##2774">(1/(x*y)).subs(x*y, whatever) doesn't work</a></li>
-<li><a href="##2775">Import all public functions and classes into Sphinx: assumptions</a></li>
-<li><a href="##2776">Import all public functions and classes into Sphinx: combinatorics</a></li>
-<li><a href="##2777">Import all public functions and classes into Sphinx: concrete</a></li>
-<li><a href="##2778">Import all public functions and classes into Sphinx: core</a></li>
-<li><a href="##2779">Import all public functions and classes into Sphinx: functions</a></li>
-<li><a href="##2780">Import all public functions and classes into Sphinx: galgebra</a></li>
-<li><a href="##2784">Import all public functions and classes into Sphinx: geometry</a></li>
-<li><a href="##2785">Import all public functions and classes into Sphinx: integrals</a></li>
-<li><a href="##2786">Import all public functions and classes into Sphinx: logic</a></li>
-<li><a href="##2787">Import all public functions and classes into Sphinx: matrices</a></li>
-<li><a href="##2788">Import all public functions and classes into Sphinx: ntheory</a></li>
-<li><a href="##2789">Import all public functions and classes into Sphinx: parsing</a></li>
-<li><a href="##2790">Import all public functions and classes into Sphinx: physics</a></li>
-<li><a href="##2791">Import all public functions and classes into Sphinx: statistics</a></li>
-<li><a href="##2792">Import all public functions and classes into Sphinx: tensor</a></li>
-<li><a href="##2793">Import all public functions and classes into Sphinx: utilities</a></li>
-<li><a href="##2794">Add isympy -c qtconsole</a></li>
-<li><a href="##2795">Translate tutorial to German</a></li>
-<li><a href="##2796">Translate tutorial to French</a></li>
-<li><a href="##2797">``See Also`` feature in Geometry</a></li>
-<li><a href="##2797">Fill in missing tests for sympy.physics module in test_args.py</a></li>
-<li><a href="##2797">Create sticker for SymPy based on the logo</a></li>
-<li><a href="##2797">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2797">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2797">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2797">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2799">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2800">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
-<li><a href="##2806">The dsolve solver for 1st_exact should use integration</a></li>
-<li><a href="##2812">Package the latest version of SymPy for the major distributions: Fink</a></li>
-<li><a href="##2815">Package the latest version of SymPy for the major distributions: MacPorts</a></li>
-<li><a href="##2817">Package the latest version of SymPy for the major distributions: Fedora</a></li>
-<li><a href="##2830">Package the latest version of SymPy for the major distributions: openSUSE</a></li>
-<li><a href="##2838">Package the latest version of SymPy for the major distributions: Slackware</a></li>
-<li><a href="##2846">Package the latest version of SymPy for the major distributions: other?</a></li>
+<li><a href="##2784">1/function() should be printed differently by latex printer</a></li>
+<li><a href="##363">Add a split() method for sympy expressions</a></li>
+<li><a href="##281">Infinity should not be a subclass of Rational</a></li>
+<li><a href="##294">Pass coverage_doctest.py</a></li>
+<li><a href="##707">move some wikis to github.com/sympy/sympy/wiki</a></li>
+<li><a href="##716">either tangent_line or is_tangent is wrong</a></li>
+<li><a href="##754">Have re and im call expand(complex=True)</a></li>
+<li><a href="##1235">Problem installing in Windows</a></li>
+<li><a href="##1456">use pyflakes to identify simple bugs in sympy and fix them</a></li>
+<li><a href="##1752">setup.py test should run the doctests even when the regular tests fail</a></li>
+<li><a href="##2470">Fix all sphinx errors and warnings</a></li>
+<li><a href="##2513">Create a SymPyDeprecationWarning for deprecated SymPy behavior</a></li>
+<li><a href="##2528">Update SymPy's Wikipedia article</a></li>
+<li><a href="##2552">(1/(x*y)).subs(x*y, whatever) doesn't work</a></li>
+<li><a href="##2632">Add isympy -c qtconsole</a></li>
+<li><a href="##2762">Investigate ways to improve substitution, pattern matching, etc.</a></li>
+<li><a href="##2764">Improve our webpage</a></li>
+<li><a href="##2766">Translate tutorial to German</a></li>
+<li><a href="##2767">Improve the interface of SymPy Live</a></li>
+<li><a href="##2770">Update stuff that SymPy can do on the homepage</a></li>
+<li><a href="##2779">``See Also`` feature in Geometry</a></li>
+<li><a href="##2786">Fill in missing tests for sympy.physics module in test_args.py</a></li>
+<li><a href="##2787">Create sticker for SymPy based on the logo</a></li>
+<li><a href="##2790">Create examples/short tutorials using IPython's notebook (IPython >= 0.12)</a></li>
+<li><a href="##2793">The dsolve solver for 1st_exact should use integration</a></li>
+<li><a href="##2794">Implement ode solvers from the Moses "Stormy Decade" paper: Almost Linear</a></li>
+<li><a href="##2795">Investigate a robust way to have translated documentation</a></li>
+<li><a href="##2796">Package the latest version of SymPy for the major distributions: Debian / Ubuntu</a></li>
 <li><a href="##2798">Research ways to extract statistics from the issue tracker</a></li>
 <li><a href="##2801">lambdify() is not mentioned anywhere</a></li>
 <li><a href="##2803">Investigate how to make the rewrite framework more flexible</a></li>
@@ -60,68 +49,344 @@ The source if this page is based on the [google-malange](https://docs.google.com
 <li><a href="##Easy">Easy</a>
 <ul>
 <li><a href="##16">Check and compare an old patch concerning object with indices against current sympy</a></li>
-<li><a href="##93">Classifying formulas</a></li>
-<li><a href="##281">Bug in subs</a></li>
-<li><a href="##294">Documentation for the Expr class</a></li>
-<li><a href="##363">Move stuff from the Google Code SVN to git</a></li>
-<li><a href="##615">sympy development rules</a></li>
-<li><a href="##654">List of dependencies</a></li>
-<li><a href="##707">Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1</a></li>
-<li><a href="##716">integrate() should use the ode module's undetermined coefficients solver when possible</a></li>
-<li><a href="##754">SymPy's readthedocs documentation is broken</a></li>
-<li><a href="##1058">Check for incorrect usage of expr.atoms() and change it to free_symbols</a></li>
-<li><a href="##1235">Clean up test_lambdify.py</a></li>
-<li><a href="##1456">Use "with open" instead of "open … close"</a></li>
-<li><a href="##1594">det() is called when inverting matrix through GE</a></li>
-<li><a href="##1616">latex(symbol_names) not working with ~x</a></li>
-<li><a href="##1752">Fix the SymPy Logo</a></li>
-<li><a href="##1817">Make video tutorials for SymPy</a></li>
-<li><a href="##1886">Make video tutorials for SymPy</a></li>
-<li><a href="##1941">Make video tutorials for SymPy</a></li>
-<li><a href="##2115">Make video tutorials for SymPy</a></li>
-<li><a href="##2157">Make video tutorials for SymPy</a></li>
-<li><a href="##2160">``See Also`` feature in Number Theory</a></li>
-<li><a href="##2204">``See Also`` feature in Combinotorics </a></li>
-<li><a href="##2276">``See Also`` feature in integrals</a></li>
-<li><a href="##2319">``See Also`` feature in functions</a></li>
-<li><a href="##2367">``See Also`` feature in functions/special</a></li>
-<li><a href="##2427">``See Also`` feature in Matrices</a></li>
-<li><a href="##2493">Use \functionname instead of \operatorname{functionname} whenever possible</a></li>
-<li><a href="##2513">Commented out tests should be XFAILed</a></li>
-<li><a href="##2521">Translate our webpage to German</a></li>
-<li><a href="##2528">Translate our webpage to French</a></li>
-<li><a href="##2534">Translate our webpage to Czech</a></li>
-<li><a href="##2552">Translate our webpage to Polish</a></li>
-<li><a href="##2570">Translate our webpage to Bulgarian</a></li>
-<li><a href="##2597">Translate our webpage to Russian</a></li>
+<li><a href="##1058">Classifying formulas</a></li>
+<li><a href="##1616">Bug in subs</a></li>
+<li><a href="##1886">Documentation for the Expr class</a></li>
+<li><a href="##2115">Move stuff from the Google Code SVN to git</a></li>
+<li><a href="##2157">sympy development rules</a></li>
+<li><a href="##2160">List of dependencies</a></li>
+<li><a href="##2204">Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1</a></li>
+<li><a href="##2276">integrate() should use the ode module's undetermined coefficients solver when possible</a></li>
+<li><a href="##2367">SymPy's readthedocs documentation is broken</a></li>
+<li><a href="##2427">Check for incorrect usage of expr.atoms() and change it to free_symbols</a></li>
+<li><a href="##2493">Clean up test_lambdify.py</a></li>
+<li><a href="##2534">Use "with open" instead of "open … close"</a></li>
+<li><a href="##2570">Remove bare except statements</a></li>
+<li><a href="##2597">Import all public functions and classes into Sphinx: polys</a></li>
+<li><a href="##2599">Update isympy manpage</a></li>
+<li><a href="##2637">Unicode Sigma for pretty printed Sum</a></li>
+<li><a href="##2639">The Product() class should not evaluate by default</a></li>
+<li><a href="##2679">Refactor GA* documentation to use doctests (or move it to examples/)</a></li>
+<li><a href="##2683">det() is called when inverting matrix through GE</a></li>
+<li><a href="##2760">latex(symbol_names) not working with ~x</a></li>
+<li><a href="##2763">Fix the SymPy Logo</a></li>
+<li><a href="##2769">Make video tutorials for SymPy</a></li>
+<li><a href="##2774">``See Also`` feature in Number Theory</a></li>
+<li><a href="##2775">``See Also`` feature in Combinotorics </a></li>
+<li><a href="##2776">``See Also`` feature in integrals</a></li>
+<li><a href="##2777">``See Also`` feature in functions</a></li>
+<li><a href="##2778">``See Also`` feature in functions/special</a></li>
+<li><a href="##2780">``See Also`` feature in Matrices</a></li>
+<li><a href="##2785">Use \functionname instead of \operatorname{functionname} whenever possible</a></li>
+<li><a href="##2788">Commented out tests should be XFAILed</a></li>
+<li><a href="##2797">Translate our webpage to German</a></li>
+<li><a href="##2797">Translate our webpage to French</a></li>
+<li><a href="##2797">Translate our webpage to Czech</a></li>
+<li><a href="##2797">Translate our webpage to Polish</a></li>
+<li><a href="##2797">Translate our webpage to Bulgarian</a></li>
+<li><a href="##2797">Translate our webpage to Russian</a></li>
+<li><a href="##2797">Translate our webpage to Serbian</a></li>
+<li><a href="##2800">Flesh out the SymPy Papers wiki page</a></li>
+<li><a href="##2806">Add more tips to the tips page (10 tips)</a></li>
+<li><a href="##2815">Parts of the pyglet plotting module does not follow PEP 8, fix it</a></li>
+<li><a href="##2817">Make sure all the built-in __methods__ are defined</a></li>
+<li><a href="##2830">checkodesol() should use force=True</a></li>
+<li><a href="##2838">Move the KroneckerDelta class to another module </a></li>
+<li><a href="##2846">Integral.transform should allow a change to a different variable</a></li>
+<li><a href="##2636">Pretty print Product</a></li>
+<li><a href="##615">Fix the occasions where functions are called with wrong name and write tests</a></li>
+<li><a href="##654">Remove dead code from _eval_subs()</a></li>
 </ul>
 </li>
 <li><a href="##Hard">Hard</a>
 <ul>
-<li><a href="##2599">Square root denesting</a></li>
-<li><a href="##2626">bin/test --random should also shuffle tests inside a file</a></li>
-<li><a href="##2632">SymPy Cheat Sheet</a></li>
-<li><a href="##2636">Objects that know how to combine themselves</a></li>
-<li><a href="##2637">LaTeX input</a></li>
-<li><a href="##2639">live.sympy.org isn't so easy to use on a mobile device</a></li>
-<li><a href="##2679">Piecewise should use a different syntax for "otherwise"</a></li>
-<li><a href="##2683">Research ways to do the assumptions system, including removing the old system</a></li>
-<li><a href="##2760">Add a feed of what people are doing at SymPy Live</a></li>
-<li><a href="##2762">Write a document showing the difference between SymPy and other mathematical systems: Maple</a></li>
-<li><a href="##2763">Write a document showing the difference between SymPy and other mathematical systems: Mathematica</a></li>
-<li><a href="##2764">Write a document showing the difference between SymPy and other mathematical systems: Matlab</a></li>
-<li><a href="##2765">Write a document showing the difference between SymPy and other mathematical systems: Maxima</a></li>
-<li><a href="##2766">Write a document showing the difference between SymPy and other mathematical systems: Axiom</a></li>
-<li><a href="##2767">minpoly should work with roots of unity in exponential form</a></li>
-<li><a href="##2768">Allow to manage slow tests better with our test runner</a></li>
-<li><a href="##2769">Investigate how to employ complexity measures in functions like trigsimp(), etc.</a></li>
+<li><a href="##93">Square root denesting</a></li>
+<li><a href="##1594">bin/test --random should also shuffle tests inside a file</a></li>
+<li><a href="##1817">SymPy Cheat Sheet</a></li>
+<li><a href="##1941">Objects that know how to combine themselves</a></li>
+<li><a href="##2319">LaTeX input</a></li>
+<li><a href="##2521">live.sympy.org isn't so easy to use on a mobile device</a></li>
+<li><a href="##2626">Piecewise should use a different syntax for "otherwise"</a></li>
+<li><a href="##2765">Research ways to do the assumptions system, including removing the old system</a></li>
+<li><a href="##2768">Add a feed of what people are doing at SymPy Live</a></li>
+<li><a href="##2771">Write a document showing the difference between SymPy and other mathematical systems: Maple</a></li>
+<li><a href="##2772">Some UI/GUI for the test runner</a></li>
+<li><a href="##2773">Implement the trigsimp algorithm by fu et al</a></li>
+<li><a href="##2789">minpoly should work with roots of unity in exponential form</a></li>
+<li><a href="##2791">Allow to manage slow tests better with our test runner</a></li>
+<li><a href="##2792">Investigate how to employ complexity measures in functions like trigsimp(), etc.</a></li>
+<li><a href="##2799">coverage testing should be part of the bot test</a></li>
+<li><a href="##2812">Fix failures found by shuffling tests in test file</a></li>
 </ul>
 </li>
 </ul>
 
 ## <a name="#Medium">Medium</a>
+<a name="#2784"></a>
+### [2784](http://code.google.com/p/sympy/issues/detail?id=2784&q=label%3ACodeInImportedIntoSpreadsheet) - 1/function() should be printed differently by latex printer
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2784">http://code.google.com/p/sympy/issues/detail?id=2784</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+
+    >>> latex(1/cos(x))
+    \operatorname{cos}^{-1}\left(x\right)
+
+    >>> pprint(1/cos(x))
+      1   
+    ──────
+    cos(x)
+
+
+should output `\frac{1}{\operator ...}`
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, Printing, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#363"></a>
+### [363](http://code.google.com/p/sympy/issues/detail?id=363&q=label%3ACodeInImportedIntoSpreadsheet) - Add a split() method for sympy expressions
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=363">http://code.google.com/p/sympy/issues/detail?id=363</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I think a method that does the opposite of reduce(operator, [x,y,...])
+would be useful. Something like this:
+
+```py
+>>> (x+y+z).split('+')
+(x, y+z)
+>>> (x+y+z).split('+', flatten=True)
+(x, y, z)
+```
+
+Various keyword arguments could be added for whether to split rational
+numbers, etc. With such options, split() could replace several existing
+methods like as_coefficient, as_independent, as_base_exp, as_numer_denom,
+etc. It is better to only have to remember a single method.
+
+Using an operator symbol like '+' as argument instead of a class is my
+preference as it would be more readable and more versatile ('/' can be used
+even though we have no Div class).
+
+A method like this would be especially useful if Add and Mul are changed as
+discussed in [issue 362: Possible speed improvements to core](http://code.google.com/p/sympy/issues/detail?id=362), as its interface would be independent of the
+underlying representation.
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, CodeInImportedIntoSpreadsheet, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#281"></a>
+### [281](http://code.google.com/p/sympy/issues/detail?id=281&q=label%3ACodeInImportedIntoSpreadsheet) - Infinity should not be a subclass of Rational
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=281">http://code.google.com/p/sympy/issues/detail?id=281</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+
+```py
+>>> isinstance(oo, Rational)
+True
+>>> oo.is_rational
+True
+```
+
+This is clearly wrong. Infinity is not a rational number.
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, CodeInImportedIntoSpreadsheet, Milestone-Release0.7.3, Priority-High, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#294"></a>
+### [294](http://code.google.com/p/sympy/issues/detail?id=294&q=label%3ACodeInImportedIntoSpreadsheet) - Pass coverage_doctest.py
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=294">http://code.google.com/p/sympy/issues/detail?id=294</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I think there should soon be documentation in the code for most, if not
+all, of the classes and functions, even if it is only a single line. This
+can be useful for both the generated API documentation, and through
+interactive help (i.e., the help() command in an interactive Python
+session). If there is a need for this, I am fine going through all of the
+code and documenting everything, or getting a good start on it.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 96 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Documentation, GHOP, NeedsReview, Priority-Medium, Type-Enhancement, asmeurer 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#707"></a>
+### [707](http://code.google.com/p/sympy/issues/detail?id=707&q=label%3ACodeInImportedIntoSpreadsheet) - move some wikis to github.com/sympy/sympy/wiki
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=707">http://code.google.com/p/sympy/issues/detail?id=707</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Move all wikis from [code.google.com](http://code.google.com/p/sympy/w/list) to
+[github](https://github.com/sympy/sympy/wiki).
+So that we have just one source of documentation to reduce confusion.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 96 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Documentation, Priority-High, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#716"></a>
+### [716](http://code.google.com/p/sympy/issues/detail?id=716&q=label%3ACodeInImportedIntoSpreadsheet) - either tangent_line or is_tangent is wrong
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=716">http://code.google.com/p/sympy/issues/detail?id=716</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+
+```py
+In [1]: e = Ellipse(Point(0,0), 3, 2)
+
+In [2]: t = e.tangent_line(e.random_point())
+
+In [3]: e.is_tangent(t)
+Out[3]: False
+```
+
+Obviously [2] and [3] are in contradiction. By plotting the result, [2] is
+most probably right, so [3] is wrong.
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#754"></a>
+### [754](http://code.google.com/p/sympy/issues/detail?id=754&q=label%3ACodeInImportedIntoSpreadsheet) - Have re and im call expand(complex=True)
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=754">http://code.google.com/p/sympy/issues/detail?id=754</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Here is a nice integral that SymPy is able to compute:
+
+```
+>>> from sympy import *
+>>> var('y')
+y
+>>> a = integrate((16*y-16)/(y**4-2*y**3+4*y-4), (y, 0, 1))
+>>> a = simplify(a)
+>>> pprint(a)
+                                              ___
+-2*log(2) + 2*pi + 2*log(1 + I) + 2*log(1 + \/ 2 ) + 2*log(1 - I) + 2*log(1 -
+
+  ___
+\/ 2 ) - 2*pi*I - 2*I*log(1 - I) + 2*I*log(1 + I)
+
+```
+
+Simplifying the answer by hand is straightforward (add up the real and
+imaginary parts), but unfortunately, SymPy is unable to do this. (It also
+fails to produce a numerical value: a.evalf() -> ValueError.) It seems that
+currently re and as_real_imag don't know anything about logarithms.
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, EasyToFix, Integration, Priority-High, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1235"></a>
+### [1235](http://code.google.com/p/sympy/issues/detail?id=1235&q=label%3ACodeInImportedIntoSpreadsheet) - Problem installing in Windows
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1235">http://code.google.com/p/sympy/issues/detail?id=1235</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I've downloaded the Windows installer, and tries to run the program - but 
+I get an error message: "No Python information found in the registry". But 
+I have Python installed.
+
+This is what I get when running the Python command in the command line:
+
+```C:\Users\Fredrik\Documents\programme\discalc>PYTHON
+Python 2.5.1 (r251:54863, Apr 18 2007, 08:51:08) [MSC v.1310 32 bit 
+(Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+The problem is that we need someone with a 64-bit Windows machine to volunteer to do it (see #16).
+
+ 
+
+- *Category:* Research
+- *Time to complete:* 96 hours
+
+CodeInCategory-Research, CodeInDifficulty-Medium, Milestone-Release0.7.1, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1456"></a>
+### [1456](http://code.google.com/p/sympy/issues/detail?id=1456&q=label%3ACodeInImportedIntoSpreadsheet) - use pyflakes to identify simple bugs in sympy and fix them
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1456">http://code.google.com/p/sympy/issues/detail?id=1456</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/ directory, but not one of the ones that only has a few files in it).  
+
+
+Example:
+
+```
+$ sudo apt-get install pyflakes
+$ pyflakes sympy/integrals/
+sympy/integrals/integrals.py:10: 'limit' imported but unused
+sympy/integrals/integrals.py:13: 'DiracDelta' imported but unused
+sympy/integrals/integrals.py:13: 'Heaviside' imported but unused
+```
+it finds (among other things) that the Heaviside is imported but never
+used, so it should be removed.
+
+There is also pychecker, which shows a lot of things similar to this (I can't get pyflakes to work, so I can't say if it 
+does more or not).  You can just install and run pychecker sympy --limit 1000 to see them all (it takes a few 
+minutes to run).
+
+Note that there are lots of warnings coming from polys/densepolys.py, polys/densetools.py and polys/sparsepolys.py, but these modules are known not to work, cf. issue 2371.
+ 
+
+- *Category:* QualityAssurance
+- *Labels:* EasyToFix, Priority-Medium, Type-Defect
+- *Time to complete:* 96 hours
+
+Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/ directory, but not one of the ones that only has a few files in it).  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1752"></a>
+### [1752](http://code.google.com/p/sympy/issues/detail?id=1752&q=label%3ACodeInImportedIntoSpreadsheet) - setup.py test should run the doctests even when the regular tests fail
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1752">http://code.google.com/p/sympy/issues/detail?id=1752</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Two things annoy me about `./setup.py test`.  First, if a regular test fails, then it does not run the 
+doctests.  But this is supposed to be a shortcut to both the regular tests and the doctests in one.  
+Second, if you keyboard interrupt during the tests, it then proceeds to run the doctests.  But when I 
+keyboard interrupt, I want it to stop the whole script.  
+
+I don't know how easy it would be to change the second item, but the first one should be fixable.
+ 
+
+- *Category:* QualityAssurance
+- *Time to complete:* 96 hours
+
+CodeInCategory-QA, CodeInDifficulty-Medium, EasyToFix, Priority-High, Testing, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
 <a name="#2470"></a>
-### [2470](http://code.google.com/p/sympy/issues/detail?id=2470&q=label%3ACodeInImportedIntoSpreadsheet) - 1/function() should be printed differently by latex printer
+### [2470](http://code.google.com/p/sympy/issues/detail?id=2470&q=label%3ACodeInImportedIntoSpreadsheet) - Fix all sphinx errors and warnings
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2470">http://code.google.com/p/sympy/issues/detail?id=2470</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -141,218 +406,171 @@ sympy/sympy/core/basic.py:docstring of sympy.core.basic.Basic.atoms:13: (ERROR/3
 ```
  
 
-- *Category:* Code
-- *Labels:* Documentation, Priority-Medium, Type-Defect
+- *Category:* Documentation
 - *Time to complete:* 96 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Documentation, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2513"></a>
+### [2513](http://code.google.com/p/sympy/issues/detail?id=2513&q=label%3ACodeInImportedIntoSpreadsheet) - Create a SymPyDeprecationWarning for deprecated SymPy behavior
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2513">http://code.google.com/p/sympy/issues/detail?id=2513</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+DeprecationWarning is turned off by default in Python 2.7, so all of our deprecated behavior that we deprecate with DeprecationWarning is not shown to the majority of our users (unless they are specifically looking for it, they won't find it).  This was done because most users of Python programs can't do anything if the program uses deprecated behavior, so they don't care to see the warning.  But I think most developers don't really do a good job of turning the warnings on, unfortunately.
+
+I think we should create a SymPyDeprecationWarning that subclasses from DeprecationWarning, but is turned on by default in isympy.  See <a title="Turn on deprecation warnings in isympy"  href="/p/sympy/issues/detail?id=2142">issue 2142</a>.  That way, users of scripts that use sympy won't be bothered by them, but people who use isympy, who should be bothered by them in my opinion, will be. This will likely also include the developers of most of those scripts. 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2528"></a>
+### [2528](http://code.google.com/p/sympy/issues/detail?id=2528&q=label%3ACodeInImportedIntoSpreadsheet) - Update SymPy's Wikipedia article
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2528">http://code.google.com/p/sympy/issues/detail?id=2528</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I just noticed that <a href="http://en.wikipedia.org/wiki/SymPy" rel="nofollow">http://en.wikipedia.org/wiki/SymPy</a> is a little old with its information.  None of it is wrong, but I think the features list could be updated.  It seems to be roughly the same as the features listed at sympy.org and <a href="http://code.google.com/p/sympy/" rel="nofollow">http://code.google.com/p/sympy/</a>, so perhaps those should be updated too.
+
+Also, SymPy's stuff at <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems" rel="nofollow">http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems</a> should be updated.  I did notice some of that is wrong. 
+
+- *Category:* Outreach
+- *Time to complete:* 96 hours
+
+CodeInCategory-Outreach, CodeInDifficulty-Medium, Documentation, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2552"></a>
+### [2552](http://code.google.com/p/sympy/issues/detail?id=2552&q=label%3ACodeInImportedIntoSpreadsheet) - (1/(x*y)).subs(x*y, whatever) doesn't work
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2552">http://code.google.com/p/sympy/issues/detail?id=2552</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
+
+
+
+Incorrect example:
+
+    >>> (1/(x*y)).subs(x*y, 2)
+     1 
+    ───
+    x⋅y
+
+
+
+This is doesn't work because
+
+```py
+>>> (1/(x*y)).args
+(1/x, 1/y)
+```
+
+ automatically changed in Mul class
+ 
+
+- *Category:* Code
+- *Labels:* Priority-High, Type-Defect
+- *Time to complete:* 96 hours
+
+This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2632"></a>
+### [2632](http://code.google.com/p/sympy/issues/detail?id=2632&q=label%3ACodeInImportedIntoSpreadsheet) - Add isympy -c qtconsole
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2632">http://code.google.com/p/sympy/issues/detail?id=2632</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+You can open the IPython qtconsole with a sympy session by typing `IPython qtconsole --profile=sympy`, but you should also be able to do it by typing `isympy -c ipython-qtconsole`.  Unlike the former, the latter should perhaps not rely on IPython's built-in sympy profile to work.
+ 
+
+- *Category:* Code
+- *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, Printing, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2762"></a>
+### [2762](http://code.google.com/p/sympy/issues/detail?id=2762&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate ways to improve substitution, pattern matching, etc.
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2762">http://code.google.com/p/sympy/issues/detail?id=2762</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+This is related to <a title="Exact, algebraic, and integer_power substitution"  href="/p/sympy/issues/detail?id=2026">issue 2026</a> and this thread on the [mailing list](http://groups.google.com/group/sympy/browse_thread/thread/4a19d0f39f51fda6).  The subs mechanism should be refactored so that it is more flexible.  Also, I believe it should be using the same thing internally as the pattern matching.  
+
+The (Code-In) task here is to study this problem and discuss optimal ways to solve it.  You may also try implementing this (if we agree upon a good solution), perhaps as a separate task.
+ 
+
+- *Category:* Research
+- *Time to complete:* 96 hours
+
+CodeInCategory-Research, CodeInDifficulty-Medium, Matching, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2764"></a>
+### [2764](http://code.google.com/p/sympy/issues/detail?id=2764&q=label%3ACodeInImportedIntoSpreadsheet) - Improve our webpage
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2764">http://code.google.com/p/sympy/issues/detail?id=2764</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Our webpage at http://sympy.org/ could probably be made nicer, like with some nice CSS or html5.  The code is at https://github.com/sympy/sympy.github.com   Also, it maybe could use better examples/explanation of what SymPy is.
+ 
+
+- *Category:* Outreach
+- *Time to complete:* 96 hours
+
+CodeInCategory-Outreach, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2766"></a>
+### [2766](http://code.google.com/p/sympy/issues/detail?id=2766&q=label%3ACodeInImportedIntoSpreadsheet) - Translate tutorial to German
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2766">http://code.google.com/p/sympy/issues/detail?id=2766</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days. Please contact us before starting a translation task, to make sure that someone is available to verify the translation. 
+
+
+The [tutorial](http://docs.sympy.org/0.7.1/tutorial.html) should be translated into various languages, e.g., Czech, Polish, French, German, etc.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 96 hours
+
+We only have one person available per language, so review may take a few days. Please contact us before starting a translation task, to make sure that someone is available to verify the translation. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
+
+<a name="#2767"></a>
+### [2767](http://code.google.com/p/sympy/issues/detail?id=2767&q=label%3ACodeInImportedIntoSpreadsheet) - Improve the interface of SymPy Live
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2767">http://code.google.com/p/sympy/issues/detail?id=2767</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+The interface at live.sympy.org should be improved, so that it looks and feels nicer, perhaps using some more advanced html5/css, etc. 
+
+- *Category:* User Interface
+- *Time to complete:* 96 hours
+
+CodeInCategory-UI, CodeInDifficulty-Medium, Live, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2770"></a>
-### [2770](http://code.google.com/p/sympy/issues/detail?id=2770&q=label%3ACodeInImportedIntoSpreadsheet) - use pyflakes to identify simple bugs in sympy and fix them
+### [2770](http://code.google.com/p/sympy/issues/detail?id=2770&q=label%3ACodeInImportedIntoSpreadsheet) - Update stuff that SymPy can do on the homepage
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2770">http://code.google.com/p/sympy/issues/detail?id=2770</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 The list of things that SymPy can do on the homepage is not up to date, because we can actually do a lot more things than that.  This should be updated. 
 
-- *Category:* QualityAssurance
-- *Labels:* Documentation, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2771"></a>
-### [2771](http://code.google.com/p/sympy/issues/detail?id=2771&q=label%3ACodeInImportedIntoSpreadsheet) - use pyflakes to identify simple bugs in sympy and fix them
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2771">http://code.google.com/p/sympy/issues/detail?id=2771</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-We should document the differences between SymPy and other mathematical systems.  For Code-In, a task should be for one other system. 
-
-- *Category:* QualityAssurance
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2772"></a>
-### [2772](http://code.google.com/p/sympy/issues/detail?id=2772&q=label%3ACodeInImportedIntoSpreadsheet) - Create a SymPyDeprecationWarning for deprecated SymPy behavior
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2772">http://code.google.com/p/sympy/issues/detail?id=2772</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. E.g. like http://sourceforge.net/apps/mediawiki/cppunit/nfs/project/c/cp/cppunit/c/c2/Qttestrunner_exa.png  
-
-
-It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. 
-
-- *Category:* Code
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
-
-It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. E.g. like http://sourceforge.net/apps/mediawiki/cppunit/nfs/project/c/cp/cppunit/c/c2/Qttestrunner_exa.png  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2773"></a>
-### [2773](http://code.google.com/p/sympy/issues/detail?id=2773&q=label%3ACodeInImportedIntoSpreadsheet) - Update SymPy's Wikipedia article
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2773">http://code.google.com/p/sympy/issues/detail?id=2773</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Implement the algorithm for trigonometric simplification from the paper "Automated and readable simplification of trigonometric expressions" by Fu, et. al. (you should be able to find the paper for free from Google Scholar, otherwise email me and I will send it to you).
- 
-
-- *Category:* Outreach
-- *Labels:* Priority-Medium, Simplify, Type-Enhancement
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2774"></a>
-### [2774](http://code.google.com/p/sympy/issues/detail?id=2774&q=label%3ACodeInImportedIntoSpreadsheet) - (1/(x*y)).subs(x*y, whatever) doesn't work
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2774">http://code.google.com/p/sympy/issues/detail?id=2774</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-Ex. 
-
-```
->>> prime?
-Docstring:
-    Return the nth prime, with the primes indexed as prime(1) = 2,
-    prime(2) = 3, etc.... The nth prime is approximately n*log(n) and
-    can never be larger than 2**n.
-    
-    Reference: http://primes.utm.edu/glossary/xpage/BertrandsPostulate.html
-```
-
-This is the present doc-string. One needs to add the following line
-
-```
-    See also : isprime, primerange, primepi
-```
- 
-
-- *Category:* Code
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2775"></a>
-### [2775](http://code.google.com/p/sympy/issues/detail?id=2775&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: assumptions
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2775">http://code.google.com/p/sympy/issues/detail?id=2775</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-
-This is the list of .py files which contains the functions.
-
-```
-sympy/combinatorics/generators.py  
-sympy/combinatorics/prufer.py
-sympy/combinatorics/graycode.py
-sympy/combinatorics/permutations.py  
-sympy/combinatorics/subsets.py
-```
-
-There are around 98(at max) functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
- 
-
 - *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2776"></a>
-### [2776](http://code.google.com/p/sympy/issues/detail?id=2776&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: combinatorics
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2776">http://code.google.com/p/sympy/issues/detail?id=2776</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-
-This is the list of .py files which contains the functions.
-
-```
-sympy/integrals/deltafunctions.py
-sympy/integrals/integrals.py
-sympy/integrals/risch.py
-sympy/integrals/rationaltools.py
-sympy/integrals/trigonometry.py
-```
-
-There are around 19 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2777"></a>
-### [2777](http://code.google.com/p/sympy/issues/detail?id=2777&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: concrete
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2777">http://code.google.com/p/sympy/issues/detail?id=2777</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-
-This is the list of .py files which contains the functions.
-
-```
-sympy/functions/combinatorial/factorials.py
-sympy/functions/combinatorial/numbers.py
-sympy/functions/elementary/trigonometric.py  
-sympy/functions/elementary/integers.py
-sympy/functions/elementary/exponential.py
-sympy/functions/elementary/piecewise.py
-sympy/functions/elementary/complexes.py
-sympy/functions/elementary/miscellaneous.py
-sympy/functions/elementary/hyperbolic.py
-```
-
-There are around 52 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2778"></a>
-### [2778](http://code.google.com/p/sympy/issues/detail?id=2778&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: core
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2778">http://code.google.com/p/sympy/issues/detail?id=2778</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-
-This is the list of .py files which contains the functions.
-
-```
-sympy/functions/special/zeta_functions.py
-sympy/functions/special/delta_functions.py
-sympy/functions/special/tensor_functions.py
-sympy/functions/special/hyper.py
-sympy/functions/special/bsplines.py
-sympy/functions/special/spherical_harmonics.py
-sympy/functions/special/gamma_functions.py
-sympy/functions/special/bessel.py
-sympy/functions/special/polynomials.py
-sympy/functions/special/error_functions.py
-```
-
-There are around 62 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Documentation, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2779"></a>
-### [2779](http://code.google.com/p/sympy/issues/detail?id=2779&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: functions
+### [2779](http://code.google.com/p/sympy/issues/detail?id=2779&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Geometry
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2779">http://code.google.com/p/sympy/issues/detail?id=2779</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -377,87 +595,29 @@ There are around 150 functions which one needs to understand (the input paramete
  
 
 - *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
 - *Time to complete:* 96 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2780"></a>
-### [2780](http://code.google.com/p/sympy/issues/detail?id=2780&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: galgebra
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2780">http://code.google.com/p/sympy/issues/detail?id=2780</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Edit the doc-string to add list of other function that are closely related to the query.
-
-This is the list of .py files which contains the functions.
-
-```
-sympy/matrices.py
-```
-
-There are around 69 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2784"></a>
-### [2784](http://code.google.com/p/sympy/issues/detail?id=2784&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: geometry
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2784">http://code.google.com/p/sympy/issues/detail?id=2784</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-
-    >>> latex(1/cos(x))
-    \operatorname{cos}^{-1}\left(x\right)
-
-    >>> pprint(1/cos(x))
-      1   
-    ──────
-    cos(x)
-
-
-should output `\frac{1}{\operator ...}`
- 
-
-- *Category:* Documentation
-- *Labels:* Printing, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2785"></a>
-### [2785](http://code.google.com/p/sympy/issues/detail?id=2785&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: integrals
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2785">http://code.google.com/p/sympy/issues/detail?id=2785</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-SymPy uniformly uses `\operatorname` when latex printing functions. However, tex engine in matplotlib doesn't support it. It would be convenient to use `\functionname` directly whenever possible (trigonometric and hyperbolic functions, exp, log and maybe other).
- 
-
-- *Category:* Documentation
-- *Labels:* Printing, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Priority-Medium, Type-Enhancement 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2786"></a>
-### [2786](http://code.google.com/p/sympy/issues/detail?id=2786&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: logic
+### [2786](http://code.google.com/p/sympy/issues/detail?id=2786&q=label%3ACodeInImportedIntoSpreadsheet) - Fill in missing tests for sympy.physics module in test_args.py
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2786">http://code.google.com/p/sympy/issues/detail?id=2786</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 All tests decorated with @SKIP("TODO: sympy.physics") must be fixed.
  
 
-- *Category:* Documentation
-- *Labels:* Core, Priority-High, Type-Defect
+- *Category:* QualityAssurance
 - *Time to complete:* 96 hours
+
+CodeInCategory-QA, CodeInDifficulty-Medium, Core, Priority-High, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2787"></a>
-### [2787](http://code.google.com/p/sympy/issues/detail?id=2787&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: matrices
+### [2787](http://code.google.com/p/sympy/issues/detail?id=2787&q=label%3ACodeInImportedIntoSpreadsheet) - Create sticker for SymPy based on the logo
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2787">http://code.google.com/p/sympy/issues/detail?id=2787</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -466,118 +626,43 @@ The sticker should contain SymPy's logo [1], project name and description. Alter
 [1] http://code.google.com/p/sympy/source/browse/#svn%2Fmaterials%2Flogo
  
 
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
+- *Category:* Outreach
 - *Time to complete:* 96 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2788"></a>
-### [2788](http://code.google.com/p/sympy/issues/detail?id=2788&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: ntheory
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2788">http://code.google.com/p/sympy/issues/detail?id=2788</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-If you "git grep '# *assert'", you'll see a bunch of tests where the test line is commented out.  These should be changed to be XFAIL tests, so that we can see if they start passing.  Also, they should be double checked to see if they really would start passing (e.g., they don't have syntax errors).
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2789"></a>
-### [2789](http://code.google.com/p/sympy/issues/detail?id=2789&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: parsing
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2789">http://code.google.com/p/sympy/issues/detail?id=2789</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-
-```py
->>> minpoly(exp(I*pi/8))
-ERROR: An unexpected error occurred while tokenizing input
-The following traceback may be corrupted or invalid
-The error message is: ('EOF in multi-line statement', (16, 0))
----------------------------------------------------------------------------
-
-/Users/aaronmeurer/Documents/python/sympy/sympy/sympy/polys/numberfields.pyc in bottom_up_scan(ex)
-    117                 return symbols[ex.root]
-    118 
---> 119         raise NotAlgebraic("%s doesn't seem to be an algebraic number" % ex)
-    120 
-    121     polys = args.get('polys', False)
-
-NotAlgebraic: exp(I*pi/8) doesn't seem to be an algebraic number
-```
-
-But this is a root of `x**16 - 1`.  I don't know how minpoly works internally if this can be done in a general fashion for exponentials nested inside other expressions (like e.g., `sqrt(1 + exp(I*pi/8)))`.
-
-Marking as Code-In difficulty hard because this is a nontrivial algorithm, especially for a high school student.
- 
-
-- *Category:* Documentation
-- *Labels:* Polynomial, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
+CodeInCategory-Outreach, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2790"></a>
-### [2790](http://code.google.com/p/sympy/issues/detail?id=2790&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: physics
+### [2790](http://code.google.com/p/sympy/issues/detail?id=2790&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2790">http://code.google.com/p/sympy/issues/detail?id=2790</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 Examples/short tutorials should show how to use SymPy to solve illustrative problems in high school mathematics/physics. Notebooks must contain code split into logical blocks, text cells with problem description and references to other materials, books, videos, etc. 
 
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2791"></a>
-### [2791](http://code.google.com/p/sympy/issues/detail?id=2791&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: statistics
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2791">http://code.google.com/p/sympy/issues/detail?id=2791</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. Also, almost all skipped tests (or maybe all) are currently skipped because they are slow, so after this is implemented, they should all be converted. 
-
-
-Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Testing, Type-Enhancement
-- *Time to complete:* 96 hours
-
-Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. Also, almost all skipped tests (or maybe all) are currently skipped because they are slow, so after this is implemented, they should all be converted. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2792"></a>
-### [2792](http://code.google.com/p/sympy/issues/detail?id=2792&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: tensor
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2792">http://code.google.com/p/sympy/issues/detail?id=2792</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-`simplify()` already implements measure argument and uses it to choose over alternative expressions given by pairs of specific simplification routines. However, those specific simplification routines (like `trigsimp()`) don't support measure argument and make arbitrary built-in choices when simplifying expressions. This leads to simplification results that are dependent on the implicit measure built-in into a particular simplification step of a function. Those functions should use a measure to verify whether a candidate simplified expression is really simpler than an input expression. Investigate how to implement measures in those functions (at least in `trigsimp()`) to avoid combinatorial explosion of choices. You may have to employ optimization techniques like greedy algorithms, dynamic programming, meta heuristics, etc. Prepare sample non-trivial inputs, measures and outputs that can be used as tests for the algorithm(s) you will propose.
- 
-
-- *Category:* Documentation
+- *Category:* Training
 - *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2793"></a>
-### [2793](http://code.google.com/p/sympy/issues/detail?id=2793&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: utilities
+### [2793](http://code.google.com/p/sympy/issues/detail?id=2793&q=label%3ACodeInImportedIntoSpreadsheet) - The dsolve solver for 1st_exact should use integration
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2793">http://code.google.com/p/sympy/issues/detail?id=2793</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 The method used by the 1st_exact solver is a nice one to use by hand, but it's kind of flaky.  I didn't realize at the time of writing it that you can actually express the solution using integrals without introducing parameters or dummy integration limits.  This solution is given in Table II of the paper "Symbolic Integration: The Stormy Decade" by Joel Moses.  I was able to download this paper for free from Google Scholar.  If you cannot access it and are interested in fixing this issue, contact me and I will send it to you.
  
 
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
+- *Category:* Code
 - *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2794"></a>
-### [2794](http://code.google.com/p/sympy/issues/detail?id=2794&q=label%3ACodeInImportedIntoSpreadsheet) - Add isympy -c qtconsole
+### [2794](http://code.google.com/p/sympy/issues/detail?id=2794&q=label%3ACodeInImportedIntoSpreadsheet) - Implement ode solvers from the Moses "Stormy Decade" paper: Almost Linear
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2794">http://code.google.com/p/sympy/issues/detail?id=2794</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): There is a guide at the top of ode.py on how to add new solvers. 
 
 
@@ -599,20 +684,21 @@ There is a guide at the top of ode.py on how to add new solvers.
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2795"></a>
-### [2795](http://code.google.com/p/sympy/issues/detail?id=2795&q=label%3ACodeInImportedIntoSpreadsheet) - Translate tutorial to German
+### [2795](http://code.google.com/p/sympy/issues/detail?id=2795&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate a robust way to have translated documentation
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2795">http://code.google.com/p/sympy/issues/detail?id=2795</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 Some of the Code-In tasks include translating our documentation to different languages. If this happens, we would need a way to manage all of these files (we might have many languages, after all). It's also important to know when and how much are these files out of date (as they eventually will be). Usually, GUI applications use gettext and have tons of .po files lying around, but I'm not sure that's the right approach for us. Marking this as a Code-In Research task. 
 
-- *Category:* Translation
-- *Labels:* Priority-Medium, Type-Defect
+- *Category:* Research
 - *Time to complete:* 96 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
+CodeInCategory-Research, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2796"></a>
-### [2796](http://code.google.com/p/sympy/issues/detail?id=2796&q=label%3ACodeInImportedIntoSpreadsheet) - Translate tutorial to French
+### [2796](http://code.google.com/p/sympy/issues/detail?id=2796&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: Debian / Ubuntu
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2796">http://code.google.com/p/sympy/issues/detail?id=2796</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -620,299 +706,10 @@ Most distributions have old versions of SymPy packaged (or none at all, eg. open
 
 This most likely means deleting the bundled mpmath/ and making SymPy play nice with the distro-provided version. 
 
-- *Category:* Translation
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Stefan Krastanov](https://github.com/krastanov)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Geometry
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Fill in missing tests for sympy.physics module in test_args.py
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* QualityAssurance
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Create sticker for SymPy based on the logo
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
 - *Category:* Outreach
-- *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
 
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2797"></a>
-### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
-
-
-Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-We only have one person available per language, so review may take a few days.  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2799"></a>
-### [2799](http://code.google.com/p/sympy/issues/detail?id=2799&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2799">http://code.google.com/p/sympy/issues/detail?id=2799</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Two things on my wish list for testing;
-
-1) a coverage fingerprint of master would be compared to a given branch's coverage profile to make sure that no line has become uncovered.
-
-2) a report of lines added that are not covered would be reported with the test-bot report.
-
-Someone who likes parsing html ([beautiful soup](www.crummy.com/software/BeautifulSoup/) might help with this) might enjoy this as a project.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Testing, Type-Enhancement
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2800"></a>
-### [2800](http://code.google.com/p/sympy/issues/detail?id=2800&q=label%3ACodeInImportedIntoSpreadsheet) - Create examples/short tutorials using IPython's notebook (IPython >= 0.12)
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2800">http://code.google.com/p/sympy/issues/detail?id=2800</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-We have a page on the wiki [SymPy-Papers](https://github.com/sympy/sympy/wiki/SymPy-Papers) that should list (scientific) papers mentioning SymPy, but it's currently empty. Populating this would be interesting and could also persuade other academics to try out/use SymPy. Google Scholar can be used to track down papers. See also the [thread which originally asked about this](https://groups.google.com/group/sympy/browse_thread/thread/34443bd5708310f2/71c0cc0ba21a19e1?hl=en).
-
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2806"></a>
-### [2806](http://code.google.com/p/sympy/issues/detail?id=2806&q=label%3ACodeInImportedIntoSpreadsheet) - The dsolve solver for 1st_exact should use integration
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2806">http://code.google.com/p/sympy/issues/detail?id=2806</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): As the tips page grows, try to keep it organized. 
-
-
-We have a page of tips that we are compiling at [[tips]].  This should be really fleshed out, so that we have enough tips to do something interesting with.
-
-For Code-In, we can create multiple tasks.  Each task (easy) can be to create say ten tips.
- 
-
-- *Category:* Code
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 96 hours
-
-As the tips page grows, try to keep it organized. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2812"></a>
-### [2812](http://code.google.com/p/sympy/issues/detail?id=2812&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: Fink
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2812">http://code.google.com/p/sympy/issues/detail?id=2812</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-This builds on [issue 1594](http://code.google.com/p/sympy/issues/detail?id=1594): once we have the shuffling, we should fix all the failures caused by it. Marking this as a hard task for Code-In, per Aaron's comment on the other issue.
- 
-
-- *Category:* Outreach
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2815"></a>
-### [2815](http://code.google.com/p/sympy/issues/detail?id=2815&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: MacPorts
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2815">http://code.google.com/p/sympy/issues/detail?id=2815</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-The code there is a bit hard to read. It would be nice to have it refactored so it follows PEP8.
-
-There are certain parts that are not pythonic but that's another problem needing more in-depth refactoring. 
-
-- *Category:* Outreach
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2817"></a>
-### [2817](http://code.google.com/p/sympy/issues/detail?id=2817&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: Fedora
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2817">http://code.google.com/p/sympy/issues/detail?id=2817</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-At http://docs.python.org/reference/datamodel.html, it lists all the `__methods__` that Python works with (like `__int__`, `__contains__`, etc.).  We should go through all of these and make sure they are all defined on `Basic`, `Expr`, or whatever relevant subclass, so that we don't have simple bugs like
-
-```py
->>> long(Integer(3))
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-/Users/aaronmeurer/Documents/python/sympy/sympy/<ipython-input-72-5fff10d216fd> in <module>()
-----> 1 long(Integer(3))
-
-TypeError: long() argument must be a string or a number, not 'Integer'
-```
-
-Regarding where they should be defined, stuff that makes sense for any object should go on Basic, stuff that makes sense only on mathematical objects (like `__add__` for example) should go on Expr, and stuff that makes sense only for numbers (like `__int__`) should go in `Number`.
- 
-
-- *Category:* Outreach
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2830"></a>
-### [2830](http://code.google.com/p/sympy/issues/detail?id=2830&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: openSUSE
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2830">http://code.google.com/p/sympy/issues/detail?id=2830</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-```
-> @@ -542,7 +542,11 @@ def test_1st_homogeneous_coeff_ode_check3():
->      # (False, x*(log(exp(-LambertW(C1*x))) + LambertW(C1*x))*exp(-LambertW(C1*x) + 1))
->      eq3 = f(x) + (x*log(f(x)/x) - 2*x)*diff(f(x),x)
->      sol3 = Eq(f(x), x*exp(1 - LambertW(C1*x)))
-> -    assert checkodesol(eq3, sol3, solve_for_func=False)[0]
-> +    assert checkodesol(eq3, sol3, solve_for_func=True)[0]
-> +    # and without an assumption about x and f(x), the implicit form doesn't resolve, either:
-> +    # (False, (log(f(x)/x) + log(x/f(x)))*f(x))
-```
-
-So `checkodesol()` needs to be more aggressive, since `dsolve()` obtains these logarithms by calling `logcombine(force=True)`. An expand with `force=True` should be used on expressions being tested or else (as shown above) terms which should go to zero, don't:
-
-```py
->>> log(f(x)/x) + log(x/f(x))
-log(f(x)/x) + log(x/f(x))
->>> _.expand(force=True)
-0
-```
- 
-
-- *Category:* Outreach
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2838"></a>
-### [2838](http://code.google.com/p/sympy/issues/detail?id=2838&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: Slackware
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2838">http://code.google.com/p/sympy/issues/detail?id=2838</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-KroneckerDelta would be useful for more than just quantum physics.  I think it should be moved into the functions module and imported with `from sympy import *`.
- 
-
-- *Category:* Outreach
-- *Labels:* EasyToFix, Priority-Medium, Quantum, Type-Defect
-- *Time to complete:* 96 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2846"></a>
-### [2846](http://code.google.com/p/sympy/issues/detail?id=2846&q=label%3ACodeInImportedIntoSpreadsheet) - Package the latest version of SymPy for the major distributions: other?
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2846">http://code.google.com/p/sympy/issues/detail?id=2846</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Integral.transform is confusing, since it requires you to use the same integration variable.  But usually, when we do a transfrom on an integral we change the name of the variable.  It should allow something like
-
-```py
-Integral.transform(x, 2*y, y)
-```
-
-where y is the new variable.  The third argument would default to the integration variable, so that you can still use the current syntax.
-
-Also, the docstring needs some doctests, which would also make it less confusing.
-
-Related is [issue 2297: Integral manipulations](http://code.google.com/p/sympy/issues/detail?id=2297)
- 
-
-- *Category:* Outreach
-- *Labels:* Integration, Priority-Medium, Type-Defect
-- *Time to complete:* 96 hours
+CodeInCategory-Outreach, CodeInDifficulty-Medium, CodeInMultiple, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -925,8 +722,9 @@ The issue tracker can provide some valuable statistics about the health of the p
  
 
 - *Category:* Research
-- *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
+
+CodeInCategory-Research, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -946,8 +744,9 @@ doc/src/modules/physics/mechanics/examples.txt:maximum recursion depth being exc
 lambdify's docstring must be pulled into docs (there is already a generic issue for this), but we also need a good tutorial showing users how to cooperate with NumPy, SciPy etc. This issue (not the only one by the way) was pointed out to me by Fernando Perez during my stay at Berkeley this week, when trying to solve a practical symbolic-numeric problem. SymPy has already *a lot* of features, but unfortunately most of them are deeply buried in the internals of SymPy and known only to its developers. Also we have to check what does ufuncify() do, because it was reported to me that it's extremely slow. 
 
 - *Category:* Documentation
-- *Labels:* Documentation, Priority-Critical, Type-Defect, Milestone-Release0.7.2
 - *Time to complete:* 96 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Medium, Documentation, Priority-Critical, Type-Defect, Milestone-Release0.7.2 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -962,8 +761,9 @@ The issue is to consider ways to make the rewrite framework stronger, but still 
  
 
 - *Category:* Research
-- *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
+
+CodeInCategory-Research, CodeInDifficulty-Medium, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -1028,8 +828,9 @@ Example:
  
 
 - *Category:* Code
-- *Labels:* Integration, Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, CodeInImportedIntoSpreadsheet, Integration, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -1078,8 +879,9 @@ The same sort of problems exist for Add: while `sqrt(2) + sqrt(6)` is definitely
  
 
 - *Category:* Code
-- *Labels:* Priority-Medium, Type-Defect
 - *Time to complete:* 96 hours
+
+CodeInCategory-Code, CodeInDifficulty-Medium, CodeInImportedIntoSpreadsheet, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
@@ -1103,247 +905,8 @@ Check out comment 32 in the bug report.
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
-<a name="#93"></a>
-### [93](http://code.google.com/p/sympy/issues/detail?id=93&q=label%3ACodeInImportedIntoSpreadsheet) - Classifying formulas
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=93">http://code.google.com/p/sympy/issues/detail?id=93</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Just an idea: implement the "square root denesting" ideas of
-<a href="http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf" rel="nofollow">http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf</a>
-doesn't look to complicated.
-
-
- 
-
-- *Category:* Code
-- *Labels:* GHOP, Priority-Medium, Type-Enhancement
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#281"></a>
-### [281](http://code.google.com/p/sympy/issues/detail?id=281&q=label%3ACodeInImportedIntoSpreadsheet) - Bug in subs
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=281">http://code.google.com/p/sympy/issues/detail?id=281</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-
-```py
->>> isinstance(oo, Rational)
-True
->>> oo.is_rational
-True
-```
-
-This is clearly wrong. Infinity is not a rational number.
- 
-
-- *Category:* QualityAssurance
-- *Labels:* Milestone-Release0.7.3, Priority-High, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#294"></a>
-### [294](http://code.google.com/p/sympy/issues/detail?id=294&q=label%3ACodeInImportedIntoSpreadsheet) - Documentation for the Expr class
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=294">http://code.google.com/p/sympy/issues/detail?id=294</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I think there should soon be documentation in the code for most, if not
-all, of the classes and functions, even if it is only a single line. This
-can be useful for both the generated API documentation, and through
-interactive help (i.e., the help() command in an interactive Python
-session). If there is a need for this, I am fine going through all of the
-code and documenting everything, or getting a good start on it.
- 
-
-- *Category:* Documentation
-- *Labels:* Documentation, GHOP, NeedsReview, Priority-Medium, Type-Enhancement, asmeurer
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#363"></a>
-### [363](http://code.google.com/p/sympy/issues/detail?id=363&q=label%3ACodeInImportedIntoSpreadsheet) - Move stuff from the Google Code SVN to git
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=363">http://code.google.com/p/sympy/issues/detail?id=363</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I think a method that does the opposite of reduce(operator, [x,y,...])
-would be useful. Something like this:
-
-```py
->>> (x+y+z).split('+')
-(x, y+z)
->>> (x+y+z).split('+', flatten=True)
-(x, y, z)
-```
-
-Various keyword arguments could be added for whether to split rational
-numbers, etc. With such options, split() could replace several existing
-methods like as_coefficient, as_independent, as_base_exp, as_numer_denom,
-etc. It is better to only have to remember a single method.
-
-Using an operator symbol like '+' as argument instead of a class is my
-preference as it would be more readable and more versatile ('/' can be used
-even though we have no Div class).
-
-A method like this would be especially useful if Add and Mul are changed as
-discussed in [issue 362: Possible speed improvements to core](http://code.google.com/p/sympy/issues/detail?id=362), as its interface would be independent of the
-underlying representation.
- 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#615"></a>
-### [615](http://code.google.com/p/sympy/issues/detail?id=615&q=label%3ACodeInImportedIntoSpreadsheet) - sympy development rules
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=615">http://code.google.com/p/sympy/issues/detail?id=615</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-
-```
-    /home/matt/hg/sympy/sympy/core/basic_methods.py in __getattr__(cls, name)
-    216         try: return MetaBasicMeths.classnamespace[name]
-    217         except KeyError: pass
---> 218         raise AttributeError("'%s' object has no attribute '%s'"%
-    219                              (cls.__name__, name))
-    220 
-```
-
-AttributeError: 'Basic' object has no attribute 'Log'.
-
-Some time ago functions were renamed but in many places there are old names
-left, this should be fixed soon.
-
-And especially tests need to be written to catch these bugs. Because what is
-not tested for is broken.
- 
-
-- *Category:* Training
-- *Labels:* EasyToFix, NeedsBetterPatch, Priority-High, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#654"></a>
-### [654](http://code.google.com/p/sympy/issues/detail?id=654&q=label%3ACodeInImportedIntoSpreadsheet) - List of dependencies
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=654">http://code.google.com/p/sympy/issues/detail?id=654</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-It seems this piece of code is never (?) executed in sympy since
-exp(3*log(x)) canonize to x**3.
-
-```
---- a/sympy/functions/elementary/exponential.py
-@@ -13,7 +13,7 @@ class exp(Function):
-             raise ArgumentIndexError(self, argindex)
-
-     def inverse(self, argindex=3D1):
--        return S.Log
-+        return log
-
-     @classmethod
-     def _eval_apply_subs(self, *args):
-@@ -124,7 +124,7 @@ class exp(Function):
-         arg =3D self.args[0]
-         o =3D old
-         if isinstance(old, Basic.Pow): # handle (exp(3*log(x))).subs(x*=
-*2, z) -&gt; z**(3/2)
--            old =3D exp(old.exp * S.Log(old.base))
-+            old =3D exp(old.exp * log(old.base))
-```
-
-On the other hand when autoevaluation would be turned off exp(3*log(x))
-will be just that -- so there should be a test which constructs
-unevaluated exp(3*log(x), evaluate=False) and calls subs.
-
- 
-
-- *Category:* Documentation
-- *Labels:* EasyToFix, Matching, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#707"></a>
-### [707](http://code.google.com/p/sympy/issues/detail?id=707&q=label%3ACodeInImportedIntoSpreadsheet) - Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=707">http://code.google.com/p/sympy/issues/detail?id=707</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Move all wikis from [code.google.com](http://code.google.com/p/sympy/w/list) to
-[github](https://github.com/sympy/sympy/wiki).
-So that we have just one source of documentation to reduce confusion.
- 
-
-- *Category:* Documentation
-- *Labels:* Documentation, Priority-High, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#716"></a>
-### [716](http://code.google.com/p/sympy/issues/detail?id=716&q=label%3ACodeInImportedIntoSpreadsheet) - integrate() should use the ode module's undetermined coefficients solver when possible
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=716">http://code.google.com/p/sympy/issues/detail?id=716</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-
-```py
-In [1]: e = Ellipse(Point(0,0), 3, 2)
-
-In [2]: t = e.tangent_line(e.random_point())
-
-In [3]: e.is_tangent(t)
-Out[3]: False
-```
-
-Obviously [2] and [3] are in contradiction. By plotting the result, [2] is
-most probably right, so [3] is wrong.
- 
-
-- *Category:* Code
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#754"></a>
-### [754](http://code.google.com/p/sympy/issues/detail?id=754&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy's readthedocs documentation is broken
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=754">http://code.google.com/p/sympy/issues/detail?id=754</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Here is a nice integral that SymPy is able to compute:
-
-```
->>> from sympy import *
->>> var('y')
-y
->>> a = integrate((16*y-16)/(y**4-2*y**3+4*y-4), (y, 0, 1))
->>> a = simplify(a)
->>> pprint(a)
-                                              ___
--2*log(2) + 2*pi + 2*log(1 + I) + 2*log(1 + \/ 2 ) + 2*log(1 - I) + 2*log(1 -
-
-  ___
-\/ 2 ) - 2*pi*I - 2*I*log(1 - I) + 2*I*log(1 + I)
-
-```
-
-Simplifying the answer by hand is straightforward (add up the real and
-imaginary parts), but unfortunately, SymPy is unable to do this. (It also
-fails to produce a numerical value: a.evalf() -> ValueError.) It seems that
-currently re and as_real_imag don't know anything about logarithms.
- 
-
-- *Category:* Documentation
-- *Labels:* EasyToFix, Integration, Priority-High, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
 <a name="#1058"></a>
-### [1058](http://code.google.com/p/sympy/issues/detail?id=1058&q=label%3ACodeInImportedIntoSpreadsheet) - Check for incorrect usage of expr.atoms() and change it to free_symbols
+### [1058](http://code.google.com/p/sympy/issues/detail?id=1058&q=label%3ACodeInImportedIntoSpreadsheet) - Classifying formulas
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1058">http://code.google.com/p/sympy/issues/detail?id=1058</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1380,88 +943,14 @@ pi []
  
 
 - *Category:* Code
-- *Labels:* Priority-Medium, Type-Enhancement
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+CodeInCategory-Code, CodeInDifficulty-Easy, Priority-Medium, Type-Enhancement 
 
-<a name="#1235"></a>
-### [1235](http://code.google.com/p/sympy/issues/detail?id=1235&q=label%3ACodeInImportedIntoSpreadsheet) - Clean up test_lambdify.py
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1235">http://code.google.com/p/sympy/issues/detail?id=1235</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I've downloaded the Windows installer, and tries to run the program - but 
-I get an error message: "No Python information found in the registry". But 
-I have Python installed.
-
-This is what I get when running the Python command in the command line:
-
-```C:\Users\Fredrik\Documents\programme\discalc>PYTHON
-Python 2.5.1 (r251:54863, Apr 18 2007, 08:51:08) [MSC v.1310 32 bit 
-(Intel)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-```
-
-The problem is that we need someone with a 64-bit Windows machine to volunteer to do it (see #16).
-
- 
-
-- *Category:* QualityAssurance
-- *Labels:* Milestone-Release0.7.1, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#1456"></a>
-### [1456](http://code.google.com/p/sympy/issues/detail?id=1456&q=label%3ACodeInImportedIntoSpreadsheet) - Use "with open" instead of "open … close"
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1456">http://code.google.com/p/sympy/issues/detail?id=1456</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/ directory, but not one of the ones that only has a few files in it).  
-
-
-Example:
-
-```
-$ sudo apt-get install pyflakes
-$ pyflakes sympy/integrals/
-sympy/integrals/integrals.py:10: 'limit' imported but unused
-sympy/integrals/integrals.py:13: 'DiracDelta' imported but unused
-sympy/integrals/integrals.py:13: 'Heaviside' imported but unused
-```
-it finds (among other things) that the Heaviside is imported but never
-used, so it should be removed.
-
-There is also pychecker, which shows a lot of things similar to this (I can't get pyflakes to work, so I can't say if it 
-does more or not).  You can just install and run pychecker sympy --limit 1000 to see them all (it takes a few 
-minutes to run).
-
-Note that there are lots of warnings coming from polys/densepolys.py, polys/densetools.py and polys/sparsepolys.py, but these modules are known not to work, cf. issue 2371.
- 
-
-- *Category:* Code
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-Pick a good sized module in SymPy (i.e., one of the subdirectories of the sympy/ directory, but not one of the ones that only has a few files in it).  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#1594"></a>
-### [1594](http://code.google.com/p/sympy/issues/detail?id=1594&q=label%3ACodeInImportedIntoSpreadsheet) - det() is called when inverting matrix through GE
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1594">http://code.google.com/p/sympy/issues/detail?id=1594</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): This can only be done after issue 1594 is resolved. 
-
-
-Currently it only shuffles the test files, not the test functions. 
-
-- *Category:* Code
-- *Labels:* Priority-Medium, Testing, Type-Defect
-- *Time to complete:* 48 hours
-
-This can only be done after issue 1594 is resolved. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#1616"></a>
-### [1616](http://code.google.com/p/sympy/issues/detail?id=1616&q=label%3ACodeInImportedIntoSpreadsheet) - latex(symbol_names) not working with ~x
+### [1616](http://code.google.com/p/sympy/issues/detail?id=1616&q=label%3ACodeInImportedIntoSpreadsheet) - Bug in subs
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1616">http://code.google.com/p/sympy/issues/detail?id=1616</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1485,87 +974,29 @@ The error message is: ('EOF in multi-line statement', (96, 0))
 
  
 
-- *Category:* Code
-- *Labels:* EasyToFix, Matching, Priority-High, Type-Defect
+- *Category:* QualityAssurance
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#1752"></a>
-### [1752](http://code.google.com/p/sympy/issues/detail?id=1752&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the SymPy Logo
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1752">http://code.google.com/p/sympy/issues/detail?id=1752</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Two things annoy me about `./setup.py test`.  First, if a regular test fails, then it does not run the 
-doctests.  But this is supposed to be a shortcut to both the regular tests and the doctests in one.  
-Second, if you keyboard interrupt during the tests, it then proceeds to run the doctests.  But when I 
-keyboard interrupt, I want it to stop the whole script.  
-
-I don't know how easy it would be to change the second item, but the first one should be fixable.
- 
-
-- *Category:* Outreach
-- *Labels:* EasyToFix, Priority-High, Testing, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#1817"></a>
-### [1817](http://code.google.com/p/sympy/issues/detail?id=1817&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1817">http://code.google.com/p/sympy/issues/detail?id=1817</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-See [maillist](http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748)
-
-The idea is to make a cheat sheet for sympy, similar to PSageMath quickref](http://wiki.sagemath.org/quickref)
-
- 
-
-- *Category:* Training
-- *Labels:* Documentation, Priority-Medium, Type-Enhancement
-- *Time to complete:* 48 hours
+CodeInCategory-QA, CodeInDifficulty-Easy, EasyToFix, Matching, Priority-High, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#1886"></a>
-### [1886](http://code.google.com/p/sympy/issues/detail?id=1886&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
+### [1886](http://code.google.com/p/sympy/issues/detail?id=1886&q=label%3ACodeInImportedIntoSpreadsheet) - Documentation for the Expr class
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1886">http://code.google.com/p/sympy/issues/detail?id=1886</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 Expr needs a docstring. The split between Basic and Expr must be explained. 
 
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
+- *Category:* Documentation
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#1941"></a>
-### [1941](http://code.google.com/p/sympy/issues/detail?id=1941&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1941">http://code.google.com/p/sympy/issues/detail?id=1941</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-This is related to <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a>.  When I met with Ondrej last summer, we worked on a core where 
-objects knew how to combine themselves with respect to Mul and Add.  See the handler branch at 
-<a href="http://github.com/certik/sympyx/" rel="nofollow">http://github.com/certik/sympyx/</a>.  The idea originally stemmed from <a title="Arbitrary constant type"  href="/p/sympy/issues/detail?id=1336">issue 1336</a>, but we soon 
-discovered that it also simplifies the logic for things like O() (the order function), and oo, which 
-combine abnormally with respect to Mul and Add.  This could also be useful for <a title="Improvements for physical units"  href="/p/sympy/issues/detail?id=1940">issue 1940</a>, so that 
-the units could tell Mul that they need to stay together without Mul explicitly having to know about 
-units.  Right now, Mul.flatten is cluttered with code for handling all these things, and the only way 
-to handle additional classes is to either completely separate them from Basic (as with Poly), or to 
-add more special case code in Mul.flatten.  
-
-Anyway, if we ever rework the core as suggested in <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a> or elsewhere, we should also look into doing this too.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 48 hours
+CodeInCategory-Documentation, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2115"></a>
-### [2115](http://code.google.com/p/sympy/issues/detail?id=2115&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
+### [2115](http://code.google.com/p/sympy/issues/detail?id=2115&q=label%3ACodeInImportedIntoSpreadsheet) - Move stuff from the Google Code SVN to git
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2115">http://code.google.com/p/sympy/issues/detail?id=2115</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1574,14 +1005,15 @@ Everything from here http://code.google.com/p/sympy/source/browse/ needs to be m
 By the way, this includes the Google Code wiki pages in it.
  
 
-- *Category:* Training
-- *Labels:* Documentation, Priority-Medium, Type-Defect
+- *Category:* Documentation
 - *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Documentation, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2157"></a>
-### [2157](http://code.google.com/p/sympy/issues/detail?id=2157&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
+### [2157](http://code.google.com/p/sympy/issues/detail?id=2157&q=label%3ACodeInImportedIntoSpreadsheet) - sympy development rules
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2157">http://code.google.com/p/sympy/issues/detail?id=2157</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1599,13 +1031,14 @@ Maybe there should even be a short **how-to about reviewing patches**.
  
 
 - *Category:* Training
-- *Labels:* Documentation, Priority-Medium, Type-Enhancement
 - *Time to complete:* 48 hours
+
+CodeInCategory-Training, CodeInDifficulty-Easy, Documentation, Priority-Medium, Type-Enhancement 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2160"></a>
-### [2160](http://code.google.com/p/sympy/issues/detail?id=2160&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Number Theory
+### [2160](http://code.google.com/p/sympy/issues/detail?id=2160&q=label%3ACodeInImportedIntoSpreadsheet) - List of dependencies
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2160">http://code.google.com/p/sympy/issues/detail?id=2160</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1614,13 +1047,14 @@ We should include in the README, and probably in the docs somewhere too, a list 
  
 
 - *Category:* Documentation
-- *Labels:* Documentation, Priority-Medium, Type-Defect
 - *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, Documentation, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2204"></a>
-### [2204](http://code.google.com/p/sympy/issues/detail?id=2204&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Combinotorics 
+### [2204](http://code.google.com/p/sympy/issues/detail?id=2204&q=label%3ACodeInImportedIntoSpreadsheet) - Document why unpickling a singleton doesn't return the singleton object with protocol 0 and 1
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2204">http://code.google.com/p/sympy/issues/detail?id=2204</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1659,13 +1093,14 @@ Expected output:
  
 
 - *Category:* Documentation
-- *Labels:* Documentation, Priority-Medium, Type-Defect
 - *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Documentation, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2276"></a>
-### [2276](http://code.google.com/p/sympy/issues/detail?id=2276&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in integrals
+### [2276](http://code.google.com/p/sympy/issues/detail?id=2276&q=label%3ACodeInImportedIntoSpreadsheet) - integrate() should use the ode module's undetermined coefficients solver when possible
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2276">http://code.google.com/p/sympy/issues/detail?id=2276</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1698,26 +1133,14 @@ So I think if the integral has the correct form, that internally `integrate(expr
  
 
 - *Category:* Code
-- *Labels:* EasyToFix, Integration, Priority-Medium, Solvers, Type-Defect
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2319"></a>
-### [2319](http://code.google.com/p/sympy/issues/detail?id=2319&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2319">http://code.google.com/p/sympy/issues/detail?id=2319</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-So my friend pointed out to me that WolphramAlpha lets you enter any LaTeX formula, and it will parse it and evaluate it.  I think we should have a parser that lets us do the same thing. In his case, he takes notes in LaTeX and does all of his homework in it, and he was able to just paste an expression from his homework into WolphramAlpha and it did if for him. 
-
-- *Category:* Documentation
-- *Labels:* Priority-Medium, Type-Enhancement
-- *Time to complete:* 48 hours
+CodeInCategory-Code, CodeInDifficulty-Easy, EasyToFix, Integration, Priority-Medium, Solvers, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2367"></a>
-### [2367](http://code.google.com/p/sympy/issues/detail?id=2367&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions/special
+### [2367](http://code.google.com/p/sympy/issues/detail?id=2367&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy's readthedocs documentation is broken
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2367">http://code.google.com/p/sympy/issues/detail?id=2367</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1735,95 +1158,44 @@ and that's it.
  
 
 - *Category:* Documentation
-- *Labels:* Documentation, EasyToFix, Priority-High, Type-Defect
 - *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, Documentation, EasyToFix, Priority-High, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2427"></a>
-### [2427](http://code.google.com/p/sympy/issues/detail?id=2427&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Matrices
+### [2427](http://code.google.com/p/sympy/issues/detail?id=2427&q=label%3ACodeInImportedIntoSpreadsheet) - Check for incorrect usage of expr.atoms() and change it to free_symbols
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2427">http://code.google.com/p/sympy/issues/detail?id=2427</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 If any code wants to know if there are variables that are free like `x` but not `y` in `Integral(y, (y, 1, x))` then it should use expr.free_symbols, not `.atoms(Symbol)` (since that would have given x and y for the example given). The code should be checked for instances of `.atoms(Symbol)` to see what the author intended and corrected if necessary.
  
 
-- *Category:* Documentation
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
+- *Category:* Code
 - *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2493"></a>
-### [2493](http://code.google.com/p/sympy/issues/detail?id=2493&q=label%3ACodeInImportedIntoSpreadsheet) - Use \functionname instead of \operatorname{functionname} whenever possible
+### [2493](http://code.google.com/p/sympy/issues/detail?id=2493&q=label%3ACodeInImportedIntoSpreadsheet) - Clean up test_lambdify.py
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2493">http://code.google.com/p/sympy/issues/detail?id=2493</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 `test_lambdify.py` has a bunch of try blocks that should be using `raises()`.
  
 
-- *Category:* Code
-- *Labels:* EasyToFix, Priority-Medium, Testing, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2513"></a>
-### [2513](http://code.google.com/p/sympy/issues/detail?id=2513&q=label%3ACodeInImportedIntoSpreadsheet) - Commented out tests should be XFAILed
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2513">http://code.google.com/p/sympy/issues/detail?id=2513</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-DeprecationWarning is turned off by default in Python 2.7, so all of our deprecated behavior that we deprecate with DeprecationWarning is not shown to the majority of our users (unless they are specifically looking for it, they won't find it).  This was done because most users of Python programs can't do anything if the program uses deprecated behavior, so they don't care to see the warning.  But I think most developers don't really do a good job of turning the warnings on, unfortunately.
-
-I think we should create a SymPyDeprecationWarning that subclasses from DeprecationWarning, but is turned on by default in isympy.  See <a title="Turn on deprecation warnings in isympy"  href="/p/sympy/issues/detail?id=2142">issue 2142</a>.  That way, users of scripts that use sympy won't be bothered by them, but people who use isympy, who should be bothered by them in my opinion, will be. This will likely also include the developers of most of those scripts. 
-
 - *Category:* QualityAssurance
-- *Labels:* Priority-Medium, Type-Enhancement
 - *Time to complete:* 48 hours
+
+CodeInCategory-QA, CodeInDifficulty-Easy, EasyToFix, Priority-Medium, Testing, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2521"></a>
-### [2521](http://code.google.com/p/sympy/issues/detail?id=2521&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to German
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2521">http://code.google.com/p/sympy/issues/detail?id=2521</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I tried the new live.sympy.org on my 1st gen iPod touch (iOS 3).  There are a couple of things that make the usage difficult:
-
-- Pressing both "Return" and "Shift-Return" on the keyboard just creates a newline in the input, regardless of whether the "Enter/Shift-Enter" popup is set to.  You can still enter the expression by pressing the "Evaluate" button, but it would be nice if the keyboard worked.
-
-- There's no way to access the history.  There is no "Control" key on an iPod touch.
-
-- You cannot scroll within a frame in mobile Safari, so you can't access the history of the session beyond a few inputs.
-
-- This may be an inherent problem with the fonts in iOS, but the unicode output of the result of `dsolve(f(x).diff(x, x) + 2*f(x).diff(x) + f(x) - exp(x) + sin(x), f(x))` is a little off.  I'm happy to report that the LaTeX output works great, though.
-
-- There are a few minor issues with the size of things, which would be fixed the best if there were a mobile version of the site.  But this is a lower priority.  If the above items can be fixed, the site as it is will work just fine in a mobile environment.
- 
-
-- *Category:* Translation
-- *Labels:* Live, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
-
-<a name="#2528"></a>
-### [2528](http://code.google.com/p/sympy/issues/detail?id=2528&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to French
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2528">http://code.google.com/p/sympy/issues/detail?id=2528</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I just noticed that <a href="http://en.wikipedia.org/wiki/SymPy" rel="nofollow">http://en.wikipedia.org/wiki/SymPy</a> is a little old with its information.  None of it is wrong, but I think the features list could be updated.  It seems to be roughly the same as the features listed at sympy.org and <a href="http://code.google.com/p/sympy/" rel="nofollow">http://code.google.com/p/sympy/</a>, so perhaps those should be updated too.
-
-Also, SymPy's stuff at <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems" rel="nofollow">http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems</a> should be updated.  I did notice some of that is wrong. 
-
-- *Category:* Translation
-- *Labels:* Documentation, Priority-Medium, Type-Defect
-- *Time to complete:* 48 hours
-
-- *Mentors:* [Stefan Krastanov](https://github.com/krastanov)
 
 <a name="#2534"></a>
-### [2534](http://code.google.com/p/sympy/issues/detail?id=2534&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Czech
+### [2534](http://code.google.com/p/sympy/issues/detail?id=2534&q=label%3ACodeInImportedIntoSpreadsheet) - Use "with open" instead of "open … close"
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2534">http://code.google.com/p/sympy/issues/detail?id=2534</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1846,47 +1218,15 @@ And it's not only more readable, but also the with statement context manager wil
 There are a handful of places in the code where we open() stuff (do git grep "open\(").  Remember that to support the with statement in Python 2.5, you have to add "from __future__ import with_statement" to the top of the file.
  
 
-- *Category:* Translation
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
+- *Category:* Code
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Vladimir Perić](https://github.com/vperic)
+CodeInCategory-Code, CodeInDifficulty-Easy, EasyToFix, Priority-Medium, Type-Defect 
 
-<a name="#2552"></a>
-### [2552](http://code.google.com/p/sympy/issues/detail?id=2552&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Polish
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2552">http://code.google.com/p/sympy/issues/detail?id=2552</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
-
-
-
-Incorrect example:
-
-    >>> (1/(x*y)).subs(x*y, 2)
-     1 
-    ───
-    x⋅y
-
-
-
-This is doesn't work because
-
-```py
->>> (1/(x*y)).args
-(1/x, 1/y)
-```
-
- automatically changed in Mul class
- 
-
-- *Category:* Translation
-- *Labels:* Priority-High, Type-Defect
-- *Time to complete:* 48 hours
-
-This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).args; (1/x, 1/y) automatically changed in Mul class  
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2570"></a>
-### [2570](http://code.google.com/p/sympy/issues/detail?id=2570&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Bulgarian
+### [2570](http://code.google.com/p/sympy/issues/detail?id=2570&q=label%3ACodeInImportedIntoSpreadsheet) - Remove bare except statements
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2570">http://code.google.com/p/sympy/issues/detail?id=2570</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -1928,14 +1268,15 @@ And to quite PEP 8:
 To be sure, some of the bare except cases in the code are correct by the above (like the ones in the test runner), but many are not.
  
 
-- *Category:* Translation
-- *Labels:* EasyToFix, Priority-Medium, Type-Defect
+- *Category:* Code
 - *Time to complete:* 48 hours
 
-- *Mentors:* [Stefan Krastanov](https://github.com/krastanov)
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2597"></a>
-### [2597](http://code.google.com/p/sympy/issues/detail?id=2597&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Russian
+### [2597](http://code.google.com/p/sympy/issues/detail?id=2597&q=label%3ACodeInImportedIntoSpreadsheet) - Import all public functions and classes into Sphinx: polys
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2597">http://code.google.com/p/sympy/issues/detail?id=2597</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): This task is marked as easy because most of the public functions appear to already be imported.  
 
 
@@ -1944,30 +1285,931 @@ There are some methods that do have docstrings, but are not shown in the documen
 For example, method norm in matrices.matrices.py has a docstring, but is not shown in http://docs.sympy.org/dev/modules/matrices.html. I thought that the bad formatting (there is no blank line after the first line of docstring) of the docstring might be the reason for this, but there are other methods with baddly formatted docstrings, that are properly shown in the documentation (e.g. method `is_symmetric` for `matrices.matrices.py`).
  
 
-- *Category:* Translation
+- *Category:* Documentation
 - *Labels:* Documentation, Milestone-Release0.7.2, Priority-High, Type-Defect
 - *Time to complete:* 48 hours
 
 This task is marked as easy because most of the public functions appear to already be imported.  
 
-- *Mentors:* [Alexey U. Gudchenko](https://github.com/goodok)
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
-## <a name="#Hard">Hard</a>
 <a name="#2599"></a>
-### [2599](http://code.google.com/p/sympy/issues/detail?id=2599&q=label%3ACodeInImportedIntoSpreadsheet) - Square root denesting
+### [2599](http://code.google.com/p/sympy/issues/detail?id=2599&q=label%3ACodeInImportedIntoSpreadsheet) - Update isympy manpage
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2599">http://code.google.com/p/sympy/issues/detail?id=2599</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
 The manpage for isympy (doc/man/isympy) needs to be updated with all the latest options, etc. 
 
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Documentation, Milestone-Release0.7.2, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2637"></a>
+### [2637](http://code.google.com/p/sympy/issues/detail?id=2637&q=label%3ACodeInImportedIntoSpreadsheet) - Unicode Sigma for pretty printed Sum
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2637">http://code.google.com/p/sympy/issues/detail?id=2637</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I've been looking into how to pretty print the Sigma using unicode.  Here's what I've got so far:
+
+This is what we do for ascii:
+
+```
+  n         
+ __         
+ \ `        
+  )   2⋅f(k)
+ /_,        
+k = 1       
+```
+
+Here's the best unicode I have so far:
+
+
+       n       
+      __       
+      ╲       
+       )   f(k)
+      ╱
+      ‾‾      
+     k = 1     
+
+
+I couldn't find characters (yet) to replicate ` and , (the new horizontal lines are at a different height).  I also haven't found a better replacement for ).
+
+There are these unicode symbols
+
+
+    ⎲
+    ⎳
+
+
+(\u23b2 and \u23b3, respectively) which take up more than one character of space in my terminal (both width and height) and would actually look kind of nice for summations of that size.  So this is the issue from https://github.com/sympy/sympy/pull/389 again.  How do we programmatically tell if a symbol takes up more than one character space, and if so, how many?
+ 
+
+- *Category:* User Interface
+- *Time to complete:* 48 hours
+
+CodeInCategory-UI, CodeInDifficulty-Easy, Concrete, Printing, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2639"></a>
+### [2639](http://code.google.com/p/sympy/issues/detail?id=2639&q=label%3ACodeInImportedIntoSpreadsheet) - The Product() class should not evaluate by default
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2639">http://code.google.com/p/sympy/issues/detail?id=2639</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): See comments 6 and 7 in the bug report. 
+
+
+Unlike other unevaluated operators, Product() is not always unevaluated.  Attempted evaluation should be the job of product().  This is how Sum/summation works:
+
+```py
+>>> Product(n, (n, 1, 2))
+2
+>>> Sum(n, (n, 1, 2))
+```
+
+```
+  2    
+ __    
+ \ `   
+  )   n
+ /_,   
+n = 1  
+```
+```
+>>> product(n, (n, 1, 2))
+2
+
+>>> summation(n, (n, 1, 2))
+3
+```
+ 
+
 - *Category:* Code
-- *Labels:* Documentation, Milestone-Release0.7.2, Priority-Medium, Type-Defect
+- *Labels:* Concrete, Priority-High, Type-Defect
+- *Time to complete:* 48 hours
+
+See comments 6 and 7 in the bug report. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2679"></a>
+### [2679](http://code.google.com/p/sympy/issues/detail?id=2679&q=label%3ACodeInImportedIntoSpreadsheet) - Refactor GA* documentation to use doctests (or move it to examples/)
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2679">http://code.google.com/p/sympy/issues/detail?id=2679</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+There are some .py files in doc/src/modules/galgebra/GA which have some strange indentation (and aren't valid Python source files either). Aaron also noticed this and they produce (harmless) errors when 2to3 is ran on them. I've finally had a chance to look at them and they seem to be included in the main GA module documentation, GAsympy.txt. In fact, they seem to be used like a doctest - the first part of the file (indented) are the comments that produce the second half of the file (not indented). These should be converted to be actual doctests. 
+
+Those files also haven't been touched since 2009 so it's not clear to me if anyone is even using this part of SymPy now, but fixing the docs shouldn't be too hard and can be a good introduction to SymPy for an interested developer (hence, I'm putting the EasyToFix tag here). Also, I don't think these files are ran as part of the doctest suite which means errors might be creeping in and we'd like to avoid this.
+
+For the record, here are the errors produced when 2to3 is ran on these files:
+
+```
+RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/reciprocalframeGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
+RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/headerGAtest.py: ParseError: bad input: type=0, value='', context=('\n', (26, 0))
+RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/conformalgeometryGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
+RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/BasicGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
+RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/hyperbolicGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
+```
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Documentation, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2683"></a>
+### [2683](http://code.google.com/p/sympy/issues/detail?id=2683&q=label%3ACodeInImportedIntoSpreadsheet) - det() is called when inverting matrix through GE
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2683">http://code.google.com/p/sympy/issues/detail?id=2683</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+As noted at [maillist](http://groups.google.com/group/sympy/browse_thread/thread/ba37b597b851df7c#), `det()` is called when inverting a `Matrix` with the GE method.  This is used only the check if it is non-degenerate.  This should instead be checked by the output of `rref()`.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, EasyToFix, Matrices, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2760"></a>
+### [2760](http://code.google.com/p/sympy/issues/detail?id=2760&q=label%3ACodeInImportedIntoSpreadsheet) - latex(symbol_names) not working with ~x
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2760">http://code.google.com/p/sympy/issues/detail?id=2760</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Read this for more information https://github.com/sympy/sympy/pull/674
+
+```py
+latex(x**2, symbol_names={x:'x_i'})
+```
+
+
+works fine, but when you try something as
+
+```py
+latex(~x, symbol_names={x:'x_i'})
+```
+
+it doesn't. Besides, every time you need latex to use x's symbol_name, you need to pass the symbol_names dictionary.
+
+Sage has some nice functionality:
+
+```py
+var('sui', latex_name="s_{u,i}")
+```
+
+and you don't have to use a special dictionary everytime you need to typeset the symbol.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, Printing, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2763"></a>
+### [2763](http://code.google.com/p/sympy/issues/detail?id=2763&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the SymPy Logo
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2763">http://code.google.com/p/sympy/issues/detail?id=2763</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+The original logo is found at http://code.google.com/p/sympy/source/browse/#svn%2Fmaterials%2Flogo   The problem is that the transparency is not done correctly on the tail, so that it does not look good unless the background is white.  We need to fix it so that it uses the correct kind of alpha channel, so that it looks good everywhere.  There is a svg image there, though I didn't have much luck with it.
+ 
+
+- *Category:* Outreach
+- *Time to complete:* 48 hours
+
+CodeInCategory-Outreach, CodeInDifficulty-Easy, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2769"></a>
+### [2769](http://code.google.com/p/sympy/issues/detail?id=2769&q=label%3ACodeInImportedIntoSpreadsheet) - Make video tutorials for SymPy
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2769">http://code.google.com/p/sympy/issues/detail?id=2769</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): The task here is to make a tutorial about some aspect of SymPy.  
+
+
+We can have several Code-In tasks for this.  Create some video tutorials for SymPy, and upload them to some SymPy channel on YouTube. 
+
+- *Category:* Training
+- *Labels:* Priority-Medium, Type-Enhancement
+- *Time to complete:* 48 hours
+
+The task here is to make a tutorial about some aspect of SymPy.  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2774"></a>
+### [2774](http://code.google.com/p/sympy/issues/detail?id=2774&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Number Theory
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2774">http://code.google.com/p/sympy/issues/detail?id=2774</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+Ex. 
+
+```
+>>> prime?
+Docstring:
+    Return the nth prime, with the primes indexed as prime(1) = 2,
+    prime(2) = 3, etc.... The nth prime is approximately n*log(n) and
+    can never be larger than 2**n.
+    
+    Reference: http://primes.utm.edu/glossary/xpage/BertrandsPostulate.html
+```
+
+This is the present doc-string. One needs to add the following line
+
+```
+    See also : isprime, primerange, primepi
+```
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2775"></a>
+### [2775](http://code.google.com/p/sympy/issues/detail?id=2775&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Combinotorics 
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2775">http://code.google.com/p/sympy/issues/detail?id=2775</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+
+This is the list of .py files which contains the functions.
+
+```
+sympy/combinatorics/generators.py  
+sympy/combinatorics/prufer.py
+sympy/combinatorics/graycode.py
+sympy/combinatorics/permutations.py  
+sympy/combinatorics/subsets.py
+```
+
+There are around 98(at max) functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2776"></a>
+### [2776](http://code.google.com/p/sympy/issues/detail?id=2776&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in integrals
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2776">http://code.google.com/p/sympy/issues/detail?id=2776</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+
+This is the list of .py files which contains the functions.
+
+```
+sympy/integrals/deltafunctions.py
+sympy/integrals/integrals.py
+sympy/integrals/risch.py
+sympy/integrals/rationaltools.py
+sympy/integrals/trigonometry.py
+```
+
+There are around 19 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2777"></a>
+### [2777](http://code.google.com/p/sympy/issues/detail?id=2777&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2777">http://code.google.com/p/sympy/issues/detail?id=2777</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+
+This is the list of .py files which contains the functions.
+
+```
+sympy/functions/combinatorial/factorials.py
+sympy/functions/combinatorial/numbers.py
+sympy/functions/elementary/trigonometric.py  
+sympy/functions/elementary/integers.py
+sympy/functions/elementary/exponential.py
+sympy/functions/elementary/piecewise.py
+sympy/functions/elementary/complexes.py
+sympy/functions/elementary/miscellaneous.py
+sympy/functions/elementary/hyperbolic.py
+```
+
+There are around 52 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2778"></a>
+### [2778](http://code.google.com/p/sympy/issues/detail?id=2778&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in functions/special
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2778">http://code.google.com/p/sympy/issues/detail?id=2778</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+
+This is the list of .py files which contains the functions.
+
+```
+sympy/functions/special/zeta_functions.py
+sympy/functions/special/delta_functions.py
+sympy/functions/special/tensor_functions.py
+sympy/functions/special/hyper.py
+sympy/functions/special/bsplines.py
+sympy/functions/special/spherical_harmonics.py
+sympy/functions/special/gamma_functions.py
+sympy/functions/special/bessel.py
+sympy/functions/special/polynomials.py
+sympy/functions/special/error_functions.py
+```
+
+There are around 62 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2780"></a>
+### [2780](http://code.google.com/p/sympy/issues/detail?id=2780&q=label%3ACodeInImportedIntoSpreadsheet) - ``See Also`` feature in Matrices
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2780">http://code.google.com/p/sympy/issues/detail?id=2780</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Edit the doc-string to add list of other function that are closely related to the query.
+
+This is the list of .py files which contains the functions.
+
+```
+sympy/matrices.py
+```
+
+There are around 69 functions which one needs to understand (the input parameters and final result and not the code) to interrelate them.
+ 
+
+- *Category:* Documentation
+- *Time to complete:* 48 hours
+
+CodeInCategory-Documentation, CodeInDifficulty-Easy, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2785"></a>
+### [2785](http://code.google.com/p/sympy/issues/detail?id=2785&q=label%3ACodeInImportedIntoSpreadsheet) - Use \functionname instead of \operatorname{functionname} whenever possible
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2785">http://code.google.com/p/sympy/issues/detail?id=2785</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+SymPy uniformly uses `\operatorname` when latex printing functions. However, tex engine in matplotlib doesn't support it. It would be convenient to use `\functionname` directly whenever possible (trigonometric and hyperbolic functions, exp, log and maybe other).
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, Printing, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2788"></a>
+### [2788](http://code.google.com/p/sympy/issues/detail?id=2788&q=label%3ACodeInImportedIntoSpreadsheet) - Commented out tests should be XFAILed
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2788">http://code.google.com/p/sympy/issues/detail?id=2788</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+If you "git grep '# *assert'", you'll see a bunch of tests where the test line is commented out.  These should be changed to be XFAIL tests, so that we can see if they start passing.  Also, they should be double checked to see if they really would start passing (e.g., they don't have syntax errors).
+ 
+
+- *Category:* QualityAssurance
+- *Time to complete:* 48 hours
+
+CodeInCategory-QA, CodeInDifficulty-Easy, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to German
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to French
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Stefan Krastanov](https://github.com/krastanov)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Czech
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Vladimir Perić](https://github.com/vperic)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Polish
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Bulgarian
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Stefan Krastanov](https://github.com/krastanov)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Russian
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Alexey U. Gudchenko](https://github.com/goodok)
+
+<a name="#2797"></a>
+### [2797](http://code.google.com/p/sympy/issues/detail?id=2797&q=label%3ACodeInImportedIntoSpreadsheet) - Translate our webpage to Serbian
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2797">http://code.google.com/p/sympy/issues/detail?id=2797</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days.  
+
+
+Our webpage can be translated to other languages. Note that this is connected with [issue #2764](http://code.google.com/p/sympy/issues/detail?id=2764), about improving our webpage: if someone is working on that, there's likely no point in translating the page as it'll change.
+ 
+
+- *Category:* Translation
+- *Labels:* Priority-Medium, Type-Defect
+- *Time to complete:* 48 hours
+
+We only have one person available per language, so review may take a few days.  
+
+- *Mentors:* [Vladimir Perić](https://github.com/vperic)
+
+<a name="#2800"></a>
+### [2800](http://code.google.com/p/sympy/issues/detail?id=2800&q=label%3ACodeInImportedIntoSpreadsheet) - Flesh out the SymPy Papers wiki page
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2800">http://code.google.com/p/sympy/issues/detail?id=2800</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+We have a page on the wiki [SymPy-Papers](https://github.com/sympy/sympy/wiki/SymPy-Papers) that should list (scientific) papers mentioning SymPy, but it's currently empty. Populating this would be interesting and could also persuade other academics to try out/use SymPy. Google Scholar can be used to track down papers. See also the [thread which originally asked about this](https://groups.google.com/group/sympy/browse_thread/thread/34443bd5708310f2/71c0cc0ba21a19e1?hl=en).
+
+ 
+
+- *Category:* Outreach
+- *Time to complete:* 48 hours
+
+CodeInCategory-Outreach, CodeInDifficulty-Easy, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2806"></a>
+### [2806](http://code.google.com/p/sympy/issues/detail?id=2806&q=label%3ACodeInImportedIntoSpreadsheet) - Add more tips to the tips page (10 tips)
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2806">http://code.google.com/p/sympy/issues/detail?id=2806</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): As the tips page grows, try to keep it organized. 
+
+
+We have a page of tips that we are compiling at [[tips]].  This should be really fleshed out, so that we have enough tips to do something interesting with.
+
+For Code-In, we can create multiple tasks.  Each task (easy) can be to create say ten tips.
+ 
+
+- *Category:* Training
+- *Labels:* Priority-Medium, Type-Enhancement
+- *Time to complete:* 48 hours
+
+As the tips page grows, try to keep it organized. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2815"></a>
+### [2815](http://code.google.com/p/sympy/issues/detail?id=2815&q=label%3ACodeInImportedIntoSpreadsheet) - Parts of the pyglet plotting module does not follow PEP 8, fix it
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2815">http://code.google.com/p/sympy/issues/detail?id=2815</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+The code there is a bit hard to read. It would be nice to have it refactored so it follows PEP8.
+
+There are certain parts that are not pythonic but that's another problem needing more in-depth refactoring. 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2817"></a>
+### [2817](http://code.google.com/p/sympy/issues/detail?id=2817&q=label%3ACodeInImportedIntoSpreadsheet) - Make sure all the built-in __methods__ are defined
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2817">http://code.google.com/p/sympy/issues/detail?id=2817</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+At http://docs.python.org/reference/datamodel.html, it lists all the `__methods__` that Python works with (like `__int__`, `__contains__`, etc.).  We should go through all of these and make sure they are all defined on `Basic`, `Expr`, or whatever relevant subclass, so that we don't have simple bugs like
+
+```py
+>>> long(Integer(3))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+/Users/aaronmeurer/Documents/python/sympy/sympy/<ipython-input-72-5fff10d216fd> in <module>()
+----> 1 long(Integer(3))
+
+TypeError: long() argument must be a string or a number, not 'Integer'
+```
+
+Regarding where they should be defined, stuff that makes sense for any object should go on Basic, stuff that makes sense only on mathematical objects (like `__add__` for example) should go on Expr, and stuff that makes sense only for numbers (like `__int__`) should go in `Number`.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2830"></a>
+### [2830](http://code.google.com/p/sympy/issues/detail?id=2830&q=label%3ACodeInImportedIntoSpreadsheet) - checkodesol() should use force=True
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2830">http://code.google.com/p/sympy/issues/detail?id=2830</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+```
+> @@ -542,7 +542,11 @@ def test_1st_homogeneous_coeff_ode_check3():
+>      # (False, x*(log(exp(-LambertW(C1*x))) + LambertW(C1*x))*exp(-LambertW(C1*x) + 1))
+>      eq3 = f(x) + (x*log(f(x)/x) - 2*x)*diff(f(x),x)
+>      sol3 = Eq(f(x), x*exp(1 - LambertW(C1*x)))
+> -    assert checkodesol(eq3, sol3, solve_for_func=False)[0]
+> +    assert checkodesol(eq3, sol3, solve_for_func=True)[0]
+> +    # and without an assumption about x and f(x), the implicit form doesn't resolve, either:
+> +    # (False, (log(f(x)/x) + log(x/f(x)))*f(x))
+```
+
+So `checkodesol()` needs to be more aggressive, since `dsolve()` obtains these logarithms by calling `logcombine(force=True)`. An expand with `force=True` should be used on expressions being tested or else (as shown above) terms which should go to zero, don't:
+
+```py
+>>> log(f(x)/x) + log(x/f(x))
+log(f(x)/x) + log(x/f(x))
+>>> _.expand(force=True)
+0
+```
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2838"></a>
+### [2838](http://code.google.com/p/sympy/issues/detail?id=2838&q=label%3ACodeInImportedIntoSpreadsheet) - Move the KroneckerDelta class to another module 
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2838">http://code.google.com/p/sympy/issues/detail?id=2838</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+KroneckerDelta would be useful for more than just quantum physics.  I think it should be moved into the functions module and imported with `from sympy import *`.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Priority-Medium, Quantum, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2846"></a>
+### [2846](http://code.google.com/p/sympy/issues/detail?id=2846&q=label%3ACodeInImportedIntoSpreadsheet) - Integral.transform should allow a change to a different variable
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2846">http://code.google.com/p/sympy/issues/detail?id=2846</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Integral.transform is confusing, since it requires you to use the same integration variable.  But usually, when we do a transfrom on an integral we change the name of the variable.  It should allow something like
+
+```py
+Integral.transform(x, 2*y, y)
+```
+
+where y is the new variable.  The third argument would default to the integration variable, so that you can still use the current syntax.
+
+Also, the docstring needs some doctests, which would also make it less confusing.
+
+Related is [issue 2297: Integral manipulations](http://code.google.com/p/sympy/issues/detail?id=2297)
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, Integration, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2636"></a>
+### [2636](http://code.google.com/p/sympy/issues/detail?id=2636&q=label%3ACodeInImportedIntoSpreadsheet) - Pretty print Product
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2636">http://code.google.com/p/sympy/issues/detail?id=2636</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Do not attempt to solve this until the task for issue 2639 is fixed. 
+
+
+We should pretty print Product with a big capital Pi.  Something like
+
+
+    >>> product(f(k), (k, 1, n))
+      n
+    -----
+    |   | f(k)
+    |   |
+    k = 1
+    ```
+
+    in ascii, and 
+
+    ```
+    >>> product(f(k), (k, 1, n))
+      n
+    ┌───┐
+    │   │ f(k)
+    │   │
+    k = 1
+    ```
+
+    in unicode. Or, better, for unicode, do
+
+    ```
+      n
+    ┬───┬
+    │   │ f(k)
+    │   │
+    k = 1
+
+
+So it looks more like the capital Pi at http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation.  I couldn't find a character as tall as │ but with a horizontal line at the bottom.
+ 
+
+- *Category:* Code
+- *Labels:* Concrete, Printing, Priority-Medium, Type-Enhancement
+- *Time to complete:* 48 hours
+
+Do not attempt to solve this until the task for issue 2639 is fixed. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#615"></a>
+### [615](http://code.google.com/p/sympy/issues/detail?id=615&q=label%3ACodeInImportedIntoSpreadsheet) - Fix the occasions where functions are called with wrong name and write tests
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=615">http://code.google.com/p/sympy/issues/detail?id=615</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+
+```
+    /home/matt/hg/sympy/sympy/core/basic_methods.py in __getattr__(cls, name)
+    216         try: return MetaBasicMeths.classnamespace[name]
+    217         except KeyError: pass
+--> 218         raise AttributeError("'%s' object has no attribute '%s'"%
+    219                              (cls.__name__, name))
+    220 
+```
+
+AttributeError: 'Basic' object has no attribute 'Log'.
+
+Some time ago functions were renamed but in many places there are old names
+left, this should be fixed soon.
+
+And especially tests need to be written to catch these bugs. Because what is
+not tested for is broken.
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, NeedsBetterPatch, Priority-High, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#654"></a>
+### [654](http://code.google.com/p/sympy/issues/detail?id=654&q=label%3ACodeInImportedIntoSpreadsheet) - Remove dead code from _eval_subs()
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=654">http://code.google.com/p/sympy/issues/detail?id=654</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+It seems this piece of code is never (?) executed in sympy since
+exp(3*log(x)) canonize to x**3.
+
+```
+--- a/sympy/functions/elementary/exponential.py
+@@ -13,7 +13,7 @@ class exp(Function):
+             raise ArgumentIndexError(self, argindex)
+
+     def inverse(self, argindex=3D1):
+-        return S.Log
++        return log
+
+     @classmethod
+     def _eval_apply_subs(self, *args):
+@@ -124,7 +124,7 @@ class exp(Function):
+         arg =3D self.args[0]
+         o =3D old
+         if isinstance(old, Basic.Pow): # handle (exp(3*log(x))).subs(x*=
+*2, z) -&gt; z**(3/2)
+-            old =3D exp(old.exp * S.Log(old.base))
++            old =3D exp(old.exp * log(old.base))
+```
+
+On the other hand when autoevaluation would be turned off exp(3*log(x))
+will be just that -- so there should be a test which constructs
+unevaluated exp(3*log(x), evaluate=False) and calls subs.
+
+ 
+
+- *Category:* Code
+- *Time to complete:* 48 hours
+
+CodeInCategory-Code, CodeInDifficulty-Easy, CodeInImportedIntoSpreadsheet, EasyToFix, Matching, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+## <a name="#Hard">Hard</a>
+<a name="#93"></a>
+### [93](http://code.google.com/p/sympy/issues/detail?id=93&q=label%3ACodeInImportedIntoSpreadsheet) - Square root denesting
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=93">http://code.google.com/p/sympy/issues/detail?id=93</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Just an idea: implement the "square root denesting" ideas of
+<a href="http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf" rel="nofollow">http://www.almaden.ibm.com/cs/people/fagin/symb85.pdf</a>
+doesn't look to complicated.
+
+
+ 
+
+- *Category:* Code
 - *Time to complete:* 144 hours
+
+CodeInCategory-Code, CodeInDifficulty-Hard, GHOP, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1594"></a>
+### [1594](http://code.google.com/p/sympy/issues/detail?id=1594&q=label%3ACodeInImportedIntoSpreadsheet) - bin/test --random should also shuffle tests inside a file
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1594">http://code.google.com/p/sympy/issues/detail?id=1594</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): This can only be done after issue 1594 is resolved. 
+
+
+Currently it only shuffles the test files, not the test functions. 
+
+- *Category:* QualityAssurance
+- *Labels:* Priority-Medium, Testing, Type-Defect
+- *Time to complete:* 144 hours
+
+This can only be done after issue 1594 is resolved. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1817"></a>
+### [1817](http://code.google.com/p/sympy/issues/detail?id=1817&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy Cheat Sheet
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1817">http://code.google.com/p/sympy/issues/detail?id=1817</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+See [maillist](http://groups.google.com/group/sympy/browse_thread/thread/f3b1ddc8b6333748)
+
+The idea is to make a cheat sheet for sympy, similar to PSageMath quickref](http://wiki.sagemath.org/quickref)
+
+ 
+
+- *Category:* Training
+- *Time to complete:* 144 hours
+
+CodeInCategory-Training, CodeInDifficulty-Hard, Documentation, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#1941"></a>
+### [1941](http://code.google.com/p/sympy/issues/detail?id=1941&q=label%3ACodeInImportedIntoSpreadsheet) - Objects that know how to combine themselves
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=1941">http://code.google.com/p/sympy/issues/detail?id=1941</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+This is related to <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a>.  When I met with Ondrej last summer, we worked on a core where 
+objects knew how to combine themselves with respect to Mul and Add.  See the handler branch at 
+<a href="http://github.com/certik/sympyx/" rel="nofollow">http://github.com/certik/sympyx/</a>.  The idea originally stemmed from <a title="Arbitrary constant type"  href="/p/sympy/issues/detail?id=1336">issue 1336</a>, but we soon 
+discovered that it also simplifies the logic for things like O() (the order function), and oo, which 
+combine abnormally with respect to Mul and Add.  This could also be useful for <a title="Improvements for physical units"  href="/p/sympy/issues/detail?id=1940">issue 1940</a>, so that 
+the units could tell Mul that they need to stay together without Mul explicitly having to know about 
+units.  Right now, Mul.flatten is cluttered with code for handling all these things, and the only way 
+to handle additional classes is to either completely separate them from Basic (as with Poly), or to 
+add more special case code in Mul.flatten.  
+
+Anyway, if we ever rework the core as suggested in <a title="more efficient core"  href="/p/sympy/issues/detail?id=1908">issue 1908</a> or elsewhere, we should also look into doing this too.
+ 
+
+- *Category:* Research
+- *Time to complete:* 144 hours
+
+CodeInCategory-Research, CodeInDifficulty-Hard, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2319"></a>
+### [2319](http://code.google.com/p/sympy/issues/detail?id=2319&q=label%3ACodeInImportedIntoSpreadsheet) - LaTeX input
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2319">http://code.google.com/p/sympy/issues/detail?id=2319</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+So my friend pointed out to me that WolphramAlpha lets you enter any LaTeX formula, and it will parse it and evaluate it.  I think we should have a parser that lets us do the same thing. In his case, he takes notes in LaTeX and does all of his homework in it, and he was able to just paste an expression from his homework into WolphramAlpha and it did if for him. 
+
+- *Category:* Code
+- *Time to complete:* 144 hours
+
+CodeInCategory-Code, CodeInDifficulty-Hard, Priority-Medium, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2521"></a>
+### [2521](http://code.google.com/p/sympy/issues/detail?id=2521&q=label%3ACodeInImportedIntoSpreadsheet) - live.sympy.org isn't so easy to use on a mobile device
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2521">http://code.google.com/p/sympy/issues/detail?id=2521</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+I tried the new live.sympy.org on my 1st gen iPod touch (iOS 3).  There are a couple of things that make the usage difficult:
+
+- Pressing both "Return" and "Shift-Return" on the keyboard just creates a newline in the input, regardless of whether the "Enter/Shift-Enter" popup is set to.  You can still enter the expression by pressing the "Evaluate" button, but it would be nice if the keyboard worked.
+
+- There's no way to access the history.  There is no "Control" key on an iPod touch.
+
+- You cannot scroll within a frame in mobile Safari, so you can't access the history of the session beyond a few inputs.
+
+- This may be an inherent problem with the fonts in iOS, but the unicode output of the result of `dsolve(f(x).diff(x, x) + 2*f(x).diff(x) + f(x) - exp(x) + sin(x), f(x))` is a little off.  I'm happy to report that the LaTeX output works great, though.
+
+- There are a few minor issues with the size of things, which would be fixed the best if there were a mobile version of the site.  But this is a lower priority.  If the above items can be fixed, the site as it is will work just fine in a mobile environment.
+ 
+
+- *Category:* User Interface
+- *Time to complete:* 144 hours
+
+CodeInCategory-UI, CodeInDifficulty-Hard, Live, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2626"></a>
-### [2626](http://code.google.com/p/sympy/issues/detail?id=2626&q=label%3ACodeInImportedIntoSpreadsheet) - bin/test --random should also shuffle tests inside a file
+### [2626](http://code.google.com/p/sympy/issues/detail?id=2626&q=label%3ACodeInImportedIntoSpreadsheet) - Piecewise should use a different syntax for "otherwise"
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2626">http://code.google.com/p/sympy/issues/detail?id=2626</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -2017,281 +2259,15 @@ x
 ```
  
 
-- *Category:* QualityAssurance
-- *Labels:* Milestone-Release0.7.2, Priority-High, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2632"></a>
-### [2632](http://code.google.com/p/sympy/issues/detail?id=2632&q=label%3ACodeInImportedIntoSpreadsheet) - SymPy Cheat Sheet
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2632">http://code.google.com/p/sympy/issues/detail?id=2632</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-You can open the IPython qtconsole with a sympy session by typing `IPython qtconsole --profile=sympy`, but you should also be able to do it by typing `isympy -c ipython-qtconsole`.  Unlike the former, the latter should perhaps not rely on IPython's built-in sympy profile to work.
- 
-
-- *Category:* Training
-- *Labels:* Printing, Priority-Medium, Type-Enhancement
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2636"></a>
-### [2636](http://code.google.com/p/sympy/issues/detail?id=2636&q=label%3ACodeInImportedIntoSpreadsheet) - Objects that know how to combine themselves
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2636">http://code.google.com/p/sympy/issues/detail?id=2636</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Do not attempt to solve this until the task for issue 2639 is fixed. 
-
-
-We should pretty print Product with a big capital Pi.  Something like
-
-
-    >>> product(f(k), (k, 1, n))
-      n
-    -----
-    |   | f(k)
-    |   |
-    k = 1
-    ```
-
-    in ascii, and 
-
-    ```
-    >>> product(f(k), (k, 1, n))
-      n
-    ┌───┐
-    │   │ f(k)
-    │   │
-    k = 1
-    ```
-
-    in unicode. Or, better, for unicode, do
-
-    ```
-      n
-    ┬───┬
-    │   │ f(k)
-    │   │
-    k = 1
-
-
-So it looks more like the capital Pi at http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation.  I couldn't find a character as tall as │ but with a horizontal line at the bottom.
- 
-
-- *Category:* Research
-- *Labels:* Concrete, Printing, Priority-Medium, Type-Enhancement
-- *Time to complete:* 144 hours
-
-Do not attempt to solve this until the task for issue 2639 is fixed. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2637"></a>
-### [2637](http://code.google.com/p/sympy/issues/detail?id=2637&q=label%3ACodeInImportedIntoSpreadsheet) - LaTeX input
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2637">http://code.google.com/p/sympy/issues/detail?id=2637</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-I've been looking into how to pretty print the Sigma using unicode.  Here's what I've got so far:
-
-This is what we do for ascii:
-
-```
-  n         
- __         
- \ `        
-  )   2⋅f(k)
- /_,        
-k = 1       
-```
-
-Here's the best unicode I have so far:
-
-
-       n       
-      __       
-      ╲       
-       )   f(k)
-      ╱
-      ‾‾      
-     k = 1     
-
-
-I couldn't find characters (yet) to replicate ` and , (the new horizontal lines are at a different height).  I also haven't found a better replacement for ).
-
-There are these unicode symbols
-
-
-    ⎲
-    ⎳
-
-
-(\u23b2 and \u23b3, respectively) which take up more than one character of space in my terminal (both width and height) and would actually look kind of nice for summations of that size.  So this is the issue from https://github.com/sympy/sympy/pull/389 again.  How do we programmatically tell if a symbol takes up more than one character space, and if so, how many?
- 
-
 - *Category:* Code
-- *Labels:* Concrete, Printing, Priority-Medium, Type-Defect
 - *Time to complete:* 144 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2639"></a>
-### [2639](http://code.google.com/p/sympy/issues/detail?id=2639&q=label%3ACodeInImportedIntoSpreadsheet) - live.sympy.org isn't so easy to use on a mobile device
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2639">http://code.google.com/p/sympy/issues/detail?id=2639</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): See comments 6 and 7 in the bug report. 
-
-
-Unlike other unevaluated operators, Product() is not always unevaluated.  Attempted evaluation should be the job of product().  This is how Sum/summation works:
-
-```py
->>> Product(n, (n, 1, 2))
-2
->>> Sum(n, (n, 1, 2))
-```
-
-```
-  2    
- __    
- \ `   
-  )   n
- /_,   
-n = 1  
-```
-```
->>> product(n, (n, 1, 2))
-2
-
->>> summation(n, (n, 1, 2))
-3
-```
- 
-
-- *Category:* User Interface
-- *Labels:* Concrete, Priority-High, Type-Defect
-- *Time to complete:* 144 hours
-
-See comments 6 and 7 in the bug report. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2679"></a>
-### [2679](http://code.google.com/p/sympy/issues/detail?id=2679&q=label%3ACodeInImportedIntoSpreadsheet) - Piecewise should use a different syntax for "otherwise"
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2679">http://code.google.com/p/sympy/issues/detail?id=2679</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-There are some .py files in doc/src/modules/galgebra/GA which have some strange indentation (and aren't valid Python source files either). Aaron also noticed this and they produce (harmless) errors when 2to3 is ran on them. I've finally had a chance to look at them and they seem to be included in the main GA module documentation, GAsympy.txt. In fact, they seem to be used like a doctest - the first part of the file (indented) are the comments that produce the second half of the file (not indented). These should be converted to be actual doctests. 
-
-Those files also haven't been touched since 2009 so it's not clear to me if anyone is even using this part of SymPy now, but fixing the docs shouldn't be too hard and can be a good introduction to SymPy for an interested developer (hence, I'm putting the EasyToFix tag here). Also, I don't think these files are ran as part of the doctest suite which means errors might be creeping in and we'd like to avoid this.
-
-For the record, here are the errors produced when 2to3 is ran on these files:
-
-```
-RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/reciprocalframeGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
-RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/headerGAtest.py: ParseError: bad input: type=0, value='', context=('\n', (26, 0))
-RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/conformalgeometryGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
-RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/BasicGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
-RefactoringTool: Can't parse sympy-py3k/./doc/src/modules/galgebra/GA/hyperbolicGAtest.py: ParseError: bad input: type=5, value='        ', context=('', (1, 0))
-```
- 
-
-- *Category:* Code
-- *Labels:* Documentation, EasyToFix, Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2683"></a>
-### [2683](http://code.google.com/p/sympy/issues/detail?id=2683&q=label%3ACodeInImportedIntoSpreadsheet) - Research ways to do the assumptions system, including removing the old system
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2683">http://code.google.com/p/sympy/issues/detail?id=2683</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-As noted at [maillist](http://groups.google.com/group/sympy/browse_thread/thread/ba37b597b851df7c#), `det()` is called when inverting a `Matrix` with the GE method.  This is used only the check if it is non-degenerate.  This should instead be checked by the output of `rref()`.
- 
-
-- *Category:* Research
-- *Labels:* EasyToFix, Matrices, Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2760"></a>
-### [2760](http://code.google.com/p/sympy/issues/detail?id=2760&q=label%3ACodeInImportedIntoSpreadsheet) - Add a feed of what people are doing at SymPy Live
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2760">http://code.google.com/p/sympy/issues/detail?id=2760</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Read this for more information https://github.com/sympy/sympy/pull/674
-
-```py
-latex(x**2, symbol_names={x:'x_i'})
-```
-
-
-works fine, but when you try something as
-
-```py
-latex(~x, symbol_names={x:'x_i'})
-```
-
-it doesn't. Besides, every time you need latex to use x's symbol_name, you need to pass the symbol_names dictionary.
-
-Sage has some nice functionality:
-
-```py
-var('sui', latex_name="s_{u,i}")
-```
-
-and you don't have to use a special dictionary everytime you need to typeset the symbol.
- 
-
-- *Category:* User Interface
-- *Labels:* Printing, Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2762"></a>
-### [2762](http://code.google.com/p/sympy/issues/detail?id=2762&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Maple
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2762">http://code.google.com/p/sympy/issues/detail?id=2762</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-This is related to <a title="Exact, algebraic, and integer_power substitution"  href="/p/sympy/issues/detail?id=2026">issue 2026</a> and this thread on the [mailing list](http://groups.google.com/group/sympy/browse_thread/thread/4a19d0f39f51fda6).  The subs mechanism should be refactored so that it is more flexible.  Also, I believe it should be using the same thing internally as the pattern matching.  
-
-The (Code-In) task here is to study this problem and discuss optimal ways to solve it.  You may also try implementing this (if we agree upon a good solution), perhaps as a separate task.
- 
-
-- *Category:* Training
-- *Labels:* Matching, Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2763"></a>
-### [2763](http://code.google.com/p/sympy/issues/detail?id=2763&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Mathematica
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2763">http://code.google.com/p/sympy/issues/detail?id=2763</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-The original logo is found at http://code.google.com/p/sympy/source/browse/#svn%2Fmaterials%2Flogo   The problem is that the transparency is not done correctly on the tail, so that it does not look good unless the background is white.  We need to fix it so that it uses the correct kind of alpha channel, so that it looks good everywhere.  There is a svg image there, though I didn't have much luck with it.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2764"></a>
-### [2764](http://code.google.com/p/sympy/issues/detail?id=2764&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Matlab
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2764">http://code.google.com/p/sympy/issues/detail?id=2764</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-Our webpage at http://sympy.org/ could probably be made nicer, like with some nice CSS or html5.  The code is at https://github.com/sympy/sympy.github.com   Also, it maybe could use better examples/explanation of what SymPy is.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
+CodeInCategory-Code, CodeInDifficulty-Hard, Milestone-Release0.7.2, Priority-High, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2765"></a>
-### [2765](http://code.google.com/p/sympy/issues/detail?id=2765&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Maxima
+### [2765](http://code.google.com/p/sympy/issues/detail?id=2765&q=label%3ACodeInImportedIntoSpreadsheet) - Research ways to do the assumptions system, including removing the old system
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2765">http://code.google.com/p/sympy/issues/detail?id=2765</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
@@ -2311,49 +2287,21 @@ True
 ```
  
 
-- *Category:* Training
-- *Labels:* Assumptions, Priority-Medium, Type-Defect
+- *Category:* Research
 - *Time to complete:* 144 hours
 
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2766"></a>
-### [2766](http://code.google.com/p/sympy/issues/detail?id=2766&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Axiom
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2766">http://code.google.com/p/sympy/issues/detail?id=2766</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): We only have one person available per language, so review may take a few days. Please contact us before starting a translation task, to make sure that someone is available to verify the translation. 
-
-
-The [tutorial](http://docs.sympy.org/0.7.1/tutorial.html) should be translated into various languages, e.g., Czech, Polish, French, German, etc.
- 
-
-- *Category:* Training
-- *Labels:* Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
-
-We only have one person available per language, so review may take a few days. Please contact us before starting a translation task, to make sure that someone is available to verify the translation. 
-
-- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
-
-<a name="#2767"></a>
-### [2767](http://code.google.com/p/sympy/issues/detail?id=2767&q=label%3ACodeInImportedIntoSpreadsheet) - minpoly should work with roots of unity in exponential form
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2767">http://code.google.com/p/sympy/issues/detail?id=2767</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
-
-
-The interface at live.sympy.org should be improved, so that it looks and feels nicer, perhaps using some more advanced html5/css, etc. 
-
-- *Category:* Code
-- *Labels:* Live, Priority-Medium, Type-Defect
-- *Time to complete:* 144 hours
+Assumptions, CodeInCategory-Research, CodeInDifficulty-Hard, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
 <a name="#2768"></a>
-### [2768](http://code.google.com/p/sympy/issues/detail?id=2768&q=label%3ACodeInImportedIntoSpreadsheet) - Allow to manage slow tests better with our test runner
+### [2768](http://code.google.com/p/sympy/issues/detail?id=2768&q=label%3ACodeInImportedIntoSpreadsheet) - Add a feed of what people are doing at SymPy Live
 Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2768">http://code.google.com/p/sympy/issues/detail?id=2768</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): It would be cool to have a little feed at the right on live.sympy.org to show what other people are entering, so that people can see what sorts of things are being done.  
 
 
 It would be cool to have a little feed at the right on live.sympy.org to show what other people are entering, so that people can see what sorts of things are being done.  Of course, you should be able to disable this for your own entries, for privacy reasons.  It should allow you to input the same expression in your session and execute it. 
 
-- *Category:* QualityAssurance
+- *Category:* User Interface
 - *Labels:* Live, Priority-Medium, Type-Defect
 - *Time to complete:* 144 hours
 
@@ -2361,18 +2309,148 @@ It would be cool to have a little feed at the right on live.sympy.org to show wh
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
-<a name="#2769"></a>
-### [2769](http://code.google.com/p/sympy/issues/detail?id=2769&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate how to employ complexity measures in functions like trigsimp(), etc.
-Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2769">http://code.google.com/p/sympy/issues/detail?id=2769</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): The task here is to make a tutorial about some aspect of SymPy.  
+<a name="#2771"></a>
+### [2771](http://code.google.com/p/sympy/issues/detail?id=2771&q=label%3ACodeInImportedIntoSpreadsheet) - Write a document showing the difference between SymPy and other mathematical systems: Maple
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2771">http://code.google.com/p/sympy/issues/detail?id=2771</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
 
 
-We can have several Code-In tasks for this.  Create some video tutorials for SymPy, and upload them to some SymPy channel on YouTube. 
+We should document the differences between SymPy and other mathematical systems.  For Code-In, a task should be for one other system. 
 
-- *Category:* Research
+- *Category:* Training
+- *Time to complete:* 144 hours
+
+CodeInCategory-Training, CodeInDifficulty-Hard, CodeInMultiple, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2772"></a>
+### [2772](http://code.google.com/p/sympy/issues/detail?id=2772&q=label%3ACodeInImportedIntoSpreadsheet) - Some UI/GUI for the test runner
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2772">http://code.google.com/p/sympy/issues/detail?id=2772</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. E.g. like http://sourceforge.net/apps/mediawiki/cppunit/nfs/project/c/cp/cppunit/c/c2/Qttestrunner_exa.png  
+
+
+It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. 
+
+- *Category:* User Interface
 - *Labels:* Priority-Medium, Type-Enhancement
 - *Time to complete:* 144 hours
 
-The task here is to make a tutorial about some aspect of SymPy.  
+It would be cool to have some UI/GUI for the test runner that makes it easier to see the failures when they happen. E.g. like http://sourceforge.net/apps/mediawiki/cppunit/nfs/project/c/cp/cppunit/c/c2/Qttestrunner_exa.png  
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2773"></a>
+### [2773](http://code.google.com/p/sympy/issues/detail?id=2773&q=label%3ACodeInImportedIntoSpreadsheet) - Implement the trigsimp algorithm by fu et al
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2773">http://code.google.com/p/sympy/issues/detail?id=2773</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Implement the algorithm for trigonometric simplification from the paper "Automated and readable simplification of trigonometric expressions" by Fu, et. al. (you should be able to find the paper for free from Google Scholar, otherwise email me and I will send it to you).
+ 
+
+- *Category:* Code
+- *Time to complete:* 144 hours
+
+CodeInCategory-Code, CodeInDifficulty-Hard, Priority-Medium, Simplify, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2789"></a>
+### [2789](http://code.google.com/p/sympy/issues/detail?id=2789&q=label%3ACodeInImportedIntoSpreadsheet) - minpoly should work with roots of unity in exponential form
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2789">http://code.google.com/p/sympy/issues/detail?id=2789</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+
+```py
+>>> minpoly(exp(I*pi/8))
+ERROR: An unexpected error occurred while tokenizing input
+The following traceback may be corrupted or invalid
+The error message is: ('EOF in multi-line statement', (16, 0))
+---------------------------------------------------------------------------
+
+/Users/aaronmeurer/Documents/python/sympy/sympy/sympy/polys/numberfields.pyc in bottom_up_scan(ex)
+    117                 return symbols[ex.root]
+    118 
+--> 119         raise NotAlgebraic("%s doesn't seem to be an algebraic number" % ex)
+    120 
+    121     polys = args.get('polys', False)
+
+NotAlgebraic: exp(I*pi/8) doesn't seem to be an algebraic number
+```
+
+But this is a root of `x**16 - 1`.  I don't know how minpoly works internally if this can be done in a general fashion for exponentials nested inside other expressions (like e.g., `sqrt(1 + exp(I*pi/8)))`.
+
+Marking as Code-In difficulty hard because this is a nontrivial algorithm, especially for a high school student.
+ 
+
+- *Category:* Code
+- *Time to complete:* 144 hours
+
+CodeInCategory-Code, CodeInDifficulty-Hard, Polynomial, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2791"></a>
+### [2791](http://code.google.com/p/sympy/issues/detail?id=2791&q=label%3ACodeInImportedIntoSpreadsheet) - Allow to manage slow tests better with our test runner
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2791">http://code.google.com/p/sympy/issues/detail?id=2791</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br>Additional Note(s): Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. Also, almost all skipped tests (or maybe all) are currently skipped because they are slow, so after this is implemented, they should all be converted. 
+
+
+Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. 
+
+- *Category:* QualityAssurance
+- *Labels:* Priority-Medium, Testing, Type-Enhancement
+- *Time to complete:* 144 hours
+
+Currently slow tests are simply skipped, but this makes it hard to actually run them. There should be a decorator for this (e.g. @slow) that would all to to run such tests when give an extra option to bin/test or test() (--slow and slow=True, respectively). It should be also possible to specify a timeout for slow tests so that they do not hang test runner. It should be also possible to press Ctrl+C (KeyboardInterrupt) to kill a slow test without killing test runner. There should be statistics added at the end which would tell how many slow tests were run, how many timed out and maybe other. Also, almost all skipped tests (or maybe all) are currently skipped because they are slow, so after this is implemented, they should all be converted. 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2792"></a>
+### [2792](http://code.google.com/p/sympy/issues/detail?id=2792&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate how to employ complexity measures in functions like trigsimp(), etc.
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2792">http://code.google.com/p/sympy/issues/detail?id=2792</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+`simplify()` already implements measure argument and uses it to choose over alternative expressions given by pairs of specific simplification routines. However, those specific simplification routines (like `trigsimp()`) don't support measure argument and make arbitrary built-in choices when simplifying expressions. This leads to simplification results that are dependent on the implicit measure built-in into a particular simplification step of a function. Those functions should use a measure to verify whether a candidate simplified expression is really simpler than an input expression. Investigate how to implement measures in those functions (at least in `trigsimp()`) to avoid combinatorial explosion of choices. You may have to employ optimization techniques like greedy algorithms, dynamic programming, meta heuristics, etc. Prepare sample non-trivial inputs, measures and outputs that can be used as tests for the algorithm(s) you will propose.
+ 
+
+- *Category:* Research
+- *Time to complete:* 144 hours
+
+CodeInCategory-Research, CodeInDifficulty-Hard, Priority-Medium, Type-Defect 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2799"></a>
+### [2799](http://code.google.com/p/sympy/issues/detail?id=2799&q=label%3ACodeInImportedIntoSpreadsheet) - coverage testing should be part of the bot test
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2799">http://code.google.com/p/sympy/issues/detail?id=2799</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+Two things on my wish list for testing;
+
+1) a coverage fingerprint of master would be compared to a given branch's coverage profile to make sure that no line has become uncovered.
+
+2) a report of lines added that are not covered would be reported with the test-bot report.
+
+Someone who likes parsing html ([beautiful soup](www.crummy.com/software/BeautifulSoup/) might help with this) might enjoy this as a project.
+ 
+
+- *Category:* QualityAssurance
+- *Time to complete:* 144 hours
+
+CodeInCategory-QA, CodeInDifficulty-Hard, Priority-Medium, Testing, Type-Enhancement 
+
+- *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Alexey U. Gudchenko](https://github.com/goodok), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
+
+<a name="#2812"></a>
+### [2812](http://code.google.com/p/sympy/issues/detail?id=2812&q=label%3ACodeInImportedIntoSpreadsheet) - Fix failures found by shuffling tests in test file
+Please see <a href="http://code.google.com/p/sympy/issues/detail?id=2812">http://code.google.com/p/sympy/issues/detail?id=2812</a> for full information on this task. <br><br>Please read <a href="https://github.com/sympy/sympy/wiki/gci-2011-landing">https://github.com/sympy/sympy/wiki/gci-2011-landing</a> before completing any tasks for SymPy. <br><br> 
+
+
+This builds on [issue 1594](http://code.google.com/p/sympy/issues/detail?id=1594): once we have the shuffling, we should fix all the failures caused by it. Marking this as a hard task for Code-In, per Aaron's comment on the other issue.
+ 
+
+- *Category:* QualityAssurance
+- *Time to complete:* 144 hours
+
+CodeInCategory-QA, CodeInDifficulty-Hard, Priority-Medium, Type-Defect 
 
 - *Mentors:* [Aaron Meurer](https://github.com/asmeurer), [Stefan Krastanov](https://github.com/krastanov), [Vladimir Perić](https://github.com/vperic), [Matthew Rocklin](https://github.com/mrocklin)
 
