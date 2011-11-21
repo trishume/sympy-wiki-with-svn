@@ -69,43 +69,35 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
     d) **Create a clone of the [SymPy repository](https://github.com/sympy/sympy) on your computer.** First, cd to the directory where you want to download the code.  Then type
 
-        ```bash
+
         git clone git://github.com/sympy/sympy.git
         cd sympy
-        ```
+
     in your shell prompt.  This will download the development version of SymPy, as well as all of the development history.
 
 
     e) **Assign your read-and-write repo to a remote called `github`.** That means that your GitHub clone of SymPy to your local repository that you have created with the clone command. You will use your local repository to make changes to the code. Then you will communicate those changes to your remote repository (that is, you will _push_ the commits), so we can see them.
 
-        ```bash
         git remote add github git@github.com:YOUR-USERNAME/sympy.git
-        ```
 
 2. Create a git branch for your task and make it the current working branch. Creating a branch is the way to isolate your changes from the main stable state of the code (also called _master_).
 
-        ```bash
         git branch your_task_branch_name
         git checkout your_task_branch_name
-        ```
 
 3. Do with the code whatever is needed to complete the task.
 
 4. Be sure that all tests pass. If you are fixing a bug or implementing a feature you should write new tests to ensure that the problem does not occur again. Test are written in the appropriate `test` folders. Copy the style of the tests there, i.e., functions starting with `test_` with assert statements inside them.  To run all tests use:
 
-        ```
         ./bin/test
         ./bin/doctest
-        ```
 
 Be aware that there is also a code style test that warns you if your code is badly structured (trailing whitespace, etc).
 
 5. If all tests pass, commit the changes to your branch and push the branch to your fork:
 
-        ```bash
         git commit -a
         git push github your_task_branch
-        ```
 
 Another way is to use the `git gui` command that gives you a graphical interface.
 
