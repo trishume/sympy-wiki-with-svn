@@ -124,7 +124,7 @@ Please follow the standard code style, as recommended by Style Guide for Python 
 - the name of classes should be CamelCase: `class PolynomialRing(object):`
 - Put spaces around assignment operators (`=`, `+=`, `-=`, etc.), comparison operators (`==`, `<`, `<=`, `>`, `>=`, `!=`), and addition and subtraction operators (`+`, `-`).
 - Do not put spaces around parentheses (`(`, `)`, `[`, `]`, `{`, `}`), multiplication or exponentiation operators (`*`, `**`), or `=` when used as a default for keyword arguments (e.g., `function(x=True)`.
-- Put a space after commas (`,`) and colons in dictionaries (`:`) (e.g., `{'a': 1, 'b': 2}`).
+- Put a space after, but not before, commas (`,`) and colons in dictionaries (`:`) (e.g., `{'a': 1, 'b': 2}`).
 - If in doubt, use the same coding style as the code around the code you are modifying, or ask on the list. And you can't go wrong with PEP 8. Note that we do not have many restrictions on coding style beyond this: just use your own coding style and use your best judgement on what looks best.
 
 
