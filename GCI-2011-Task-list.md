@@ -1,5 +1,3 @@
-
-
 # GCI-2011 Task list
 
 
@@ -174,12 +172,12 @@ Examples
 
 The problem is the use of (g, True) for the "otherwise" condition.  The problem is that if a conditional reduces to True, then this will be interpreted as an "otherwise" condition rather than returning it.  
 
-```py
->>> Piecewise((f(x), x < 0), (x, 1 > 0))
-⎧f(x)  for x < 0
-⎨               
-⎩ x    otherwise
-```
+
+    >>> Piecewise((f(x), x < 0), (x, 1 > 0))
+    ⎧f(x)  for x < 0
+    ⎨               
+    ⎩ x    otherwise
+
 
 
 This is also inconsistant in that it treats it correctly if only one condition is given:
@@ -506,12 +504,11 @@ This is doesn't work >>> (1/(x*y)).subs(x*y, 2);1/(x*y). Because >>> (1/(x*y)).a
 
 Incorrect example:
 
-```py
->>> (1/(x*y)).subs(x*y, 2)
- 1 
-───
-x⋅y
-```
+    >>> (1/(x*y)).subs(x*y, 2)
+     1 
+    ───
+    x⋅y
+
 
 
 This is doesn't work because
@@ -600,15 +597,15 @@ gives a very ugly expression that cannot be converted back to
 
 Example:
 
-```py
->>> diff(integrate(cos(x)/sin(x)**7, x), x)
-             5                   3                      
-36⋅sin(x)⋅cos (x) - 72⋅sin(x)⋅cos (x) + 36⋅sin(x)⋅cos(x)
-────────────────────────────────────────────────────────
-                                                2       
-       ⎛     6            4            2       ⎞        
-       ⎝6⋅cos (x) - 18⋅cos (x) + 18⋅cos (x) - 6⎠        
-```
+
+    >>> diff(integrate(cos(x)/sin(x)**7, x), x)
+                 5                   3                      
+    36⋅sin(x)⋅cos (x) - 72⋅sin(x)⋅cos (x) + 36⋅sin(x)⋅cos(x)
+    ────────────────────────────────────────────────────────
+                                                    2       
+           ⎛     6            4            2       ⎞        
+           ⎝6⋅cos (x) - 18⋅cos (x) + 18⋅cos (x) - 6⎠        
+
 
  
 
@@ -813,13 +810,12 @@ I have Python installed.
 
 This is what I get when running the Python command in the command line:
 
-"C:\Users\Fredrik\Documents\programme\discalc>PYTHON
+```C:\Users\Fredrik\Documents\programme\discalc>PYTHON
 Python 2.5.1 (r251:54863, Apr 18 2007, 08:51:08) [MSC v.1310 32 bit 
 (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
->>>"
-
-Thanks for any answer.
+>>>
+```
 
 The problem is that we need someone with a 64-bit Windows machine to volunteer to do it (see #16).
 
@@ -859,7 +855,7 @@ The issue tracker can provide some valuable statistics about the health of the p
 <a name="#2803"></a>
 ### [2803](http://code.google.com/p/sympy/issues/detail?id=2803&q=label%3ACodeInImportedIntoSpreadsheet) - Investigate how to make the rewrite framework more flexible
 
-Currently, the rewrite framework only allows `expr.rewrite(function)` (e.g., `cos(x).rewrite(exp)`), and it implements only one rule per function pair.  This should be made more general.  Sometimes, you can't express a rewrite rule with just a function.  Other times, there is more than one way to rewrite one function in terms of another (for example `cos(x) == sqrt(1 - sin(x)) == sin(pi/2 - x))`.  
+Currently, the rewrite framework only allows `expr.rewrite(function)` (e.g., `cos(x).rewrite(exp)`), and it implements only one rule per function pair.  This should be made more general.  Sometimes, you can't express a rewrite rule with just a function.  Other times, there is more than one way to rewrite one function in terms of another (for example `cos(x) == sqrt(1 - sin(x)) == sin(pi/2 - x)`).  
 
 The issue is to consider ways to make the rewrite framework stronger, but still modular like it is now (so it's easily extensible).
  
@@ -1042,19 +1038,20 @@ pi []
 
 So my comment 8 from <a title="Arbitrary constants in indefinite integration"  href="/p/sympy/issues/detail?id=2219">issue 2219</a> made me realize something.  Consider the following:
 
-```py
->>> integrate(x**2*exp(x)*sin(x), x)
-   x           2  x                  x                  2         x
-  ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
-- ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
-      2            2             2                          2      
 
->>> dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
-             x           2  x                  x                  2         x
-            ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
-f(x) = C₁ - ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
-                2            2             2                          2      
+    >>> integrate(x**2*exp(x)*sin(x), x)
+       x           2  x                  x                  2         x
+      ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
+    - ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
+          2            2             2                          2      
 
+    >>> dsolve(f(x).diff(x) - x**2*exp(x)*sin(x), f(x), hint='nth_linear_constant_coeff_undetermined_coefficients')
+                 x           2  x                  x                  2         x
+                ℯ ⋅sin(x)   x ⋅ℯ ⋅sin(x)   cos(x)⋅ℯ              x   x ⋅cos(x)⋅ℯ 
+    f(x) = C₁ - ───────── + ──────────── - ───────── + x⋅cos(x)⋅ℯ  - ────────────
+                    2            2             2                          2      
+
+```
 >>> %timeit integrate(x**2*exp(x)*sin(x), x)
 1 loops, best of 3: 10.7 s per loop
 
@@ -1246,15 +1243,15 @@ There are around 19 functions which one needs to understand (the input parameter
 <a name="#2784"></a>
 ### [2784](http://code.google.com/p/sympy/issues/detail?id=2784&q=label%3ACodeInImportedIntoSpreadsheet) - 1/function() should be printed differently by latex printer
 
-```
->>> latex(1/cos(x))
-\operatorname{cos}^{-1}\left(x\right)
 
-pprint(1/cos(x))
-  1   
-──────
-cos(x)
-```
+    >>> latex(1/cos(x))
+    \operatorname{cos}^{-1}\left(x\right)
+
+    >>> pprint(1/cos(x))
+      1   
+    ──────
+    cos(x)
+
 
 should output `\frac{1}{\operator ...}`
  
@@ -1794,24 +1791,24 @@ k = 1
 
 Here's the best unicode I have so far:
 
-```
-   n       
-  __       
-  ╲       
-   )   f(k)
-  ╱
-  ‾‾      
- k = 1     
-```
+
+       n       
+      __       
+      ╲       
+       )   f(k)
+      ╱
+      ‾‾      
+     k = 1     
+
 
 I couldn't find characters (yet) to replicate ` and , (the new horizontal lines are at a different height).  I also haven't found a better replacement for ).
 
 There are these unicode symbols
 
-```
-⎲
-⎳
-```
+
+    ⎲
+    ⎳
+
 
 (\u23b2 and \u23b3, respectively) which take up more than one character of space in my terminal (both width and height) and would actually look kind of nice for summations of that size.  So this is the issue from https://github.com/sympy/sympy/pull/389 again.  How do we programmatically tell if a symbol takes up more than one character space, and if so, how many?
  
@@ -1824,35 +1821,35 @@ There are these unicode symbols
 
 We should pretty print Product with a big capital Pi.  Something like
 
-```
->>> product(f(k), (k, 1, n))
-  n
------
-|   | f(k)
-|   |
-k = 1
-```
 
-in ascii, and 
+    >>> product(f(k), (k, 1, n))
+      n
+    -----
+    |   | f(k)
+    |   |
+    k = 1
+    ```
 
-```
->>> product(f(k), (k, 1, n))
-  n
-┌───┐
-│   │ f(k)
-│   │
-k = 1
-```
+    in ascii, and 
 
-in unicode. Or, better, for unicode, do
+    ```
+    >>> product(f(k), (k, 1, n))
+      n
+    ┌───┐
+    │   │ f(k)
+    │   │
+    k = 1
+    ```
 
-```
-  n
-┬───┬
-│   │ f(k)
-│   │
-k = 1
-```
+    in unicode. Or, better, for unicode, do
+
+    ```
+      n
+    ┬───┬
+    │   │ f(k)
+    │   │
+    k = 1
+
 
 So it looks more like the capital Pi at http://en.wikipedia.org/wiki/Multiplication#Capital_Pi_notation.  I couldn't find a character as tall as │ but with a horizontal line at the bottom.
  
