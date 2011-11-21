@@ -59,7 +59,7 @@ We use github.com for the central repository, for keeping a copy of our own repo
 
 Here are the basic steps for making a patch. The list was adapted from [[Development-workflow]].  That page contains more detailed instructions for each of the below steps, with screenshots, so please look there if anything below is confusing.
 
-1. Setup your environment on your computer (only the first time, so you have a copy of our code):
+1. Setup your environment on your computer (you only need to do this once):
 
     a) **Create a [GitHub](https://github.com/) account, if you don't already have one.**
 
