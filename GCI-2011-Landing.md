@@ -128,18 +128,54 @@ Please follow the standard code style, as recommended by Style Guide for Python 
 - If in doubt, use the same coding style as the code around the code you are modifying, or ask on the list. And you can't go wrong with PEP 8. Note that we do not have many restrictions on coding style beyond this: just use your own coding style and use your best judgement on what looks best.
 
 
-### Tests and doc strings:
+### Tests and docstrings:
 
 All new features should be documented and have tests.
 
-If you implement a new feature, write a test case for it (and as long as this test case passes, the feature is considered to work). If you think there is a bug, write a test case which fails and then fix the bug. If you think some other test case should be modified, please discuss it on the mailing list first. It's very important, so let's repeat it once more: if you don't write a test case for all your features that you implement/fix, it will be like you contributed nothing and just wasted your time, because those features will stop working the next time we refactor the library (and conversely, if you write tests for the new features, they will be guaranteed to work forever).
+If you implement a new feature, write a test case for it (and as long as this test case passes, the feature is considered to work). If you fix a bug, write a test case that would fail without the bug fix but now passes. If you think some other test case should be modified, please discuss it on the mailing list first. It's very important, so let's repeat it once more: if you don't write a test case for all your features that you implement/fix, it will be like you contributed nothing and just wasted your time, because those features will stop working the next time we refactor the library (and conversely, if you write tests for the new features, they will be guaranteed to work forever).  Patches will not be accepted without tests.
 
-This also means, that any refactoring is easy to do, just make sure all the tests run. And because refactoring is easy, we are not afraid of making huge changes if we think the code will be more readable or simpler. If you want to find more about this kind of attitude, google the phrase "extreme programming".
+This also means that any refactoring is easy to do:  just make sure that all the tests run. And because refactoring is easy, we are not afraid of making huge changes if we think the code will be more readable or simpler. If you want to find more about this kind of attitude, google the phrase "extreme programming".
 
-Every module has a suite of accompanying tests. In general, if module's code is stored in `sympy/path/modulename`, then the tests are stored in `sympy/path/modulename/tests` folder. Furthermore, the corresponding tests are in files `sympy/path/module_name/tests/test_something.py`, `sympy/path/module_name/tests/test_otherthings.py`,  and so on.
+There are two kinds of tests in SymPy: tests and doctests.
 
-In addition, tests for the main functionality of classes and functions must be present in the appropriate docstrings:
+#### Tests
 
+Every module has a suite of accompanying tests. In general, if module's code is stored in `sympy/modulename`, then the tests are stored in `sympy/modulename/tests` folder. Furthermore, the corresponding tests are in files `sympy/path/module_name/tests/test_something.py`, `sympy/path/module_name/tests/test_otherthings.py`,  and so on.
+
+Here is an example of what a test looks like (taken from the `sympy/solvers/tests/test_solvers.py` file):
+
+```python
+def test_solve_linear():
+    x, y = symbols('x y')
+    w = Wild('w')
+    assert solve_linear(x, x) == (0, 1)
+    assert solve_linear(x, y - 2*x) in [(x, y/3), (y, 3*x)]
+    assert solve_linear(x, y - 2*x, exclude=[x]) ==(y, 3*x)
+    assert solve_linear(3*x - y, 0) in [(x, y/3), (y, 3*x)]
+    assert solve_linear(3*x - y, 0, [x]) == (x, y/3)
+    assert solve_linear(3*x - y, 0, [y]) == (y, 3*x)
+    assert solve_linear(x**2/y, 1) == (y, x**2)
+    assert solve_linear(w, x) in [(w, x), (x, w)]
+    assert solve_linear(cos(x)**2 + sin(x)**2 + 2 + y) == \
+           (y, -2 - cos(x)**2 - sin(x)**2)
+    assert solve_linear(cos(x)**2 + sin(x)**2 + 2 + y, symbols=[x]) == (0, 1)
+    assert solve_linear(Eq(x, 3)) == (x, 3)
+    assert solve_linear(1/(1/x - 2)) == (0, 0)
+    raises(ValueError, 'solve_linear(Eq(x, 3), 3)')
+```
+
+Notice some things:
+
+    - The test function starts with the word `test_`.  This is important.  The test runner will not run the tests unless this is true.
+    - Symbols used in the test are defined at the top.  This is important.  Since SymPy is just Python, we have to define all variables, including symbols (this is a little different from some other computer algebra systems, where variables are auto-defined).
+    - The test consists of `assert` statements, which assert the equality of a function and its output.  The test runner will run each of these statements, and if one of them is False, it will raise `AssertionError` and the test will fail.
+    - The `raises()` function can be used to test if a function should raise an exception, e.g., on bad output.  In this case, it tests that you cannot solve for a number (only solving for a Symbol is allowed).
+
+Tests should throughly test the output of the function, so that we can know right away just from running the tests that everything works correctly.
+
+#### Doctests
+
+In addition to tests, examples for the main functionality of classes and functions must be present in the appropriate docstrings:
 
 ```
 """The center of the ellipse.
@@ -159,17 +195,28 @@ Point(0, 0)
 """
 ```
 
-Tests verified by running the commands in shell:
+Unlike tests, the purpose of these examples, or _doctests_ as they are called, is to show the user how to use the function.  They should be instructive.
+
+To make sure that the doctests are correct, we test them (hence the name doctests).  This ensures that the output in the docstring is exactly the same as the output the user would see if he pasted it into a Python session, and prevents the documentation from becoming out-of-date.  Note that because of this, all doctests must import every function and class that is used, and also, as before, all Symbols must be defined.  Note that we do not allow the use of `import *` anywhere, and if you use this, the code quality tests will fail.
+
+#### Running the tests.
+
+You can run the tests by running these commands in the shell:
 
 ```
-    $ ./bin/test
-    $ ./bin/doctest
+./bin/test
+./bin/doctest
 ```
+
+You can run the tests for one specific module by adding its path as an argument to the test runner command, for example
+
+```
+./bin/test sympy/solvers
+```
+
+will just run the tests in the solvers.  Note that you can do this to save some time when developing, but you must make sure that **all** tests pass, or else your patch will not be accepted.
 
 How to create and run tests is written in more detail at [[Running-tests]].
-
-
-_Talk about running tests, code style, doctests, docstrings, etc. Don't forget the importance of adding tests for every fixed bug or new functionality._
 
 ## Mentors
 
