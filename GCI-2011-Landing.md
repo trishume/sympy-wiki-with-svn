@@ -111,8 +111,7 @@ other's work so that many eyes can see more thus raising the quality.
 
 ### Contact us
 
-General discussion takes place on [sympy@googlegroups.com](http://groups.google.com/group/sympy) mailing list and in the [issues list](http://code.google.com/p/sympy/issues/list), and the code is discussed in [sympy-patches@googlegroups.com](http://groups.google.com/group/sympy-patches)
-mailing list. Some discussion also takes place on IRC (our channel is #sympy at freenode: irc://irc.freenode.net/sympy). Do not hesitate to contact us for any help you might need.
+General discussion, both for developers and for users, takes place on the mailing list ([sympy@googlegroups.com](http://groups.google.com/group/sympy)) and in the [issue tracker](http://code.google.com/p/sympy/issues/list). Some discussion also takes place on IRC (our channel is #sympy at freenode: irc://irc.freenode.net/sympy). Do not hesitate to contact us for any help you might need.
 
 ## Development Guidelines
 
@@ -121,10 +120,13 @@ mailing list. Some discussion also takes place on IRC (our channel is #sympy at 
 Please follow the standard code style, as recommended by Style Guide for Python Code ([PEP-0008](http://www.python.org/dev/peps/pep-0008), [PEP-0257](http://www.python.org/dev/peps/pep-0257)). In particular:
 
 - use four spaces instead of tabs for indentation levels.
-- the name of the functions should be lowercase with words separated by underscores: `def set_some_value():`
+- the name of the functions should be lowercase with words separated by underscores: `def set_some_value():`. Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
 - the name of classes should be CamelCase: `class PolynomialRing(object):`
+- Put spaces around assignment operators (`=`, `+=`, `-=`, etc.), comparison operators (`==`, `<`, `<=`, `>`, `>=`, `!=`), and addition and subtraction operators (`+`, `-`).
+- Do not put spaces around parentheses (`(`, `)`, `[`, `]`, `{`, `}`), multiplication or exponentiation operators (`*`, `**`), or `=` when used as a default for keyword arguments (e.g., `function(x=True)`.
+- Put a space after commas (`,`) and colons in dictionaries (`:`) (e.g., `{'a': 1, 'b': 2}`).
+- If in doubt, use the same coding style as the code around the code you are modifying, or ask on the list. And you can't go wrong with PEP 8. Note that we do not have many restrictions on coding style beyond this: just use your own coding style and use your best judgement on what looks best.
 
-Note, however, that some functions do have uppercase letters where it makes sense. For example, for matrices they are LUdecomposition or T (transposition) methods.
 
 ### Tests and doc strings:
 
