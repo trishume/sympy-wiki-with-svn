@@ -169,7 +169,7 @@ Notice some things:
 - The test function starts with the word `test_`.  This is important.  The test runner will not run the tests unless this is true.
 - Symbols used in the test are defined at the top.  This is important.  Since SymPy is just Python, we have to define all variables, including symbols (this is a little different from some other computer algebra systems, where variables are auto-defined).
 - The test consists of `assert` statements, which assert the equality of a function and its output.  The test runner will run each of these statements, and if one of them is False, it will raise `AssertionError` and the test will fail.
-- The `raises()` function can be used to test if a function should raise an exception, e.g., on bad output.  In this case, it tests that you cannot solve for a number (only solving for a Symbol is allowed).
+- The `raises()` function can be used to test if a function should raise an exception, e.g., on bad input.  In this case, it tests that you cannot solve for a number (only solving for a Symbol is allowed).
 
 Tests should throughly test the output of the function, so that we can know right away just from running the tests that everything works correctly.
 
