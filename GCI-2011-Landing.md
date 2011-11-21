@@ -178,21 +178,23 @@ Tests should throughly test the output of the function, so that we can know righ
 In addition to tests, examples for the main functionality of classes and functions must be present in the appropriate docstrings:
 
 ```
-"""The center of the ellipse.
+def center(self):
+    """The center of the ellipse.
 
-Returns
--------
-center : number
+    Returns
+    -------
+    center : number
 
-Examples
---------
->>> from sympy import Point, Ellipse
->>> p1 = Point(0, 0)
->>> e1 = Ellipse(p1, 3, 1)
->>> e1.center
-Point(0, 0)
+    Examples
+    --------
+    >>> from sympy import Point, Ellipse
+    >>> p1 = Point(0, 0)
+    >>> e1 = Ellipse(p1, 3, 1)
+    >>> e1.center
+    Point(0, 0)
 
-"""
+    """
+    ...
 ```
 
 Unlike tests, the purpose of these examples, or _doctests_ as they are called, is to show the user how to use the function.  They should be instructive.
