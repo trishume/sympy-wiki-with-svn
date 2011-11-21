@@ -84,26 +84,32 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
 2. Create a git branch for your task and make it the current working branch. Creating a branch is the way to isolate your changes from the main stable state of the code (also called _master_).
 
-        $ git branch your_task_branch_name
-        $ git checkout your_task_branch_name
+        ```bash
+        git branch your_task_branch_name
+        git checkout your_task_branch_name
+        ```
 
 3. Do with the code whatever is needed to complete the task.
 
-4. Be sure that all tests pass. If you are fixing a bug or implementing a feature you should write new tests to ensure that the problem does not occur again. Test are written in the appropriate `test` folders. To run all tests use:
+4. Be sure that all tests pass. If you are fixing a bug or implementing a feature you should write new tests to ensure that the problem does not occur again. Test are written in the appropriate `test` folders. Copy the style of the tests there, i.e., functions starting with `test_` with assert statements inside them.  To run all tests use:
 
-        $ ./bin/test
-        $ ./bin/doctest
+        ```bash
+        ./bin/test
+        ./bin/doctest
+        ```
 
-Be aware that there is also a code style tests that warns you if your code is badly structured (trailing whitespaces, etc).
+Be aware that there is also a code style test that warns you if your code is badly structured (trailing whitespace, etc).
 
-5. Commit the changes to your branch and push the branch to your fork:
+5. If all tests pass, commit the changes to your branch and push the branch to your fork:
 
-        $ git commit
-        $ git push github your_task_branch
+        ```bash
+        git commit -a
+        git push github your_task_branch
+        ```
+
 Another way is to use the `git gui` command that gives you a graphical interface.
 
-6. Create the pull request: navigate to https://github.com/YOUR-USERNAME/sympy, select your task's branch, and press the *Pull Request* button.
-
+6. Create the pull request: navigate to https://github.com/YOUR-USERNAME/sympy, select the branch for for your task from the "current branch" popup, and press the *Pull Request* button at the top.  Then, fill out the form, and click "Send Pull Request".
 
 Everyone is welcome to join and to implement new feature, fix some bug, give
 general advice, etc. Also, we try to discuss everything and to review each
