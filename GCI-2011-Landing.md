@@ -49,30 +49,38 @@ Both of these (python or IPython) support the help command. Typing `help(object_
 
 ### Development Workflow
 
-If your task does not include editing code then you probably don't need the information here. It explains how to set up the system that we use for tracking changes to our code.
+If your task does not include editing code or documentation, then you probably don't need the information here. It explains how to set up the system that we use for tracking changes to our code.
 
-As many people are working on sympy at the same time we need some way to collaborate. We are using the git system together with the github.com website. Those permit us to keep track of all changes to the project and review each-others work.
+As many people are working on sympy at the same time we need some way to collaborate. We are using the [git](http://git-scm.com/) system together with the [GitHub](https://www.github.com) website. Those permit us to keep track of all changes to the project and review each other's work.
 
-The git software is installed on every developers computer and tracks their own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug or even just adding a sentence to a documentation string he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (ie _merge_ the change).
+The git software is installed on every developer's computer and tracks his own copy of all the code (that is your _repository_). When the developer finishes adding a feature, fixing a bug, or even just adding a sentence to a documentation string, he registers that change (he makes a _commit_). Then he communicates this change to the central repository (which is no different than the rest of the repositories - it's just the place we agreed to keep the current version of sympy). This is called a _pull request_. Now the people that have access to the central repository can discuss and eventually accept the change (i.e., _merge_ the change).
 
-We use github.com for the central repository, for keeping a copy of our own repository and for making, discussing and merging the pull requests.
+We use github.com for the central repository, for keeping a copy of our own repository, and for making, discussing, and merging the pull requests.
 
-Here are the basic steps for making a patch. The list was adapted from [[Development-workflow]].
+Here are the basic steps for making a patch. The list was adapted from [[Development-workflow]].  That page contains more detailed instructions for each of the below steps, with screenshots, so please look there if anything below is confusing.
 
 1. Setup your environment on your computer (only the first time, so you have a copy of our code):
 
-    a) Create your [github](https://github.com/) account, if it was not created earlier, and create your personal copy (called a _fork_) of the [SymPy repository](https://github.com/sympy/sympy) (click on the `Fork` button on this page).
-    Install [git](http://git-scm.com/download). When creating your github profile and forking our repository the github site will explain you how to connect your git installation to your github profile.
+    a) **Create a [GitHub](https://github.com/) account, if you don't already have one.**
 
-    b) Get a clone of [SymPy repository](https://github.com/sympy/sympy) with the following shell commands. This is just like the forking you have done in the previous step but instead on github the new repository is on your computer.
+    b) **Fork SymPy to your GitHub account,** Click on the `Fork` button at the top right of this page.
 
-        $ git clone git://github.com/sympy/sympy.git
-        $ cd sympy
+    c) **Install [git](http://git-scm.com/download) on your computer.** When creating your GitHub profile and forking our repository, the GitHub site will explain how to connect your git installation to your GitHub profile.  This is also explained at [[Development-workflow]].
+
+    d) **Create a clone of the [SymPy repository](https://github.com/sympy/sympy) on your computer.** First, cd to the directory where you want to download the code.  Then type
+
+        ```bash
+        git clone git://github.com/sympy/sympy.git
+        cd sympy
+        ```
+    in your shell prompt.  This will download the development version of SymPy, as well as all of the development history.
 
 
-    c) Assign your read-and-write repo to a remote called "github". That means that you connect the remote repository (that you have created on github) to your local repository (that you have created with the clone command). You will use your local repository to make changes to the code. Then you will communicate those changes to your remote repository (that is you will _push the commits_) so we can see them.
+    e) **Assign your read-and-write repo to a remote called `github`.** That means that your GitHub clone of SymPy to your local repository that you have created with the clone command. You will use your local repository to make changes to the code. Then you will communicate those changes to your remote repository (that is, you will _push_ the commits), so we can see them.
 
-        $ git remote add github git@github.com:YOUR-USERNAME/sympy.git
+        ```bash
+        git remote add github git@github.com:YOUR-USERNAME/sympy.git
+        ```
 
 2. Create a git branch for your task and make it the current working branch. Creating a branch is the way to isolate your changes from the main stable state of the code (also called _master_).
 
