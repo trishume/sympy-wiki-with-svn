@@ -12,37 +12,40 @@ Symbolic computing systems, also called computer algebra systems (CASs) are used
 
 What does it mean to solve problems symbolically?  It means that instead of giving a numerical solution, as many systems do, a CAS will derive the solution using symbolic algebra, the same way that you would do it if you were to do it by hand on paper.  So if you tell SymPy to solve the equation *x<sup>2</sup> = 2* for *x*, it will give you *&radic;2* and *-&radic;2*, *exactly*.
 
-You can see some [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS. This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS. 
+You can see some [[Quick examples]] to start to get an idea of the rich set of abstract operations that a CAS supports. Some of the math may be unknown to you but do not be afraid: there is much that you can do for the project that does not involve hard math. You can look also at [Wolfram Alpha](www.wolframalpha.com) to see another example of a CAS. This one is more feature complete than SymPy, but proprietary, so the source code is not available to the public. Actually Wolfram Alpha is just one service based on the Mathematica CAS, a popular proprietary CAS.
 
 ## How to get started
 
 ### Using SymPy
 
-First [install SymPy](http://code.google.com/p/sympy/wiki/DownloadInstallation) (you need to install python before that). If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from github. More about this later.
+First [install SymPy](http://code.google.com/p/sympy/wiki/DownloadInstallation). If you are on Windows, you will first need to install Python (http://python.org/).  Python should already come installed on Linux and Mac OS X.  If you want to just get a feel of it you can use the latest package available for your operating system, but if you want to contribute to the code (or some parts of the documentation) you will need the development version from GitHub. More about this later.
 
-Now that you have SymPy there are a number of ways to use it. Some people use SymPy as a library for building other software, but we will focus on interactive use: the Python interpreter permits interactive use of all of SymPy's functionality. Just start the interpreter with the `python` command from your shell or command prompt.
+Now that you have SymPy there are a number of ways to use it. Some people use SymPy as a library for building other software, but we will focus on interactive use: the Python interpreter permits interactive use of all of SymPy's functionality. From your command prompt, cd into the sympy directory, and run the `bin/isympy` script.  This will start a Python (or IPython, if you have it installed) interpreter, and will automatically import all the sympy functions and create some symbols for you.
 
 
 ```py
-$ python
-Python 2.6.6 (r266:84292, Sep 15 2010, 16:22:56) 
-[GCC 4.4.5] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
+$ ./bin/isympy
+Python console for SymPy 0.7.1 (Python 2.7.2-64-bit) (ground types: gmpy)
+
+These commands were executed:
+>>> from __future__ import division
 >>> from sympy import *
 >>> x, y, z, t = symbols('x y z t')
+>>> k, m, n = symbols('k m n', integer=True)
+>>> f, g, h = symbols('f g h', cls=Function)
+
+Documentation can be found at http://www.sympy.org
+
 >>> a = 1/x + (x*sin(x) - 1)/x
 >>> simplify(a)
-sin(x)
-
+-sin(x)
 ```
 
-Look at our [[Quick examples]].
+Look at our [[Quick examples]] for more examples of the things you can do with SymPy.
 
-Even in interactive mode you still need to import all of sympy's functionality. As you do not need any fine grain control for the moment just use `from sympy import *` which will give you access to most of the functionality.
+Most of the advanced users use a more powerful interface to the python interactive interpreter called [IPython](http://ipython.org/). You do not need to have it to use or contribute to SymPy, but it is highly recommended.
 
-Most of the advanced users use a more powerful interface to the python interactive interpreter called [IPython](http://ipython.org/). You do not need to have it to use or contribute to SymPy.
-
-Both of these (python or IPython) support the help command. Typing `help(object_of_interest)` will give you the documentation string.
+Both of these (python or IPython) support the help command. Typing `help(object_of_interest)` will give you the documentation string for `object_of_interest`.  This is a good way to learn about the various functions in SymPy.
 
 ### Development Workflow
 
@@ -119,7 +122,7 @@ Note, however, that some functions do have uppercase letters where it makes sens
 
 All new features should be documented and have tests.
 
-If you implement a new feature, write a test case for it (and as long as this test case passes, the feature is considered to work). If you think there is a bug, write a test case which fails and then fix the bug. If you think some other test case should be modified, please discuss it on the mailing list first. It's very important, so let's repeat it once more: if you don't write a test case for all your features that you implement/fix, it will be like you contributed nothing and just wasted your time, because those features will stop working the next time we refactor the library (and conversely, if you write tests for the new features, they will be guaranteed to work forever). 
+If you implement a new feature, write a test case for it (and as long as this test case passes, the feature is considered to work). If you think there is a bug, write a test case which fails and then fix the bug. If you think some other test case should be modified, please discuss it on the mailing list first. It's very important, so let's repeat it once more: if you don't write a test case for all your features that you implement/fix, it will be like you contributed nothing and just wasted your time, because those features will stop working the next time we refactor the library (and conversely, if you write tests for the new features, they will be guaranteed to work forever).
 
 This also means, that any refactoring is easy to do, just make sure all the tests run. And because refactoring is easy, we are not afraid of making huge changes if we think the code will be more readable or simpler. If you want to find more about this kind of attitude, google the phrase "extreme programming".
 
