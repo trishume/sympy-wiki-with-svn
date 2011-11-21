@@ -93,10 +93,10 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
 4. Be sure that all tests pass. If you are fixing a bug or implementing a feature you should write new tests to ensure that the problem does not occur again. Test are written in the appropriate `test` folders. Copy the style of the tests there, i.e., functions starting with `test_` with assert statements inside them.  To run all tests use:
 
-```bash
-./bin/test
-./bin/doctest
-```
+        ```
+        ./bin/test
+        ./bin/doctest
+        ```
 
 Be aware that there is also a code style test that warns you if your code is badly structured (trailing whitespace, etc).
 
