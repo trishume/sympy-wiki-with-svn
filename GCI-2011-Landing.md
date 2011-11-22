@@ -220,6 +220,16 @@ will just run the tests in the solvers.  Note that you can do this to save some 
 
 How to create and run tests is written in more detail at [[Running-tests]].
 
+## Code-In Guidelines
+
+We have some requirements for all Code-In tasks:
+
+- When relevant (i.e., there is some kind of a patch), the task is not considered complete until the code is merged with the official repository.  This means that you need to completely finish the review of the task to the point where it has passed review and someone with push access has pushed it in.  If you feel that your task is not being reviewed, please contact one of the mentors.  Please note that if you are waiting on a response from a *specific* mentor, that you should take into consideration things like timezone difference, and the fact that all mentors are volunteers who have other things to do beyond Code-In.
+
+- Any task that involves submitting a patch must go through a pull request, unless otherwise specified.  It is much easier for us to review a pull request than a patch uploaded on the task page, and so this will make the review process go much quicker for us.
+
+- If you are running out of time for a task *and you can demonstrate that you are doing work on the task*, we will extend the time period. This is in case we underestimated the time required to complete a task.  Please contact us and be prepared to demonstrate this. If you are not doing work on the task, however, you need to let it go and let someone else give it a try.  Do not claim a task until you are prepared to work on it.
+
 ## Mentors
 
 See [[GCI-2011-Mentors]] for a list of the people who will be mentoring for Google Code-In. In the list you can see which areas the respective mentors work on, as well as contact information for each individual mentor. However, the preferred method of communication is through our mailing list or IRC channel (see "Contact Us", above). Specific mentors may be busy at various time throughout the program, so the best way is to contact the entire community. This is also more aligned with the way open-source development works.
