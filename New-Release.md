@@ -239,6 +239,10 @@ Sort the authors everywhere by last name.  Note that we decided to do this, inst
 
 This list should be included at the bottom of the release notes.  Mark anyone who contributed for the first time for this release with a `*` (you can get this list by running `git diff sympy-0.6.7..sympy-0.7.0 -- AUTHORS`).
 
+## Building a Mac OS X Installer package
+
+A Mac OS X PackageMaker project file can be found under the `data/OS X Package` directory. It references the isympy shell, its man page, and the `sympy` subdirectory. To build a new Installer package, open the project file and hit 'Build'. The resulting file can be distributed for Macs running OS X version 10.5 "Leopard" and above.
+
 ## Sites to update
 
 If you don't have privileges to write to any of these, ask Aaron, and he will either give you write access or do it himself.
