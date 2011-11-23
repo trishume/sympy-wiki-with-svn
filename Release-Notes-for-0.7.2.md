@@ -21,6 +21,8 @@ A new module called Combinatorics was added which is the result of a successful 
 
 ## Other Changes
 
+A new module `gaussopt` was added supporting the most basic constructions from Gaussian optics (ray tracing matrices, geometric rays and Gaussian beams).
+
 In addition to the more noticeable changes listed above, there have been numerous other smaller additions, improvements and bug fixes in the **TODO** commits in this release. See the git log for a full list of all changes. The command `git log sympy-0.7.1..sympy-0.7.2` will show all commits made between this release and the last. You can also see the issues closed since the last release [here](). (**TODO**: update this if release date changes)
 ## Authors
 
