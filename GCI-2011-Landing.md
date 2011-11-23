@@ -95,14 +95,14 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
         ./bin/test
         ./bin/doctest
 
-Be aware that there is also a code style test that warns you if your code is badly structured (trailing whitespace, etc).
+    Be aware that there is also a code style test that warns you if your code is badly structured (trailing whitespace, etc).
 
 5. If all tests pass, commit the changes to your branch and push the branch to your fork:
 
         git commit -a
         git push github your_task_branch
 
-Another way is to use the `git gui` command that gives you a graphical interface.
+    Another way is to use the `git gui` command that gives you a graphical interface.
 
 6. Create the pull request: navigate to https://github.com/YOUR-USERNAME/sympy, select the branch for for your task from the "current branch" popup, and press the *Pull Request* button at the top.  Then, fill out the form, and click "Send Pull Request".
 
