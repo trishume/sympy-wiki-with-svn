@@ -3,8 +3,11 @@ These are the release notes for SymPy 0.7.2. SymPy 0.7.0 was released on Decembe
 
 ## Backwards compatibility breaks
 -KroneckerDelta class is moved from sympy/physics/quantum/kronecker.py to sympy/functions/special/tensor_functions.py.
+
 -Merged the KroneckerDelta class in sympy/physics/secondquant.py with the class above.
+
 -Dij class in sympy/functions/special/tensor_functions.py is replaced with KroneckerDelta.
+
 
 ## Major Changes
 ### Python 3 support
