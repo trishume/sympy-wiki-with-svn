@@ -65,7 +65,10 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
 
     b) **Fork SymPy to your GitHub account,** Click on the `Fork` button at the top right of this page.
 
-    c) **Install [git](http://git-scm.com/download) on your computer.** When creating your GitHub profile and forking our repository, the GitHub site will explain how to connect your git installation to your GitHub profile.  This is also explained at [[Development-workflow]].
+    c) **Install [git](http://git-scm.com/download) on your computer.** When creating your GitHub profile and forking our repository, the GitHub site will explain how to connect your git installation to your GitHub profile.  This is also explained at [[Development-workflow]]. Don't forget to add your name and email to git, so you can be properly credited for your work:
+
+        $ git config --global user.name "Firstname Lastname"
+        $ git config --global user.email "your_email@youremail.com"
 
     d) **Create a clone of the [SymPy repository](https://github.com/sympy/sympy) on your computer.** First, cd to the directory where you want to download the code.  Then type
 
