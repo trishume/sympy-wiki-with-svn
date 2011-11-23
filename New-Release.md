@@ -246,7 +246,7 @@ If you don't have privileges to write to any of these, ask Aaron, and he will ei
   * http://code.google.com/p/sympy/ (FrontPage)
   * https://github.com/sympy/sympy/wiki/ (May not be much to do here)
   * http://code.google.com/p/sympy/wiki/Changes
-  * http://en.wikipedia.org/wiki/SymPy
+  * http://en.wikipedia.org/wiki/SymPy (If you can, update the article for other languages too)
   * http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems (Both version and features)
   * http://freshmeat.net/projects/sympy/
   * http://pypi.python.org/pypi/sympy/ (see below)
