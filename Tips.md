@@ -6,13 +6,13 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 
 - You can convert any string into a symbolic expression using the `sympify()` function.  This will automatically define variables for you, so for example, you can type `sympify("a^2 + cos(b)")` and it will just work.
 
-- Equality (especially symbolic) is best tested with the Eq(expr1, expr2) function, not single-equals (variable assignment) or double-equals (exact equality).
+- The best method to test equality is to use the simplify function to check whether the difference of two expressions is 0. For example, to check the equality of (x-1)**2 and x**2 - 2*x + 1, print simplify((x-1) ** 2 - (x**2 - 2*x + 1)) and see if it equals 0.
 
 - Some SymPy trig functions are named differently than their counterparts in other systems. In particular, SymPy inverse functions are asin, acos, and atan (the standard in the programming world), while most mathematical systems/humans refer to them as either sin/cos/tan**-1 or arcsin/cos/tan.
 
-- To create a list of values, assign a variable to a list enclosed by brackets (e.g. x = [1,2,3,4,5]). To get the i-th value in x, you use x[i]. Note that to access the first value in the list, you must use x[0], so that print x[0] outputs 1 and print x[1] outputs 2, and so on.
+- To create a list of values, assign a variable to a list enclosed by brackets (e.g. x = [1,2,3,4,5]). To get the i-th value in x, you use x[i - 1]. Note that this means that to access the first value in the list, you must use x[0], so that print x[0] outputs 1, print x[1] outputs 2, and so on.
 
-- If you need help, the quickest resource is using the built in help tool by entering help(functionname). For example, if you need to find out what sin(x) does, type help(sin), or alternatively, sin?.
+- If you need help, the quickest resource is using the built in help tool by entering help(functionname). For example, if you need to find out what sin(x) does, type help(sin), or alternatively, sin? if using IPython.
 
 # Intermediate
 
