@@ -30,7 +30,7 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 
 - The expand method works not only for algebraic functions, but also for trigonometric functions. For example, “sin(x+y).expand(trig=true)” will return sin(x)*cos(y) + sin(y)*cos(x).
 
-- Want SymPy to print in Pretty Print? Use the Prett Print function. To print out x/y in Pretty Print, do “pprint(x/y)”.
+- Want SymPy to print in Pretty Print? Use the Pretty Print function. To print out x/y in Pretty Print, do “pprint(x/y)”.
 
 # Intermediate
 
