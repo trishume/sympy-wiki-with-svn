@@ -51,7 +51,7 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Email**: sapta.iitkgp@gmail.com
 
-**Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on Sympy for fun. He was a participant in GSoC 2011 and was responsible for the creation of the combinatorics module. His area of interests are combinatorics (surprise!), optimization and differential equations.
+**Bio**: Saptman is a graduate of IIT Kharagpur where he completed his 5-year Integrated M.Sc. program in Mathematics and Computing. He does a lot of numerical computing in Fortran using FEATFLOW for food and hacks on SymPy for fun. He was a participant in GSoC 2011 and was responsible for the creation of the combinatorics module. His area of interests are combinatorics (surprise!), optimization and differential equations.
 
 # Joachim Durchholz
 
@@ -87,6 +87,17 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 **Webpage**: http://people.cs.uchicago.edu/~mrocklin/
 
 **Bio**: Matthew is a PhD student at the University of Chicago. He is interested in scientific computing, particularly simulating systems that contain uncertainty like weather forecasting. In SymPy he is engaged in  the statistics, sets, and linear algebra modules. 
+
+# Chris Smith
+![Chris Smith](https://secure.gravatar.com/avatar/61e106a28e171b4407171702b182759f.jpg)
+
+**GitHub account**: https://github.com/smichr
+
+**Email**: smichr@gmail.com
+
+**IRC Nick**: smichr
+
+**Bio**: Chris is interested in solving and simplifying equations but has been involved with many of SymPy's modules.
 
 ## Links:
 - [[GCI-2011 Landing]]
