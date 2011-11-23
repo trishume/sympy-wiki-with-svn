@@ -14,6 +14,24 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 
 - If you need help, the quickest resource is using the built in help tool by entering help(functionname). For example, if you need to find out what sin(x) does, type help(sin), or alternatively, sin? if using IPython.
 
+- Have an equation and a value for the variable(s)? Use the substitution method. For example, if you have: x+14 and you know x = 1, do “x+14.subs(x,1)” to get 15.
+
+- You can also use the substitution method to change variables. For example, if you have pi = 17x and want to switch x for y, you can do "(pi = 17x).subs(x,y)".
+
+- Remember that all variables must first be defined. You must do “sympy.var(‘r’)” before using the variable ‘r’.
+
+- Want to have your result printed in LaTeX? While this may be difficult in other computer algebra systems, it’s simple in SymPy; just use the built-in latex function. For example, “latex(e**x)” will print out “e**x” in LaTex.
+
+- Have a function plotted and want to easily zoom in and out without changing the window? Use the ‘-’ and ‘+’ keys on the number pad or the ‘r’ and ‘f’ keys.
+
+- Want to have SymPy print out numeric results? Try using the Numeric function. For example, “N(pi)” will return 3.14159265... instead of pi.
+
+- Want to do definite integration? Use the integrate function. The arguments are integrate(function, (bottom bound, top bound, variable)). For example, “integrate(sin(x), (x, 0, pi/2))” will return 1.
+
+- The expand method works not only for algebraic functions, but also for trigonometric functions. For example, “sin(x+y).expand(trig=true)” will return sin(x)*cos(y) + sin(y)*cos(x).
+
+- Want SymPy to print in Pretty Print? Use the Prett Print function. To print out x/y in Pretty Print, do “pprint(x/y)”.
+
 # Intermediate
 
 - Got a long expression that you want to copy from a console? Often, long expressions wrap at unintelligible places (like in the middle of a number). You can use python's textwrap module to help with this. In the example below, the breaks in the first output of `eq` are as they were in a cmd window of Windows.
@@ -49,6 +67,9 @@ def add(n1, n2):
 ```
 
 - SymPy has a lovely Geometry tool. To declare points, use <pointname> = Point(x, y). Most other objects are self-explanatory, such as Triangle(point1, point2, point3), and Circle(centerpoint, radius).
+
+- Want to combine fraction terms? Use the together function. For example, “together( 1/x, 1/y, 1/z)” will return 
+“(x*y + x*z + y*z) / (x*y*z)”.
 
 # Advanced
 
