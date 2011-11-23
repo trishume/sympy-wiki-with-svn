@@ -99,6 +99,18 @@ Here is a list of some of the mentors for Google Code-In.  The preferred communi
 
 **Bio**: Chris is interested in solving and simplifying equations but has been involved with many of SymPy's modules.
 
+# Alexey Gudchenko
+![Alexey Gudchenko](http://ru.gravatar.com/userimage/28906834/55dde2713180cde7239853d6cb82d77f.jpg?size=80)
+
+**GitHub account**: https://github.com/goodok
+
+**Email**: proga@gmail.com
+
+**IRC Nick**: goodok
+
+**Bio**: Alexey, was born in 1976, is interested in the theory of solitons, and related mathematical topics. In SymPy project since spring 2011.
+
+
 ## Links:
 - [[GCI-2011 Landing]]
 - [CGI-2011 Task list (spreadsheet)](https://docs.google.com/spreadsheet/ccc?key=0AiMKW-ZM-_fedFpSWm51VFBFZkdTRnh3WkhYRndSVXc)
