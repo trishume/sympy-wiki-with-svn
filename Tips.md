@@ -25,3 +25,5 @@ x**20 + 20*x**19 + 190*x**18 + 1140*x**17 +\\
 77520*x**7 + 38760*x**6 + 15504*x**5 + 4845*x**4 +\\
 1140*x**3 + 190*x**2 + 20*x + 1
 ```
+
+- If you have some functions in an expression that you don't want, you can get rid of them by using `expr.replace(function, Id)`.  This will replace all instances of the function `function`, with `Id`, which is just the identity function.  For example, if your expression is `sin(Abs(x)) + cos(Abs(x))`, and you don't want the absolute values, you can do `expr.replace(Abs, Id)` to get rid of them.  This gives `sin(x) + cos(x)`. (Notice that you have to use `Abs`, `abs` is the Python built-in and will not work.)
