@@ -48,7 +48,7 @@ def add(n1, n2):
     return n1 + n2
 ```
 
-- SymPy has a lovely Geometry tool. To declare points, use the function Point(x, y). Most other functions are self-explanatory, such as Triangle(point1, point2, point3), and Circle(centerpoint, radius).
+- SymPy has a lovely Geometry tool. To declare points, use <pointname> = Point(x, y). Most other objects are self-explanatory, such as Triangle(point1, point2, point3), and Circle(centerpoint, radius).
 
 # Advanced
 
