@@ -120,6 +120,9 @@ When editing this wiki page, please only add an exact equivalent to some hg comm
 | hg up tip
 | git checkout HEAD   # or this: "git checkout master", or  "git merge FETCH_HEAD", depending on what you did before this
 |-
+| hg update -C
+| git checkout -f
+|-
 | hg qimport
 | stg something (A separate patch manager extension is probably not necessary in git -- normal workflow combined with git rebase -i should cover your needs)
 |-
