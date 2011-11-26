@@ -4,15 +4,35 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 
 - You can define many numbered symbols at once using the slice syntax of symbols. `symbols('a4:10')` will create symbols `a4` through `a9` and `symbols('a:3')` will give 3 symbols: `a0`, `a1`, `a2`.  You can also do `symbols('a:z')` to create the symbols `a`, `b`, ..., `z`.
 
+- I, E, S, N, C, O, or Q are special variables which already have values; do not overwrite them.
+
+- If a variable has a coefficient, remember to use an "*" between them. a.k.a., no implied multiplication. '2x' would not work but '2*x' would.
+
 - You can convert any string into a symbolic expression using the `sympify()` function.  This will automatically define variables for you, so for example, you can type `sympify("a^2 + cos(b)")` and it will just work.
 
+- You can store special values in normal variables. so that you don't have to add .evalf() when you use the value.
+ex. 'x=pi.evalf()' or 'y=E.evalf()'
+
 - The best method to test equality is to use the simplify function to check whether the difference of two expressions is `0`. For example, to check the equality of `(x-1)**2` and `x**2 - 2*x + 1`, print `simplify((x-1) ** 2 - (x**2 - 2*x + 1))` and see if it equals `0`.
+
+- '=' is used to assign values to variables; '==' checks for equality.
 
 - Some SymPy trig functions are named differently than their counterparts in other systems. In particular, SymPy inverse functions are asin, acos, and atan (the standard in the programming world), while most mathematical systems/humans refer to them as either sin/cos/tan**-1 or arcsin/cos/tan.
 
 - To create a list of values, assign a variable to a list enclosed by brackets (e.g. `x = [1,2,3,4,5]`). To get the i-th value in `x`, you use `x[i - 1]`. Note that this means that to access the first value in the list, you must use `x[0]`, so that `print x[0]` outputs `1`, `print x[1]` outputs `2`, and so on.
 
+- If you want to create a function, you can use the 'def' command. For example, 'def function():'
+After creating it, you can use it the same way as as other commands, such as cos()
+
+- The "Dummy()" command can be used to take place of an undetermined variable that cannot be equal to anything else.
+
 - If you need help, the quickest resource is using the built in help tool by entering `help(functionname)`. For example, if you need to find out what `sin(x)` does, type `help(sin)`, or alternatively, `sin?` if you are using IPython.
+
+- Multiplication and division have equal priority; Sympy calculates from left to right.
+
+- If you want to divide Integers, it's a good idea to use 'from __future__ import division'. This prevents Python from rounding the numbers to the nearest integer.
+
+- If you want to use Python's float after you've already imported "division" from "__future__", you can use a "//" in place of the "/"
 
 - Have an equation and a value for the variable(s)? Use the substitution method. For example, if you have: `x + 14` and you know `x` = `1`, do `(x + 14).subs(x, 1)` to get `15`.
 
@@ -21,6 +41,8 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 - Remember that all variables must first be defined. You must do `r = Symbol('r')` before using the variable `r`.
 
 - Want to have your result printed in LaTeX? Just use the built-in `latex()` function. For example, `latex(exp(x))` will print out `e^x` in LaTeX.
+
+- If you have pyglet, you can use the "plot()" command to plot a function in up to three dimensions.
 
 - Have a function plotted and want to easily zoom in and out without changing the window? Use the '-' and '+' keys on the number pad or the 'r' and 'f' keys.
 
