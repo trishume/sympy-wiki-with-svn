@@ -241,6 +241,8 @@ This list should be included at the bottom of the release notes.  Mark anyone wh
 
 ## Building a Mac OS X Installer package
 
+_Note, this relies on https://github.com/sympy/sympy/pull/748_
+
 A Mac OS X PackageMaker project file can be found under the `data/OS X Package` directory. It references the isympy shell, its man page, and the `sympy` subdirectory. To build a new Installer package, open the project file and hit 'Build'. The resulting file can be distributed for Macs running OS X version 10.5 "Leopard" and above.
 
 ## Sites to update
