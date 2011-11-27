@@ -6,7 +6,7 @@ This is a list of little tips for SymPy.  Feel free to edit this page and add so
 
 - I, E, S, N, C, O, or Q are special variables which already have values; do not overwrite them.
 
-- If a variable has a coefficient, remember to use an "*" between them. a.k.a., no implied multiplication. `2x` would not work but `2*x` would.
+- If a variable has a coefficient, remember to use an "*" between them. i.e., no implied multiplication. `2x` would not work but `2*x` would.
 
 - You can convert any string into a symbolic expression using the `sympify()` function.  This will automatically define variables for you, so for example, you can type `sympify("a^2 + cos(b)")` and it will just work.
 
@@ -21,18 +21,28 @@ ex. `x=pi.evalf()` or `y=E.evalf()`
 
 - To create a list of values, assign a variable to a list enclosed by brackets (e.g. `x = [1,2,3,4,5]`). To get the i-th value in `x`, you use `x[i - 1]`. Note that this means that to access the first value in the list, you must use `x[0]`, so that `print x[0]` outputs `1`, `print x[1]` outputs `2`, and so on.
 
-- If you want to create a function, you can use the `def` command. For example, `def function():`
-After creating it, you can use it the same way as as other commands, such as cos()
+- If you want to create a function, you can use the `def` command. 
+After creating it, you can use it the same way as as other commands, as shown in the example.
 
-- The `Dummy()` command can be used to take place of an undetermined variable that cannot be equal to anything else.
+```python
+>>> def functionName():
+...     return x+3
+...
+>>> x=4
+>>> functionName()
+7
+```
+
+- The `Dummy()` command can be used to take place of an undetermined variable that cannot be equal to anything else. `Dummy('x') == Symbol('x')` and `Dummy('x') == Dummy('x')` would both return false because each Dummy symbol is unique.
 
 - If you need help, the quickest resource is using the built in help tool by entering `help(functionname)`. For example, if you need to find out what `sin(x)` does, type `help(sin)`, or alternatively, `sin?` if you are using IPython.
 
-- Multiplication and division have equal priority; Sympy calculates from left to right.
+- Because multiplication and division have equal priority, these operators are evaluated from left to right.
+Addition and subtraction work in the same way. This occurs because Sympy uses Python's precedence rules, which evaluates them this way.
 
-- If you want to divide Integers, it's a good idea to use `from __future__ import division`. This prevents Python from rounding the numbers to the nearest integer.
+- If you want to divide integers, it's a good idea to use `from __future__ import division`. This prevents Python from truncating the answer by stopping it from using the `floor()` command.
 
-- If you want to use Python's float after you've already imported `division` from `__future__`, you can use a "//" in place of the "/"
+- If you want to use integer division after you've already imported `division` from `__future__`, you can use a `//` in place of the `/`
 
 - Have an equation and a value for the variable(s)? Use the substitution method. For example, if you have: `x + 14` and you know `x` = `1`, do `(x + 14).subs(x, 1)` to get `15`.
 
