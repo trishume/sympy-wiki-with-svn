@@ -111,3 +111,122 @@ def add(n1, n2):
 - SymPy can manipulate boolean logic variables. And is represented by `&`, or by `|`, and implication by `>>` or `<<`. Alternatively, you can use textual representation of operations (ex. `Or(x, y)`). There are many other boolean algebra functions: check the documentation for a full listing.
 
 - If you're particularly curious about the inner workings of SymPy, try entering the function `source(functionname)`. This will print the mess that's known as source code. You can also use `functionname??` if you are using IPython.
+
+
+
+
+Numerical computing using Sympy
+
+1. SymPy represents π as a symbolic entity. The numerical approximation of π can be obtained by the use of either the evalf() method or N()
+
+pi
+>>> pi.evalf()
+3.14159265358979
+>>> pi.evalf(n=20)
+3.1415926535897932385
+
+Basics of expressions in SymPy
+
+2. We can use cancel () remove common factors from the numerator and the denominator of a function:
+
+>>> (x**3-1)/(x-1)
+(1 - x**3)/(1 - x)
+>>> cancel(_)
+1 + x + x**2
+>>> 
+
+
+3. We use the force option with an expression manipulation function like expand() to expand forcibly a universally in valid function.
+
+>>> log(a*b)
+log(a⋅b)
+
+>>> expand(_)
+log(a⋅b)
+
+>>> expand (log (a*b), force=True)
+log (a) + log (b)
+SOME TIPS ABOUT SYMBOLS
+
+4. Do you know? It’s perfectly valid to create symbols containing special characters
+
+>>> Symbol ('#')
+#
+>>> Symbol('%')
+%
+>>> Symbol('@')
+@
+>>> 
+
+5. _ and ^ characters in symbols have special meaning and are used to denote subscripts and superscripts, respectively
+
+>>> Symbol('a^1')
+a^1
+>>> Symbol('a_1')
+a_1
+>>> 
+
+
+6. While creating symbols commas can be followed by or completely replaced by whitespace
+
+>>> symbols('a, b, c')
+(a, b, c)
+>>> symbols('a b c')
+(a, b, c)
+>>> 
+
+7. When we don’t know in advance how many symbols will be required to solve a certain problem we use the numbered_symbols() generator:
+
+>>> A = numbered_symbols('a')
+>>> 
+>>> A.next()
+a0
+>>> [ A.next() for i in xrange(10) ]
+[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
+>>> 
+
+8. To construct a rational number in SymPy, one can use the Rational class.
+ >>> x = Rational(3,4)
+ >>> x
+ 3/4
+
+9. Unlike other mathematical systems, sympy uses ** to denote exponentiation and does not use ^ for exponentiation.
+
+>>> a,b =symbols('a b')
+>>> (a+b)**2
+(a + b)**2
+>>> 
+
+10.  The equals sign (=) is the assignment operator in Python, not equality operator. Sympy uses the == operator or the Eq class for comparing equalities.
+ >>> var('a,b')
+ (a, b)
+ >>> a == b
+ False
+ >>> 
+ >>> Eq(a,b)
+ a == b
+ >>> bool(_)
+ False
+ >>> 
+
+DECOMPOSTION OF FUNCTIONS
+
+11. To decompose a fraction into its components or partialize we use the apart () function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
