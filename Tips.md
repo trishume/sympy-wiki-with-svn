@@ -1,4 +1,4 @@
-This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. If you have a short tip try to keep it under 140 characters. We may create a SymPy daily tips twitter stream. 
+``This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. If you have a short tip try to keep it under 140 characters. We may create a SymPy daily tips twitter stream. 
 
 # Basic
 
@@ -114,106 +114,190 @@ def add(n1, n2):
 
 
 
+# Numerical computing using Sympy
+ *  SymPy represents π as a symbolic entity. The numerical approximation
+of π can be obtained by the use of either the evalf() method or N().
 
-Numerical computing using Sympy
-
-1. SymPy represents π as a symbolic entity. The numerical approximation of π can be obtained by the use of either the evalf() method or N()
+``` python
 
 pi
+
 >>> pi.evalf()
+
 3.14159265358979
+
 >>> pi.evalf(n=20)
+
 3.1415926535897932385
 
-Basics of expressions in SymPy
+```
 
-2. We can use cancel () remove common factors from the numerator and the denominator of a function:
+# Basics of expressions in SymPy
+
+* We can use cancel () remove common factors from the numerator and the denominator of a function:
+
+``` python
 
 >>> (x**3-1)/(x-1)
+
 (1 - x**3)/(1 - x)
+
 >>> cancel(_)
+
 1 + x + x**2
->>> 
 
+>>>
 
-3. We use the force option with an expression manipulation function like expand() to expand forcibly a universally in valid function.
+``` 
+
+* We use the force option with an expression manipulation function like expand() to expand forcibly a universally in valid function.
+
+``` python
 
 >>> log(a*b)
+
 log(a⋅b)
 
 >>> expand(_)
+
 log(a⋅b)
 
 >>> expand (log (a*b), force=True)
-log (a) + log (b)
-SOME TIPS ABOUT SYMBOLS
 
-4. Do you know? It’s perfectly valid to create symbols containing special characters
+log (a) + log (b)
+
+```
+
+# Some tips about symbols
+
+* Do you know? It’s perfectly valid to create symbols containing special characters.
+
+``` python
 
 >>> Symbol ('#')
+
 #
+
 >>> Symbol('%')
+
 %
+
 >>> Symbol('@')
+
 @
+
 >>> 
 
-5. _ and ^ characters in symbols have special meaning and are used to denote subscripts and superscripts, respectively
+```
+*  _ and ^ characters in symbols have special meaning and are used to denote subscripts and superscripts, respectively.
+
+``` python
 
 >>> Symbol('a^1')
+
 a^1
+
 >>> Symbol('a_1')
+
 a_1
+
 >>> 
+```
 
 
-6. While creating symbols commas can be followed by or completely replaced by whitespace
+*  While creating symbols commas can be followed by or completely replaced by whitespace.
+
+``` python
 
 >>> symbols('a, b, c')
+
 (a, b, c)
+
 >>> symbols('a b c')
+
 (a, b, c)
+
 >>> 
 
-7. When we don’t know in advance how many symbols will be required to solve a certain problem we use the numbered_symbols() generator:
+```
+
+ * When we don’t know in advance how many symbols will be required to solve a certain problem we use the numbered_symbols() generator:
+
+
+``` python
 
 >>> A = numbered_symbols('a')
->>> 
->>> A.next()
-a0
->>> [ A.next() for i in xrange(10) ]
-[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
+
 >>> 
 
-8. To construct a rational number in SymPy, one can use the Rational class.
+>>> A.next()
+
+a0
+
+>>> [ A.next() for i in xrange(10) ]
+
+[a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
+
+>>> 
+
+```
+
+*  To construct a rational number in SymPy, one can use the Rational class.
+
+``` python
+
  >>> x = Rational(3,4)
+
  >>> x
+
  3/4
 
-9. Unlike other mathematical systems, sympy uses ** to denote exponentiation and does not use ^ for exponentiation.
+```
+
+*  Unlike other mathematical systems, sympy uses ** to denote exponentiation and does not use ^ for exponentiation.
+
+``` python
 
 >>> a,b =symbols('a b')
+
 >>> (a+b)**2
+
 (a + b)**2
+
 >>> 
 
-10.  The equals sign (=) is the assignment operator in Python, not equality operator. Sympy uses the == operator or the Eq class for comparing equalities.
+```
+
+  * The equals sign (=) is the assignment operator in Python, not equality operator. Sympy uses the == operator or the Eq class for comparing equalities.
+
+``` python
+
  >>> var('a,b')
+
  (a, b)
+
  >>> a == b
+
  False
+
  >>> 
+
  >>> Eq(a,b)
+
  a == b
+
  >>> bool(_)
+
  False
+
  >>> 
 
-DECOMPOSTION OF FUNCTIONS
-
-11. To decompose a fraction into its components or partialize we use the apart () function
+```
 
 
+# Decomposition of functions
+
+ * To decompose a fraction into its components or partialize we use the apart () function
 
 
 
