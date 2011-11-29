@@ -1,12 +1,12 @@
-This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them.
+This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. If you have a short tip try to keep it under 140 characters. We may create a SymPy daily tips twitter stream. 
 
 # Basic
 
 - You can define many numbered symbols at once using the slice syntax of symbols. `symbols('a4:10')` will create symbols `a4` through `a9` and `symbols('a:3')` will give 3 symbols: `a0`, `a1`, `a2`.  You can also do `symbols('a:z')` to create the symbols `a`, `b`, ..., `z`.
 
-- I, E, S, N, C, O, or Q are special variables which already have values; do not overwrite them.
+- I, E, S, N, C, O, or Q are special variables which already have values; It's best not to overwrite them.
 
-- If a variable has a coefficient, remember to use an "*" between them. i.e., no implied multiplication. `2x` would not work but `2*x` would.
+- SymPy, like Python, has no implied multiplication. I.e. `2x` would not work but `2*x` would.
 
 - You can convert any string into a symbolic expression using the `sympify()` function.  This will automatically define variables for you, so for example, you can type `sympify("a^2 + cos(b)")` and it will just work.
 
@@ -17,7 +17,7 @@ ex. `x=pi.evalf()` or `y=E.evalf()`
 
 - `=` is used to assign values to variables; `==` checks for equality. More info can found at the Documentation Tutorial [here](http://docs.sympy.org/0.7.1/gotchas.html#equals-signs).
 
-- Some SymPy trig functions are named differently than their counterparts in other systems. In particular, SymPy inverse functions are asin, acos, and atan (the standard in the programming world), while most mathematical systems/humans refer to them as either sin/cos/tan**-1 or arcsin/cos/tan.
+- Some SymPy trig functions are named differently than their counterparts in other systems. In particular, SymPy inverse functions are asin, acos, and atan not arcsin/arccos/arctan.
 
 - To create a list of values, assign a variable to a list enclosed by brackets (e.g. `x = [1,2,3,4,5]`). To get the i-th value in `x`, you use `x[i - 1]`. Note that this means that to access the first value in the list, you must use `x[0]`, so that `print x[0]` outputs `1`, `print x[1]` outputs `2`, and so on.
 
@@ -47,7 +47,7 @@ Addition and subtraction work in the same way. This occurs because Sympy uses [P
 
 - Have an equation and a value for the variable(s)? Use the substitution method. For example, if you have: `x + 14` and you know `x` = `1`, do `(x + 14).subs(x, 1)` to get `15`.
 
-- You can also use the substitution method to change variables. For example, if you have `pi - 17*x` and want to switch `x` for `y`, you can do `(pi - 17*x).subs(x, y)`.
+- You can also use the substitution method to change variables. For example, if you have `pi - 17*x` and want to switch `x` for `y`, then `(pi - 17*x).subs(x, y)` produces `pi - 17*y`.
 
 - Remember that all variables must first be defined. You must do `r = Symbol('r')` before using the variable `r`.
 
@@ -63,11 +63,11 @@ Addition and subtraction work in the same way. This occurs because Sympy uses [P
 
 - The expand method works not only for algebraic functions, but also for trigonometric functions. For example, `sin(x + y).expand(trig=True)` will return `sin(x)*cos(y) + sin(y)*cos(x)`.
 
-- Want SymPy to print in Pretty Print? Use the Pretty Print function. To print out `x/y` in Pretty Print, do `pprint(x/y)`.
+- Want SymPy to print in Pretty Print? Use the Pretty Print function. To print out `x/y` in Pretty Print, do `pprint(x/y)`. Alternatively use the isympy console. 
 
 # Intermediate
 
-- Got a long expression that you want to copy from a console? Often, long expressions wrap at unintelligible places (like in the middle of a number). You can use python's textwrap module to help with this. In the example below, the breaks in the first output of `eq` are as they were in a cmd window of Windows.
+- Have a long expression that you want to copy from a console? Often, long expressions wrap at unintelligible places (like in the middle of a number). You can use python's textwrap module to help with this. In the example below, the breaks in the first output of `eq` are as they were in a cmd window of Windows.
 
 ```python
 >>> from sympy.abc import x
@@ -89,7 +89,7 @@ x**20 + 20*x**19 + 190*x**18 + 1140*x**17 +\\
 1140*x**3 + 190*x**2 + 20*x + 1
 ```
 
-- If you have some functions in an expression that you don't want, you can get rid of them by using `expr.replace(function, Id)`.  This will replace all instances of the function `function`, with `Id`, which is just the identity function.  For example, if your expression is `sin(Abs(x)) + cos(Abs(x))`, and you don't want the absolute values, you can do `expr.replace(Abs, Id)` to get rid of them.  This gives `sin(x) + cos(x)`. (Notice that you have to use `Abs`, `abs` is the Python built-in and will not work.)
+- If you have some functions in an expression that you don't want, you can get rid of them by using `expr.replace(function, Id)`.  This will replace all instances of the function `function`, with `Id`, which is just the identity function.  For example, if your expression is `sin(Abs(x)) + cos(Abs(x))`, and you don't want the absolute values, you can do `expr.replace(Abs, Id)` to get rid of them.  This gives `sin(x) + cos(x)`. (Notice that you have to use SymPy's `Abs`, and not the python built-in `abs` function.)
 
 - When defining a variable in terms of a symbol with an assignment (=) sign, the assigned variable will not change even if the variable containing the symbol does. When you type `x = Symbol('x')`, `y = x`, and `x = 25`, printing `y` will still give `x`, not `25`.
 
