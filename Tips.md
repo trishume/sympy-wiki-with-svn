@@ -15,30 +15,31 @@ ex. `x=pi.evalf()` or `y=E.evalf()`
 
 - The best method to test equality is to use the simplify function to check whether the difference of two expressions is `0`. For example, to check the equality of `(x-1)**2` and `x**2 - 2*x + 1`, print `simplify((x-1) ** 2 - (x**2 - 2*x + 1))` and see if it equals `0`.
 
-- `=` is used to assign values to variables; `==` checks for equality.
+- `=` is used to assign values to variables; `==` checks for equality. More info can found at the Documentation Tutorial [here](http://docs.sympy.org/0.7.1/gotchas.html#equals-signs).
 
 - Some SymPy trig functions are named differently than their counterparts in other systems. In particular, SymPy inverse functions are asin, acos, and atan (the standard in the programming world), while most mathematical systems/humans refer to them as either sin/cos/tan**-1 or arcsin/cos/tan.
 
 - To create a list of values, assign a variable to a list enclosed by brackets (e.g. `x = [1,2,3,4,5]`). To get the i-th value in `x`, you use `x[i - 1]`. Note that this means that to access the first value in the list, you must use `x[0]`, so that `print x[0]` outputs `1`, `print x[1]` outputs `2`, and so on.
 
-- If you want to create a function, you can use the `def` command. 
-After creating it, you can use it the same way as as other commands, as shown in the example.
+- Tuples are like lists, but are less easy to use. They are created in the same way, just with parentheses instead of bracket. For example, `x = (2,3,4)`. There are two other differences from lists. The major difference is that you cannot change values in tuples after creating them. This may be useful if you don't want to overwrite the data. 
 
 ```python
->>> def functionName():
-...     return x+3
-...
->>> x=4
->>> functionName()
-7
+>>> y = (1,3,5)
+>>> y
+(1, 3, 5)
+>>> y[1] = 10
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
 ```
+The last difference is that if you want a tuple with only only one element, you must put a comma after the element, e.x. `x = (1,)`. 
 
 - The `Dummy()` command can be used to take place of an undetermined variable that cannot be equal to anything else. `Dummy('x') == Symbol('x')` and `Dummy('x') == Dummy('x')` would both return false because each Dummy symbol is unique.
 
 - If you need help, the quickest resource is using the built in help tool by entering `help(functionname)`. For example, if you need to find out what `sin(x)` does, type `help(sin)`, or alternatively, `sin?` if you are using IPython.
 
 - Because multiplication and division have equal priority, these operators are evaluated from left to right.
-Addition and subtraction work in the same way. This occurs because Sympy uses Python's precedence rules, which evaluates them this way.
+Addition and subtraction work in the same way. This occurs because Sympy uses [Python's precedence rules](http://docs.python.org/reference/expressions.html#summary), which evaluates them this way.
 
 - If you want to divide integers, it's a good idea to use `from __future__ import division`. This prevents Python from truncating the answer by stopping it from using the `floor()` command.
 
