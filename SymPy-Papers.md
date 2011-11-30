@@ -16,9 +16,18 @@ Here is an incomplete list of papers and presentations that mention SymPy.  If y
 
 - [Python: An Ecosystem for Scientific Computing](http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5582063) - F. Perez, B.E. Granger, and J.D. Hunter
 
+- [Code Generation: A Strategy for Neural Network Simulators](http://www.springerlink.com/content/12614h7817602680/) - Dan Goodman
+
+- [Combining FCA Software and Sage](http://researchrepository.napier.ac.uk/3939/1/cla10.pdf) - Uta Priss
+
+- [Bode Plots in Maxima Computer Algebra Systems](http://www.kirp.chtf.stuba.sk/pc11/data/papers/075.pdf) - D. Gajdošík and K. Žáková
+
+- [Can We Create an Open-Source CAS?](http://wstein.org/talks/2008-issac/abstract/ist08-stein.pdf) - Willian Stein
+
+- [Building a Framework for Predictive Science](http://www.cacr.caltech.edu/~mmckerns/McKerns2011_proc_10th_scipy_conf.pdf) - Michael McKerns, Leif Strand, Tim Sullivan, Alta Fang, and Michael Aivazis
 
 
-Below is a list of presentations about SymPy that were given at conferences:
+**Below is a list of presentations about SymPy that were given at conferences:**
 
 8/27/2011 - Mateusz Paprocki - Given at EuroSciPy 2011 Conference, Paris, France - ["Review of Python-based Symbolic Mathematics Systems and Libraries"](http://sympy.googlecode.com/svn/materials/presentations/euroscipy2011.pdf)
 
