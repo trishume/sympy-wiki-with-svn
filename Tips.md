@@ -1,4 +1,4 @@
-``This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. In general tips should be short and concise. They should be printable in a small amount of space. If you can try to keep it under 140 characters so that it may be included in a SymPy daily tips twitter stream. 
+``This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. In general tips should be short and concise. They should be printable in a small amount of space. If you can try to keep it under 140 characters so that it may be included in a SymPy daily tips twitter stream.
 
 # Basic
 
@@ -21,7 +21,7 @@ ex. `x=pi.evalf()` or `y=E.evalf()`
 
 - To create a list of values, assign a variable to a list enclosed by brackets (e.g. `x = [1,2,3,4,5]`). To get the i-th value in `x`, you use `x[i - 1]`. Note that this means that to access the first value in the list, you must use `x[0]`, so that `print x[0]` outputs `1`, `print x[1]` outputs `2`, and so on.
 
-- Tuples are like lists, but are less easy to use. They are created in the same way, just with parentheses instead of bracket. For example, `x = (2,3,4)`. There are two other differences from lists. The major difference is that you cannot change values in tuples after creating them. This may be useful if you don't want to overwrite the data. 
+- Tuples are like lists, but are less easy to use. They are created in the same way, just with parentheses instead of bracket. For example, `x = (2,3,4)`. There are two other differences from lists. The major difference is that you cannot change values in tuples after creating them. This may be useful if you don't want to overwrite the data.
 
 ```python
 >>> y = (1,3,5)
@@ -32,7 +32,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: 'tuple' object does not support item assignment
 ```
-The last difference is that if you want a tuple with only only one element, you must put a comma after the element, e.x. `x = (1,)`. 
+The last difference is that if you want a tuple with only only one element, you must put a comma after the element, e.x. `x = (1,)`.
 
 - The `Dummy()` command can be used to take place of an undetermined variable that cannot be equal to anything else. `Dummy('x') == Symbol('x')` and `Dummy('x') == Dummy('x')` would both return false because each Dummy symbol is unique.
 
@@ -63,7 +63,7 @@ Addition and subtraction work in the same way. This occurs because Sympy uses [P
 
 - The expand method works not only for algebraic functions, but also for trigonometric functions. For example, `sin(x + y).expand(trig=True)` will return `sin(x)*cos(y) + sin(y)*cos(x)`.
 
-- Want SymPy to print in Pretty Print? Use the Pretty Print function. To print out `x/y` in Pretty Print, do `pprint(x/y)`. Alternatively use the isympy console. 
+- Want SymPy to print in Pretty Print? Use the Pretty Print function. To print out `x/y` in Pretty Print, do `pprint(x/y)`. Alternatively use the isympy console.
 - Decomposition of functions:
  To decompose a fraction into its components or partialize we use the apart () function
 
@@ -92,7 +92,7 @@ x**20 + 20*x**19 + 190*x**18 + 1140*x**17 +\\
 1140*x**3 + 190*x**2 + 20*x + 1
 ```
 
-- If you have some functions in an expression that you don't want, you can get rid of them by using `expr.replace(function, Id)`.  This will replace all instances of the function `function`, with `Id`, which is just the identity function.  For example, if your expression is `sin(Abs(x)) + cos(Abs(x))`, and you don't want the absolute values, you can do `expr.replace(Abs, Id)` to get rid of them.  This gives `sin(x) + cos(x)`. (Notice that you have to use SymPy's `Abs`, and not the python built-in `abs` function.)
+- If you have some functions in an expression that you don't want, you can get rid of them by using `expr.replace(function, Id)`.  This will replace all instances of the function `function`, with `Id`, which is just the identity function.  For example, if your expression is `sin(Abs(x)) + cos(Abs(x))`, and you don't want the absolute values, you can do `expr.replace(Abs, Id)` to get rid of them.  This gives `sin(x) + cos(x)`. (Notice that you have to use SymPy's `Abs`, and not the Python built-in `abs` function.)
 
 - When defining a variable in terms of a symbol with an assignment (=) sign, the assigned variable will not change even if the variable containing the symbol does. When you type `x = Symbol('x')`, `y = x`, and `x = 25`, printing `y` will still give `x`, not `25`.
 
@@ -104,7 +104,7 @@ def add(n1, n2):
 
 - SymPy has a lovely Geometry tool. To declare points, use `pointname = Point(x, y)`. Most other objects are self-explanatory, such as `Triangle(point1, point2, point3)`, and `Circle(centerpoint, radius)`.
 
-- Want to combine fraction terms? Use the together function. For example, `together(1/x + 1/y + 1/z)` will return 
+- Want to combine fraction terms? Use the together function. For example, `together(1/x + 1/y + 1/z)` will return
 `(x*y + x*z + y*z)/(x*y*z)`.
 
 - Numerical computing using Sympy:
@@ -130,7 +130,7 @@ pi
 >>> cancel(_)
 1 + x + x**2
 >>>
-``` 
+```
 
 *  We use the force option with an expression manipulation function like expand() to expand forcibly a universally in valid function.
 
@@ -154,7 +154,7 @@ log (a) + log (b)
 %
 >>> Symbol('@')
 @
->>> 
+>>>
 ```
 
  *  _ and ^ characters in symbols have special meaning and are used to denote subscripts and superscripts, respectively.
@@ -164,7 +164,7 @@ log (a) + log (b)
 a^1
 >>> Symbol('a_1')
 a_1
->>> 
+>>>
 ```
 
 *  While creating symbols commas can be followed by or completely replaced by whitespace.
@@ -174,19 +174,19 @@ a_1
 (a, b, c)
 >>> symbols('a b c')
 (a, b, c)
->>> 
+>>>
 ```
 
 *  When we don’t know in advance how many symbols will be required to solve a certain problem we use the numbered_symbols() generator:
 
 ``` python
 >>> A = numbered_symbols('a')
->>> 
+>>>
 >>> A.next()
 a0
 >>> [ A.next() for i in xrange(10) ]
 [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10]
->>> 
+>>>
 ```
 
 *  To construct a rational number in SymPy, one can use the Rational class.
@@ -203,7 +203,7 @@ a0
 >>> a,b =symbols('a b')
 >>> (a+b)**2
 (a + b)**2
->>> 
+>>>
 ```
 
  * The equals sign (=) is the assignment operator in Python, not equality operator. Sympy uses the == operator or the Eq class for comparing equalities.
@@ -213,12 +213,12 @@ a0
 (a, b)
 >>> a == b
 False
->>> 
+>>>
 >>> Eq(a,b)
 a == b
 >>> bool(_)
 False
->>> 
+>>>
 ```
 
 
@@ -250,15 +250,15 @@ False
 
 
 
- 
-
- 
 
 
- 
 
 
- 
+
+
+
+
+
 
 
 
