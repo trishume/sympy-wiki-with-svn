@@ -70,6 +70,9 @@ Here are the basic steps for making a patch. The list was adapted from [[Develop
         $ git config --global user.name "Firstname Lastname"
         $ git config --global user.email "your_email@youremail.com"
 
+
+    If you are on Windows, you may want to install https://github.com/downloads/github/GitPad/Gitpad.zip, which will make it easier to edit your commit messages (unless you know how to use Vim).
+
     d) **Create a clone of the [SymPy repository](https://github.com/sympy/sympy) on your computer.** First, cd to the directory where you want to download the code.  Then type
 
 
