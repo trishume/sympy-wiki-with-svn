@@ -1,6 +1,21 @@
 Here is an incomplete list of papers and presentations that mention SymPy.  If you know of one that is not here, please add it.  See also [Google Scholar](http://scholar.google.com/scholar?q=sympy&hl=en&btnG=Search&as_sdt=1%2C32&as_sdtp=on).  There is a relevant [issue](http://code.google.com/p/sympy/issues/detail?id=2800) in the issue tracker.
 
-- 
+- [General Symbolic Quantum Mechanics for SymPy](http://meetings.aps.org/Meeting/CAL10/Event/135895) - Matt Curry, Addison Cugini, and Brian Granger
+
+- [Quantum Mechanics, Quantum Computation, and the Density Operator in SymPy](http://digitalcommons.calpoly.edu/physsp/38/) - Addison Cugini
+
+- [Python for Scientists and Engineers](http://www.computer.org/csdl/mags/cs/2011/02/mcs2011020009.html) - K. Millman and Michael Aivazis
+
+- [From Equation to Code: Automated Scientific Computing](http://andy.terrel.us/Professional/papers_and_talks/Terrel2011.pdf) - Andy Terrel
+
+- [Python and Coding Theory ](http://www.usna.edu/Users/math/wdj/teach/sm450/sm450_python-notes3.pdf) - David Joyner
+
+- [Cython: The Best of Both Worlds](http://sage.math.washington.edu/tmp/stein-cise-comments-may22.pdf#page=29) - Stefan Behnel, Rob Bradshaw, and Craig Citro
+
+- [Multiprocess System for Virtual Instruments in Python](http://conference.scipy.org/proceedings/SciPy2009/paper_12/full_text.pdf) - Brian D'Urso
+
+- [Python: An Ecosystem for Scientific Computing](http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5582063) - F. Perez, B.E. Granger, and J.D. Hunter
+
 
 
 Below is a list of presentations about SymPy that were given at conferences:
