@@ -1,4 +1,4 @@
-``This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. If you have a short tip try to keep it under 140 characters. We may create a SymPy daily tips twitter stream. 
+``This is a list of little tips for SymPy.  Feel free to edit this page and add some. They can be just basic things or advanced tips.  If we get enough of them, we might do something with them. In general tips should be short and concise. They should be printable in a small amount of space. If you can try to keep it under 140 characters so that it may be included in a SymPy daily tips twitter stream. 
 
 # Basic
 
