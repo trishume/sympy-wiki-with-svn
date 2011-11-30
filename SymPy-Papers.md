@@ -8,3 +8,19 @@ Below is a list of presentations about SymPy that were given at conferences:
 8/27/2011 - Mateusz Paprocki - Given at EuroSciPy 2011 Conference, Paris, France - ["Review of Python-based Symbolic Mathematics Systems and Libraries"](http://sympy.googlecode.com/svn/materials/presentations/euroscipy2011.pdf)
 
 7/12/2011 - Mateusz Paprocki, Aaron Meurer - Given at SciPy 2011 Conference, Austin, TX, USA - [Tutorial](http://mattpap.github.com/scipy-2011-tutorial/html/index.html)
+
+3/2/2011 - Mateusz Paprocki - Given at SIAM CSE 2011 Conference, Reno, NV, USA  - [Symbolic Mathematics in Pure Python](http://sympy.googlecode.com/svn/materials/presentations/siamcse2011.pdf)
+
+7/10/2010 - Mateusz Paprocki - Given at EuroSciPy 2010 Conference, Paris, France   - [Computing with Polynomials in SymPy](http://sympy.googlecode.com/svn/materials/presentations/euroscipy2010.pdf)
+
+5/12/2010 - Mateusz Paprocki - Given at Py4Science 2010 UC Berkeley, CA, USA - [Symbolic Manipulation in Pure Python](http://sympy.googlecode.com/svn/materials/presentations/py4science2010.pdf)
+
+7/24/2009 - Mateusz Paprocki - Given at EuroSciPy 2009 Conference, Leipzig, Germany  - [SymPy: A Library for Symbolic Mathematics in Pure Python](http://sympy.googlecode.com/svn/materials/presentations/euroscipy2009.pdf)
+
+5/19/2009 - Mateusz Paprocki - Given at KNS 2009 Students Conference, Wrocław, Poland - [SymPy: A System for Exploring Symbolic Mathematics](http://sympy.googlecode.com/svn/materials/presentations/kns2009.pdf)
+
+1/6/2009 - Ondřej Čertík - Given at FEMTEC 2009, Lake Tahoe, CA, USA - [SymPy: A Pure Python Symbolic Manipulation System](http://sympy.googlecode.com/svn/materials/presentations/femtec2009.pdf)
+
+3/1/2008 - Ondřej Čertík - Given at SAGE Days 8, Austing, TX, USA  - [SymPy: Python Library for Symbolic Mathematics](http://sympy.googlecode.com/svn/materials/presentations/SD8.pdf)
+
+8/17/2007 - Ondřej Čertík - Given at SciPy2007 Conference, Caltech, Los Angeles, CA, USA - [Using Python for Electronic Structure Calculations, Nonlinear Solvers, FEM, and Symbolic Manipulations](http://sympy.googlecode.com/svn/materials/presentations/scipy2007.pdf)
