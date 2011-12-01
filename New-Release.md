@@ -263,7 +263,7 @@ and
 
 So the user need to install "sympy-0.7.1.win-amd64.exe" witch is the 64-bit version of SymPy
 
-To make new 64-bit installer of SymPy we need to have Windows machine and then:
+###To make new 64-bit installer of SymPy we need to have Windows machine and then:
 ```bash
 cd /path/to/SymPy
 python setup.py build --plat-name=win-amd64 bdist_wininst
