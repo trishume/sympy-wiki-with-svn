@@ -273,6 +273,7 @@ That will create "sympy-0.7.1.win-amd64.exe" in dist directory.
 
 You can't create "sympy-0.7.1.win-amd64.exe" in other machine(linux,mac), because binary creator in them doesn't support "--plat-name" attribute.
 More information:
+
 http://docs.python.org/distutils/builtdist.html#cross-compiling-on-windows
 
 ## Sites to update
