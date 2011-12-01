@@ -244,6 +244,36 @@ This list should be included at the bottom of the release notes.  Mark anyone wh
 _Note, this relies on https://github.com/sympy/sympy/pull/748_
 
 A Mac OS X PackageMaker project file can be found under the `data/OS X Package` directory. It references the isympy shell, its man page, and the `sympy` subdirectory. To build a new Installer package, open the project file and hit 'Build'. The resulting file can be distributed for Macs running OS X version 10.5 "Leopard" and above.
+#How to make new 64-bit release of SymPy for Windows 
+
+The Windows SymPy binary("sympy-0.7.1.win32.exe") doesn't work, when the user using 64-bit Python release.
+
+When try to install SymPy he get an error message: "No Python information found in the registry".
+
+That's because "python-2.7.2.amd64.msi" installer put his regystry file in:
+```bash
+[HKEY_LOCAL_MACHINE\SOFTWARE\Python\PythonCore\2.6\InstallPath]
+```
+but "sympy-0.7.1.win32.exe" binary search it in:
+```bash
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Python\PythonCore\2.6\InstallPath]
+and
+[HKEY_CURRENT_USER\Software\Python\PythonCore]
+```
+
+So the user need to install "sympy-0.7.1.win-amd64.exe" witch is the 64-bit version of SymPy
+
+To make new 64-bit installer of SymPy we need to have Windows machine and then:
+```bash
+cd /path/to/SymPy
+python setup.py build --plat-name=win-amd64 bdist_wininst
+```
+
+That will create "sympy-0.7.1.win-amd64.exe" in dist directory.
+
+You can't create "sympy-0.7.1.win-amd64.exe" in other machine(linux,mac), because binary creator in them doesn't support "--plat-name" attribute.
+More information:
+http://docs.python.org/distutils/builtdist.html#cross-compiling-on-windows
 
 ## Sites to update
 
